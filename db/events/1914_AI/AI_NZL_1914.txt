@@ -1,0 +1,29 @@
+#########################################################################
+# 	JAP enters the Great War
+#	
+#########################################################################
+event = {
+	id = 3044501
+	random = no 
+	country = NZL
+	persistent = yes
+	trigger = {
+					ai = yes
+
+					war = { country = NZL country = U08 } 
+					NOT = { flag = NZL_1914 }
+				}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 29 month = 5 year = 1914 }
+	offset = 1 # Check for trigger conditions day
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = { #
+		command = { type = setflag which = NZL_1914 }
+		command = { type = ai which = "switch/NZL_1914_WarSetup.ai" }
+		
+	}
+}

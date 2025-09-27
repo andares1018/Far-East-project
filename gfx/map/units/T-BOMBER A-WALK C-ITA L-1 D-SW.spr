@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "Carp-W-SW.bmp"
+	Origin = { x = 125 y = 75 }
+	Frames = 16
+	Speed = 5
+	Palette = "Carp.bmp"
+}

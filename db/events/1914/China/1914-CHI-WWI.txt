@@ -1,0 +1,1368 @@
+# World War One Alliance Membership Events
+# By Limith
+#-Beiyang Initial Event Chain--------------------
+# ALI 133011613 Ask for Chinese (Beiyang) Aid
+# AXI 133011614 Ask for Chinese (Beiyang) Aid
+# UCH 133011600 Join the T. Entente?
+# UCH 133011618 Join the C. Powers?
+#-T. Entente Accepted----------------------------
+# ALI 133011615 Chinese Aid
+#-C. Powers Accepted-----------------------------
+# AXI 133011616 Chinese Aid
+#-Alternative Response Event Chain---------------
+# CHI 133011619 Beiyang Joins the T. Entente
+# U08 133011620 Sino-German Pact
+# CHI 133011621 Beiyang Joins the C. Powers
+# U08 133011622 Sino-Entente Pact
+#-Peace Events-----------------------------------
+# *** 133011640 The Chinese Alliance ALI/AXI
+
+###############################
+# Beiyang Initial Event Chain #
+###############################
+
+# Ask for Chinese (Beiyang) Aid
+event = {
+	id = 133011613
+	random = no
+	tag = { FRA ENG SOV RUS JAP }
+	
+	decision = {
+		not = { flag = EVT_133011613 }
+		not = { ispuppet = UCH }
+		not = { ispuppet = U74 }
+		exists = CHI
+		or = { # WWI has started
+			event = 2191503 # GER DoW Russia
+			event = 2191539 # GER DoW Russia
+			event = 2192502 # AH DoW Serbia
+			event = 2192528 # AH DoW Russia
+			event = 2104501 # RUS DoW's AH
+			event = 2104541 # RUS DoW's GER
+			event = 2191505 # France DoW's GER
+		}
+		or = {
+			and = {
+				country = FRA
+				participant = { country = FRA value = 1 }
+				war = { country = FRA country = U08 }
+				control = { province = 55 data = -3 } # Paris
+			}
+			and = {
+				country = ENG
+				participant = { country = ENG value = 1 }
+				war = { country = ENG country = U08 }
+				control = { province = 29 data = -3 } # London
+			}
+			and = {
+				country = SOV
+				participant = { country = SOV value = 1 }
+				war = { country = SOV country = U08 }
+				control = { province = 572 data = -3 } # Moscow
+			}
+			and = {
+				country = RUS
+				participant = { country = RUS value = 1 }
+				war = { country = RUS country = U08 }
+				control = { province = 553 data = -3 } # Leningrad
+			}
+			and = {
+				country = JAP
+				participant = { country = JAP value = 1 }
+				war = { country = JAP country = U08 }
+				control = { province = 1552 data = -3 } # Tokyo
+			}
+		}
+		not = {
+			or = {
+				and = {
+					or = {
+						event = 2002534 #Versailes
+						event = 2191514 #Mil. defeat
+						event = 2191520 #Abdication + Armistice
+						event = 2191532 #Early defeat
+					}
+					event = 2192507# st. germain
+				}
+				and = {
+					event = 2191512 #Reverse Versailes
+					or = {
+						event = 2191555 #Russia defeated
+						event = 2007529 #SOV defeated
+						event = 2007530 #SOV defeated
+					}
+				}
+			}
+		}
+		or = {
+			and = {
+				exists = UCH
+				not = { participant = { country = UCH value = 1 } }
+				not = { participant = { country = UCH value = 2 } }
+				not = { participant = { country = UCH value = 3 } }
+			}
+			and = {
+				exists = U74
+				not = { participant = { country = U74 value = 1 } }
+				not = { participant = { country = U74 value = 2 } }
+				not = { participant = { country = U74 value = 3 } }
+			}
+		}
+		not = { flag = beiyang_allies }
+		not = { flag = beiyang_axis }
+		not = { war = { country = UCH } }
+		not = { war = { country = U74 } }
+	}
+	
+	decision_trigger = {
+		NOT = { lost_national = { value = 15 } }
+	}
+	
+	trigger = {
+		not = { flag = EVT_133011613 }
+		exists = CHI
+		not = { ispuppet = UCH }
+		not = { ispuppet = U74 }
+		or = { # WWI has started
+			event = 2191503 # GER DoW Russia
+			event = 2191539 # GER DoW Russia
+			event = 2192502 # AH DoW Serbia
+			event = 2192528 # AH DoW Russia
+			event = 2104501 # RUS DoW's AH
+			event = 2104541 # RUS DoW's GER
+			event = 2191505 # France DoW's GER
+		}
+		NOT = { lost_national = { value = 15 } }
+		or = {
+			and = {
+				country = FRA
+				participant = { country = FRA value = 1 }
+				war = { country = FRA country = U08 }
+				control = { province = 55 data = -3 } # Paris
+			}
+			and = {
+				country = ENG
+				participant = { country = ENG value = 1 }
+				war = { country = ENG country = U08 }
+				control = { province = 29 data = -3 } # London
+			}
+			and = {
+				country = SOV
+				participant = { country = SOV value = 1 }
+				war = { country = SOV country = U08 }
+				control = { province = 572 data = -3 } # Moscow
+			}
+			and = {
+				country = RUS
+				participant = { country = RUS value = 1 }
+				war = { country = RUS country = U08 }
+				control = { province = 553 data = -3 } # Leningrad
+			}
+			and = {
+				country = JAP
+				participant = { country = JAP value = 1 }
+				war = { country = JAP country = U08 }
+				control = { province = 1552 data = -3 } # Tokyo
+			}
+		}
+		not = {
+			or = {
+				and = {
+					or = {
+						event = 2002534 #Versailes
+						event = 2191514 #Mil. defeat
+						event = 2191520 #Abdication + Armistice
+						event = 2191532 #Early defeat
+					}
+					event = 2192507# st. germain
+				}
+				and = {
+					event = 2191512 #Reverse Versailes
+					or = {
+						event = 2191555 #Russia defeated
+						event = 2007529 #SOV defeated
+						event = 2007530 #SOV defeated
+					}
+				}
+			}
+		}
+		not = { participant = { country = UCH value = 1 } }
+		not = { participant = { country = UCH value = 2 } }
+		not = { participant = { country = UCH value = 3 } }	
+		not = { participant = { country = U74 value = 1 } }
+		not = { participant = { country = U74 value = 2 } }
+		not = { participant = { country = U74 value = 3 } }
+		not = { flag = beiyang_allies }
+		not = { flag = beiyang_axis }
+		or = {
+			exists = UCH
+			exists = U74
+		}
+		random = 15
+		not = { war = { country = UCH } }
+		not = { war = { country = U74 } }
+	}
+	
+	name = EVT1914_133011613_NAME
+	desc = EVT1914_133011613_DESC
+
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	style = 2
+	
+	date = { day = 5 month = 1 year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1921 }
+
+	action = {
+		ai_chance = 100
+		name = ACTION_NAME_YES
+		command = { type = setflag which = EVT_133011613 }
+		command = { trigger = { exists = UCH } type = event which = 133011600 where = UCH when = 0 }
+		command = { trigger = { exists = U74 } type = event which = 133011600 where = U74 when = 0 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 0
+		name = ACTION_NAME_NO
+		command = { }
+	}
+
+}
+
+# Ask for Chinese (Beiyang) Aid
+event = {
+	id = 133011614
+	random = no
+	tag = { U08 U09 }
+	
+	decision = {
+		not = { flag = EVT_133011614 }
+		exists = CHI
+		not = { ispuppet = UCH }
+		not = { ispuppet = U74 }
+		or = { # WWI has started
+			event = 2191503 # GER DoW Russia
+			event = 2191539 # GER DoW Russia
+			event = 2192502 # AH DoW Serbia
+			event = 2192528 # AH DoW Russia
+			event = 2104501 # RUS DoW's AH
+			event = 2104541 # RUS DoW's GER
+			event = 2191505 # France DoW's GER
+		}
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+				or = {
+					war = { country = FRA country = U08 }
+					war = { country = ENG country = U08 }
+					war = { country = RUS country = U08 }
+					war = { country = SOV country = U08 }
+				}
+				control = { province = 163 data = -3 } # Berlin
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				or = {
+					war = { country = FRA country = U09 }
+					war = { country = ENG country = U09 }
+					war = { country = RUS country = U09 }
+					war = { country = SOV country = U09 }
+				}
+				control = { province = 195 data = -3 } # Vienna
+			}
+		}
+		not = {
+			or = {
+				and = {
+					or = {
+						event = 2002534 #Versailes
+						event = 2191514 #Mil. defeat
+						event = 2191520 #Abdication + Armistice
+						event = 2191532 #Early defeat
+					}
+					event = 2192507# st. germain
+				}
+				and = {
+					event = 2191512 #Reverse Versailes
+					or = {
+						event = 2191555 #Russia defeated
+						event = 2007529 #SOV defeated
+						event = 2007530 #SOV defeated
+					}
+				}
+			}
+		}
+		or = {
+			and = {
+				exists = UCH
+				not = { participant = { country = UCH value = 1 } }
+				not = { participant = { country = UCH value = 2 } }
+				not = { participant = { country = UCH value = 3 } }
+			}
+			and = {
+				exists = U74
+				not = { participant = { country = U74 value = 1 } }
+				not = { participant = { country = U74 value = 2 } }
+				not = { participant = { country = U74 value = 3 } }
+			}
+		}
+		not = { war = { country = UCH } }
+		not = { war = { country = U74 } }
+		not = { flag = beiyang_axis }
+		not = { flag = beiyang_allies }
+	}
+	
+	decision_trigger = {
+		not = { lost_national = { value = 15 } }
+	}
+
+	trigger = {
+		not = { flag = EVT_133011614 }
+		exists = CHI
+		not = { ispuppet = UCH }
+		not = { ispuppet = U74 }
+		not = { lost_national = { value = 15 } }
+		or = { # WWI has started
+			event = 2191503 # GER DoW Russia
+			event = 2191539 # GER DoW Russia
+			event = 2192502 # AH DoW Serbia
+			event = 2192528 # AH DoW Russia
+			event = 2104501 # RUS DoW's AH
+			event = 2104541 # RUS DoW's GER
+			event = 2191505 # France DoW's GER
+		}
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+				or = {
+					war = { country = FRA country = U08 }
+					war = { country = ENG country = U08 }
+					war = { country = RUS country = U08 }
+					war = { country = SOV country = U08 }
+				}
+				control = { province = 163 data = -3 } # Berlin
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				or = {
+					war = { country = FRA country = U09 }
+					war = { country = ENG country = U09 }
+					war = { country = RUS country = U09 }
+					war = { country = SOV country = U09 }
+				}
+				control = { province = 195 data = -3 } # Vienna
+			}
+		}
+		not = {
+			or = {
+				and = {
+					or = {
+						event = 2002534 #Versailes
+						event = 2191514 #Mil. defeat
+						event = 2191520 #Abdication + Armistice
+						event = 2191532 #Early defeat
+					}
+					event = 2192507# st. germain
+				}
+				and = {
+					event = 2191512 #Reverse Versailes
+					or = {
+						event = 2191555 #Russia defeated
+						event = 2007529 #SOV defeated
+						event = 2007530 #SOV defeated
+					}
+				}
+			}
+		}
+		not = { participant = { country = UCH value = 1 } }
+		not = { participant = { country = UCH value = 2 } }
+		not = { participant = { country = UCH value = 3 } }
+		not = { participant = { country = U74 value = 1 } }
+		not = { participant = { country = U74 value = 2 } }
+		not = { participant = { country = U74 value = 3 } }
+		not = { flag = beiyang_axis }
+		not = { flag = beiyang_allies }
+		or = {
+			exists = UCH
+			exists = U74
+		}
+		or = {
+			random = 5
+			and = {
+				random = 20
+				or = {
+					and = {
+						war = { country = UCH country = JAP }
+						participant = { country = JAP value = 1 }
+					}
+					and = {
+						war = { country = UCH country = ENG }
+						participant = { country = ENG value = 1 }
+					}
+					and = {
+						war = { country = UCH country = FRA }
+						participant = { country = FRA value = 1 }
+					}
+				}
+			}
+			and = {
+				random = 20
+				or = {
+					and = {
+						war = { country = U74 country = JAP }
+						participant = { country = JAP value = 1 }
+					}
+					and = {
+						war = { country = U74 country = ENG }
+						participant = { country = ENG value = 1 }
+					}
+					and = {
+						war = { country = U74 country = FRA }
+						participant = { country = FRA value = 1 }
+					}
+				}
+			}
+		}
+		not = { war = { country = UCH } }
+		not = { war = { country = U74 } }
+	}
+	
+	name = EVT1914_133011613_NAME
+	desc = EVT1914_133011613_DESC
+
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	style = 2
+	
+	date = { day = 5 month = 1 year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1921 }
+
+	action = {
+		ai_chance = 20
+		name = ACTION_NAME_YES
+		command = { type = setflag which = EVT_133011614 }
+		command = { trigger = { exists = UCH } type = event which = 133011618 where = UCH when = 0 }
+		command = { trigger = { exists = U74 } type = event which = 133011618 where = U74 when = 0 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 80
+		name = ACTION_NAME_NO
+		command = { }
+	}
+
+}
+
+# Join the T. Entente?
+# TODO: Picture missing!
+event = {
+	id = 133011600
+	random = no
+	tag = { UCH U74 }
+	
+	# Triggered
+	
+	name = ACTION_NAME_JOIN_ENTENTE
+	desc = EVT1914_133011600_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		trigger = {
+			country = UCH
+		}
+		ai_chance = 90
+		name = ACTION_NAME_ACCEPT
+		command = { trigger = { participant = { country = FRA value = 1 } } type = event which = 133011615 where = FRA when = 35 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = ENG value = 1 } } type = event which = 133011615 where = ENG when = 50 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = RUS value = 1 } } type = event which = 133011615 where = RUS when = 5 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = SOV value = 1 } } type = event which = 133011615 where = SOV when = 5 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = JAP value = 1 } } type = event which = 133011615 where = JAP when = 1 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = ITA value = 1 } } type = event which = 133011615 where = ITA when = 45 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = FRA value = 1 } } type = relation which = FRA value = 25 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = relation which = RUS value = 25 }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = relation which = ENG value = 25 }
+		command = { trigger = { participant = { country = USA value = 1 } } type = relation which = USA value = 25 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = relation which = JAP value = 35 }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = relation which = ITA value = 25 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = -45 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = -45 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = -45 }
+		command = { type = setflag which = beiyang_allies }
+		command = { type = trigger which = 133011619 }
+			command = { trigger = { participant = { country = JAP value = 1 } } type = non_aggression which = UCH where = JAP }
+		command = { trigger = { participant = { country = FRA value = 1 } } type = non_aggression which = UCH where = FRA }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = non_aggression which = UCH where = ENG }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = non_aggression which = UCH where = RUS }
+		command = { trigger = { participant = { country = SOV value = 1 } } type = non_aggression which = UCH where = SOV }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = non_aggression which = UCH where = ITA }
+			command = { trigger = { war = { country = JAP } participant = { country = JAP value = 1 } } type = peace which = JAP value = 1 }
+		command = { trigger = { war = { country = FRA } participant = { country = FRA value = 1 } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = ENG } participant = { country = ENG value = 1 } } type = peace which = ENG value = 1 }
+		command = { trigger = { war = { country = RUS } participant = { country = RUS value = 1 } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = SOV } participant = { country = SOV value = 1 } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 1 } } type = peace which = ITA value = 1 }
+		command = { type = sleepevent which = 133011614 }
+		command = { type = sleepevent which = 133011613 }
+		command = { type = sleepevent which = 133011600 }
+		command = { type = sleepevent which = 133011618 }
+	}
+
+	action = {
+		trigger = {
+			country = U74
+		}
+		ai_chance = 90
+		name = ACTION_NAME_ACCEPT
+		command = { trigger = { participant = { country = FRA value = 1 } } type = event which = 133011615 where = FRA when = 35 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = ENG value = 1 } } type = event which = 133011615 where = ENG when = 50 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = RUS value = 1 } } type = event which = 133011615 where = RUS when = 5 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = SOV value = 1 } } type = event which = 133011615 where = SOV when = 5 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = JAP value = 1 } } type = event which = 133011615 where = JAP when = 1 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = ITA value = 1 } } type = event which = 133011615 where = ITA when = 45 } # Give manpower and offmap IC to France, Russia, etc.
+		command = { trigger = { participant = { country = FRA value = 1 } } type = relation which = FRA value = 25 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = relation which = RUS value = 25 }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = relation which = ENG value = 25 }
+		command = { trigger = { participant = { country = USA value = 1 } } type = relation which = USA value = 25 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = relation which = JAP value = 35 }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = relation which = ITA value = 25 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = -45 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = -45 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = -45 }
+		command = { type = setflag which = beiyang_allies }
+		command = { type = trigger which = 133011619 }
+			command = { trigger = { participant = { country = JAP value = 1 } } type = non_aggression which = U74 where = JAP }
+		command = { trigger = { participant = { country = FRA value = 1 } } type = non_aggression which = U74 where = FRA }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = non_aggression which = U74 where = ENG }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = non_aggression which = U74 where = RUS }
+		command = { trigger = { participant = { country = SOV value = 1 } } type = non_aggression which = U74 where = SOV }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = non_aggression which = U74 where = ITA }
+			command = { trigger = { war = { country = JAP } participant = { country = JAP value = 1 } } type = peace which = JAP value = 1 }
+		command = { trigger = { war = { country = FRA } participant = { country = FRA value = 1 } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = ENG } participant = { country = ENG value = 1 } } type = peace which = ENG value = 1 }
+		command = { trigger = { war = { country = RUS } participant = { country = RUS value = 1 } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = SOV } participant = { country = SOV value = 1 } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 1 } } type = peace which = ITA value = 1 }
+		command = { type = sleepevent which = 133011614 }
+		command = { type = sleepevent which = 133011613 }
+		command = { type = sleepevent which = 133011600 }
+		command = { type = sleepevent which = 133011618 }
+	}
+
+	action = {
+		ai_chance = 10
+		name = ACTION_NAME_DECLINE
+		command = { trigger = { participant = { country = FRA value = 1 } } type = relation which = FRA value = -15 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = relation which = RUS value = -15 }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = relation which = ENG value = -15 }
+		command = { trigger = { participant = { country = USA value = 1 } } type = relation which = USA value = -15 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = relation which = JAP value = -15 }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = relation which = ITA value = -15 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = 15 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = 15 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = 15 }
+		command = { type = sleepevent which = 133011613 }
+		command = { type = sleepevent which = 133011600 }
+	}
+}
+
+# Join the C. Powers?
+# TODO: Picture missing!
+event = {
+	id = 133011618
+	random = no
+	tag = { UCH U74 }
+	
+	# Triggered
+	
+	name = ACTION_NAME_JOIN_CENTRAL
+	desc = EVT1914_133011600_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = { participant = { country = JAP value = 1 } }
+			}
+			country = UCH
+		}
+		ai_chance = 40
+		name = ACTION_NAME_ACCEPT
+		command = { trigger = { participant = { country = U08 value = 2 } } type = event which = 133011616 where = U08 when = 45 } # Give manpower
+		command = { trigger = { participant = { country = U09 value = 2 } } type = event which = 133011616 where = U09 when = 45 } # Give manpower
+		command = { trigger = { participant = { country = FRA value = 1 } } type = relation which = FRA value = -45 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = relation which = RUS value = -45 }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = relation which = ENG value = -45 }
+		command = { trigger = { participant = { country = USA value = 1 } } type = relation which = USA value = -45 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = relation which = JAP value = -55 }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = relation which = ITA value = -35 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = 25 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = 25 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = 25 }
+			command = { trigger = { participant = { country = U08 value = 2 } } type = non_aggression which = UCH where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = non_aggression which = UCH where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = non_aggression which = UCH where = ITA }
+			command = { trigger = { war = { country = U08 } participant = { country = U08 value = 2 } } type = peace which = U08 value = 1 }
+		command = { trigger = { war = { country = U09 } participant = { country = U09 value = 2 } } type = peace which = U09 value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 2 } } type = peace which = ITA value = 1 }
+		command = { type = setflag which = beiyang_axis }
+		command = { type = trigger which = 133011621 }
+		command = { type = sleepevent which = 133011614 }
+		command = { type = sleepevent which = 133011613 }
+		command = { type = sleepevent which = 133011600 }
+		command = { type = sleepevent which = 133011618 }
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = { participant = { country = JAP value = 1 } }
+			}
+			country = U74
+		}
+		ai_chance = 40
+		name = ACTION_NAME_ACCEPT
+		command = { trigger = { participant = { country = U08 value = 2 } } type = event which = 133011616 where = U08 when = 45 } # Give manpower
+		command = { trigger = { participant = { country = U09 value = 2 } } type = event which = 133011616 where = U09 when = 45 } # Give manpower
+		command = { trigger = { participant = { country = FRA value = 1 } } type = relation which = FRA value = -45 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = relation which = RUS value = -45 }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = relation which = ENG value = -45 }
+		command = { trigger = { participant = { country = USA value = 1 } } type = relation which = USA value = -45 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = relation which = JAP value = -55 }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = relation which = ITA value = -35 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = 25 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = 25 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = 25 }
+			command = { trigger = { participant = { country = U08 value = 2 } } type = non_aggression which = U74 where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = non_aggression which = U74 where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = non_aggression which = U74 where = ITA }
+			command = { trigger = { war = { country = U08 } participant = { country = U08 value = 2 } } type = peace which = U08 value = 1 }
+		command = { trigger = { war = { country = U09 } participant = { country = U09 value = 2 } } type = peace which = U09 value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 2 } } type = peace which = ITA value = 1 }
+		command = { type = setflag which = beiyang_axis }
+		command = { type = trigger which = 133011621 }
+			command = { type = sleepevent which = 133011614 }
+		command = { type = sleepevent which = 133011613 }
+		command = { type = sleepevent which = 133011600 }
+		command = { type = sleepevent which = 133011618 }
+	}
+	
+	action = {
+		ai_chance = 60
+		name = ACTION_NAME_DECLINE
+		command = { trigger = { participant = { country = FRA value = 1 } } type = relation which = FRA value = 15 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = relation which = RUS value = 15 }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = relation which = ENG value = 15 }
+		command = { trigger = { participant = { country = USA value = 1 } } type = relation which = USA value = 15 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = relation which = JAP value = 15 }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = relation which = ITA value = 15 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = -15 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = -15 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = -15 }
+		command = { type = sleepevent which = 133011614 }
+		command = { type = sleepevent which = 133011618 }
+	}
+}
+
+#######################
+# T. Entente Accepted #
+#######################
+
+# Chinese Aid
+# TODO: Picture Missing!
+event = {
+	random = no
+	persistent = yes
+	one_action = yes
+	
+	#Triggered
+
+	id = 133011615
+	
+	name = EVT1914_133011615_NAME
+	desc = EVT1914_133011615_DESC
+
+	picture = "foreign_volunteers"
+	style = 2
+
+	# France
+	
+	action = {
+		trigger = {
+			country = FRA
+		}
+		ai_chance = 40
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 40 }
+	}
+	
+	action = {
+		trigger = {
+			country = FRA
+		}
+		ai_chance = 10
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 20 }
+	}
+
+	action = {
+		trigger = {
+			country = FRA
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 60 }
+	}
+
+	action = {
+		trigger = {
+			country = FRA
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 10 }
+	}
+
+	action = {
+		trigger = {
+			country = FRA
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 5 }
+	}
+
+	# England
+	
+	action = {
+		trigger = {
+			country = ENG
+		}
+		ai_chance = 40
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 10 }
+	}
+	
+	action = {
+		trigger = {
+			country = ENG
+		}
+		ai_chance = 10
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 5 }
+	}
+
+	action = {
+		trigger = {
+			country = ENG
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 15 }
+	}
+
+	action = {
+		trigger = {
+			country = ENG
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 3 }
+	}
+
+	action = {
+		trigger = {
+			country = ENG
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 1 }
+	}
+
+	# Russia
+
+	action = {
+		trigger = {
+			or = {
+				country = SOV
+				country = RUS
+			}
+		}
+		ai_chance = 100
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 5 }
+	}
+
+	# Japan
+
+	action = {
+		trigger = {
+			country = JAP
+		}
+		ai_chance = 100
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 5 }
+	}
+
+	#Italy
+
+	action = {
+		trigger = {
+			country = ITA
+		}
+		ai_chance = 100
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 1 }
+	}
+}
+
+######################
+# C. Powers Accepted #
+######################
+
+# Chinese Aid
+# TODO: Picture Missing!
+event = {
+	random = no
+	persistent = yes
+	one_action = yes
+
+	# Triggered
+
+	id = 133011616
+	
+	name = EVT1914_133011615_NAME
+	desc = EVT1914_133011615_DESC
+
+	picture = "foreign_volunteers"
+	style = 2
+
+	# Germany
+	
+	action = {
+		trigger = {
+			country = U08
+		}
+		ai_chance = 40
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 50 }
+	}
+	
+	action = {
+		trigger = {
+			country = U08
+		}
+		ai_chance = 10
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 30 }
+	}
+
+	action = {
+		trigger = {
+			country = U08
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 70 }
+	}
+
+	action = {
+		trigger = {
+			country = U08
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 20 }
+	}
+
+	action = {
+		trigger = {
+			country = U08
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 10 }
+	}
+
+	# Austria-Hungary
+
+	action = {
+		trigger = {
+			country = U09
+		}
+		ai_chance = 40
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 10 }
+	}
+	
+	action = {
+		trigger = {
+			country = U09
+		}
+		ai_chance = 10
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 5 }
+	}
+
+	action = {
+		trigger = {
+			country = U09
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 15 }
+	}
+
+	action = {
+		trigger = {
+			country = U09
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 3 }
+	}
+
+	action = {
+		trigger = {
+			country = U09
+		}
+		ai_chance = 5
+		name = ACTION_NAME_EXCELLENT
+		command = { type = manpowerpool value = 1 }
+	}
+}
+
+####################################
+# Alternative Response Event Chain #
+####################################
+
+# Beiyang Joins the T. Entente
+event = {
+	random = no
+	id = 133011619
+	country = CHI
+
+	#Triggered
+
+	name = EVT1914_133011619_NAME
+	desc = EVT1914_133011619_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	action = {
+		trigger = { # Ensure good relations for ai.
+			or = {
+				and = {
+					or = {
+						relation = { which = JAP value = 150 }
+						not = { participant = { country = JAP value = 1 } }
+					}
+					or = {
+						relation = { which = UCH value = 50 }
+						not = { participant = { country = UCH value = 1 } }
+					}
+					or = {
+						relation = { which = U74 value = 50 }
+						not = { participant = { country = U74 value = 1 } }
+					}
+					or = {
+						relation = { which = ENG value = 50 }
+						not = { participant = { country = ENG value = 1 } }
+					}
+					or = {
+						relation = { which = FRA value = 50 }
+						not = { participant = { country = FRA value = 1 } }
+					}
+				}
+				ai = no
+			}
+		}
+		ai_chance = 15
+		name = ACTION_NAME_JOIN_ENTENTE
+		command = { trigger = { # Penalty for player if bad relations.
+			not = {
+				or = {
+					relation = { which = JAP value = 150 }
+					not = { participant = { country = JAP value = 1 } }
+				}
+				or = {
+					relation = { which = UCH value = 50 }
+					not = { participant = { country = UCH value = 1 } }
+				}
+				or = {
+					relation = { which = U74 value = 50 }
+					not = { participant = { country = U74 value = 1 } }
+				}
+				or = {
+					relation = { which = ENG value = 50 }
+					not = { participant = { country = ENG value = 1 } }
+				}
+				or = {
+					relation = { which = FRA value = 50 }
+					not = { participant = { country = FRA value = 1 } }
+				}
+			}
+		} type = dissent value = 20 }
+		command = { type = dissent value = 10 }
+		command = { type = setflag which = alternate_allies }
+		command = { trigger = { not = { war = { country = UCH } } } type = non_aggression which = CHI where = UCH }
+		command = { trigger = { not = { war = { country = U74 } } } type = non_aggression which = CHI where = U74 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = non_aggression which = CHI where = JAP }
+		command = { trigger = { participant = { country = FRA value = 1 } } type = non_aggression which = CHI where = FRA }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = non_aggression which = CHI where = ENG }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = non_aggression which = CHI where = RUS }
+		command = { trigger = { participant = { country = SOV value = 1 } } type = non_aggression which = CHI where = SOV }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = non_aggression which = CHI where = ITA }
+			command = { trigger = { war = { country = JAP } participant = { country = JAP value = 1 } } type = peace which = JAP value = 1 }
+		command = { trigger = { war = { country = FRA } participant = { country = FRA value = 1 } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = ENG } participant = { country = ENG value = 1 } } type = peace which = ENG value = 1 }
+		command = { trigger = { war = { country = RUS } participant = { country = RUS value = 1 } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = SOV } participant = { country = SOV value = 1 } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 1 } } type = peace which = ITA value = 1 }
+		command = { type = relation which = UCH value = 20 }
+	}
+
+	action = {
+		ai_chance = 50
+		name = EVT1914_133011619_ACTIONB #"Western wars are of no interest to us"
+		command = { type = dissent value = -5 }
+			command = { trigger = { participant = { country = JAP value = 1 } } type = non_aggression which = CHI where = JAP }
+		command = { trigger = { participant = { country = FRA value = 1 } } type = non_aggression which = CHI where = FRA }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = non_aggression which = CHI where = ENG }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = non_aggression which = CHI where = RUS }
+		command = { trigger = { participant = { country = SOV value = 1 } } type = non_aggression which = CHI where = SOV }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = non_aggression which = CHI where = ITA }
+			command = { trigger = { participant = { country = U08 value = 2 } } type = non_aggression which = CHI where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = non_aggression which = CHI where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = non_aggression which = CHI where = ITA }
+	}
+	
+	action = {
+		trigger = {
+			exists = U08
+			participant = { country = U08 value = 2 }
+		}
+		ai_chance = 30
+		name = EVT1914_133011619_ACTIONC #"The enemy of my enemy is my friend"
+		command = { type = trigger which = 133011620 }
+		command = { trigger = { not = { relation = { which = U08 value = 100 } } } type = dissent value = 5 }
+	}
+}
+
+# Sino-German Pact
+event = {
+	id = 133011620
+	country = U08
+	random = no
+
+	# Triggered
+
+	name = EVT1914_133011620_NAME
+	desc = EVT1914_133011620_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		ai_chance = 80
+		name = EVT1914_2006502_ACTIONA #"Sign it!"
+		command = { type = event which = 133011616 where = U08 when = 45 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = event which = 133011616 where = U09 when = 45 }
+		command = { type = relation which = CHI value = 50 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = non_aggression which = CHI where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = non_aggression which = CHI where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = non_aggression which = CHI where = ITA }
+		command = { trigger = { war = { country = U08 } participant = { country = U08 value = 2 } } type = peace which = U08 value = 1 }
+		command = { trigger = { war = { country = U09 } participant = { country = U09 value = 2 } } type = peace which = U09 value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 2 } } type = peace which = ITA value = 1 }
+		command = { type = setflag which = alternate_axis }
+	}
+
+	action = {
+		ai_chance = 20
+		name = EVT1914_2006502_ACTIONB #"Don't sign it!"
+		command = { type = relation which = CHI value = -20}
+	}
+}
+
+# Beiyang Joins the C. Powers
+event = {
+	random = no
+	id = 133011621
+	country = CHI
+
+	#Triggered
+
+	name = EVT1914_133011621_NAME
+	desc = EVT1914_133011621_DESC
+	
+	picture = "ccip_npw"
+	style = 2
+
+	action = {
+		trigger = { # Ensure good relations for ai.
+			or = {
+				and = {
+					or = {
+						relation = { which = U08 value = 150 }
+						not = { participant = { country = U08 value = 2 } }
+					}
+					or = {
+						relation = { which = U09 value = 50 }
+						not = { participant = { country = U09 value = 2 } }
+					}
+				}
+				ai = no
+			}
+		}
+		ai_chance = 5
+		name = ACTION_NAME_JOIN_CENTRAL
+		command = { trigger = { # Penalty for player if bad relations.
+			not = {
+				or = {
+					relation = { which = U08 value = 150 }
+					not = { participant = { country = U08 value = 2 } }
+				}
+				or = {
+					relation = { which = U09 value = 50 }
+					not = { participant = { country = U09 value = 2 } }
+				}
+			}
+		} type = dissent value = 20 }
+		command = { type = dissent value = 10 }
+		command = { type = setflag which = alternate_axis }
+		command = { trigger = { not = { war = { country = UCH } } } type = non_aggression which = CHI where = UCH }
+		command = { trigger = { not = { war = { country = U74 } } } type = non_aggression which = CHI where = U74 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = non_aggression which = CHI where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = non_aggression which = CHI where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = non_aggression which = CHI where = ITA }
+			command = { trigger = { war = { country = U08 } participant = { country = U08 value = 2 } } type = peace which = U08 value = 1 }
+		command = { trigger = { war = { country = U09 } participant = { country = U09 value = 2 } } type = peace which = U09 value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 2 } } type = peace which = ITA value = 1 }
+		command = { type = relation which = UCH value = 20 }
+	}
+
+	action = {
+		ai_chance = 50
+		name = EVT1914_133011619_ACTIONB #"Western wars are of no interest to us"
+		command = { type = dissent value = -5 }
+			command = { trigger = { participant = { country = JAP value = 1 } } type = non_aggression which = CHI where = JAP }
+		command = { trigger = { participant = { country = FRA value = 1 } } type = non_aggression which = CHI where = FRA }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = non_aggression which = CHI where = ENG }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = non_aggression which = CHI where = RUS }
+		command = { trigger = { participant = { country = SOV value = 1 } } type = non_aggression which = CHI where = SOV }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = non_aggression which = CHI where = ITA }
+			command = { trigger = { participant = { country = U08 value = 2 } } type = non_aggression which = CHI where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = non_aggression which = CHI where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = non_aggression which = CHI where = ITA }
+	}
+	
+	action = {
+		ai_chance = 45
+		name = EVT1914_133011619_ACTIONC #"The enemy of my enemy is my friend"
+		command = { trigger = { participant = { country = FRA value = 1 } } type = event which = 133011622 where = FRA when = 2 }
+		command = { trigger = { participant = { country = ENG value = 1 } not = { participant = { country = FRA value = 1 } } } type = event which = 133011622 where = ENG when = 2 }
+		command = { trigger = { participant = { country = RUS value = 1 } not = { participant = { country = FRA value = 1 } } not = { participant = { country = ENG value = 1 } } } type = event which = 133011622 where = RUS when = 2 }
+		command = { trigger = { participant = { country = SOV value = 1 } not = { participant = { country = FRA value = 1 } } not = { participant = { country = ENG value = 1 } } not = { participant = { country = RUS value = 1 } } } type = event which = 133011622 where = SOV when = 2 }
+		command = { trigger = { not = { relation = { which = FRA value = 100 } } } type = dissent value = 2 }
+		command = { trigger = { not = { relation = { which = ENG value = 100 } } } type = dissent value = 2 }
+		command = { trigger = { not = { relation = { which = RUS value = 100 } } exists = RUS } type = dissent value = 2 }
+		command = { trigger = { not = { relation = { which = SOV value = 100 } } exists = SOV } type = dissent value = 2 }
+	}
+}
+
+# Sino-Entente Pact
+event = {
+	id = 133011622
+	#country = U08
+	random = no
+
+	# Triggered
+
+	name = EVT1914_133011622_NAME
+	desc = EVT1914_133011622_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		ai_chance = 80
+		name = EVT1914_2006502_ACTIONA #"Sign it!"
+		command = { trigger = { participant = { country = FRA value = 1 } } type = event which = 133011615 where = FRA when = 35 }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = event which = 133011615 where = ENG when = 50 }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = event which = 133011615 where = ITA when = 45 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = event which = 133011615 where = RUS when = 5 }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = event which = 133011615 where = JAP when = 1 }
+		command = { trigger = { participant = { country = SOV value = 1 } } type = event which = 133011615 where = SOV when = 5 }
+		command = { type = relation which = CHI value = 50 }
+		command = { trigger = { participant = { country = FRA value = 1 } } type = non_aggression which = CHI where = FRA }
+		command = { trigger = { participant = { country = ENG value = 1 } } type = non_aggression which = CHI where = ENG }
+		command = { trigger = { participant = { country = ITA value = 1 } } type = non_aggression which = CHI where = ITA }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = non_aggression which = CHI where = RUS }
+		command = { trigger = { participant = { country = JAP value = 1 } } type = non_aggression which = CHI where = JAP }
+		command = { trigger = { participant = { country = SOV value = 1 } } type = non_aggression which = CHI where = SOV }
+		command = { trigger = { war = { country = JAP } participant = { country = JAP value = 1 } } type = peace which = JAP value = 1 }
+		command = { trigger = { war = { country = FRA } participant = { country = FRA value = 1 } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = ENG } participant = { country = ENG value = 1 } } type = peace which = ENG value = 1 }
+		command = { trigger = { war = { country = RUS } participant = { country = RUS value = 1 } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = SOV } participant = { country = SOV value = 1 } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = ITA } participant = { country = ITA value = 1 } } type = peace which = ITA value = 1 }
+		command = { type = setflag which = alternate_allies }
+	}
+
+	action = {
+		ai_chance = 20
+		name = EVT1914_2006502_ACTIONB #"Don't sign it!"
+		command = { type = relation which = CHI value = -20}
+	}
+}
+
+################
+# Peace Events #
+################
+	
+# The Chinese Alliance
+event = {
+	id = 133011640
+	random = no
+	tag = { FRA RUS ENG SOV ITA U08 U09 JAP }
+	persistent = yes
+
+	trigger = {
+		not = { local_flag = 133011640_override } # Used for Interventions
+		or = {
+			and = { #Entente
+				participant = { value = 1 } 
+				or = {
+					not = { non_aggression = { country = CHI country = -1 } }
+					not = { non_aggression = { country = UCH country = -1 } }
+					not = { non_aggression = { country = U74 country = -1 } }
+				}
+				or = {
+					flag = alternate_allies # Not allowed to intervene in any civil wars during WWI
+					flag = beiyang_allies # To intervene post WWI, restoration events can be used.
+				}
+			}
+			and = { #C. Powers
+				participant = { value = 2 } 
+				or = {
+					not = { non_aggression = { country = CHI country = -1 } }
+					not = { non_aggression = { country = UCH country = -1 } }
+					not = { non_aggression = { country = U74 country = -1 } }
+				}
+				or = {
+					flag = alternate_axis
+					flag = beiyang_axis
+				}
+			}
+		}
+	}
+
+	name = EVT1914_133011640_NAME
+	desc = EVT1914_133011640_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	date = { day = 5 month = july year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1921 }
+
+	action = {
+		trigger = {
+			country = FRA
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = FRA }
+			command = { type = non_aggression which = UCH where = FRA }
+			command = { type = non_aggression which = U74 where = FRA }
+	}
+
+	action = {
+		trigger = {
+			country = RUS
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = RUS }
+			command = { type = non_aggression which = UCH where = RUS }
+			command = { type = non_aggression which = U74 where = RUS }
+	}
+
+	action = {
+		trigger = {
+			country = ENG
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = ENG }
+			command = { type = non_aggression which = UCH where = ENG }
+			command = { type = non_aggression which = U74 where = ENG }
+	}
+
+	action = {
+		trigger = {
+			country = SOV
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = SOV }
+			command = { type = non_aggression which = UCH where = SOV }
+			command = { type = non_aggression which = U74 where = SOV }
+	}
+
+	action = {
+		trigger = {
+			country = JAP
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = JAP }
+			command = { type = non_aggression which = UCH where = JAP }
+			command = { type = non_aggression which = U74 where = JAP }
+	}
+
+	action = {
+		trigger = {
+			country = ITA
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = ITA }
+			command = { type = non_aggression which = UCH where = ITA }
+			command = { type = non_aggression which = U74 where = ITA }
+	}
+
+	action = {
+		trigger = {
+			country = U08
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = U08 }
+			command = { type = non_aggression which = UCH where = U08 }
+			command = { type = non_aggression which = U74 where = U08 }
+	}
+
+	action = {
+		trigger = {
+			country = U09
+		}
+		name = ACTION_NAME_SIGN
+			command = { type = non_aggression which = CHI where = U09 }
+			command = { type = non_aggression which = UCH where = U09 }
+			command = { type = non_aggression which = U74 where = U09 }
+	}
+}

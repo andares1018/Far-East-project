@@ -1,0 +1,401 @@
+# Brief Restoration in the Forbidden City (Flavor Events)
+# By Limith
+#-Beijing Restoration Events-------------------
+# UCH 133011407 Duan Qirui expelled! 
+# UCH 133011408 Anhui threatens rebellion
+# UCH 133011409 Zhang Xun appointed mediator
+# UCH 133011410 The Qing restoration
+# UCH 133011411 Duan Qirui reinstated
+# UCH 133011412 Bombing of the Forbidden City
+# UCH 133011413 Raze the Forbidden City?
+# UCH 133011416 The Anhui-Zhili Coalition
+# ALI 133011414 T. Entente Intervention
+# AXI 133011415 C. Powers Intervention
+# UCH 133011417 Foreign Intervention - Puyi Flees Overseas.
+
+# Duan Qirui expelled!
+event = {
+	id = 133011407
+	random = no
+	country = UCH
+
+	trigger = {
+		or = {
+			flag = EVT_133011613
+			flag = EVT_133011614
+		}
+		event = 133011403 # Anhui Era
+		random = 25
+	}
+
+	name = EVT1914_133011407_NAME
+	desc = EVT1914_133011407_DESC
+
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	picture = "ccip_duan"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 5 }
+		command = { type = event which = 133011408 where = UCH when = 10 }
+		command = { type = sleepminister which = 1325120 } # Duan Qirui and all minister posts.
+	}
+}
+
+# Anhui threatens rebellion
+event = {
+	id = 133011408
+	random = no
+	country = UCH
+
+	#Triggered
+
+	name = EVT1914_133011408_NAME
+	desc = EVT1914_133011408_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 5 }
+		command = { type = event which = 133011409 where = UCH when = 5 }
+	}
+}
+
+# Zhang Xun appointed mediator
+event = {
+	id = 133011409
+	random = no
+	country = UCH
+
+	#Triggered
+
+	name = EVT1914_133011409_NAME
+	desc = EVT1914_133011409_DESC
+
+	picture = "ccip_zhangxun"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_GOOD
+		command = { type = dissent value = -3 }
+		command = { type = event which = 133011410 where = UCH when = 5 }
+	}
+}
+	
+# The Qing restoration
+event = {
+	id = 133011410
+	random = no
+	country = UCH
+
+	#Triggered
+
+	name = EVT1914_133011410_NAME
+	desc = EVT1914_133011410_DESC
+
+	picture = "ccip_restoration"
+	style = 2
+
+	action = {
+		name = EVT1914_133011410_ACTIONA #"The people will not stand for this!"
+		command = { type = dissent value = -3 }
+		command = { type = event which = 133011411 where = UCH when = 2 }
+	}
+}
+		
+# Duan Qirui reinstated
+event = {
+	id = 133011411
+	random = no
+	country = UCH
+
+	#Triggered
+
+	name = EVT1914_133011411_NAME
+	desc = EVT1914_133011411_DESC
+
+	picture = "ccip_duan"
+	style = 2
+
+	action = {
+		name = EVT1914_133011411_ACTIONA #"The beginning of the end for the monarchists."
+		command = { type = wakeminister which = 1325120 }
+		command = { type = wakeminister which = 1325123 }
+		command = { type = wakeminister which = 1325106 }
+		command = { type = wakeminister which = 1325107 }
+		command = { type = wakeminister which = 1325109 }
+		command = { type = headofstate which = 1325215 } # Feng Guozhang
+		command = { type = headofgovernment which = 1325120 } # Duan Qirui
+		command = { type = chiefofstaff which = 1325106 }
+		command = { type = chiefofarmy which = 1325107 }
+		command = { type = chiefofair which = 1325109 }
+		command = { type = sleepminister which = 1325200 } # Li Yuanhong
+		command = { type = dissent value = -1 }
+		command = { type = event which = 133011412 where = UCH when = 0 }
+	}
+}
+
+# Bombing of the Forbidden City
+event = {
+	id = 133011412
+	random = no
+	country = UCH
+	one_action = yes
+
+	#Triggered
+
+	name = EVT1914_133011412_NAME
+	desc = EVT1914_133011412_DESC
+
+	picture = "ccip_fcseige"
+	style = 2
+
+	action = {
+		name = EVT1914_133011412_ACTIONA #"A pity he did not die"
+		ai_chance = 70
+		command = { type = dissent value = -1 }
+		command = { trigger = { flag = beiyang_axis participant = { country = JAP value = 1 } } type = event which = 133011414 where = JAP when = 1 }
+		command = { trigger = { flag = beiyang_allies participant = { country = U08 value = 2 } } type = event which = 133011415 where = U08 when = 1 }
+		command = { trigger = {
+			not = {
+				or = {
+					and = {
+						flag = beiyang_axis
+						participant = { country = JAP value = 1 }
+					}
+					and = {
+						flag = beiyang_allies
+						participant = { country = U08 value = 2 }
+					}
+				}
+			}
+		} type = event which = 133011413 where = UCH when = 2 }
+	}
+
+	action = {
+		name = EVT1914_133011412_ACTIONB #"Puyi is dead! Long live the republic!"
+		ai_chance = 30
+		command = { type = dissent value = -5 }
+		command = { type = event which = 133011416 where = UCH when = 2 }
+		command = { type = setflag which = puyi_dead }
+	}
+}
+
+# Raze the Forbidden City?
+event = {
+	id = 133011413
+	random = no
+	country = UCH
+
+	#Triggered
+
+	name = EVT1914_133011413_NAME
+	desc = EVT1914_133011413_DESC
+
+	picture = "ccip_fcassault"
+	style = 2
+
+	action = {
+		name = EVT1914_133011413_ACTIONA #"End the monarchist movement once and for all!"
+		ai_chance = 70
+		command = { type = dissent value = -5 }
+		command = { type = setflag which = puyi_dead }
+		command = { type = event which = 133011416 where = UCH when = 0 }
+	}
+
+	action = {
+		name = EVT1914_133011413_ACTIONB #"Accept the surrender, let him live."
+		ai_chance = 30
+		command = { type = dissent value = -10 }
+		command = { type = event which = 133011416 where = UCH when = 0 }
+	}
+}
+
+# The Anhui-Zhili Coalition
+event = {
+	id = 133011416
+	country = UCH
+	random = no
+	one_action = yes
+
+	#Triggered
+
+	name = EVT1914_133011416_NAME
+	desc = EVT1914_133011416_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	action = {
+		trigger = {
+			year = 1918
+		}
+		name = ACTION_NAME_OK
+		ai_chance = 10
+		command = { type = alliance which = U36 when = 1 }
+		command = { type = non_aggression which = U36 where = UCH }
+		command = { type = set_relation which = U36 value = 150 }
+		command = { type = event which = 133011504 where = UCH when = 7 }
+		command = { type = event which = 133011900 where = UCH when = 3 }
+	}
+
+	action = {
+		trigger = {
+			year = 1917
+		}
+		name = ACTION_NAME_OK
+		ai_chance = 10
+		command = { type = alliance which = U36 when = 1 }
+		command = { type = non_aggression which = U36 where = UCH }
+		command = { type = set_relation which = U36 value = 150 }
+		command = { type = event which = 133011504 where = UCH when = 25 }
+		command = { type = event which = 133011900 where = UCH when = 3 }
+	}
+
+	action = {
+		trigger = {
+			year = 1916
+		}
+		name = ACTION_NAME_OK
+		ai_chance = 10
+		command = { type = alliance which = U36 when = 1 }
+		command = { type = non_aggression which = U36 where = UCH }
+		command = { type = set_relation which = U36 value = 150 }
+		command = { type = event which = 133011504 where = UCH when = 50 }
+		command = { type = event which = 133011900 where = UCH when = 3 }
+	}
+
+	action = {
+		trigger = {
+			year = 1916
+		}
+		name = ACTION_NAME_OK
+		ai_chance = 10
+		command = { type = alliance which = U36 when = 1 }
+		command = { type = non_aggression which = U36 where = UCH }
+		command = { type = set_relation which = U36 value = 150 }
+		command = { type = event which = 133011504 where = UCH when = 80 }
+		command = { type = event which = 133011900 where = UCH when = 3 }
+	}
+
+	action = {
+		trigger = {
+			year = 1916
+		}
+		name = ACTION_NAME_OK
+		ai_chance = 10
+		command = { type = alliance which = U36 when = 1 }
+		command = { type = non_aggression which = U36 where = UCH }
+		command = { type = set_relation which = U36 value = 150 }
+		command = { type = event which = 133011504 where = UCH when = 95 }
+		command = { type = event which = 133011900 where = UCH when = 3 }
+	}
+
+	action = {
+		name = ACTION_NAME_OK
+		ai_chance = 0
+		command = { type = alliance which = U36 when = 1 }
+		command = { type = non_aggression which = U36 where = UCH }
+		command = { type = set_relation which = U36 value = 150 }
+		command = { type = event which = 133011504 where = UCH when = 120 }
+		command = { type = event which = 133011900 where = UCH when = 3 }
+	}
+
+}
+
+# T. Entente Intervention
+event = {
+	id = 133011414
+	country = JAP
+	random = no
+
+	#Triggered
+
+	name = EVT1914_133011414_NAME
+	desc = EVT1914_133011414_DESC
+
+	picture = "ccip_restoration"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = { flag = alternate_allies }
+			}
+		}
+		name = EVT1914_133011414_ACTIONA #"Smuggle him out of the country."
+		ai_chance = 70
+		command = { type = relation which = UCH value = -15 }
+		command = { type = event which = 133011417 where = UCH when = 1 }
+	}
+
+	action = {
+		name = EVT1914_133011414_ACTIONB #"Leave him be"
+		ai_chance = 30
+		command = { type = relation which = UCH value = 15 }
+		command = { type = non_aggression which = UCH where = JAP }
+		command = { type = event which = 133011413 where = UCH when = 1 }
+	}
+}
+# AXI 133011415 C. Powers Intervention
+event = {
+	id = 133011415
+	country = U08
+	random = no
+
+	#Triggered
+
+	name = EVT1914_133011415_NAME
+	desc = EVT1914_133011414_DESC
+
+	picture = "ccip_restoration"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = { flag = alternate_axis }
+			}
+		}
+		name = EVT1914_133011414_ACTIONA #"Smuggle him out of the country."
+		ai_chance = 70
+		command = { type = relation which = UCH value = -15 }
+		command = { type = event which = 133011417 where = UCH when = 1 }
+	}
+
+	action = {
+		name = EVT1914_133011414_ACTIONB #"Leave him be"
+		ai_chance = 30
+		command = { type = relation which = UCH value = 15 }
+		command = { type = non_aggression which = UCH where = U08 }
+		command = { type = event which = 133011413 where = UCH when = 1 }
+	}
+}
+
+# UCH 133011417 Foreign Intervention - Puyi Flees Overseas.
+event = {
+	id = 133011417
+	country = UCH
+	random = no
+
+	#Triggered
+
+	name = EVT1914_133011417_NAME
+	desc = EVT1914_133011417_DESC
+
+	picture = "ccip_restoration"
+	style = 2
+
+	action = {
+		name = EVT1914_133011417_ACTIONA #"This is a violation of our sovereignty!"
+		command = { type = event which = 133011416 where = UCH when = 0 }
+	}
+}

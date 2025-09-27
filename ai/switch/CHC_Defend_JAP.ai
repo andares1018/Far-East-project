@@ -1,0 +1,16 @@
+# Communist China Japan attack AI File by Lothos
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+front = { 
+	distrib_vs_ai 		= reactive
+	distrib_vs_human 	= defensive
+
+   	enemy_handicap = {
+		JAP = 360
+	} 
+   	passivity = {
+		JAP = 99
+	} 
+}

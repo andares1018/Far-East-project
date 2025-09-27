@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "HoBo-W-S.bmp"
+	Origin = { x = 110 y = 85 }
+	Frames = 16
+	Speed = 4
+	Palette = "HoBo.bmp"
+}

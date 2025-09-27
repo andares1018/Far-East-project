@@ -1,0 +1,208 @@
+#############################################
+# Regular AI Events
+#############################################
+# Behavior Flags
+#	CHCExpForces		= Send out exp forces
+#	UPGPeace			= Upgrading of existing units flag
+
+# Invasion Flags
+#	CHCAttackJAP		= Flag turned on means they are free to attack at will
+################
+# United Front
+#####################
+event = {
+	id = 3053001
+	random = no
+	country = CHC
+
+	trigger = {
+		ai = yes
+		war = { country = JAP }
+		alliance = { country = CHC }
+	}
+
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+		command = { type = ai which = "switch/CHC_atwar_JAP.ai" }
+	}
+}
+################
+# Concentrate on upgrading while at peace
+#############################################
+event = {
+	id = 3053002
+	random = no
+	country = CHC
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = no
+		NOT = { local_flag = UPGPeace }
+	}
+
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 6
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Upg_Peace.ai" }
+		command = { type = local_setflag which = UPGPeace }
+	}
+}
+event = {
+	id = 3053003
+	random = no
+	country = CHC
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		local_flag = UPGPeace
+	}
+
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 6
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Upg_War.ai" }
+		command = { type = local_clrflag which = UPGPeace }
+	}
+}
+################
+# Attack Japan controls
+#	CHCAttackJAP		= Flag turned on means they are free to attack at will
+#############################################
+event = {
+	id = 3053004
+	random = no
+	country = CHC
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		NOT = { local_flag = CHCAttackJAP }
+		war = { country = JAP }
+		OR = {
+			war = { country = JAP country = SOV }
+			lost_national = { country = CHI value = 40 }
+			lost_national = { country = CHC value = 1 }
+		}
+	}
+
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = ai which = "switch/CHC_Attack_JAP.ai" }
+		command = { type = local_setflag which = CHCAttackJAP }
+	}
+}
+event = {
+	id = 3053005
+	random = no
+	country = CHC
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		local_flag = CHCAttackJAP
+		NOT = { war = { country = JAP } }
+		NOT = { war = { country = JAP country = SOV } }
+		NOT = { lost_national = { country = CHI value = 40 } }
+		NOT = { lost_national = { country = CHC value = 1 } }
+	}
+
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = ai which = "switch/CHC_Defend_JAP.ai" }
+		command = { type = local_clrflag which = CHCAttackJAP }
+	}
+}
+################
+# Load Initial Passitivity
+#############################################
+event = {
+	id = 3053006
+	random = no
+	country = CHC
+
+	trigger = {
+		ai = yes
+		war = { country = JAP }
+	}
+
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = ai which = "switch/CHC_Defend_JAP.ai" }
+	}
+}
+
+
+
+event = {
+	id = 3053007
+	random = no
+	country = CHC
+
+	trigger = {
+		ai = yes		
+		OR = {
+			war = { country = MAN }
+			war = { country = MEN }
+		}
+		NOT = { war = { country = JAP } }
+	}
+
+
+	date = { day = 1 month = january year = 1933 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1970 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = 	peace which = MEN }
+		command = { type = 	peace which = MAN }
+		command = { trigger = { non_aggression = { country = CHC country = JAP } } type = non_aggression which = CHC where = MEN }
+		command = { trigger = { non_aggression = { country = CHC country = JAP } } type = non_aggression which = CHC where = MAN }
+	}
+}

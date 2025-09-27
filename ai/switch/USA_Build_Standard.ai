@@ -1,0 +1,45 @@
+# USA Standard Build by Lothos
+
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	relative_build_scheme 	= no
+
+	#### Divisions etc...
+	infantry 		= 9
+	cavalry 		= 0
+   	motorized    	= 8 
+	mechanized 		= 8
+	light_armor 	= 1
+	armor 			= 7
+  	paratrooper   	= 2 
+	marine 			= 6
+	bergsjaeger 	= 0
+	garrison		= 0
+    hq 				= 3
+	militia 		= 0
+#				44 %
+   	interceptor   	= 4 
+   	multi_role     	= 6 
+	cas 			= 0
+	strategic_bomber = 5
+	tactical_bomber = 3
+	naval_bomber 	= 3
+   	transport_plane = 1 
+	flying_bomb 	= 0
+	flying_rocket 	= 1
+#				23 %
+	battleship 		= 3
+   	carrier     	= 10 
+   	light_carrier  = 1
+   	escort_carrier  = 2 
+   	destroyer     	= 6 
+   	light_cruiser   = 6 
+   	heavy_cruiser   = 0 
+	battlecruiser 	= 0
+	submarine 		= 1
+	nuclear_submarine = 0
+	transports 		= 4
+#				33 %
+}

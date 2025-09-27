@@ -1,0 +1,29 @@
+#########################################################################
+# 	AUS enters the Great War
+#	
+#########################################################################
+event = {
+	id = 990001
+	random = no 
+	country = AUS
+	persistent = yes
+	trigger = {
+					ai = yes
+
+					NOT = { war = { country = FRA country = GER } }					
+					NOT = { flag = AUS_1914 }
+				}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 29 month = 5 year = 1914 }
+	offset = 1 # Check for trigger conditions day
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = { #
+		command = { type = setflag which = AUS_1914 }
+		command = { type = ai which = "switch/AUS_1914.ai" }
+		
+	}
+}

@@ -1,0 +1,134 @@
+# Austrian 1914 Koenig Warplan Setup & Phase1
+# Austrai attacks both russia and serbia, focus on serbia
+# 
+#####################################
+combat ={
+		RUS = 50
+		SER = 200	
+
+}
+
+max_front_ratio = 1.5
+max_front_ratios = { 	
+	RUS = 1.5
+	SER = 10
+	MTN = 5
+	ITA = 1
+	SCH = 1
+}
+max_garrison_prop = 0.60
+min_garrison_prop = 0.20
+neutrality = 20.000 
+war = 50
+
+target = {  
+# russian front
+	245 = 20
+	246 = 20
+	618 = 20
+	614 = 20
+	
+	#serbian front
+	330 = 100
+	329 = 100
+	335 = 200
+	332 = 100
+	340 = 200
+	339 = 300
+	328 = 100
+	333 = 100
+					
+	
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 1.0
+	home_peace_cap 		= 10
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0.0
+	revolt_risk_mult	= 0.1
+
+	# PRIORITIES:
+	beach			= 50	# Beach level 2
+	capital			= 4	# Our capital
+	human_border	= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	reserves 		= 5	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 0	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		RUS = 1
+		MTN = 5
+		SER = 5
+		U08 = -1
+		ITA = 2
+		SCH = 1
+	}
+	ignore = { }
+	province_priorities = {
+		#russian Border
+		#235 = 8
+		#237 = 8
+		239 = 8
+		300 = 8
+		
+		#serbian  Border
+		335 = 15
+		336 = 5
+		337 = 5
+		
+		#Beaches at Adriatic coast
+		339 = 50 #Tirana
+		343 = 50 #Dubrovnik
+	}
+	area_multiplier = {
+		
+		
+		
+		
+	}
+}
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+ 
+	enemy_handicap = {
+		
+	} 
+      	passivity = {
+
+	} 
+	province_priorities = {
+	
+	# russian front
+	245 = 20
+	246 = 20
+	618 = 20
+	614 = 20
+	
+	
+	# serbian front
+	330 = 100
+	329 = 100
+	340 = 200
+	339 = 200
+	328 = 100
+	333 = 100
+	335 = 300
+
+
+	}
+}
+
+
+###EOF

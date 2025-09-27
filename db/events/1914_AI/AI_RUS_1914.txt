@@ -1,0 +1,70 @@
+
+########################################################## START OF REAL Russian AI 1914
+###############################################
+## Russia is at war with Central Powers
+## Austria-Hungary is allied with germany, italy is neutral
+################################################
+
+
+event = {
+	id = 3104501
+	random = no
+	country = RUS
+	persistent = yes		
+	
+	trigger = {
+		ai = yes
+		
+		NOT = { flag = RUS1914StartupDone }
+		war = { country = FRA country = U08 }
+		war = { country = RUS country = U08 }
+		NOT = { war = { country = U09 country = U08 } }		
+		NOT = { alliance = { country = U08  country = ITA } } 
+		
+		
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+		{
+			command = { type = setflag which = RUS1914StartupDone }
+		}
+}
+
+###
+# we have lost riga and or minsk
+# lets build a second line of defence
+event = {
+	id = 3104502
+	random = no 
+	country = RUS
+	persistent = yes
+	trigger = {
+					ai = yes					
+					NOT = { flag = RUS1914_2ndLineOfDefence }
+			
+					OR ={
+								NOT = { control = { province = 264 data = RUS }}
+								NOT = { control = { province = 599 data = RUS }}
+						}
+				}									
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 29 month = 5 year = 1914 }
+	offset = 1 # Check for trigger conditions day
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = { #
+		command = { type = setflag which = RUS1914_2ndLineOfDefence }
+		command = { type = ai which = "switch/RUS1914_2ndLineOfDefence.ai" }
+		
+	}
+}

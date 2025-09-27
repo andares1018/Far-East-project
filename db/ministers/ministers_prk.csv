@@ -1,0 +1,67 @@
+PRK;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+735001;Head of State;Kim Il Sung;1939;1995;1995;ST;Powerhungry Demagogue;Medium;M579001;X
+735002;Head of Government;Kim Il Sung;1939;1964;1999;ST;Ambitious Union Boss;Undying;M579001;X
+735003;Foreign Minister;Nam Il;1945;1977;1977;LE;General Staffer;Medium;M579003;X
+735004;Head of State;Kim Du-Bong;1936;1964;1964;LE;Weary Stiffneck;Medium;M_Kim du-bong;X
+735005;Head of State;Choi Yong-geon;1930;1977;1977;ST;Resigned Generalissimo;Medium;M_Choi Yong-geon;X
+735006;Head of State;Cho Man-sik;1923;1953;1954;ML;Benevolent Gentleman;Medium;M_Cho Man-sik;X
+735007;Head of Government;Choi Chang-ik;1933;1964;1999;LE;Happy Amateur;Medium;M_Choi Chang-ik;X
+735008;Head of Government;Park Heon-yeong;1928;1964;1999;LE;Flamboyant Tough Guy;Medium;2808;X
+735009;Head of Government;Alexei Ivanovich Heo;1933;1964;1999;ST;Happy Amateur;Medium;M_Hegai;X
+735010;Head of Government;Lee Yun-yeong;1933;1976;1976;ML;Political Protege;Medium;M_Lee Yun-yeong;X
+735011;Foreign Minister;Park Heon-yeong;1933;1964;1999;LE;Ideological Crusader;Medium;2808;X
+735012;Foreign Minister;Park Sung-cheol;1950;2008;2008;ST;Apologetic Clerk;Medium;M_Park Sung-cheol;X
+735013;Minister of Armament;Jeong Jun-taek;1944;1973;1973;ST;Planned Economy Proponent;Medium;M_Jeong Jun-taek;X
+735014;Minister of Armament;Park Chang-ok;1943;1964;1999;LE;Steel Magnate;Medium;M_Park Chang-ok;X
+735015;Minister of Armament;Choi Chang-ik;1933;1964;1999;LE;Corrupt Kleptocrat;Medium;M_Choi Chang-ik;X
+735016;Minister of Armament;Yun Gong-heum;1934;1964;1999;LE;Air to Ground Proponent;Medium;M_Yun Gong-heum;X
+735017;Minister of Armament;Lee Ju-Yeon;1930;1970;1970;LE;Resource Industrialist;Medium;M_Lee Ju-Yeon;X
+735018;Minister of Armament;Lee Bong-su;1933;1968;1968;ST;Military Entrepreneur;Medium;M_Lee Bong-su;X
+735019;Minister of Security;Park Il-u;1940;1964;1999;LE;Silent Lawyer;Medium;M_Park Il-u;X
+735020;Minister of Security;Bang Hak-se;1943;1993;1993;ST;Prince of Terror;Medium;M_Bang Hak-se;X
+735021;Minister of Security;Park Mun-gyu;1933;1977;1977;LE;Silent Lawyer;Medium;M_Park Mun-gyu;X
+735022;Minister of Security;Park Sung-cheol;1950;2008;2008;ST;Crooked Kleptocrat;Medium;M_Park Sung-cheol;X
+735023;Minister of Security;Choi Yong-geon;1929;1977;1977;ST;Back Stabber;Medium;M_Choi Yong-geon;X
+735024;Head of Military Intelligence;Choi Yong-geon;1928;1977;1977;ST;Logistics Specialist;Medium;M_Choi Yong-geon;X
+735025;Head of Military Intelligence;Kim Chaek;1927;1964;1999;ST;Dismal Enigma;Medium;M_Kim Chaek;X
+735026;Head of Military Intelligence;Bang Hak-se;1940;1993;1993;ST;Dismal Enigma;Medium;M_Bang Hak-se;X
+735027;Head of Military Intelligence;Jeon Mun-seop;1940;1999;1999;ST;Political Specialist;Medium;M_Jeon Mun-seop;X
+735028;Head of Military Intelligence;Park Kwang-seon;1938;1990;1990;ST;Political Specialist;Medium;M_Park Kwang-seon;X
+735029;Minister of Security;Yun Gi-nyeong;1933;1967;1967;SL;Health and Safety;Medium;M_Yun Gi-nyeong;X
+735030;Foreign Minister;Lee Gang-guk;1933;1964;1999;LE;Biased Intellectual;Medium;M_Lee Gang-guk;X
+735031;Minister of Armament;Lee Jong-man;1936;1978;1978;LWR;Laissez-Faire Capitalist;Medium;M_Lee Jong-man;X
+735032;Minister of Security;Jang Si-u;1929;1964;1999;LE;Back Stabber;Medium;M_Jang Si-u;X
+735033;Minister of Security;Lee Yu-pil;1922;1946;1946;ML;Man of the People;Medium;M_Lee Yu-pil;X
+735034;Head of Government;Oh Yun-seon;1930;1951;1951;SL;Naive Optimist;Medium;M_Oh Yun-seon;X
+735035;Minister of Security;Choi Neung-jin;1933;1951;1964;SL;Crime Fighter;Medium;M_Choi neung-jin;X
+735036;Head of Military Intelligence;Choi Neung-jin;1933;1951;1964;SL;Technical Specialist;Medium;M_Choi neung-jin;X
+735037;Minister of Security;Han Geun-jo;1928;1972;1972;ML;Silent Lawyer;Medium;M_Han Geun-jo;X
+735038;Chief of Army;Kim Il Sung;1937;1995;1995;ST;Guns and Butter Doctrine;Medium;M579001;X
+735039;Chief of Army;Choi Yong-geon;1928;1977;1977;ST;Elastic Defence Doctrine;Medium;M_Choi Yong-geon;X
+735040;Chief of Staff;Kang Geon;1936;1951;1951;ST;School of Defence;Medium;M_Kang Geon;X
+735041;Chief of Staff;Nam Il;1945;1977;1977;ST;School of Fire Support;Medium;M579003;X
+735042;Chief of Staff;Kim Gwang-hyeop;1940;1971;1971;ST;School of Psychology;Medium;M_Kim Gwang-hyeop;X
+735043;Chief of Staff;Lee Kwon-mu;1950;1986;1986;ST;Commando Doctrine Staff;Medium;M_Lee Kwon-mu;X
+735044;Chief of Staff;Kim Chang-bong;1936;1970;1970;ST;School of Mass Combat;Medium;M_Kim Chang-bong;X
+735045;Chief of Staff;Choi Kwang;1952;1998;1998;ST;School of Manoeuvre;Medium;M_Choi Kwang;X
+735046;Chief of Staff;Ahn Gil;1933;1948;1948;ST;School of Fire Support;Medium;M_Ahn Gil;X
+735047;Chief of Staff;Bang Ho-san;1943;1960;1960;LE;School of Manoeuvre;Medium;M_Bang Ho-san;X
+735048;Chief of Staff;Kim Ung;1944;1979;1979;LE;School of Psychology;Medium;M_Kim Ung;X
+735049;Chief of Staff;Kim Mu-jeong;1936;1951;1956;LE;School of Fire Support;Medium;M_Kim Mu-jeong;X
+735050;Chief of Army;Kim Mu-jeong;1936;1951;1956;LE;Elastic Defence Doctrine;Medium;M_Kim Mu-jeong;X
+735051;Chief of Navy;Han Il-mu;1945;1958;1958;LE;Decisive Naval Battle Doctrine;Medium;M_Han il-mu;X
+735052;Chief of Navy;Lee Yeong-ho;1936;1970;1970;ST;Indirect Approach Doctrine;Medium;M_Lee yeong-ho;X
+735053;Chief of Air Force;Lee Hwal;1936;1970;2008;ST;Air Superiority Doctrine;Medium;M_Lee Hwal;X
+735054;Chief of Air Force;Wang Ryeon;1936;1960;1960;LE;Army Aviation Doctrine;Medium;M_Wang ryeon;X
+735055;Chief of Air Force;Choi Kwang;1950;1998;1998;ST;Naval Aviation Doctrine;Medium;M_Choi Kwang;X
+735056;Chief of Air Force;Yun Gong-heum;1928;1957;1957;LWR;Naval Aviation Doctrine;Medium;M_Yun Gong-heum;X
+735057;Chief of Navy;Yu Chang-gwon;1950;1969;1970;ST;Base Control Doctrine;Medium;M_Yu Chang-gwon;X
+735058;Chief of Navy;Bang Cheol-gab;1960;2020;2020;ST;Indirect Approach Doctrine;Medium;unknownminister;X
+735059;Chief of Army;Bang Ho-san;1950;1960;1960;LE;Armoured Spearhead Doctrine;Medium;M_Bang Ho-san;X
+735060;Foreign Minister;Lee Yun-yeong;1933;1976;1976;ML;Apologetic Clerk;Medium;M_Lee Yun-yeong;X
+735061;Minister of Security;Kim Il;1950;1985;1985;ST;Prince of Terror;Medium;M_Kim il;X
+735062;Minister of Security;Heo Jeong-suk;1930;1990;1990;LE;Health and Safety;Medium;M_Heo Jeong-suk;X
+735063;Minister of Security;Lee Yeong;1930;1961;1961;LE;Compassionate Gentleman;Medium;M_Lee Yeong;X
+735064;Head of Government;Han Bin;1944;1961;1961;LE;Political Protege;Medium;M_Han Bin;X
+735065;Head of Government;Lee Seung-yeop;1930;1956;1964;LE;Political Protege;Medium;M_Lee Seung-yeop;X

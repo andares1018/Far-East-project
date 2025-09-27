@@ -1,0 +1,1262 @@
+###
+###  United States events (USA - 049)
+###
+### By Rhysaxiel
+###
+### 2049500  USA  The sink of the Lusitania
+### 2049501  USA  The Lusitania was carrying weapons
+### 2049502  USA  Germany's unrestricted warfare
+### 2049503  USA  The Zimmerman Telegram
+### 2049504  USA  Interventionist speech at the Congress
+### 2049505  USA  Interventionist speech at the Congress - effects (isoliationists US - 9/10)
+### 2049506  USA  Interventionist speech at the Congress - effects (slight isoliationists US - 7/8)
+### 2049507  USA  Interventionist speech at the Congress - effects (undecided US - 5/6)
+### 2049508  USA  Interventionist speech at the Congress - effects (interv US - 4 or less)
+### 2049509  USA  Side with the Entente
+### 2049510  USA  The Tampico incident have been settled
+### 2049511	 USA  Leave Veracruz
+### 2049512  USA  Tucson raided ! (Garrison)
+### 2049513  USA  Tucson raided ! (No garrison)
+### 2049514  USA  El Paso raided ! (Garrison)
+### 2049515  USA  El Paso raided ! (No garrison)
+### 2049516  USA  San Antonio raided ! (Garrison)
+### 2049517  USA  San Antonio raided ! (No garrison)
+### 2049518  USA  Corpus Christii raided ! (Garrison)
+### 2049519  USA  Corpus Christii raided ! (No garrison)
+### 2049520  USA  San Diego raided ! (Garrison)
+### 2049521  USA  San Diego raided ! (No garrison)
+### 2049522  USA  Intervention against Mexican rebels
+### 2049523  USA  Ask for full transit agreement with Mexico (with MEX)
+### 2049524  USA  Full transit agreement : Mexico refuses (with MEX)
+### 2049525  USA  Full scale invasion of Mexico (with MEX)
+### 2049535  USA  Ask for full transit agreement with Mexico (with U57)
+### 2049536  USA  Full transit agreement : Mexico refuses (with U57)
+### 2049537  USA  Full scale invasion of Mexico (with U57)
+### 2049526  USA  Restore diplomatic relations with Mexico
+### 2049530  USA  US. Presidential Election of 1916
+### 2049531  USA  US. Presidential Election of 1920
+### 2049532  USA  Peace with Germany?
+### 2049533  U08  USA offers a white peace
+### 2049534  USA  Germany accepted our proposal
+### 2049538  USA  Occupation of Haiti
+### 2049539  USA  Occupation of the Dominican Republic
+### 2049540  BRA  Contestado War
+### 2049541  USA  Leaving the Entente
+### 2049542  USA  The Deutschland merchant submarine arrived and traded with us
+
+event = {
+	id = 2049500   # The sink of the Lusitania
+	country = USA
+	
+	# Triggered by U08 2191544
+	
+	name = "EVT1914_2049500_NAME"
+	desc = "EVT1914_2049500_DESC" 
+	style = 2
+	picture = "lusitania"   
+	
+	action = {
+		name = "EVT1914_2049500_ACTIONA" # They will pay !
+		ai_chance = 99
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+}
+event = {
+	id = 2049501   # The Lusitania was carrying weapons
+	country = USA
+	
+	# Triggered by U08 2191544
+	
+	name = "EVT1914_2049501_NAME"
+	desc = "EVT1914_2049501_DESC" 
+	style = 2
+	picture = "lusitania"   
+	
+	action = {
+		name = "EVT1914_2049501_ACTIONA" # How treacherous !
+		ai_chance = 99
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+event = {
+	id = 2049502   # Germany's unrestricted warfare
+	country = USA
+
+	# Triggered by U08 2191543
+	
+	name = "EVT1914_2049502_NAME"
+	desc = "EVT1914_2049502_DESC" 
+	style = 2
+	picture = "lusitania" 
+	
+	action = {
+		name = "EVT1914_2049502_ACTIONA" # We're upset !
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+event = {
+	id = 2049503   # The Zimmerman Telegram
+	country = USA
+
+	# Triggered by U08
+	
+	name = "EVT1914_2049503_NAME"
+	desc = "EVT1914_2049503_DESC" 
+	style = 2
+	picture = "zimmermann_telegram"
+	
+	action = {
+		name = "EVT1914_2049503_ACTIONA" # They'll pay !
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+event = {
+	id = 2049504   # Interventionist speech at the Congress
+	country = USA
+	persistent = yes
+
+	decision = { 
+		war = { country = ENG country = U08 } 
+		NOT = { domestic = { type = interventionism value = 8 } } #8 is enough to join the Entente
+		atwar = no 		
+	}
+	decision_trigger = { 
+		money = 1500 
+		NOT = { dissent = 4 }
+	}
+	trigger = { 
+		war = { country = ENG country = U08 } 
+		atwar = no 
+		money = 1500 
+		NOT = { dissent = 4 }
+		OR = {
+			AND = { domestic = { type = interventionism value = 1 } random = 2 } # 1 }
+			AND = { domestic = { type = interventionism value = 2 } random = 4 } # 2 }
+			AND = { domestic = { type = interventionism value = 3 } random = 10 } # 4 }
+			AND = { domestic = { type = interventionism value = 4 } random = 15 } # 10 }
+			AND = { domestic = { type = interventionism value = 5 } random = 20 } # 15 }
+			AND = { domestic = { type = interventionism value = 6 } random = 35 } # 20 }
+			AND = { domestic = { type = interventionism value = 7 } random = 50 } # 35 } 
+			#AND = { domestic = { type = interventionism value = 8 } random =  } # 50 }
+			#AND = { domestic = { type = interventionism value = 9 } random =  } # 80 }
+			#AND = { domestic = { type = interventionism value = 10 } 
+		}
+	} 
+	
+	name = "EVT1914_2049504_NAME"
+	desc = "EVT1914_2049504_DESC" 
+	style = 2
+	picture = "congress"   
+	decision_picture = "decision_congress"   
+	
+	date = { day = 0 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2049504_ACTIONA" # 'As the defender of Liberty and Democracy...'
+		command = { type = money value = -1500 }
+		command = { trigger = { NOT = { policy = { type = interventionism value = 3 } } } type = trigger which = 2049505 }
+		command = { trigger = { policy = { type = interventionism value = 3} NOT = { policy = { type = interventionism value = 5 } } } type = trigger which = 2049506 }
+		command = { trigger = { policy = { type = interventionism value = 5} NOT = { policy = { type = interventionism value = 7 } } } type = trigger which = 2049507 }
+		command = { trigger = { policy = { type = interventionism value = 7} } type = trigger which = 2049508 }
+	}
+}
+event = {
+	id = 2049505   # Interventionist speech at the Congress - effects (isoliationists US - 9/10)
+	country = USA
+	one_action = yes
+	persistent = yes
+   
+	name = "EVT1914_2049505_NAME"
+	desc = "EVT1914_2049505_DESC" 
+	style = 2
+	picture = "congress"   
+
+	action_a = {
+		ai_chance = 1
+		name = "EVT1914_2049505_ACTIONA" # That's a standing ovation !
+		command = { type = set_domestic which = interventionism value = 8 }
+	}
+	action_b = {
+		name = "EVT1914_2049505_ACTIONB" # Good speech
+		ai_chance = 4
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 2 }
+	}
+	action_c = {
+		ai_chance = 45
+		name = "EVT1914_2049505_ACTIONC" # Uh, yes maybe
+		command = { type = dissent value = 4 }
+	}
+	action_d = {
+		ai_chance = 50
+		name = "EVT1914_2049505_ACTIOND" # Did you forget Monroe ?!
+		command = { type = dissent value = 8 }
+	}
+}
+event = {
+	id = 2049506   # Interventionist speech at the Congress - effects (slight isoliationists US - 7/8)
+	country = USA
+	one_action = yes
+	persistent = yes
+
+	name = "EVT1914_2049505_NAME"
+	desc = "EVT1914_2049505_DESC" 
+	style = 2
+	picture = "congress"   
+
+	action_a = {
+		ai_chance = 2
+		name = "EVT1914_2049505_ACTIONA" # That's a standing ovation !
+		command = { type = set_domestic which = interventionism value = 8 }
+	}
+	action_b = {
+		name = "EVT1914_2049505_ACTIONB" # Good speech
+		ai_chance = 8
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 2 }
+	}
+	action_c = {
+		ai_chance = 60
+		name = "EVT1914_2049505_ACTIONC" # Uh, yes maybe
+		command = { type = dissent value = 4 }
+	}
+	action_d = {
+		ai_chance = 30
+		name = "EVT1914_2049505_ACTIOND" # Did you forget Monroe ?!
+		command = { type = dissent value = 7 }
+	}
+}
+event = {
+	id = 2049507   # Interventionist speech at the Congress - effects (undecided US - 5/6)
+	country = USA
+	one_action = yes
+	persistent = yes
+
+	name = "EVT1914_2049505_NAME"
+	desc = "EVT1914_2049505_DESC" 
+	style = 2
+	picture = "congress"   
+	
+	action_a = {
+		ai_chance = 5
+		name = "EVT1914_2049505_ACTIONA" # That's a standing ovation !
+		command = { type = set_domestic which = interventionism value = 8 }
+	}
+	action_b = {
+		name = "EVT1914_2049505_ACTIONB" # Good speech
+		ai_chance = 45
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 1 }
+	}
+	action_c = {
+		ai_chance = 45
+		name = "EVT1914_2049505_ACTIONC" # Uh, yes maybe
+		command = { type = dissent value = 3 }
+	}
+	action_d = {
+		ai_chance = 5
+		name = "EVT1914_2049505_ACTIOND" # Did you forget Monroe ?!
+		command = { type = dissent value = 6 }
+	}
+}
+event = {
+	id = 2049508   # Interventionist speech at the Congress - effects (interv US - 4 or less)
+	country = USA
+	one_action = yes
+	persistent = yes
+
+	name = "EVT1914_2049505_NAME"
+	desc = "EVT1914_2049505_DESC" 
+	style = 2
+	picture = "congress"   
+	
+	action_a = {
+		ai_chance = 30
+		name = "EVT1914_2049505_ACTIONA" # That's a standing ovation !
+		command = { type = set_domestic which = interventionism value = 8 }
+	}
+	action_b = {
+		name = "EVT1914_2049505_ACTIONB" # Good speech
+		ai_chance = 50
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 1 }
+	}
+	action_c = {
+		ai_chance = 19
+		name = "EVT1914_2049505_ACTIONC" # Uh, yes maybe
+		command = { type = dissent value = 2 }
+	}
+	action_d = {
+		ai_chance = 1
+		name = "EVT1914_2049505_ACTIOND" # Did you forget Monroe ?!
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2049509   # Side with the Entente
+	country = USA
+
+	decision = { 
+		war = { country = ENG country = U08 } 
+		NOT = { 
+			war = { country = ENG country = USA } 
+			war = { country = U08 country = USA } 
+			alliance = { country = ENG country = USA } 
+		}
+	}
+	decision_trigger = { 
+		atwar = no 
+		policy = { type = interventionism value = 7 } 
+	}
+	trigger = { 
+		atwar = no
+		policy = { type = interventionism value = 7 }
+		war = { country = ENG country = U08 } 
+		NOT = { 
+			war = { country = ENG country = USA } 
+			war = { country = U08 country = USA } 
+			alliance = { country = ENG country = USA } 
+		}
+		random = 30
+	} 
+   
+	name = "EVT1914_2049509_NAME"
+	desc = "EVT1914_2049509_DESC" 
+	style = 2
+	picture = "congress"   
+	decision_picture = "decision_congress"  
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 } 
+	
+	action = {
+		name = "EVT1914_2049509_ACTIONA" # Join the Entente
+		command = { type = alliance which = ENG when = 1 }
+	}
+}
+
+####### Events with Mexico
+event = {
+	id = 2049510   # The Tampico incident have been settled
+	country = USA
+
+	trigger = { 
+		atwar = no
+		control = { province = 1968 data = USA } 
+		random = 3
+	} 
+	
+	name = "EVT1914_2049510_NAME"
+	desc = "EVT1914_2049510_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 10 month = october year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }   
+	
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = dissent value = -1 }
+	}
+}
+event = {
+	id = 2049511	# Leave Veracruz
+	country = USA
+
+	decision = { 
+		event = 2049510 # The Tampico incident have been settled
+		control = { province = 1968 data = USA } # USA still occupy Veracruz
+	} 
+	decision_trigger = { atwar = no }
+	trigger = {  
+		event = 2049510 # The Tampico incident have been settled
+		control = { province = 1968 data = USA } # USA still occupy Veracruz
+		atwar = no 
+		random = 25 
+	}
+	
+	name = "EVT1914_2049511_NAME"
+	desc = "EVT1914_2049511_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2049511_ACTIONA" # Leave Veracruz
+		command = { type = dissent value = -1 }
+		command = { trigger = { exists = MEX } type = secedeprovince which = MEX value = 1968 }
+		command = { trigger = { exists = U57 NOT = { exists = MEX } } type = secedeprovince which = U57 value = 1968 }
+		command = { trigger = { exists = U59 NOT = { exists = MEX exists = U57 } } type = secedeprovince which = U59 value = 1968 }
+		command = { trigger = { exists = U58 NOT = { exists = MEX exists = U57 exists = U59 } } type = secedeprovince which = U58 value = 1968 }
+	}
+}
+event = {
+	id = 2049512   # Tucson raided ! (Garrison)
+	country = USA
+	persistent = yes
+   
+	#triggered by U58 2250500
+   
+	name = "EVT1914_2049512_NAME"
+	desc = "EVT1914_2049512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+		command = { type = supplies value = -80 }
+		command = { type = rarematerialspool value = -10 }
+		command = { type = oilpool value = -10 }
+		command = { type = metalpool value = -20 }
+		command = { type = energypool value = -35 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049513   # Tucson raided ! (No garrison)
+	country = USA
+	persistent = yes
+   
+	#triggered by U58 2250500
+	
+	name = "EVT1914_2049513_NAME"
+	desc = "EVT1914_2049513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+		command = { type = supplies value = -160 }
+		command = { type = rarematerialspool value = -20 }
+		command = { type = oilpool value = -20 }
+		command = { type = metalpool value = -40 }
+		command = { type = energypool value = -70 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049514   # El Paso raided ! (Garrison)
+	country = USA
+	persistent = yes
+   
+	#triggered by U58 2250503
+	
+	name = "EVT1914_2049514_NAME"
+	desc = "EVT1914_2049514_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+		command = { type = supplies value = -80 }
+		command = { type = rarematerialspool value = -10 }
+		command = { type = oilpool value = -10 }
+		command = { type = metalpool value = -20 }
+		command = { type = energypool value = -35 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049515   # El Paso raided ! (No garrison)
+	country = USA
+	persistent = yes
+   
+	#triggered by U58 2250503
+	
+	name = "EVT1914_2049515_NAME"
+	desc = "EVT1914_2049515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+		command = { type = supplies value = -160 }
+		command = { type = rarematerialspool value = -20 }
+		command = { type = oilpool value = -20 }
+		command = { type = metalpool value = -40 }
+		command = { type = energypool value = -70 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049516   # San Antonio raided ! (Garrison)
+	country = USA
+	persistent = yes
+   
+	#triggered by U58 2250504
+	
+	name = "EVT1914_2049516_NAME"
+	desc = "EVT1914_2049516_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+		command = { type = supplies value = -80 }
+		command = { type = rarematerialspool value = -10 }
+		command = { type = oilpool value = -10 }
+		command = { type = metalpool value = -20 }
+		command = { type = energypool value = -35 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049517   # San Antonio raided ! (No garrison)
+	country = USA
+	persistent = yes
+
+	#triggered by U58 2250504
+	
+	name = "EVT1914_2049517_NAME"
+	desc = "EVT1914_2049517_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+		command = { type = supplies value = -160 }
+		command = { type = rarematerialspool value = -20 }
+		command = { type = oilpool value = -20 }
+		command = { type = metalpool value = -40 }
+		command = { type = energypool value = -70 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049518   # Corpus Christii raided ! (Garrison)
+	country = USA
+	persistent = yes
+	
+	#triggered by U58 2250505
+	
+	name = "EVT1914_2049518_NAME"
+	desc = "EVT1914_2049518_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+		command = { type = supplies value = -80 }
+		command = { type = rarematerialspool value = -10 }
+		command = { type = oilpool value = -10 }
+		command = { type = metalpool value = -20 }
+		command = { type = energypool value = -35 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049519   # Corpus Christii raided ! (No garrison)
+	country = USA
+	persistent = yes
+	
+	#triggered by U58 2250505
+	
+	name = "EVT1914_2049519_NAME"
+	desc = "EVT1914_2049519_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+		command = { type = supplies value = -160 }
+		command = { type = rarematerialspool value = -20 }
+		command = { type = oilpool value = -20 }
+		command = { type = metalpool value = -40 }
+		command = { type = energypool value = -70 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049520   # San Diego raided ! (Garrison)
+	country = USA
+	persistent = yes
+   
+	#triggered by U58 2250506
+	
+	name = "EVT1914_2049520_NAME"
+	desc = "EVT1914_2049520_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+		command = { type = supplies value = -80 }
+		command = { type = rarematerialspool value = -10 }
+		command = { type = oilpool value = -10 }
+		command = { type = metalpool value = -20 }
+		command = { type = energypool value = -35 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+   id = 2049521   # San Diego raided ! (No garrison)
+   country = USA
+   persistent = yes
+   
+	#triggered by U58 2250506
+	
+	name = "EVT1914_2049521_NAME"
+	desc = "EVT1914_2049521_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+		command = { type = supplies value = -160 }
+		command = { type = rarematerialspool value = -20 }
+		command = { type = oilpool value = -20 }
+		command = { type = metalpool value = -40 }
+		command = { type = energypool value = -70 }
+		command = { trigger = {  NOT = { local_flag = USA_Mexican_Raids } } type = local_setflag which = USA_Mexican_Raids }
+	}
+}
+event = {
+	id = 2049522	# Intervention against Mexican rebels
+	country = USA
+
+	decision = {
+		exists = U58 #Villistas
+		local_flag = USA_Mexican_Raids
+	} 
+	decision_trigger = { 
+		atwar = no 
+	}
+	trigger = { 
+		exists = U58 #Villistas
+		local_flag = USA_Mexican_Raids 
+		atwar = no 
+		random = 25 
+	}
+	
+	name = "EVT1914_2049522_NAME"
+	desc = "EVT1914_2049522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2049522_ACTIONA" # Launch operation
+		command = { type = war which = U58 } #Villistas
+	}
+}
+event = {
+	id = 2049523	# Ask for full transit agreement with Mexico
+	country = USA
+
+	decision = { 
+		exists = MEX
+		event = 2049522 # Intervention against Mexican rebels
+		war = { country = USA country = U58 }
+		NOT = { war = { country = USA country = MEX } }
+		NOT = { event = 2049535 } #Ask for full transit agreement with U57
+	} 
+	decision_trigger = { 
+		relation = { which = MEX value = 75 }  
+	}
+	trigger = {
+		exists = MEX
+		event = 2049522 # Intervention against Mexican rebels
+		war = { country = USA country = U58 }
+		NOT = { war = { country = USA country = MEX } }	
+		NOT = { event = 2049535 } #Ask for full transit agreement with U57		
+		random = 10 
+	}
+   
+	name = "EVT1914_2049523_NAME"
+	desc = "EVT1914_2049523_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2049523_ACTIONA" # Send diplomats
+		command = { type = trigger which = 2038503 }
+		command = { type = sleepevent which = 2049535 } #Ask for full transit agreement with U57
+	}
+}
+event = {
+	id = 2049524   # Full transit agreement : Mexico refuses
+	country = USA
+   
+	#triggered
+	
+	name = "EVT1914_2049524_NAME"
+	desc = "EVT1914_2049524_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = relation which = MEX value = -25 }
+	}
+}
+event = {
+	id = 2049525	# Full scale invasion of Mexico
+	country = USA
+
+	decision = { 
+		event = 2049524 # Full transit agreement : Mexico refuses
+		war = { country = USA country = U58 } 
+		NOT = { war = { country = USA country = MEX } } 
+	} 
+	decision_trigger = { 
+		NOT = { war = { country = USA country = U08 }  } # Must not be already focused on Europe
+		NOT = { policy = { type = interventionism value = 4 } } 
+	} 
+	trigger = { 
+		event = 2049524 # Full transit agreement : Mexico refuses
+		war = { country = USA country = U58 } 
+		NOT = { war = { country = USA country = U08 }  } # Must not be already focused on Europe
+		NOT = { policy = { type = interventionism value = 4 } } 
+		random = 5 
+	}
+	
+	name = "EVT1914_2049525_NAME"
+	desc = "EVT1914_2049525_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2049525_ACTIONA" # Declare war
+		command = { type = war which = MEX }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+event = {
+	id = 2049535	# Ask for full transit agreement with Mexico
+	country = USA
+
+	decision = { 
+		exists = U57
+		NOT = { exists = MEX }
+		event = 2049522 # Intervention against Mexican rebels
+		war = { country = USA country = U58 }
+		NOT = { war = { country = USA country = U57 } }
+		NOT = { event = 2049523 } #Ask for full transit agreement with MEX
+	} 
+	decision_trigger = { 
+		relation = { which = U57 value = 75 }  
+	}
+	trigger = {
+		exists = U57
+		NOT = { exists = MEX }
+		event = 2049522 # Intervention against Mexican rebels
+		war = { country = USA country = U58 }
+		NOT = { war = { country = USA country = U57 } }		
+		NOT = { event = 2049523 } #Ask for full transit agreement with MEX
+		random = 10 
+	}
+   
+	name = "EVT1914_2049523_NAME"
+	desc = "EVT1914_2049523_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2049523_ACTIONA" # Send diplomats
+		command = { type = trigger which = 2038506 }
+		command = { type = sleepevent which = 2049523 } #Ask for full transit agreement with MEX
+	}
+}
+event = {
+	id = 2049536   # Full transit agreement : Mexico refuses
+	country = USA
+   
+	#triggered
+	
+	name = "EVT1914_2049524_NAME"
+	desc = "EVT1914_2049524_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = relation which = MEX value = -25 }
+	}
+}
+event = {
+	id = 2049537	# Full scale invasion of Mexico
+	country = USA
+
+	decision = { 
+		event = 2049535 # Full transit agreement : Mexico refuses U57
+		war = { country = USA country = U58 } 
+		NOT = { war = { country = USA country = U57 } } 
+	} 
+	decision_trigger = { 
+		NOT = { war = { country = USA country = U08 }  } # Must not be already focused on Europe
+		NOT = { policy = { type = interventionism value = 4 } } 
+	} 
+	trigger = { 
+		event = 2049535 # Full transit agreement : Mexico refuses U57
+		war = { country = USA country = U58 } 
+		NOT = { war = { country = USA country = U57 } } 
+		NOT = { war = { country = USA country = U08 }  } # Must not be already focused on Europe
+		NOT = { policy = { type = interventionism value = 4 } } 
+		random = 5 
+	}
+	
+	name = "EVT1914_2049525_NAME"
+	desc = "EVT1914_2049525_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2049525_ACTIONA" # Declare war
+		command = { type = war which = U57 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+event = {
+	id = 2049526	# Restore diplomatic relations with Mexico
+	country = USA
+
+	decision = { 
+		OR = { 
+			event = 2049524 #Full transit agreement : Mexico refuses (with MEX)
+			event = 2049536 #Full transit agreement : Mexico refuses (with U57)
+		}
+		OR = {
+			war = { country = USA country = U57 } 
+			war = { country = USA country = U58 } 
+			war = { country = USA country = MEX } 
+		}
+		NOT = {
+			alliance = { country = U08 country = U57 } 
+			alliance = { country = U08 country = U58 } 
+			alliance = { country = U08 country = MEX } 		
+			region = { region = "Southwest US" country = -2 value = 5 } # check at least 1 province is controlled by enemy countries
+			region = { region = "Southcentral US" country = -2 value = 5 } # check at least 1 province is controlled by enemy countries
+		}
+	} 
+	decision_trigger = { 
+		# Must be focused on Europe
+		OR = { 
+			war = { country = USA country = U08 } 
+			policy = { type = interventionism value = 4 } 
+		} 
+	} 
+	trigger = { 
+		OR = { 
+			event = 2049524 #Full transit agreement : Mexico refuses (with MEX)
+			event = 2049536 #Full transit agreement : Mexico refuses (with U57)
+		}
+		OR = {
+			war = { country = USA country = U58 } 
+			war = { country = USA country = MEX } 
+		}
+		NOT = {
+			alliance = { country = U08 country = U57 } 
+			alliance = { country = U08 country = U58 } 
+			alliance = { country = U08 country = MEX } 		
+			region = { region = "Southwest US" country = -2 value = 5 } # check at least 1 province is controlled by enemy countries
+			region = { region = "Southcentral US" country = -2 value = 5 } # check at least 1 province is controlled by enemy countries			
+		}		
+		OR = { 
+			war = { country = USA country = U08 } 
+			policy = { type = interventionism value = 4 } 
+		} 
+		random = 5 
+	}
+
+	name = "EVT1914_2049526_NAME"
+	desc = "EVT1914_2049526_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2049526_ACTIONA" # Retire troops
+		command = { trigger = { war = { country = USA country = U57 } } type = peace which = U57 }
+		command = { trigger = { war = { country = USA country = U58 } } type = peace which = U58 }
+		command = { trigger = { war = { country = USA country = MEX } } type = peace which = MEX }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1916
+#########################################################################
+event = {
+	id = 2049530 #US. Presidential Election of 1916
+	random = no
+	country = USA
+	
+	name = "EVT1914_2049530_NAME"
+	desc = "EVT1914_2049530_DESC"
+	style = 2
+  	picture = "news_paper"
+
+	trigger = {
+			government = democratic
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 6 month = november year = 1916 }
+
+	action = {
+		name = "EVT1914_2049530_TEXT"
+		command = { type = dissent value = -2 }
+
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+
+		command = { type = headofstate which = 240325 } # Wilson
+		command = { type = foreignminister which = 240280 } # Lansing
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1920
+#########################################################################
+
+#########################################################################
+#  Peace with Germany
+#########################################################################
+event = {
+	id = 2049532 
+	country = USA
+	
+	decision = { 
+		war = { country = USA country = U08 }
+		participant = { country = USA value = 1 } #part of the Entente
+	}
+	
+	decision_trigger = { 
+		NOT = { alliance = { country = FRA country = USA } }
+		NOT = { alliance = { country = RUS country = USA } }
+		NOT = { alliance = { country = ENG country = USA } }
+		NOT = { war = { country = SOV country = U08 } }
+		NOT = { lost_national = { country = USA value = 5 } }
+		NOT = { lost_national = { country = U08 value = 5 } }
+	}
+	trigger = { 
+		war = { country = USA country = U08 }
+		participant = { country = USA value = 1 } #part of the Entente
+		NOT = { alliance = { country = FRA country = USA } }
+		NOT = { alliance = { country = RUS country = USA } }
+		NOT = { alliance = { country = ENG country = USA } }
+		NOT = { war = { country = SOV country = U08 } }
+		NOT = { lost_national = { country = USA value = 5 } }
+		NOT = { lost_national = { country = U08 value = 5 } }
+	}
+	
+	name = "EVT1914_2001542_NAME"
+	desc = "EVT1914_2001542_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 24 month = april year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		ai_chance = 100
+		name = "EVT1914_2001542_ACTIONA" 
+		command = { type = trigger which = 2049533 } 
+	}	
+	action = {
+		ai_chance = 0
+		name = "EVT1914_2001542_ACTIONB"
+		command = { type = dissent value = 15 } 
+	}
+}
+event = {
+	id = 2049533   
+	country = U08
+
+	
+	name = "EVT1914_2049533_NAME"
+	desc = "EVT1914_2049533_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = dissent value = -10 } 
+		command = { trigger = { alliance = { country = USA country = SER } exists = U09 } type = trigger which = 2001544 } #Serbia leaves alliance
+		command = { trigger = { alliance = { country = USA country = MTN } exists = U09 } type = trigger which = 2001545 } #Montenegro leaves alliance
+		command = { trigger = { alliance = { country = USA country = U50 }  war = { country = OTT country = U50 } } type = trigger which = 2001549 } #Hedjaz leaves alliance
+		command = { trigger = { alliance = { country = USA country = U91 }  war = { country = OTT country = U91 } } type = trigger which = 2001551 } #Kuwait leaves alliance
+		command = { type = trigger which = 2049534 } 
+	}
+	action = {
+		ai_chance = 0
+		name = "ACTION_NAME_REFUSE" 
+		command = { type = dissent value = 15 } 
+	}	
+}
+
+event = {
+	id = 2049534   
+	country = USA
+	
+	name = "EVT1914_2001546_NAME"
+	desc = "EVT1914_2001546_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "EVT1914_2001546_ACTIONA" 
+		command = { type = dissent value = -10 } 
+		command = { type = peace which = U08 value = 0 }
+		command = { type = peace which = U09 value = 0 }
+		command = { type = setflag which = German_EndWWI }
+	}
+}
+
+event = {
+	id = 2049538   # Occupation of Haiti
+	country = USA
+
+	decision = {
+		exists = HAI
+		NOT = { ispuppet = HAI }
+		NOT = { war = { country = USA country = HAI } }
+		NOT = { alliance = { country = USA country = HAI } }
+		NOT = { lost_national = { value = 5 } }
+		OR = {
+			war = { country = U08 country = FRA } # War in Europe
+			war = { country = U08 country = ENG } # War in Europe
+		}
+	}
+	decision_trigger = {
+		supplies = 200
+		policy = { type = interventionism value = 2 } 
+	}
+	trigger = {
+		exists = HAI
+		NOT = { ispuppet = HAI }
+		NOT = { war = { country = USA country = HAI } }
+		NOT = { alliance = { country = USA country = HAI } }
+		NOT = { lost_national = { value = 5 } }
+		OR = {
+			war = { country = U08 country = FRA } # War in Europe
+			war = { country = U08 country = ENG } # War in Europe
+		}
+		random = 15
+	}
+
+	name = "EVT1914_2049538_NAME" # Occupation of Haiti
+	desc = "EVT1914_2049538_DESC"
+	style = 2
+	picture = "veracruz_occupation"
+	decision_picture = "decision_bananawars"
+
+	date = { day = 27 month = july year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2049538_ACTIONA" # Re-establish peace and order!
+		command = { type = make_puppet which = HAI }
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = -200 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { trigger = { NOT = { puppet = { country = DOM country = USA } } } type = relation which = DOM value = -100 } #Dominican Republic feels threatened 
+	}
+	action_b = {
+		name = "EVT1914_2049538_ACTIONB" # We are not imperialists!
+		ai_chance = 10
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 2049539   # Occupation of the Dominican Republic
+	country = USA
+
+	decision = {
+		exists = DOM
+		NOT = { ispuppet = DOM }
+		NOT = { war = { country = USA country = DOM } }
+		NOT = { alliance = { country = USA country = DOM } }
+		NOT = { lost_national = { value = 5 } }
+		OR = {
+			war = { country = U08 country = FRA } # War in Europe
+			war = { country = U08 country = ENG } # War in Europe
+		}
+	}
+	decision_trigger = {
+		supplies = 200      
+		policy = { type = interventionism value = 2 }
+	}
+	trigger = {
+		exists = DOM
+		NOT = { ispuppet = DOM }
+		NOT = { war = { country = USA country = DOM } }
+		NOT = { alliance = { country = USA country = DOM } }
+		NOT = { lost_national = { value = 5 } }
+		OR = {
+			war = { country = U08 country = FRA } # War in Europe
+			war = { country = U08 country = ENG } # War in Europe
+		}
+		random = 15
+	}
+
+	name = "EVT1914_2049539_NAME" # Occupation of the Dominican Republic
+	desc = "EVT1914_2049539_DESC"
+	style = 2
+	picture = "veracruz_occupation"
+	decision_picture = "decision_bananawars"
+
+	date = { day = 12 month = may year = 1916 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2049538_ACTIONA" # Re-establish peace and order!
+		command = { type = make_puppet which = DOM }
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = -200 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { trigger = { NOT = { puppet = { country = HAI country = USA } } } type = relation which = HAI value = -100 } #Haiti feels threatened 
+	}
+
+	action_b = {
+		name = "EVT1914_2049538_ACTIONB" # We are not imperialists!
+		ai_chance = 10
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+################## 
+# Contestado War
+#####################
+event = {
+	country = BRA
+	id = 2049540
+	random = no
+	style = 2
+	picture = "news_paper"
+
+	trigger = { 
+		random = 10 
+	}
+	
+	name = "EVT1914_2049540_NAME"
+	desc = "EVT1914_2049540_DESC"
+	date = { day = 0 month = october year = 1912 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1918 }
+
+	action = {
+		name = "EVT1914_2049540_ACTIONA"
+		command = { type = revolt which = 2057 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 2049541   # Leaving the Entente
+	country = USA
+
+	trigger = {
+		participant = { country = USA value = 1 } #part of the Entente
+		NOT = { war = { country = USA country = U08 } }
+		NOT = { war = { country = USA country = U09 } }
+		NOT = { war = { country = USA country = GER } }
+		NOT = { war = { country = USA country = AUS } }
+		NOT = { war = { country = USA country = OTT } }
+		NOT = { war = { country = USA country = BUL } }
+		NOT = { war = { country = USA country = ITA } }
+		NOT = { war = { country = USA country = GRE } }
+		NOT = { war = { country = USA country = ROM } }
+		NOT = { war = { country = USA country = SOV } }
+		NOT = { war = { country = USA country = RUS } }
+		NOT = { war = { country = USA country = SER } }
+		NOT = { war = { country = USA country = BEL } }
+		NOT = { war = { country = USA country = FRA } }
+		NOT = { war = { country = USA country = ENG } }
+		NOT = { war = { country = USA country = JAP } }
+		NOT = { war = { country = USA country = CHI } }
+		NOT = { lost_national = { value = 5 } }
+	}
+
+	name = "EVT1914_2049541_NAME" #Leaving the Entente
+	desc = "EVT1914_2049541_DESC"
+	style = 2
+	picture = "negotiaton"
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 121
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_NEUTRAL"
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = -20 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = domestic which = defense_lobby value = -5 }
+		command = { type = domestic which = interventionism value = -5 }
+	}
+	action = {
+		ai_chance = 0
+		name = "ACTION_NAME_NO"
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 5 }
+	}
+}
+
+event = {
+	id = 2049542
+	random = no
+	country = USA
+	persistent = yes
+	
+	name = EVT1914_2049542_NAME #The Deutschland arrived and traded
+	desc = EVT1914_2191596_DESC
+	style = 2
+	picture = "naval_blockade"
+
+	action = {
+		name = ACTION_NAME_OK #OK
+		command = { type = supplies value = 500 }
+		command = { type = money value = 20 }
+		command = { type = relation which = U08 value = 5 }
+	}
+}

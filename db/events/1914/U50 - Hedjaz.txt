@@ -1,0 +1,136 @@
+###
+###  Hedjaz events (U50 - 233)
+###
+### By Rhysaxiel
+###
+###	2233500 : Letters with MacMahon
+### 2233501 : England promises a great Arab empire
+### D-2233502 : The Great Arab Revolt
+###	2233503 : T.E. Lawrence arrives
+###	2233504 : Supplies from England
+###	2233505 : Supplies from England (2)
+###
+event = {
+	id = 2233500    # Letters with MacMahon
+	country = U50
+
+	# Triggered by ENG D-2001508
+
+	name = "EVT1914_2233500_NAME"
+	desc = "EVT1914_2233500_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_OK" # Ok
+		command = {  }
+	}
+}
+event = {
+	id = 2233501    # England promises a great Arab empire
+	country = U50
+
+	# Triggered by ENG D-2001509
+
+	name = "EVT1914_2233501_NAME"
+	desc = "EVT1914_2233501_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2233501_ACTIONA" # Interesting !
+		command = { type = dissent value = -5 }
+	}
+}
+event = {
+	id = 2233502    # The Great Arab Revolt
+	country = U50
+
+	decision = { 
+		atwar = no
+		event = 2233501 
+	} # England promises a great Arab empire
+
+	decision_trigger = { war = { country = OTT country = ENG  } }
+
+	trigger = {
+		atwar = no
+		event = 2233501  # England promises a great Arab empire
+		war = { country = OTT country = ENG  } 
+		random = 30 
+	}
+
+	name = "EVT1914_2233502_NAME"
+	desc = "EVT1914_2233502_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2233502_ACTIONA" # Join the War !
+		command = { type = end_puppet }
+		command = { type = alliance which = ENG when = 1 }
+		command = { type = wakeleader which = 1065007 }
+		command = { type = wakeleader which = 1065008 }
+		command = { type = wakeleader which = 1065009 }
+		command = { type = wakeleader which = 1065010 }
+		command = { type = sleepminister which = 1065002 }
+		command = { type = sleepminister which = 1065022 }
+		command = { type = wakeminister which = 1065011 }
+		command = { type = wakeminister which = 1065012 }
+	}
+}
+event = {
+	id = 2233503    # T.E. Lawrence arrives
+	country = U50
+
+	# Triggered by ENG D-2001510
+	
+	name = "EVT1914_2233503_NAME"
+	desc = "EVT1914_2233503_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2233503_ACTIONA" # He'll be helpful
+		command = { type = dissent value = -2 }
+		command = { type = waketeam which = 1065003 }
+	}
+}
+event = {
+	id = 2233504    # Supplies from England
+	country = U50
+
+	# Triggered by ENG D-2001511
+
+	name = "EVT1914_2233504_NAME"
+	desc = "EVT1914_2233504_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2233504_ACTIONA" # Nice !
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = 5000 }
+	}
+}
+event = {
+	id = 2233505    # Supplies from England
+	country = U50
+
+	# Triggered by ENG D-2001512
+	
+	name = "EVT1914_2233504_NAME"
+	desc = "EVT1914_2233505_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2233505_ACTIONA" # Nice !
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = 8000 }
+	}
+}

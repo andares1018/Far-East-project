@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "Albatros-F-NE.bmp"
+	Origin = { x = 125 y = 75 }
+	Frames = 16
+	Speed = 5
+	Palette = "Albatros G.II.bmp"
+}

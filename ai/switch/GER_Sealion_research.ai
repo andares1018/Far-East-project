@@ -1,0 +1,101 @@
+# German Research AI for fighting allies after Soviet been defeated.
+
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.15
+
+	nuclear_reactor = yes	
+	nuclear_reactor_prov = 163 # Berlin
+	max_nuclear = 10
+}
+technology = { 
+	endgoal 	= { 5540 16020 } # Nuclear 
+		preference 	= {
+		
+		# Armored Divisions
+		6900
+ 
+		# Industry
+		5120 5130 5140 5150 5160 5180
+		
+		# Computers
+		5310 5320 5330 5340
+
+		# Cryptography
+		5350 5360 5370 5380 5390 5400 13060
+		
+		# Nuclear
+		5470 5480 5490 5500 5510 5520 5530 5540 7170 7180 7190 16010 16020
+
+		# Rocket
+		5560 7550 7560 7570 7010 7020 15500
+
+		# Special Weapons
+		7140 7150 7160 16000 16040
+		
+		# Airborne Infantry
+		1670 1680 1690 1700 1710 1720 1730 1740
+		
+		# Marines
+		1560 1570 1580 1590 1600 1610 1620 1630 1640 1650 1660
+		
+		# Inf support
+		1350 1360 1370 1380
+
+		# Air Transports 
+		4290 4250 4260 4270 15180 15190
+		
+		# Naval Bomber
+		4190 4200 4210 15140 15150
+
+		# Medium tanks
+		2080 2090 2140 11000 11010 
+
+		# Light tanks
+		2060
+		
+		# Aircraft Carriers
+		3510 3520 3530 3540 3550 12060 3560 3570
+
+		# Mechanized Infantry
+		1470 1480 1490 1500 1510 1520
+	
+		# Strategic bombers
+		4220 4230 4240 4246
+
+		# Land Doctrines 
+		6260 6270 6290 14100
+
+		# Naval Doctrines
+		8550 8560 8570 8600 8610 8620 8630 8640 8650 8660  8220 8310 8100
+		
+		# Air Doctrines
+		9060 9080 9100 9110 9120 9130 9190 9200 9210 9220 9230 9240 9250 9260 9270 9280 9290 9300 9310 9320 9330 9340 9350 9360 9370 9380 9390 9400 9410 9420 
+	} 
+	ignore = {
+		# Battlecruisers
+		3310 3320 3330 3340 3350 12030
+
+		# Battleship
+		3410 3420 3430 3440 3450 3456 3460 3470 3480 12040 3490 12050
+
+		# SP Rocket Artillery
+		2260 2270 2280
+
+		# Rocket Artillery
+		2970 2370 2380 2390
+		
+	}
+ 
+	armor 		= 3
+	infantry 	= 3
+	industry 	= 3
+	aircraft 	= 5
+	naval 		= 4
+	land_doctrines 	= 1
+	secret_weapons 	= 1
+	air_doctrines 	= 1
+	naval_doctrines = 2
+}  

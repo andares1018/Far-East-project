@@ -1,0 +1,19 @@
+U15;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+890001;Trabalhador Cooperativa de Naval;T2800;4;1900;1970;naval_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890002;Parque de Material Aeronáutico;T2801;3;1918;1933;aeronautics;aircraft_testing;avionics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890003;Oficinas Gerais de Material Aeronáutico;100446;3;1933;1970;aeronautics;technical_efficiency;aircraft_testing;fighter_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890004;Povos Naval Jarda;T2802;3;1938;1970;naval_engineering;technical_efficiency;naval_artillery;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890005;Caminhos de Ferro Portugueses;100270;3;1900;1953;industrial_engineering;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890006;Caminhos de Ferro Portugueses;T2803;4;1954;1970;electronics;mechanics;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890007;Jose Norton de Matos;T2804;2;1915;1917;small_unit_tactics;centralized_execution;infantry_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890008;Oficinas Gerais de Material de Engenharia;T2806;3;1917;1970;mechanics;technical_efficiency;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890009;Trabalhadores Coletivo de Fabrica Militar;T2807;3;1900;1970;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890010;Escola Naval;T2808;3;1900;1957;small_taskforce_tactics;seamanship;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890011;Escola Naval;T2808;4;1957;1970;small_taskforce_tactics;seamanship;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890012;Forca Aerea Portuguesa;T2809;4;1930;1978;training;piloting;fighter_tactics;bomber_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890013;Escola de Guerra;100444;2;1911;1919;small_unit_tactics;centralized_execution;training;cavalry_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890014;Escola Militar;100445;2;1919;1937;small_unit_tactics;centralized_execution;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890015;Escola do Exercito;100445;3;1937;1970;training;small_unit_tactics;centralized_execution;infantry_focus;combined_arms_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890016;Associacao Industrial Portuguesa;100876;2;1903;1933;industrial_engineering;mechanics;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890017;Associacao Industrial Portuguesa;100876;4;1933;1970;industrial_engineering;mechanics;management;technical_efficiency;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+890018;Universidade de Lisboa;100875;3;1911;1970;medicine;chemistry;management;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

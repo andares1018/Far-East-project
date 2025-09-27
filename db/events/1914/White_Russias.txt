@@ -1,0 +1,1511 @@
+###
+### General White Russia and counter-revolutionary events
+###
+### 2173500 UER The Ufa Directorate
+### 2173501 UER The Czechoslovak Legion
+### 2173502 UER The Cossacks stage a coup and install Kolchak as Supreme Ruler
+### 2173503 UER Problems with the Czechoslovak Legion
+### 2173504 UER White Terror
+### 2173505 UER Omsk is lost
+### 2173506 UER The Czechoslovak Legion defects
+### 2173507 UER Kolchak arrested and executed!
+### 2173513 UER Move capital to Petrograd (AI priority #1)
+### 2173512 UER Move capital to Moscow (AI priority #2)
+### 2173514 UER Move capital to Kuybyshev (AI priority #3) 
+### 2173515 UER Move capital to Tsaritsyn (AI priority #4)
+### 2173516 UER Move capital to Ekaterinburg (AI priority #5)
+### 2173518 UER UTC UGS  Form Russia
+### 2168500 UTC The Volunteers army
+### 2168501 UTC More men rallies the Volunteers Army
+### 2168502 UTC More men rallies the Volunteers Army
+### 2168503 UTC Cossacks rise against the Bolsheviks
+### 2168504 UTC Move capital to Petrograd (AI priority #1)
+### 2168505 UTC Move capital to Moscow (AI priority #2)
+### 2168506 UTC Move capital to Kuybyshev (AI priority #3)
+### 2168507 UTC Move capital to Tsaritsyn (AI priority #4)
+### 2168508 UTC Move capital to Ekaterinburg (AI priority #5)
+### 2168509 UTC Volunteers army becomes Southern Russia
+### 2168510 UTC White Terror
+### 2147500 UGS The Arkhangelsk Government
+### 2147501 UGS Move capital to Petrograd (AI priority #1)
+### 2147502 UGS Move capital to Moscow (AI priority #2)
+### 2147503 UGS Move capital to Kuybyshev (AI priority #3)
+### 2147504 UGS Move capital to Tsaritsyn (AI priority #4)
+### 2147505 UGS Move capital to Ekaterinburg (AI priority #5)
+### 2147506 UGS Arkhangelsk becomes Northern Russia
+### 2147507 UGS White Terror
+### 2041000 U62 The Far Eastern Host
+### 2041001 U62 Russia Eastern Outskirts
+###
+
+event = {
+	id = 2173500   # The Ufa Directorate
+	country = UER
+
+	name = "EVT1914_2007534_NAME" # The Ufa Directorate
+	desc = "EVT1914_2007534_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = set_domestic which = democratic value = 7 } 
+		command = { type = set_domestic which = political_left value = 5 } #Market Liberal
+		command = { type = headofstate which = 1360001 } #Direktoria
+		command = { type = headofgovernment which = 1360009 } #Pyotr Vologodsky
+		command = { type = foreignminister which = 1360014 } #Yuri Klyuchnikov
+		command = { type = armamentminister which = 1360031 } #Nikolay Avksentev
+		command = { type = ministerofsecurity which = 1360020 } #Nikolay Alekseyev
+		command = { type = ministerofintelligence which = 1360051 } #Evgeniy Rogovsky
+		command = { type = chiefofstaff which = 1360055 } #Vasiliy Boldyrev
+		command = { type = chiefofarmy which = 1360062 } #Vasiliy Boldyrev
+		command = { type = access which = U62 } #gives military access to Far Eastern Host
+		command = { type = war which = SOV }
+		command = { type = capital which = 1131 } #move capital to Ufa
+		command = { type = trigger which = 2173501 } #The Czechoslovak Legion
+		command = { type = event which = 2173502 where = UER when = 60 } #The Cossack military stage a coup
+		#removes all rebels units from regions that belong to the Ufa Directorate (and also from a few nearby regions too)
+		command = { type = remove_units which = land where = REB when = 2 value = "Far East Siberia" } #removes all Rebel units from Far East Siberia region
+		command = { type = remove_units which = land where = REB when = 2 value = "Irkutsk" } #removes all Rebel units from Irkutsk region
+		command = { type = remove_units which = land where = REB when = 2 value = "Northern Permafrost" } #removes all Rebel units from Northern Permafrost region
+		command = { type = remove_units which = land where = REB when = 2 value = "Kazakstan" } #removes all Rebel units from Kazakstan region
+		command = { type = remove_units which = land where = REB when = 2 value = "Central Asia" } #removes all Rebel units from Central Asia region
+		command = { type = remove_units which = land where = REB when = 2 value = "Krasnoyarsk" } #removes all Rebel units from Krasnoyarsk region
+		command = { type = remove_units which = land where = REB when = 2 value = "Tomsk" } #removes all Rebel units from Tomsk region
+		command = { type = remove_units which = land where = REB when = 2 value = "Novosibirsk" } #removes all Rebel units from Novosibirsk region
+		command = { type = remove_units which = land where = REB when = 2 value = "Eastern Russia" } #removes all Rebel units from Eastern Russia region
+		command = { type = remove_units which = land where = REB when = 2 value = "Russia" } #removes all Rebel units from Russia region
+		command = { type = remove_units which = land where = REB when = 2 value = "Urals" } #removes all Rebel units from Urals region
+		#if some of the rightful provinces of Ufa Directorate are currently occupied by rebels, controls goes from rebels to Ufa Directorate
+		command = { trigger = { owned = { province = 668 data = UER } control = { province = 668 data = REB } } type = secedeprovince which = UER value = 668 when = 2 } #Samara/Kuybyshev
+		command = { trigger = { owned = { province = 672 data = UER } control = { province = 672 data = REB } } type = secedeprovince which = UER value = 672 when = 2 } #Kazan
+		command = { trigger = { owned = { province = 669 data = UER } control = { province = 669 data = REB } } type = secedeprovince which = UER value = 669 when = 2 } #Saratov
+		command = { trigger = { owned = { province = 665 data = UER } control = { province = 665 data = REB } } type = secedeprovince which = UER value = 665 when = 2 } #Volsk
+		#Kazakstan region
+		command = { trigger = { owned = { province = 498 data = UER } control = { province = 498 data = REB } } type = secedeprovince which = UER value = 498 when = 2 } #Pavlodar
+		command = { trigger = { owned = { province = 499 data = UER } control = { province = 499 data = REB } } type = secedeprovince which = UER value = 499 when = 2 } #Ekibastuz
+		command = { trigger = { owned = { province = 500 data = UER } control = { province = 500 data = REB } } type = secedeprovince which = UER value = 500 when = 2 } #Balkhash
+		command = { trigger = { owned = { province = 501 data = UER } control = { province = 501 data = REB } } type = secedeprovince which = UER value = 501 when = 2 } #Kokchetav
+		command = { trigger = { owned = { province = 502 data = UER } control = { province = 502 data = REB } } type = secedeprovince which = UER value = 502 when = 2 } #Akmolinsk
+		command = { trigger = { owned = { province = 503 data = UER } control = { province = 503 data = REB } } type = secedeprovince which = UER value = 503 when = 2 } #Karaganda
+		command = { trigger = { owned = { province = 504 data = UER } control = { province = 504 data = REB } } type = secedeprovince which = UER value = 504 when = 2 } #Alma-Ata
+		command = { trigger = { owned = { province = 505 data = UER } control = { province = 505 data = REB } } type = secedeprovince which = UER value = 505 when = 2 } #Sar
+		command = { trigger = { owned = { province = 506 data = UER } control = { province = 506 data = REB } } type = secedeprovince which = UER value = 506 when = 2 } #Taldy-Kurgan
+		command = { trigger = { owned = { province = 507 data = UER } control = { province = 507 data = REB } } type = secedeprovince which = UER value = 507 when = 2 } #Ust-Kamenogorsk
+		command = { trigger = { owned = { province = 1108 data = UER } control = { province = 1108 data = REB } } type = secedeprovince which = UER value = 1108 when = 2 } #Dzhambul
+		command = { trigger = { owned = { province = 1109 data = UER } control = { province = 1109 data = REB } } type = secedeprovince which = UER value = 1109 when = 2 } #Chimkent
+		command = { trigger = { owned = { province = 1110 data = UER } control = { province = 1110 data = REB } } type = secedeprovince which = UER value = 1110 when = 2 } #Kzyl-Orda
+		command = { trigger = { owned = { province = 1111 data = UER } control = { province = 1111 data = REB } } type = secedeprovince which = UER value = 1111 when = 2 } #Fyodorovka
+		command = { trigger = { owned = { province = 1112 data = UER } control = { province = 1112 data = REB } } type = secedeprovince which = UER value = 1112 when = 2 } #Novokazalinsk
+		command = { trigger = { owned = { province = 1113 data = UER } control = { province = 1113 data = REB } } type = secedeprovince which = UER value = 1113 when = 2 } #Uralsk
+		command = { trigger = { owned = { province = 1114 data = UER } control = { province = 1114 data = REB } } type = secedeprovince which = UER value = 1114 when = 2 } #Aktyubinsk
+		command = { trigger = { owned = { province = 1115 data = UER } control = { province = 1115 data = REB } } type = secedeprovince which = UER value = 1115 when = 2 } #Kustanay
+		command = { trigger = { owned = { province = 1116 data = UER } control = { province = 1116 data = REB } } type = secedeprovince which = UER value = 1116 when = 2 } #Derzhavinsk
+		command = { trigger = { owned = { province = 1117 data = UER } control = { province = 1117 data = REB } } type = secedeprovince which = UER value = 1117 when = 2 } #Chelkar
+		command = { trigger = { owned = { province = 1118 data = UER } control = { province = 1118 data = REB } } type = secedeprovince which = UER value = 1118 when = 2 } #Fort Alexandrovsky
+		#Novosibirsk region
+		command = { trigger = { owned = { province = 1135 data = UER } control = { province = 1135 data = REB } } type = secedeprovince which = UER value = 1135 when = 2 } #Tobolsk
+		command = { trigger = { owned = { province = 1136 data = UER } control = { province = 1136 data = REB } } type = secedeprovince which = UER value = 1136 when = 2 } #Tyumen
+		command = { trigger = { owned = { province = 1137 data = UER } control = { province = 1137 data = REB } } type = secedeprovince which = UER value = 1137 when = 2 } #Kurgan
+		command = { trigger = { owned = { province = 1138 data = UER } control = { province = 1138 data = REB } } type = secedeprovince which = UER value = 1138 when = 2 } #Omsk
+		command = { trigger = { owned = { province = 1139 data = UER } control = { province = 1139 data = REB } } type = secedeprovince which = UER value = 1139 when = 2 } #Tara
+		command = { trigger = { owned = { province = 1140 data = UER } control = { province = 1140 data = REB } } type = secedeprovince which = UER value = 1140 when = 2 } #Barnaul
+		command = { trigger = { owned = { province = 1141 data = UER } control = { province = 1141 data = REB } } type = secedeprovince which = UER value = 1141 when = 2 } #Barabinsk
+		command = { trigger = { owned = { province = 1142 data = UER } control = { province = 1142 data = REB } } type = secedeprovince which = UER value = 1142 when = 2 } #Novosibirsk
+		command = { trigger = { owned = { province = 1143 data = UER } control = { province = 1143 data = REB } } type = secedeprovince which = UER value = 1143 when = 2 } #Biysk
+		command = { trigger = { owned = { province = 1144 data = UER } control = { province = 1144 data = REB } } type = secedeprovince which = UER value = 1144 when = 2 } #Kemerovo
+		command = { trigger = { owned = { province = 1145 data = UER } control = { province = 1145 data = REB } } type = secedeprovince which = UER value = 1145 when = 2 } #Kuznetsk
+		command = { trigger = { owned = { province = 1146 data = UER } control = { province = 1146 data = REB } } type = secedeprovince which = UER value = 1146 when = 2 } #Oyrot-Tura
+		command = { trigger = { owned = { province = 1147 data = UER } control = { province = 1147 data = REB } } type = secedeprovince which = UER value = 1147 when = 2 } #Abakan
+		#Eastern Russia region
+		command = { trigger = { owned = { province = 660 data = UER } control = { province = 660 data = REB } } type = secedeprovince which = UER value = 660 when = 2 } #Volzhsky
+		command = { trigger = { owned = { province = 664 data = UER } control = { province = 664 data = REB } } type = secedeprovince which = UER value = 664 when = 2 } #Naberezhnye Chelny
+		command = { trigger = { owned = { province = 666 data = UER } control = { province = 666 data = REB } } type = secedeprovince which = UER value = 666 when = 2 } #Balakowo
+		command = { trigger = { owned = { province = 667 data = UER } control = { province = 667 data = REB } } type = secedeprovince which = UER value = 667 when = 2 } #Tolyatti
+		command = { trigger = { owned = { province = 690 data = UER } control = { province = 690 data = REB } } type = secedeprovince which = UER value = 690 when = 2 } #Sterlitamak
+		command = { trigger = { owned = { province = 1131 data = UER } control = { province = 1131 data = REB } } type = secedeprovince which = UER value = 1131 when = 2 } #Ufa
+		command = { trigger = { owned = { province = 1132 data = UER } control = { province = 1132 data = REB } } type = secedeprovince which = UER value = 1132 when = 2 } #Chelyabi
+		command = { trigger = { owned = { province = 1133 data = UER } control = { province = 1133 data = REB } } type = secedeprovince which = UER value = 1133 when = 2 } #Orsk
+		command = { trigger = { owned = { province = 1134 data = UER } control = { province = 1134 data = REB } } type = secedeprovince which = UER value = 1134 when = 2 } #Orenburg
+		#Krasnoyarsk region
+		command = { trigger = { owned = { province = 1119 data = UER } control = { province = 1119 data = REB } } type = secedeprovince which = UER value = 1119 when = 2 } #Kyzyl
+		command = { trigger = { owned = { province = 1156 data = UER } control = { province = 1156 data = REB } } type = secedeprovince which = UER value = 1156 when = 2 } #Krasnoyarsk
+		command = { trigger = { owned = { province = 1157 data = UER } control = { province = 1157 data = REB } } type = secedeprovince which = UER value = 1157 when = 2 } #Kansk
+		command = { trigger = { owned = { province = 1158 data = UER } control = { province = 1158 data = REB } } type = secedeprovince which = UER value = 1158 when = 2 } #Minusinsk
+		#Irkutsk area
+		command = { trigger = { owned = { province = 1069 data = UER } control = { province = 1069 data = REB } } type = secedeprovince which = UER value = 1069 when = 2 } #Tayshet
+		command = { trigger = { owned = { province = 1070 data = UER } control = { province = 1070 data = REB } } type = secedeprovince which = UER value = 1070 when = 2 } #Kachug
+		command = { trigger = { owned = { province = 1163 data = UER } control = { province = 1163 data = REB } } type = secedeprovince which = UER value = 1163 when = 2 } #Bodaybo
+		command = { trigger = { owned = { province = 1164 data = UER } control = { province = 1164 data = REB } } type = secedeprovince which = UER value = 1164 when = 2 } #Ust-Kut
+		command = { trigger = { owned = { province = 1165 data = UER } control = { province = 1165 data = REB } } type = secedeprovince which = UER value = 1165 when = 2 } #Bratsk
+		command = { trigger = { owned = { province = 1166 data = UER } control = { province = 1166 data = REB } } type = secedeprovince which = UER value = 1166 when = 2 } #Cheremkhovo
+		#Primorski area
+		command = { trigger = { owned = { province = 1191 data = UER } control = { province = 1191 data = REB } } type = secedeprovince which = UER value = 1191 when = 2 } #Vladivostok
+		command = { trigger = { owned = { province = 1192 data = UER } control = { province = 1192 data = REB } } type = secedeprovince which = UER value = 1192 when = 2 } #Semyonovka
+		command = { trigger = { owned = { province = 1193 data = UER } control = { province = 1193 data = REB } } type = secedeprovince which = UER value = 1193 when = 2 } #Nakhodka
+		command = { trigger = { owned = { province = 1194 data = UER } control = { province = 1194 data = REB } } type = secedeprovince which = UER value = 1194 when = 2 } #Lesozavodsk
+		command = { trigger = { owned = { province = 1195 data = UER } control = { province = 1195 data = REB } } type = secedeprovince which = UER value = 1195 when = 2 } #Tetyukhe
+		command = { trigger = { owned = { province = 1196 data = UER } control = { province = 1196 data = REB } } type = secedeprovince which = UER value = 1196 when = 2 } #Nikolsk-Ussuriysky
+		#Western Siberian Army
+		command = { type = add_corps which = "Siberian Cossack Corp" value = land when = 1360071 where = 1138 } #Ivanov-Rhinov in Omsk 
+		command = { type = add_division which = "1st Siberian Cossack Division" value = cavalry when = 3 }
+		command = { type = add_division which = "2nd Siberian Cossack Division" value = cavalry when = 3 }
+		command = { type = add_corps which = "Ataman Annenkov Corp" value = land when = 1360003 where = 1138 } #Annenkov in Omsk 
+		command = { type = add_division which = "Ataman Annenkov Partisan Division" value = infantry when = 3 where = -77 } #only 2000 men
+		command = { type = add_corps which = "1st Rifle Corp" value = land when = 1360003 where = 667 } #Potapov in Samara  
+		command = { type = add_division which = "1st Rifle Division" value = infantry when = 3 where = -77 } #only 3000 men
+		command = { type = add_corps which = "2nd Rifle Corp" value = land when = 1360003 where = 665 } #Bakich in Syzran  
+		command = { type = add_division which = "2nd Rifle Partisan Division" value = infantry when = 3 where = -77 } #only 3000 men
+		command = { type = add_corps which = "3rd Rifle Corp" value = land when = 1360003 where = 667 } #Lyupov in Samara 
+		command = { type = add_division which = "3rd Rifle Division" value = infantry when = 3 where = -77 } #only 3000 men
+		command = { type = add_corps which = "4th Rifle Corp" value = land when = 1360003 where = 1131 } #Timanov  in Ufa 
+		command = { type = add_division which = "4th Rifle Division" value = infantry when = 3 where = -77 } #only 3000 men
+		command = { type = add_corps which = "6th Rifle Corp" value = land when = 1360003 where = 656 } #Shmidt in Simbirsk  
+		command = { type = add_division which = "6th Rifle Division" value = infantry when = 3 where = -77 } #only 3000 men
+		command = { type = add_corps which = "Orenburg Cossack Corp" value = land when = 1360068 where = 1134 } #Dutov in Orenburg  
+		command = { type = add_division which = "1st Orenburg Cossack Division" value = cavalry when = 3 where = -66 } #only 2000 men
+		command = { type = add_division which = "2nd Orenburg Cossack Division" value = cavalry when = 3 where = -66 } #only 2000 men
+		command = { type = add_division which = "4th Orenburg Cossack Division" value = cavalry when = 3 where = -50 } #only 3000 men
+		command = { type = add_division which = "2nd Rifle Division" value = infantry when = 3 where = -92 } #only 1000 men
+		command = { type = add_division which = "5th Rifle Division" value = infantry when = 3 where = -98 } #only 200 men
+		command = { type = add_division which = "9th Bashkir Rifle Division" value = infantry when = 3 where = -77 } #only 3000 men
+		command = { type = add_corps which = "Urals Cossack Corp" value = land when = 1360062 where = 1113 } #Martynov in Uralsk
+		command = { type = add_division which = "1th Urals Cossack Division" value = cavalry when = 3 where = -66 } #only 2000 men
+		command = { type = add_division which = "2th Urals Cossack Division" value = cavalry when = 3 where = -66 } #only 2000 men
+		command = { type = add_division which = "3rd Urals Cossack Division" value = cavalry when = 3 where = -66 } #only 2000 men
+		command = { type = add_division which = "4th Urals Cossack Division" value = cavalry when = 3 where = -50} #only 3000 men
+		#Mobilization level set to Partial Mobilization with reserves already arrived
+		command = { type = set_domestic which = professional_army value = 7 }
+		command = { trigger = { NOT = { local_flag = MOB10 } } type = local_clrflag which = MOB10 } #No Total Mob
+		command = { trigger = { NOT = { local_flag = MOB9 } } type = local_clrflag which = MOB9 } #No Extended Mob
+		command = { trigger = { NOT = { local_flag = MOB8 } } type = local_clrflag which = MOB8 } #No General Mob
+		command = { trigger = { NOT = { local_flag = MOB7 } } type = local_setflag which = MOB7 } #Partial Mob and below activated
+		command = { trigger = { NOT = { local_flag = MOB6 } } type = local_setflag which = MOB6 }		
+		command = { trigger = { NOT = { local_flag = MOB5 } } type = local_setflag which = MOB5 }		
+		command = { trigger = { NOT = { local_flag = MOB4 } } type = local_setflag which = MOB4 }		
+		command = { trigger = { NOT = { local_flag = MOB3 } } type = local_setflag which = MOB3 }
+		command = { trigger = { NOT = { local_flag = MOB2 } } type = local_setflag which = MOB2 }
+		command = { trigger = { NOT = { local_flag = RES } } type = local_setflag which = RES } #Reserves already arrived
+	}
+}
+
+event = {
+	id = 2173501   # The Czechoslovak Legion
+	country = UER
+
+	name = "EVT1914_2173501_NAME" # The Czechoslovak Legion
+	desc = "EVT1914_2173501_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = dissent value = -1 }
+		command = { type = relation which = FRA value = 20 }
+		command = { type = relation which = U08 value = -10 }
+		command = { type = relation which = U09 value = -20 }
+		#add Czechoslovak leaders
+		command = { type = wakeleader which = 1360078 } #Cecek
+		command = { type = wakeleader which = 1360011 } #Diterikhs
+		command = { type = wakeleader which = 1360013 } #Gajda
+		command = { type = wakeleader which = 1360079 } #Kletsanda
+		command = { type = wakeleader which = 1360080 } #Krejci
+		command = { type = wakeleader which = 1360081 } #Podgayetsky
+		command = { type = wakeleader which = 1360082 } #Prchala
+		command = { type = wakeleader which = 1360049 } #Voitsechovsky
+		command = { type = wakeleader which = 1360083 } #Shokorov
+		command = { type = wakeleader which = 1360084 } #Svec
+		command = { type = wakeleader which = 1360085 } #Syrovy
+		command = { type = wakeleader which = 1360086 } #Usakov
+		command = { type = wakeleader which = 1360087 } #Vozenilek
+		#add Czechoslovak units
+		command = { type = add_corps which = "1. Czechoslovak Corp" value = land when = 1360078 where = 1131 } #Cecek in Ufa 
+		command = { type = add_division which = "1. Czechoslovak Division" value = infantry when = 3 }
+		command = { type = add_corps which = "2. Czechoslovak Corp" value = land when = 1360013 where = 1132 } #Gajda in Ekaterinburg  
+		command = { type = add_division which = "2. Czechoslovak Division" value = infantry when = 3 }
+		command = { type = add_corps which = "3. Czechoslovak Corp" value = land when = 1360082 where = 1156 } #Gajda in Krasnoyarsk   
+		command = { type = add_division which = "3. Czechoslovak Division" value = infantry when = 3 }
+	}
+}
+
+event = {
+	id = 2173502   # The Cossacks stage a coup and install Kolchak as Supreme Ruler
+	country = UER
+
+	name = "EVT1914_2173502_NAME" # The Cossacks stage a coup and install Kolchak as Supreme Ruler
+	desc = "EVT1914_2173502_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2173502_ACTIONA" #Admiral Kolchak will lead us to victory!
+		command = { type = dissent value = 10 }
+		command = { type = flag_ext where = UER which = "_OMSK" } #change flag to Omsk Government
+		command = { type = name where = UER which = UER_OMSK } #change name to Omsk Government
+		command = { type = capital which = 1138 } #move capital to Omsk
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 } #Paternal Autocracy
+		command = { type = headofstate which = 1360006 } #Aleksandr Kolchak
+		command = { type = headofgovernment which = 1360013 } #Viktor Pepelyaev
+		command = { type = foreignminister which = 1360014 } #Yuri Klyuchnikov
+		command = { type = armamentminister which = 1360032 } #Ivan Mikhailov
+		command = { type = ministerofsecurity which = 1360021 } #Aleksandr Gattenberger
+		command = { type = ministerofintelligence which = 1360052 } #Ivan Krasilnikov
+		command = { type = chiefofstaff which = 1360062 } #Nikolay Stepanov
+		command = { type = chiefofarmy which = 1360066 } #Dmitriy Lebedev
+		command = { type = chiefofnavy which = 1360070 } #Mikhail Smirnov
+		command = { type = sleepminister which = 1360055 } #Vasiliy Boldyrev
+	}
+}
+
+event = {
+	id = 2173503	# Problems with the Czechoslovak Legion
+	country = UER
+
+	trigger = { 
+		event = 2173501 # The Czechoslovak Legion
+		event = 2173502 # The Cossacks stage a coup and install Kolchak as Supreme Ruler
+		random = 25
+		NOT = { event = 2173506 } #The Czechoslovak Legion defects
+	}
+   
+	name = "EVT1914_2173503_NAME" # Problems with the Czechoslovak Legion
+	desc = "EVT1914_2173503_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+   
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 2173504
+	country = UER
+	persistent = yes
+
+	trigger = { 
+		random = 10
+		exists = SOV
+		war = { country = SOV country = UER }
+		NOT = { dissent = 25 }
+	}
+	
+	name = "EVT1914_2173504_NAME" # White Terror
+	desc = "EVT1914_2173504_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173504_ACTIONA" # Peasants won't appreciate
+		command = { } #empty command to make event valid and reduce engine load
+		command = { trigger = { dissent = 20 } type = dissent value = 0.5 }
+		command = { trigger = { dissent = 10 NOT = { dissent = 20 } } type = dissent value = 1 }
+		command = { trigger = { NOT = { dissent = 10 } } type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 2173505   # Omsk is lost
+	country = UER
+
+	trigger = {
+		event = 2173501 # The Czechoslovak Legion
+		event = 2173502 # The Cossacks stage a coup and install Kolchak as Supreme Ruler
+		NOT = { 
+			control = { province = 1138 data = -1 } # Do not control Omsk
+			control = { province = 572 data = -1 } # Do not control Moscow
+			control = { province = 553 data = -1 } # Do not control Leningrad
+			control = { province = 1151 data = -1 } # Do not control Ekaterinburg/Sverdolsk
+			control = { province = 663 data = -1 } # Do not control Stalingrad
+			control = { province = 668 data = -1 } # Do not control Samara/Kuybyshev
+		}
+	}
+   
+	name = "EVT1914_2173505_NAME" # Omsk is lost
+	desc = "EVT1914_2173505_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173505_ACTIONA" # The end begins
+		command = { type = dissent value = 10 }
+		command = { type = event which = 2173506 where = UER when = 30 } #The Czechoslovak Legion defects
+	}
+}
+
+event = {
+	id = 2173506   # The Czech Legion defects
+	country = UER
+
+	name = "EVT1914_2173506_NAME" # The Czech Legion defects
+	desc = "EVT1914_2173506_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2173506_ACTIONA" # Sigh...
+		command = { type = dissent value = 10 }
+		command = { type = remove_division which = "1. Czechoslovak Division" value = UER }
+		command = { type = remove_division which = "2. Czechoslovak Division" value = UER }
+		command = { type = remove_division which = "3. Czechoslovak Division" value = UER }
+		command = { type = event which = 2173507 where = UER when = 15 } #Kolchak arrested and executed!
+		#remove Czechoslovak leaders
+		command = { type = sleepleader which = 1360078 } #Cecek
+		command = { type = sleepleader which = 1360011 } #Diterikhs
+		command = { type = sleepleader which = 1360013 } #Gajda
+		command = { type = sleepleader which = 1360079 } #Kletsanda
+		command = { type = sleepleader which = 1360080 } #Krejci
+		command = { type = sleepleader which = 1360081 } #Podgayetsky
+		command = { type = sleepleader which = 1360082 } #Prchala
+		command = { type = sleepleader which = 1360049 } #Voitsechovsky
+		command = { type = sleepleader which = 1360083 } #Shokorov
+		command = { type = sleepleader which = 1360084 } #Svec
+		command = { type = sleepleader which = 1360085 } #Syrovy
+		command = { type = sleepleader which = 1360086 } #Usakov
+		command = { type = sleepleader which = 1360087 } #Vozenilek		
+		command = { trigger = { NOT = { event = 2173503 } } type = sleepevent which = 2173503 } #Problems with the Czechoslovak Legion
+	}
+}
+
+event = {
+	id = 2173507   # Kolchak arrested and executed!
+	country = UER
+
+	name = "EVT1914_2173507_NAME" #Kolchak arrested and executed!
+	desc = "EVT1914_2173507_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "EVT1914_2173507_ACTIONA" # Traitors until the end
+		command = { type = dissent value = 10 }
+		command = { type = sleepminister which = 1360006 } #Aleksandr Kolchak
+		command = { type = sleepminister which = 1360013 } #Viktor Pepelyaev
+		command = { type = sleepleader which = 1360054 } #Kolchak
+		command = { type = secedeprovince which = SOV value = 1162 when = 1 } #Irkutsk
+		command = { type = demobilize which = land when = 0 where = 1 value = 3 } #Only 3 land units remain (after Great Siberian Ice March)
+		command = { type = trigger which = 2041001 } #Russia Eastern Outskirts
+	}
+}
+
+event = {
+	id = 2173513   # Move capital to Petrograd (AI priority #1)
+	country = UER
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 553 data = -1 } #Control Petrograd
+		owned = { province = 553 data = -1 } #Control Petrograd
+	} 
+	trigger = { 
+		NOT = { exists = SOV } 
+		atwar = no 
+		control = { province = 553 data = -1 } #Control Petrograd
+		owned = { province = 553 data = -1 } #Control Petrograd
+	}
+	
+	name = "EVT1914_2173513_NAME"
+	desc = "EVT1914_2173513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173513_ACTIONA" # Move to Petrograd
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 553 }
+	}
+}
+event = {
+	id = 2173512   # Move capital to Moscow (AI priority #2)
+	country = UER
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 572 data = -1 } #Control Moskow
+		owned = { province = 572 data = -1 } #Control Moskow
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+		} 
+		atwar = no 
+		control = { province = 572 data = -1 } #Control Moskow
+		owned = { province = 572 data = -1 } #Control Moskow
+	}
+	
+	name = "EVT1914_2173512_NAME"
+	desc = "EVT1914_2173512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173512_ACTIONA" # Move to Moskow
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 572 }
+	}
+}
+event = {
+	id = 2173514   # Move capital to Kuybyshev (AI priority #3)
+	country = UER
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 668 data = -1 } #Control Kuybyshev
+		owned = { province = 668 data = -1 } #Control Kuybyshev
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+		} 
+		atwar = no 
+		control = { province = 668 data = -1 }
+		owned = { province = 668 data = -1 }
+	}
+	
+	name = "EVT1914_2173514_NAME"
+	desc = "EVT1914_2173514_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173513_ACTIONA" # Move to Kuybyshev
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 668 }
+	}
+}
+event = {
+	id = 2173515   # Move capital to Tsaritsyn  (AI priority #4)
+	country = UER
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 663 data = -1 }  #Tsaritsyn
+		owned = { province = 663 data = -1 }  #Tsaritsyn
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+			control = { province = 668 data = -1 } #Kuybyshev
+			owned = { province = 668 data = -1 } #Kuybyshev
+		}
+		atwar = no 
+		control = { province = 663 data = -1 } #Tsaritsyn
+		owned = { province = 663 data = -1 } #Tsaritsyn
+	}
+	
+	name = "EVT1914_2173515_NAME"
+	desc = "EVT1914_2173515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173515_ACTIONA" # Move to Tsaritsyn
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 663 }
+	}
+}
+event = {
+   id = 2173516   # Move capital to Ekaterinburg (AI priority #5)
+   country = UER
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 1151 data = -1 } #Ekaterinburg
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+			control = { province = 668 data = -1 } #Kuybyshev
+			owned = { province = 668 data = -1 } #Kuybyshev
+			control = { province = 663 data = -1 } #Tsaritsyn
+			owned = { province = 663 data = -1 } #Tsaritsyn
+		}
+		atwar = no 
+		control = { province = 1151 data = -1 } 
+		owned = { province = 1151 data = -1 } 
+	}
+	
+	name = "EVT1914_2173516_NAME"
+	desc = "EVT1914_2173516_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173516_ACTIONA" # Move to Ekaterinburg
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 1151 }
+	}
+}
+
+event = {	# Form Russia, generic decision for all whites
+	id = 2173518
+	random = no
+	persistent = yes
+	tag = { UER UTC UGS } 
+
+	decision = { 
+		NOT = { exists = RUS }
+	}
+
+	decision_trigger = { 
+		atwar = no
+		NOT = { dissent = 10 }
+		OR = {
+			AND = {
+				control = { province = 553 data = -1 } # Petrograd
+				control = { province = 572 data = -1 } # Moskva
+			}
+			AND = {
+				vp = 12
+				or = {
+					control = { province = 553 data = -1 } # Petrograd
+					control = { province = 572 data = -1 } # Moskva
+				}
+			}
+		}
+	}
+
+	trigger = {
+		atwar = no
+		vp = 15
+		NOT = { 
+			exists = RUS 
+			dissent = 10 
+		}
+		OR = {
+			AND = {
+				control = { province = 553 data = -1 } # Petrograd
+				control = { province = 572 data = -1 } # Moskva
+			}
+			AND = {
+				vp = 12
+				or = {
+					control = { province = 553 data = -1 } # Petrograd
+					control = { province = 572 data = -1 } # Moskva
+				}
+			}
+		}
+	}
+   
+	name = "EVT1914_2173518_NAME"
+	desc = "EVT1914_2173518_DESC" 
+	style = 2
+	picture = "wargames"
+	decision_picture = "decision_wargames"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT1914_2173518_ACTIONA"
+		command = { type = dissent value = -10 }
+		command = { type = name where = -1 } #restores name to default value
+		command = { type = country which = RUS }
+		#the other White Armies are inherited by the country that restores Russia unless they are puppet of someone else or played by human
+		command = { trigger = { NOT = { country = UER } ai = UER OR = { NOT = { ispuppet = UER} puppet = { country = UER } } } type = inherit which = UER }
+		command = { trigger = { NOT = { country = UTC } ai = UTC OR = { NOT = { ispuppet = UTC} puppet = { country = UTC } } } type = inherit which = UTC }
+		command = { trigger = { NOT = { country = UGS } ai = UGS OR = { NOT = { ispuppet = UGS} puppet = { country = UGS } } } type = inherit which = UGS }
+		command = { trigger = { ai = U62 OR = { NOT = { ispuppet = U62} puppet = { country = U62 } } } type = inherit which = U62 }
+		#sleep past events 
+		command = { trigger = { NOT = { event = 2104503 } } type = sleepevent which = 2104503 } #Warsaw is lost !
+		command = { trigger = { NOT = { event = 2104504 } } type = sleepevent which = 2104504 } #Riga is lost !
+		command = { trigger = { NOT = { event = 2104505 } } type = sleepevent which = 2104505 } #Minsk is lost !
+		command = { trigger = { NOT = { event = 2104506 } } type = sleepevent which = 2104506 } #Kyiv is lost !
+		command = { trigger = { NOT = { event = 2104507 } } type = sleepevent which = 2104507 } #Odessa is lost !
+		command = { trigger = { NOT = { event = 2104508 } } type = sleepevent which = 2104508 } #Talinn is lost !
+		command = { trigger = { NOT = { event = 2104509 } } type = sleepevent which = 2104509 } #Petrograd is lost !
+		command = { trigger = { NOT = { event = 2104510 } } type = sleepevent which = 2104510 } #Moscow is lost !
+		command = { trigger = { NOT = { event = 2104511 } } type = sleepevent which = 2104511 } #Erevan is lost !
+		command = { trigger = { NOT = { event = 2104512 } } type = sleepevent which = 2104512 } #Baki is lost !
+		command = { trigger = { NOT = { event = 2104513 } } type = sleepevent which = 2104513 } #Tbilisi is lost !
+		command = { trigger = { NOT = { event = 2191511 } } type = sleepevent which = 2191511 } #U08 Send Lenin back to Russia
+		command = { trigger = { NOT = { event = 2104514 } } type = sleepevent which = 2104514 } #Strikes at Petrograd
+		command = { trigger = { NOT = { event = 2104515 } } type = sleepevent which = 2104515 } #Activity has ceased at Petrograd
+		command = { trigger = { NOT = { event = 2104516 } } type = sleepevent which = 2104516 } #Major riots in Petrograd
+		command = { trigger = { NOT = { event = 2104517 } } type = sleepevent which = 2104517 } #Nicholas the IInd flees
+		command = { trigger = { NOT = { event = 2104518 } } type = sleepevent which = 2104518 } #Provisional government proclaimed !
+		command = { trigger = { NOT = { event = 2104519 } } type = sleepevent which = 2104519 } #Petrograd soviet formed !
+		command = { trigger = { NOT = { event = 2104520 } } type = sleepevent which = 2104520 } #Nicholas the IInd abdicates
+		command = { trigger = { NOT = { event = 2104521 } } type = sleepevent which = 2104521 } #Kerensky comes into power
+		command = { trigger = { NOT = { event = 2104522 } } type = sleepevent which = 2104522 } #Lenin is back
+		command = { trigger = { NOT = { event = 2104523 } } type = sleepevent which = 2104523 } #Bolshevik's popularity rises
+		command = { trigger = { NOT = { event = 2104525 } } type = sleepevent which = 2104525 } #Major revolts against provisional governemnt!
+		command = { trigger = { NOT = { event = 2104526 } } type = sleepevent which = 2104526 } #Conservative elements are concerned
+		command = { trigger = { NOT = { event = 2104527 } } type = sleepevent which = 2104527 } #Quiproquo between Kornilov and Kerensky
+		command = { trigger = { NOT = { event = 2104528 } } type = sleepevent which = 2104528 } #The Kornilov affair
+		command = { trigger = { NOT = { event = 2104529 } } type = sleepevent which = 2104529 } #Free Bolsheviks prisoners
+		command = { trigger = { NOT = { event = 2104524 } } type = sleepevent which = 2104524 } #Peasants' uprising
+		command = { trigger = { NOT = { event = 2104530 } } type = sleepevent which = 2104530 } #Revolution !
+		command = { trigger = { NOT = { event = 3104503 } } type = sleepevent which = 3104503 } #Poland is still under enemy control
+		command = { trigger = { NOT = { event = 3104504 } } type = sleepevent which = 3104504 } #Belarus is still under enemy control
+		command = { trigger = { NOT = { event = 3104505 } } type = sleepevent which = 3104505 } #Riga is still under enemy control
+		command = { trigger = { NOT = { event = 2104545 } } type = sleepevent which = 2104545 } #Tsaritsyn is lost !
+		command = { trigger = { NOT = { event = 2104553 } } type = sleepevent which = 2104553 } #Wave of patriotism
+		command = { trigger = { NOT = { event = 2104554 } } type = sleepevent which = 2104554 } #Rally round the Tsar!
+		command = { trigger = { NOT = { local_flag = war_weariness } } type = local_setflag which = war_weariness }
+		command = { trigger = { NOT = { local_flag = mutinies } } type = local_setflag which = mutinies }
+	}
+}
+### Volunteers Army
+event = {
+	id = 2168500   # The Volunteers army
+	country = UTC
+	
+	name = "EVT1914_2168500_NAME"
+	desc = "EVT1914_2168500_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_GREAT" # Core troops
+		command = { type = addcore which = 552 } #Gdov
+		command = { type = addcore which = 566 } #Pskov
+		command = { type = addcore which = 626 } #Odessa
+		command = { type = set_domestic which = democratic value = 5 } 
+		command = { type = set_domestic which = political_left value = 5 } #Social Conservative
+		#removes all rebels units from regions that belong to the Volunteers' Army (and also from a few nearby regions too)
+		command = { type = remove_units which = land where = REB when = 2 value = "Southern Russia" } #removes all Rebel units from Southern Russia region
+		command = { type = remove_units which = land where = REB when = 2 value = "Ukraine" } #removes all Rebel units from Ukraine region
+		command = { type = remove_units which = land where = REB when = 2 value = "Kaukasus" } #removes all Rebel units from Kaukasus region
+		command = { type = remove_units which = land where = REB when = 2 value = "Belarus" } #removes all Rebel units from Belarus region
+		command = { type = remove_units which = land where = REB when = 2 value = "Baltic States" } #removes all Rebel units from Baltic States region
+		command = { type = add_corps which = "Volunteers Army" value = land when = 1335004 where = 644 } #Rostov-on-Don
+		command = { type = add_division which = "Denikine division" value = infantry when = 3 }
+		command = { type = add_corps which = "White Guard" value = land when = 1335041 where = 626 } #Odessa
+		command = { type = add_division which = "Drozdovsky division" value = infantry when = 3 }
+		command = { type = add_corps which = "Northwestern Army" value = land when = 1335037 where = 552 } #Gdov
+		command = { type = add_division which = "Yudenich division" value = infantry when = 3 }
+		command = { type = war which = SOV }
+	}
+}
+event = {
+	id = 2168501   # More men rallies the Volunteers Army
+	country = UTC
+   
+	trigger = { 
+		atwar = yes 
+		random = 15 
+	}
+	
+	name = "EVT1914_2168501_NAME"
+	desc = "EVT1914_2168501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_GREAT" # More troops
+		command = { type = add_division which = "2nd division" value = infantry when = 3 }
+	}
+}
+event = {
+	id = 2168502   # More men rallies the Volunteers Army
+	country = UTC
+   
+	trigger = { 
+		atwar = yes 
+		random = 15 
+		event = 2173501 #Travel to Omsk
+	}
+   
+	name = "EVT1914_2168502_NAME"
+	desc = "EVT1914_2168502_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_GREAT" # More troops
+		command = { type = add_division which = "3rd division" value = infantry when = 3 }
+	}
+}
+event = {
+	id = 2168503   # Cossacks rise against the Bolsheviks
+	country = UTC
+   
+	#Triggered by SOV 2007535 # The Cossack's Rebellion
+   
+	name = "EVT1914_2168503_NAME"
+	desc = "EVT1914_2168503_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great !
+		command = { type = addcore which = 642 } #Surovikino
+		command = { type = addcore which = 643 } #Morozovsk
+		command = { type = addcore which = 644 } #Rostov-on-Don
+		command = { type = addcore which = 645 } #Konstantinovsk
+		command = { type = addcore which = 649 } #Kamensk-Shakhtinsky
+		command = { type = addcore which = 659 } #Kalach-on-Don
+		command = { type = addcore which = 661 } #Kamyshin
+		command = { type = addcore which = 662 } #Kotelnikovo
+		command = { type = addcore which = 663 } #Stalingrad
+		command = { type = addcore which = 697 } #Volgodonsk
+		command = { type = add_corps which = "Don Army" value = land where = 645 } #Konstantinovsk
+		command = { type = add_division which = "1st Cossacks" value = cavalry when = 3 }
+		command = { type = add_division which = "2nd Cossacks" value = cavalry when = 3 }
+		command = { type = add_division which = "3rd Cossacks" value = cavalry when = 3 }
+		command = { type = add_division which = "4th Cossacks" value = infantry when = 3 }
+		command = { type = add_division which = "5th Cossacks" value = infantry when = 3 }
+	}
+}
+event = {
+	id = 2168504   # Move capital to Petrograd (AI priority #1)
+	country = UTC
+	
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 553 data = -1 } #Control Petrograd
+		owned = { province = 553 data = -1 } #Control Petrograd
+	} 
+	trigger = { 
+		NOT = { exists = SOV } 
+		atwar = no 
+		control = { province = 553 data = -1 } #Control Petrograd
+		owned = { province = 553 data = -1 } #Control Petrograd
+	}
+	
+	name = "EVT1914_2173513_NAME"
+	desc = "EVT1914_2173513_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2173513_ACTIONA" # Move to Petrograd
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 553 }
+	}
+}
+event = {
+	id = 2168505   # Move capital to Moscow (AI priority #2)
+	country = UTC
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 572 data = -1 } #Control Moskow
+		owned = { province = 572 data = -1 } #Control Moskow
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+		} 
+		atwar = no 
+		control = { province = 572 data = -1 } #Control Moskow
+		owned = { province = 572 data = -1 } #Control Moskow
+	}
+
+	name = "EVT1914_2173512_NAME"
+	desc = "EVT1914_2173512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173512_ACTIONA" # Move to Moskwa
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 572 }
+	}
+}
+event = {
+	id = 2168506   # Move capital to Kuybyshev (AI priority #3)
+	country = UTC
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 668 data = -1 } #Control Kuybyshev
+		owned = { province = 668 data = -1 } #Control Kuybyshev
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+		} 
+		atwar = no 
+		control = { province = 668 data = -1 }
+		owned = { province = 668 data = -1 }
+	}   
+	
+	name = "EVT1914_2173514_NAME"
+	desc = "EVT1914_2173514_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173513_ACTIONA" # Move to Kuybyshev
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 668 }
+	}
+}
+event = {
+	id = 2168507   # Move capital to Tsaritsyn (AI priority #4)
+	country = UTC
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 663 data = -1 }  #Tsaritsyn
+		owned = { province = 663 data = -1 }  #Tsaritsyn
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+			control = { province = 668 data = -1 } #Kuybyshev
+			owned = { province = 668 data = -1 } #Kuybyshev
+		}
+		atwar = no 
+		control = { province = 663 data = -1 } #Tsaritsyn
+		owned = { province = 663 data = -1 } #Tsaritsyn
+	}
+	
+	name = "EVT1914_2173515_NAME"
+	desc = "EVT1914_2173515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173515_ACTIONA" # Move to Tsaritsyn
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 663 }
+	}
+}
+event = {
+	id = 2168508   # Move capital to Ekaterinburg (AI priority #5)
+	country = UTC
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 1151 data = -1 } #Ekaterinburg
+		owned = { province = 1151 data = -1 } #Ekaterinburg
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+			control = { province = 668 data = -1 } #Kuybyshev
+			owned = { province = 668 data = -1 } #Kuybyshev
+			control = { province = 663 data = -1 } #Tsaritsyn
+			owned = { province = 663 data = -1 } #Tsaritsyn
+		}
+		atwar = no 
+		control = { province = 1151 data = -1 } 
+		owned = { province = 1151 data = -1 } 
+	}
+	
+	name = "EVT1914_2173516_NAME"
+	desc = "EVT1914_2173516_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173516_ACTIONA" # Move to Ekaterinburg
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 1151 }
+	}
+}
+event = {
+	id = 2168509   # Volunteers army becomes Southern Russia
+	country = UTC
+
+	decision = { 
+		#control = { data = UTC province = 623 } #Melitopol
+		#control = { data = UTC province = 626 } #Odessa
+		control = { data = UTC province = 644 } #Rostov-on-Do
+		control = { data = UTC province = 663 } #Stalingrad
+		control = { data = UTC province = 691 } #Krasnodar
+		control = { data = UTC province = 700 } #Khasavyurt
+		control = { data = UTC province = 703 } #Vladikavkaz
+	}
+	decision_trigger = {   } 
+	trigger = { 
+		#control = { data = UTC province = 623 } #Melitopol
+		#control = { data = UTC province = 626 } #Odessa
+		control = { data = UTC province = 644 } #Rostov-on-Do
+		control = { data = UTC province = 663 } #Stalingrad
+		control = { data = UTC province = 691 } #Krasnodar
+		control = { data = UTC province = 700 } #Khasavyurt
+		control = { data = UTC province = 703 } #Vladikavkaz
+	}
+   
+	name = "EVT1914_2168509_NAME"
+	desc = "EVT1914_2168509_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2168509_ACTIONA" # Rename the Government
+		command = { type = name where = UTC which = UTC_SOUTHERN_RUSSIA }
+		command = { type = addcore which = 691 } #Krasnodar
+		command = { type = addcore which = 692 } #Salsk
+		command = { type = addcore which = 693 } #Maykop
+		command = { type = addcore which = 694 } #Novorossiysk
+		command = { type = addcore which = 695 } #Sochi
+		command = { type = addcore which = 696 } #Cherkessk
+		command = { type = addcore which = 697 } #Volgodonsk
+		command = { type = addcore which = 698 } #Voroshilovsk
+		command = { type = addcore which = 699 } #Elista
+		command = { type = addcore which = 700 } #Khasavyurt
+		command = { type = addcore which = 701 } #Nalchik
+		command = { type = addcore which = 702 } #Grozny
+		command = { type = addcore which = 703 } #Vladikavkaz
+		command = { type = addcore which = 704 } #Makhachkala
+		command = { type = addcore which = 705 } #Nazran
+		command = { type = addcore which = 706 } #Astrakhan
+		command = { type = addcore which = 603 } #Belgorod
+		command = { type = addcore which = 646 } #Ostrogozhsk
+		command = { type = addcore which = 647 } #Stary Oskol
+		command = { type = addcore which = 648 } #Rossosh
+		command = { type = addcore which = 650 } #Tambov
+		command = { type = addcore which = 651 } #Borisoglebsk
+		command = { type = addcore which = 653 } #Pavlovsk
+		command = { type = addcore which = 654 } #Voronezh
+		command = { type = addcore which = 655 } #Uryupinsk
+		command = { type = addcore which = 657 } #Balashov
+		command = { type = addcore which = 658 } #Penza
+		command = { type = addcore which = 665 } #Volsk
+		command = { type = addcore which = 669 } #Saratov
+	}
+}
+event = {
+	id = 2168510
+	country = UTC
+	persistent = yes
+
+	trigger = { 
+		random = 8
+		exists = SOV
+		atwar = yes
+		NOT = { dissent = 25 }
+	}
+   
+	name = "EVT1914_2173504_NAME" # White Terror
+	desc = "EVT1914_2173504_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173504_ACTIONA" # Peasants won't appeciate
+		command = { } #empty command to make event valid and reduce engine load
+		command = { trigger = { dissent = 20 } type = dissent value = 0.5 }
+		command = { trigger = { dissent = 10 NOT = { dissent = 20 } } type = dissent value = 1 }
+		command = { trigger = { NOT = { dissent = 10 } } type = dissent value = 2 }
+	}
+}
+### Arkhangelsk Government
+event = {
+	id = 2147500   # The Arkhangelsk Government
+	country = UGS
+   
+	name = "EVT1914_2147500_NAME"
+	desc = "EVT1914_2147500_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_GREAT" # Core troops
+		command = { type = addcore which = 534 } #Kola
+		command = { type = addcore which = 535 } #Murmansk
+		command = { type = addcore which = 536 } #Kandalaksha
+		command = { type = addcore which = 537 } #Kem
+		command = { type = addcore which = 538 } #Segezha
+		command = { type = addcore which = 540 } #Kestenga
+		command = { type = addcore which = 541 } #Belomorsk
+		command = { type = addcore which = 542 } #Arkhangelsk
+		command = { type = addcore which = 545 } #Velsk
+		command = { type = addcore which = 546 } #Sudostroy
+		command = { type = addcore which = 688 } #Ukhta		
+		command = { type = set_domestic which = democratic value = 5 } 
+		command = { type = set_domestic which = political_left value = 5 } #Social Conservative		
+		#removes all rebels units from regions that belong to the Arkhangelsk Government (and also from a few nearby regions too)
+		command = { type = remove_units which = land where = REB when = 2 value = "Finland" } #removes all Rebel units from Finland region
+		command = { type = remove_units which = land where = REB when = 2 value = "White Sea Tundra" } #removes all Rebel units from White Sea Tundra region
+		command = { type = remove_units which = land where = REB when = 2 value = "Russia" } #removes all Rebel units from Central Russia region
+		command = { type = remove_units which = land where = REB when = 2 value = "Northern Russia" } #removes all Rebel units from Northern Russia region
+		command = { type = remove_units which = land where = REB when = 2 value = "Western Russia" } #removes all Rebel units from Western Russia region
+		command = { type = add_corps which = "Arkhangelsk front" value = land where = 542 } #Arkhangelsk
+		command = { type = add_division which = "1st Division" value = infantry when = 3 }
+		command = { type = add_corps which = "Murmansk front" value = land where = 535 } #Murmansk
+		command = { type = add_division which = "2nd Division" value = infantry when = 3 }
+		command = { type = war which = SOV }
+	}
+}
+event = {
+	id = 2147501   # Move capital to Petrograd (AI priority #1)
+	country = UGS
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 553 data = -1 } #Control Petrograd
+		owned = { province = 553 data = -1 } #Control Petrograd
+	} 
+	trigger = { 
+		NOT = { exists = SOV } 
+		atwar = no 
+		control = { province = 553 data = -1 } #Control Petrograd
+		owned = { province = 553 data = -1 } #Control Petrograd
+	}
+	
+	name = "EVT1914_2173513_NAME"
+	desc = "EVT1914_2173513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173513_ACTIONA" # Move to Petrograd
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 553 }
+	}
+}
+event = {
+	id = 2147502   # Move capital to Moscow (AI priority #2)
+	country = UGS
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 572 data = -1 } #Control Moskow
+		owned = { province = 572 data = -1 } #Control Moskow
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+		} 
+		atwar = no 
+		control = { province = 572 data = -1 } #Control Moskow
+		owned = { province = 572 data = -1 } #Control Moskow
+	}
+	
+	name = "EVT1914_2173512_NAME"
+	desc = "EVT1914_2173512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173512_ACTIONA" # Move to Moskwa
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 572 }
+	}
+}
+event = {
+	id = 2147503   # Move capital to Kuybyshev (AI priority #3)
+	country = UGS
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 668 data = -1 } #Control Kuybyshev
+		owned = { province = 668 data = -1 } #Control Kuybyshev
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+		} 
+		atwar = no 
+		control = { province = 668 data = -1 }
+		owned = { province = 668 data = -1 }
+	}
+	
+	name = "EVT1914_2173514_NAME"
+	desc = "EVT1914_2173514_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173513_ACTIONA" # Move to Kuybyshev
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 668 }
+	}
+}
+event = {
+	id = 2147504   # Move capital to Tsaritsyn (AI priority #4)
+	country = UGS
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 663 data = -1 }  #Tsaritsyn
+		owned = { province = 663 data = -1 }  #Tsaritsyn
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+			control = { province = 668 data = -1 } #Kuybyshev
+			owned = { province = 668 data = -1 } #Kuybyshev
+		}
+		atwar = no 
+		control = { province = 663 data = -1 } #Tsaritsyn
+		owned = { province = 663 data = -1 } #Tsaritsyn
+	}
+	
+	name = "EVT1914_2173515_NAME"
+	desc = "EVT1914_2173515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173515_ACTIONA" # Move to Tsaritsyn
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 663 }
+	}
+}
+event = {
+	id = 2147505   # Move capital to Ekaterinburg (AI priority #5)
+	country = UGS
+
+	decision = { 
+		NOT = { exists = SOV } 
+	}
+	decision_trigger = { 
+		atwar = no 
+		control = { province = 1151 data = -1 } #Ekaterinburg
+		owned = { province = 1151 data = -1 } #Ekaterinburg
+	}
+	trigger = { 
+		NOT = { 
+			exists = SOV 
+			control = { province = 553 data = -1 } #Petrograd
+			owned = { province = 553 data = -1 } #Petrograd
+			control = { province = 572 data = -1 } #Moscow
+			owned = { province = 572 data = -1 } #Moscow
+			control = { province = 668 data = -1 } #Kuybyshev
+			owned = { province = 668 data = -1 } #Kuybyshev
+			control = { province = 663 data = -1 } #Tsaritsyn
+			owned = { province = 663 data = -1 } #Tsaritsyn
+		}
+		atwar = no 
+		control = { province = 1151 data = -1 } 
+	}
+	
+	name = "EVT1914_2173516_NAME"
+	desc = "EVT1914_2173516_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173516_ACTIONA" # Move to Ekaterinburg
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 1151 }
+	}
+}
+event = {
+	id = 2147506   # Arkhangelsk becomes Northern Russia
+	country = UGS
+
+	decision = { 
+		control = { data = UGS province = 553 } #Petrograd
+	}
+	decision_trigger = {
+		control = { data = UGS province = 553 } #Petrograd
+	}
+	trigger = { 
+		control = { data = UGS province = 553 } #Petrograd
+	}
+	
+	name = "EVT1914_2147506_NAME"
+	desc = "EVT1914_2147506_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2147506_ACTIONA" # Rename the Government
+		command = { type = name where = UGS which = UGS_NORTHERN_RUSSIA }
+		command = { type = addcore which = 539 } #Petrozavodsk
+		command = { type = addcore which = 543 } #Totma
+		command = { type = addcore which = 547 } #Kirillov
+		command = { type = addcore which = 549 } #Luga
+		command = { type = addcore which = 550 } #Kingisepp
+		command = { type = addcore which = 551 } #Gatchina
+		command = { type = addcore which = 552 } #Gdov
+		command = { type = addcore which = 553 } #Petrograd
+		command = { type = addcore which = 555 } #Cherepovets
+		command = { type = addcore which = 556 } #Vytegra
+		command = { type = addcore which = 557 } #Tikhvin
+		command = { type = addcore which = 560 } #Novgorod
+		command = { type = addcore which = 562 } #Kirishi
+	}
+}
+event = {
+   id = 2147507
+   country = UGS
+   persistent = yes
+
+	trigger = { 
+		random = 8
+		exists = SOV
+		atwar = yes
+		NOT = { dissent = 25 }
+	}
+	
+	name = "EVT1914_2173504_NAME" # White Terror
+	desc = "EVT1914_2173504_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2173504_ACTIONA" # Peasants won't appeciate
+		command = { } #empty command to make event valid and reduce engine load
+		command = { trigger = { dissent = 20 } type = dissent value = 0.5 }
+		command = { trigger = { dissent = 10 NOT = { dissent = 20 } } type = dissent value = 1 }
+		command = { trigger = { NOT = { dissent = 10 } } type = dissent value = 2 }
+	}
+}
+
+### Far Eastern Host / Russia Eastern Outskirts
+event = {
+	id = 2041000   # The Far Eastern Host
+	country = U62
+
+	name = "EVT1914_2041000_NAME" # The Far Eastern Host
+	desc = "EVT1914_2041000_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 } #Paternal Autocracy
+		command = { type = headofstate which = 1125001 } #Semenov
+		command = { type = headofgovernment which = 1125002 } #Taskin
+		command = { type = foreignminister which = 1125003 } #Zhevchenko
+		command = { type = armamentminister which = 1125004 } #Burikov
+		command = { type = ministerofsecurity which = 1125007 } #Kamennov
+		command = { type = ministerofintelligence which = 1125009 } #Yugolewski
+		command = { type = chiefofstaff which = 1125010 } #Vasiliev
+		command = { type = chiefofarmy which = 1125014 } #Semenov
+		command = { type = chiefofnavy which = 1125017 } #Stark
+		command = { type = access which = UER } #gives military access to Ufa Directorate
+		command = { type = war which = SOV }
+		#if some of the rightful provinces of Far Eastern Host are currently occupied by rebels, controls goes from rebels to Ufa Directorate
+		#Zabaikalye area
+		command = { trigger = { owned = { province = 1161 data = U62 } control = { province = 1161 data = REB } } type = secedeprovince which = U62 value = 1161 when = 2 } #Kalakan
+		command = { trigger = { owned = { province = 1162 data = U62 } control = { province = 1162 data = REB } } type = secedeprovince which = U62 value = 1162 when = 2 } #Irkutsk
+		command = { trigger = { owned = { province = 1167 data = U62 } control = { province = 1167 data = REB } } type = secedeprovince which = U62 value = 1167 when = 2 } #Ulan-Ude
+		command = { trigger = { owned = { province = 1168 data = U62 } control = { province = 1168 data = REB } } type = secedeprovince which = U62 value = 1168 when = 2 } #Borzya
+		#Amur area
+		command = { trigger = { owned = { province = 1170 data = U62 } control = { province = 1170 data = REB } } type = secedeprovince which = U62 value = 1170 when = 2 } #Never
+		command = { trigger = { owned = { province = 1171 data = U62 } control = { province = 1171 data = REB } } type = secedeprovince which = U62 value = 1171 when = 2 } #Ekimchan
+		command = { trigger = { owned = { province = 1174 data = U62 } control = { province = 1174 data = REB } } type = secedeprovince which = U62 value = 1174 when = 2 } #Kuybyshevka-Vostochnaya
+		command = { trigger = { owned = { province = 1175 data = U62 } control = { province = 1175 data = REB } } type = secedeprovince which = U62 value = 1175 when = 2 } #Birobidzhan
+		command = { trigger = { owned = { province = 1176 data = U62 } control = { province = 1176 data = REB } } type = secedeprovince which = U62 value = 1176 when = 2 } #Blagoveshchensk
+		#Khabarovsk area
+		command = { trigger = { owned = { province = 1185 data = U62 } control = { province = 1185 data = REB } } type = secedeprovince which = U62 value = 1185 when = 2 } #Gavan
+		command = { trigger = { owned = { province = 1186 data = U62 } control = { province = 1186 data = REB } } type = secedeprovince which = U62 value = 1186 when = 2 } #Okhotsk
+		command = { trigger = { owned = { province = 1187 data = U62 } control = { province = 1187 data = REB } } type = secedeprovince which = U62 value = 1187 when = 2 } #Sofiysk
+		command = { trigger = { owned = { province = 1188 data = U62 } control = { province = 1188 data = REB } } type = secedeprovince which = U62 value = 1188 when = 2 } #Elban
+		command = { trigger = { owned = { province = 1189 data = U62 } control = { province = 1189 data = REB } } type = secedeprovince which = U62 value = 1189 when = 2 } #Nikolayevsk-on-Amur 
+		command = { trigger = { owned = { province = 1190 data = U62 } control = { province = 1190 data = REB } } type = secedeprovince which = U62 value = 1190 when = 2 } #Khabarovsk
+		command = { type = add_corps which = "Chita Military Region" value = land when = 1125023 where = 1169 } #Semenov in Chita
+		command = { type = add_division which = "Mongol-Buryat Mounted Division" value = cavalry when = 3 where = -66 } #only 2000 men
+		command = { type = add_division which = "Semenovskii Infantry Division" value = infantry when = 3 where = -77 } #only 3000 men
+		command = { type = add_corps which = "Special Ussuri Cossack Corp" value = land when = 1125009 where = 1189 } #Kalmykov in Nikolayevsk-on-Amur
+		command = { type = add_division which = "Special Ussuri Cossack Detachment" value = cavalry when = 3 where = -91 } #only 500 men
+		command = { type = add_corps which = "Special Amur Cossack Corp" value = land when = 1125006 where = 1176 } #Gamov in Blagoveshchenk
+		command = { type = add_division which = "Special Amur Cossack Detachment" value = cavalry when = 3 where = -91 } #only 500 men
+		#Mobilization level set to Partial Mobilization with reserves already arrived
+		command = { type = set_domestic which = professional_army value = 7 }
+		command = { trigger = { NOT = { local_flag = MOB10 } } type = local_clrflag which = MOB10 } #No Total Mob
+		command = { trigger = { NOT = { local_flag = MOB9 } } type = local_clrflag which = MOB9 } #No Extended Mob
+		command = { trigger = { NOT = { local_flag = MOB8 } } type = local_clrflag which = MOB8 } #No General Mob
+		command = { trigger = { NOT = { local_flag = MOB7 } } type = local_setflag which = MOB7 } #Partial Mob and below activated
+		command = { trigger = { NOT = { local_flag = MOB6 } } type = local_setflag which = MOB6 }		
+		command = { trigger = { NOT = { local_flag = MOB5 } } type = local_setflag which = MOB5 }		
+		command = { trigger = { NOT = { local_flag = MOB4 } } type = local_setflag which = MOB4 }		
+		command = { trigger = { NOT = { local_flag = MOB3 } } type = local_setflag which = MOB3 }
+		command = { trigger = { NOT = { local_flag = MOB2 } } type = local_setflag which = MOB2 }
+		command = { trigger = { NOT = { local_flag = RES } } type = local_setflag which = RES } #Reserves already arrived
+	}
+}
+
+event = {
+	id = 2041001   # Russia Eastern Outskirts
+	country = U62
+
+	name = "EVT1914_2041001_NAME" #Russia Eastern Outskirts
+	desc = "EVT1914_2041001_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_OK" # Ok
+		command = { type = inherit which = UER value = 1 when = 3 } #inherits units too (historical)
+		command = { type = name where = U62 which = U62_REO } #change name to Russia Eastern Outskirts
+	}
+}

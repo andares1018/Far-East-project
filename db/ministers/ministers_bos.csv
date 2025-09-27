@@ -1,0 +1,52 @@
+BOS;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+570001;Head of State;Ali Efendi Aganovic;1933;1964;1999;NS;Stern Imperialist;High;M546001;X
+570002;Head of Government;Mehmed Alabegovic;1933;1948;1948;NS;Silent Workhorse;High;M546002;X
+570003;Foreign Minister;Osman Kulenovic;1933;1948;1948;NS;The Cloak N Dagger Schemer;High;M546003;X
+570004;Minister of Armament;Neshad Topcic;1933;1946;1946;NS;Air to Ground Proponent;Medium;M546004;X
+570005;Minister of Security;Mohammed Hadzieffendic;1933;1964;1999;NS;Crooked Kleptocrat;Medium;M546005;X
+570006;Head of Military Intelligence;Ibrahim Fejic;1933;1957;1963;NS;Political Specialist;Medium;M546006;X
+570007;Chief of Staff;Hakija Hadzic;1933;1954;1954;NS;School of Fire Support;Medium;M546007;X
+570008;Chief of Army;Desiderius Hampel;1933;1964;1999;NS;Guns and Butter Doctrine;Medium;M546008;X
+570009;Chief of Navy;Walther Kinzel;1933;1964;1999;NS;Decisive Naval Battle Doctrine;Medium;M546009;X
+570010;Chief of Air Force;Slavomir Tomic;1933;1964;1999;NS;Vertical Envelopment Doctrine;Medium;L46061;X
+570011;Head of State;Esat Pasha Toptani;1912;1914;1921;SC;Resigned Generalissimo;High;M546011;X
+570012;Head of State;Michel Yovanovic;1933;1964;1999;LWR;Barking Buffoon;High;M20056;X
+570013;Head of Government;Osman Zulfikarpasic;1933;1964;1999;SC;Naive Optimist;High;M546013;X
+570014;Head of Government;Aleksandar Rankovic;1933;1966;1984;LWR;Political Protege;High;M20026;X
+570015;Foreign Minister;Mehmed Kapetanovic;1893;1902;1903;SC;Ideological Crusader;High;M546015;X
+570016;Foreign Minister;Mehmed Dzemaludin;1913;1938;1939;SC;Apologetic Clerk;High;M546016;X
+570017;Foreign Minister;Ivo Ljujic;1933;1964;1999;LWR;Iron Fisted Brute;High;M546017;X
+570018;Minister of Armament;Adolf Wagner;1941;1964;1999;NS;Battle Fleet Proponent;Medium;M546018;X
+570019;Minister of Armament;Abdulah Trivuncic;1933;1964;1999;SC;Administrative Genius;Medium;M546019;X
+570020;Minister of Armament;Ali Livadic;1933;1964;1999;LWR;Infantry Proponent;Medium;M546020;X
+570021;Minister of Armament;Nijaz Dudakovic;1941;1964;1999;LWR;Resource Industrialist;Medium;M546021;X
+570022;Minister of Security;Ludwig Öhlhafen;1941;1964;1999;NS;Crime Fighter;Medium;M546022;X
+570023;Minister of Security;Sulejman Effendi Kemura;1933;1964;1999;SC;Silent Lawyer;Medium;M546023;X
+570024;Minister of Security;Serif Begic;1933;1964;1999;LWR;Efficient Sociopath;Medium;M546024;X
+570025;Minister of Security;Fehim Effendi Spaho;1915;1942;1943;LWR;Compassionate Gentleman;Medium;M546025;X
+570026;Head of Military Intelligence;Otto Nippolt;1942;1964;1999;NS;Logistics Specialist;Medium;M546026;X
+570027;Head of Military Intelligence;Haris Merdanovic;1941;1964;1999;NS;Industrial Specialist;Medium;M546027;X
+570028;Head of Military Intelligence;Drazen Subacic;1933;1964;1999;SC;Technical Specialist;Medium;M546028;X
+570029;Head of Military Intelligence;Emin Hodzic;1933;1964;1999;LWR;Dismal Enigma;Medium;M546029;X
+570030;Chief of Staff;Mihovil Vujicic;1933;1964;1999;SC;School of Defence;Medium;M546030;X
+570031;Chief of Staff;Mihailo Lukic;1933;1964;1999;LWR;School of Mass Combat;Medium;L46020;X
+570032;Chief of Army;Esat Pasha Toptani;1912;1914;1921;SC;Static Defence Doctrine;Medium;M546011;X
+570033;Chief of Army;Draza Mihailovic;1933;1964;1999;LWR;Elastic Defence Doctrine;Medium;M20012;X
+570034;Chief of Navy;Duro Jakcin;1933;1964;1999;SC;Indirect Approach Doctrine;High;L46044;X
+570035;Chief of Navy;Josip Broz;1933;1964;1999;LWR;Base Control Doctrine;High;M20029;X
+570036;Chief of Air Force;Branko Naumovic;1933;1964;1999;SC;Air Superiority Doctrine;Medium;L46056;X
+570037;Chief of Air Force;Josip Broz;1933;1964;1999;LWR;Carpet Bombing Doctrine;Medium;M20028;X
+570038;Head of State;Smail aga Cemalovic;1906;1945;1999;SC;benevolent gentleman;High;2488;X
+570039;Head of Government;Mehmed Spaho;1911;1939;1940;SC;silent workhorse;Medium;3159;X
+570040;Foreign Minister;Safvet-beg Basagic;1910;1934;1935;SC;biased intellectual;High;9926;X
+570041;Minister of Armament;Mehmed Spaho;1911;1939;1940;SC;Administrative Genius;Medium;3159;X
+570042;Minister of Security;Serif Arnautovic;1909;1935;1936;SC;man of the people;Medium;unknownminister;X
+570043;Chief of Staff;Smail aga Cemalovic;1906;1945;1999;SC;school of defence;High;2488;X
+570044;Head of State;Duro Pucar;1922;1979;1980;LE;resigned generalissimo;High;9928;X
+570045;Head of Government;Duro Pucar;1922;1979;1980;LE;old general;High;9928;X
+570046;Minister of Armament;Vlado Segrt;1928;1991;1992;LE;military entrepreneur;Medium;9929;X
+570047;Minister of Security;Vojislav Kecmanovic;1933;1964;1999;LE;Health and safety;Medium;unknownminister;X
+570048;Head of Military Intelligence;Rodoljub Colakovic;1921;1983;1984;LE;logistics specialist;Medium;9927;X
+570049;Chief of Staff;Vlado Segrt;1928;1991;1992;LE;school of psychology;Medium;9929;X
+570050;Chief of Staff;Rodoljub Colakovic;1921;1983;1984;LE;school of mass combat;Medium;9927;X

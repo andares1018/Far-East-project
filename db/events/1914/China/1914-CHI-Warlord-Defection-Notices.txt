@@ -1,0 +1,568 @@
+# Warlord Defection Notification and OOB Modification Events
+# By Limith
+# *** 133011023 Guangxi Secedes!
+# *** 133011024 Sichuan Secedes!
+# *** 133011025 Guangdong Secedes!
+# *** 133011026 Yunnan Secedes!
+# *** 133011027 Xikang Secedes!
+# *** 133011028 Guizhou Secedes!
+# *** 133011029 Hunan Secedes!
+# *** 133011030 Jiangxi Secedes!
+# *** 133011031 Jiangsu Secedes!
+# *** 133011032 Shanxi Secedes!
+# *** 133011033 San Ma Secedes!
+# *** 133011034 Xinjiang Secedes!
+# *** 133011035 Anhui Secedes!
+# *** 133011036 Fujian Secedes!
+# *** 133011037 Zhejiang Secedes!
+# *** 133011038 Hubei Secedes!
+
+########################################
+## Notification of Province Secession ##
+########################################
+# Guangxi Secedes!
+event = {
+	id = 133011023
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011023_NAME
+	desc = EVT1914_133011023_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "1 GX Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "2 GX Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "3 GX Division" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "1 GX Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "2 GX Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "3 GX Division" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10191 } } type = remove_division which = 22000 value = 10191 }
+		command = { trigger = { division_exists = { type = 22000 id = 10192 } } type = remove_division which = 22000 value = 10192 }
+		command = { trigger = { division_exists = { type = 22000 id = 10193 } } type = remove_division which = 22000 value = 10193 }
+
+	}
+
+}
+
+# Sichuan Secedes!
+event = {
+	id = 133011024
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011024_NAME
+	desc = EVT1914_133011024_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Sichuan Lujun" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "Congqing Mingbin" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Sichuan Lujun" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "Congqing Mingbin" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10071 } } type = remove_division which = 22000 value = 10071 }
+		command = { trigger = { division_exists = { type = 22000 id = 10081 } } type = remove_division which = 22000 value = 10081 }
+	}
+
+}
+
+# Guangdong Secedes!
+event = {
+	id = 133011025
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011025_NAME
+	desc = EVT1914_133011025_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "1 GD Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "2 GD Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "3 GD Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "4 GD Division" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "1 GD Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "2 GD Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "3 GD Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "4 GD Division" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10201 } } type = remove_division which = 22000 value = 10201 }
+		command = { trigger = { division_exists = { type = 22000 id = 10202 } } type = remove_division which = 22000 value = 10202 }
+		command = { trigger = { division_exists = { type = 22000 id = 10203 } } type = remove_division which = 22000 value = 10203 }
+		command = { trigger = { division_exists = { type = 22000 id = 10204 } } type = remove_division which = 22000 value = 10204 }
+	}
+
+}
+
+# Yunnan Secedes!
+event = {
+	id = 133011026
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011026_NAME
+	desc = EVT1914_133011026_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "1 YQ Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "2 YQ Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "3 YQ Division" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "1 YQ Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "2 YQ Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "3 YQ Division" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10171 } } type = remove_division which = 22000 value = 10171 }
+		command = { trigger = { division_exists = { type = 22000 id = 10172 } } type = remove_division which = 22000 value = 10172 }
+		command = { trigger = { division_exists = { type = 22000 id = 10173 } } type = remove_division which = 22000 value = 10173 }
+	}
+
+}
+
+# Xikang Secedes!
+event = {
+	id = 133011027
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011027_NAME
+	desc = EVT1914_133011027_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "4 YQ Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "5 YQ Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "6 YQ Division" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "4 YQ Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "5 YQ Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "6 YQ Division" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10181 } } type = remove_division which = 22000 value = 10181 }
+		command = { trigger = { division_exists = { type = 22000 id = 10182 } } type = remove_division which = 22000 value = 10182 }
+		command = { trigger = { division_exists = { type = 22000 id = 10183 } } type = remove_division which = 22000 value = 10183 }
+	}
+
+}
+
+# Guizhou Secedes!
+event = {
+	id = 133011028
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011028_NAME
+	desc = EVT1914_133011028_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Guizhou Lujun" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Guizhou Lujun" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10131 } } type = remove_division which = 22000 value = 10131 }
+	}
+
+}
+
+# Hunan Secedes!
+event = {
+	id = 133011029
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011029_NAME
+	desc = EVT1914_133011029_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Hunan Lujun" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Hunan Lujun" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10111 } } type = remove_division which = 22000 value = 10111 }
+	}
+
+}
+
+# Jiangxi Secedes!
+event = {
+	id = 133011030
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011030_NAME
+	desc = EVT1914_133011030_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Jiangxi Lujun" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Jiangxi Lujun" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10041 } } type = remove_division which = 22000 value = 10041 }
+	}
+
+}
+
+# Jiangsu Secedes!
+event = {
+	id = 133011031
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011031_NAME
+	desc = EVT1914_133011031_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Jiangsu Lujun" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "Shanghai Mingbin" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Jiangsu Lujun" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "Shanghai Mingbin" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10021 } } type = remove_division which = 22000 value = 10021 }
+		command = { trigger = { division_exists = { type = 22000 id = 10031 } } type = remove_division which = 22000 value = 10031 }
+	}
+
+}
+
+# Shanxi Secedes!
+event = {
+	id = 133011032
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011032_NAME
+	desc = EVT1914_133011032_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Shanxi Mingbin" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Shanxi Mingbin" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10141 } } type = remove_division which = 22000 value = 10141 }
+	}
+
+}
+
+# San Ma Secedes!
+event = {
+	id = 133011033
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011033_NAME
+	desc = EVT1914_133011033_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "1 SM Guyongbin" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "2 SM Guyongbin" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "3 SM Guyongbin" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "4 SM Guyongbin" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "5 SM Guyongbin" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "6 SM Guyongbin" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "1 SM Guyongbin" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "2 SM Guyongbin" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "3 SM Guyongbin" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "4 SM Guyongbin" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "5 SM Guyongbin" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "6 SM Guyongbin" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10211 } } type = remove_division which = 22000 value = 10211 }
+		command = { trigger = { division_exists = { type = 22000 id = 10212 } } type = remove_division which = 22000 value = 10212 }
+		command = { trigger = { division_exists = { type = 22000 id = 10213 } } type = remove_division which = 22000 value = 10213 }
+		command = { trigger = { division_exists = { type = 22000 id = 10221 } } type = remove_division which = 22000 value = 10221 }
+		command = { trigger = { division_exists = { type = 22000 id = 10222 } } type = remove_division which = 22000 value = 10222 }
+		command = { trigger = { division_exists = { type = 22000 id = 10223 } } type = remove_division which = 22000 value = 10223 }
+	}
+
+}
+
+# Xinjiang Secedes!
+event = {
+	id = 133011034
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011034_NAME
+	desc = EVT1914_133011034_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "1 Yuangzhenjun" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "2 Yuangzhenjun" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "1 Yuangzhenjun" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "2 Yuangzhenjun" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10231 } } type = remove_division which = 22000 value = 10231 }
+		command = { trigger = { division_exists = { type = 22000 id = 10232 } } type = remove_division which = 22000 value = 10232 }
+	}
+
+}
+
+# Anhui Secedes!
+event = {
+	id = 133011035
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011035_NAME
+	desc = EVT1914_133011035_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "1st SC Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "2nd SC Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "3rd SC Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "4th SC Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "5th SC Division" value = U74 }
+		command = { trigger = { country = U74 } type = remove_division which = "6th SC Division" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "1st SC Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "2nd SC Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "3rd SC Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "4th SC Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "5th SC Division" value = UCH }
+		command = { trigger = { country = UCH } type = remove_division which = "6th SC Division" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10051 } } type = remove_division which = 22000 value = 10051 }
+		command = { trigger = { division_exists = { type = 22000 id = 10052 } } type = remove_division which = 22000 value = 10052 }
+		command = { trigger = { division_exists = { type = 22000 id = 10053 } } type = remove_division which = 22000 value = 10053 }
+		command = { trigger = { division_exists = { type = 22000 id = 10054 } } type = remove_division which = 22000 value = 10054 }
+		command = { trigger = { division_exists = { type = 22000 id = 10055 } } type = remove_division which = 22000 value = 10055 }
+		command = { trigger = { division_exists = { type = 22000 id = 10056 } } type = remove_division which = 22000 value = 10056 }
+	}
+
+}
+
+# Fujian Secedes!
+event = {
+	id = 133011036
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011036_NAME
+	desc = EVT1914_133011036_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Fujian Mingbin" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Fujian Mingbin" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10101 } } type = remove_division which = 22000 value = 10101 }
+	}
+
+}
+
+# Zhejiang Secedes!
+event = {
+	id = 133011037
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011037_NAME
+	desc = EVT1914_133011037_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Zhejiang Lujun" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Zhejiang Lujun" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10061 } } type = remove_division which = 22000 value = 10061 }
+	}
+
+}
+
+# Hubei Secedes!
+event = {
+	id = 133011038
+	persistent = yes
+	random = no
+	
+	#Triggered
+	
+	name = EVT1914_133011038_NAME
+	desc = EVT1914_133011038_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		trigger = {
+			or = {
+				country = U74
+				country = UCH
+			}
+		}
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = U74 } type = remove_division which = "Hubei Lujun" value = U74 }
+		command = { trigger = { country = UCH } type = remove_division which = "Hubei Lujun" value = UCH }
+		command = { trigger = { division_exists = { type = 22000 id = 10011 } } type = remove_division which = 22000 value = 10011 }
+	}
+
+}

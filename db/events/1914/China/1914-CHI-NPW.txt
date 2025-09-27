@@ -1,0 +1,975 @@
+# National Protection War - Events
+# By Limith
+#-Defections------------------------------------
+# CHI 133011051 Hunan Joines the NPA!
+# CHI 133011052 Jiangxi Joins the NPA!
+# CYN 133011053 Jiangsu Joins the AHC!
+# CYN 133011054 Shanxi Joins the AHC!
+# CHI 133011055 Jiangsu Joins CHI!
+# CHI 133011057 Anhui Joins CHI!
+# CHI 133011058 Fujian Joins the NPA!
+# CHI 133011059 Zhejiang Joins CHI!
+# CHI 133011060 Hubei Joins CHI!
+# CHI 133011061 Guizhou Joins CHI!
+# CHI 133011062 Sichaun Joins CHI!
+#-Anhui Demands---------------------------------
+# U74 133011018 Anhui Clique Rises (MAN used Temporarily)
+# MAN 133011019 Anhui Clique Rises (MAN -> CYN)
+# UCH 133011300 Anhui Demands
+# CYN 133011301 Anhui Demands(Rejected)
+# CYN 133011336 Anhui Demands(Rejected) Helper
+#-----------------------------------------------
+
+##############
+# Defections #
+##############
+
+# Hunan Joines the NPA!
+event = {
+	id = 133011051
+	random = no
+	country = CHI
+	
+	trigger = {
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Hunan" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Hunan" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 3
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+
+	name = EVT1914_133011051_NAME
+	desc = EVT1914_133011051_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Hunan" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011029 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011029 when = 1 }
+		command = { type = add_corps which = "Hunan Difangjun" value = land where = 1308 }
+		command = { trigger = { division_exists = { type = 22003 id = 10111 } } type = activate_division which = 22003 value = 10111 when = 1 where = 1308 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10111 } } } type = add_division which = "Hunan Lujun" value = infantry when = 2 }
+	}
+	
+}
+
+# Jiangxi Joins the NPA!
+event = {
+	id = 133011052
+	random = no
+	country = CHI
+	
+	trigger = {
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Jiangxi" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Jiangxi" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 3
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011052_NAME
+	desc = EVT1914_133011052_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Jiangxi" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011030 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011030 when = 1 }
+		command = { type = add_corps which = "Jiangxi Difangjun" value = land where = 1352 }
+		command = { trigger = { division_exists = { type = 22003 id = 10041 } } type = activate_division which = 22003 value = 10041 when = 1 where = 1352 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10041 } } } type = add_division which = "Jiangxi Lujun" value = infantry when = 1 }
+		
+	}
+	
+}
+
+# Jiangsu Joins the AHC!
+event = {
+	id = 133011053
+	random = no
+	country = CYN
+	
+	trigger = {
+		event = 133011018
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Jiangsu" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Jiangsu" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 2
+		}
+		or = {
+			and = {
+				war = { country = CYN country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CYN country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011053_NAME
+	desc = EVT1914_133011053_DESC
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1915 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CYN value = "Jiangsu" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011030 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011030 when = 1 }
+		#Jiangsu's Army was not loyal to Anhui.
+	}
+	
+}
+
+# Shanxi Joins the AHC!
+event = {
+	id = 133011054
+	random = no
+	country = CYN
+	
+	trigger = {
+		event = 133011018
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Shanxi" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Shanxi" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 5
+		}
+		or = {
+			and = {
+				war = { country = CYN country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CYN country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011054_NAME
+	desc = EVT1914_133011054_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1915 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CYN value = "Shanxi" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011032 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011032 when = 1 }
+		#Shanxi's Army was not loyal to Anhui
+	}
+	
+}
+
+# Jiangsu Joins CHI!
+event = {
+	id = 133011055
+	random = no
+	country = CHI
+	
+	trigger = {
+		event = 133011010
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Jiangsu" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Jiangsu" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 5
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011053_NAME
+	desc = EVT1914_133011053_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Jiangsu" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011030 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011030 when = 1 }
+		command = { type = add_corps which = "Jiangsu Huai-jun" value = land where = 1337 }
+		command = { trigger = { division_exists = { type = 22003 id = 10021 } } type = activate_division which = 22003 value = 10021 when = 1 where = 1337 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10021 } } } type = add_division which = "Jiangsu Lujun" value = infantry when = 1 }
+		command = { type = add_corps which = "Shanghai Mingzhongjituan" value = land where = 1338 }
+		command = { trigger = { division_exists = { type = 22003 id = 10031 } } type = activate_division which = 22003 value = 10031 when = 1 where = 1338 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10031 } } } type = add_division which = "Shanghai Mingbin" value = militia when = 0 }
+	}
+	
+}
+
+# Anhui Joins CHI!
+event = {
+	id = 133011057
+	random = no
+	country = CHI
+	
+	trigger = {
+		event = 133011010
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Anhui" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Anhui" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 1
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011057_NAME
+	desc = EVT1914_133011057_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Anhui" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011035 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011035 when = 1 }
+		#Anhui army was not loyal to CHI
+	}
+	
+}
+
+# Fujian Joins the NPA!
+event = {
+	id = 133011058
+	random = no
+	country = CHI
+	
+	trigger = {
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Fujian" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Fujian" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 2
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011058_NAME
+	desc = EVT1914_133011058_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Fujian" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011036 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011036 when = 1 }
+		command = { type = add_corps which = "Fujian Difangjun" value = land where = 1360 }
+		command = { trigger = { division_exists = { type = 22003 id = 10101 } } type = activate_division which = 22003 value = 10101 when = 1 where = 1360 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10101 } } } type = add_division which = "Fujian Mingbin" value = militia when = 0 }
+	}
+	
+}
+
+# Zhejiang Joins CHI!
+event = {
+	id = 133011059
+	random = no
+	country = CHI
+
+	trigger = {
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Zhejiang" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Zhejiang" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 3
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+
+	name = EVT1914_133011059_NAME
+	desc = EVT1914_133011059_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Zhejiang" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011037 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011037 when = 1 }
+		command = { type = add_corps which = "Zhejiang Difangjun" value = land where = 1345 }
+		command = { trigger = { division_exists = { type = 22003 id = 10061 } } type = activate_division which = 22003 value = 10061 when = 1 where = 1345 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10061 } } } type = add_division which = "Zhejiang Lujun" value = infantry when = 1 }
+	}
+	
+}
+
+# Hubei Joins CHI!
+event = {
+	id = 133011060
+	random = no
+	country = CHI
+	
+	trigger = {
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Hubei" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Hubei" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 3
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011060_NAME
+	desc = EVT1914_133011060_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Hubei" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011038 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011038 when = 1 }
+		command = { type = add_corps which = "Hubei Huai-jun" value = land where = 1317 }
+		command = { trigger = { division_exists = { type = 22003 id = 10011 } } type = activate_division which = 22003 value = 10011 when = 1 where = 1317 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10011 } } } type = add_division which = "Hubei Lujun" value = infantry when = 1 }
+	}
+	
+}
+
+# Guizhou Joins CHI!
+event = {
+	id =	133011061
+	random = no
+	country = CHI
+	
+	trigger = {
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Guizhou" country = U74 data = 1 value = 70 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Guizhou" country = UCH data = 1 value = 70 }
+					}
+					exists = UCH
+				}
+			}
+			random = 10
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011061_NAME
+	desc = EVT1914_133011061_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Guizhou" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011028 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011028 when = 1 }
+		command = { type = add_corps which = "Guizhou Difangjun" value = land where = 1305 }
+		command = { trigger = { division_exists = { type = 22003 id = 10131 } } type = activate_division which = 22003 value = 10131 when = 1 where = 1305 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10131 } } } type = add_division which = "Guizhou Lujun" value = infantry when = 2 }
+	}
+	
+}
+
+# Sichuan Joins CHI!
+event = {
+	id =	133011062
+	random = no
+	country = CHI
+	
+	trigger = {
+		or = {
+			or = {
+				and = {
+					not = {
+						area = { area = "Sichuan" country = U74 data = 1 value = 20 }
+					}
+					exists = U74
+				}
+				and = {
+					not = {
+						area = { area = "Sichuan" country = UCH data = 1 value = 20 }
+					}
+					exists = UCH
+				}
+			}
+		}
+		or = {
+			and = {
+				war = { country = CHI country = U74 }
+				exists = U74
+				not = { exists = UCH }
+			}
+			and = {
+				war = { country = CHI country = UCH }
+				exists = UCH
+				not = { exists = U74 }
+			}
+		}
+	}
+	
+	name = EVT1914_133011062_NAME
+	desc = EVT1914_133011062_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_HURRAH
+		command = { type = secedearea which = CHI value = "Sichuan" when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011024 when = 1 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011024 when = 1 }
+		command = { type = add_corps which = "Chongqing Mingzhongjituan" value = land where = 1299 }
+		command = { trigger = { division_exists = { type = 22003 id = 10081 } } type = activate_division which = 22003 value = 10081 when = 1 where = 1299 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10081 } } } type = add_division which = "Congqing Mingbin" value = militia when = 0 }
+	}
+	
+}
+
+#################
+# Anhui Demands #
+#################
+
+# Anhui Clique Rises
+# TODO: Remove previously loyal leaders and ministers.
+event = {
+	id = 133011018
+	random = no
+	country = U74
+	
+	trigger = {
+		event = 133011013
+		or = {
+			area = { area = "Anhui" country = U74 data = 1 value = 70 }
+			not = { area = { area = "Anhui" country = CHI data = 1 value = 30 } }
+		}
+		not = {
+			region = { region = "China" country = U74 data = 1 value = 50 }
+		}
+		war = { country = CHI country = U74 }
+		not = { exists = CYN }
+		exists = U74
+		not = { exists = UCH }
+		or = {
+			not = { 
+				army = 20
+			}
+			dissent = 30
+		}
+		dissent = 10
+		not = {
+			event = 133011402
+		}
+	}
+	
+	name = EVT1914_133011018_NAME
+	desc = EVT1914_133011018_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1915 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = independence which = MAN value = 1}
+		command = { type = name where = MAN which = "CYN_AHC" }
+		command = { type = end_mastery which = MAN }
+		command = { type = secedearea which = MAN value = "Anhui" when = 2 }
+		command = { type = trigger which = 133011019 }
+		command = { type = dissent value = 5 }
+		command = { type = remove_division which = "1st SC Division" value = U74 }
+		command = { type = remove_division which = "2nd SC Division" value = U74 }
+		command = { type = remove_division which = "3rd SC Division" value = U74 }
+		command = { type = remove_division which = "4th SC Division" value = U74 }
+		command = { type = remove_division which = "5th SC Division" value = U74 }
+		command = { type = remove_division which = "6th SC Division" value = U74 }
+	}
+	
+}
+
+# Anhui Clique Rises
+event = {
+	id = 133011019
+	random = no
+	country = MAN
+	
+	#Triggered
+	
+	name = EVT1914_133011018_NAME
+	desc = EVT1914_133011018_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = country which = CYN }
+		command = { type = flag_ext where = CYN which = "_AHC" }
+		command = { type = name where = CYN which = CYN_AHC }
+		command = { type = secedearea which = U74 value = "Jilin" when = 1 }
+		command = { type = secedearea which = U74 value = "Heilongjiang" when = 1 }
+		command = { type = secedearea which = U74 value = "Rehe" when = 1 }
+		command = { type = secedearea which = U74 value = "Liaoning" when = 1 }
+		command = { type = alliance which = U74 when = 1 }
+		command = { type = addcore which = 1344 }
+		command = { type = addcore which = 1342 }
+		command = { type = addcore which = 1340 }
+		command = { type = addcore which = 1341 }
+		command = { type = addcore which = 1343 }
+		command = { type = addcore which = 1339 }
+		command = { type = removecore which = 1413 }
+		command = { type = removecore which = 1304 }
+		command = { type = removecore which = 1302 }
+		command = { type = removecore which = 1296 }
+		command = { type = removecore which = 1297 }
+		command = { type = removecore which = 1298 }
+		command = { type = removecore which = 1293 }
+		command = { type = removecore which = 1292 }
+		command = { type = removecore which = 1389 }
+		command = { type = removecore which = 1291 }
+		command = { type = removecore which = 1384 }
+		command = { type = removecore which = 1385 }
+		command = { type = removecore which = 1386 }
+		command = { type = removecore which = 1387 }
+		command = { type = removecore which = 1388 }
+		command = { type = removecore which = 1299 }
+		command = { type = removecore which = 1300 }
+		command = { type = removecore which = 1290 }
+		command = { type = removecore which = 1294 }
+		command = { type = removecore which = 1390 }
+		command = { type = add_corps which = "Second Corps" value = land where = 1340 }
+		command = { type = add_division which = "1st SC Division" value = infantry when = 2 }
+		command = { type = add_division which = "2nd SC Division" value = infantry when = 2 }
+		command = { type = add_division which = "3rd SC Division" value = infantry when = 2 }
+		command = { type = add_division which = "4th SC Division" value = infantry when = 2 }
+		command = { type = add_division which = "5th SC Division" value = infantry when = 2 }
+		command = { type = add_division which = "6th SC Division" value = infantry when = 2 }
+			command = { type = wakeminister which = 615200 }
+		command = { type = wakeminister which = 615201 }
+		command = { type = wakeminister which = 615202 }
+		command = { type = wakeminister which = 615203 }
+		command = { type = wakeminister which = 615204 }
+		command = { type = wakeminister which = 615205 }
+		command = { type = wakeminister which = 615206 }
+		command = { type = wakeminister which = 615207 }
+		command = { type = wakeminister which = 615208 }
+		command = { type = wakeminister which = 615209 }
+		command = { type = wakeminister which = 615210 }
+		command = { type = wakeminister which = 615211 }
+		command = { type = wakeminister which = 615212 }
+		command = { type = wakeminister which = 615213 }
+		command = { type = wakeminister which = 615214 }
+		command = { type = wakeminister which = 615215 }
+		command = { type = wakeminister which = 615216 }
+		command = { type = wakeminister which = 615217 }
+		command = { type = wakeminister which = 615218 }
+		command = { type = wakeminister which = 615219 }
+		command = { type = wakeminister which = 615220 }
+		command = { type = wakeminister which = 615221 }
+		command = { type = sleepminister which = 615100 }
+		command = { type = sleepminister which = 615101 }
+		command = { type = sleepminister which = 615102 }
+		command = { type = sleepminister which = 615103 }
+		command = { type = sleepminister which = 615104 }
+		command = { type = sleepminister which = 615105 }
+		command = { type = sleepminister which = 615106 }
+		command = { type = sleepminister which = 615107 }
+		command = { type = sleepminister which = 615108 }
+		command = { type = sleepminister which = 615109 }
+		command = { type = sleepminister which = 615110 }
+		command = { type = sleepminister which = 615111 }
+		command = { type = sleepminister which = 615112 }
+		command = { type = sleepminister which = 615113 }
+		command = { type = sleepminister which = 615114 }
+		command = { type = sleepminister which = 615115 }
+		command = { type = sleepminister which = 615116 }
+		command = { type = sleepminister which = 615117 }
+		command = { type = sleepminister which = 615118 }
+		command = { type = sleepminister which = 615119 }
+		command = { type = sleepminister which = 615120 }
+		command = { type = sleepminister which = 615121 }
+		command = { type = sleepminister which = 615122 }
+		command = { type = sleepminister which = 615123 }
+		command = { type = sleepminister which = 615124 }
+		command = { type = sleepminister which = 615125 }
+			command = { type = wakeminister which = 615200 } # Just in case one of the sleeps kills a valid minister.
+		command = { type = wakeminister which = 615201 }
+		command = { type = wakeminister which = 615202 }
+		command = { type = wakeminister which = 615203 }
+		command = { type = wakeminister which = 615204 }
+		command = { type = wakeminister which = 615205 }
+		command = { type = wakeminister which = 615206 }
+		command = { type = wakeminister which = 615207 }
+		command = { type = wakeminister which = 615208 }
+		command = { type = wakeminister which = 615209 }
+		command = { type = wakeminister which = 615210 }
+		command = { type = wakeminister which = 615211 }
+		command = { type = wakeminister which = 615212 }
+		command = { type = wakeminister which = 615213 }
+		command = { type = wakeminister which = 615214 }
+		command = { type = wakeminister which = 615215 }
+		command = { type = wakeminister which = 615216 }
+		command = { type = wakeminister which = 615217 }
+		command = { type = wakeminister which = 615218 }
+		command = { type = wakeminister which = 615219 }
+		command = { type = wakeminister which = 615220 }
+		command = { type = wakeminister which = 615221 }
+		command = { type = headofstate which = 615200 } 
+		command = { type = headofgovernment which = 615201 }
+		command = { type = trigger which = 133011300 }
+	}
+	
+}
+
+# Anhui Demands
+event = {
+	id = 133011300
+	random = no
+	country = U74
+	
+	#Triggered
+
+	name = EVT1914_133011300_NAME
+	desc = EVT1914_133011300_DESC
+
+	picture = "ccip_duan"
+	style = 2
+	
+	action = {
+		ai_chance = 100
+		name = ACTION_NAME_ACCEPT
+		command = { type = sleepevent which = 133011301 }
+		command = { type = chiefofstaff which = 1185123 }
+		command = { type = chiefofarmy which = 1185122 }
+		command = { type = headofstate which = 1185124 }
+		command = { type = headofgovernment which = 1185117 }
+	}
+	
+	action = {
+		ai_chance = 0
+		name = ACTION_NAME_NEVER
+		command = { type = dissent value = 5 }
+		command = { type = leave_alliance when = 0 }
+		command = { type = belligerence value = -30 }
+		command = { type = sleepminister which = 1185122 }
+		command = { type = sleepminister which = 1185123 }
+		command = { type = sleepminister which = 1185124 }
+		command = { type = sleepminister which = 1185110 }
+		command = { type = sleepminister which = 1185111 }
+		command = { type = sleepminister which = 1185108 }
+		command = { type = sleepminister which = 1185106 }
+		command = { type = sleepminister which = 1185107 }
+		command = { type = sleepminister which = 1185109 }
+		command = { type = event where = CYN which = 133011301 when = 1 }
+	}
+}
+
+# Anhui Demands (Rejected)
+event = {
+	id = 133011301
+	random = no
+	country = CYN
+	
+	#Triggered
+
+	name = EVT1914_133011301_NAME
+	desc = EVT1914_133011301_DESC
+
+	#picture = "ccip_duan"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_WAR
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = event which = 133011336 where = CYN when = 0 }
+	}
+	
+}
+
+#Anhui Demands(Rejected) Helper
+event = {
+	id = 133011336
+	random = no
+	country = CYN
+	
+	#Triggered
+
+	name = EVT1914_133011301_NAME
+	desc = EVT1914_133011301_DESC
+
+	#picture = "ccip_duan"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_WAR
+		command = { type = war which = U74 }
+		#command = { type = belligerence value = -30 }
+	}
+	
+}

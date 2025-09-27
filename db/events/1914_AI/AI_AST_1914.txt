@@ -1,0 +1,29 @@
+#########################################################################
+# 	AST enters the Great War
+#	
+#########################################################################
+event = {
+	id = 3046501
+	random = no 
+	country = AST
+	persistent = yes
+	trigger = {
+					ai = yes
+
+					war = { country = AST country = U08 } 
+					NOT = { flag = AST_1914 }
+				}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 29 month = 5 year = 1914 }
+	offset = 1 # Check for trigger conditions day
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = { #
+		command = { type = setflag which = AST_1914 }
+		command = { type = ai which = "switch/AST_1914_WarSetup.ai" }
+		
+	}
+}

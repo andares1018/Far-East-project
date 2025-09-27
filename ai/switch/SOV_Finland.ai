@@ -1,0 +1,78 @@
+# Soviet Finland AI File by Lothos
+
+max_front_ratio = 1.8
+max_garrison_prop = 0.80
+min_garrison_prop = 0.50
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = no
+	home_multiplier 		= 1.0
+	overseas_multiplier		= 0.5
+	home_peace_cap 			= 20
+	war_zone_odds 			= 5.0
+	key_point_prio_mult		= 0.3
+	revolt_risk_mult		= 0.0
+
+	# PRIORITIES:
+	beach				= 20	# Beach level 2
+	capital				= 40	# Our capital
+	human_border		= 0		# Ignored for allied human players
+	war_target			= 50	# The next country targeted for attack by this AI
+	reserves 			= 20	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0		# If we are neutral, countries with claims on us get this
+	unstable_border		= 0		# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		MON = -1
+		TAN = -1
+		SIK = -1
+		CHI = -1
+		AFG = -1
+		PER = 10
+		TUR = 20
+		FIN = 50
+		ROM = 30
+		POL = 20
+		GER = 75
+		ITA = 50
+		JAP = 1
+		MAN = 1
+		SWE = 20
+		NOR = 20
+		HUN = 15
+		SLO = 15
+		BUL = 15
+	}
+	province_priorities = {
+		553  = 50  #Leningrad
+		617  = 50  #Kiev
+		627  = 50  #Dnepropetrovsk
+		663  = 50  #Stalingrad
+		636  = 50  #Kharkov
+		587  = 50  #Bryansk
+		1191  = 50  #Vladivostock
+		535  = 50  #Murmansk
+		566   = 20  # Pskov
+		597   = 20
+		
+		# Winter war buildup
+		539  = 35
+		537  = 35
+		536  = 35
+	}
+	area_multiplier = {
+		535  = 1.5  #Murmansk
+		553  = 1.5  #Leningrad
+		
+		# Winter war buildup
+		539  = 1.5
+		537  = 1.5
+		536  = 1.5
+	}
+}

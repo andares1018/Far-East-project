@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-FIGHTER A-FIRE C-JAP L-2 D-SW.bmp"
+	Origin = { x = 115 y = 105 }
+	Frames = 18
+	Speed = 5
+	Palette = "Nakajima A2N DS"
+}

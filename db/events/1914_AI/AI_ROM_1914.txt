@@ -1,0 +1,41 @@
+
+########################################################## 
+###############################################
+## Romanian AI Files
+## Jaegerfeld 2011
+
+## Bulgaria enters the war aside the Entente 
+
+
+event = {
+	id = 3023501
+	random = no
+	country = ROM
+	persistent = yes		
+	
+	trigger = {
+		ai = yes
+		
+		NOT = { flag = ROM_1914StartupDone }
+		war = { country = ROM country = U09 }
+		NOT = { war = { country = ROM country = RUS } }	
+		NOT = { war = { country = ROM country = FRA } }			
+		
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+		{
+			ai_chance = 60
+			
+			command = { type = setflag which = ROM_1914StartupDone }
+			command = { type = ai which = "switch/ROM_1914Startup.ai" }
+
+		}
+}

@@ -1,0 +1,1728 @@
+###
+###  French events (FRA - 002)
+###
+### By Rhysaxiel
+###
+### 2002500  FRA  Mobilisation
+### 2002501  FRA  German demands neutrality
+### 2002502  FRA  The Treaty of London (Italy)
+### 2002503  FRA  The Treaty of London is signed !
+### 2002504  FRA  Hungary is invaded
+### 2002505  FRA  Romania joins the Entente
+### 2002506  FRA  Galicia is invaded !
+### 2002507  FRA  Ottoman Empire has fallen
+### 2002508  FRA  Negotiation with Greece
+### 2002509  FRA  Treaty of London signed ! (Greece)
+### 2002510  FRA  Plans against Ottoman Empire, french participation
+### 2002511  FRA  The Gounalis plan (Bulgaria neutral)
+### 2002512  FRA  The Gounalis plan (Bulgaria not neutral)
+### 2002513  FRA  Asks for demobilization
+### 2002514  FRA  Greece demobilizes !
+### 2002516  FRA  Venizelos leaves government
+### 2002517  FRA  Venizelos is back
+### 2002518  FRA  Serb army evacuates through Albania !
+### 2002519  FRA  Greece proclaims the annexation of Northern Epirus
+### 2002520  FRA  Greece grants Bulgaria military access
+### 2002521  FRA  Athens on fire !
+### 2002522  FRA  Renewed call for demobilization
+### 2002523  FRA  Greece accepts our demands
+### 2002524  FRA  Les Vêpres Grecques
+### 2002533  FRA  Ultimatum on Greece
+### 2002525  FRA  Alsace-Moselle is still in German hands 
+### 2002526  FRA  Partial success in Alsace-Moselle 
+### 2002527  FRA  Complete success in Alsace-Moselle
+### 2002528  FRA  The Fall of Paris (1914 only)
+### 2002529  FRA  Military defeat (1915 onwards)
+### 2002535  FRA  Paris is lost !
+### 2002536  FRA  Nancy is lost !
+### 2002537  FRA  Lille is lost !
+### 2002538  FRA  Reims is lost !
+### 2002539  FRA  Calais is lost !
+### 2002540  FRA  Orléans is lost !
+### 2002541  FRA  Caen is lost !
+### 2002542  FRA  Rennes is lost !
+### 2002543  FRA  Lyon is lost !
+### 2002544  FRA  Limoges is lost !
+### 2002545  FRA  Bordeaux is lost !
+### 2002546  FRA  Toulouse is lost !
+### 2002547  FRA  Marseille is lost !
+### 2002548  FRA  Russia opens secret negotiations
+### 2002549  FRA  aurès Assassination
+### 2002550  FRA  Jissolve Viviani Government
+### 2002552  BEL  Belgium moves its capital to the Kongo when nearly conquered
+### 2002554  FRA  Appoint Foch as Supreme Commander
+### 2002555  FRA  Appoint Clémenceau
+### 2002556  FRA  The Franco-Russian Alliance
+### 2002557  FRA  The Franco-Russian Alliance
+### 2002558  FRA  Armistice with Germany
+### 2002559  FRA  Armistice with Italy
+
+event = {
+	id = 2002500	# Mobilisation
+	country = FRA
+
+	trigger = {
+		NOT ={
+			war = { country = FRA country = U08 }
+			event = 2002528 #FRA  The Fall of Paris (1914 only)
+			event = 2002529 #FRA  Military defeat (1915 onwards)
+			event = 2191532 #U08  Fall of Berlin '14
+			event = 2191514 #U08  Military defeat			
+			event = 2002500 #FRA  Mobilisation
+			event = 2104532 #RUS  Secretely mobilize (1915 Operation Belgrade)
+		}
+		war = { country = RUS  country = U08 }
+		OR ={ 
+			event = 2191503 #U08 War on Russia ?
+			alliance = { country = U08 country = U09 }
+		}
+	}
+   
+	name = "EVT1914_2002500_NAME"
+	desc = "EVT1914_2002500_DESC" 
+	style = 2
+	picture = "news_paper" #"Mobilisation_1914"
+
+	date = { day = 0 month = august year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = june year = 1916 }
+	
+	action = {
+		name = "EVT1914_2002500_ACTIONA" # Mobilize
+		command = { type = belligerence value = 5 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { trigger = { alliance = { country = U08 country = U09 } } type = alliance_leader which = U09 where = 1 } #Austria-Hungary temporary leader of Central Powers
+		command = { type = trigger which = 2191504 } # U08 "Ask France for neutrality"
+	}
+}
+event = {
+	id = 2002501	# German demands neutrality
+	country = FRA
+
+	#triggered by U08 2191504
+   
+	name = "EVT1914_2002501_NAME"
+	desc = "EVT1914_2002501_DESC" 
+	style = 2
+	#picture = "news_paper" #"Mobilisation_1914"
+
+	action = {
+		name = "EVT1914_2002501_ACTIONA" # Why not the whole country ?!
+		command = { type = belligerence value = 5 }
+		command = { trigger = { NOT = { ai = U08 } } type = trigger which = 2191505 } # U08 is human-controlled	
+	}
+	#action B : Remain neutral (isola ++)
+}
+event = {
+	id = 2002502	# The Treaty of London (Italy)
+	country = FRA
+
+	decision = {
+		exists = ITA
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = ITA country = U09 } 
+			alliance = { country = ITA country = FRA } 
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+			event = 2006515 #ITA Military Defeat
+		}
+		year = 1915 # we can defeat'em before XMas !	
+	}
+	
+	decision_trigger = {
+		relation = { which = ITA value = 50 }  
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies
+	}
+	trigger = { 
+		random = 10
+		exists = ITA
+		year = 1915 # we can defeat'em before XMas !	
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = ITA country = U09 } 
+			alliance = { country = ITA country = FRA }
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+			event = 2006515 #ITA Military Defeat			
+		}
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies
+	}
+   
+	name = "EVT1914_2002502_NAME"
+	desc = "EVT1914_2002502_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = february year = 1915 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "EVT1914_2002502_ACTIONA" # Propose treaty !
+		ai_chance = 100
+		command = { type = trigger which = 2006502 }
+	}
+	action = { trigger = { ai = yes }
+		name = "EVT1914_2002502_ACTIONB" # Don't propose treaty !
+		ai_chance = 0
+		command = {  }
+	}
+}
+event = {
+	id = 2002503	# The Treaty of London is signed !
+	country = FRA
+
+	#triggered by ITA 2006502
+   
+	name = "EVT1914_2002503_NAME"
+	desc = "EVT1914_2002503_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = relation which = ITA value = 50 }
+	}
+}
+event = {
+	id = 2002504	# Hungary is invaded
+	country = FRA
+
+	decision = {
+		exists = ROM
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = FRA country = ROM }	
+			alliance = { country = RUS country = ROM }	
+			alliance = { country = U09 country = ROM }	
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)	
+			event = 2023502 #ROM Armistice ! 
+		}
+		OR = {
+			control = { province = 212 data = RUS }
+			control = { province = 213 data = RUS }
+			control = { province = 214 data = RUS }
+			control = { province = 292 data = RUS }
+      AND = {
+				year = 1916
+				month = 7
+        control = { province = 305 data = RUS } #Cahul
+				control = { province = 306 data = RUS } # Ismail
+			}
+		}
+	}
+	decision_trigger = { 
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies 
+	}
+	trigger = {
+		random = 25
+		war = { country = FRA  country = U09 }
+		exists = ROM
+		NOT = { 
+			alliance = { country = FRA country = ROM }	
+			alliance = { country = RUS country = ROM }	
+			alliance = { country = U09 country = ROM }	
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+			event = 2023502 #ROM Armistice ! 
+		}
+		OR = {
+			control = { province = 212 data = RUS }
+			control = { province = 213 data = RUS }
+			control = { province = 214 data = RUS }
+			control = { province = 292 data = RUS }
+      AND = {
+				year = 1916
+				month = 7
+        control = { province = 305 data = RUS } #Cahul
+				control = { province = 306 data = RUS } # Ismail
+			}
+		}
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies 
+	}
+   
+	name = "EVT1914_2002504_NAME"
+	desc = "EVT1914_2002504_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2002504_ACTIONA" # Propose a deal to Romania
+		ai_chance= 90
+		command = { type = trigger which = 2023500 } # ROM "Hungary is invaded !"
+	}
+	action_b = { trigger = { ai = yes }
+		name = "EVT1914_2002504_ACTIONB" # Ignore Bulgaria
+		ai_chance = 10
+		command = {  }
+	}
+}
+event = {
+	id = 2002505	# Romania joins the Entente
+	country = FRA
+
+	#triggered by ROM 2023500
+   
+	name = "EVT1914_2002505_NAME"
+	desc = "EVT1914_2002505_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = relation which = ROM value = 50 }
+	}
+}
+event = {
+	id = 2002506	# Galicia is invaded !
+	country = FRA
+
+	decision = {
+		exists = ROM
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = FRA country = ROM }
+			alliance = { country = RUS country = ROM }
+			alliance = { country = U09 country = ROM }	
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)	
+			event = 2023502 #ROM Armistice ! 			
+		}
+		OR = {
+			control = { province = 235 data = RUS }
+			control = { province = 237 data = RUS }
+			control = { province = 239 data = RUS }
+			control = { province = 240 data = RUS }
+			control = { province = 242 data = RUS }
+			control = { province = 300 data = RUS }
+		}
+	}
+	decision_trigger = {
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies 
+	}
+	trigger = {
+		random = 15
+		exists = ROM
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = FRA country = ROM }	
+			alliance = { country = RUS country = ROM }	
+			alliance = { country = U09 country = ROM }	
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+			event = 2023502 #ROM Armistice ! 
+		}
+		OR = {
+			control = { province = 235 data = RUS }
+			control = { province = 237 data = RUS }
+			control = { province = 239 data = RUS }
+			control = { province = 240 data = RUS }
+			control = { province = 242 data = RUS }
+			control = { province = 300 data = RUS }
+		}
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies 
+	}
+   
+	name = "EVT1914_2002506_NAME"
+	desc = "EVT1914_2002506_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = { trigger = { ai = yes }
+		name = "EVT1914_2002506_ACTIONA" # Propose a deal to Romania
+		ai_chance= 95
+		command = { type = trigger which = 2023501 } # ROM "Galicia is invaded !"
+	}
+	action_b = {
+		name = "EVT1914_2002506_ACTIONB" # Ignore Bulgaria
+		ai_chance = 5
+		command = {  }
+	}
+}
+event = {
+	id = 2002507	# Ottoman Empire has fallen
+	country = FRA
+
+	decision = { 
+		exists = GRE
+		war = { country = FRA  country = U09 }
+		event = 2145502 #OTT The Fall of Constantinople
+		NOT = { 
+			alliance = { country = FRA country = GRE }	
+			alliance = { country = U09 country = GRE }			
+			war = { country = FRA country = OTT } 
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		} 
+	}
+	decision_trigger = {
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies 
+	}
+	trigger = { 
+		random = 25
+		exists = GRE
+		war = { country = FRA  country = U09 }
+		event = 2145502 #OTT The Fall of Constantinople
+		NOT = { 
+			alliance = { country = FRA country = GRE }	
+			alliance = { country = U09 country = GRE }			
+			war = { country = FRA country = OTT } 
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		} 
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies 
+	}
+   
+	name = "EVT1914_2002507_NAME"
+	desc = "EVT1914_2002507_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT1914_2002507_ACTIONA" # Propose a deal to Greece
+		command = { type = trigger which = 2019502 }
+	}
+	action_b = { trigger = { ai = yes }
+		ai_chance = 5
+		name = "EVT1914_2002507_ACTIONB" # Ignore Greece
+		command = { }
+   }
+}
+event = {
+   id = 2002508	# Negotiation with Greece
+   country = FRA
+
+	decision = {
+		exists = GRE
+		event = 2104501 # RUS "AH DoW SER"
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = GRE country = U09 } 
+			alliance = { country = GRE country = FRA } 
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)		
+		}	
+	}
+	decision_trigger = { 
+		exists = SER
+		relation = { which = GRE value = 60 }
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies
+	}
+	trigger = { 
+		event = 2104501 # RUS "AH DoW SER"
+		exists = GRE
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = GRE country = U09 } 
+			alliance = { country = GRE country = FRA } 
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)	
+		}	
+		exists = SER
+		OR = {
+			random = 8  
+			AND = {
+				event = 2001506 #ENG Seizing Salonique ?
+				random = 18
+			}
+			AND = {
+				NOT = { war = { country = OTT country = FRA } }
+				random = 23
+			}
+			AND = {
+				event = 2001506 #ENG Seizing Salonique ?
+				NOT = { war = { country = OTT country = FRA } }
+				random = 32
+			}
+		}
+	}
+   
+	name = "EVT1914_2002508_NAME"
+	desc = "EVT1914_2002508_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+   action = {
+      name = "EVT1914_2002508_ACTIONA" # Propose treaty  
+	  command = { trigger = { NOT = { alliance = { country = U08 country = BUL } } } type = trigger which = 2019505 } # if BUL did not join CP, fire this event
+	  command = { trigger = { alliance = { country = U08 country = BUL } }  type = trigger which = 2019504 } # if it did, fire this one instead	  
+   }
+   action = { trigger = { ai = yes }
+      name = "EVT1914_2002508_ACTIONB" # Do not propose treaty
+	  ai_chance = 0
+      command = {  }
+   }
+}
+event = {
+	id = 2002509	# Treaty of London signed ! (Greece)
+	random = no
+	country = FRA
+
+	#triggered by GRE 2019504
+   
+	name = "EVT1914_2002509_NAME"
+	desc = "EVT1914_2002509_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = relation which = GRE value = 50 }
+	}
+}
+event = {
+	id = 2002510	# Plans against Ottoman Empire, french participation
+	country = FRA
+
+	#triggered by ENG 2001502
+   
+	name = "EVT1914_2002510_NAME"
+	desc = "EVT1914_2002510_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "EVT1914_2002510_ACTIONA" # Send a division
+		ai_chance = 75
+		command = { type = trigger which = 2001504 }
+		command = { type = manpowerpool value = -20 }
+		command = { type = supplies value = -500 }
+	}
+	action_b = {
+		name = "EVT1914_2002510_ACTIONB" # Do not send troops
+		ai_chance = 25
+		command = {  }
+	}
+}
+event = {
+	id = 2002511	# The Gounalis plan (Bulgaria neutral)
+	country = FRA
+
+	#triggered by GRE 2019509
+   
+	name = "EVT1914_2002511_NAME"
+	desc = "EVT1914_2002511_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "EVT1914_2002511_ACTIONA" # Accept the plan, forget Bulgaria
+		ai_chance = 5
+		command = { type = alliance which = GRE  when = 1 }
+	}
+	action_b = {
+		ai_chance = 95
+		name = "EVT1914_2002511_ACTIONB" # Reject the plan, Bulgaria is a priority
+		command = { type = relation which = GRE value = -10 }
+	}
+}
+event = {
+	id = 2002512	# The Gounalis plan (Bulgaria not neutral)
+	country = FRA
+
+	#triggered by GRE 2019509
+   
+	name = "EVT1914_2002511_NAME"
+	desc = "EVT1914_2002511_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "EVT1914_2002512_ACTIONA" # Accept the plan
+		ai_chance = 95
+		command = { type = alliance which = GRE  when = 1 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT1914_2002512_ACTIONB" # Reject the plan
+		command = { type = relation which = GRE value = -10 }
+   }
+}
+event = {
+	id = 2002513	# Asks for demobilization
+	country = FRA
+
+	decision = {
+		exists = GRE
+		event = 2019511
+		flag = greece_mobilized
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }		
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}
+	}
+	decision_trigger = { }
+	trigger = {
+		random = 5
+		exists = GRE
+		event = 2019511
+		flag = greece_mobilized
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }		
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}		
+	}
+   
+	name = "EVT1914_2002513_NAME"
+	desc = "EVT1914_2002513_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2002513_ACTIONA" # Ask Greece
+		ai_chance = 100
+		command = { type = relation which = GRE value = -5 }
+		command = { type = trigger which = 2019513 }
+	}
+	action_b = { trigger = { ai = yes }
+		name = "EVT1914_2002513_ACTIONB" # Do not ask Greece
+		ai_chance = 0
+		command = { type = relation which = GRE value = 5 }
+	}
+}
+event = {
+	id = 2002514	# Greece demobilizes !
+	random = no
+	country = FRA
+
+	#triggered by GRE 2019513
+   
+	name = "EVT1914_2002514_NAME"
+	desc = "EVT1914_2002514_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = relation which = GRE value = 15 }
+	}
+}
+event = {
+	id = 2002516	# Venizelos leaves government
+	random = no
+	country = FRA
+
+	#triggered by various events
+   
+	name = "EVT1914_2002516_NAME"
+	desc = "EVT1914_2002516_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = relation which = GRE value = -5 }
+	}
+}
+event = {
+	id = 2002517	# Venizelos is back
+	random = no
+	country = FRA
+
+	#triggered by various events
+   
+	name = "EVT1914_2002517_NAME"
+	desc = "EVT1914_2002517_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great !
+		command = { type = relation which = GRE value = 5 }
+	}
+}
+event = {
+	id = 2002518	# Serb army evacuates through Albania !
+	country = FRA
+
+	# triggered by ALB 2058500
+   
+	name = "EVT1914_2002518_NAME"
+	desc = "EVT1914_2002518_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" #Ok !
+		command = {  }
+	}
+}
+event = {
+	id = 2002519	# Greece proclaims the annexation of Northern Epirus
+	country = FRA
+
+	# triggered by GRE 2019516
+   
+	name = "EVT1914_2002519_NAME"
+	desc = "EVT1914_2002519_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "EVT1914_2002519_ACTIONA" # Curses
+		ai_chance = 100
+		command = { type = relation which = GRE value = -15 }
+	}
+}
+event = {
+	id = 2002520	# Greece grants Bulgaria military access
+	country = FRA
+
+	# triggered by GRE 2019517
+   
+	name = "EVT1914_2002520_NAME"
+	desc = "EVT1914_2002520_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "EVT1914_2002520_ACTIONA" # Curses
+		ai_chance = 100
+		command = { type = relation which = GRE value = -15 }
+	}
+}
+event = {
+	id = 2002521	# Athens on fire !
+	country = FRA
+
+	decision = {
+		exists = GRE
+		flag = entente_hostility
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }		
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}
+	}
+	decision_trigger = { }
+	trigger = {
+		random = 10
+		exists = GRE
+		flag = entente_hostility
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }		
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}		
+	}
+   
+	name = "EVT1914_2002521_NAME"
+	desc = "EVT1914_2002521_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2002521_ACTIONA" # Launch the operation
+		ai_chance = 100
+		command = { type = trigger which = 2019518 }
+	}
+	action_b = { trigger = { ai = yes }
+		name = "EVT1914_2002521_ACTIONB" # Abort the operation
+		ai_chance = 0
+		command = { type = relation which = GRE value = 5 }
+	}
+}
+event = {
+	id = 2002522	# Renewed call for demobilization
+	country = FRA
+
+	decision = {
+		exists = GRE
+		flag = entente_hostility
+		flag = greece_mobilized
+		event = 2019519 # GRE The Thessaloniki government
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}
+	}
+	decision_trigger = { }
+	trigger = {
+		random = 15
+		exists = GRE
+		flag = entente_hostility
+		flag = greece_mobilized
+		event = 2019519 # GRE The Thessaloniki government
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}
+	}
+   
+	name = "EVT1914_2002522_NAME"
+	desc = "EVT1914_2002522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2002522_ACTIONA" # Ask Greece
+		ai_chance = 100
+		command = { type = trigger which = 2019520  }
+	}
+	action_b = { trigger = { ai = yes }
+		name = "EVT1914_2002522_ACTIONB" # Do not ask Greece
+		ai_chance = 0
+		command = { type = relation which = GRE value = 5 }
+   }
+}
+event = {
+	id = 2002523	# Greece accepts our demands
+	country = FRA
+
+	# triggered by GRE 6027
+   
+	name = "EVT1914_2002523_NAME"
+	desc = "EVT1914_2002523_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		ai_chance = 100
+		command = { type = relation which = GRE value = 15 }
+		command = { type = secedearea which = GRE value = "Thrace" }
+		command = { type = secedearea which = GRE value = "Attica" }
+		command = { type = secedearea which = GRE value = "Greek Island" }	
+	}
+}
+event = {
+	id = 2002524	# "Les Vêpres Grecques"
+	country = FRA
+	#triggered by GRE 2019521
+   
+	name = "EVT1914_2002524_NAME"
+	desc = "EVT1914_2002524_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "EVT1914_2002524_ACTIONA" # We can't retaliate
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+	}
+}
+###### the next event is Russia's Revolution dependant (RUS 2104531 : Revolution)
+event = {
+	id = 2002533	# Ultimatum on Greece
+	country = FRA
+
+	decision = {
+		exists = GRE
+		flag = entente_hostility
+		flag = greece_mobilized
+		event = 2104531 #RUS Serbia accepts austrian ultimatum
+		event = 2002524 #FRA "Les Vêpres Grecques"
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}		
+	}
+	decision_trigger = { }
+	trigger = {
+		random = 25
+		exists = GRE
+		flag = entente_hostility
+		flag = greece_mobilized
+		event = 2104531 #RUS Serbia accepts austrian ultimatum
+		event = 2002524 #FRA "Les Vêpres Grecques"
+		war = { country = FRA  country = U09 }
+		NOT = {
+			alliance = { country = GRE country = FRA }
+			alliance = { country = GRE country = U09 }
+			event = 2002528 #FRA The Fall of Paris (1914 only)
+			event = 2002529 #FRA Military defeat (1915 onwards)
+		}
+	}
+   
+	name = "EVT1914_2002533_NAME"
+	desc = "EVT1914_2002533_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2002533_ACTIONA" # Ask for Konstantinos abdication
+		ai_chance = 100
+		command = { type = trigger which = 2019522  }
+	}
+	action_b = { trigger = { ai = yes }
+		name = "EVT1914_2002533_ACTIONB" # Leave Greece alone
+		ai_chance = 0
+		command = { type = relation which = GRE value = 5 }
+	}
+}
+###Territorial losses and operational failures
+event = {
+	id = 2002525   # Alsace-Moselle is still in German hands 
+	country = FRA
+
+	trigger = { 
+		war = {country = U08 country = FRA }
+		random = 20
+		NOT = { 
+			OR = { 
+				control = { province = 104 data = FRA } 
+				control = { province = 105 data = FRA } 
+				control = { province = 107 data = FRA } 
+				}  
+			} 
+	}
+   
+	name = "EVT1914_2002525_NAME"
+	desc = "EVT1914_2002525_DESC" 
+	style = 2
+	picture = "news_paper"
+   
+	date = { day = 0 month = november year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1914 }
+
+	action = {
+	name = "EVT1914_2002525_ACTIONA" # Damn !
+	command = { type = dissent value = 3 }
+	command = { type = sleepevent which = 2002526 }
+	command = { type = sleepevent which = 2002527 }
+	}
+}
+event = {
+	id = 2002526   # Partial success in Alsace-Moselle 
+	country = FRA
+
+	trigger = { 
+		war = {country = U08 country = FRA }
+		random = 20
+		OR = { 
+			control = { province = 104 data = FRA } 
+			control = { province = 105 data = FRA } 
+			control = { province = 107 data = FRA } 
+		} 
+		NOT = { 
+			control = { province = 104 data = FRA } 
+			control = { province = 105 data = FRA } 
+			control = { province = 107 data = FRA } 
+		} 
+	}
+   
+	name = "EVT1914_2002526_NAME"
+	desc = "EVT1914_2002526_DESC" 
+	style = 2
+	picture = "news_paper"
+   
+	date = { day = 0 month = november year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1914 }
+
+	action = {
+		name = "ACTION_NAME_OK" # We can bo better
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 2191526 } # U08 French advance in Alsace-Moselle
+	}
+}
+event = {
+	id = 2002527   # Complete success in Alsace-Moselle
+	country = FRA
+
+	trigger = { 
+		war = {country = U08 country = FRA }
+		random = 20
+		control = { province = 104 data = FRA } 
+		control = { province = 105 data = FRA } 
+		control = { province = 107 data = FRA }
+	}
+   
+	name = "EVT1914_2002527_NAME"
+	desc = "EVT1914_2002527_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = november year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1914 }
+
+	action = {
+		name = "EVT1914_2002527_ACTIONA" # On to Berlin
+		command = { type = dissent value = -4 }
+		command = { type = sleepevent which = 2002525 }
+		command = { type = sleepevent which = 2002526 }
+		command = { type = trigger which = 2191527 } # U08 French storms in Alsace-Moselle
+	}
+}
+event = {
+	id = 2002528   # The Fall of Paris (1914 only)
+	country = FRA
+
+	trigger = { 
+		war = {country = U08 country = FRA }
+		random = 25
+		control = { province = 55 data = -2 } #Paris is controlled by Enemy
+	}
+   
+	name = "EVT1914_2002528_NAME"
+	desc = "EVT1914_2002528_DESC" 
+	style = 2
+	picture = "news_paper"
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 4
+	deathdate = { day = 29 month = november year = 1914 }
+
+	action = {
+		name = "EVT1914_2002528_ACTIONA" # We have been defeated
+	command = { trigger = { 
+					participant = { country = FRA value = 1 } #part of the Entente
+					alliance = { country = FRA country = ENG } } 
+				type = alliance_leader which = ENG where = 0 } #UK becomes leader of the alliance
+	command = { trigger = { 
+					participant = { country = FRA value = 1 } #part of the Entente
+					alliance = { country = FRA country = RUS } 
+					NOT = { alliance = { country = FRA country = ENG } } } 
+				type = alliance_leader which = RUS where = 0 } #UK becomes leader of the alliance
+	command = { trigger = { 
+					participant = { country = FRA value = 1 } #part of the Entente
+					alliance = { country = FRA country = USA } 
+					NOT = { 
+						alliance = { country = FRA country = ENG }
+						alliance = { country = FRA country = RUS } } } 
+				type = alliance_leader which = USA where = 0 } #USA becomes leader of the alliance
+	command = { trigger = { 
+					participant = { country = FRA value = 1 } #part of the Entente
+					alliance = { country = FRA country = ITA } 
+					NOT = { 
+						alliance = { country = FRA country = ENG }
+						alliance = { country = FRA country = RUS } 
+						alliance = { country = FRA country = USA } } } 
+				type = alliance_leader which = ITA where = 0 } #ITA becomes leader of the alliance
+	command = { trigger = { 
+					participant = { country = FRA value = 1 } #part of the Entente
+					alliance = { country = FRA country = ROM } 
+					NOT = { 
+						alliance = { country = FRA country = ENG }
+						alliance = { country = FRA country = RUS } 
+						alliance = { country = FRA country = USA } 
+						alliance = { country = FRA country = ITA } } } 
+				type = alliance_leader which = ROM where = 0 } #ROM becomes leader of the alliance	
+	command = { trigger = { 
+					participant = { country = FRA value = 1 } #part of the Entente
+					alliance = { country = FRA country = GRE } 
+					NOT = { 
+						alliance = { country = FRA country = ENG }
+						alliance = { country = FRA country = RUS } 
+						alliance = { country = FRA country = USA } 
+						alliance = { country = FRA country = ITA } 
+						alliance = { country = FRA country = ROM } } } 
+				type = alliance_leader which = GRE where = 0 } #GRE becomes leader of the alliance		
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 2002525 }
+		command = { type = sleepevent which = 2002526 }
+		command = { type = sleepevent which = 2002527 }
+		command = { type = sleepevent which = 2002529 }
+		command = { type = trigger which = 2191552 } # U08 Armistice with France
+		command = { type = trigger which = 2192537 } # U09 Armistice with France
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+		command = { type = peace which = U09 value = 1 }
+		command = { trigger = { war = { country = OTT country = FRA } } type = peace which = OTT value = 1 }
+		command = { trigger = { war = { country = BUL country = FRA } } type = peace which = BUL value = 1 }
+		command = { type = setflag which = German_EndWWI }
+		command = { type = access which = U08 }
+		command = { trigger = { alliance = { country = U08 country = U09 } } type = access which = U09 }
+		command = { trigger = { alliance = { country = U08 country = ITA } } type = access which = ITA }
+	}
+}
+event = {
+   id = 2002529   # Military defeat (1915 onwards)
+   country = FRA
+
+	trigger = { 
+		war = { country = U08 country = FRA }
+		random = 25
+		OR = {
+			and = {
+				dissent = 35
+				not = { region = { region = "France" country = -3 data = 1 value = 50 } }
+			}
+			and = {
+				dissent = 25
+				not = { region = { region = "France" country = -3 data = 1 value = 40 } }
+			}
+			and = {
+				dissent = 15
+				not = { region = { region = "France" country = -3 data = 1 value = 30 } }
+			}
+			and = {
+				control = { province = 55 data = -2 } #Paris is controlled by Enemy
+				or = {
+					lost_VP = { value = 50 }
+					lost_IC = { value = 50 }
+				}
+			}
+			and = {
+				not = { region = { region = "France" country = -3 data = 1 value = 20 } }
+				random = 25
+			}
+			dissent = 60 # Prevent Death Spirals
+			not = { ic = 25 } # Prevent Death Spirals
+		}
+	}
+   
+	name = "EVT1914_2002529_NAME"
+	desc = "EVT1914_2002529_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = december year = 1914 }
+	offset = 5
+	deathdate = { day = 15 month = november year = 1925 }
+	
+	action = {
+	name = "EVT1914_2002529_ACTIONA" # We have been defeated
+		command = { trigger = { 
+						participant = { country = FRA value = 1 } #part of the Entente
+						alliance = { country = FRA country = ENG } } 
+					type = alliance_leader which = ENG where = 0 } #UK becomes leader of the alliance
+		command = { trigger = { 
+						participant = { country = FRA value = 1 } #part of the Entente
+						alliance = { country = FRA country = RUS } 
+						NOT = { alliance = { country = FRA country = ENG } } } 
+					type = alliance_leader which = RUS where = 0 } #UK becomes leader of the alliance
+		command = { trigger = { 
+						participant = { country = FRA value = 1 } #part of the Entente
+						alliance = { country = FRA country = USA } 
+						NOT = { 
+							alliance = { country = FRA country = ENG }
+							alliance = { country = FRA country = RUS } } } 
+					type = alliance_leader which = USA where = 0 } #USA becomes leader of the alliance
+		command = { trigger = { 
+						participant = { country = FRA value = 1 } #part of the Entente
+						alliance = { country = FRA country = ITA } 
+						NOT = { 
+							alliance = { country = FRA country = ENG }
+							alliance = { country = FRA country = RUS } 
+							alliance = { country = FRA country = USA } } } 
+					type = alliance_leader which = ITA where = 0 } #ITA becomes leader of the alliance
+		command = { trigger = { 
+						participant = { country = FRA value = 1 } #part of the Entente
+						alliance = { country = FRA country = ROM } 
+						NOT = { 
+							alliance = { country = FRA country = ENG }
+							alliance = { country = FRA country = RUS } 
+							alliance = { country = FRA country = USA } 
+							alliance = { country = FRA country = ITA } } } 
+					type = alliance_leader which = ROM where = 0 } #ROM becomes leader of the alliance	
+		command = { trigger = { 
+						participant = { country = FRA value = 1 } #part of the Entente
+						alliance = { country = FRA country = GRE } 
+						NOT = { 
+							alliance = { country = FRA country = ENG }
+							alliance = { country = FRA country = RUS } 
+							alliance = { country = FRA country = USA } 
+							alliance = { country = FRA country = ITA } 
+							alliance = { country = FRA country = ROM } } } 
+					type = alliance_leader which = GRE where = 0 } #GRE becomes leader of the alliance
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 2002525 }
+		command = { type = sleepevent which = 2002526 }
+		command = { type = sleepevent which = 2002527 }
+		command = { type = trigger which = 2191552 } # U08 Armistice with France
+		command = { type = trigger which = 2192537 } # U09 Armistice with France
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+		command = { type = peace which = U09 value = 1 }
+		command = { trigger = { war = { country = OTT country = FRA } } type = peace which = OTT value = 1 }
+		command = { trigger = { war = { country = BUL country = FRA } } type = peace which = BUL value = 1 }
+		#command = { type = setflag which = German_EndWWI }
+		command = { type = access which = U08 }
+		command = { trigger = { alliance = { country = U08 country = U09 } } type = access which = U09 }
+		command = { trigger = { alliance = { country = U08 country = ITA } } type = access which = ITA }
+	}
+}
+### 2002530, 2002531, 2002532; 2002534; 2002535
+###	TERRITORIAL LOSSES
+###############################################################
+event = {
+	id = 2002535   # Paris is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 55 data = -3 } } 
+		NOT = { control = { province = 55 data = REB } } 
+	}
+	
+	name = "EVT1914_2002535_NAME"
+	desc = "EVT1914_2002535_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2002536   # Nancy is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 106 data = -3 } } 
+		NOT = { control = { province = 106 data = REB } } 
+	}
+	
+	name = "EVT1914_2002536_NAME"
+	desc = "EVT1914_2002536_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1	  }
+	}
+}
+event = {
+	id = 2002537   # Lille is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 62 data = -3 } } 
+		NOT = { control = { province = 62 data = REB } } 
+	}
+	
+	name = "EVT1914_2002537_NAME"
+	desc = "EVT1914_2002537_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2002538   # Reims is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 99 data = -3 } } 
+		NOT = { control = { province = 99 data = REB } } 
+	}
+	
+	name = "EVT1914_2002538_NAME"
+	desc = "EVT1914_2002538_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+	}
+}
+event = {
+	id = 2002539   # Calais is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 49 data = -3 } } 
+		NOT = { control = { province = 49 data = REB } } 
+	}
+	
+	name = "EVT1914_2002539_NAME"
+	desc = "EVT1914_2002539_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+	}
+}
+event = {
+	id = 2002540   # Orléans is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 66 data = -3 } } 
+		NOT = { control = { province = 66 data = REB } } 
+	}
+	
+	name = "EVT1914_2002540_NAME"
+	desc = "EVT1914_2002540_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2002541   # Caen is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 44 data = -3 } } 
+		NOT = { control = { province = 44 data = REB } } 
+	}
+	
+	name = "EVT1914_2002541_NAME"
+	desc = "EVT1914_2002541_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2002542   # Rennes is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 38 data = -3 } } 
+		NOT = { control = { province = 38 data = REB } } 
+	}
+	
+	name = "EVT1914_2002542_NAME"
+	desc = "EVT1914_2002542_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2002543   # Lyon is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 85 data = -3 } } 
+		NOT = { control = { province = 85 data = REB } } 
+	}
+	
+	name = "EVT1914_2002543_NAME"
+	desc = "EVT1914_2002543_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2002544   # Limoges is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 73 data = -3 } } 
+		NOT = { control = { province = 73 data = REB } } 
+	}
+	
+	name = "EVT1914_2002544_NAME"
+	desc = "EVT1914_2002544_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2002545   # Bordeaux is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 68 data = -3 } } 
+		NOT = { control = { province = 68 data = REB } } 
+	}
+	
+	name = "EVT1914_2002545_NAME"
+	desc = "EVT1914_2002545_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2002546   # Toulouse is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 77 data = -3 } } 
+		NOT = { control = { province = 77 data = REB } } 
+	}
+	
+	name = "EVT1914_2002546_NAME"
+	desc = "EVT1914_2002546_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2002547   # Marseille is lost !
+	country = FRA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 89 data = -3 } } 
+		NOT = { control = { province = 89 data = REB } } 
+	}
+	
+	name = "EVT1914_2002547_NAME"
+	desc = "EVT1914_2002547_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+#### If serbia accepts ultimatum : second path to WWI
+event = {
+	id = 2002548   # Russia opens secret negotiations
+	country = FRA
+
+	#trigger by RUS 2104533
+   
+	name = "EVT1914_2002548_NAME"
+	desc = "EVT1914_2002548_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2002548_ACTIONA" # Support their project
+		ai_chance = 85
+		command = { type = relation which = RUS value = 25 }
+		command = { type = trigger which = 2104534 }
+	}
+	action_b = {
+		name = "EVT1914_2001529_ACTIONB" # Support their project
+		ai_chance = 15
+		command = { type = relation which = RUS value = -15 }
+		command = { type = trigger which = 2104535 }
+	}
+}
+##############
+# Jaurès Assassination
+####################
+event = {
+	id = 2002549
+	country = FRA
+
+	date = { day = 29 month = july year = 1914 }
+   
+	name = "EVT1914_2002549_NAME"
+	desc = "EVT1914_2002549_DESC" 
+	style = 2
+	picture = "jaures"
+
+	action = {
+		name = "EVT1914_2002549_TEXT"
+		command = { type = sleepminister which = 5341 }
+		command = { type = dissent value = 1 }
+	}
+}
+
+##############
+# Dissolve Viviani Government
+####################
+event = {
+	id = 2002550
+	country = FRA
+	decision = { headofgovernment = 5292 } #René Viviani
+	decision_trigger = { }
+	trigger = { 
+		month = 9 
+		headofgovernment = 5292 #René Viviani
+	}
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1915 }
+   
+	name = "EVT1914_2002550_NAME"
+	desc = "EVT1914_2002550_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "EVT1914_2002550_TEXT"
+		command = { type = headofgovernment which = 5283 } # Briand
+		command = { type = foreignminister which = 5274 } # Briand
+		command = { type = armamentminister which = 5328 } # Gallieni
+		command = { type = ministerofsecurity which = 5343 } # Malvy
+		command = { type = dissent value = -2 }
+	}
+}
+
+
+##############
+# Appoint Foch as Supreme Commander
+#################################
+event = {
+	id = 2002554 
+	country = FRA
+	
+	decision = { 
+		war = { country = FRA country = U08 }
+		alliance = { country = FRA country = ENG }
+		ai = ENG
+	}
+	
+	decision_trigger = { NOT = { incabinet = 5249 } }
+	
+	trigger = { 
+		ai = no 
+		war = { country = FRA country = U08 }
+		alliance = { country = FRA country = ENG }
+		NOT = { incabinet = 5249 }
+	}
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1919 }
+	
+	name = "EVT1914_2002554_NAME"
+	desc = "EVT1914_2002554_DESC" 
+	style = 2
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "WW1_Offensive"
+	
+	action = {
+	name = "EVT1914_2002554_TEXT"
+		command = { type = chiefofstaff which = 5249 } # Foch
+		#command = { trigger = { ai = ENG } type = military_control which = FRA where = ENG value = 1 }
+	}
+}
+##############
+# Appoint Clémenceau
+#################################
+event = {
+	id = 2002555 
+	country = FRA
+	
+	decision = { 
+		war = { country = FRA country = U08 }
+	}
+	
+	decision_trigger = { NOT = { incabinet = 5287 } }
+	
+	trigger = { 
+		random = 10 
+		war = { country = FRA country = U08 }
+		alliance = { country = FRA country = ENG }
+		NOT = { incabinet = 5287 }
+	}
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1919 }
+	
+	name = "EVT1914_2002555_NAME"
+	desc = "EVT1914_2002555_DESC" 
+	style = 2
+	decision_picture = "decision_diplomatic_campaign"
+	
+	action = {
+		name = "EVT1914_2002555_TEXT"
+		command = { type = headofgovernment which = 5287 } # Clémenceau
+		command = { type = armamentminister which = 5340 } # Clémenceau
+	}
+}
+################################
+# The Franco-Russian Alliance
+################################
+event = {
+	id = 2002556 
+	country = FRA
+	style = 2
+	
+	name = "EVT1914_2002556_NAME"
+	desc = "EVT1914_2002556_DESC" 
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { NOT = { ispuppet = FRA alliance = { country = FRA country = GRE } } alliance = { country = RUS country = GRE } } type = alliance which = GRE  when = 1 }		
+		command = { trigger = { NOT = { ispuppet = RUS alliance = { country = FRA country = RUS } } } type = alliance which = RUS  when = 1 }		
+		command = { trigger = { NOT = { ispuppet = SER alliance = { country = FRA country = SER } } } type = alliance which = SER  when = 1 }
+		command = { trigger = { NOT = { ispuppet = MTN alliance = { country = FRA country = MTN } } } type = alliance which = MTN  when = 1 }
+		command = { type = trigger which = 2104543 } #RUS The Franco-Russian Alliance
+	}
+}
+
+event = {
+	id = 2002557
+	country = FRA
+	style = 2
+	
+	name = "EVT1914_2002556_NAME"
+	desc = "EVT1914_2002556_DESC" 
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { NOT = { ispuppet = RUS alliance = { country = FRA country = RUS } } } type = alliance which = RUS  when = 1 }		
+		command = { trigger = { NOT = { ispuppet = SER alliance = { country = FRA country = SER } } } type = alliance which = SER  when = 1 }
+		command = { trigger = { NOT = { ispuppet = MTN alliance = { country = FRA country = MTN } } } type = alliance which = MTN  when = 1 }
+		command = { type = alliance_leader which = FRA where = 0 } 
+	}
+}
+### Armistice with Germany
+event = {
+	id = 2002558
+	country = FRA	
+	
+	name = "EVT1914_2002558_NAME"
+	desc = "EVT1914_2002558_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 } 
+	}
+}
+
+### Armistice with Italy
+event = {
+	id = 2002559
+	country = FRA
+	
+	name = "EVT1914_2002559_NAME"
+	desc = "EVT1914_2002559_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 } 
+	}
+}

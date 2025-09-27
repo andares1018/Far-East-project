@@ -1,0 +1,858 @@
+###
+### Greek events (GRE - 019)
+###
+### By Rhysaxiel
+###
+###
+### used global flags
+### greece_mobilized  = Greece has mobilized but did not join the Entente
+### entente_hostility  = the Entente considers Greece as an ennemy (but is not at war against it)
+### venizelos_incabinet = Venizelos is in cabinet
+###
+###2019500	GRE	Case Greece
+###2019501	GRE	Austria DoW Serbia
+###2019502	GRE	Ottoman Empire has fallen
+###2019503	GRE	Bulgaria joins the Central Powers
+###2019504	GRE	Negotiation with the Entente (Bulgaria has joined CP)
+###2019505	GRE	Negotiation with the Entente (Bulgaria neutral)
+###2019506	GRE	Konstantinos is sick
+###2019507	GRE	Konstantinos is back at his office
+###2019508	GRE	Greece and the Dardanelles
+###2019509	GRE	The Gounalis proposal
+###2019510	GRE	Legislative elections, 1915
+###2019511	GRE	Venizelos asks for mobilization
+###2019512	GRE	The Entente seizes Thessaloniki
+###2019513	GRE	The Entente asks for demobilization
+###2019514	GRE	Anticipated elections
+###2019515	GRE	Serbian troops evacuated through Corfu
+###2019517	GRE	Grant Bulgaria military access
+###2019518	GRE	The Royal residence burns !
+###2019519	GRE	The Thessaloniki government
+###2019520	GRE	The Entente asks again for demobilization
+###2019521	GRE	"Les Vêpres Grecques"
+###2019522	GRE	Last warning from the Entente
+###2019524	GRE	Military defeat
+###2019525	GRE	The Treaty of Athens (CP)
+###2019526	GRE	The Treaty of Athens (Entente)
+
+event = {
+	id = 2019500	# Case Greece
+	random = no
+	country = GRE
+  
+	name = "EVT1914_2019500_NAME"
+	desc = "EVT1914_2019500_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = july year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2019500_ACTIONA" # All right, then
+		command = { type = setflag which = venizelos_incabinet }
+	}
+}
+#Early join ('14)
+event = {
+	id = 2019501	# Austria DoW Serbia
+	random = no
+	country = GRE
+
+	#triggered by AUS 2192502
+   
+	name = "EVT1914_2019501_NAME"
+	desc = "EVT1914_2019501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2019501_ACTIONA" # We can't honour our alliance
+		ai_chance = 100
+		command = { type = dissent value = 3  }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT1914_2019501_ACTIONB" # We will honour our alliance
+		command = { type = dissent value = 5 }
+		command = { type = alliance which = SER when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+}
+
+event = {
+	id = 2019502	# Ottoman Empire has fallen
+	random = no
+	country = GRE
+
+	# triggered by FRA 2002507
+   
+	name = "EVT1914_2019501_NAME"
+	desc = "EVT1914_2019501_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2019501_ACTIONA" # The King bows
+		command = { type = dissent value = 3  }
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT1914_2019501_ACTIONB" # The King stands
+		command = { type = dissent value = 5 }
+	}
+}
+#historical path
+event = {
+	id = 2019503	# Bulgaria joins the Central Powers
+	random = no
+	country = GRE
+
+	#triggered by U08 2191509
+   
+	name = "EVT1914_2019503_NAME"
+	desc = "EVT1914_2019503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2019503_ACTIONA" # We can't honour our alliance
+		ai_chance = 95
+		command = { type = dissent value = 5  }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT1914_2019503_ACTIONB" # We will honour our alliance
+		command = { type = dissent value = 5 }
+		command = { type = alliance which = SER when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+}
+event = {
+	id = 2019504	# Negotiation with the Entente (Bulgaria has joined CP)
+	random = no
+	country = GRE
+
+	#triggered by FRA 2002508
+   
+	name = "EVT1914_2019504_NAME"
+	desc = "EVT1914_2019504_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "EVT1914_2019504_ACTIONA" # Accept
+		ai_chance = 90
+		command = { type = trigger which = 2002509 }
+		command = { type = dissent value = 3 }
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+	action_b = {
+		name = "EVT1914_2019504_ACTIONB" # Reject treaty
+		ai_chance = 10
+		command = { type = dissent value = 5  }
+	}
+}
+event = {
+	id = 2019505	# Negotiation with the Entente (Bulgaria neutral)
+	random = no
+	country = GRE
+
+	#triggered by FRA 6004
+   
+	name = "EVT1914_2019505_NAME"
+	desc = "EVT1914_2019505_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "ACTION_NAME_ACCEPT" # Accept
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = {  type = trigger which = 2002509 }
+	}
+	action_b = {
+		name = "ACTION_NAME_DECLINE" # Reject treaty
+		ai_chance = 95
+		command = { type = dissent value = 5  }
+	}
+}
+event = {
+	id = 2019506	# Konstantinos is sick
+	country = GRE
+
+	trigger = { 
+		random = 15
+	}
+   
+	name = "EVT1914_2019506_NAME"
+	desc = "EVT1914_2019506_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = april year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2019506_ACTIONA" # God save him !
+		command = { type = dissent value = 1  }
+	}
+}
+event = {
+	id = 2019507	# Konstantinos is back at his office
+	country = GRE
+
+	trigger = { 
+		random = 15
+		event = 2019506 
+	}
+   
+	name = "EVT1914_2019507_NAME"
+	desc = "EVT1914_2019507_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = august year = 1915 }
+	offset = 13
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "ACTION_NAME_HURRAH" # Hurrah !
+		command = { type = dissent value = -2  }
+	}
+}
+#### Following events are Dardanelles-dependant (event ENG 2001503 : Dardanelles' objective)
+event = {
+	id = 2019508	# Greece and the Dardanelles
+	country = GRE
+
+	trigger = {
+		random = 20
+		event = 2001503 #ENG Dardanelles' objective
+		NOT = { 
+			event = 2002509 # Treaty of London (Greece)
+			alliance = { country = FRA country = GRE } 
+		}
+	}
+   
+	name = "EVT1914_2019508_NAME"
+	desc = "EVT1914_2019508_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2019508_ACTIONA" # Metaxas is right, we cant' afford a war
+		ai_chance = 95
+		command = { type = dissent value = 4  }
+		command = { type = trigger which = 2002516 } #FRA	Venizelos leaves government
+		command = { type = clrflag which = venizelos_incabinet }
+		command = { type = headofgovernment which = 90197 } # Dimitrios Gounaris
+	}
+   action_b = {
+		ai_chance = 5
+		name = "EVT1914_2019508_ACTIONB" # Venizelos is right
+		command = { type = dissent value = 5 }
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+}
+event = {
+	id = 2019509	# The Gounalis proposal
+	country = GRE
+
+	decision = { 	
+		NOT = {
+			headofgovernment = 90195 #Venizelos
+			flag = venizelos_incabinet
+			event = 2019507 # Konstantinos is back in office
+			alliance = { country = U08  country = GRE } 
+			alliance = { country = FRA  country = GRE } 
+			war = { country = FRA  country = GRE } 
+		} 
+	}
+	decision_trigger = { 
+		event = 2019506 # Konstantinos is sick
+	}
+	trigger = {
+		event = 2019506 # Konstantinos is sick
+		NOT = { 
+			headofgovernment = 90195 #Venizelos
+			flag = venizelos_incabinet
+			event = 2019507 # Konstantinos is back in office
+			alliance = { country = U08  country = GRE } 
+			alliance = { country = FRA  country = GRE } 
+			war = { country = FRA  country = GRE } 
+		} 
+		# AI specs
+		OR = {
+			random = 20
+			AND = {
+				random = 40	
+				OR = { 
+					event = 2001503 #ENG Dardanelles' objective
+					event = 2001502 #ENG Plans against Ottoman Empire
+				}
+			}
+		}
+	}
+   
+	name = "EVT1914_2019509_NAME"
+	desc = "EVT1914_2019509_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2019509_ACTIONA" # Propose the plan
+		command = { trigger = { NOT = { war = { country = FRA  country = BUL } } } type = trigger which = 2002511  } #Bulgaria is neutral
+		command = { 
+			trigger = { 
+				OR = {
+					war = { country = FRA  country = BUL } 
+					alliance = { country = FRA  country = BUL }
+				}
+			}  type = trigger which = 2002512  } #Bulgaria is CP or Entente
+	}
+}
+event = {
+	id = 2019510	# Legislative elections, 1915
+	country = GRE
+
+	trigger = { 
+		random = 30
+		NOT = { 
+			flag = venizelos_incabinet 
+			event = 2002509 # Treaty of London (Greece)
+		}
+	}
+   
+	name = "EVT1914_2019510_NAME"
+	desc = "EVT1914_2019510_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2019510_ACTIONA" # Venizelos triumphes !
+		command = { type = dissent value = -2  }
+		command = { type = trigger which = 2002517 } #FRA	Venizelos is back
+		command = { type = setflag which = venizelos_incabinet }
+		command = { type = headofgovernment which = 90195 } # Venizelos
+	}
+}
+#### Following events are Bulgaria dependant (event U08 2191509 : Bulgaria joins the Central Powers !)
+event = {
+	id = 2019511	# Venizelos asks for mobilization
+	country = GRE
+
+	trigger = {
+		event = 2191509 # Bul joined CP
+		atwar = no
+		NOT = { event = 2002509 } # Treaty of London (Greece)
+	}
+   
+	name = "EVT1914_2191509_NAME"
+	desc = "EVT1914_2191509_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+   
+	action_a = {
+		name = "EVT1914_2019511_ACTIONA" # Mobilize and prepare for war
+		ai_chance = 2
+		command = { type = dissent value = 4 }
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+	action_b = {
+		name = "EVT1914_2019511_ACTIONB" # Mobilize defensively
+		ai_chance = 95
+		command = { type = dissent value = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = setflag which = greece_mobilized }
+	}
+	action_c = {
+		name = "EVT1914_2019511_ACTIONC" # Do nothing
+		ai_chance = 3
+		command = { type = dissent value = 3 }
+	}
+}
+#### Following events are Salonique-dependant (2001506 : Entente seize Salonique)
+event = {
+	id = 2019512	# The Entente seizes Thessaloniki
+	country = GRE
+
+	# triggered by ENG 2001506
+   
+	name = "EVT1914_2019512_NAME"
+	desc = "EVT1914_2019512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2019512_ACTIONA" # Venizelos went too far
+		ai_chance = 100
+		command = { type = dissent value = 4  }
+		command = { type = secedeprovince which = FRA value = 365 } #Thessaloniki
+	}
+	action_b = {
+		name = "EVT1914_2019512_ACTIONB" # Ok, join the Enente
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+}
+
+event = {
+	id = 2019513	# The Entente asks for demobilization
+	country = GRE
+
+	# triggered by FRA 2002513
+   
+	name = "EVT1914_2019513_NAME"
+	desc = "EVT1914_2019513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "ACTION_NAME_REFUSE" # Do not demobilize
+		ai_chance = 100
+		command = { type = relation which = FRA value = -10 }
+	}
+	action_b = {
+		name = "EVT1914_2019513_ACTIONB" # Demobilize !
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { trigger = { policy = { type = professional_army value = 7 } } type = trigger which = 1350005 }
+		command = { type = trigger which = 2002514 }
+		command = { type = clrflag which = greece_mobilized }
+		command = { type = relation which = FRA value = 10 }
+	}
+}
+#### Following events are Dardanelles' failure dependant (ENG 2001507 : Dardanelles' failure)
+event = {
+	id = 2019514	# Anticipated elections
+	country = GRE
+
+	trigger = {
+		random = 15
+		event = 2001507 #Dardanelles failure
+		flag = venizelos_incabinet
+		NOT = { 
+			alliance = { country = FRA country = GRE }
+			alliance = { country = U08 country = GRE } 
+		}
+	}
+   
+   name = "EVT1914_2019514_NAME"
+   desc = "EVT1914_2019514_DESC" 
+   style = 2
+   picture = "news_paper"
+
+   date = { day = 0 month = january year = 1914 }
+   offset = 7
+   deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2019514_ACTIONA" # Call elections !
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		command = { type = clrflag which = venizelos_incabinet }
+		command = { type = headofgovernment which = 90199 } # Spyrídon Lámpros
+		command = { type = trigger which = 2002516 } #FRA Venizelos leaves government
+	}
+	action_b = {
+		name = "EVT1914_2019514_ACTIONB" # Do not call elections !
+		ai_chance = 0
+		command = {  }
+	}
+}
+#### Following events are Serbian evacuation dependant (SER 2084504 : Escape through Albania)
+event = {
+	id = 2019515	# Serbian troops evacuated through Corfu
+	country = GRE
+
+	trigger = {
+		random = 20
+		event = 2084504 #Escape through Albania
+		NOT = { alliance = { country = FRA country = GRE } }
+		exists = SER
+	}
+   
+	name = "EVT1914_2019515_NAME"
+	desc = "EVT1914_2019515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2019515_ACTIONA" # Protest
+		ai_chance = 100
+		command = { trigger = { flag = venizelos_incabinet } type = dissent value = 1 }
+		command = { type = relation which = SER value = -15 }
+		command = { trigger = { exists = ALB } type = relation which = ALB value = -15 }
+	}
+	action_b = {
+		name = "EVT1914_2019515_ACTIONB" # Do not protest
+		ai_chance = 0
+		command = { trigger = { NOT = { flag = venizelos_incabinet } }type = dissent value = 1 }
+		command = { type = relation which = SER value = 5 }
+		command = { trigger = { exists = ALB } type = relation which = ALB value = 5 }	  
+	}
+}
+
+event = {
+	id = 2019517	# Grant Bulgaria military access
+	country = GRE
+
+	trigger = {
+		random = 25
+		event = 2019512	# The Entente seizes Thessaloniki
+		war = { country = FRA country = BUL }
+		NOT = { alliance = { country = FRA country = GRE } }
+	}
+   
+	name = "EVT1914_2019517_NAME"
+	desc = "EVT1914_2019517_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2019517_ACTIONA" # Grant
+		ai_chance = 100
+		command = { type = setflag which = entente_hostility }
+		command = { type = secedeprovince which = BUL value = 364 } #Kavala
+		command = { type = trigger which = 2002520 }
+	}
+	action_b = {
+		name = "EVT1914_2019517_ACTIONB" # Do not Grant
+		ai_chance = 0
+		command = {  }
+	}
+}
+event = {
+	id = 2019518	# The Royal residence burns !
+	country = GRE
+	
+	#triggered by FRA 2002521
+	
+	name = "EVT1914_2019518_NAME"
+	desc = "EVT1914_2019518_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2019518_ACTIONA" # Curses
+		ai_chance = 100
+		command = { type = dissent value = 3 }
+		command = { type = relation which = FRA value = -20 }
+	}
+}
+###### Begining of the true National Schism
+event = {
+	id = 2019519	# The Thessaloniki government
+	random = no
+	country = GRE
+
+	trigger = {
+		random = 25
+		event = 2019518	# The Royal residence burns !
+		headofgovernment = 90199  # Spyrídon Lámpros
+	}
+	
+	name = "EVT1914_2019519_NAME"
+	desc = "EVT1914_2019519_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	
+	action = {
+		name = "EVT1914_2019519_ACTIONA" # Damn Venizelos !
+		ai_chance = 100
+		command = { type = dissent value = 4 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = secedeprovince which = FRA value = 366 } #Kozani
+		command = { type = secedeprovince which = FRA value = 367 } #Ioannina
+		command = { type = secedeprovince which = FRA value = 368 } #Larissa
+		command = { type = secedeprovince which = FRA value = 369 } #Metsovo
+	}
+}
+event = {
+	id = 2019520	# The Entente asks again for demobilization
+	random = no
+	country = GRE
+
+	# triggered by FRA 2002522
+   
+	name = "EVT1914_2019520_NAME"
+	desc = "EVT1914_2019520_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "EVT1914_2019520_ACTIONA" # Accept their demands
+		ai_chance = 100
+		command = { type = trigger which = 2002523 }
+		command = { trigger = { policy = { type = professional_army value = 7 } } type = trigger which = 1350005 }
+		command = { type = relation which = FRA value = 15 }
+	}
+	action_b = {
+		name = "EVT1914_2019520_ACTIONB" # Reject their demands
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = war which = FRA }
+	}
+}
+event = {
+	id = 2019521	# "Les Vêpres Grecques"
+	random = no
+	country = GRE
+
+	trigger = {
+		event = 2002523 # Greece accepts our demands
+	}
+   
+	name = "EVT1914_2019521_NAME"
+	desc = "EVT1914_2019521_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2019521_ACTIONA" # Welcome the French with artillery fire !
+		ai_chance = 100
+		command = { type = trigger which = 2002524 }
+	}
+	action_b = {
+		name = "EVT1914_2019521_ACTIONB" # Honour our promise
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2019522	# Last warning from the Entente
+	country = GRE
+
+	#triggered by FRA 2002524
+   
+	name = "EVT1914_2019522_NAME"
+	desc = "EVT1914_2019522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2019522_ACTIONA" # Konstantinos bows
+		ai_chance = 100
+		command = { type = dissent value = 3  }
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = clrflag which = entente_hostility }
+		command = { type = clrflag which = greece_mobilized }
+		command = { type = headofstate which = 90211 } # Alexandros I
+		command = { type = headofgovernment which = 90195 } #Venizelos
+		command = { type = relation which = FRA value = 50 }
+	}
+	action_b = {
+		name = "EVT1914_2019522_ACTIONB" # Konstantinos stands
+		ai_chance = 0
+		command = { type = dissent value = 5  }
+		command = { trigger = { 
+						war = { country = FRA country = U09 } 
+						NOT = { war = { country = U09 country = GRE }  }  
+					} 
+					type = alliance which = U09 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+}
+
+event = {
+   id = 2019524 # Military defeat
+   country = GRE
+
+	trigger = {
+		random = 35
+		OR = {
+			war = { country = GRE country = FRA }
+			war = { country = GRE country = U08 }
+			war = { country = GRE country = OTT }
+		}
+		OR = {
+			NOT = { control = { province = 377 data = GRE } } #Athens		
+			lost_national = { value = 55 }
+			lost_IC = { value = 55 }	
+		}
+	}
+   
+	name = "EVT1914_2019524_NAME"
+	desc = "EVT1914_2019524_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2019524_ACTIONA" # We have been defeated
+		command = { type = dissent value = 5 }
+		command = { trigger = { war = { country = GRE country = U08 } } type = setflag which = GRE_against_U08 } #just to be sure
+		command = { trigger = { war = { country = GRE country = U09 } } type = setflag which = GRE_against_U09 } #just to be sure
+		command = { trigger = { war = { country = GRE country = BUL } } type = setflag which = GRE_against_BUL } #just to be sure
+		command = { trigger = { war = { country = GRE country = OTT } } type = setflag which = GRE_against_OTT } #just to be sure
+		command = { trigger = { war = { country = GRE country = FRA } } type = setflag which = GRE_against_FRA } #just to be sure
+		command = { trigger = { war = { country = GRE country = ENG } } type = setflag which = GRE_against_ENG } #just to be sure
+		command = { trigger = { war = { country = GRE country = ITA } } type = setflag which = GRE_against_ITA } #just to be sure
+		command = { trigger = { war = { country = GRE country = U08 } } type = access which = U08 }
+		command = { trigger = { war = { country = GRE country = U09 } } type = access which = U09 }
+		command = { trigger = { war = { country = GRE country = BUL } } type = access which = BUL }
+		command = { trigger = { war = { country = GRE country = RUS } } type = access which = RUS }
+		command = { trigger = { war = { country = GRE country = SOV } } type = access which = SOV }
+		command = { trigger = { war = { country = GRE country = FRA } } type = access which = FRA }
+		command = { trigger = { war = { country = GRE country = OTT } } type = access which = OTT }
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { war = { country = GRE country = U08 } } type = peace which = U08 value = 1 }
+		command = { trigger = { war = { country = GRE country = RUS } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = GRE country = SOV } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = GRE country = FRA } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = GRE country = OTT } } type = peace which = OTT value = 1 }
+	}
+}
+
+event = {
+	id = 2019525	# The Treaty of Athens (CP)
+	country = GRE
+	
+	trigger = {
+		event = 2019524 # Military defeat
+		OR = {
+			flag = GRE_against_U08
+			flag = GRE_against_OTT
+		}
+	}
+	
+	name = "EVT1914_2019525_NAME"
+	desc = "EVT1914_2019525_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2019525_ACTIONA" # Greece lives its Darkest hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		#war reparations
+		command = { trigger = { flag = GRE_against_U08 } type = trade which = GRE where = U08  money = -0.5 when = 7200 value = 1 }	 
+		command = { trigger = { flag = GRE_against_U09 } type = trade which = GRE where = U09  money = -0.5 when = 7200 value = 1 }	 
+		command = { trigger = { flag = GRE_against_BUL } type = trade which = GRE where = BUL  money = -0.5 when = 7200 value = 1 }	 
+		command = { trigger = { flag = GRE_against_OTT } type = trade which = GRE where = OTT  money = -0.5 when = 7200 value = 1 }	
+		command = { trigger = { flag = GRE_against_ITA } type = trade which = GRE where = ITA  money = -0.5 when = 7200 value = 1 }	
+		#lost provinces
+		command = { trigger = { flag = GRE_against_U09 NOT = { exists = ALB } exists = U09 } type = secedeprovince which = U09 value = 360 when = 1 } #Korce
+		command = { trigger = { exists = ALB } type = secedeprovince which = ALB value = 360 when = 1 } #Korce
+		command = { trigger = { flag = GRE_against_BUL } type = secedeprovince which = BUL value = 364 when = 1 } #Kavala
+		command = { trigger = { flag = GRE_against_BUL } type = secedeprovince which = BUL value = 365 when = 1 } #Thessaloniki
+		command = { trigger = { flag = GRE_against_BUL } type = secedeprovince which = BUL value = 366 when = 1 } #Kozani
+		command = { trigger = { flag = GRE_against_OTT } type = secedeprovince which = OTT value = 383 when = 1 } #Mytilene
+		command = { trigger = { flag = GRE_against_OTT } type = secedeprovince which = OTT value = 381 when = 1 } #Ermoupoli
+		command = { trigger = { flag = GRE_against_ITA } type = secedeprovince which = ITA value = 371 when = 1 } #Kerkyra
+		#revert possible previous treaties
+		command = { trigger = { control = { province = 378 data = GRE } } type = secedeprovince which = ITA value = 378 when = 1 } #Kalymnos
+		command = { trigger = { control = { province = 379 data = GRE } } type = secedeprovince which = ITA value = 379 when = 1 } #Rodos
+		command = { trigger = { control = { province = 363 data = GRE } } type = secedeprovince which = BUL value = 363 when = 1 } #Xanthi
+		command = { trigger = { control = { province = 370 data = GRE } } type = secedeprovince which = BUL value = 370 when = 1 } #Alexandroupoli
+		command = { trigger = { control = { province = 384 data = GRE } } type = secedeprovince which = OTT value = 384 when = 1 } #Gallipoli
+		command = { trigger = { control = { province = 385 data = GRE } } type = secedeprovince which = OTT value = 385 when = 1 } #Edirne/Adrianople
+		command = { trigger = { control = { province = 1077 data = GRE } } type = secedeprovince which = OTT value = 1077 when = 1 } #Smyrna
+		# demobilization (only 5 units at 33% strenght, around 20 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 5 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { trigger = { flag = GRE_against_U08 } type = clrflag which = GRE_against_U08 }	 
+		command = { trigger = { flag = GRE_against_U09 } type = clrflag which = GRE_against_U09 }	 
+		command = { trigger = { flag = GRE_against_BUL } type = clrflag which = GRE_against_BUL }	 
+		command = { trigger = { flag = GRE_against_OTT } type = clrflag which = GRE_against_OTT }			
+		command = { trigger = { flag = GRE_against_ITA } type = clrflag which = GRE_against_ITA }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+
+event = {
+	id = 2019526	# The Treaty of Athens (Entente)
+	country = GRE
+
+	trigger = {
+		event = 2019524 # Military defeat
+		flag = GRE_against_FRA
+	}
+
+	name = "EVT1914_2019526_NAME"
+	desc = "EVT1914_2019526_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2019526_ACTIONA" # Greece lives its Darkest hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		#war reparations
+		command = { trigger = { flag = GRE_against_FRA } type = trade which = GRE where = FRA  money = -0.5 when = 7200 value = 1 }	 
+		command = { trigger = { flag = GRE_against_ENG } type = trade which = GRE where = ENG  money = -0.5 when = 7200 value = 1 }	 
+		command = { trigger = { flag = GRE_against_ITA } type = trade which = GRE where = ITA  money = -0.5 when = 7200 value = 1 }
+		#lost provinces
+		command = { trigger = { exists = ALB } type = secedeprovince which = ALB value = 360 when = 1 } #Korce
+		command = { trigger = { flag = GRE_against_ITA } type = secedeprovince which = ITA value = 371 when = 1 } #Kerkyra
+		command = { trigger = { flag = GRE_against_ENG } type = secedeprovince which = ENG value = 382 when = 1 } #Irakleion
+		command = { trigger = { flag = GRE_against_ENG } type = secedeprovince which = ENG value = 380 when = 1 } #Sitia
+		# demobilization (only 5 units at 33% strenght, around 20 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 5 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { trigger = { flag = GRE_against_FRA } type = clrflag which = GRE_against_FRA }	 
+		command = { trigger = { flag = GRE_against_eNG } type = clrflag which = GRE_against_ENG }	 
+		command = { trigger = { flag = GRE_against_ITA } type = clrflag which = GRE_against_ITA }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}

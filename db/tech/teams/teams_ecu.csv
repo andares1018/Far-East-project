@@ -1,0 +1,19 @@
+ECU;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+190001;IDEAL;T5300;3;1890;1970;industrial_engineering;general_equipment;management;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190002;Guyaquil Puerto Maritimo;T5301;3;1890;1970;naval_engineering;technical_efficiency;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190003;Anglo-Ecuadorian Oilfields;T5302;3;1919;1975;industrial_engineering;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190004;Alberto Enriquez Gallo;T5303;2;1930;1941;large_unit_tactics;decentralized_execution;individual_courage;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190005;Cosme Renella Barbatto;T5304;2;1920;1937;small_unit_tactics;decentralized_execution;combined_arms_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190010;Club de Tiro y Aviacion;100886;1;1910;1920;training;individual_courage;piloting;fighter_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190006;Escuela Superior Militar de Aviación;T5305;3;1929;1970;training;fighter_tactics;bomber_tactics;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190007;Escuela Naval;100885;2;1822;1941;decentralized_execution;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190011;Escuela Superior Naval;T5306;3;1941;1970;centralized_execution;small_unit_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190008;Ecuadorian Agriculture;100092;3;1890;1970;industrial_engineering;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190009;Ejercito de Ecuador;100388;3;1890;1970;general_equipment;training;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190012;Empresa de Luz y Fuerza Electrica;100887;2;1904;1925;management;electronics;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190013;Empresa de Carros Urbanos;100888;2;1890;1922;technical_efficiency;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190014;Guayaquil and Quito Railway Company;100889;2;1888;1925;technical_efficiency;industrial_engineering;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190015;Empresa de Ferrocarriles Ecuatorianos;100890;3;1925;1970;technical_efficiency;industrial_engineering;mechanics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190016;Universidad Central del Ecuador;100891;4;1826;1970;medicine;chemistry;mathematics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190017;Colegio Militar;100883;3;1899;1929;large_unit_tactics;training;individual_courage;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+190018;Escuela Superior Militar;100884;4;1930;1982;small_unit_tactics;training;combined_arms_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

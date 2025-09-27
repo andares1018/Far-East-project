@@ -1,0 +1,974 @@
+### 2145534 OTT Declare Jihad
+### 2032000 LBY The Ottomans declared Jihad
+### 2006517 ITA The supporters of Senussi are taking control of the inner provinces
+### 2032001 LBY The Tripolitanian leaders rally to our cause
+### 2145535 OTT The Senussi are ready to strike
+### 2032002 LBY The Ottomans want us to attack Egypt
+### 2145536 OTT The Senussi accepted our proposal
+### 2032003 LBY Truce with Italy and France
+### 2191585 U08 The Senussi are at war with the United Kingdom
+### 2032004 LBY Support from the Germans
+### 2032005 LBY The British defeated us
+### 2001575 ENG The Senussi sue for peace
+### 2032006 LBY Peace with the British
+### 2006518 ITA Recognize Idris al-Sanusi as Emir of Cyrenaica and Fezzan
+### 2006519 ITA Revoke the authonomy of Senussia!
+### 2006520 ITA The Senussi defeated us
+### 2032007 LBY We defeated the Italians
+### 2006521 ITA Peace with the Senussi
+### 2032008 LBY Recognize Ottomans sovereignty over us
+### 2145537 OTT Senussia recognizes our suzerainity over them
+### 2001576 ENG The prisoner Jafar al-Askari wants to join the Arab revolt
+### 2233506 U50 The British sent military leaders to support our case
+### 2032009 LBY Keep our isolationism
+
+event = {
+	id = 2145534   # Declare Jihad
+	country = OTT
+
+	decision = {
+		OR = { 
+			war = { country = OTT country = ENG }
+			war = { country = OTT country = FRA }
+			war = { country = OTT country = RUS }
+		}
+	}
+	
+	decision_trigger = {
+		OR = { 
+			war = { country = OTT country = ENG }
+			war = { country = OTT country = FRA }
+			war = { country = OTT country = RUS }
+		}
+	}
+	
+	trigger = {
+		OR = { 
+			war = { country = OTT country = ENG }
+			war = { country = OTT country = FRA }
+			war = { country = OTT country = RUS }
+		}	
+	}
+	
+	name = "EVT1914_2145534_NAME" #Declare Jihad
+	desc = "EVT1914_2145534_DESC" 
+	style = 2
+	picture = "Ottoman_declaration_war"
+	decision_picture = "decision_ottoman_declaration_war"
+
+	date = { day = 0 month = august year = 1914 }
+	offset = 61
+	deathdate = { day = 29 month = december year = 1919 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 99
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { trigger = { exists = LBY NOT = { ispuppet = LBY war = { country = LBY country = OTT } } } type = event which = 2032000 where = LBY when = 30 } #LBY The Ottomans declared Jihad
+	}
+	action = {
+		name = "ACTION_NAME_NO"
+		ai_chance = 1
+		command = { type = belligerence value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 2032000 # The Ottomans declared Jihad
+	country = LBY
+	
+	name = "EVT1914_2032000_NAME" #The Ottomans declared Jihad
+	desc = "EVT1914_2145534_DESC" 
+	style = 2
+	picture = "Ottoman_declaration_war"
+	
+	action = {
+		name = "EVT1914_2032000_ACTIONA" #Join the Jihad, rally our supporters!
+		ai_chance = 99
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = trigger which = 2006517 } #ITA The supporters of Senussi are taking control of the inner provinces
+	}
+	action = {
+		name = ACTION_NAME_NEUTRAL
+		ai_chance = 1
+		command = { type = belligerence value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }		
+	}	
+}
+
+event = {
+	id = 2006517 # The supporters of Senussi are taking control of the inner provinces
+	country = ITA
+	
+	name = "EVT1914_2006517_NAME" #The supporters of Senussi are taking control of the inner provinces
+	desc = "EVT1914_2006517_DESC" 
+	style = 2
+	picture = "Ottoman_declaration_war"
+	
+	action = {
+		name = "EVT1914_2006517_ACTIONA" #There's nothing we can do for now (historical)
+		ai_chance = 100
+		command = { type = secedeprovince which = LBY value = 751 when = 1 } #Gharyan
+		command = { type = secedeprovince which = LBY value = 753 when = 1 } #Ghadamis
+		command = { type = secedeprovince which = LBY value = 755 when = 1 } #Houn
+		command = { type = secedeprovince which = LBY value = 758 when = 1 } #Bu Nujaym
+		#command = { type = secedeprovince which = LBY value = 760 when = 1 } #Msus
+		#command = { type = secedeprovince which = LBY value = 766 when = 1 } #Al Mukhayla
+		#command = { type = secedeprovince which = LBY value = 769 when = 1 } #Bir Hakeim
+		#command = { type = secedeprovince which = LBY value = 772 when = 1 } #Bir el Gubi
+		command = { type = secedeprovince which = LBY value = 776 when = 1 } #Sabha
+		command = { type = secedeprovince which = LBY value = 752 when = 1 } #Az Zawiyah
+		command = { type = secedeprovince which = LBY value = 756 when = 1 } #Sirt
+		command = { type = secedeprovince which = LBY value = 759 when = 1 } #El Agheila
+		command = { type = secedeprovince which = LBY value = 762 when = 1 } #Agedabia
+		command = { type = secedeprovince which = LBY value = 763 when = 1 } #Qaminis
+		command = { type = secedeprovince which = LBY value = 764 when = 1 } #Al Bayda
+		command = { type = secedeprovince which = LBY value = 767 when = 1 } #Gazala
+		command = { type = secedeprovince which = LBY value = 771 when = 1 } #Bardia
+		command = { type = non_aggression which = LBY where = ITA }
+		command = { trigger = { alliance = { country = ITA country = FRA } } type = non_aggression which = LBY where = FRA }
+		command = { trigger = { alliance = { country = ITA country = ENG } } type = non_aggression which = LBY where = ENG }
+		command = { type = trigger which = 2032001 } #LBY The Tripolitanian leaders rally to our cause
+		command = { type = event which = 2032003 where = LBY when = 2 } #LBY Truce with Italy and France
+	}
+	action = {
+		name = "2006028a" #We will crush them![
+		ai_chance = 0
+		command = { type = secedeprovince which = LBY value = 751 when = 1 } #Gharyan
+		command = { type = secedeprovince which = LBY value = 753 when = 1 } #Ghadamis
+		command = { type = secedeprovince which = LBY value = 755 when = 1 } #Houn
+		command = { type = secedeprovince which = LBY value = 758 when = 1 } #Bu Nujaym
+		#command = { type = secedeprovince which = LBY value = 760 when = 1 } #Msus
+		#command = { type = secedeprovince which = LBY value = 766 when = 1 } #Al Mukhayla
+		#command = { type = secedeprovince which = LBY value = 769 when = 1 } #Bir Hakeim
+		#command = { type = secedeprovince which = LBY value = 772 when = 1 } #Bir el Gubi
+		command = { type = secedeprovince which = LBY value = 776 when = 1 } #Sabha
+		command = { type = secedeprovince which = LBY value = 752 when = 1 } #Az Zawiyah
+		command = { type = secedeprovince which = LBY value = 756 when = 1 } #Sirt
+		command = { type = secedeprovince which = LBY value = 759 when = 1 } #El Agheila
+		command = { type = secedeprovince which = LBY value = 762 when = 1 } #Agedabia
+		command = { type = secedeprovince which = LBY value = 763 when = 1 } #Qaminis
+		command = { type = secedeprovince which = LBY value = 764 when = 1 } #Al Bayda
+		command = { type = secedeprovince which = LBY value = 767 when = 1 } #Gazala
+		command = { type = secedeprovince which = LBY value = 771 when = 1 } #Bardia
+		command = { trigger = { non_aggression = { country = LBY country = ITA } } type = end_non_aggression which = LBY where = ITA }
+		command = { type = war which = LBY }
+		command = { type = trigger which = 2032001 } #LBY The Tripolitanian leaders rally to our cause
+		command = { type = sleepevent which = 2032003 } #LBY Truce with Italy and France
+		command = { type = unlock_division which = 23500 value = 74 } #Regio Corpo Truppe Coloniali della Tripolitania / Gruppo Coloniale della Tripolitania
+		command = { type = unlock_division which = 23500 value = 75 } #Regio Corpo Truppe Coloniali della Tripolitania / Cacciatori d'Africa
+		command = { type = unlock_division which = 23500 value = 76 } #Regio Corpo Truppe Coloniali della Tripolitania / Cavalleria Sahariana
+		command = { type = unlock_division which = 23500 value = 78 } #Regio Corpo Truppe Coloniali della Cirenaica / Gruppo Coloniale della Cirenaica
+		command = { type = unlock_division which = 23500 value = 79 } #Regio Corpo Truppe Coloniali della Cirenaica / 3o Gruppo Coloniale dell'Eritrea
+		command = { type = unlock_division which = 23500 value = 80 } #Regio Corpo Truppe Coloniali della Cirenaica / Gruppo di Savari
+	}	
+}
+
+event = {
+	id = 2032001 # The Tripolitanian leaders rally to our cause
+	country = LBY
+	
+	name = "EVT1914_2032001_NAME" #The Tripolitanian leaders rally to our cause
+	desc = "EVT1914_2032001_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT" 
+		ai_chance = 99
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = 300 }
+		command = { type = wakeleader which = 495040 }	#Muhammad Sayf al-Nasr
+		command = { type = wakeleader which = 495041 }	#Ahmad al-Muraid
+		command = { type = wakeleader which = 495042 }	#Sughayr al-Muraid
+		command = { type = wakeleader which = 495043 }	#Ramadan al-Shitawi al-Suwayhli
+		command = { type = wakeleader which = 495044 }	#Abd al-Nabi al-Khayr
+		command = { type = wakeleader which = 495045 }	#Abdallah bin Shaban
+		command = { type = wakeleader which = 495046 }	#Ali Tantush
+		command = { type = wakeleader which = 495047 }	#Umar Muntasir
+		command = { type = wakeleader which = 495048 }	#Ahmad al-Murayyid
+		command = { type = wakeleader which = 495049 }	#Abd al-Nabi Bilkhayr
+		command = { type = wakeleader which = 495050 }	#Abd al-Rahman Azzam
+		command = { type = wakeleader which = 495051 }	#Salim Abd al-Nabi al-Zintani
+		command = { type = wakeleader which = 495052 }	#Muhammad Suf al-Mahmudi
+		command = { type = wakeleader which = 495053 }	#Kalifah bin Askar
+		command = { type = wakeleader which = 495054 }	#Belqasem bin Kricha
+		command = { type = wakeleader which = 495055 }	#Ahmad Suni 
+		command = { type = wakeleader which = 495056 }	#Mahdi Suni
+		command = { type = wakeleader which = 495057 }	#Harb al-Naili	
+		command = { type = activate_division which = 25010 value = 17 where = 751 when = 0 } #"Awlad Busayf tribe"	#Gharyan
+		command = { type = activate_division which = 25010 value = 18 where = 758 when = 0 } #"Warfalla tribe"		#Bu Nujaym
+		command = { type = activate_division which = 25010 value = 21 where = 776 when = 0 } #"Hutman tribe"		#Sabha
+		command = { type = activate_division which = 25010 value = 22 where = 755 when = 0 } #"Riyah tribe"			#Houn
+		#command = { type = add_corps which = "" value = land when = 495052 where = 752 } #Az Zawiyah
+		command = { type = activate_division which = 25010 value = 15 where = 752 when = 0} #"Mahamid tribe"
+		#command = { type = add_corps which = "" value = land when = 495054 where = 753 } #Ghadamis
+		command = { type = activate_division which = 25010 value = 16 where = 753 when = 0 } #"Ibadi tribe"
+		#command = { type = add_corps which = "" value = land when = 495043 where = 756 } #Sirt
+		command = { type = activate_division which = 25010 value = 19 where = 756 when = 0 } #"Awlad Sulayman tribe"
+		command = { type = activate_division which = 25010 value = 20 where = 756 when = 0 } #"Jamaat tribe"
+	}
+}
+
+event = {
+	id = 2145535 # The Senussi are ready to strike
+	country = OTT
+
+	decision = {
+		event = 2006517
+		NOT = { war = { country = OTT country = LBY } }
+		NOT = { alliance = { country = OTT country = LBY } }
+		NOT = { alliance = { country = GER country = LBY } }
+		NOT = { alliance = { country = RUS country = LBY } }
+		NOT = { alliance = { country = FRA country = LBY } }
+		NOT = { alliance = { country = ITA country = LBY } }
+		NOT = { alliance = { country = ENG country = LBY } }
+	}
+	
+	decision_trigger = {
+		war = { country = OTT country = ENG }
+		NOT = { war = { country = ENG country = LBY } }
+		money = 50
+		supplies = 500
+	}
+	
+	trigger = {
+		event = 2006517
+		NOT = { war = { country = OTT country = LBY } }
+		NOT = { alliance = { country = OTT country = LBY } }
+		NOT = { alliance = { country = GER country = LBY } }
+		NOT = { alliance = { country = RUS country = LBY } }
+		NOT = { alliance = { country = FRA country = LBY } }
+		NOT = { alliance = { country = ITA country = LBY } }
+		NOT = { alliance = { country = ENG country = LBY } }
+		war = { country = OTT country = ENG }
+		NOT = { war = { country = ENG country = LBY } }		
+	}
+	
+	name = "EVT1914_2145535_NAME" #The Senussi are ready to strike
+	desc = "EVT1914_2145535_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+	decision_picture = "decision_austrian_troops_jerusalem"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 121
+	deathdate = { day = 29 month = december year = 1919 }
+	
+	action = {
+		name = "EVT1914_2145535_ACTIONA" #Ask the Senussi to launch a campaign against Egypt
+		ai_chance = 99
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 2032002 } #LBY The Ottomans want us to attack Egypt
+	}
+	action = {
+		name = "ACTION_NAME_NO_NEED"
+		ai_chance = 1
+		command = { type = belligerence value = -2 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 2032002 # The Ottomans want us to attack Egypt
+	country = LBY
+
+	name = "EVT1914_2032002_NAME" #The Ottomans want us to attack Egypt
+	desc = "EVT1914_2145535_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+	
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 99
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = money value = 50 }
+		command = { type = supplies value = 500 }
+		command = { trigger = { NOT = { technology = 1830 } } type = gain_tech which = 1830 } #Logistics 1911
+		command = { trigger = { NOT = { technology = 6510 } } type = gain_tech which = 6510 } #19th Century tactics
+		command = { trigger = { NOT = { technology = 6530 } } type = gain_tech which = 6530 } #20th century military Concept
+		command = { type = war which = ENG }
+		command = { type = manpowerpool value = 20 }
+		command = { trigger = { alliance = { country = ENG country = FRA } } type = non_aggression which = LBY where = FRA }
+		command = { trigger = { alliance = { country = ENG country = ITA } } type = non_aggression which = LBY where = ITA }
+		command = { type = trigger which = 2145536 } #OTT The Senussi accepted our proposal
+		command = { type = event which = 2032003 where = LBY when = 2 }	#LBY Truce with Italy and France
+		command = { type = wakeminister which = 495043 } #Abdurrahman Nafiz Gürman (Chief of Staff)
+		command = { type = wakeminister which = 495044 } #Nuri Killigil (Chief of Army)	
+		command = { type = wakeminister which = 495045 } #Ishak Ferneli (Chief of Army)	
+		command = { type = wakeminister which = 495046 } #Cafer al-Askeri (Chief of Army)
+		command = { type = chiefofstaff which = 495043 } #Abdurrahman Nafiz Gürman (Chief of Staff)
+		command = { type = chiefofarmy which = 495044 } #Nuri Killigil (Chief of Army)	
+		command = { type = wakeleader which = 495058 }	#Cafer al-Askeri
+		command = { type = wakeleader which = 495059 }	#Nuri Killigil
+		command = { type = wakeleader which = 495060 }	#Ishak Ferneli
+		command = { type = activate_division which = 25010 value = 23 where = 771 when = 0 } #Libyan infantry division which was trained by Ottoman officers
+		command = { type = activate_division which = 25010 value = 24 where = 808 when = 1 } #"Dar Fur Rebels"	#Nayala
+	}
+	
+	action = {
+		name = "ACTION_NAME_REFUSE"
+		ai_chance = 1
+		command = { type = belligerence value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 2145536 # The Senussi accepted our proposal
+	country = OTT
+	save_date = yes	
+
+	name = "EVT1914_2145536_NAME" #The Senussi accepted our proposal
+	desc = "EVT1914_2145536_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -1 }
+		command = { trigger = { ai = no } type = money value = -50 }
+		command = { trigger = { ai = no } type = supplies value = -500 }			
+		command = { type = sleepleader which = 720044 }	#Nuri Killigil
+		command = { type = sleepleader which = 720087 }	#Cafer al-Askeri
+	}
+}
+
+event = {
+	id = 2032003 # Truce with Italy and France
+	country = LBY
+	persistent = yes
+
+	trigger = {
+		NOT = { under_attack = LBY } #if LBY is under attack, then it's probably a DoW from a human player, so no truce
+		NOT = { participant = { country = LBY value = 4 } } #Senussi not allied with anyone
+		OR = {
+			AND = {
+				war = { country = LBY country = ITA }
+				NOT = { non_aggression = { country = LBY country = ITA } }
+			}
+			AND = {
+				war = { country = LBY country = FRA }
+				NOT = { non_aggression = { country = LBY country = FRA } }
+			}
+		}
+	} 
+	
+	name = "EVT1914_2032003_NAME" #Truce with Italy and France
+	desc = "EVT1914_2032003_DESC" 
+	style = 2
+	picture = "negotiaton"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 16
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = {	trigger = { war = { country = LBY country = ITA } NOT = { non_aggression = { country = LBY country = ITA } } } type = non_aggression which = LBY where = ITA }
+		command = {	trigger = { war = { country = LBY country = FRA } NOT = { non_aggression = { country = LBY country = FRA } } } type = non_aggression which = LBY where = FRA }
+	}
+	action = {
+		name = "ACTION_NAME_NO"
+		ai_chance = 0
+		trigger = { ai = no } #options for the human player only
+		command = { type = belligerence value = 5 }
+	}
+}
+
+event = {
+	id = 2191585 # The Senussi are at war with the British
+	country = U08
+
+	decision = {
+		war = { country = OTT country = ENG }
+		war = { country = GER country = ENG	}
+		war = { country = LBY country = ENG	}
+		NOT = { 
+			war = { country = U08 country = LBY }
+		}
+	}
+	
+	decision_trigger = {
+		war = { country = LBY country = ENG	}
+		alliance = { country = GER country = OTT }
+		money = 50
+		supplies = 500		
+	}
+	
+	trigger = {
+		war = { country = OTT country = ENG }
+		war = { country = GER country = ENG	}
+		war = { country = LBY country = ENG	}
+		NOT = { 
+			war = { country = U08 country = LBY }
+		}
+		alliance = { country = GER country = OTT }
+	}
+	
+	name = "EVT1914_2191585_NAME" # The Senussi are at war with the United Kingdom
+	desc = "EVT1914_2191585_DESC" 
+	style = 2
+	picture = "asienkorps"
+	decision_picture = "decision_asienkorps"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 121
+	deathdate = { day = 29 month = december year = 1919 }
+	
+	action = {
+		name = "EVT1914_2191585_ACTIONA" #Send support to the Senussi
+		ai_chance = 99
+		command = { type = relation which = OTT value = 20 }
+		command = { trigger = { ai = no } type = money value = -50 }
+		command = { trigger = { ai = no } type = supplies value = -500 }
+		command = { type = trigger which = 2032004 } #LBY Support from the Germans
+	}
+	action = {
+		name = "EVT1914_2191585_ACTIONB" #Forget about them
+		ai_chance = 1
+		command = { type = relation which = OTT value = -5 }
+	}
+}
+
+event = {
+	id = 2032004 # Support from the Germans
+	country = LBY
+
+	name = "EVT1914_2032004_NAME" #Support from the Germans
+	desc = "EVT1914_2191585_DESC" 
+	style = 2
+	picture = "asienkorps"
+
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -1 }
+		command = { type = money value = 50 }
+		command = { type = supplies value = 500 }
+		command = { trigger = { NOT = { technology = 1020 } } type = gain_tech which = 1020 } #1897 Infantry
+		command = { trigger = { technology = 1020 NOT = { technology = 1030 } } type = gain_tech which = 1030 } #1907 Infantry
+		command = { trigger = { NOT = { technology = 1170 } } type = gain_tech which = 1170 } #1897 Light Infantry
+		command = { trigger = { technology = 1170 NOT = { technology = 1180 } } type = gain_tech which = 1180 } #1907 Light Infantry
+		command = { trigger = { NOT = { technology = 13070 } } type = gain_tech which = 13070 } #1897 Cavalry Infantry
+		command = { trigger = { technology = 13070 NOT = { technology = 13080 } } type = gain_tech which = 13080 } #1907 Cavalry Infantry
+	}
+}
+
+event = {
+	id = 2032005 # The British defeated us
+	country = LBY
+
+	trigger = {
+		war = { country = LBY country = ENG	}
+		OR = {
+			NOT = { event = 2145536 } #The Senussi accepted our proposal
+			event = { id = 2145536 days = 120 } #120 days passed
+		}
+		OR = {
+			control = { province = 770 data = -2 } #Al Jaghbub controlled by enemy
+			control = { province = 772 data = -2 } #Bir el Gubi controlled by enemy
+			AND = {
+				#Historical, Egyptian border under British control with British troops guarding it
+				control = { province = 779 data = -2 } #Siwah controlled by enemy
+				control = { province = 781 data = -2 } #As Sollum controlled by enemy				
+				control = { province = 782 data = -2 } #Bir Baylih controlled by enemy
+				#garrison = { country = -2 province = 782 type = land size = 4 area = yes } 
+			}
+		}
+	}
+	
+	name = "EVT1914_2032005_NAME" # The British defeated us
+	desc = "EVT1914_2032005_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2032005_ACTIONA" #Offer a white peace
+		ai_chance = 100
+		command = { type = trigger which = 2001575 } #ENG The Senussi sue for peace
+	}
+	action = {
+		name = "ACTION_NAME_NEVER"
+		ai_chance = 0
+		command = { type = belligerence value = 10 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 2001575 # The Senussi sue for peace
+	country = ENG
+
+	name = "EVT1914_2001575_NAME" # The Senussi sue for peace
+	desc = "EVT1914_2032005_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = non_aggression which = ENG where = LBY }
+		command = { type = trigger which = 2032006 } #LBY Peace with the British
+		command = { type = wakeminister which = 495037 } #Muhammad Idris al-Senussi (Head of State)	
+		command = { type = wakeminister which = 495038 } #Muhammad Idris al-Senussi (Head of Government)	
+		command = { type = wakeminister which = 495039 } #Muhammad Idris al-Senussi (Foreign Minister)	
+		command = { type = wakeminister which = 495040 } #Muhammad Idris al-Senussi (Minister of Armament)	
+		command = { type = wakeminister which = 495041 } #Muhammad Idris al-Senussi (Minister of Security)	
+		command = { type = wakeminister which = 495042 } #Muhammad Idris al-Senussi (Head of Military Intelligence)			
+	}
+	action = {
+		name = "ACTION_NAME_REFUSE"
+		ai_chance = 0
+		command = { type = dissent value = 7 }
+		command = { type = belligerence value = 10 }
+	}
+}
+
+event = {
+	id = 2032006 # Peace with the British
+	country = LBY
+
+	name = "EVT1914_2032006_NAME" # Peace with the British
+	desc = "EVT1914_2032005_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+
+	action = {
+		name = "EVT1914_2032006_ACTIONA" #Ok, but ask Italy for recognition (historical)
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = ENG value = 1  }						
+		command = { type = headofstate which = 495037 } #Muhammad Idris al-Senussi
+		command = { type = headofgovernment which = 495038 } #Muhammad Idris al-Senussi
+		command = { type = foreignminister which = 495039 } #Muhammad Idris al-Senussi
+		command = { type = armamentminister which = 495040 } #Muhammad Idris al-Senussi
+		command = { type = ministerofsecurity which = 495041 } #Muhammad Idris al-Senussi
+		command = { type = ministerofintelligence which = 495042 } #Muhammad Idris al-Senussi		
+		command = { type = trigger which = 2006518 } #ITA Recognize Idris al-Sanusi as Emir of Cyrenaica and Fezzan
+		command = { type = relation which = ITA value = 50 }
+		command = { type = sleepminister which = 495031 } #Ahmed Sharif al-Senussi
+		command = { type = sleepminister which = 495043 } #Abdurrahman Nafiz Gürman (Chief of Staff)
+		command = { type = sleepminister which = 495044 } #Nuri Killigil (Chief of Army)	
+		command = { type = sleepminister which = 495045 } #Ishak Ferneli (Chief of Army)	
+		command = { type = sleepminister which = 495046 } #Cafer al-Askeri (Chief of Army)
+		command = { type = sleepleader which = 495058 }	#Cafer al-Askeri
+		command = { type = sleepleader which = 495059 }	#Nuri Killigil
+		command = { type = sleepleader which = 495060 }	#Ishak Ferneli
+	}
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 0
+		command = { type = dissent value = -2 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = ENG value = 1  }
+		command = { type = headofstate which = 495037 } #Muhammad Idris al-Senussi
+		command = { type = headofgovernment which = 495038 } #Muhammad Idris al-Senussi
+		command = { type = foreignminister which = 495039 } #Muhammad Idris al-Senussi
+		command = { type = armamentminister which = 495040 } #Muhammad Idris al-Senussi
+		command = { type = ministerofsecurity which = 495041 } #Muhammad Idris al-Senussi
+		command = { type = ministerofintelligence which = 495042 } #Muhammad Idris al-Senussi	
+		command = { type = trigger which = 2006518 } #ITA Recognize Idris al-Sanusi as Emir of Cyrenaica and Fezzan
+		command = { type = sleepminister which = 495031 } #Ahmed Sharif al-Senussi
+		command = { type = sleepminister which = 495043 } #Abdurrahman Nafiz Gürman (Chief of Staff)
+		command = { type = sleepminister which = 495044 } #Nuri Killigil (Chief of Army)	
+		command = { type = sleepminister which = 495045 } #Ishak Ferneli (Chief of Army)	
+		command = { type = sleepminister which = 495046 } #Cafer al-Askeri (Chief of Army)
+		command = { type = sleepleader which = 495058 }	#Cafer al-Askeri
+		command = { type = sleepleader which = 495059 }	#Nuri Killigil
+		command = { type = sleepleader which = 495060 }	#Ishak Ferneli
+	}
+}
+
+event = {
+	id = 2006518 # Recognize Idris al-Sanusi as Emir of Cyrenaica and Fezzan
+	country = ITA
+
+	name = "EVT1914_2006518_NAME" # Recognize Idris al-Sanusi as Emir of Cyrenaica and Fezzan
+	desc = "EVT1914_2032005_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+
+	action = {
+		name = "EVT1914_2006518_ACTIONA" #Fine, for now (historical)
+		ai_chance = 100
+		command = { trigger = { relation = { which = LBY value = 30 } } type = set_relation which = LBY value = 30 }
+		command = { type = dissent value = -1 }
+		command = { type = make_puppet which = LBY }
+		#command = { type = removeclaim which = 750 } #Tripoli
+		command = { type = removeclaim which = 751 } #Gharyan
+		command = { type = removeclaim which = 752 } #Az Zawiyah
+		command = { type = removeclaim which = 753 } #Ghadamis
+		command = { type = removeclaim which = 754 } #Maradah
+		command = { type = removeclaim which = 755 } #Houn
+		command = { type = removeclaim which = 756 } #Sirt
+		#command = { type = removeclaim which = 757 } #Misratah
+		command = { type = removeclaim which = 758 } #Bu Nujaym
+		command = { type = removeclaim which = 759 } #El Agheila
+		command = { type = removeclaim which = 760 } #Msus
+		#command = { type = removeclaim which = 761 } #Benghazi
+		command = { type = removeclaim which = 762 } #Agedabia
+		command = { type = removeclaim which = 763 } #Qaminis
+		command = { type = removeclaim which = 764 } #Al Bayda
+		#command = { type = removeclaim which = 765 } #Tobruk
+		command = { type = removeclaim which = 766 } #Al Mukhayla
+		command = { type = removeclaim which = 767 } #Gazala
+		#command = { type = removeclaim which = 768 } #Darnah
+		command = { type = removeclaim which = 769 } #Bir Hakeim
+		command = { type = removeclaim which = 770 } #Al Jaghbub
+		command = { type = removeclaim which = 771 } #Bardia
+		command = { type = removeclaim which = 772 } #Bir el Gubi
+		command = { type = removeclaim which = 773 } #Jalu
+		command = { type = removeclaim which = 774 } #Al Jawf
+		command = { type = removeclaim which = 775 } #Wadi al Hamim
+		command = { type = removeclaim which = 776 } #Sabha;Sabha
+		command = { type = removeclaim which = 777 } #Ayn Ath Talab
+		command = { type = event which = 2032009 where = LBY when = 2 } #LBY Keep our isolationism
+	}
+	action = {
+		name = "ACTION_NAME_NEVER"
+		ai_chance = 0
+		command = { trigger = { non_aggression = { country = LBY country = ITA } } type = end_non_aggression which = LBY where = ITA }
+		command = { type = war which = LBY }
+		command = { type = trigger which = 2032001 } #LBY The Tripolitanian leaders rally to our cause
+		command = { type = sleepevent which = 2032003 } #LBY Truce with Italy and France
+		command = { type = unlock_division which = 23500 value = 74 } #Regio Corpo Truppe Coloniali della Tripolitania / Gruppo Coloniale della Tripolitania
+		command = { type = unlock_division which = 23500 value = 75 } #Regio Corpo Truppe Coloniali della Tripolitania / Cacciatori d'Africa
+		command = { type = unlock_division which = 23500 value = 76 } #Regio Corpo Truppe Coloniali della Tripolitania / Cavalleria Sahariana
+		command = { type = unlock_division which = 23500 value = 78 } #Regio Corpo Truppe Coloniali della Cirenaica / Gruppo Coloniale della Cirenaica
+		command = { type = unlock_division which = 23500 value = 79 } #Regio Corpo Truppe Coloniali della Cirenaica / 3o Gruppo Coloniale dell'Eritrea
+		command = { type = unlock_division which = 23500 value = 80 } #Regio Corpo Truppe Coloniali della Cirenaica / Gruppo di Savari
+	}
+}
+
+event = {
+	id = 2006519 # Revoke the authonomy of Senussia!
+	country = ITA
+
+	decision = {
+		puppet = { country = LBY country = ITA }
+	}
+	
+	decision_trigger = {
+		government = fascist
+		garrison = { country = ITA province = 761 type = land size = 10 area = 2 } #at least 10 italian land divisions in region of Benghazi
+	}
+	
+	trigger = {
+		puppet = { country = LBY country = ITA }
+		government = fascist
+		garrison = { country = ITA province = 761 type = land size = 10 area = 2 } #at least 10 italian land divisions in region of Benghazi
+	}
+	
+	name = "EVT1914_2006519_NAME" # Revoke the authonomy of Senussia!
+	desc = "EVT1914_2006519_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+	decision_picture = "decision_grand_offensive5"
+
+	date = { day = 0 month = january year = 1919 }
+	offset = 151
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_WAR"
+		command = { type = belligerence value = 5 }
+		command = { trigger = { non_aggression = { country = LBY country = ITA } } type = end_non_aggression which = LBY where = ITA }
+		command = { type = war which = LBY }
+		command = { type = sleepevent which = 2032003 } #LBY Truce with Italy and France
+		command = { type = unlock_division which = 23500 value = 74 } #Regio Corpo Truppe Coloniali della Tripolitania / Gruppo Coloniale della Tripolitania
+		command = { type = unlock_division which = 23500 value = 75 } #Regio Corpo Truppe Coloniali della Tripolitania / Cacciatori d'Africa
+		command = { type = unlock_division which = 23500 value = 76 } #Regio Corpo Truppe Coloniali della Tripolitania / Cavalleria Sahariana
+		command = { type = unlock_division which = 23500 value = 78 } #Regio Corpo Truppe Coloniali della Cirenaica / Gruppo Coloniale della Cirenaica
+		command = { type = unlock_division which = 23500 value = 79 } #Regio Corpo Truppe Coloniali della Cirenaica / 3o Gruppo Coloniale dell'Eritrea
+		command = { type = unlock_division which = 23500 value = 80 } #Regio Corpo Truppe Coloniali della Cirenaica / Gruppo di Savari
+	}
+}
+
+event = {
+	id = 2006520 # The Senussi defeated us
+	country = ITA
+
+	trigger = {
+		war = { country = LBY country = ITA }
+		region = { region = "Libya" country = LBY data = 1 value = 100 } #all provinces of Libya region controlled by Senussi
+	}
+	
+	name = "EVT1914_2006520_NAME" # The Senussi defeated us
+	desc = "EVT1914_2006520_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 61
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2006520_ACTIONA" #Offer peace
+		ai_chance = 100
+		command = { type = belligerence value = -2 }
+		command = { type = trigger which = 2032007 } ## The Senussi defeated us
+	}
+	action = {
+		name = "ACTION_NAME_NEVER"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 2032007 # We defeated the Italians
+	country = LBY
+
+	name = "EVT1914_2032007_NAME" # We defeated the Italians
+	desc = "EVT1914_2032007_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 2006521 } #ITA Peace with the Senussi
+	}
+	action = {
+		name = "ACTION_NAME_NEVER"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 2006521 # Peace with the Senussi
+	country = ITA
+
+	name = "EVT1914_2006521_NAME" # Peace with the Senussi
+	desc = "EVT1914_2006521_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = peace which = LBY value = 0 }
+		command = { type = secederegion which = LBY value = "Libya" when = 1 }
+		command = { type = removeclaim which = 750 } #Tripoli
+		command = { type = removeclaim which = 751 } #Gharyan
+		command = { type = removeclaim which = 752 } #Az Zawiyah
+		command = { type = removeclaim which = 753 } #Ghadamis
+		command = { type = removeclaim which = 754 } #Maradah
+		command = { type = removeclaim which = 755 } #Houn
+		command = { type = removeclaim which = 756 } #Sirt
+		command = { type = removeclaim which = 757 } #Misratah
+		command = { type = removeclaim which = 758 } #Bu Nujaym
+		command = { type = removeclaim which = 759 } #El Agheila
+		command = { type = removeclaim which = 760 } #Msus
+		command = { type = removeclaim which = 761 } #Benghazi
+		command = { type = removeclaim which = 762 } #Agedabia
+		command = { type = removeclaim which = 763 } #Qaminis
+		command = { type = removeclaim which = 764 } #Al Bayda
+		command = { type = removeclaim which = 765 } #Tobruk
+		command = { type = removeclaim which = 766 } #Al Mukhayla
+		command = { type = removeclaim which = 767 } #Gazala
+		command = { type = removeclaim which = 768 } #Darnah
+		command = { type = removeclaim which = 769 } #Bir Hakeim
+		command = { type = removeclaim which = 770 } #Al Jaghbub
+		command = { type = removeclaim which = 771 } #Bardia
+		command = { type = removeclaim which = 772 } #Bir el Gubi
+		command = { type = removeclaim which = 773 } #Jalu
+		command = { type = removeclaim which = 774 } #Al Jawf
+		command = { type = removeclaim which = 775 } #Wadi al Hamim
+		command = { type = removeclaim which = 776 } #Sabha;Sabha
+		command = { type = removeclaim which = 777 } #Ayn Ath Talab
+	}
+}
+
+event = {
+	id = 2032008 # Recognize Ottomans sovereignty over us
+	country = LBY
+
+	decision = {
+		event = 2006517 # ITA The supporters of Senussi are taking control of the inner provinces
+		exists = OTT
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+	}
+	decision_trigger = {
+		NOT = { ispuppet = LBY }
+		NOT = { ispuppet = OTT }
+		NOT = { atwar = LBY }
+		NOT = { atwar = OTT }
+		region = { region = "Libya" country = LBY data = 1 value = 100 } #all provinces of Libya region controlled by Senussi
+	}
+	trigger = {
+		event = 2006517 # ITA The supporters of Senussi are taking control of the inner provinces
+		exists = OTT
+		region = { region = "Libya" country = LBY data = 1 value = 100 } #all provinces of Libya region controlled by Senussi
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres			
+		NOT = { ispuppet = LBY }
+		NOT = { ispuppet = OTT }
+		NOT = { atwar = LBY }
+		NOT = { atwar = OTT }	
+	}
+	
+	name = "EVT1914_2032008_NAME" # Recognize Ottomans sovereignty over us
+	desc = "EVT1914_2032008_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 181
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 95
+		command = { type = relation which = OTT value = 50 }
+		command = { type = trigger which = 2145537 } # OTT Senussia recognizes our suzerainity over them
+	}
+	action = {
+		name = "ACTION_NAME_NEVER"
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 2145537 # Senussia recognizes our suzerainity over them
+	country = OTT
+
+	name = "EVT1914_2145537_NAME" # Senussia recognizes our suzerainity over them
+	desc = "EVT1914_2145537_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 95
+		command = { type = relation which = LBY value = 50 }
+		command = { type = make_puppet which = LBY }
+	}
+	action = {
+		name = "ACTION_NAME_REFUSE"
+		ai_chance = 5
+		command = { type = relation which = LBY value = -80 }
+	}
+}
+
+event = {
+	id = 2001576 # The prisoner Jafar al-Askari wants to join the Arab revolt
+	country = ENG
+
+	decision = {
+		OR= {
+			event = 2032006 #LBY Peace with the British
+			NOT = { exists = LBY }
+		}
+		exists = OTT
+	}
+	decision_trigger = {
+		event = 2233502 #The Great Arab Revolt
+		war = { country = ENG country = OTT }
+		war = { country = U50 country = OTT }
+		NOT = { war = { country = U50 country = ENG } }
+		money = 20
+		supplies = 200
+	}
+	trigger = {
+		OR= {
+			event = 2032006 #LBY Peace with the British
+			NOT = { exists = LBY }
+		}
+		exists = OTT
+		event = 2233502 #The Great Arab Revolt
+		war = { country = ENG country = OTT }
+		war = { country = U50 country = OTT }
+		NOT = { war = { country = U50 country = ENG } }		
+	}
+	
+	name = "EVT1914_2001576_NAME" # The prisoner Jafar al-Askari wants to join the Arab revolt
+	desc = "EVT1914_2001576_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 121
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 95
+		command = { trigger = { ai = no } type = money value = -20 }
+		command = { trigger = { ai = no } type = supplies value = -200 }		
+		command = { type = trigger which = 2233506 } # U50 The British sent military leaders to support our case
+	}
+	action = {
+		name = "ACTION_NAME_NEVER"
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 2233506 # The British sent military leaders to support our case
+	country = U50
+
+	name = "EVT1914_2233506_NAME" # The British sent military leaders to support our case
+	desc = "EVT1914_2001576_DESC" 
+	style = 2
+	picture = "WW1_Offensive"
+
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = money value = 50 }
+		command = { type = supplies value = 500 }
+		#wake leaders
+	}
+}
+
+event = {
+	id = 2032009 # Keep our isolationism
+	country = LBY
+
+	name = "EVT1914_2032009_NAME" # Keep our isolationism
+	desc = "EVT1914_2032009_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action = {
+		name = "ACTION_NAME_NEUTRAL"
+		command = { type = set_domestic which = interventionism value = 1 }	
+		command = { type = leave_alliance when = 1 }
+	}
+}
+#+ following changes
+#A) Event where ITA joins Entente
+#-> triggers event 7 after 1 day(if Senussi not in any alliance and at war with ITA + NOT = { flag = LBY_ITA_war} ) to make Truce between ITA and LBY
+#B) Balmoral Castle Treaty
+#-> British Secedes part of Egypt and Sudan to Senussi (the current Senussi cores?)
+#C) Grenoble Treaty
+#-> ITA secede whole Libya to Senussi
+#D) [29/07/2012 16:49:50 ] Arturius: btw, Italy completed annexion of Fezzan in August 1914. What about placing a rebel unit there?
+#   [29/07/2012 16:51:27] AC: we can use a 5% strenght locked REB unit as we did for the Mexican revolution anyway
+#   [29/07/2012 16:56:48 ] Arturius: we could place an Italian unit at a neighbouring province
+#
+#+ 1. Sometimes Italy joins Entente while Senussi already at war with ENG, so ITA is at war with Senussi - perhaps it is not a problem
+#Change treaty of london to call event ### 2032003 LBY Truce with Italy and France after a few days

@@ -1,0 +1,380 @@
+#########################################
+#Sino-Japanese Relations 1933-1936
+#########################################
+#1330120000 CHI Tanggu Truce
+#1330120001 JAP Tanggu truce
+#1330120002 U74 Establishment of Autonomous Government
+#1330120003 CHI He-Umezu Agreement
+#1330120004 JAP He-Umezu Agreement
+#1330120005 JAP He-Umezu Agreement - refused
+#1330120006 CHI Chin-Doihara Agreement
+#1330120007 JAP Chin-Doihara Agreement
+#1330120038 CSX Chin-Doihara Agreement
+#1330120039 JAP Chin-Doihara Agreement - refused
+#########################################
+
+# Tangu Truce
+event = {
+	id = 1330120000
+	country = CHI
+    
+	trigger = {	
+		OR = {
+		exists = MAN
+		control = { province = 1214 data = JAP }
+		}
+		OR = {
+		control = { province = 1216 data = MAN }
+		control = { province = 1216 data = JAP }
+		}
+		OR = {
+		control = { province = 1236 data = MAN }
+		control = { province = 1236 data = JAP }
+		}
+		NOT = {
+		exists = U67
+		event = 1330120001
+		event = 2011022
+		puppet = { country = JAP country = CHI }
+		}
+	}
+
+	name = EVT_1330120000_NAME
+	desc = EVT_1330120000_DESC
+	picture = "ccip_mukden"
+    style = 2
+
+    date = { day = 30 month = may year = 1933 }
+    offset = 1
+    deathdate = { day = 29 month = december year = 1963 }
+
+	action = { 
+    	trigger = { 
+            not = {
+                war = { country = JAP country = CHI }
+            }
+        }
+		name = ACTION_NAME_DAMN 
+		ai_chance = 100
+		command = { trigger = { ai = no } type = dissent value = 5 }
+		command = { type = trigger which = 1330120001 } #JAP Tanggu truce
+		command = { type = foreignminister which = 55110 } 
+	}
+	action = {
+        trigger = {
+            not = {
+                war = { country = JAP country = CHI }
+            }
+            or = {
+                ai = no
+                and = {
+                    atwar = no
+                    ic = 120
+                }
+            }
+        }
+        ai_chance = 0
+		name = ACTION_NAME_WAR 
+		command = { type = dissent value = -10 }
+		command = { type = war which = JAP }
+        #unlocks divisions - that's what they're here for
+		#29th Army  -  Beijing
+		command = { type = unlock_division which = 22000 value = 18 } #37th Division
+		command = { type = unlock_division which = 22000 value = 19 } #38th Division
+		command = { type = unlock_division which = 22000 value = 20 } #132nd Division
+		command = { type = unlock_division which = 22000 value = 21 } #143rd Division
+		command = { type = unlock_division which = 22000 value = 22 } #9th Cavalry Division
+		command = { type = unlock_division which = 22000 value = 23 } #39th Independent Brigade
+		command = { type = unlock_division which = 22000 value = 24 } #13th Independent Cavalry Brigade
+		command = { type = unlock_division which = 22000 value = 25 } #29th Army Special Brigade
+		command = { type = unlock_division which = 22000 value = 26 } #29th Army HQ
+		command = { trigger = { exists = U64 puppet = { country = U64 country = CHI } } type = inherit which = U64 }
+		#Hebei Provincial Security Group  -  Beijing
+		command = { type = unlock_division which = 22000 value = 28 } #North Hebei Security Group
+		command = { type = unlock_division which = 22000 value = 29 } #South Hebei Security Group
+	}	
+}
+
+event = {
+	id = 1330120001 #Tanggu truce
+	country = JAP
+
+    #Triggered
+
+	name = EVT_1330120000_NAME
+	desc = EVT_1330120001_DESC
+
+	picture = "ccip_mukden"
+    style = 2
+
+	action = { 
+		name = ACTION_NAME_EXCELLENT #no war option as Hirohito only authorized advances up to the Wall
+		command = { type = dissent value = -1 }
+	}	
+}
+
+event = {
+	id = 1330120002
+	country = UCS
+
+    # Triggered
+
+	name = "Establishment of Autonomous Government" #Tanggu Truce
+	desc = ""
+	picture = "ccip_mukden"
+    style = 2
+
+	action = { 
+		name = ACTION_NAME_EXCELLENT
+		command = { type = access which = JAP } #Jap was allowed to observe compliance
+		command = { type = access which = CHI } #Represent CHI garrison in Beijing
+		command = { type = add_corps which = "Demilitarized Zone Peace Preservation Corps" value = land where = 1247 } 
+		command = { type = add_division which = "Police Detachment" value = garrison when = 3 where = police }
+	}
+}
+
+# He-Umezu Agreement
+event = {
+	id = 1330120003
+	country = CHI
+
+	trigger = { 
+		NOT = {
+			war = { country = JAP country = CHI }
+			flag = JAP_CHI_Strike
+		}
+        exists = U64 
+        event = 1330120000 #CHI Tanggu Truce
+	}
+
+	name = EVT_1330120003_NAME
+	desc = EVT_1330120003_DESC
+	picture = "ccip_mukden"
+    style = 2
+
+
+	date = { day = 0 month = may year = 1935 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1935 }
+
+	action = { 
+		name = ACTION_NAME_DAMN
+		ai_chance = 100
+		command = { type = dissent value = 5 }
+		command = { type = event which = 1330120004 where = JAP when = 0 } #JAP He-Umezu Agreement
+		command = { type = secedeprovince which = U64 value = 1247 when = 2 } 
+		command = { type = secedeprovince which = U64 value = 1241 when = 2 } 
+		command = { type = secedeprovince which = U64 value = 1243 when = 2 } 
+		command = { type = secedeprovince which = U64 value = 1242 when = 2 } 
+		command = { type = secedeprovince which = U64 value = 1244 when = 2 } 
+
+	}
+	action = {
+        trigger = {
+            or = {
+                ai = no
+                and = {
+                    atwar = no
+                    ic = 120
+                }
+            }
+        }
+        ai_chance = 0
+		name = ACTION_NAME_FIGHT
+		command = { type = trigger which = 1330120005 } #JAP He-Umezu Agreement - refused
+        #unlocks divisions - that's what they're here for
+		#29th Army  -  Beijing
+		command = { type = unlock_division which = 22000 value = 18 } #37th Division
+		command = { type = unlock_division which = 22000 value = 19 } #38th Division
+		command = { type = unlock_division which = 22000 value = 20 } #132nd Division
+		command = { type = unlock_division which = 22000 value = 21 } #143rd Division
+		command = { type = unlock_division which = 22000 value = 22 } #9th Cavalry Division
+		command = { type = unlock_division which = 22000 value = 23 } #39th Independent Brigade
+		command = { type = unlock_division which = 22000 value = 24 } #13th Independent Cavalry Brigade
+		command = { type = unlock_division which = 22000 value = 25 } #29th Army Special Brigade
+		command = { type = unlock_division which = 22000 value = 26 } #29th Army HQ
+		#Hebei Provincial Security Group  -  Beijing
+		command = { type = unlock_division which = 22000 value = 28 } #North Hebei Security Group
+		command = { type = unlock_division which = 22000 value = 29 } #South Hebei Security Group
+	}	
+}
+
+event = {
+	id = 1330120004
+	country = JAP
+	persistent = yes
+
+	name = EVT_1330120003_NAME
+	desc = EVT_1330120003_DESC
+	picture = "ccip_mukden"
+    style = 2
+
+	action = { 
+		trigger = {
+			country = JAP
+		}
+		name = ACTION_NAME_EXCELLENT #no war option, as CHI just ruined a perfectly good incident
+		command = { type = dissent value = -1 }
+		command = { type = event which = 1330120004 where = U74 when = 0 } #U74 He-Umezu Agreement
+	}
+}
+
+
+event = {
+	id = 1330120005 #JAP He-Umezu Agreement - refused
+	country = JAP
+
+	name = EVT_1330120005_NAME
+	desc = EVT_1330120005_DESC
+	picture = "ccip_mukden"
+        style = 2
+
+	action = { 
+		name = ACTION_NAME_DAMN
+		ai_chance = 25
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+	action = { 
+		name = EVT_20_ACTA
+		ai_chance = 75
+		command = { type = relation which = USA value = -50 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = CSX value = -50 }
+		command = { type = relation which = CGX value = -50 }
+		command = { type = relation which = CYN value = -50 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = setflag which = JAP_CHI_Strike }
+	}
+}
+
+# Chin-Doihara Agreement
+event = {
+	id = 1330120006
+	country = CHI
+
+	trigger = { 
+		NOT = {
+			war = { country = JAP country = CHI }
+			war = { country = JAP country = U64 }
+			flag = JAP_CHI_Strike
+		}
+        event = 1330120003 #CHI He-Umezu Agreement
+	}
+
+	name = EVT_1330120006_NAME
+	desc = EVT_1330120006_DESC
+	picture = "ccip_mukden"
+    style = 2
+
+
+	date = { day = 0 month = june year = 1935 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1935 }
+
+	action = { 
+		name = ACTION_NAME_DAMN
+		ai_chance = 80
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 1330120007 } #JAP Chin-Doihara Agreement
+		command = { type = trigger which = 1330120038 } #U64 Chin-Doihara Agreement
+        command = { type = secedeprovince which = JAP value = 1240 when = 2 }
+	}
+	action = { 
+        trigger = {
+            or = {
+                ai = no
+                and = {
+                    atwar = no
+                    ic = 120
+                }
+            }
+        }
+        ai_chance = 20
+		name = ACTION_NAME_FIGHT
+		command = { type = trigger which = 1330120039 } #JAP Chin-Doihara Agreement - refused
+        #unlocks divisions - that's what they're here for
+		#29th Army  -  Beijing
+		command = { type = unlock_division which = 22000 value = 18 } #37th Division
+		command = { type = unlock_division which = 22000 value = 19 } #38th Division
+		command = { type = unlock_division which = 22000 value = 20 } #132nd Division
+		command = { type = unlock_division which = 22000 value = 21 } #143rd Division
+		command = { type = unlock_division which = 22000 value = 22 } #9th Cavalry Division
+		command = { type = unlock_division which = 22000 value = 23 } #39th Independent Brigade
+		command = { type = unlock_division which = 22000 value = 24 } #13th Independent Cavalry Brigade
+		command = { type = unlock_division which = 22000 value = 25 } #29th Army Special Brigade
+		command = { type = unlock_division which = 22000 value = 26 } #29th Army HQ
+		#Hebei Provincial Security Group  -  Beijing
+		command = { type = unlock_division which = 22000 value = 28 } #North Hebei Security Group
+		command = { type = unlock_division which = 22000 value = 29 } #South Hebei Security Group
+	}	
+}
+
+event = {
+	id = 1330120007
+	country = JAP
+
+	name = EVT_1330120006_NAME
+	desc = EVT_1330120006_DESC
+	picture = "ccip_mukden"
+        style = 2
+
+	action = { 
+		name = ACTION_NAME_EXCELLENT #no war option, as CHI just ruined a perfectly good incident
+		command = { type = dissent value = -1 }
+	}	
+}
+
+event = {
+	id = 1330120038
+	country = U64 
+
+	name = EVT_1330120006_NAME
+	desc = EVT_1330120006_DESC
+	picture = "ccip_mukden"
+        style = 2
+
+	action = { 
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 5 }
+        command = { type = relation which = CHI value = -50 }
+	}	
+}
+
+event = {
+	id = 1330120039
+	country = JAP
+
+	name = EVT_1330120039_NAME
+	desc = EVT_1330120006_DESC
+	picture = "ccip_mukden"
+        style = 2
+
+	action = { 
+		name = ACTION_NAME_DAMN
+		ai_chance = 25
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+	action = { 
+		name = EVT_20_ACTA
+		ai_chance = 75
+		command = { type = setflag which = JAP_CHI_Strike }
+        command = { trigger = { exists = U74 puppet = { country = U74 country = JAP } } type = inherit when = 3 which = U74 value = 1 }
+		command = { type = relation which = USA value = -15 }
+		command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = GER value = -5 }
+		command = { type = relation which = CSX value = -50 }
+		command = { type = relation which = CGX value = -50 }
+        command = { type = relation which = CYN value = -50 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 2 }
+	}	
+}

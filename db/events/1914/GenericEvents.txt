@@ -1,0 +1,442 @@
+###
+###  Mutinies and other nasty things (NONE - 000)
+###
+### By Rhysaxiel
+###
+### 2000500	Mutinies !
+### 2000501	War weariness 
+### 2000502	General Strikes for peace
+
+event = {
+	id = 2000500	# Mutinies !
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE }   
+	
+
+	trigger = { 
+		atwar = yes
+		NOT = { local_flag = losses_mutinies }
+		losses = 1000000
+	}
+   
+	name = "EVT1914_2000500_NAME"
+	desc = "EVT1914_2000500_DESC" 
+	style = 2
+	picture = "news_paper" 
+
+	date = { day = 29 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2000500_ACTIONA" # Damn !
+		command = { type = dissent value = 2.5 }
+		command = { type = local_setflag which = losses_mutinies}
+	}
+}
+event = { 		
+	id = 2000501 # War weariness 
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE }   
+	
+	trigger = { 
+		losses = 500000
+		atwar = yes
+		NOT = { local_flag = war_weariness }
+	}
+   
+	name = "EVT1914_2000501_NAME"
+	desc = "EVT1914_2000501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 25 month = december year = 1914 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+		
+	action_a = { 		
+		name = "ACTION_NAME_DAMN" # Damn ! 	
+		command = { type = dissent value = 3 }	
+		command = { type = local_setflag which = war_weariness }	
+	} 		
+} 
+event = { 		
+	id = 2000502 # General Strikes for peace	
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE }   
+	
+	trigger = { 
+		atwar = yes
+		losses = 2000000
+		NOT = { local_flag = general_strikes }
+	}
+   
+	name = "EVT1914_2000502_NAME"
+	desc = "EVT1914_2000502_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = december year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+		
+	action_a = { 		
+		name = "EVT1914_2001502_ACTIONA" # Damn ! 		
+		command = { type = dissent value = 5 }	
+		command = { type = local_setflag which = general_strikes }	
+	} 		
+}
+
+event = { 		
+	id = 2000503 #War weariness (20% Territory Lost) - FRA, ENG, U08, U09, OTT, RUS, SOV, ITA
+	persistent = yes
+	TAG =  { FRA ENG U08 U09 OTT RUS SOV ITA }   
+	
+	trigger = {
+		atwar = yes
+		NOT = { dissent = 40 } # No death spirals on nation formation
+		NOT = { local_flag = lost_20 }
+		NOT = { lost_national = { value = 35 } }
+		or = {
+			and = {
+				country = FRA
+				region = { region = "France" country = -2 data = 1 value = 21 } # U08 starts off with soome territory.
+			}
+			and = {
+				country = ENG
+				or = {
+					region = { region = "Scotland" country = -2 data = 1 value = 10 }
+					region = { region = "England" country = -2 data = 1 value = 10 }
+				}
+			}
+			and = {
+				country = U08
+				region = { region = "Germany" country = -2 data = 1 value = 19 }
+			}
+			and = {
+				country = U09
+				lost_national = { value = 19 }
+			}
+			and = {
+				country = OTT
+				lost_national = { value = 20 }
+			}
+			and = {
+				country = RUS
+				lost_national = { value = 20 }
+			}
+			and = {
+				country = SOV
+				lost_national = { value = 20 }
+			}
+			and = {
+				country = ITA
+				region = { region = "Italy" country = -2 data = 1 value = 21 } # U09 starts off with some territory
+			}
+		}
+	}
+   
+	name = "EVT1914_2000501_NAME"
+	desc = "EVT1914_2000503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 25 month = december year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+		
+	action = { 		
+		name = "ACTION_NAME_DAMN" # Damn ! 	
+		command = { type = dissent value = 1 }
+		command = { trigger = { country = RUS } type = dissent value = 1 }
+		command = { type = local_setflag which = lost_20 }	
+	} 		
+}
+
+event = { 		
+	id = 2000504 #War weariness (30% Territory Lost) - FRA, ENG, U08, U09, OTT, RUS, SOV, ITA
+	persistent = yes
+	TAG =  { FRA ENG U08 U09 OTT RUS SOV ITA }   
+	
+	trigger = {
+		atwar = yes
+		not = { dissent = 40 }
+		local_flag = lost_20
+		NOT = { local_flag = lost_30 }
+		not = { lost_national = { value = 45 } }
+		or = {
+			and = {
+				country = FRA
+				region = { region = "France" country = -2 data = 1 value = 31 }
+			}
+			and = {
+				country = ENG
+				or = {
+					region = { region = "Scotland" country = -2 data = 1 value = 15 }
+					region = { region = "England" country = -2 data = 1 value = 15 }
+				}
+			}
+			and = {
+				country = U08
+				region = { region = "Germany" country = -2 data = 1 value = 29 }
+			}
+			and = {
+				country = U09
+				lost_national = { value = 29 }
+			}
+			and = {
+				country = OTT
+				lost_national = { value = 30 }
+			}
+			and = {
+				country = RUS
+				lost_national = { value = 30 }
+			}
+			and = {
+				country = SOV
+				lost_national = { value = 30 }
+			}
+			and = {
+				country = ITA
+				region = { region = "Italy" country = -2 data = 1 value = 31 }
+			}
+		}
+	}
+   
+	name = "EVT1914_2000501_NAME"
+	desc = "EVT1914_2000503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 25 month = december year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+		
+	action = { 		
+		name = "ACTION_NAME_DAMN" # Damn ! 	
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = RUS } type = dissent value = 1 }
+		command = { type = local_setflag which = lost_30 }	
+	} 		
+}
+
+event = {
+	id = 2000505 #War weariness (40% Territory Lost) - FRA, ENG, U08, U09, OTT, RUS, SOV, ITA, SER, BUL, ROM, GRE
+	persistent = yes
+	TAG =  { FRA ENG U08 U09 OTT RUS SOV ITA SER BUL ROM GRE }   
+	
+	trigger = {
+		atwar = yes
+		NOT = { dissent = 40 }
+		local_flag = lost_20
+		local_flag = lost_30
+		NOT = { local_flag = lost_40 } 
+		or = {
+			and = {
+				country = FRA
+				region = { region = "France" country = -2 data = 1 value = 41 }
+			}
+			and = {
+				country = ENG
+				or = {
+					region = { region = "Scotland" country = -2 data = 1 value = 20 }
+					region = { region = "England" country = -2 data = 1 value = 20 }
+				}
+			}
+			and = {
+				country = U08
+				region = { region = "Germany" country = -2 data = 1 value = 39 }
+			}
+			and = {
+				country = U09
+				lost_national = { value = 39 }
+			}
+			and = {
+				country = OTT
+				lost_national = { value = 40 }
+			}
+			and = {
+				country = RUS
+				lost_national = { value = 40 }
+			}
+			and = {
+				country = SOV
+				lost_national = { value = 40 }
+			}
+			and = {
+				country = ITA
+				region = { region = "Italy" country = -2 data = 1 value = 41 }
+			}
+			and = {
+				country = SER
+				lost_national = { value = 40 }
+			}
+			and = {
+				country = BUL
+				lost_national = { value = 40 }
+			}
+			and = {
+				country = ROM
+				lost_national = { value = 40 }
+			}
+			and = {
+				country = GRE
+				lost_national = { value = 40 }
+			}
+		}
+	}
+   
+	name = "EVT1914_2000501_NAME"
+	desc = "EVT1914_2000503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 25 month = december year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+		
+	action = { 		
+		name = "ACTION_NAME_DAMN" # Damn ! 	
+		command = { type = dissent value = 2 }
+		command = { trigger = { country = RUS } type = dissent value = 1 }
+		command = { trigger = { country = ENG } type = dissent value = 1 }
+		command = { type = local_setflag which = lost_40 }
+	} 		
+}
+
+event = {
+	id = 2000506 #War weariness (50% Territory Lost) - FRA, ENG, U08, U09, OTT, RUS, SOV, ITA
+	persistent = yes
+	TAG =  { FRA ENG U08 U09 OTT RUS SOV ITA }   
+	
+	trigger = {
+		atwar = yes
+		NOT = { dissent = 40 }
+		local_flag = lost_20
+		local_flag = lost_30
+		local_flag = lost_40
+		NOT = { local_flag = lost_50 }
+		or = {
+			and = {
+				country = FRA
+				region = { region = "France" country = -2 data = 1 value = 51 }
+			}
+			and = {
+				country = ENG
+				or = {
+					region = { region = "Scotland" country = -2 data = 1 value = 25 }
+					region = { region = "England" country = -2 data = 1 value = 25 }
+				}
+			}
+			and = {
+				country = U08
+				region = { region = "Germany" country = -2 data = 1 value = 49 }
+			}
+			and = {
+				country = U09
+				lost_national = { value = 49 }
+			}
+			and = {
+				country = OTT
+				lost_national = { value = 50 }
+			}
+			and = {
+				country = RUS
+				lost_national = { value = 50 }
+			}
+			and = {
+				country = SOV
+				lost_national = { value = 50 }
+			}
+			and = {
+				country = ITA
+				region = { region = "Italy" country = -2 data = 1 value = 51 }
+			}
+		}
+	}
+   
+	name = "EVT1914_2000501_NAME"
+	desc = "EVT1914_2000503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 25 month = december year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+		
+	action = { 		
+		name = "ACTION_NAME_DAMN" # Damn ! 	
+		command = { type = dissent value = 2 }
+		command = { trigger = { NOT = { dissent = 20 } } type = dissent value = 10 }
+		command = { trigger = { NOT = { dissent = 30 } } type = dissent value = 10 }
+		command = { trigger = { NOT = { dissent = 35 } } type = dissent value = 5 }
+		command = { type = local_setflag which = lost_50 }
+	}
+}
+
+event = {
+	id = 2000507	#War weariness
+	persistent = yes
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U49 U50 U51 U52 U53 U54 U55 U56 U57 U58 U59 U67 UTC UER UPE }   
+	
+
+	trigger = { 
+		atwar = yes
+		army = 2
+		NOT = { local_flag = mutinies }
+		OR = {
+			dissent = 20 
+			AND = { 
+				dissent = 15
+				OR = {
+				lost_VP = { value = 5 }
+				lost_IC = { value = 5 }	
+				}
+			} 
+			AND = { 
+				dissent = 10
+				OR = {
+				lost_VP = { value = 15 }
+				lost_IC = { value = 15 }	
+				}
+			} 
+			OR = {
+				lost_VP = { value = 25 }
+				lost_IC = { value = 25 }	
+			}
+		}
+	}
+   
+	name = "EVT1914_2000500_NAME"
+	desc = "EVT1914_2000503_DESC" 
+	style = 2
+	picture = "news_paper" 
+
+	date = { day = 29 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2000500_ACTIONA" # Damn !
+		command = { type = dissent value = 0.5 }
+		command = { type = disorg_division which = -1 where = 20 } #Minimum disorg value
+		command = { trigger = { army = 5 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 8 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 10 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 12 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 15 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 18 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 20 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 22 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 25 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 28 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 30 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 33 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 35 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 37 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 40 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 42 }	type = disorg_division which = -1 where = 20 }
+		command = { trigger = { army = 45 }	type = disorg_division which = -1 where = 20 }
+		command = { type = local_setflag which = mutinies }
+	}
+}

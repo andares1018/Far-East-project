@@ -1,0 +1,930 @@
+#event list
+#1400000000 - 1400001000 : China Domestic
+#1400001001 - 1400001150 : Chinese Warlord
+#1400001151 - 1400001250 : Xinjiang
+#1400001251 - 1400001500 : Conflict and War of Resistance
+#1400001501 - 1400002000 : Communist China
+
+#1400002001 - 1400003000 : Japan Domestic
+#1400003001 - 1400003500 : Japan Foreign
+
+#1400003501 - 1400003750 : Japan alternate1
+#1400003751 - 1400004000 : Japan alternate2
+
+#1400004001 - 1400004500 : Japan alternate3(Kodoha Coup)
+#1400004501 - 1400005500 : Post-war Japan
+
+#1400005501 - 1400006000 : Indochina
+
+#1400006001 - 1400006500 : Korea
+
+#1400006501 - 1400007000 : Indonesia
+
+#1400007001 - 1400007100 : Tibet
+
+#1400007101 - 1400007250 : Mongolia
+
+#1400007251 - 1400007500 : U.S and Soviet Asia-Pacific Policy
+
+#1400007501 - 1400008000 : Japanese puppet state 
+
+#1400008001 - 1400008500 : India and Burma
+
+#1400009001 - 1400009500 Minister died event(Additional)
+
+#incomplete event list
+- Post-war China event
+- Post-war Japan event
+- Japan's Victory (Alternative)
+- Japan in Wartime event
+- Communist China event 
+- Post-war Korean policy (USA and Soviet), Korea event
+- Decolonization of Indochina
+- Kodoha event redesign (Alternative) - under discussion
+- Dutch East Indies and Indonesia
+- World event 
+- World event (Alternate)
+
+
+### 1400000000 - 1400001000 : China event
+# 1400000000 CHI - New Life Movement 
+# 1400000001 CHI - Diexi earthquake 
+# 1400000002 CHI - Silver Tael-Dollar Replacement (1933) 
+# 1400000003 CHI - Currency reform (1935) 
+# 1400000004 CHI - New Air Force Advisor - Chennault 
+# 1400000005 CHI - Change of Germany Advisor - Hans von Seck 
+# 1400000006 CHI - Widespread Protests (1936) - Anti Japanese Protests 
+# 1400000007 CHI - Assassination attempt (1935) - Wang Jingwei 
+# 1400000008 CHI - Change of Germany Advisor - von Falkenhausen 
+# 1400000009 CHI - Beginning of Constitutionalization 
+# 1400000010 CHI - Pressure on Political Reform 
+# 1400000011 CHC - Agreement with Nationalists 
+# 1400000012 CHI - Political Consultative Assembly (Post-War of Resistance) 
+# 1400000013 CHC - Political Consultative Assembly 
+# 1400000014 CHI - Constituent National Assembly 
+# 1400000015 CHI - Offensive against Communists 
+# 1400000016 CHC - Demand of Nationalist government 
+# 1400000017 CHI - Negotiation with Communists 
+# 1400000018 CHC - War of Liberation 
+# 1400000019 CHI - Communists surrender 
+# 1400000020 CHI - Communists refused of offer 
+# 1400000021 CHC - Nationalist refused of offer 
+# 1400000022 CHI - National Assembly election - 1st election 
+# 1400000023 CHI - Delay in Negotiations 
+# 1400000024 CHI - End of the United front 
+# 1400000025 CHC - End of the United front 
+# 1400000026 CHI - Truce of the Civil war? - (before 2nd civil war)
+# 1400000027 CHC - Truce of the Civil war? 
+# 1400000028 USA - Financial aid to China?
+# 1400000029 CHI - Sino-American Currency Agreement 
+# 1400000030 CHI - American's refusal to support 
+# 1400000031 ENG - Currency Negotiations with China 
+# 1400000032 CHI - Partial Monetary Agreement 
+# 1400000033 CHI - Communist Sabotage 
+# 1400000034 CHI - Economic Disaster - Civil war 
+# 1400000035 CHI - Gannan New Deal 
+# 1400000036 CHI - Presidential Election - 1st Presidential Election
+# 1400000037 CHI - Temporary Provisions against the Rebellion - 2nd Civil War 
+# 1400000038 CHI - End of Temporary Provisions? - Nationalist wins? or ceasefire
+# 1400000039 CHI - Economic Reconstruction policy - Post war 
+# 1400000040 CHI - Instability in Taiwan 
+# 1400000041 CHI - Demonstration in Taipei - 2.28 Affair 
+# 1400000042 CHI - Resign of the Head of State - after the Huaihai campaign 
+# 1400000043 CHI - Change of Head of State - Li Zongren or Sun Fo 
+# 1400000044 CHI - Political Terror 
+# 1400000045 CHI - Failure of Monetary Reform - Civil War event 
+# 1400000046 CHI - Minister Resigns - Wang Wenhao 
+# 1400000047 CHI - Change of Premier - Sun Fo
+# 1400000048 CHI - Minister resigns - Sun Fo 
+# 1400000049 CHI - Change of Premier - He Yingqin 
+# 1400000050 CHI - Sudden change of Government - Yan Xishan 
+# 1400000051 CHI - Retreat to Taiwan - NWO mod event 
+# 1400000052 CHI - Change of Head of State - Chiang kai-shek 
+# 1400000053 CHI - Second Currency Reform - Post Civil War 
+# 1400000054 CHI - Industrial production is Recovered - Post War 
+# 1400000055 CHI - Request for transport ship support - Post war 
+# 1400000056 USA - China's request for transport ship - 2nd CCW submod 
+# 1400000057 CHI - Dispatch of transport ship 
+# 1400000058 CHC - Retreat of Nationalists 
+# 1400000059 CHI - Arable Rent Reduction Act - Post War 
+# 1400000060 CHI - Land Reform Problem - Post War 
+# 1400000061 CHI - Completion of the Initial Phase of the Land Reform
+# 1400000062 CHI - First Election of the Legislative Yuan - (in OTL 1948) 
+# 1400000063 CHI - Military Chaos #
+# 1400000064 CHI - Army Recovers #
+# 1400000065 CHI - Presidential Election - 2nd Presidential Election - 2nd term 
+# 1400000066 CHI - Extending the President's term? - Chiang #
+# 1400000067 CHI - Kuomintang Nomination Convention - 3rd Presidential Election #
+# 1400000068 CHI - Legislative Election - 3 years later 
+# 1400000069 CHI - Legislative Election - 6 years later 
+# 1400000070 CHI - Legislative Election - 9 years later 
+# 1400000071 CHI - Legislative Election - 12 years later 
+# 1400000072 CHI - Legislative Election - 15 years later 
+# 1400000073 CHI - Legislative Election - 18 years later #
+# 1400000074 CHI - National Assembly Election - 6 years later 
+# 1400000075 CHI - National Assembly Election - 12 years later 
+# 1400000076 CHI - National Assembly Election - 18 years later #
+# 1400000077 CHI - Opposition from factions within party (Constitutional Crisis) #
+# 1400000078 CHI - Rally of Opposition Factions (Constitutional Crisis) #
+# 1400000079 CHI - Fate of Opposition Coalition (Constitutional Crisis) #
+# 1400000080 CHI - Completion of the Land Reform 
+# 1400000081 CHI - Reorganization of Economic Policies 
+# 1400000082 CHI - Death of Chiang Kai-shek - Alternate
+# 1400000083 CHI - Extraordinary KMT Congress - Alternate
+# 1400000084 CHI - Local Warlords leave - Effects of partial defeat #
+# 1400000085 CHI - Minister Resigns - Wang Jingwei (post truce) #
+# 1400000086 CHI - Decision of National Assembly - Constitutional Amendment (Constitutional Crisis) #
+# 1400000087 CHI - Presidential Election - 3rd Presidential Election #
+# 1400000088 CHI - Presidential Election - 3rd Presidential Election (Chiang Dictatorship) #
+# 1400000089 CHI - Extraordinary National Congress (1938)
+# 1400000090 
+# 1400000091 
+# 1400000092 
+# 1400000093 
+# 1400000094 
+# 1400000095 
+# 1400000096 
+# 1400000097 
+# 1400000098 
+# 1400000099 
+# 1400000100 
+# 1400000101 
+# 1400000102 
+# 1400000103 
+# 1400000104 
+# 1400000105 
+# 1400000106 
+# 1400000107 
+# 1400000108 
+# 1400000109 
+# 1400000110 
+
+
+
+
+### 1400001001 - 1400001250 : Chinese Warlord
+# 1400001001 U65 - End of the Sichuan conflict #
+# 1400001002 U66 - End of the Sichuan conflict #
+# 1400001003 U66 - Ruler of Sichuan dies (game over) 
+# 1400001004 CHI - Sichuan Consolidation 
+# 1400001005 U64 - Reorganization of Political Council 
+# 1400001006 U64 - Dissolution of the Partisan # 
+# 1400001007 CHI - Acceptance of New Guangxi Clique? 
+# 1400001008 U63 - Discussion of Anti-Chiang coalition #2nd Liangguang Incident 
+# 1400001009 U63 CGX - Anti-Japan Salvation Army Formed 
+# 1400001010 CHI - Anti-Japan Salvation Army Formed 
+# 1400001011 CHI - Deal with the Guangdong 
+# 1400001012 U63 - Chiang's ultimatum 
+# 1400001013 CGX - Coalition Against Chiang 
+# 1400001014 CHC - War against Chiang? 
+# 1400001015 U63 - Military Collapse 
+# 1400001016 U63 - Negotiations with Chiang 
+# 1400001017 CHI - Negotiations with Liangguang 
+# 1400001018 CHI - Surrender in Guangdong 
+# 1400001019 CHI - Deal with the Guangxi 
+# 1400001020 CGX - Offer peace from Nanjing 
+# 1400001021 CGX - Ultimatum from Nanjing 
+# 1400001022 CHI - The Fate of Guangxi 
+# 1400001023 U63 - Bankruptcy! 
+# 1400001024 CHI - Guangdong Intervention 
+# 1400001025 U63 - Dissolution of Political Affairs Committee(game over) 
+# 1400001026 CGX U65 U66 U63 CXB CSX U64 SIK Declaration of the National Government #
+
+### 1400001150 - 1400001250 : Xinjiang
+# 1400001150 SIK - break with the Communist? 
+# 1400001151 CHI - Xinjiang Intervention 
+# 1400001152 SIK - Government's demand(game over) 
+# 1400001153 CHI - Xinjiang Integration 
+# 1400001154 CHI - Ili Rebellion 
+# 1400001155 UPE - Re-establishment of East Turkestan 
+# 1400001156 CHI - Negotiations with East Turkestan #
+# 1400001157 UPE - Agreement with Chinese Government #
+# 1400001158 CHI - Coalition in Xinjiang #
+# 1400001159 CHI - Negotiation Fail #
+# 1400001160 CHC - Ultimatum to Xinjiang? #
+# 1400001161 SIK - Government's Ultimatum (game over) #
+# 1400001162 UPE - Government's Ultimatum (game over) #
+# 1400001163 CHC - Xinjiang Integration #
+# 1400001164 UPS - Retreat to the Southeast 
+# 1400001165 SIK - Southern Expedition 
+# 1400001166 SIK - Islamic rebellion 
+
+### 1400001251 - 1400001500 : Border Conflict and War of Resistance
+# 1400001251 JAP - East Hebei Incident 
+# 1400001252 CHI - East Hebei Incident 
+# 1400001253 CHI - The Government returns to Nanjing 
+# 1400001255 CHI - Military Instability 
+# 1400001254 CHI - Military Reform 
+# 1400001256 JAP - Marco Polo Bridge Incident 
+# 1400001257 CHI - The Great Fire of Changsha 
+# 1400001258 CHI - Wang Jingwei Defects 
+# 1400001259 UC4 - Relocation of the Central government 
+# 1400001260 CHI - Relocation of the Central government 
+# 1400001261 CHI - Burma Road Plan 
+# 1400001262 U02 - Completion of Burma Road 
+# 1400001263 CHI - Completion of Burma Road 
+# 1400001264 U02 - Burma Road Is closed
+# 1400001265 CHI - Burma Road Is closed 
+# 1400001266 U02 - Burma Road is re-opened 
+# 1400001267 CHI - Burma Road is re-opened 
+# 1400001268 USA - Chinese Air Force Support 
+# 1400001269 CHI - Flying Tigers 
+# 1400001270 CHI - Soviet's Support Cease 
+# 1400001271 CHI - Aftermath of the War of Resistance - Post-war 
+# 1400001272 MEN - Suiyuan Campaign 
+# 1400001273 CSX - Battle of Bailingmiao 
+# 1400001274 CHI - Suiyuan Campaign 
+# 1400001275 
+
+### 1400001501 - 1400002000 : Communist China
+# 1400001501 CHC - Soviet Organization Integration 
+# 1400001502 CHC - Reorganize into the Eighth Route Army 
+# 1400001503 CHC - Head of Government Changes - Lin Boqu 
+# 1400001504 CHC - Advisor leaves - Otto braun 
+# 1400001505 CHC - Central Politburo Conference 
+# 1400001506 CHC - Current Situation and the Party's Tasks - Central Politburo Conference 
+# 1400001507 CHC - Changjian Bureau Established 
+# 1400001508 CHC - Demand Another Politburo Meeting 
+# 1400001509 CHC - 6th Plenum of the 6th CCP Central Committee 
+# 1400001510 CHC - Direction of United Front 
+# 1400001511 CHC - Fate of the Changjiang Bureau 
+# 1400001512 CHC - Enlarged Central Politburo Conference (1941) 
+# 1400001513 CHC - Election of the leadership - Stalemate
+# 1400001514 CHC - Re-election to leadership - Maoism
+# 1400001515 CHC - Reorganization of leadership
+# 1400001516 CHC - Rectification Movement - Maoism 
+# 1400001517 CHC - Direction of Party Renovation 
+# 1400001518 CHC - Party Renovation completed 
+# 1400001519 CHC - Government Reorganization - New Democratic Revolution
+# 1400001520 CHC - 7th National Congress 
+# 1400001521 CHC - 
+# 1400001522 CHC - 
+# 1400001523 CHC - 
+# 1400001524 CHC - 
+# 1400001525 CHC - 
+# 1400001526 CHC - 
+# 1400001527 CHC - 
+# 1400001528 CHC - 
+# 1400001529 CHC - 
+# 1400001530 CHC - 
+
+#Communist Infiltration (Repeat until successful)
+# 1400001901 CHC - Infiltration Plan 
+# 1400001902 CHC - Infiltration into Western Shanxi 
+# 1400001903 CHC - Infiltration Results 
+# 1400001904 CHC - Infiltration into Eastern Shanxi 
+# 1400001905 CHC - Infiltration Results 
+# 1400001906 CHC - Infiltration into Baoding 
+# 1400001907 CHC - Infiltration Results 
+# 1400001908 CHC - Infiltration into Pingyuan 
+# 1400001909 CHC - Infiltration Results 
+# 1400001910 CHC - Infiltration into Hebei 
+# 1400001911 CHC - Infiltration Results 
+# 1400001912 CHC - Infiltration into Jinan 
+# 1400001913 CHC - Infiltration Results 
+# 1400001914 CHC - Infiltration into Western Shandong 
+# 1400001915 CHC - Infiltration Results 
+# 1400001916 CHC - Infiltration into Eastern Shandong 
+# 1400001917 CHC - Infiltration Results 
+# 1400001918 CHC - Infiltration into Xuzhou 
+# 1400001919 CHC - Infiltration Results 
+# 1400001920 CHC - Infiltration into Inner Mongolia 
+# 1400001921 CHC - Infiltration Results 
+# 1400001922 CHC - Infiltration into Jiangsu 
+# 1400001923 CHC - Infiltration Results 
+# 1400001924 CHC - Infiltration into Nantong 
+# 1400001925 CHC - Infiltration Results 
+# 1400001926 CHC - Infiltration into Northern Anhui 
+# 1400001927 CHC - Infiltration Results 
+# 1400001928 CHC - Infiltration into Jehol 
+# 1400001929 CHC - Infiltration Results 
+# 1400001930 CHC - Infiltration into Manchuria 
+# 1400001931 CHC - Infiltration Results 
+# 1400001932 CHC - Infiltration into Central China - Civil War 
+
+### 1400002001 - 1400003000 : Japan domestic
+# 1400002001 JAP - General Election (1936) 
+# 1400002002 JAP - Shimpeitai Incident 
+# 1400002003 JAP - Go-Stop incident 
+# 1400002004 JAP - Teijin Scandal 
+# 1400002005 JAP - New Cabinet Government (1934) - Okada Cabinet 
+# 1400002006 JAP - Emperor Organ theory Incident 
+# 1400002007 JAP - Colonial Recruitment program 
+# 1400002008 JAP - Restore of Active-Duty Officers Law (Military Ministers to be Active-Duty Officers Law) 
+# 1400002009 JAP - Controversy in Parliament 
+# 1400002010 JAP - Government Under Fire 
+# 1400002011 JAP - The Cabinet Resigns - New Cabinet Government - Hayashi (2500037) 
+# 1400002012 JAP - New Cabinet Government - 1st Konoe Cabinet(1937) 
+# 1400002013 JAP - National Mobilization Law 
+# 1400002014 JAP - Collaborators within Established parties 
+# 1400002015 JAP - Discussion on Industrial 
+# 1400002016 JAP - New Party Movement Plan 
+# 1400002017 JAP - Creation of New party - (If Konoe continues to be in power for a long time after 1939) 
+# 1400002018 JAP - Formation of Opposition Coalition - Konoe's New Party path 
+# 1400002019 JAP - The Cabinet Resigns - Konoe Cabinet - 2500038(Hiranuma, 1939) 
+# 1400002020 JAP - The Planning Board Incident (1941) 
+# 1400002021 JAP - Mantetsu Research Department Incident #
+# 1400002022 JAP - The Cabinet Resigns - Hiranuma 
+# 1400002023 JAP - New Cabinet Government - Abe (1939) 
+# 1400002024 JAP - Sudden change of Government - Yonai (1940) 
+# 1400002025 JAP - The Cabinet Resigns - Yonai Cabinet(1940) 
+# 1400002026 JAP - New Cabinet Government - 2nd Konoe Cabinet(1940) 
+# 1400002027 JAP - Conflict between Military Factions - Kodoha and Toseiha
+# 1400002028 JAP - Kanmon Strait tunnel - Wif event 
+# 1400002029 JAP - 2600th Anniversary Celebrations - WiF mod event 
+# 1400002030 JAP - New Order Movement 
+# 1400002031 JAP - Foundation of Taisei Yokusankai 
+# 1400002032 JAP - The Cabinet Resigns - 2nd Konoe Cabinet and etc...(1941) - 2500039 (Tojo Dictatorship) 
+# 1400002033 JAP - The Cabinet Resigns - Tojo Cabinet - event 2500040 - FEPK mod event
+# 1400002034 JAP - Kodoha coup fails 
+# 1400002035 JAP - The Cabinet Resigns - Koiso - FEPK mod event
+# 1400002036 JAP - New Cabinet Government - Suzuki or Hata
+# 1400002037 JAP - Land Reform Policy - Post-war and Kotoha path #
+# 1400002038 JAP - Completion of the Initial Phase of the Land Reform #
+# 1400002039 JAP - Completion of the Land Reform #
+# 1400002040 JAP - Reorganising the National Economy - Post-war and Kodoha path #
+# 1400002041 JAP - General Election (1937) 
+# 1400002042 JAP - General Election (Wartime) - Yokusankai or New Party path 
+# 1400002043 JAP - Directing Industrial Policy #
+# 1400002044 JAP - Implementation of Economic Plan #
+# 1400002045 JAP - Wartime Policy and Economic Planning #
+# 1400002046 JAP - Direction of the Wartime Economy #
+# 1400002047 JAP - The Great Drought (1939) 
+# 1400002048 JAP - Japanification of Foreign Subsidiaries #
+# 1400002049 JAP - Direction of Fiscal policy (Takahashi Policy) 
+# 1400002050 JAP - The Nationalisation of Heavy Industry - Post-war and Kodoha path #
+# 1400002051 JAP - Fate of Zaibatsu - Post-war and Kodoha path #
+# 1400002052 JAP - 
+# 1400002053 JAP - 
+# 1400002054 JAP - 
+# 1400002055 JAP - 
+# 1400002056 JAP - 
+# 1400002057 JAP - 
+# 1400002058 JAP - 
+# 1400002059 JAP - 
+
+### 1400003001 - 1400003500 : Japan Foreign Event
+# 1400003001 JAP - Neutrality Pact proposal 
+# 1400003002 SOV - Soviet–Japanese Neutrality Pact 
+# 1400003003 USA - End of Treaty of Commerce 
+# 1400003004 JAP - End of Treaty of Commerce 
+# 1400003005 USA - Hull Note 
+# 1400003006 JAP - Hull Note 
+# 1400003007 JAP - Withdraw From League of Nations - WiF event
+# 1400003008 JAP - Negotiations with China #
+# 1400003009 CHI - Japan's Non-Aggression proposal #
+# 1400003010 JAP - Demands of Chinese Government #
+# 1400003011 CHI - Non-Aggression Agreement #
+# 1400003013 JAP - Non-aggression Pact with China #
+# 1400003014 CHI - Negotiation Breakdown #
+# 1400003015 JAP - Negotiation Breakdown #
+# 1400003016 JAP - Agreement with East Indies #
+# 1400003017 U05 - Japan's proposal for agreement #
+# 1400003018 JAP - Hart-Ishizawa Agreement #
+# 1400003019 
+# 1400003020 
+
+### 1400003501 - 1400003750 : Japan alternate1
+
+### 1400003751 - 1400004000 : Japan alternate2(after Japan's victory} (incomplete)
+# 1400003751 JAP - Replace the Cabinet - (Post war) 
+# 1400003752 JAP - New Cabinet Government - Shigemitsu 
+# 1400003753 JAP - Direction of Greater East Asian policy 
+# 1400003754 JAP - Relaxation of Economic control 
+# 1400003755 JAP - Discussion of Social control 
+# 1400003756 JAP - Fate of the National Mobilization Act 
+# 1400003757 JAP - Instability in the Cabinet 
+# 1400003758 JAP - General Election and Appointment of Prime Minister - Hata, Maeda, Kaya 
+# 1400003759 JAP - Aftermath of Wartime Economy #
+# 1400003760 JAP - Fate of the Taisei Yokusankai #
+# 1400003761 
+# 1400003762 
+# 1400003763 
+# 1400003764 
+# 1400003765 
+# 1400003766 
+# 1400003767 
+# 1400003768 
+# 1400003769 
+# 1400003770 
+
+### 1400004001 - 1400004500 : Japan alternate3(Kodoha Coup) - under discussion
+# 1400004001 JAP - Araki's Decision #
+# 1400004002 JAP - Facing the Prime Minister #
+# 1400004003 JAP - Emperor's Decision #
+# 1400004004 JAP - Showa Restoration #
+# 1400004005 JAP - Opposition officer's Protest #
+# 1400004006 JAP - Sabotage attempt #
+# 1400004007 JAP - Sabotage Failed #
+# 1400004008 JAP - Bloodshed in Tokyo #
+# 1400004009 JAP - Countermeasures against Kantogun #
+# 1400004010 JAP - Attempt to terror Kantogun headquarters #
+# 1400004011 JAP - Assassination failure #
+# 1400004012 JAP - Kantogun Insurrection #
+# 1400004013 REB MAN - Kantogun Insurrection #
+# 1400004014 JAP - Opposition Counter-Coup - Toseiha Coup #
+# 1400004015 JAP - Stabilize Military Control #
+# 1400004016 MAN - Purge inside the Kantogun #
+# 1400004017 JAP - Cooperation with old Conservatives? #
+# 1400004018 JAP - Fate of Transitional cabinet - Masaki Jinzaburo #
+# 1400004019 JAP - Purge of the Military #
+# 1400004020 JAP - 
+# 1400004021 JAP - 
+# 1400004022 JAP - 
+# 1400004023 JAP - 
+# 1400004024 JAP - 
+# 1400004025 JAP - 
+# 1400004026 JAP - 
+# 1400004027 JAP - 
+# 1400004028 JAP - 
+# 1400004029 
+# 1400004030 
+# 1400004031 
+
+
+### 1400004501 - 1400005500 : Post-war Japan - incomplete contents
+# 1400004501 JAP - Prince Higashikuni Cabinet (post war) - (Establishment of Transitional Cabinet) - OTL scenario
+# 1400004502 JAP - Replace the Cabinet - Shidehara Cabinet (post-war)
+# 1400004503 JAP - General Election (Occupation of Japan) - OTL 1946 Election
+# 1400004504 JAP - Constitutional Discussion (Occupation of Japan) 
+# 1400004505 JAP - Japan's New constitution - Peace Constitution (Occupation of Japan) 
+# 1400004506 JAP - White purge (Occupation of Japan) 
+# 1400004507 JAP - War Crimes Tribunal (Occupation of Japan) 
+# 1400004508 JAP - Collapse of Economic sphere #
+# 1400004509 JAP - Economic Reconstruction policy #
+# 1400004510 JAP - End of Purge of Public Officials (Occupation of Japan) 
+# 1400004511 JAP - General Election (non-Occupation of Japan) 
+# 1400004512 JAP - New Cabinet Government (Occupation of Japan) - Yoshida 
+# 1400004513 JAP - Appointment of Prime Minister (non-Occupation of Japan) - National Unity Government
+# 1400004514 JAP - Reverse Course #
+# 1400004515 JAP - Corporate Reform #
+# 1400004516 
+# 1400004517 
+# 1400004518 
+# 1400004519 
+# 1400004520 
+
+### 1400005501 - 1400006000 : Indochina
+# 1400005502 U03 - Change of Colonial administration (1934) 
+# 1400005503 U03 - Change of Colonial administration (1936) 
+# 1400005504 U03 - Change of Colonial administration (1939) 
+# 1400005505 U03 - Change of Colonial administration (1940) 
+# 1400005506 JAP - Military demand for Indochina 
+# 1400005507 FRA - Japan demands Southern Indochina 
+# 1400005508 JAP - Darlan-Kato Agreements 
+# 1400005509 U03 - Darlan-Kato Agreements 
+# 1400005510 JAP - French Refuse Our Demands 
+# 1400005511 U03 - Position on Indochina 
+# 1400005512 U03 - Joining Allied? (What if Indochina hadn't been dismantled?) 
+# 1400005513 U01 - Indochina Joins Free France 
+# 1400005514 JAP - Operation Meigo 
+# 1400005515 U03 - Japanese coup 
+# 1400005516 JAP - Reorganization of indochina 
+
+# 1400005517 SIA - Invade Indochina 
+# 1400005518 SIA - Restoration of the old Border (What if? - Thailand Victory) 
+# 1400005519 JAP - Arbitration on indochina 
+# 1400005520 SIA - Japan Enforces a Ceasefire 
+# 1400005521 U03 - Border Readjustment 
+# 1400005522 JAP - Thailand Refuses! 
+# 1400005523 U03 - Victory against Thailand (What if? - French Victory) 
+# 1400005524 SIA - Defeat against French 
+
+## Decolonization and Indochina War - incomplete contents
+# 1400005525 VIE - Viet Minh Uprising (Right after Surrender of Japan) 
+# 1400005526 U72 - Proclaim of Viet Minh Government 
+# 1400005527 CMB - Sudden change of Government (Right after Surrender of Japan) 
+# 1400005528 LAO - Sudden change of Government (Right after Surrender of Japan) 
+# 1400005529 CHI USA JAP - Fate of Indochina (In case of direct occupation of Indochina) 
+# 1400005530 VIE - Organization of Vietnamese State - Supervised State 
+# 1400005531 CMB - Organization of Cambodian State - Supervised State 
+# 1400005532 LAO - Organization of Laotian State - Supervised State 
+# 1400005533 ENG - Indochina Intervention #
+# 1400005534 CHI - Indochina Intervention #
+# 1400005535 U72 - Indochina Intervention #
+# 1400005536 FRA - Restoration of Indochina Colonies 
+# 1400005537 U01 FRA - Re-Occupation Indochina #
+# 1400005538 U03 - Reorganization of Colonial administration 
+# 1400005539 U01 FRA - Decentralization of Indochina (French Associated states) #
+# 1400005540 U03 - Decentralization of Indochina #
+# 1400005541 
+
+### 1400006001 - 1400006500 : Korea - incomplete contents
+# 1400006001 KOR - Return of the Provisional Government 
+# 1400006002 KOR - Committee for the Preparation of Korean Independence #
+# 1400006003 KOR - People's Republic Proclaimed - CHC or SOV
+# 1400006004 USA - Occupation of Korea 
+# 1400006005 SOV - Occupation of Korea 
+# 1400006006 USA - Establishment of Korean government # - Korean Republic
+# 1400006007 SOV - Establishment of Korean government # - North Korea
+# 1400006008 KOR - Republic Proclaimed - South Korea or Korean Republic
+# 1400006009 
+# 1400006010 PRK - Proclamation of Socialist government - People's Republic or DPRK
+# 1400006011 KOR - Division of Korea 
+# 1400006012 PRK - Division of Korea 
+# 1400006013 KOR - Establishment of Interim government 
+# 1400006014 USA - Protests in Korea #
+# 1400006015 USA - Support for the Korean Coalition movement #
+# 1400006016 USA - Demand for Reform of Occupation policy #
+# 1400006017 USA - Unrest in Korea #
+# 1400006018 USA - Joint Korean-American Conference #
+# 1400006019 USA - Instability in Korea #
+# 1400006020 USA - Direction of Korea's policy #
+# 1400006021 USA - Establishment of Interim Government # - Governing Commission, Interim government
+# 1400006022 USA - Composition of the Korean Advisory Council # - Alternative path(Governing Commission)
+# 1400006023 USA - Expansion of the Korean Governing Commission #
+# 1400006024 USA - Conflicts between Korean factions #
+# 1400006025 USA - Opposition from Korean Nationalists #
+# 1400006026 USA - Results of the Governing Commission's Plan #
+# 1400006027 KOR - General Election #
+# 1400006028 KOR - Formation of the Constituent National Assembly #
+# 1400006029 KOR - Presidential Election #
+# 1400006030 KOR - Composition of the Government
+# 1400006031 USA CHI CHC SOV - Transfer of Administrative in Korea #
+# 1400006032 KOR - Transfer of Administrative Authority #
+# 1400006033 
+# 1400006034 
+# 1400006035 
+# 1400006036 
+# 1400006037 
+# 1400006038 
+# 1400006039 
+# 1400006040 
+# 1400006041 
+# 1400006042 
+# 1400006043 
+# 1400006044 
+# 1400006045 
+# 1400006046 
+# 1400006047 
+# 1400006048 
+# 1400006049 
+# 1400006050 
+# 1400006051 
+# 1400006052 
+# 1400006053 
+# 1400006054 
+# 1400006055 
+# 1400006056 
+# 1400006057 
+# 1400006058 
+# 1400006059 
+# 1400006060 
+# 1400006061 
+# 1400006062 
+# 1400006063 
+# 1400006064 
+# 1400006065 
+# 1400006066 
+# 1400006067 
+# 1400006068 
+# 1400006069 
+# 1400006070 
+
+### 1400006501 - 1400007000 : Indonesia and East Indies
+# 1400006501 
+# 1400006502 
+# 1400006503 
+# 1400006504 
+# 1400006505 
+# 1400006506 
+# 1400006507 
+# 1400006508 
+# 1400006509 
+# 1400006510 
+# 1400006511 
+# 1400006512 
+# 1400006513 
+# 1400006514 
+# 1400006515 
+# 1400006516 
+# 1400006517 
+# 1400006518 
+# 1400006519 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+### 1400007001 - 1400007100 : Tibet
+# 1400007001 CHI - Tibet's Autonomous Demands 
+# 1400007002 TIB - Autonomy of Tibet 
+# 1400007003 
+# 1400007004 
+# 1400007005 
+
+### 1400007101 - 1400007250 : Mongolia
+# 1400007101 MON - A new flag(1940) 
+# 1400007102 MON - A new flag(1945) 
+
+
+### 1400007251 - 1400007500 : U.S and Soviet Asia-Pacific Policy - incomplete contents
+# 1400007251 SOV - Manchurian Offensive operation 
+# 1400007252 SOV - Withdrawal from North China 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+### 1400007501 - 1400008000 : Japanese puppet state
+# 1400007501 JAP - Investing in Manchuria 
+# 1400007502 MAN - Manchuria Development Plan 
+# 1400007503 1400007504 JAP - Expansion of Coal Mining in Shenyang 
+# 1400007505 1400007506 MAN - Expansion of Coal Mining in Shenyang 
+# 1400007507 JAP 1400007508 MAN - Expansion of the South Manchuria Railway 
+# 1400007509 JAP 1400007510 MAN - Expand the Showa Steel Works 
+# 1400007511 JAP 1400007512 MAN - Expansion of Coal Mining in Fushun 
+# 1400007513 JAP 1400007514 MAN - Expand the Fushun Mines 
+# 1400007515 JAP 1400007516 MAN - Expansion of Magnesite Mining in Anshan 
+# 1400007517 1400007518 JAP - Expansion of Coal Mining in Jixi 
+# 1400007519 1400007520 MAN - Expansion of Coal Mining in Jixi 
+# 1400007521 JAP 1400000121 MAN - Completion of Fengman Dam 
+# 1400007522 JAP - Completion of Supung Dam 
+# 1400007523 JAP 1400007524 MAN - Expansion of the North Manchuria Railway 
+# 1400007525 JAP 1400007526 MAN - Manchurian Industry Expansion 
+# 1400007527 MAN - Change of Prime Minister 
+# 1400007528 MEN - Change of Head of State 
+# 1400007529 MEN - Integration of local governments 
+# 1400007530 MEN - Securing Outer Mongolia - What if?
+# 1400007531 JAP - End of the Adventure in Manchuria
+
+### 1400008001 - 1400008500 : India and Burma
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+
+### 1400008501 - 1400009000 : Occupied State Event - incomplete contents
+# 1400008501 - Fate of Philippines #
+# 1400008502 - Fate of Indonesia #
+# 1400008503 - Fate of Malaya #
+# 1400008504 - Fate of North Borneo #
+# 1400008505 - Fate of Vietnam #
+# 1400008506 - Fate of Burma #
+# 1400008507 - Fate of Siam #
+# 1400008508 - Fate of China #
+# 1400008509 - Fate of Korea #
+# 1400008510 - Fate of Japan #
+# 1400008511 - Fate of Mongolia #
+# 1400008512 - Fate of India #
+# 1400008513 - Fate of Laos #
+# 1400008514 - Fate of Cambodia #
+
+### 1400009001 - 1400009500 Minister died event(Additional)
+# 1400009001 JAP - Suzuki Kantaro (1948) 
+# 1400009002 JAP - Koiso Kuniaki (1950) 
+# 1400009003 JAP - Hayashi Senjuro (1943) 
+# 1400009004 JAP - Yonai Mitsumasa (1948) 
+# 1400009005 JAP - Shidehara Kijuro (1951) 
+# 1400009006 JAP - Baba Eiichi (1937) 
+# 1400009007 JAP - Machida Chuji (1946) 
+# 1400009008 JAP - Kanin Kotohito (1945) 
+# 1400009009 JAP - Saionji Kinmochi (1940) 
+# 1400009010 JAP - Shigemitsu Mamoru (1957) 
+# 1400009011 JAP - Terauchi Hisaichi (1946) 
+# 1400009012 JAP - Uchida Kosai (1936) 
+# 1400009013 JAP - Saito Takao (1949) 
+# 1400009014 JAP - Hatoyama Ichiro (1959) 
+# 1400009015 JAP - Ogata Taketora (1956) 
+# 1400009016 JAP - Ishiwara Kanji (1949) 
+# 1400009017 JAP - Hiranuma Kiichiro (1952) 
+# 1400009018 JAP - Nakajima Chikuhei (1949) 
+
+# 1400009076 MAN - Ishiwara Kanji (1949) 
+# 1400009077 MAN - Zheng Xiaoxu (1938) 
+# 1400009078 MAN - Zhang Jinghui (1959) 
+
+# 1400009100 CHI - Li Liejun (1946) 
+# 1400009101 CHI - Jiang Baili (1938) 
+# 1400009102 CHI - Chen Youren (1944) 
+# 1400009104 CHI - Chen Guofu (1951) 
+# 1400009105 CHI - Wang Jingwei (1944) 
+# 1400009106 CHI - Ju Zheng (1951) 
+# 1400009107 CHI - Yang Yongtai (1936) - Assassinated 
+# 1400009108 CHI - Zhu Peide (1937) 
+# 1400009109 CHI - Hu Hanmin (1936) 
+# 1400009110 CHI - Joseph Stilwell (1946) #
+# 1400009111 U87 - Wang Jingwei (1944) 
+
+# 1400009200 FRA - Philippe Leclerc de Hauteclocque (1947) #
+# 1400009201 U03 - Philippe Leclerc de Hauteclocque (1947) #
+
+# 1400009250 KOR - Yeo Un-hyong (1947?) - Assassinated 
+# 1400009251 KOR - Jang Deok-su (1947?) - Assassinated #
+
+
+#KIA list
+# 1400009400 CHI - Sa Shijun (1938 - KIA) (by JAP) #
+# 1400009401 JAP - Osumi Mineo (1941 - KIA) (by CHI) #
+# 1400009402 JAP - Ogawa Gotaro (1945 - KIA) (by USA) #
+# 1400009403 JAP - Yamamoto Isoroku (1943 - KIA) (by USA) #
+# 1400009404 CHC - Long Wenguang (1933 - KIA) (by CHI) #
+
+#Accidental, Suspicious Deaths
+# 1400009404 CHC - Gao Gang (1954?) #
+# 1400009405 CHC - Ye Ting, Qin Bangxian, Deng Yuanzhao(Deng Fa) (1946?) - plane crash #
+# 1400009406 CHI - Feng Yuxiang (1948?) #
+# 1400009407 JAP - Nakano Seigo (1943?) #
+# 1400009408 CHI - Dai Li (1946?) #
+# 1400009409 JAP - Konoe Fumimaro (Occupation of Japan) #
+
+### 1400009501 - 1400010000 USA event - incomplete contents
+# 1400009501 USA - 1936 Democratic National Convention #
+# 1400009502 USA - 1936 Republican National Convention #
+# 1400009503 USA - 1940 Democratic National Convention #
+# 1400009504 USA - 1940 Republican National Convention #
+# 1400009505 USA - 1944 Democratic National Convention #
+# 1400009506 USA - 1944 Republican National Convention #
+# 1400009507 USA - 1948 Democratic National Convention #
+# 1400009508 USA - 1948 Republican National Convention #
+# 1400009509 USA - 1952 Democratic National Convention #
+# 1400009510 USA - 1952 Republican National Convention #
+# 1400009511 USA - 1956 Democratic National Convention #
+# 1400009512 USA - 1956 Republican National Convention #
+# 1400009513 USA - 1960 Democratic National Convention #
+# 1400009514 USA - 1960 Republican National Convention #
+# 1400009515 USA - Boulder Dam Completed - TRP event #
+# 1400009516 USA - Public Works Administration - WiF event #
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+### 1400010001 - 1400011000 - World event (Historical)
+# 1400010001 ENG - Persia's Sovereignity - TRP event #
+# 1400010002 ENG - Polish Army on the exile #
+# 1400010003 FRA - Polish Army on the exile #
+# 1400010004 ENG - Polish army in the West #
+# 1400010005 SOV - Polish army in the Eest #
+# 1400010006 GER - Build the Siegfried Line - WiF event #
+# 1400010007 ENG - Build Radar Stations - WiF event #
+# 1400010008 ENG - Operation Peking #
+# 1400010009 POL - Operation Peking #
+# 1400010010 U01 - Federalization of Colonies (French Union) # 
+# 1400010011 FRA - Federalization of Colonies (French Union) # 
+# 1400010012 CAN - Conscription Crisis - WiF event #
+# 1400010013 USA - Liberation of Iceland and secession of Greenland - NWO mod #
+# 1400010014 USA ENG FRA CAN U01 U02 AST NZL - Occupation of Germany - NWO mod 
+# 1400010015 SOV - Occupation of Germany - NWO mod 
+# 1400010016 U24 - Occupation of Germany - NWO mod 
+# 1400010017 U25 - Occupation of Germany - NWO mod 
+# 1400010018 USA ENG FRA CAN U01 U02 AST NZL - Occupation of Germany - NWO mod (historical) 
+# 1400010019 SOV - Occupation of Germany - NWO mod (historical) 
+# 1400010020 USA - Occupation of Germany - NWO mod 
+# 1400010021 USA ENG FRA CAN U01 U02 AST NZL - End of the European front (Allied) 
+# 1400010022 SOV - End of the European front (Soviet) 
+# 1400010023 USA - Declaration by United Nations (1942) 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+### 1400011001 - 1400012000 - World event (Alternate)
+# USA CAN - Liberation of Britain #
+# ENG - Liberation of Britain #
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 

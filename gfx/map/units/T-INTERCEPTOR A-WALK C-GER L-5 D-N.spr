@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "Rola-W-N.bmp"
+	Origin = { x = 100 y = 90 }
+	Frames = 16
+	Speed = 5
+	Palette = "Rola.bmp"
+}

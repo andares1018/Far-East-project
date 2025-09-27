@@ -1,0 +1,360 @@
+KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+265001;Head of State;Syngman Rhee;1919;1964;1965;SC;Stern Imperialist;Medium;M578001;X
+265002;Head of State;Syngman Rhee;1919;1964;1965;PA;Stern Imperialist;NA;M578001;X
+265003;Head of State;Lee Dong-nyeong;1919;1941;1941;SC;Popular Figurehead;Medium;M_Lee dong-nyeong;X
+265004;Head of State;Kim Gu;1933;1960;1960;SC;Autocratic Charmer;Medium;M_Kim Gu;X
+265005;Head of State;Yi Dong-Hwi;1918;1936;1936;LWR;Resigned Generalissimo;Medium;851;X
+265006;Head of State;Ahn Chang-ho;1917;1939;1939;ML;Die-hard Reformer;Medium;M_An Chang-ho;X
+265007;Head of State;Yeo Un-hyeong;1933;1956;1956;SD;Die-hard Reformer;Medium;M_Yeo un-hyeong;X
+265008;Head of State;Ahn Jae-hong;1936;1955;1956;SL;Pig-headed Isolationist;Medium;M_Ahn jae-hong;X
+265009;Head of State;Hong Jin;1925;1940;1940;ML;Benevolent Gentleman;Medium;M_Hong Jin;X
+265010;Head of State;Kim Gyu-sik;1940;1953;1953;SL;Pig-headed Isolationist;Medium;M_Kim gyu-sik;X
+265011;Head of State;Cho Byeong-ok;1950;1960;1960;SC;Autocratic Charmer;Medium;M_Yu seok;X
+265012;Head of State;Shin Ik-hui;1954;1957;1957;SC;Insignificant Layman;Medium;M_Shin ik-hui;X
+265013;Head of State;Yun Bo-seon;1955;1970;1990;SC;Weary Stiffneck;Medium;M_Yun bo-seon;X
+265014;Head of State;Heo Jeong;1952;1965;1989;SC;Benevolent Gentleman;Medium;M_Heo jeong;X
+265015;Head of State;Park Chung-hee;1952;1980;1999;PA;Resigned Generalissimo;Medium;M_president Park;X
+265016;Head of State;Cho Bong-am;1948;1961;1965;SD;Benevolent Gentleman;Medium;M_Cho bong-am;X
+265017;Head of State;Kim Du-Bong;1940;1956;1956;LWR;Weary Stiffneck;Medium;M_Kim du-bong;X
+265018;Head of State;Heo Heon;1928;1956;1956;LWR;Insignificant Layman;Medium;2810;X
+265019;Head of State;Park Heon-yeong;1930;1956;1964;LE;Ruthless Powermonger;Medium;2808;X
+265020;Head of Government;Park Heon-yeong;1936;1953;1964;LE;Ambitious Union Boss;Medium;2808;X
+265021;Head of Government;Cho Bong-am;1927;1947;1947;LE;Naive Optimist;Medium;M_Cho bong-am;X
+265022;Head of Government;Yi Dong-Hwi;1918;1936;1936;LWR;Flamboyant Tough Guy;Medium;851;X
+265023;Head of Government;Kim Won-bong;1932;1956;1956;LWR;Ambitious Union Boss;Medium;M_Kim won-bong;X
+265024;Head of Government;Song Jin-u;1925;1953;1953;SC;Flamboyant Tough Guy;Medium;M_Song jin-u;X
+265025;Head of Government;Kim Do-yeon;1953;1967;1967;SC;Naive Optimist;Medium;M_Kim do-yeon;X
+265026;Head of Government;Kim Seong-su;1936;1956;1956;SC;Silent Workhorse;Medium;M_Kim seong-su;X
+265027;Head of Government;Heo Jeong;1953;1989;1989;SC;Corporate Suit;Medium;M_Heo jeong;X
+265028;Head of Government;Yeo Un-hyeong;1933;1956;1956;SD;Flamboyant Tough Guy;Very Low;M_Yeo un-hyeong;X
+265029;Head of Government;Kim Gyu-sik;1933;1953;1953;SL;Naive Optimist;Medium;M_Kim gyu-sik;X
+265030;Head of Government;Cho So-ang;1936;1959;1964;ML;Silent Workhorse;Medium;2807;X
+265031;Head of Government;Ahn Jae-hong;1933;1964;1964;SL;Corporate Suit;High;M_Ahn jae-hong;X
+265032;Head of Government;Hong Jin;1918;1946;1946;ML;Corporate Suit;Medium;M_Hong Jin;X
+265033;Head of Government;Jang Myeon;1940;1967;1967;ML;Corporate Suit;Medium;M578026;X
+265034;Head of Government;Jang do-Yeong;1956;1964;2012;PA;Backroom Backstabber;Medium;M578030;X
+265035;Head of Government;Kim Gu;1933;1950;1960;SC;Flamboyant Tough Guy;Medium;M_Kim Gu;X
+265036;Head of Government;Lee Dong-nyeong;1918;1940;1940;SC;Silent Workhorse;Medium;M_Lee dong-nyeong;X
+265037;Head of Government;Shin Ik-hui;1950;1957;1957;PA;Backroom Backstabber;Medium;M_Shin ik-hui;X
+265038;Head of Government;Lee Si-yeong;1925;1954;1954;SC;Political Protege;Medium;M_Lee si-yeong;X
+265039;Head of Government;Ham Tae-yeong;1936;1965;1965;PA;Political Protege;Medium;M_Ham tae-yeong;X
+265040;Head of Government;Jang Taek-sang;1942;1960;1970;PA;Happy Amateur;Medium;M578027;X
+265041;Head of Government;Shin Seong-mo;1940;1955;1961;PA;Old Admiral;Medium;M578025;X
+265042;Head of Government;Lee Gi-bung;1953;1961;1965;PA;Corporate Suit;Medium;M_Yi gi-bung;X
+265043;Head of Government;Yi Beom-seok;1940;1973;1973;FA;Old General;Medium;M_Yi beom-seok;X
+265044;Head of Government;Baek Du-jin;1950;1994;1994;FA;Silent Workhorse;Medium;M578028;X
+265045;Head of Government;Lee Yun-yeong;1936;1974;1974;SC;Happy Amateur;Medium;M_Lee yun-yeong;X
+265046;Head of Government;Jang Geon-sang;1952;1974;1974;SD;Ambitious Union Boss;Medium;M_Jang geon-sang;X
+265047;Head of Government;Seo Sang-il;1952;1963;1963;SL;Backroom Backstabber;Medium;M_Seo sang-il;X
+265048;Head of Government;Park Chung-hee;1956;1980;1985;PA;Flamboyant Tough Guy;Medium;M_president Park;X
+265049;Head of Government;Song Yo-chan;1958;1970;1980;PA;Old General;Medium;M_Song yo-chan;X
+265050;Head of Government;Kim Hyeon-cheol;1950;1970;1990;PA;Political Protege;Medium;M_Kim hyeon-cheol;X
+265051;Head of Government;Heo Heon;1928;1955;1955;LWR;Political Protege;Medium;2810;X
+265052;Head of Government;Baek Nam-un;1936;1980;1980;LWR;Silent Workhorse;Medium;M_Baek nam-un;X
+265053;Head of Government;Choi Chang-ik;1936;1956;1964;LE;Naive Optimist;Medium;M_Choi chang-ik;X
+265054;Foreign Minister;Choi Gyu-ha;1952;1980;2006;PA;Apologetic Clerk;Medium;M_Choi Gyu-ha;X
+265055;Foreign Minister;Heo Jeong;1933;1970;1989;SC;The Cloak N Dagger Schemer;Medium;M_Heo jeong;X
+265056;Foreign Minister;Jeong Il-hyeong;1936;1975;1983;ML;Apologetic Clerk;Medium;M_Jung il-hyeong;X
+265057;Foreign Minister;Kim Hong-il;1955;1970;1981;SC;General Staffer;Medium;M_Kim hong-il;X
+265058;Foreign Minister;Song Yo-chan;1956;1970;1980;PA;General Staffer;Medium;M_Song yo-chan;X
+265059;Foreign Minister;Choi Deok-sin;1952;1976;1990;PA;The Cloak N Dagger Schemer;Medium;M_Choi deok-sin;X
+265060;Foreign Minister;Park Yong-man;1917;1929;1929;ML;General Staffer;Medium;M_Park Yong-man;X
+265061;Foreign Minister;Shin Ik-hui;1918;1932;1933;PA;The Cloak N Dagger Schemer;Medium;M_Shin ik-hui;X
+265062;Foreign Minister;Kim Gyu-sik;1919;1933;1933;SD;Biased Intellectual;Medium;M_Kim gyu-sik1;X
+265063;Foreign Minister;Shin Gyu-sik;1917;1923;1923;SL;Ideological Crusader;Medium;M_Shin Gyu-sik;X
+265064;Foreign Minister;Choi Dong-o;1929;1953;1963;SC;Great Compromiser;Medium;M_Choi dong-o;X
+265065;Foreign Minister;Cho So-ang;1918;1959;1959;ML;Ideological Crusader;Medium;2807;X
+265066;Foreign Minister;Oh Yeong-seon;1923;1940;1940;ML;Iron Fisted Brute;Medium;M_Oh Yeong-seon;X
+265067;Foreign Minister;Choi Geun-u;1936;1962;1962;SD;The Cloak N Dagger Schemer;Medium;M_Choi geun-u;X
+265068;Foreign Minister;Mun Jang-ouk;1940;1964;1964;SC;Apologetic Clerk;Medium;M_Mun Jang-ouk;X
+265069;Foreign Minister;Jang Geon-sang;1933;1975;1975;SD;The Cloak N Dagger Schemer;Medium;M_Jang geon-sang;X
+265070;Foreign Minister;Cho Dong-ho;1925;1955;1955;SD;Apologetic Clerk;Medium;2814;X
+265071;Foreign Minister;Hyun Jeong-gyeong;1922;1942;1942;SD;General Staffer;Medium;M_Hyun jeong-gyeong;X
+265072;Foreign Minister;Park Jin-sun;1918;1938;1955;LE;Great Compromiser;Medium;2809;X
+265073;Foreign Minister;Yu Rim;1933;1962;1962;SD;Great Compromiser;Medium;M_Yu rim;X
+265074;Foreign Minister;Kim Chang-man;1933;1966;1966;LWR;Apologetic Clerk;Medium;M_Kim chang-man;X
+265075;Foreign Minister;Lee Gang-guk;1933;1956;1968;LE;Biased Intellectual;Medium;M_Lee gang-guk;X
+265076;Foreign Minister;Park Heon-yeong;1923;1956;1964;LE;Ideological Crusader;Medium;2808;X
+265077;Foreign Minister;Heo Heon;1928;1955;1955;LWR;Biased Intellectual;Medium;2810;X
+265078;Foreign Minister;Rim Byeong-jik;1925;1977;1977;PA;Ideological Crusader;Medium;M_Rim byeong-jik;X
+265079;Foreign Minister;Byeon Yeong-tae;1933;1970;1970;SC;Ideological Crusader;Medium;M578033;X
+265080;Foreign Minister;Cho Jeong-hwan;1940;1968;1968;PA;Biased Intellectual;Medium;M_Cho jeong-hwan;X
+265081;Minister of Armament;Lee Yu-pil;1919;1946;1946;ML;Military Entrepreneur;Medium;M_Lee yu-pil;X
+265082;Minister of Armament;Lee Jong-man;1933;1955;1978;LWR;Resource Industrialist;Medium;M_Lee jong-man;X
+265083;Minister of Armament;Kang Gi-deok;1930;1953;1961;SD;Laissez-Faire Capitalist;Medium;M_Kang gi-deok;X
+265084;Minister of Armament;Choi Ik-hwan;1926;1960;1960;SD;Military Entrepreneur;Medium;M_Choi ik-hwan;X
+265085;Minister of Armament;Kim Rip;1918;1923;1950;LWR;Administrative Genius;Medium;M_Kim rip;X
+265086;Minister of Armament;Jeong Baek;1923;1952;1964;LE;Resource Industrialist;Medium;M_Jung baek;X
+265087;Minister of Armament;Yu Ja-myeong;1925;1951;1986;LWR;Theoretical Scientist;Medium;M_Yu ja-myeong;X
+265088;Minister of Armament;Lee Gwan-sul;1936;1951;1964;LE;Resource Industrialist;Medium;M_Lee gwan-sul;X
+265089;Minister of Armament;Choi Chang-ik;1933;1964;1964;LE;Corrupt Kleptocrat;Medium;M_Choi chang-ik;X
+265090;Minister of Armament;Ha Pil-won;1926;1956;1964;LE;Construction Magnate;Medium;M_Ha pil-won;X
+265091;Minister of Armament;Kim Dan-ya;1925;1939;1964;LE;Administrative Genius;Medium;2813;X
+265092;Minister of Armament;Jang Si-u;1933;1953;1964;LE;Laissez-Faire Capitalist;Medium;M_Jang si-u;X
+265093;Minister of Armament;Kim Cheol-su;1919;1956;1987;LWR;Laissez-Faire Capitalist;Medium;M_Kim cheol-su;X
+265094;Minister of Armament;Lee Gyu-gap;1928;1971;1971;SC;Resource Industrialist;Medium;M_Lee gyu-gap;X
+265095;Minister of Security;Won Se-hun;1918;1960;1960;SL;Compassionate Gentleman;Medium;M_Won se-hun;X
+265096;Minister of Armament;Cho Man-sik;1923;1953;1953;ML;Laissez-Faire Capitalist;Medium;M_Cho man-sik;X
+265097;Minister of Armament;Jeon Jin-han;1928;1973;1973;ML;Mixed Economy;Medium;M_Jeon jin-han;X
+265098;Minister of Armament;Ju Yo-han;1933;1980;1980;ML;Keynesian Economy;Medium;M_Ju yo-han;X
+265099;Minister of Armament;Oh Wi-yeong;1933;1979;1979;ML;Laissez-Faire Capitalist;Medium;M_Oh wi-yeong;X
+265100;Minister of Armament;Lee Tae-yong;1936;1969;1969;ML;Resource Industrialist;Medium;M_Lee tae-yong;X
+265101;Minister of Armament;Kim Yeong-seon;1945;1973;1988;ML;Laissez-Faire Capitalist;Medium;M_Kim Yeong-seon;X
+265102;Minister of Armament;Kim Do-yeon;1936;1968;1968;SC;Laissez-Faire Capitalist;Medium;M_Kim do-yeon;X
+265103;Minister of Armament;Lee Gyo-seon;1940;1962;1971;SC;Theoretical Scientist;Medium;M_Lee gyo-seon;X
+265104;Minister of Armament;Cho Seong-hwan;1919;1949;1949;SC;Military Entrepreneur;Medium;863;X
+265105;Minister of Armament;Cho Wan-gu;1924;1954;1954;SC;Infantry Proponent;Medium;M_Cho wan-gu;X
+265106;Minister of Armament;Eom Hang-seop;1930;1952;1963;SC;Laissez-Faire Capitalist;Medium;M_Eom hang-seop;X
+265107;Minister of Armament;Im Yeong-sin;1940;1965;1978;PA;Laissez-Faire Capitalist;Medium;M_Im yeong-sin;X
+265108;Minister of Armament;Kim Hyeon-cheol;1936;1980;1990;PA;Resource Industrialist;Medium;M_Kim hyeon-cheol;X
+265109;Minister of Armament;Song In-sang;1940;1960;2016;PA;Laissez-Faire Capitalist;Medium;M_Song in-sang;X
+265110;Minister of Armament;Shin Jung-mok;1936;1960;1983;FA;Resource Industrialist;Medium;M_Shin jung-mok;X
+265111;Minister of Armament;Yang U-jeong;1936;1960;1976;FA;Planned Economy Proponent;Medium;M_Yang u-jeong;X
+265112;Minister of Armament;Baek Du-jin;1940;1980;1994;FA;Laissez-Faire Capitalist;Medium;M578028;X
+265113;Minister of Armament;Won Yong-seok;1950;1973;1990;PA;Industrial Chemist;Medium;M_Won Yong-seok;X
+265114;Minister of Armament;Shin Hyeon-Hwak;1956;1982;2008;PA;Resource Industrialist;Medium;M_Shin Hyeon-Hwak;X
+265115;Minister of Armament;Cheon Byeong-kyu;1956;1970;1994;PA;Keynesian Economy;Medium;M_Cheon Byeong-kyu;X
+265116;Minister of Armament;Yu Won-sik;1956;1965;1988;PA;Planned Economy Proponent;Medium;M_Yu Won-sik;X
+265117;Minister of Armament;Kim Se-ryeon;1955;1980;1989;PA;Mixed Economy;Medium;M_Kim Se-ryeon;X
+265118;Minister of Armament;Hyun Ik-cheol;1925;1939;1960;PA;Infantry Proponent;Medium;M_Hyun ik-cheol;X
+265119;Minister of Armament;Lee Si-yeong;1918;1953;1953;SC;Laissez-Faire Capitalist;Medium;M_Lee si-yeong;X
+265120;Minister of Armament;Song Byeong-jo;1926;1943;1943;SC;Construction Magnate;Medium;M_Song byeong-jo;X
+265121;Minister of Security;Kwon Tae-seok;1926;1949;1949;SD;Compassionate Gentleman;Medium;M_Kwon tae-seok;X
+265122;Minister of Security;Kim Byeong-ro;1925;1964;1964;ML;Man of the People;Medium;M_Kim byeong-ro;X
+265123;Minister of Security;Lee Gap-seong;1926;1962;1982;PA;Back Stabber;Medium;M_Lee gap-seong;X
+265124;Minister of Security;Han Geun-jo;1926;1966;1973;ML;Silent Lawyer;Medium;M_Han geun-jo;X
+265125;Minister of Security;Kim Sang-deok;1926;1953;1956;SL;Efficient Sociopath;Medium;M_Kim sang-deok;X
+265126;Minister of Security;Cho Dong-ho;1922;1955;1955;SD;Compassionate Gentleman;Medium;2814;X
+265127;Minister of Security;Hyun Jeong-gyeong;1924;1942;1942;LWR;Back Stabber;Medium;M_Hyun jeong-gyeong;X
+265128;Minister of Security;Seo Sang-il;1936;1963;1963;SL;Efficient Sociopath;Medium;M_Seo sang-il;X
+265129;Minister of Security;Park Gi-chul;1945;1978;1978;SD;Health and Safety;Medium;M_Park gi-chul;X
+265130;Minister of Security;Lee Eul-gyu;1923;1973;1973;SD;Man of the People;Medium;M_Lee eul-gyu;X
+265131;Minister of Security;Lee Yeong;1924;1961;1961;LE;Prince of Terror;Medium;M_Lee yeong;X
+265132;Minister of Security;Cho Kae-ok;1933;1953;1953;SL;Crime Fighter;Medium;M_Cho gae-ok;X
+265133;Minister of Security;Jeong Hyeon-seop;1928;1982;1982;SD;Man of the People;Medium;M_Jung hyeon-seop;X
+265134;Minister of Security;Lee Jae-yu;1926;1945;1964;LE;Crime Fighter;Medium;M_Lee jae-yu;X
+265135;Minister of Security;Cho Bong-am;1926;1946;1946;LE;Back Stabber;Medium;M_Cho bong-am;X
+265136;Minister of Security;Hyun Jun-hyeok;1933;1946;1946;LWR;Compassionate Gentleman;Medium;M_Hyun jun-hyeok;X
+265137;Minister of Security;Lee Seung-yeop;1926;1955;1964;LE;Efficient Sociopath;Medium;M_Lee seung-yeop;X
+265138;Minister of Security;Choi Yong-dal;1936;1956;1964;LE;Silent Lawyer;Medium;M_Choi yong-dal;X
+265139;Minister of Security;Cho Byeong-ok;1925;1960;1960;SC;Prince of Terror;Medium;M_Yu seok;X
+265140;Minister of Security;Hyun Seok-ho;1940;1968;1989;ML;Man of the People;Medium;M_Hyun seok-ho;X
+265141;Minister of Security;Cho Jae-cheon;1945;1967;1971;SC;Silent Lawyer;Medium;M_Cho jae-cheon;X
+265142;Minister of Security;Hong Ik-pyo;1940;1975;1976;ML;Crime Fighter;Medium;M_Hong ik-pyo;X
+265143;Minister of Security;Baek Gwan-su;1925;1982;1962;SC;Media Magnate;Medium;M_Baek gwan-su;X
+265144;Minister of Security;Kim Yong-mu;1925;1953;1964;SC;Silent Lawyer;Medium;M_Kim yong-mu;X
+265146;Minister of Security;Yu Jin-o;1940;1988;1988;SC;Silent Lawyer;Medium;M_Yu jin-o;X
+265147;Minister of Security;Cho Wan-gu;1924;1953;1953;SC;Man of the People;Medium;M_Cho wan-gu;X
+265148;Minister of Security;Shin Ik-hui;1925;1957;1957;PA;Efficient Sociopath;Medium;M_Shin ik-hui;X
+265149;Minister of Security;Jang Taek-sang;1936;1970;1970;PA;Crime Fighter;Medium;M578027;X
+265150;Minister of Security;Lee In;1925;1980;1980;SC;Silent Lawyer;Medium;M_Lee in;X
+265151;Minister of Security;Lee Ik-heung;1940;1965;1994;PA;Crooked Kleptocrat;Medium;M_Lee ik-heung;X
+265152;Minister of Security;Jang Gyeong-geun;1940;1979;1979;PA;Back Stabber;Medium;M_Jang gyeong-geun;X
+265153;Minister of Security;Lee Sun-yong;1933;1989;1989;PA;Back Stabber;Medium;M_Lee sun-yong;X
+265154;Minister of Security;Shin Tae-ak;1933;1960;1981;FA;Silent Lawyer;Medium;M_Shin tae-ak;X
+265155;Minister of Security;Ahn Ho-sang;1936;2000;2000;FA;Man of the People;Medium;M_Ahn ho-sang;X
+265145;Minister of Security;Kim Hyo-seok;1936;1953;1966;SC;Back Stabber;Medium;M_Kim hyo-seok;X
+265156;Minister of Security;Lee Dong-nyeong;1918;1933;1933;SC;Compassionate Gentleman;Medium;M_Lee dong-nyeong;X
+265157;Minister of Security;Song Byeong-jo;1925;1943;1943;SC;Back Stabber;Medium;M_Song byeong-jo;X
+265158;Minister of Security;Hong Jin;1925;1947;1947;ML;Man of the People;Medium;M_Hong Jin;X
+265159;Minister of Security;Yun Chi-yeong;1925;1947;1947;PA;Prince of Terror;Medium;M_Yun chi-yeong;X
+265160;Minister of Security;Jin Heon-sik;1940;1960;1981;PA;Silent Lawyer;Medium;M_Jin heon-sik;X
+265161;Minister of Security;Paik Han-sung;1940;1963;1972;PA;Efficient Sociopath;Medium;M578031;X
+265162;Minister of Security;Choi In-Kyu;1958;1962;1968;PA;Prince of Terror;Medium;M_Choi In-Kyu;X
+265163;Minister of Security;Han Shin;1955;1997;1997;PA;Crime Fighter;Medium;M_Han sin;X
+265164;Minister of Security;Park Kyeong-won;1955;1980;2009;PA;Man of the People;Medium;M_Park Kyeong-won;X
+265165;Minister of Security;Eom Min-young;1950;1970;1970;SC;Silent Lawyer;Medium;M_Eom Min-young;X
+265166;Minister of Security;Kim Yak-su;1933;1953;1965;SD;Man of the People;Medium;M_Kim yak-su;X
+265157;Minister of Security;Ahn Gong-geun;1926;1940;1940;PA;Crime Fighter;Medium;M_Ahn Gong-geun;X
+265168;Head of Military Intelligence;Jeong Baek;1926;1953;1965;LWR;Industrial Specialist;Medium;M_Jung baek;X
+265169;Head of Military Intelligence;Cho Si-won;1948;1983;1983;SL;Dismal Enigma;Medium;M_Cho si-won;X
+265170;Head of Military Intelligence;Yun Gi-seop;1919;1953;1960;SL;Logistics Specialist;Medium;M_Yun gi-seop;X
+265171;Head of Military Intelligence;Jang Geon-sang;1919;1963;1976;SD;Logistics Specialist;Medium;M_Jang geon-sang;X
+265172;Head of Military Intelligence;Kim Seong-suk;1928;1970;1970;SD;Political Specialist;Medium;M_Kim seong-suk;X
+265173;Head of Military Intelligence;Kim San;1928;1939;1945;LWR;Dismal Enigma;Medium;M_Kim san;X
+265174;Head of Military Intelligence;Kim Won-bong;1919;1959;1965;LWR;Dismal Enigma;Medium;M_Kim won-bong;X
+265175;Head of Military Intelligence;Hwang Tae-seong;1936;1964;1964;LWR;Technical Specialist;Medium;M_Hwang tae-seong;X
+265176;Head of Military Intelligence;Kim Sam-ryong;1933;1950;1955;LE;Technical Specialist;Medium;M_Kim sam-ryong;X
+265177;Head of Military Intelligence;Sung Si-Paik;1933;1950;1955;LE;Naval Intelligence Specialist;Medium;M_Sung Si-Paik;X
+265178;Head of Military Intelligence;Lee In-seop;1917;1938;1980;LWR;Logistics Specialist;Medium;M_Lee in-seop;X
+265179;Head of Military Intelligence;Lee Hyeon-sang;1930;1954;1954;LE;Industrial Specialist;Medium;M_Lee hyeon-sang;X
+265180;Head of Military Intelligence;Lee Ju-ha;1929;1950;1964;LE;Political Specialist;Medium;M_Lee ju-ha;X
+265181;Head of Military Intelligence;Kim Dan-ya;1920;1938;1964;LE;Dismal Enigma;Medium;2813;X
+265182;Head of Military Intelligence;Lee Gang-guk;1936;1955;1964;LE;Double Agent;Medium;M_Lee gang-guk;X
+265183;Head of Military Intelligence;Lee Jae-bok;1933;1950;1964;LE;Dismal Enigma;Medium;M_Lee jae-bok;X
+265184;Head of Military Intelligence;Choi Neung-jin;1933;1952;1955;SL;Political Specialist;Medium;M_Choi neung-jin;X
+265185;Head of Military Intelligence;Lee Hu-rak;1958;1978;2010;PA;Political Specialist;Medium;M_Lee Hu-rak;X
+265186;Head of Military Intelligence;Choi Gyeong-rok;1950;1968;2003;ML;Logistics Specialist;Medium;M_Choi gyeong-rok;X
+265187;Head of Military Intelligence;Shin Heung-u;1933;1960;1960;PA;Dismal Enigma;Medium;M_Shin heung-u;X
+265188;Head of Military Intelligence;Yu Jin-san;1942;1968;1974;SC;Double Agent;Medium;M_Yu jin-san;X
+265189;Head of Military Intelligence;Seo Beom-seok;1936;1972;1987;SC;Political Specialist;Medium;M_Seo beom-seok;X
+265190;Head of Military Intelligence;Shin Ik-hui;1919;1957;1957;SC;Dismal Enigma;Medium;M_Shin ik-hui;X
+265191;Head of Military Intelligence;Yeom Dong-jin;1940;1951;1955;PA;Dismal Enigma;Medium;M_Yeom dong-jin;X
+265192;Head of Military Intelligence;Kim Hak-gyu;1926;1951;1968;SC;Logistics Specialist;Medium;L50150;X
+265193;Head of Military Intelligence;Jang Seok-yun;1936;1961;2005;PA;Political Specialist;Medium;M_Jang seok-yun;X
+265194;Head of Military Intelligence;Kim Jong-pil;1955;1965;2019;PA;Dismal Enigma;Medium;M_JP;X
+265195;Head of Military Intelligence;Kim Chang-ryong;1948;1957;1957;PA;Dismal Enigma;Medium;M_Kim chang-ryong;X
+265196;Head of Military Intelligence;Hwang Seong-su;1942;1955;1998;PA;Political Specialist;Medium;M_Hwang seong-su;X
+265197;Head of Military Intelligence;Won Yong-deok;1940;1968;1968;FA;Dismal Enigma;Medium;M_Won yong-deok;X
+265198;Head of Military Intelligence;Park Byeong-gwon;1948;1970;2006;FA;Political Specialist;Medium;M_Park byeong-gwon;X
+265199;Head of Military Intelligence;Kim Hyeong-il;1948;1972;1978;PA;Political Specialist;Medium;M_Kim Hyeong-il;X
+265200;Head of Military Intelligence;Paik In-yeop;1949;1960;2014;PA;Political Specialist;Medium;M_Paik In-yeop;X
+265201;Head of Military Intelligence;Park Chang-rok;1950;1963;2007;SC;Logistics Specialist;Medium;M_Park Chang-rok;X
+265202;Head of Military Intelligence;Kim Jae-chun;1955;2015;2015;PA;Dismal Enigma;Medium;M_Kim Jae-chun;X
+265203;Head of State;Yi Myeong-bok;1896;1920;1920;PA;Autocratic Charmer;Medium;9542;X
+265204;Head of State;Yi Cheok;1906;1927;1927;PA;Barking Buffoon;Medium;798;X
+265205;Head of Government;Park Je-sun;1900;1917;1917;PA;Backroom Backstabber;Medium;814;X
+265206;Head of Government;Lee Wan-yong;1900;1919;1927;PA;Ambitious Union Boss;Medium;M_Lee Wan-yong;X
+265207;Chief of Staff;Yu Dong-yeol;1918;1952;1952;SL;School of Defence;Medium;853;X
+265208;Chief of Staff;Song Ho-seong;1942;1960;1960;SL;School of Psychology;Medium;M_Song ho-seong;X
+265209;Chief of Staff;Chae Byeong-deok;1940;1956;1956;SC;School of Manoeuvre;Medium;M_Chae byeong-deok;X
+265210;Chief of Staff;Lee Yong;1918;1955;1955;LWR;School of Mass Combat;Medium;M_Yi-yong;X
+265211;Chief of Staff;Jeong I-hyeong;1924;1933;1957;SD;School of Manoeuvre;Medium;M_Jung i-hyeong;X
+265212;Chief of Staff;Mun Yong-chae;1945;1977;1977;SD;School of Fire Support;Medium;M_Mun yong-chae;X
+265213;Chief of Staff;Kim Won-bong;1927;1956;1964;LWR;Commando Doctrine Staff;Medium;M_Kim won-bong;X
+265214;Chief of Staff;Kim Gyeong-cheon;1919;1938;1958;SD;School of Fire Support;Medium;M_Kim gyeong-cheon;X
+265215;Chief of Staff;Kim Mu-jeong;1936;1954;1970;LWR;School of Fire Support;Medium;M_Kim mu-jeong;X
+265216;Head of Military Intelligence;Nam Do-bu;1948;1956;1964;LE;Political Specialist;Medium;M_Nam Do-bu;X
+265217;Chief of Staff;Lee Jong-chan;1943;1964;1984;ML;School of Defence;Medium;M_Lee jong-chan;X
+265218;Chief of Staff;Lee Eung-jun;1933;1961;1986;PA;School of Psychology;Medium;M_Lee eung-jun;X
+265219;Chief of Staff;Gim Gyu-sik;1919;1932;1932;PA;School of Psychology;Medium;M_Gim gyu-sik;X
+265220;Chief of Staff;Kim Hak-gyu;1940;1967;1967;SC;Commando Doctrine Staff;Medium;L50150;X
+265221;Chief of Staff;Ji Cheong-cheon;1919;1957;1957;PA;School of Mass Combat;Medium;2804;X
+265222;Chief of Staff;Kim Hong-il;1932;1963;1981;SC;School of Defence;Medium;M_Kim hong-il;X
+265223;Chief of Staff;Lee Jun-sik;1929;1960;1966;FA;School of Manoeuvre;Medium;M_Lee jun-sik;X
+265224;Chief of Staff;Jeong Il-gwon;1946;1960;1994;PA;School of Psychology;Medium;M_Jung il-gwon;X
+265225;Chief of Staff;Yi Hyeng-geun;1940;1960;2002;SC;School of Fire Support;Medium;M_Lee hyeong-geun;X
+265226;Chief of Staff;Yu Jae-Heong;1950;1963;2012;SC;School of Manoeuvre;Medium;M_Yu jae-heung;X
+265227;Chief of Staff;Baek Seon-yeop;1951;1963;2021;PA;School of Fire Support;Medium;L578010;X
+265228;Chief of Staff;Kim Jong-oh;1950;1966;1966;SC;School of Psychology;Medium;M_Kim jong-o;X
+265229;Chief of Staff;Yi Beom-seok;1926;1973;1973;FA;School of Mass Combat;Medium;M_Yi beom-seok;X
+265230;Chief of Staff;Won Chung-yeon;1961;1966;2005;SC;School of Psychology;Medium;M_Won Chung-yeon;X
+265231;Chief of Staff;Hwang Hak-su;1914;1953;1953;SC;School of Manoeuvre;Medium;871;X
+265232;Chief of Army;Song Ho-seong;1942;1960;1960;SL;Guns and Butter Doctrine;Medium;M_Song ho-seong;X
+265233;Chief of Army;Chae Byeong-deok;1943;1951;1964;PA;Guns and Butter Doctrine;Medium;M_Chae byeong-deok;X
+265234;Chief of Army;Lee Yong;1920;1955;1955;LWR;Guerilla Warfare Doctrine;Medium;M_Yi-yong;X
+265235;Chief of Army;Mun Yong-chae;1948;1977;1977;SD;Decisive Battle Doctrine;Medium;M_Mun yong-chae;X
+265236;Chief of Army;Kim Gyeong-cheon;1919;1938;1958;SD;Doctrine of Autonomy;Medium;M_Kim gyeong-cheon;X
+265237;Chief of Army;Han Chang-geol;1918;1938;1957;LWR;Guerilla Warfare Doctrine;Medium;870;X
+265238;Chief of Army;Kim Won-bong;1927;1964;1964;LWR;Commando Doctrine Army;Medium;M_Kim won-bong;X
+265239;Chief of Army;Kim Mu-jeong;1936;1954;1970;LE;Static Defence Doctrine;Medium;M_Kim mu-jeong;X
+265240;Minister of Security;Choi Yong-geon;1932;1976;1976;ST;Efficient Sociopath;Medium;M_Choi yong-geon;X
+265241;Chief of Army;Lee Jong-chan;1943;1964;1984;ML;Elastic Defence Doctrine;Medium;M_Lee jong-chan;X
+265242;Chief of Army;Lee Eung-jun;1933;1961;1986;PA;Elastic Defence Doctrine;Medium;M_Lee eung-jun;X
+265243;Chief of Army;Yang Se-bong;1928;1934;1934;PA;Guerilla Warfare Doctrine;Medium;888;X
+265244;Chief of Army;Ji Cheong-cheon;1919;1958;1958;PA;Decisive Battle Doctrine;Medium;2804;X
+265245;Chief of Army;Kim Hong-il;1940;1953;1981;SC;Static Defence Doctrine;Medium;M_Kim hong-il;X
+265246;Chief of Army;Shin Tae-yeong;1936;1960;1960;PA;Elastic Defence Doctrine;Medium;M_Shin tae-yeong;X
+265247;Chief of Army;Jeong Il-gwon;1946;1958;1995;PA;Guns and Butter Doctrine;Medium;M_Jung il-gwon;X
+265248;Chief of Army;Ahn Chun-saeng;1942;1962;2012;FA;Armoured Spearhead Doctrine;Medium;M_Ahn chun-saeng;X
+265249;Chief of Army;Baek Seon-yeop;1951;1964;2021;PA;Elastic Defence Doctrine;Medium;L578010;X
+265250;Chief of Army;Yi Hyeng-geun;1948;1960;2002;SC;Guns and Butter Doctrine;Medium;M_Lee hyeong-geun;X
+265251;Chief of Army;Song Yo-chan;1953;1962;1981;SC;Decisive Battle Doctrine;Medium;M_Song yo-chan;X
+265252;Chief of Staff;Cho Kae-ok;1933;1953;1953;SL;School of Manoeuvre;Medium;M_Cho gae-ok;X
+265253;Chief of Army;Choi Gyeong-rok;1950;1964;2003;SC;Decisive Battle Doctrine;Medium;M_Choi gyeong-rok;X
+265255;Chief of Army;Kim Jong-oh;1950;1966;1966;PA;Decisive Battle Doctrine;Medium;M_Kim jong-o;X
+265254;Chief of Army;Chang Do-Yeong;1953;1966;2013;PA;Elastic Defence Doctrine;Medium;M578030;X
+265256;Chief of Army;Min Gi-sik;1950;1966;1998;SC;Decisive Battle Doctrine;Medium;M_Min gi-sik;X
+265257;Chief of Army;Yi Han-rim;1950;1964;2013;SC;Static Defence Doctrine;Medium;M_Lee han-rim;X
+265258;Chief of Army;Kwon Tae-seok;1936;1949;1949;SD;Doctrine of Autonomy;Medium;M_Kwon tae-seok;X
+265259;Chief of Army;Lee Hyeon-sang;1936;1954;1964;LE;Guerilla Warfare Doctrine;Medium;M_Lee hyeon-sang;X
+265260;Chief of Army;Kim Dong-Sam;1910;1933;1937;SC;Doctrine of Autonomy;Medium;873;X
+265261;Chief of Army;Kim Jwa-jin;1916;1930;1930;PA;Commando Doctrine Army;Medium;2805;X
+265262;Chief of Army;Oh Dong-Jin;1920;1933;1944;SD;Elastic Defence Doctrine;Medium;M_Oh dong-jin;X
+265263;Chief of Army;Yu Dong-yeol;1918;1952;1952;SL;Doctrine of Autonomy;Medium;853;X
+265264;Chief of Army;Yi Jang-nyeong;1918;1932;1932;SC;Elastic Defence Doctrine;Medium;876;X
+265265;Chief of Army;Choi Nam-geun;1945;1950;1956;SD;Elastic Defence Doctrine;Medium;M_Choi nam-geun;X
+265266;Head of State;Lee Gi-bung;1959;1961;1966;PA;Barking Buffoon;Medium;M_Yi Gi-bung;X
+265267;Head of Military Intelligence;Lee Yong-mun;1940;1954;1960;SC;Dismal Enigma;Medium;M_Lee yong-mun;X
+265268;Head of Government;Han Bin;1936;1960;1960;LE;Political Protege;Medium;M_Han Bin;X
+265269;Chief of Staff;Kim Hong-il;1922;1953;1981;SC;School of Manoeuvre;Medium;M_Kim hong-il;X
+265270;Head of Government;Yang Gi-tak;1909;1940;1940;SC;Naive Optimist;Medium;M_Yang gi-tak;X
+265271;Chief of Air Force;Kim Sin;1945;1963;2017;PA;Air Superiority Doctrine;Medium;M_Kim sin;X
+265272;Chief of Air Force;Kim Jeong-ryeol;1940;1960;1993;SC;Air Superiority Doctrine;Medium;M_Kim jeong-ryeol;X
+265273;Chief of Air Force;Yun Gong-heum;1936;1954;1964;LWR;Air Superiority Doctrine;Medium;M_Yun gong-heum;X
+265274;Chief of Air Force;Lee Yeong-mu;1933;1956;1956;SL;Army Aviation Doctrine;Medium;885;X
+265275;Chief of Air Force;Jang Deok-chang;1933;1960;1973;SC;Naval Aviation Doctrine;Medium;M_Jang deok-chang;X
+265276;Chief of Air Force;Ahn Chang-Nam;1920;1931;1931;ML;Air Superiority Doctrine;Medium;881;X
+265277;Chief of Air Force;Seo Whal-Bo;1919;1927;1927;SL;Army Aviation Doctrine;Medium;882;X
+265278;Chief of Air Force;No Baek-rin;1917;1927;1927;ML;Air Superiority Doctrine;Medium;860;X
+265279;Chief of Air Force;Kim Chang-Kyu;1950;1960;2025;SC;Army Aviation Doctrine;Medium;M_Kim Chang-Kyu;X
+265280;Chief of Air Force;Jang Sueng-Hwan;1945;1965;2016;PA;Air Superiority Doctrine;Medium;M_Jang Sueng-Hwan;X
+265281;Chief of Air Force;Choi Yong-deok;1922;1956;1970;SC;Army Aviation Doctrine;Medium;884;X
+265282;Chief of Navy;Sohn Won-il;1938;1981;1981;SC;Decisive Naval Battle Doctrine;Medium;M578009;X
+265283;Chief of Navy;Choi Seong-hak;1922;1938;1960;LWR;Indirect Approach Doctrine;Medium;M_Choi seong-hak;X
+265284;Chief of Navy;Park Ok-gyu;1952;1958;1971;SC;Decisive Naval Battle Doctrine;Medium;M_Park ok-gyu;X
+265285;Chief of Navy;Shin Seong-mo;1919;1960;1960;PA;Open Seas Doctrine;Medium;890;X
+265286;Chief of Navy;Shin Hyeon-jun;1950;1956;2008;PA;Base Control Doctrine;Medium;M_Shin hyeon-jun;X
+265287;Chief of Navy;Jeong Geung-mo;1955;1960;1981;SC;Power Projection Doctrine;Medium;M_Jeong Geung-mo;X
+265288;Chief of Navy;Yi Yong-wun;1955;1960;1988;ML;Indirect Approach Doctrine;Medium;M_YI Yong-wun;X
+265289;Chief of Navy;Yi Seong-ho;1957;1962;2020;ML;Open Seas Doctrine;Medium;M_Yi Seong-ho;X
+265290;Chief of Navy;Yi Maeng-gi;1955;1966;2005;SC;Decisive Naval Battle Doctrine;Medium;M_Yi Maeng-gi;X
+265291;Head of Military Intelligence;Kim Gu;1919;1933;1933;PA;Dismal Enigma;Medium;M_Kim Gu;X
+265292;Head of Government;Yeo Un-hong;1945;1974;1974;SD;Happy Amateur;Medium;M_Yeo un-hong;X
+265293;Foreign Minister;Yeo Un-hong;1933;1974;1974;SD;Biased Intellectual;Medium;M_Yeo Un-hong;X
+265294;Minister of Security;Yeo Un-hong;1933;1974;1974;SD;Back Stabber;Medium;M_Yeo Un-hong;X
+265295;Chief of Army;Yi Beom-seok;1945;1973;1973;FA;Doctrine of Autonomy;Medium;M_Yi Beom-seok;X
+265296;Chief of Navy;Shin Soon-Seong;1900;1944;1944;SC;Base Control Doctrine;Medium;886;X
+265297;Head of State;Jang Myeon;1950;1967;1967;ML;Barking Buffoon;Medium;M578026;X
+265298;Foreign Minister;Ahn Jae-hong;1924;1955;1955;SL;Biased Intellectual;Medium;M_Ahn Jae-hong;X
+265299;Head of Government;Hyun Seok-ho;1962;1988;1988;ML;Corporate Suit;Medium;M_Hyun Seok-ho;X
+265300;Head of Military Intelligence;Hyun Seok-ho;1950;1988;1988;ML;Political Specialist;Medium;M_Hyun Seok-ho;X
+265301;Head of Government;Lee Seung-yeop;1940;1956;1964;LE;Political Protege;Medium;M_Lee Seung-yeop;X
+265302;Head of Military Intelligence;Kim Cheol;1923;1935;1960;ML;Political Specialist;Medium;M_Gim Cheol;X
+265303;Minister of Armament;Kim Cheol;1919;1935;1960;ML;Military Entrepreneur;Medium;M_Gim Cheol;X
+265304;Head of Military Intelligence;Kim An-il;1945;1963;2014;SC;Political Specialist;Medium;M_Kim An-il;X
+265305;Minister of Armament;Kim Gab;1921;1933;1933;SL;Balanced Budget Economy;Medium;M_Kim Gab;X
+265306;Head of State;Hong Myeong-hui;1952;1968;1968;SD;Pig-headed Isolationist;Medium;M_Hong Myeong-hui;X
+265307;Chief of Staff;Lee Sang-lyong;1900;1933;1933;SC;School of Psychology;Medium;M_Lee Sang-lyong;X
+265308;Minister of Armament;Lee Sang-lyong;1900;1933;1933;SL;Laissez-Faire Capitalist;Medium;M_Lee Sang-lyong;X
+265309;Minister of Security;Kim Dae-ji;1921;1933;1943;SD;Crime Fighter;Medium;M_Kim Dae-ji;X
+265310;Head of Military Intelligence;Shin Suk;1921;1968;1968;SD;Political Specialist;Medium;M_Shin Suk;X
+265311;Minister of Security;Shin Suk;1921;1968;1968;SL;Man of the People;Medium;M_Shin Suk;X
+265312;Head of Government;Lee Ik-heung;1953;1965;1994;PA;Backroom Backstabber;Medium;M_Lee Ik-heung;X
+265313;Head of State;Kim Gu;1933;1960;1960;PA;Autocratic Charmer;Medium;M_Kim Gu;X
+265314;Minister of Armament;Yang U-jo;1930;1964;1964;SC;Resource Industrialist;Medium;M_Yang U-jo;X
+265315;Minister of Armament;Han Dong-seok;1936;1957;1957;SC;Theoretical Scientist;Medium;M_Han Dong-seok;X
+265316;Chief of Air Force;Roh Tae-jun;1936;1971;1971;FA;Army Aviation Doctrine;Medium;M_Roh Tae-jun;X
+265317;Head of Government;Byeon Yeong-tae;1953;1970;1970;PA;Naive Optimist;Medium;M578033;X
+265318;Head of Government;Cho Jeong-hwan;1955;1968;1968;PA;Happy Amateur;Medium;M_Cho Jeong-hwan;X
+265319;Head of Government;Hong Jin-gi;1955;1987;1987;PA;Flamboyant Tough Guy;Medium;M_Hong Jin-gi;X
+265320;Minister of Armament;Baek Nam-un;1936;1980;1980;LWR;Planned Economy Proponent;Medium;M_Baek Nam-un;X
+265321;Minister of Armament;Yi Soon-tak;1920;1960;1960;SD;Mixed Economy;Medium;M_Yi soon-tak;X
+265322;Foreign Minister;Hwang Jin-nam;1933;1970;1970;SL;Biased Intellectual;Medium;M_Hwang Jin-nam;X
+265323;Minister of Armament;Jeong Hwan-beom;1933;1970;1978;SC;Laissez-Faire Capitalist;Medium;M_Jeong Hwan-beom;X
+265324;Minister of Armament;Lee Young-geun;1933;1991;1991;SD;Laissez-Faire Capitalist;Medium;M_Lee Young-geun;X
+265325;Minister of Security;Kim Sung-suk;1933;1980;1980;SD;Man of the People;Medium;M_Kim Sung-suk;X
+265326;Minister of Armament;Bae Sung-ryong;1950;1960;1960;SD;Mixed Economy;Medium;M_Bae Sung-ryong;X
+265327;Chief of Air Force;Park Seung-hwan;1933;1965;1965;SD;Army Aviation Doctrine;Medium;M_Park Seung-hwan;X
+265328;Chief of Army;Yu Hae-jun;1952;1986;1986;PA;Elastic Defence Doctrine;Medium;M_Yu Hae-jun;X
+265329;Foreign Minister;Kang Ju-jin;1950;1986;1995;FA;Biased Intellectual;Medium;M_Kang Ju-jin;X
+265330;Minister of Armament;Park Mun-kyu;1936;1972;1972;LE;Industrial Chemist;Medium;M_Park Mun-gyu;X
+265331;Head of Government;Oh Wi-yeong;1954;1979;1979;ML;Happy Amateur;Medium;M_Oh Wi-yeong;X
+265332;Head of Government;Jeong Hae-yeong;1960;1981;2005;SC;Political Protege;Medium;M_Jeong Hae-yeong;X
+265333;Minister of Security;Jeong Seong-tae;1955;1981;2000;SC;Man of the People;Medium;M_Jeong Seong-tae;X
+265334;Head of Military Intelligence;Baek Seon-yeop;1940;1981;2000;PA;Logistics Specialist;Medium;L578010;X
+265335;Head of Military Intelligence;Kim Yeong-hwan;1942;1955;1955;SC;Technical Specialist;Medium;M_Kim Yeong-hwan;X
+265336;Head of Government;Kim Chang-suk;1933;1962;1962;SC;Naive Optimist;Medium;M_Kim Chang-suk;X
+265337;Head of Government;Kim Hong-il;1950;1980;1980;SC;Old General;Medium;M_Kim Hong-il;X
+265338;Head of Government;Park Gi-chul;1955;1977;1977;SD;Corporate Suit;Medium;M_Park Gi-chul;X
+265339;Head of Military Intelligence;Hwang Jin-nam;1925;1970;1970;SL;Technical Specialist;Medium;M_Hwang Jin-nam;X
+265340;Chief of Army;Kim Seok-won;1933;1960;1978;SC;Static Defence Doctrine;Medium;M_Kim seok-won;X
+265341;Chief of Staff;Kang Geon;1936;1952;1952;ST;School of Defence;Medium;M_Kang Geon;X
+265342;Chief of Staff;Jang Gwon;1936;1953;1953;SD;School of Psychology;Medium;M_Jang Gwon;X
+265343;Head of Government;Cho Man-sik;1924;1953;1953;ML;Naive Optimist;Medium;M_Cho Man-sik;X
+265344;Minister of Security;Heo Jeong-suk;1930;1991;1991;LE;Health and Safety;Medium;M_Heo Jeong-suk;X
+265345;Foreign Minister;Jang Deok-su;1930;1964;1964;SC;Biased Intellectual;Medium;M_Jang Deok-su;X
+265346;Head of Military Intelligence;Ha Gap-cheong;1955;1964;1978;PA;Political Specialist;Medium;M_Ha Gap-cheong;X
+265347;Minister of Security;Yi Ho;1948;1980;1997;PA;Silent Lawyer;Medium;M_Yi Ho;X
+265348;Minister of Armament;Jeon Yae-yong;1948;1970;1994;PA;Administrative Genius;Medium;M_Jeon Yae-yong;X
+265349;Minister of Armament;Chang Ki-young;1960;1977;1977;SC;Administrative Genius;Medium;M_Chang Ki-young;X
+265350;Minister of Armament;Park Hui-beom;1960;1982;1982;PA;Planned Economy Proponent;Medium;M_Park Hui-beom;X
+265351;Head of Government;Kim Byeong-ro;1930;1964;1964;ML;Corporate Suit;Medium;M_Kim Byeong-ro;X
+265352;Minister of Armament;Kim Yu-taek;1955;1971;1975;PA;Resource Industrialist;Medium;M_Kim Yu-taek;X
+265353;Minister of Security;Na Yong-gyun;1948;1984;1984;SC;Compassionate Gentleman;Medium;M_Na Yong-gyun;X
+265354;Minister of Security;Yi Beom-seok;1950;1972;1972;FA;Back Stabber;Medium;M_Yi Beom-seok;X
+265355;Minister of Armament;Choi Sun-ju;1933;1957;1957;PA;Laissez-Faire Capitalist;Medium;M_Choi Sun-ju;X
+265356;Minister of Security;Paik Seong-wook;1940;1957;1981;PA;Back Stabber;Medium;M_Paik Sung-wook;X
+265357;Chief of Army;Choi Young-hee;1955;1970;2006;SC;Static Defence Doctrine;Medium;M_Choi Young-hee;X
+265358;Foreign Minister;Kim Yong-shik;1955;1980;1995;PA;Apologetic Clerk;Medium;M_Kim Yong-shik;X

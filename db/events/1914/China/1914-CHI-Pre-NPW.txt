@@ -1,0 +1,1525 @@
+# Pre-NPW Events
+# By Limith
+#-Pre NPW Politics------------------------------
+# UCH 133011001 Sun Zhong Shan makes a speech denouncing Yuan Shikai
+# UCH 133011002 Press for Repatriation of Sun Zhong Shan
+# JAP 133011003 Repatriation Demand
+# UCH 133011004 Repatriation Accepted
+# *** 133011005 Sun Zhongshan Dead! - CGX CYN SIK CXB
+#-Japan in China--------------------------------
+# JAP 133011006 Economic Dominance in China
+# JAP 133011007 The Rise of Pan-Asia Sentiment
+# JAP 133011008 Business Lobby Protests War
+#-Twenty One Demands----------------------------
+# JAP 133011015 Twenty One Demands
+# *** 133011016 Twenty One Demands - Chinese Response - UCH U74
+# UCH 133011022 Unhappiness over Twenty-One Demands
+#-Diplomatic Setup------------------------------
+# UCH 133011800 Failure of the Second Revolution
+# UCH 133011801 Western Diplomatic Recognition
+# UCH 133011802 Chinese Revolutionary Party
+#-1913 Gold Loan and Economic Malaise-----------
+# UCH 133011803 Chinese Reorganization Gold Loan of 1913
+# *** 133011804 Chinese Reorganization Gold Loan of 1913 - Interest - UCH CHI CHC
+# UCH 133011806 
+# *** 133011805 Chinese Reorganization Gold Loan of 1913 - Repayment - 1960 - UCH CHI CHC
+# UCH 133011807 Continue Debt?
+# CHI 133011808 Continue Debt?
+# CHC 133011809 Continue Debt?
+
+####################
+# Pre-NPW Politics #
+####################
+
+# Sun Zhong Shan makes a speech denouncing Yuan Shikai
+event = {
+	id = 133011001
+	random = no
+	persistent = yes
+	country = UCH
+	
+	trigger = {
+		headofstate = 1325100
+		not = {
+			flag = szs_dead
+		}
+		not = { dissent = 30 }
+		random = 15
+	}
+	name = EVT1914_133011001_NAME
+	desc = EVT1914_133011001_DESC
+	picture = "ccip_szsexile"
+	style = 2
+	
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 5 }
+	}
+
+}
+
+# Press for Repatriation of Sun Zhong Shan
+event = {
+	id = 133011002
+	random = no
+	country = UCH
+	
+	decision = {
+		headofstate = 1325100
+		not = {
+			flag = szs_returned
+			flag = szs_dead
+		}
+	}
+	
+	decision_trigger = {
+	}
+	
+	trigger = {
+		headofstate = 1325100
+		not = {
+			flag = szs_returned
+			flag = szs_dead
+		}
+		not = { dissent = 40 }
+		random = 10
+	}
+	
+	name = EVT1914_133011002_NAME
+	desc = EVT1914_133011002_DESC
+	picture = "ccip_szsexile"
+	decision_picture = "decision_ccip_szsexile"
+	style = 2
+	
+	date = { day = 5 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		name = EVT1914_133011002_ACTIONA
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 133011003 }
+	}
+	
+}
+
+# Repatriation Demand
+event = {
+	id = 133011003
+	random = no
+	country = JAP
+	
+	#Triggered
+	
+	name = EVT1914_133011003_NAME
+	desc = EVT1914_133011003_DESC
+	picture = "ccip_szsexile"
+	style = 2
+
+	action = {
+		ai_chance = 90
+		name = ACTION_NAME_DECLINE
+		command = { type = relation which = UCH value = -20 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 5 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 5 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = 5 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = 5 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = 5 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = 5 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = ACTION_NAME_AGREE
+		command = { type = relation which = UCH value = 50 }
+		command = { trigger = { exists = USA } type = relation which = USA value = -5 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -5 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = -15 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = -15 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = -15 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = -15 }
+		command = { type = dissent value = 5 }
+		command = { type = setflag which = szs_returned }
+		command = { type = trigger which = 133011004 }
+	}
+}
+
+# Repatriation Accepted
+event = {
+	id = 133011004
+	random = no
+	country = UCH
+	
+	#Triggered
+
+	name = EVT1914_133011004_NAME
+	desc = EVT1914_133011004_DESC
+	
+	picture = "ccip_szsexile"
+	style = 2
+	
+	action = {
+		ai_chance = 99
+		name = EVT1914_133011004_ACTIONA
+		command = { type = dissent value = -10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = -15 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -15 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = -15 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = -15 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = -35 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = -35 }
+		command = { type = setflag which = szs_dead }
+		command = { trigger = { exists = CGX } type = event which = 133011005 where = CGX when = 2 }
+		command = { trigger = { exists = CYN } type = event which = 133011005 where = CYN when = 2 }
+		command = { trigger = { exists = CXB } type = event which = 133011005 where = CXB when = 3 }
+		command = { trigger = { exists = SIK } type = event which = 133011005 where = SIK when = 5 }
+		command = { trigger = { or = { not = { exists = CGX } not = { exists = CYN } not = { exists = CXB } not = { exists = SIK } } }
+			type = trigger which = 133011009
+		}
+		command = { type = sleepevent which = 133011001 }
+	}
+	
+}
+
+# Sun Zhongshan Dead!
+event = {
+	id = 133011005
+	random = no
+	tag = { CGX CYN CXB SIK }
+	persistent = yes
+	one_action = yes
+	
+	#Triggered
+
+	name = EVT1914_133011005_NAME
+	desc = EVT1914_133011005_DESC
+
+	picture = "ccip_szsexile"
+	style = 2
+	
+	action = {
+		trigger = {
+			country = CGX
+		}
+		name = EVT1914_133011005_ACTIONA
+		command = { type = relation which = UCH value = -15 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = 35 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = 35 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = 35 }
+		command = { trigger = { exists = CXB } type = relation which = CXB value = 35 }
+		command = { trigger = { exists = SIK } type = relation which = SIK value = 35 }
+		command = { type = end_puppet }
+	}
+	
+	action = {
+		trigger = {
+			country = CYN
+		}
+		name = EVT1914_133011005_ACTIONA
+		command = { type = relation which = UCH value = -15 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = 35 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = 35 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = 35 }
+		command = { trigger = { exists = CXB } type = relation which = CXB value = 35 }
+		command = { trigger = { exists = SIK } type = relation which = SIK value = 35 }
+		command = { type = end_puppet }
+	}
+	
+	action = {
+		trigger = {
+			country = SIK
+		}
+		name = EVT1914_133011005_ACTIONA
+		command = { type = relation which = UCH value = -15 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = 35 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = 35 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = 35 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = 35 }
+		command = { trigger = { exists = CXB } type = relation which = CXB value = 35 }
+		command = { type = end_puppet }
+	}
+
+	action = {
+		trigger = {
+			country = CXB
+		}
+		name = EVT1914_133011005_ACTIONA
+		command = { type = relation which = UCH value = -15 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = 35 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = 35 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = 35 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = 35 }
+		command = { trigger = { exists = SIK } type = relation which = SIK value = 35 }
+		command = { type = end_puppet }
+	}
+}
+
+##################
+# Japan in China #
+##################
+
+# Economic Dominance in China
+event = {
+	id = 133011006
+	random = no
+	country = JAP
+
+	#Triggered
+
+	name = EVT1914_133011006_NAME
+	desc = EVT1914_133011006_DESC
+
+	#picture = "" # TODO
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { trigger = { exists = UCH } type = relation which = UCH value = 40 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = 40 }
+		command = { trigger = { exists = CXB } type = relation which = CXB value = 30 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = 30 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = 50 }
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { trigger = { not = { non_aggression = { country = JAP country = UCH } } } type = non_aggression which = JAP where = UCH }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CGX } } } type = non_aggression which = JAP where = CGX }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CXB } } } type = non_aggression which = JAP where = CXB }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CYN } } } type = non_aggression which = JAP where = CYN }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CHI } } } type = non_aggression which = JAP where = CHI }
+		command = { trigger = { not = { non_aggression = { country = JAP country = SIK } } } type = non_aggression which = JAP where = SIK }
+		command = { trigger = { not = { non_aggression = { country = JAP country = TIB } } } type = non_aggression which = JAP where = TIB }
+		command = { trigger = { not = { non_aggression = { country = JAP country = MON } } } type = non_aggression which = JAP where = MON }
+		command = { type = event which = 133011007 where = JAP when = 1 }
+	}
+}
+
+# The Rise of Pan-Asia Sentiment
+event = {
+	id = 133011007
+	random = no
+	country = JAP
+
+	#Triggered
+
+	name = EVT1914_133011007_NAME
+	desc = EVT1914_133011007_DESC
+
+	#picture = "" # TODO
+	style = 2
+
+	action = {
+		ai_chance = 20
+		name = EVT1914_133011007_ACTIONA #"Let us go forward together!"
+		command = { trigger = { exists = UCH } type = relation which = UCH value = 10 }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = 10 }
+		command = { trigger = { exists = CXB } type = relation which = CXB value = 10 }
+		command = { trigger = { exists = CYN } type = relation which = CYN value = 10 }
+		command = { trigger = { exists = CHI } type = relation which = CHI value = 10 }
+		command = { trigger = { exists = SIA } type = relation which = SIA value = 10 }
+		command = { trigger = { exists = PHI } type = relation which = PHI value = 10 }
+		command = { trigger = { exists = MON } type = relation which = MON value = 10 }
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = 1 } # Open Society
+		command = { type = domestic which = interventionism value = 1 } # Interventionism
+	}
+
+	action = {
+		ai_chance = 80
+		name = EVT1914_133011007_ACTIONB #"Japan shall lead the way to a new era of prosperity"
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = freedom value = -1 } # Closed Society
+		command = { type = domestic which = defense_lobby value = 1 } # Hawk Lobby
+		command = { type = domestic which = interventionism value = 1 } # Interventionism
+	}
+
+}
+
+# Business Lobbby Protests War
+event = {
+	id = 133011008
+	random = no
+	country = JAP
+
+	trigger = {
+		or = {
+			and = {
+				war = { country = -1 country = UCH}
+				not = { ispuppet = UCH }
+			}
+			and = {
+				war = { country = -1 country = CHI}
+				not = { ispuppet = CHI }
+			}
+			and = {
+				war = { country = -1 country = CGX}
+				not = { ispuppet = CGX }
+			}
+			and = {
+				war = { country = -1 country = U74}
+				not = { ispuppet = U74 }
+			}
+			and = {
+				war = { country = -1 country = U36}
+				not = { ispuppet = U36 }
+			}
+			and = {
+				war = { country = -1 country = CXB}
+				not = { ispuppet = CXB }
+			}
+			and = {
+				war = { country = -1 country = MON}
+				not = { ispuppet = MON }
+			}
+			and = {
+				war = { country = -1 country = CSX}
+				not = { ispuppet = CSX }
+			}
+			and = {
+				war = { country = -1 country = U67}
+				not = { ispuppet = U67 }
+			}
+			and = {
+				war = { country = -1 country = CYN}
+				not = { ispuppet = CYN }
+			}
+			and = {
+				war = { country = -1 country = SIK}
+				not = { ispuppet = SIK }
+			}
+		}
+	}
+
+	name = EVT1914_133011008_NAME
+	desc = EVT1914_133011008_DESC
+	
+	#picture = ""
+	style = 2
+
+	date = { day = 0 month = 1 year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1926 }
+
+	action = {
+		name = ACTIONNAME3302A #"Accept Peace Proposal"
+		command = { type = dissent value = 5 }
+		command = { trigger = { war = { country = UCH } not = { ispuppet = UCH } } type = peace which = UCH value = 0 }
+		command = { trigger = { war = { country = CHI } not = { ispuppet = CHI } } type = peace which = CHI value = 0 }
+		command = { trigger = { war = { country = CGX } not = { ispuppet = CGX } } type = peace which = CGX value = 0 }
+		command = { trigger = { war = { country = CXB } not = { ispuppet = CXB } } type = peace which = CXB value = 0 }
+		command = { trigger = { war = { country = CYN } not = { ispuppet = CYN } } type = peace which = CYN value = 0 }
+		command = { trigger = { war = { country = SIK } not = { ispuppet = SIK } } type = peace which = SIK value = 0 }
+		command = { trigger = { war = { country = TIB } not = { ispuppet = TIB } } type = peace which = TIB value = 0 }
+		command = { trigger = { war = { country = MON } not = { ispuppet = MON } } type = peace which = MON value = 0 }
+		command = { trigger = { war = { country = U74 } not = { ispuppet = U74 } } type = peace which = U74 value = 0 }
+		command = { trigger = { war = { country = U36 } not = { ispuppet = U36 } } type = peace which = U36 value = 0 }
+		command = { trigger = { war = { country = U67 } not = { ispuppet = U67 } } type = peace which = U67 value = 0 }
+		command = { trigger = { war = { country = CSX } not = { ispuppet = CSX } } type = peace which = CSX value = 0 }
+		command = { trigger = { not = { non_aggression = { country = JAP country = UCH } } not = { ispuppet = UCH } } type = non_aggression which = JAP where = UCH }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CGX } } not = { ispuppet = CGX } } type = non_aggression which = JAP where = CGX }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CXB } } not = { ispuppet = CXB } } type = non_aggression which = JAP where = CXB }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CYN } } not = { ispuppet = CYN } } type = non_aggression which = JAP where = CYN }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CHI } } not = { ispuppet = CHI } } type = non_aggression which = JAP where = CHI }
+		command = { trigger = { not = { non_aggression = { country = JAP country = SIK } } not = { ispuppet = SIK } } type = non_aggression which = JAP where = SIK }
+		command = { trigger = { not = { non_aggression = { country = JAP country = TIB } } not = { ispuppet = TIB } } type = non_aggression which = JAP where = TIB }
+		command = { trigger = { not = { non_aggression = { country = JAP country = MON } } not = { ispuppet = MON } } type = non_aggression which = JAP where = MON }
+		command = { trigger = { not = { non_aggression = { country = JAP country = CSX } } not = { ispuppet = CSX } } type = non_aggression which = JAP where = CSX }
+		command = { trigger = { not = { non_aggression = { country = JAP country = U74 } } not = { ispuppet = U74 } } type = non_aggression which = JAP where = U74 }
+		command = { trigger = { not = { non_aggression = { country = JAP country = U36 } } not = { ispuppet = U36 } } type = non_aggression which = JAP where = U36 }
+		command = { trigger = { not = { non_aggression = { country = JAP country = U67 } } not = { ispuppet = U67 } } type = non_aggression which = JAP where = U67 }
+		command = { type = belligerence which = JAP value = -20 }
+	}
+
+	action = {
+		name = EVT_2711_ACTA #"A Necessary Sacrifice"
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = dissent value = 5 }
+	}
+
+}
+
+######################
+# Twenty One Demands #
+######################
+
+# Twenty-One Demands
+event = {
+	id = 133011015
+	random = no
+	country = JAP
+	
+	decision = {
+		or = {
+			exists = UCH
+			and = {
+				exists = U74
+				not = { event = 133011402 }
+			}
+		}
+	}
+	
+	decision_trigger = {
+		or = {
+			exists = UCH
+			and = {
+				exists = U74
+				not = { event = 133011402 }
+			}
+		}
+	}
+	
+	trigger = {
+		or = {
+			exists = UCH
+			and = {
+				exists = U74
+				not = { event = 133011402 }
+			}
+		}
+		random = 15
+	}
+
+	name = EVT1914_133011015_NAME
+	desc = EVT1914_133011015_DESC
+	decision_desc = EVT1914_133011015_DECISION
+
+	picture = "ccip_21d"
+	decision_picture = "decision_ccip_21d"
+	style = 2
+	
+	date = { day = 0 month = 11 year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1915 }
+	
+	action = {
+		name = EVT1914_133011015_ACTIONA #"Make 21 Demands"
+		command = { type = addclaim which = 1331 }
+		command = { type = addclaim which = 1328 }
+		command = { trigger = { exists = USA } type = relation which = USA value = -15 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -15 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -15 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -15 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -15 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -15 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -15 }
+		command = { trigger = { exists = UCH } type = relation which = UCH value = -25 }
+		command = { type = setflag which = 21demands }
+		command = { type = belligerence value = 5 }
+		command = { trigger = { exists = UCH } type = event which = 133011016 where = UCH when = 1}
+		command = { trigger = { not = { exists = UCH } } type = event which = 133011016 where = U74 when = 1}
+	}
+	
+	action = {
+		name = EVT1914_133011015_ACTIONB #"Issue a Revised 13 Demands"
+		command = { trigger = { exists = USA } type = relation which = USA value = -5 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -5 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -5 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -5 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -5 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -5 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -5 }
+		command = { trigger = { exists = UCH } type = relation which = UCH value = -5 }
+		command = { type = belligerence value = 2 }
+		command = { trigger = { exists = UCH } type = event which = 133011016 where = UCH when = 1}
+		command = { trigger = { not = { exists = UCH } } type = event which = 133011016 where = U74 when = 1}
+	}
+	
+}
+
+# Twenty One Demands - Chinese Response
+event = {
+	id = 133011016
+	random = no
+	tag = { UCH U74 }
+	
+	# Triggered
+
+	name = EVT1914_133011015_NAME
+	desc = EVT1914_133011015_DESC
+
+	picture = "ccip_21d"
+	style = 2
+	
+	action = {
+		ai_chance = 90
+		name = EVT1914_133011016_ACTIONA #"Protest diplomatically."
+		command = { trigger = { exists = USA } type = relation which = USA value = 15 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 15 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 15 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 15 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = 15 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = 15 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = 15 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -5 }
+		command = { trigger = { country = U74 exists = JAP } type = trade which = U74 where = JAP money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = UCH exists = JAP } type = trade which = UCH where = JAP money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { type = dissent value = 5 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = EVT1914_133011016_ACTIONB #"We have no choice but to accept them."
+		command = { trigger = { exists = USA } type = relation which = USA value = -15 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -15 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -15 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -15 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -15 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -15 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -15 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 15	}
+		command = { trigger = { flag = 21demands } type = secedeprovince which = JAP value = 1331 when = 2 }
+		command = { trigger = { flag = 21demands } type = secedeprovince which = JAP value = 1328 when = 2 }
+		command = { trigger = { country = U74 exists = JAP } type = trade which = U74 where = JAP money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = UCH exists = JAP } type = trade which = UCH where = JAP money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { type = dissent value = 10 }
+	}
+	
+}
+
+# Unhappiness over Twenty-One Demands
+event = {
+	id = 133011022
+    random = no
+    country = UCH
+    persistent = yes
+
+	trigger = {
+	event = 133011016
+    random = 15
+	}
+
+	name = EVT1914_133011022_NAME
+	desc = EVT1914_133011022_DESC
+
+	picture = "ccip_unrest"
+	style = 2
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1915 }
+
+	action = {
+	    ai_chance = 5
+	    name = EVT1914_133011005_ACTIONA #"Something must be done!"
+	    command = { type = dissent value = 5 }
+	}
+
+}
+####################
+# Diplomatic Setup #
+####################
+
+# Failure of the Second Revolution
+event = {
+	random = no
+	country = UCH
+	id = 133011800
+	
+	trigger = {
+		headofstate = 1325100
+	}
+
+	name = EVT1914_133011800_NAME
+	desc = EVT1914_133011800_DESC
+
+	style = 2
+	picture = "ccip_beiyangarmy"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = october year = 1914 }
+	
+	action = {
+		name = EVT1914_133011800_ACTIONA #"It is a dark time for democracy"
+		command = { type = dissent value = 5 }
+	}
+}
+
+# Western Diplomatic Recognition
+event = {
+	random = no
+	country = UCH
+	id = 133011801
+	
+	trigger = {
+		headofstate = 1325100
+	}
+
+	name = EVT1914_133011801_NAME
+	desc = EVT1914_133011801_DESC
+
+	style = 2
+	picture = "ccip_yuan"
+	
+	date = { day = 0 month = july year = 1914 }
+	offset = 1
+	deathdate = { day = 3 month = july year = 1914 }
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 1 }
+		command = { trigger = { exists = USA } type = relation which = USA value = -30 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -40 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -30 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -30 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -30 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -30 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -30 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -30 }
+		command = { type = event which = 133011006 where = JAP when = 1 }
+	}
+}
+
+# Chinese Revolutionary Party
+event = {
+	random = no
+	country = UCH
+	id = 133011802
+	
+	trigger = {
+		headofstate = 1325100
+	}
+
+	name = EVT1914_133011802_NAME
+	desc = EVT1914_133011802_DESC
+
+	style = 2
+	picture = "ccip_szsexile"
+	
+	date = { day = 0 month = july year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = july year = 1914 }
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 10 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -30 } # SZS is in Japan.
+	}
+}
+
+#######################################
+# 1913 Gold Loan and Economic Malaise #
+#######################################
+
+# Chinese Reorganization Gold Loan of 1913
+event = {
+	random = no
+	id = 133011803
+	persistent = yes
+	tag = { CHI UCH CYN SIK CXB CSX CGX U74 U86 U36 U67 }
+	
+	trigger = {
+		not = { local_flag = 133011803 }
+	}
+
+	name = EVT1914_133011803_NAME
+	desc = EVT1914_133011803_DESC
+
+	style = 2
+	picture = "ccip_1913loan"
+	
+	date = { day = 0 month = july year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = july year = 1914 }
+	
+	action = {
+		name = EVT1914_133011803_ACTIONA #"Curse the western influences."
+		command = { trigger = { country = UCH } type = dissent value = 10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 30 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -50 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -50 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -50 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -50 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -50 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -50 }
+		command = { type = local_setflag which = 133011803 }
+		command = { trigger = { country = UCH } type = trigger which = 133011806 }
+	}
+}
+
+# Chinese Reoganization Gold Loan of 1913 - Interest
+event = {
+	tag = { UCH CHI CHC }
+	random = no
+	persistent = yes
+	id = 133011804
+	
+	trigger = {
+		or = {
+			and = {
+				day = 0
+				not = { day = 1 }
+				month = 0
+				not = { month = 1 }
+			}
+		}
+		not = { flag = 1913loan_revoked }
+		or = {
+			and = {
+				country = CHI
+				event = 133011808
+				not = { event = 133011809 }
+			}
+			and = {
+				country = UCH
+				not = {
+					event = 133011808
+					event = 133011809
+				}
+			}
+			and = {
+				country = CHC
+				event = 133011809
+			}
+		}
+	}
+	
+	date = { day = 0 month = 0 year = 1915 }
+	offset = 1
+	deathdate = { day = 0 month = 0 year = 1960 } # End date supposedly ran through 1960 according to a funny funny letter I found online by a bunch of bond holders demanding the PRC repay 2mil pounts in interest for an illegal loan made by Yuan Shikai.
+
+	name = EVT1914_133011804_NAME
+	desc = EVT1914_133011804_DESC
+
+	style = 2
+	picture = "ccip_1913loan"
+	
+	action = {
+		ai_chance = 90
+		name = EVT1914_133011804_ACTIONA #"Repay the debt"
+		command = { type = research_mod value = -2 }
+		command = { type = tc_mod value = -2 }
+		command = { type = industrial_modifier which = total value = -2 }
+		command = { type = dissent value = 5 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 5 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = 5 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 5 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -5 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 5 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = 5 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = 5 }
+		command = { trigger = { year = 1960 country = UCH } type = event which = 133011805 where = UCH when = 5}
+		command = { trigger = { year = 1960 country = CHI } type = event which = 133011805 where = CHI when = 5}
+		command = { trigger = { year = 1960 country = CHC } type = event which = 133011805 where = CHC when = 5}
+		command = { trigger = { flag = 1913loan_46 } type = setflag which = 1913loan_47 }
+		command = { trigger = { flag = 1913loan_45 } type = setflag which = 1913loan_46 }
+		command = { trigger = { flag = 1913loan_44 } type = setflag which = 1913loan_45 }
+		command = { trigger = { flag = 1913loan_43 } type = setflag which = 1913loan_44 }
+		command = { trigger = { flag = 1913loan_42 } type = setflag which = 1913loan_43 }
+		command = { trigger = { flag = 1913loan_41 } type = setflag which = 1913loan_42 }
+		command = { trigger = { flag = 1913loan_40 } type = setflag which = 1913loan_41 }
+		command = { trigger = { flag = 1913loan_39 } type = setflag which = 1913loan_40 }
+		command = { trigger = { flag = 1913loan_38 } type = setflag which = 1913loan_39 }
+		command = { trigger = { flag = 1913loan_37 } type = setflag which = 1913loan_38 }
+		command = { trigger = { flag = 1913loan_36 } type = setflag which = 1913loan_37 }
+		command = { trigger = { flag = 1913loan_35 } type = setflag which = 1913loan_36 }
+		command = { trigger = { flag = 1913loan_34 } type = setflag which = 1913loan_35 }
+		command = { trigger = { flag = 1913loan_33 } type = setflag which = 1913loan_34 }
+		command = { trigger = { flag = 1913loan_32 } type = setflag which = 1913loan_33 }
+		command = { trigger = { flag = 1913loan_31 } type = setflag which = 1913loan_32 }
+		command = { trigger = { flag = 1913loan_30 } type = setflag which = 1913loan_31 }
+		command = { trigger = { flag = 1913loan_29 } type = setflag which = 1913loan_30 }
+		command = { trigger = { flag = 1913loan_28 } type = setflag which = 1913loan_29 }
+		command = { trigger = { flag = 1913loan_27 } type = setflag which = 1913loan_28 }
+		command = { trigger = { flag = 1913loan_26 } type = setflag which = 1913loan_27 }
+		command = { trigger = { flag = 1913loan_25 } type = setflag which = 1913loan_26 }
+		command = { trigger = { flag = 1913loan_24 } type = setflag which = 1913loan_25 }
+		command = { trigger = { flag = 1913loan_23 } type = setflag which = 1913loan_24 }
+		command = { trigger = { flag = 1913loan_22 } type = setflag which = 1913loan_23 }
+		command = { trigger = { flag = 1913loan_21 } type = setflag which = 1913loan_22 }
+		command = { trigger = { flag = 1913loan_20 } type = setflag which = 1913loan_21 }
+		command = { trigger = { flag = 1913loan_19 } type = setflag which = 1913loan_20 }
+		command = { trigger = { flag = 1913loan_18 } type = setflag which = 1913loan_19 }
+		command = { trigger = { flag = 1913loan_17 } type = setflag which = 1913loan_18 }
+		command = { trigger = { flag = 1913loan_16 } type = setflag which = 1913loan_17 }
+		command = { trigger = { flag = 1913loan_15 } type = setflag which = 1913loan_16 }
+		command = { trigger = { flag = 1913loan_14 } type = setflag which = 1913loan_15 }
+		command = { trigger = { flag = 1913loan_13 } type = setflag which = 1913loan_14 }
+		command = { trigger = { flag = 1913loan_12 } type = setflag which = 1913loan_13 }
+		command = { trigger = { flag = 1913loan_11 } type = setflag which = 1913loan_12 }
+		command = { trigger = { flag = 1913loan_10 } type = setflag which = 1913loan_11 }
+		command = { trigger = { flag = 1913loan_9 } type = setflag which = 1913loan_10 }
+		command = { trigger = { flag = 1913loan_8 } type = setflag which = 1913loan_9 }
+		command = { trigger = { flag = 1913loan_7 } type = setflag which = 1913loan_8 }
+		command = { trigger = { flag = 1913loan_6 } type = setflag which = 1913loan_7 }
+		command = { trigger = { flag = 1913loan_5 } type = setflag which = 1913loan_6 }
+		command = { trigger = { flag = 1913loan_4 } type = setflag which = 1913loan_5 }
+		command = { trigger = { flag = 1913loan_3 } type = setflag which = 1913loan_4 }
+		command = { trigger = { flag = 1913loan_2 } type = setflag which = 1913loan_3 }
+		command = { trigger = { flag = 1913loan_1 } type = setflag which = 1913loan_2 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = EVT1914_133011804_ACTIONB #"Declare bankruptcy"
+		command = { type = dissent value = -10 }
+		command = { type = setflag which = 1913loan_revoked }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -30 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -30 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -30 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 20 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -30 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -30 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -40 }
+	}
+	
+}
+
+event = {
+	country = UCH
+	random = no
+	id = 133011806
+	
+	#Triggered
+
+	name = EVT1914_133011804_NAME
+	desc = EVT1914_133011804_DESC
+
+	style = 2
+	picture = "ccip_1913loan"
+	
+	action = {
+		ai_chance = 80
+		name = EVT1914_133011804_ACTIONA #"Repay the debt"
+		command = { type = research_mod value = -2 }
+		command = { type = tc_mod value = -2 }
+		command = { type = industrial_modifier which = total value = -2 }
+		command = { type = dissent value = 5 }
+		command = { type = setflag which = 1913loan_1 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 5 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = 5 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 5 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -5 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 5 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = 5 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = 5 }
+	}
+	
+	action = {
+		ai_chance = 20
+		name = EVT1914_133011804_ACTIONB #"Declare bankruptcy"
+		command = { type = dissent value = -10 }
+		command = { type = setflag which = 1913loan_revoked }
+		command = { type = sleepevent which = 133011804 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -30 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -30 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -30 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 20 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -30 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -30 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -40 }
+	}
+	
+}
+
+# Chinese Reorganization Gold Loan of 1913 - Repayment - 1960
+event = {
+	tag = { UCH CHI CHC }
+	random = no
+	id = 133011805
+	
+	#Triggered
+
+	name = EVT1914_133011803_NAME
+	desc = EVT1914_133011805_DESC
+
+	style = 2
+	picture = "ccip_1913loan"
+	
+	action = {
+		ai_chance = 60
+		name = EVT1914_133011804_ACTIONA #"Repay the debt"
+		command = { type = research_mod value = -5 }
+		command = { type = tc_mod value = -5 }
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = dissent value = 10 }
+		command = { type = setflag which = 1913loan_repaid }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 15 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = 15 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 15 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -5 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 15 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = 15 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = 15 }
+	}
+	
+	action = {
+		ai_chance = 40
+		name = EVT1914_133011804_ACTIONB #"Declare bankruptcy"
+		command = { type = dissent value = -10 }
+		command = { type = setflag which = 1913loan_revoked }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -25 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -25 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -25 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -25 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -25 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -25 }
+	}
+	
+}
+
+# Continue Debt?
+# TODO: Add intervention event chain
+event = {
+	random = no
+	id = 133011807
+	persistent = yes
+	country = UCH
+	
+	#Triggered
+
+	name = EVT1914_133011807_NAME
+	desc = EVT1914_133011807_DESC
+
+	style = 2
+	picture = "ccip_1913loan"
+	
+	action = {
+		ai_chance = 90
+		name = ACTION_NAME_ACCEPT
+		command = { type = dissent value = 10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 20 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = 20 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 20 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = 20 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 20 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 20 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = 20 }
+	}
+	
+	action = {
+		ai_chance = 10
+		name = ACTION_NAME_DECLINE
+		command = { type = dissent value = -10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 20 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -20 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -20 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -20 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -20 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -20 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -20 }
+		command = { type = setflag which = 1913loan_revoked }
+		command = { type = sleepevent which = 133011804 }
+		command = { trigger = { flag = 1913loan_1 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_1 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_1 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_2 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_2 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_2 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_3 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_3 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_3 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_4 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_4 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_4 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_5 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_5 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_5 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_6 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_6 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_6 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_7 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_7 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_7 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_8 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_8 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_8 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_9 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_9 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_9 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_10 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_10 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_10 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_11 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_11 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_11 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_12 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_12 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_12 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_13 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_13 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_13 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_14 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_14 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_14 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_15 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_15 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_15 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_16 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_16 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_16 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_17 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_17 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_17 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_18 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_18 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_18 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_19 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_19 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_19 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_20 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_20 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_20 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_21 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_21 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_21 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_22 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_22 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_22 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_23 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_23 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_23 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_24 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_24 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_24 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_25 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_25 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_25 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_26 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_26 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_26 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_27 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_27 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_27 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_28 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_28 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_28 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_29 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_29 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_29 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_30 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_30 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_30 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_31 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_31 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_31 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_32 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_32 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_32 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_33 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_33 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_33 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_34 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_34 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_34 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_35 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_35 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_35 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_36 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_36 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_36 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_37 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_37 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_37 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_38 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_38 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_38 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_39 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_39 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_39 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_40 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_40 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_40 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_41 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_41 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_41 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_42 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_42 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_42 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_43 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_43 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_43 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_44 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_44 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_44 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_45 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_45 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_45 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_46 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_46 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_46 } type = industrial_modifier which = total value = 2 }
+		command = { trigger = { flag = 1913loan_47 } type = research_mod value = 2 }
+		command = { trigger = { flag = 1913loan_47 } type = tc_mod value = 2 }
+		command = { trigger = { flag = 1913loan_47 } type = industrial_modifier which = total value = 2 }
+	}
+}
+
+# Continue Debt?
+event = {
+	random = no
+	id = 133011808
+	persistent = yes
+	country = CHI
+	#Triggered
+	
+	name = EVT1914_133011807_NAME
+	desc = EVT1914_133011807_DESC
+	style = 2
+	picture = "ccip_1913loan"
+	
+	action = {
+		ai_chance = 20
+		name = ACTION_NAME_ACCEPT
+		command = { type = dissent value = 10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 20 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = 20 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 20 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = 20 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 20 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 20 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = 20 }
+		command = { trigger = { flag = 1913loan_1 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_1 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_1 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_2 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_2 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_2 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_3 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_3 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_3 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_4 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_4 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_4 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_5 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_5 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_5 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_6 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_6 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_6 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_7 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_7 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_7 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_8 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_8 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_8 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_9 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_9 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_9 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_10 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_10 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_10 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_11 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_11 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_11 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_12 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_12 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_12 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_13 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_13 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_13 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_14 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_14 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_14 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_15 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_15 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_15 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_16 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_16 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_16 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_17 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_17 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_17 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_18 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_18 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_18 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_19 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_19 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_19 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_20 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_20 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_20 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_21 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_21 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_21 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_22 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_22 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_22 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_23 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_23 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_23 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_24 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_24 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_24 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_25 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_25 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_25 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_26 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_26 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_26 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_27 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_27 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_27 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_28 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_28 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_28 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_29 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_29 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_29 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_30 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_30 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_30 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_31 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_31 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_31 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_32 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_32 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_32 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_33 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_33 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_33 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_34 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_34 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_34 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_35 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_35 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_35 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_36 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_36 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_36 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_37 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_37 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_37 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_38 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_38 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_38 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_39 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_39 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_39 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_40 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_40 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_40 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_41 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_41 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_41 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_42 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_42 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_42 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_43 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_43 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_43 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_44 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_44 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_44 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_45 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_45 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_45 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_46 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_46 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_46 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_47 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_47 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_47 } type = industrial_modifier which = total value = -2 }
+	}
+	
+	action = {
+		ai_chance = 80
+		name = ACTION_NAME_DECLINE
+		command = { type = dissent value = -10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 20 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -20 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -20 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -20 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -20 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -20 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -20 }
+		command = { type = setflag which = 1913loan_revoked }
+		command = { type = sleepevent which = 133011804 }
+	}
+}
+
+# Continue Debt?
+event = {
+	random = no
+	id = 133011809
+	persistent = yes
+	country = CHC
+	#Triggered
+
+	name = EVT1914_133011807_NAME
+	desc = EVT1914_133011807_DESC
+	style = 2
+	picture = "ccip_1913loan"
+	
+	action = {
+		ai_chance = 0
+		name = ACTION_NAME_ACCEPT
+		command = { type = dissent value = 10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 70 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = 70 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = 70 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -40 }
+		command = { trigger = { exists = DDR } type = relation which = DDR value = -40 }
+		command = { trigger = { exists = GER } type = relation which = GER value = 70 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = -10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = 70 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = 70 }
+		command = { trigger = { flag = 1913loan_1 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_1 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_1 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_2 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_2 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_2 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_3 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_3 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_3 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_4 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_4 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_4 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_5 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_5 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_5 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_6 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_6 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_6 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_7 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_7 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_7 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_8 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_8 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_8 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_9 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_9 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_9 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_10 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_10 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_10 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_11 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_11 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_11 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_12 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_12 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_12 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_13 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_13 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_13 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_14 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_14 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_14 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_15 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_15 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_15 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_16 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_16 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_16 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_17 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_17 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_17 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_18 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_18 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_18 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_19 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_19 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_19 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_20 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_20 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_20 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_21 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_21 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_21 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_22 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_22 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_22 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_23 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_23 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_23 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_24 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_24 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_24 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_25 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_25 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_25 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_26 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_26 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_26 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_27 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_27 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_27 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_28 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_28 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_28 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_29 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_29 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_29 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_30 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_30 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_30 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_31 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_31 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_31 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_32 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_32 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_32 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_33 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_33 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_33 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_34 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_34 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_34 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_35 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_35 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_35 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_36 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_36 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_36 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_37 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_37 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_37 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_38 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_38 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_38 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_39 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_39 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_39 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_40 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_40 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_40 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_41 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_41 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_41 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_42 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_42 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_42 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_43 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_43 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_43 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_44 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_44 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_44 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_45 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_45 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_45 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_46 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_46 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_46 } type = industrial_modifier which = total value = -2 }
+		command = { trigger = { flag = 1913loan_47 } type = research_mod value = -2 }
+		command = { trigger = { flag = 1913loan_47 } type = tc_mod value = -2 }
+		command = { trigger = { flag = 1913loan_47 } type = industrial_modifier which = total value = -2 }
+		
+	}
+	
+	action = {
+		ai_chance = 9999
+		name = ACTION_NAME_DECLINE
+		command = { type = dissent value = -10 }
+		command = { trigger = { exists = USA } type = relation which = USA value = 20 }
+		command = { trigger = { exists = ENG } type = relation which = ENG value = -20 }
+		command = { trigger = { exists = RUS } type = relation which = RUS value = -20 }
+		command = { trigger = { exists = SOV } type = relation which = SOV value = 70 }
+		command = { trigger = { exists = DDR } type = relation which = DDR value = 70 }
+		command = { trigger = { exists = GER } type = relation which = GER value = -20 }
+		command = { trigger = { exists = JAP } type = relation which = JAP value = 10 }
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -20 }
+		command = { trigger = { exists = FRA } type = relation which = FRA value = -20 }
+		command = { type = setflag which = 1913loan_revoked }
+		command = { type = sleepevent which = 133011804 }
+	}
+}
+

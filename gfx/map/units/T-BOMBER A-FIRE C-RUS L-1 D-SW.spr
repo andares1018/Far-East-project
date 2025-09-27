@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "Ilya-F-SW.bmp"
+	Origin = { x = 110 y = 90 }
+	Frames = 16
+	Speed = 5
+	Palette = "Ilya.bmp"
+}

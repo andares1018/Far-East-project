@@ -1,0 +1,204 @@
+
+########################################################## Austria Hungary AI 1914 Jaegerfeld 2010
+###############################################
+## Austria-Hungary is at war with Entente & Serbia
+## Austria-Hungary is allied with germany, italy is neutral
+## Germany has 5 great Warplans and chooses one of them to battle the entente
+## Plan 1  		Conrad 	3 Armies against russia, 2 armies vs serbia 1 reserve focus on both
+## Plan 2		Kaiser  4 Armies against russia, 2 vs serbia focus on russia
+## Plan 3		Koenig  3 Armies against russia, 3 cs serbia focus on serbia
+## Plan 4		Prinz  	defend the homeland
+################################################
+
+
+event = {
+	id = 3192501
+	random = no
+	country = U09
+	persistent = yes		
+	
+	trigger = {
+		ai = yes
+		
+		NOT = { flag = U09_1914StartupDone }
+		war = { country = SER country = U09 }
+		war = { country = RUS country = U09 }
+		NOT = { war = { country = U09 country = U08 } }	
+		NOT = { war = { country = U09 country = ITA } }			
+		NOT = { alliance = { country = U09  country = ITA } }
+		NOT = { ai = U08 }
+		
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+		{
+			ai_chance = 70
+			
+			command = { type = setflag which = U09_1914StartupDone }
+			command = { type = ai which = "switch/U09_1914Conrad_setup.ai" }
+			command = { type = setflag which = U09_1914Conrad }
+
+		}
+
+	action_b = 
+		{
+			ai_chance = 18
+			
+			command = { type = setflag which = U09_1914Prinz }
+			command = { type = ai which = "switch/U09_1914Prinz_setup.ai" }			
+			command = { type = setflag which = U09_1914StartupDone }
+		}
+			
+	action_c = {
+			ai_chance = 12
+			
+			command = { type = setflag which = U09_1914Koenig }
+			command = { type = ai which = "switch/U09_1914Koenig_setup.ai" }	
+			command = { type = setflag which = U09_1914StartupDone }			
+			}
+}
+#######################################################
+#### RUS has refused to support SER in the SER - AH war
+#### A-H conquers Serbia & Montenegro
+event = {
+	id = 3192502
+	random = no
+	country = U09
+	persistent = yes	
+	
+	trigger = {
+		ai = yes
+		
+		NOT = { flag = U09_1914StartupDone }
+		war = { country = SER country = U09 }
+		NOT	= { war = { country = RUS country = U09 }}
+		NOT = { war = { country = U09 country = U08 } }	
+		NOT = { war = { country = U09 country = ITA } }			
+		#NOT = { alliance = { country = U09  country = ITA } } 
+		
+	}
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+
+	action_a = 
+		{
+			ai_chance = 100
+			command = { type = ai which = "switch/U09_1914BalkanOnly_setup.ai" }
+			command = { type = setflag which = U09_1914BalkanOnly }
+		}
+}
+
+
+###########################################
+# WAR against Italy
+#
+#
+event = {
+	id = 3192505
+	random = no
+	country = U09
+	persistent = yes	
+	
+	trigger = {
+		ai = yes
+		NOT = { flag = U09_1914ITAWar }
+		flag = U09_1914StartupDone 
+		OR = { 
+				war = { country = ITA country = U09 }
+				
+		}
+	}
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+
+	action_a = 
+		{
+			ai_chance = 100
+			command = { type = ai which = "switch/U09_1914ITA.ai" }
+			command = { type = setflag which = U09_1914ITAWar }
+		}
+}
+
+
+###
+# 	Both Ger and Ah are controlled by the AI
+#	AH gives control to Germany
+#event = {
+#	id = 3192511
+#	random = no 
+#	country = U09
+#	persistent = yes
+#	trigger = {
+#					ai = yes					
+#					flag = GER1914_workaround 
+#					NOT = { flag =	U09_1914ExpForcesToGER }
+#				}
+#				
+#
+#	name = "AI_EVENT"
+#	style = 0	
+#	
+#	date = { day = 29 month = 5 year = 1914 }
+#	offset = 30 # Check for trigger conditions day
+#	deathdate = { day = 29 month = december year = 1925 }
+#
+#	action_a = { #
+#		name = "AI_EVENT"	
+#		command = { type = ai which = "switch/U09_1914ExpForcesToGER.ai" }
+#		command = { type = setflag which = U09_1914ExpForcesToGER }
+#		
+#	}
+#}
+
+event = {
+	id = 3192512
+	random = no 
+	country = U09
+	trigger = { ai = yes atwar = yes }
+				
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 29 month = january year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = { #
+        	command = { trigger = { control = { province = 402 data = U09 } } type = activate_division which = 14000 value = 1001 where = 402 when = 0 }
+        	command = { trigger = { control = { province = 402 data = U09 } } type = activate_division which = 14000 value = 1002 where = 402 when = 0 }
+        	command = { trigger = { control = { province = 401 data = U09 } } type = activate_division which = 14000 value = 1003 where = 401 when = 0 }
+        	command = { trigger = { control = { province = 401 data = U09 } } type = activate_division which = 14000 value = 1004 where = 401 when = 0 }
+        	command = { trigger = { control = { province = 401 data = U09 } } type = activate_division which = 14000 value = 1005 where = 401 when = 0 }
+        	command = { trigger = { control = { province = 403 data = U09 } } type = activate_division which = 14000 value = 1006 where = 403 when = 0 }
+        	command = { trigger = { control = { province = 191 data = U09 } } type = activate_division which = 14000 value = 1007 where = 191 when = 0 }
+        	command = { trigger = { control = { province = 191 data = U09 } } type = activate_division which = 14000 value = 1008 where = 191 when = 0 }
+        	command = { trigger = { control = { province = 191 data = U09 } } type = activate_division which = 14000 value = 1009 where = 191 when = 0 }
+        	command = { trigger = { control = { province = 402 data = U09 } } type = activate_division which = 14000 value = 1010 where = 402 when = 0 }
+        	command = { trigger = { control = { province = 403 data = U09 } } type = activate_division which = 14000 value = 1011 where = 403 when = 0 }
+        	command = { trigger = { control = { province = 403 data = U09 } } type = activate_division which = 14000 value = 1012 where = 403 when = 0 }
+			command = { type = construct which = land_fort where = 401 value = 1 }
+			command = { type = construct which = land_fort where = 402 value = 3 }
+			command = { type = construct which = land_fort where = 191 value = 1 }
+			command = { type = construct which = land_fort where = 403 value = 1 }
+			command = { type = construct which = land_fort where = 404 value = 2 }
+		
+	}
+}

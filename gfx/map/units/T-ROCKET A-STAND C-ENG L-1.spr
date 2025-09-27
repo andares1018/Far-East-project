@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "V2A4-stand.bmp"
+	Origin = { x = 115 y = 115 }
+	Frames = 31
+	Speed = 10
+	Palette = "V2A4.bmp"
+}

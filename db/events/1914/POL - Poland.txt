@@ -1,0 +1,421 @@
+### 2193500 POL The Republic of Poland
+### 2193501 POL Polish–Soviet War
+### 2193502 POL Offer Peace to the Soviets
+### 2193503 SOV Poland offers peace
+### 2193504 POL The Peace of Riga
+### 2193505 POL The Peace of Riga (Reverse)
+### 2193506 SOV The Peace of Riga (Reverse) - Offer
+### 2193507 POL The Peace of Riga (Reverse) - Signed
+#####################################################################
+event = {
+	id = 2193500	# The Republic of Poland
+	country = POL
+
+	#triggered by U08 2191521, U08 2191522, U08 2191520 or AUS 2192510
+   
+	name = "EVT1914_2193500_NAME"
+	desc = "EVT1914_2193500_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = leave_alliance } #leave currenct alliance (CP)
+		command = { type = name where = POL } #change name to standard one
+		command = { type = secederegion which = U08 value = "Germany" } #to avoid Greater Poland because of post-WWII cores
+		command = { type = set_domestic which = democratic value = 8 } #democracy
+		command = { type = set_domestic which = political_left value = 7 } #social liberal	
+		command = { type = headofstate which = 60170 } #Gabriel Narutowicz
+		command = { type = headofgovernment which = 60161 } #Ignacy Paderewski
+		command = { type = foreignminister which = 60155 } #Ignacy Paderewski
+		command = { type = armamentminister which = 60175 } #Wladyslaw Grabski
+		command = { type = ministerofsecurity which = 60204 } #Stanislaw Wojciechowski
+		command = { type = chiefofstaff which = 60147 } #Józef Pilsudski
+		command = { type = chiefofarmy which = 60137 } #Józef Pilsudski
+		#remove post WWII cores, add post WWI cores
+		command = { type = removecore which = 155 } #Stolp
+		command = { type = removecore which = 158 } #Stettin
+		command = { type = removecore which = 161 } #DeutschKrone
+		command = { type = removecore which = 159 } #Meseritz
+		command = { type = removecore which = 165 } #Liegnitz
+		command = { type = removecore which = 167 } #Breslau
+		command = { type = removecore which = 164 } #Oppeln
+		command = { type = removecore which = 166 } #Waldenburg
+		command = { type = removecore which = 168 } #Gleiwitz
+		command = { type = removecore which = 183 } #Elbing
+		command = { type = removecore which = 185 } #Allenstein
+		command = { type = addcore which = 258 } #Wilno
+		command = { type = addcore which = 257 } #Glebokie
+		command = { type = addcore which = 255 } #Grodno
+		command = { type = addcore which = 256 } #Vilejka
+		command = { type = addcore which = 251 } #Nowogrodek
+		command = { type = addcore which = 253 } #Slonim
+		command = { type = addcore which = 247 } #Brest-Litovsk
+		command = { type = addcore which = 248 } #Pinsk
+		command = { type = addcore which = 249 } #Sarny
+		command = { type = addcore which = 245 } #Lutsk
+		command = { type = addcore which = 244 } #Rowne
+		command = { type = addcore which = 239 } #Prezmysl
+		command = { type = addcore which = 242 } #Lwow
+		command = { type = addcore which = 240 } #Tarnopol
+		command = { type = addcore which = 241 } #Stryj
+		command = { type = addcore which = 238 } #Stanislawow
+		command = { type = addcore which = 181 } #Danzig
+		command = { type = addcore which = 203 } #Tesin
+		command = { type = addcore which = 221 } #Katowice
+		command = { type = addcore which = 222 } #Torun
+		command = { type = addcore which = 224 } #Poznan
+		command = { type = addcore which = 225 } #Bydgodscz
+		command = { type = addcore which = 226 } #Gdynia		
+		command = { trigger = { exists = SOV } type = secedearea which = SOV value = "Brest Litovsk" when = 1 }
+		command = { trigger = { exists = SOV } type = secedearea which = SOV value = "Grodno" when = 1 }
+		command = { trigger = { exists = SOV } type = secedeprovince which = SOV value = 258 when = 1 }		
+	}
+}
+
+event = { 
+	id = 2193501         
+	country = POL            
+
+	decision = {
+		event = 2002534 #Versailles' Treaty (Germany defeated)
+		event = 2024501 #The Saint-Germain-En-Laye Treaty (A-H defeated)
+		OR = { 
+			event = 2007529 #Brest Litovsk initial conditions
+			event = 2007530 #Brest Litovsk harsh conditions
+		}		
+		owned = { province = 232 data = POL } #Warsaw
+		owned = { province = 239 data = POL } #Przemysl
+		owned = { province = 254 data = POL } #Bialystok
+	}
+	decision_trigger = {
+		NOT = { atwar = POL }
+		NOT = { ispuppet = POL }
+		atwar = SOV
+		army = 5 #at least a few divisions
+	}
+	
+	trigger = {          
+		NOT = { atwar = POL }
+		NOT = { ispuppet = POL }
+		atwar = SOV
+		event = 2002534 #Versailles' Treaty (Germany defeated)
+		event = 2024501 #The Saint-Germain-En-Laye Treaty (A-H defeated)
+		OR = { 
+			event = 2007529 #Brest Litovsk initial conditions
+			event = 2007530 #Brest Litovsk harsh conditions
+		}		
+		owned = { province = 232 data = POL } #Warsaw
+		owned = { province = 239 data = POL } #Przemysl
+		owned = { province = 254 data = POL } #Bialystok
+		army = 5 #at least a few 	picture = "Peace_conference" 
+	}
+	
+	name = "EVT1914_2193501_NAME"							
+	desc = "EVT1914_2193501_DESC"
+	picture = "austrohunarmy_march" 
+	decision_picture = "decision_CZE_End"
+	style = 2	
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 180            
+	deathdate = { day = 0 month = january year = 1930 }
+
+	action = { 	
+		name = "ACTION_NAME_FIGHT"    
+		ai_chance = 99  
+		command = { type = addclaim which = 592 } #Borisov
+		command = { type = addclaim which = 593 } #Polotsk
+		command = { type = addclaim which = 595 } #Mozyr
+		command = { type = addclaim which = 596 } #Slutsk
+		command = { type = addclaim which = 596 } #Slutsk
+		command = { type = addclaim which = 597 } #Luban
+		command = { type = addclaim which = 599 } #Minsk
+		command = { type = addclaim which = 609 } #Korosten
+		command = { type = addclaim which = 611 } #Zhitomir
+		command = { type = addclaim which = 612 } #Vinnitsa
+		command = { type = addclaim which = 614 } #Proskurov
+		command = { type = addclaim which = 616 } #Novograd-Volynsky
+		command = { type = addclaim which = 618 } #Kamenets-Podolsky
+		command = { type = addclaim which = 619 } #Mogilev-Podolsky
+		#voluntees join the army
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = relation which = EST value = -50 }
+		command = { type = relation which = CZE value = 50 }
+		command = { type = relation which = LAT value = 50 }
+		command = { type = war which = SOV }
+		#command = { type = dissent value = -10 }
+	}
+	action = { 	
+		name = "ACTION_NAME_NO"    
+		ai_chance = 1
+		command = { type =  dissent value = 3 }
+	} 			
+}
+
+event = { 
+	id = 2193502          
+	country = POL            
+
+	trigger = {
+		event = 2193501 #Soviet Polish War
+		war = { country = SOV country = POL }
+		NOT = { lost_national = { country = POL value = 20 } }
+		OR = {
+			lost_national = { country = SOV value = 40 } #war is going REALLY bad... peace out without letting poland prove its worthyness
+			AND = {
+				control = { province = 589 data = POL } #Smolensk
+				control = { province = 607 data = POL } #Chernigov
+				control = { province = 624 data = POL } #Kherson
+				control = { province = 629 data = POL } #Poltava
+				control = { province = 630 data = POL } #Zaporozhye
+			}
+		}
+	}
+	
+	name = "EVT1914_2193502_NAME"							
+	desc = "EVT1914_2193502_DESC"
+	picture = "diplomatic_campaign" 
+	style = 2
+
+	date = { day = 0 month = 0 year = 1914 }
+	deathdate = { day = 0 month = 0 year = 1931 }            
+	offset = 7                 
+
+	action = {
+		name = "EVT1914_2193502_ACTIONA"    
+		ai_chance = 99  
+		command = { type = setflag which = POLSOV_good_peace }
+		command = { type = trigger which = 2193503 }
+	} 			
+	action = {
+		name = "EVT1914_2193502_ACTIONB"    
+		ai_chance = 1
+		command = { type = setflag which = POLSOV_harsh_peace }
+		command = { type = trigger which = 2193503 }
+	} 			
+	action = {
+		name = "EVT1914_2193502_ACTIONC"    
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	} 			
+}
+
+event = { 
+	id = 2193503          
+	country = SOV            
+	
+	name = "EVT1914_2193503_NAME"							
+	desc = "EVT1914_2193503_DESC"
+	picture = "Peace_conference" 
+	style = 2
+
+	action = {
+		trigger = { flag = POLSOV_good_peace }
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 100
+		command = { type = event which = 2193504 where = POL when = 1 }
+		command = { type = secedearea which = POL value = "Brest Litovsk" when = 1 }
+		command = { type = secedearea which = POL value = "Grodno" when = 1 }
+		command = { type = secedeprovince which = POL value = 258 when = 1 }
+		command = { trigger = { area = { area = "Warsaw" country = SOV data = 1 value = 80} 
+} type = secedearea which = POL value = "Warsaw" when = 1 } 
+        command = { trigger = { area = { area = "Polotsk" country = SOV data = 1 value = 
+80} } type = secedearea which = POL value = "Polotsk" when = 1 }
+        command = { trigger = { area = { area = "Krakow" country = SOV data = 1 value = 20} 
+} type = secedearea which = POL value = "Krakow" when = 1 }
+        command = { trigger = { area = { area = "Poznan" country = SOV data = 1 value = 20} 
+} type = secedearea which = POL value = "Poznan" when = 1 }
+		command = { type = peace which = POL value = 0 }
+		command = { type = dissent value = -5 }
+	} 	
+	action = {
+		trigger = { flag = POLSOV_good_peace }
+		ai_chance = 0
+		name = "ACTION_NAME_REFUSE"
+		command = { type = dissent value = 5 }		
+	} 	
+	action = {
+		trigger = { flag = POLSOV_harsh_peace }	
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 50
+		command = { type = event which = 2193504 where = POL when = 1 }
+		command = { type = secedearea which = POL value = "Brest Litovsk" when = 1 }
+		command = { type = secedearea which = POL value = "Grodno" when = 1 }
+		command = { trigger = { area = { area = "Warsaw" country = SOV data = 1 value = 80} 
+} type = secedearea which = POL value = "Warsaw" when = 1 } 
+        command = { trigger = { area = { area = "Polotsk" country = SOV data = 1 value = 
+80} } type = secedearea which = POL value = "Polotsk" when = 1 }
+        command = { trigger = { area = { area = "Krakow" country = SOV data = 1 value = 20} 
+} type = secedearea which = POL value = "Krakow" when = 1 }
+        command = { trigger = { area = { area = "Poznan" country = SOV data = 1 value = 20} 
+} type = secedearea which = POL value = "Poznan" when = 1 }
+		command = { type = secedeprovince which = POL value = 258 when = 1 }
+		command = { type = secedeprovince which = POL value = 592 when = 1 } #Borisov
+		command = { type = secedeprovince which = POL value = 593 when = 1 } #Polotsk
+		command = { type = secedeprovince which = POL value = 595 when = 1 } #Mozyr
+		command = { type = secedeprovince which = POL value = 596 when = 1 } #Slutsk
+		command = { type = secedeprovince which = POL value = 596 when = 1 } #Slutsk
+		command = { type = secedeprovince which = POL value = 597 when = 1 } #Luban
+		command = { type = secedeprovince which = POL value = 599 when = 1 } #Minsk
+		command = { type = secedeprovince which = POL value = 609 when = 1 } #Korosten
+		command = { type = secedeprovince which = POL value = 611 when = 1 } #Zhitomir
+		command = { type = secedeprovince which = POL value = 612 when = 1 } #Vinnitsa
+		command = { type = secedeprovince which = POL value = 614 when = 1 } #Proskurov
+		command = { type = secedeprovince which = POL value = 616 when = 1 } #Novograd-Volynsky
+		command = { type = secedeprovince which = POL value = 618 when = 1 } #Kamenets-Podolsky
+		command = { type = secedeprovince which = POL value = 619 when = 1 } #Mogilev-Podolsky
+		command = { trigger = { NOT = { exists = UKR } } type = setflag which = POL_UKRpuppet }
+		command = { trigger = { NOT = { exists = UKR } } type = independence which = UKR value = 1 when = 1 }
+		command = { trigger = { flag = POL_UKRpuppet } type = secederegion which = UKR value = "Ukraine" when = 1 }
+		command = { type = peace which = POL value = 0 }   		
+		command = { type = dissent value = -2 }
+	} 			
+	action = {
+		name = "ACTION_NAME_REFUSE"
+		ai_chance = 50
+		trigger = { flag = POLSOV_harsh_peace }	
+		command = { type = dissent value = 3 }		
+	} 		
+}
+
+event = { 
+	id = 2193504          
+	country = POL            
+	
+	name = "EVT1914_2193504_NAME"							
+	desc = "EVT1914_2193504_DESC"
+	picture = "Peace_conference" 
+	style = 2
+	
+	action = {	
+		trigger = { flag = POLSOV_good_peace }
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -10 }
+		command = { type = removeclaim which = 592 } #Borisov
+		command = { type = removeclaim which = 593 } #Polotsk
+		command = { type = removeclaim which = 595 } #Mozyr
+		command = { type = removeclaim which = 596 } #Slutsk
+		command = { type = removeclaim which = 596 } #Slutsk
+		command = { type = removeclaim which = 597 } #Luban
+		command = { type = removeclaim which = 599 } #Minsk
+		command = { type = removeclaim which = 609 } #Korosten
+		command = { type = removeclaim which = 611 } #Zhitomir
+		command = { type = removeclaim which = 612 } #Vinnitsa
+		command = { type = removeclaim which = 614 } #Proskurov
+		command = { type = removeclaim which = 616 } #Novograd-Volynsky
+		command = { type = removeclaim which = 618 } #Kamenets-Podolsky
+		command = { type = removeclaim which = 619 } #Mogilev-Podolsky		
+		command = { type = clrflag which = POLSOV_good_peace }
+	} 	
+	action = {
+		trigger = { flag = POLSOV_harsh_peace }	
+		name = "ACTION_NAME_EXCELLENT"    
+		command = { trigger = { flag = POL_UKRpuppet } type = make_puppet which = UKR }
+		command = { trigger = { flag = POL_UKRpuppet } type = alliance which = UKR when = 1 }
+		command = { type = dissent value = -15 }
+		command = { trigger = { flag = POL_UKRpuppet } type = clrflag which = POL_UKRpuppet }
+		command = { type = clrflag which = POLSOV_harsh_peace }
+	} 		
+}
+
+# Peace of Riga (Reverse)
+# TODO: Add to config
+event = {
+    id = 2193505
+    country = POL
+    
+    date = { day = 0 month = 0 year = 1914 }
+    deathdate = { day = 0 month = 0 year = 1931 }
+    offset = 7
+    
+    trigger = {
+        flag = treaty_of_warsaw
+        war = { country = SOV }
+		or = {
+			lost_national = { country = POL value = 70 } #war is going bad
+			lost_IC = { country = POL value = 60 }
+			lost_VP = { country = POL value = 70 }
+		}
+    }
+    name = "EVT1914_2193505_NAME"
+    Desc = "EVT1914_2193505_DESC"
+    #Picture = "soviet_strategic_defeat" # Verify Full
+	style = 2
+    
+    action = {
+        name = "EVT1914_2193505_ACTIONA"
+        ai_chance = 100
+        command = { type = trigger which = 2193506 }
+        command = { type = clrflag which = treaty_of_warsaw }
+        command = { type = local_clrflag which = treaty_of_warsaw }
+        command = { type = dissent value = -5 }
+    }
+    action = {
+        name = "EVT1914_2193505_ACTIONB"
+        ai_chance = 0
+        command = { type = dissent value = 5 }
+    }
+}
+
+# Peace of Riga (Reverse) - Offer
+# TODO: Add to config
+event = {
+    id = 2193506
+    country = SOV
+
+    #triggered by POL event 2193505
+
+    name = "EVT1914_2193505_NAME"
+    Desc = "EVT1914_2193505_DESC"
+    #Picture = "soviet_strategic_defeat" # Verify FULL
+	style = 2
+
+    action = {
+        name = "ACTION_NAME_ACCEPT"
+        ai_chance = 99
+        command = { type = peace which = POL value = 0 }
+        command = { type = trigger which = 13300512 }
+    }
+
+    action = {
+        name = "ACTION_NAME_NEVER"
+        ai_chance = 1
+        command = { type = dissent value = 5 }
+        command = { type = independence which = UKR }
+        command = { type = war which = UKR }
+    }
+}
+
+# Peace of Riga signed
+# TODO: Add to config
+event = {
+    id = 2193507
+    country = POL
+    
+    #triggered by SOV event 2193506
+    
+    name = "EVT1914_2193507_NAME"
+    Desc = "EVT1914_2193505_DESC"
+    #Picture = "peace_manifestation" # Verify FULL
+	style = 2
+    
+    action = {
+        name = "ACTION_NAME_EXCELLENT"
+        command = { type = removecore which = 590 }
+        command = { type = removecore which = 591 }
+        command = { type = removecore which = 593 }
+        command = { type = removecore which = 594 }
+        command = { type = removecore which = 598 }
+        command = { type = removecore which = 609 }
+        command = { type = removecore which = 611 }
+        command = { type = removecore which = 612 }
+        command = { type = removecore which = 619 }
+        command = { type = dissent value = -5 }
+        command = { type = relation which = SOV value = 150 }
+    }
+}

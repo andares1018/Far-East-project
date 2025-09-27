@@ -1,0 +1,22 @@
+MEN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+700001;Head of State;Yondonwangchug;1914;1939;1939;PA;Weary Stiffneck;High;M_Yondonwangchug;X
+700017;Chief of Army;De Noyan;1925;1967;1967;PA;Guns and Butter Doctrine;High;5987;X
+700018;Chief of Army;Li Shouxin;1920;1971;1971;PA;Elastic Defence Doctrine;High;L330010;X
+700002;Head of Government;De Noyan;1924;1967;1967;PA;Ambitious Union Boss;High;5987;X
+700003;Head of State;De Noyan;1933;1964;1999;PA;Pig-headed Isolationist;High;5987;X
+700004;Minister of Armament;Degulai;1933;1964;1995;PA;Industrial Chemist;Medium;M_Degulai;X
+700005;Foreign Minister;Tao Ketao;1933;1964;1981;PA;Apologetic Clerk;Medium;M_Tao Ketao;X
+700006;Foreign Minister;Xia Gong;1933;1964;1999;PA;Biased Intellectual;Medium;M_Xia Gong;X
+700007;Minister of Security;Ding Qichang;1933;1964;1999;PA;Prince of Terror;Medium;M_Ding Qichang;X
+700008;Minister of Security;Songjin Wangchuke;1933;1964;1999;PA;Compassionate Gentleman;Medium;M_Songjin Wangchuke;X
+700009;Chief of Navy;Heinrich Hanke;1933;1964;1999;FA;Decisive Naval Battle Doctrine;Medium;M513009;X
+700010;Minister of Security;Tao Ketao;1940;1964;1999;PA;Silent Lawyer;Medium;M_Tao Ketao;X
+700011;Minister of Armament;Ma Yongkui;1940;1964;1999;PA;Balanced Budget Economy;High;M_Ma Yongkui;X
+700012;Chief of Staff;De Noyan;1925;1967;1967;PA;School of Psychology;High;5987;X
+700013;Chief of Staff;Li Shouxin;1933;1964;1999;PA;School of Mass Combat;High;L330010;X
+700014;Chief of Staff;Wu Guting;1933;1964;1999;PA;School of Fire Support;High;9813;X
+700015;Minister of Armament;Du Yunyu;1940;1964;1999;PA;Laissez-Faire Capitalist;High;M_Du Yunyu;X
+700016;Head of Military Intelligence;Li Shouxin;1920;1971;1971;PA;Dismal Enigma;High;L330010;X
+700019;Head of Government;Li Shouxin;1920;1971;1971;PA;Old General;High;L330010;X
+700020;Chief of Air Force;Li Shouxin;1920;1971;1971;PA;Army Aviation Doctrine;High;L330010;X

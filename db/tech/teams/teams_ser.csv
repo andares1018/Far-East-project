@@ -1,0 +1,25 @@
+SER;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+415001;Belgrade University;100297;3;1905;1970;medicine;electronics;chemistry;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415002;Ikarus;T3800;4;1923;1946;aeronautics;bomber_design;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415003;Industrija Aeroplanskih Motora;T3801;3;1927;1970;industrial_engineering;mechanics;technical_efficiency;aeronautics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415004;Jadransko Brodogradiliste;T3802;3;1927;1970;naval_engineering;technical_efficiency;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415005;Memorandum Teleoptik;T3803;5;1922;1970;industrial_engineering;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415006;Mikron;T3804;4;1931;1970;industrial_engineering;electronics;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415007;Serbian National Railways;100298;3;1881;1970;mechanics;technical_efficiency;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415008;Topolivnica Kragujevac;T3812;4;1853;1945;general_equipment;mechanics;artillery;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415009;Rogožarski;100299;3;1924;1946;aeronautics;technical_efficiency;management;fighter_design;bomber_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415010;ZMAJ;T3807;4;1927;1946;naval_engineering;aeronautics;fighter_design;avionics;aircraft_Testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415011;Belgrade Military Academy;100882;3;1850;1970;centralized_execution;decentralized_execution;large_unit_tactics;infantry_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415013;Beogradsko Brodogradiliste;100301;3;1908;1970;naval_engineering;technical_efficiency;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415014;Radomir Putnik;100302;5;1906;1917;centralized_execution;large_unit_focus;large_unit_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415015;Zivojin Misic;100303;5;1912;1921;decentralized_execution;infantry_focus;individual_courage;small_unit_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415016;SARTID Smederevo;100304;4;1913;1930;industrial_engineering;mechanics;general_equipment;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415017;Barutana Obilicevo;100305;4;1890;1930;general_equipment;chemistry;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415019;Petar Bojovic;100307;4;1916;1945;centralized_execution;infantry_focus;small_unit_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415020;Branko Vukosavljevic;100308;2;1916;1919;fighter_tactics;piloting;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415021;Kosta Miletic;100309;2;1912;1921;aircraft_testing;piloting;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415022;Mihailo Petrovic Alas;100468;3;1894;1943;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415023;Ikarus;T3800;5;1946;1962;aeronautics;avionics;bomber_design;fighter_design;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415024;Serbian National Railways;100300;5;1970;1999;mechanics;electronics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415025;Zastava Arsenal;T3812;5;1945;1999;general_equipment;mechanics;artillery;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415026;Serbian Aviation Command;100306;2;1912;1921;training;piloting;individual_courage;aeronautics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

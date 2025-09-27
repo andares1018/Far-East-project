@@ -1,0 +1,57 @@
+###vanilla event rework list
+
+####Changing Vanilla Events
+# 1330110033 UCH CHI CHC Warlord Problem
+# 1330110034 *** End of the Warlord Era
+# 1330110041 *** Helper Event - War Declared
+# 1330110042 UCH CHI CHC Helper Event - Warlord Submits
+#-Colonies---------------------------
+# 1330110035 UCH CHI CHC Chinese Concessions #Hong Kong, Macao, Qingdao, Port Arthur, Shanghai, Taiwan, anything in China Area
+# 1330110036 *** Chinese Concessions
+# 1330110037 *** Territory Seized
+#-Separatists------------------------
+# 1330110038 UCH Historic Claims #Tibet, Xinjiang, Hebei Autonomous, Mengjiang, Mongolia, ETR, MAN
+# 1330110039 *** Chinese Demand for Annexation
+
+#1330120000 CHI Tanggu Truce
+#1330120001 JAP Tanggu truce
+#1330120002 U74 Establishment of Autonomous Government
+#1330120003 CHI He-Umezu Agreement
+#1330120004 JAP He-Umezu Agreement
+#1330120005 JAP He-Umezu Agreement - refused
+#1330120006 CHI Chin-Doihara Agreement
+#1330120007 JAP Chin-Doihara Agreement
+#1330120038 CSX Chin-Doihara Agreement
+#1330120039 JAP Chin-Doihara Agreement - refused
+
+# 1330110000 CHI End of the Third Encirclement Campaigns
+# 1330110006 CHI Fourth Encirclement Campaigns
+# 1330110007 CHI Fourth Encirclement Campaigns (Forced)
+# 1330110008 CHC Fourth Encirclement Campaigns
+# 1330110009 CHI End of the Fourth Encirclement Campaigns
+# 1330110010 CHC Inherit Helper
+# 1330110011 CHC End of the Fourth Encirclement Campaigns
+#-Generic------------------------
+# 1330110012 *** Demobilization
+#-Fifth Encirclement Campaign----------------------------
+# 1330110014 CHI Fifth Encirclement Campaigns
+# 1330110015 CHI 19th Army Defects (Not in OOB)
+# 1330110016 CHC 19th Army Defects (60, 61, 78)
+# 1330110017 REB Helper Event (Disband Chahar Units if they exist)
+#-Ahistoric 19th Army Accepted---------------------------
+# 1330110018 CGX 19th Army Defects
+# 1330110019 CSX 19th Army Defects
+# 1330110020 CXB 19th Army Defects
+# 1330110021 CYN 19th Army Defects
+
+# 2500036 JAP
+# 2500037 JAP
+# 2500038 JAP
+# 2500039 JAP
+# 2500040 JAP
+
+# 2012001  CHI  The Nanjing Massacre
+# 2012004  CHI/CHC  The Fading Sun
+# 2007002  SOV  Operation Zet - Assistance to China
+# 2012013  CHI  Operation Zet - Soviet assistance
+# 2012014  CHI  Huayuankow flooding

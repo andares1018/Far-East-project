@@ -1,0 +1,1365 @@
+###  2007501 SOV Sovnarkom formed
+###  2007502 SOV Dissolution of the Imperial Army
+###  2007503 SOV The economy is collapsing!
+###  2007504 SOV The Railway War
+###  2007505 SOV Dissolution of the Constituent Assembly
+###  2007506 SOV Decrees on Land
+###  2007507 SOV War communism - phase one
+###  2007508 SOV Prodrazvyorstka
+###  2007509 SOV War communism - phase two
+###  2007510 SOV War communism - phase three
+###  2007511 SOV New Economy Policy
+###  2007512 SOV Creation of the Red Army
+###  2007513 SOV Order N. 228
+###  2007514 SOV Mass Levy
+###  2007515 SOV Peasants Rebellion
+###  2007516 SOV Tambov Rebellion
+###  2007517 SOV Kronstadt Rebellion
+###  2007518 SOV Death of Sverdlov
+###  2007519 SOV Lenin withdraws from politics
+###  2007520 SOV Foundation of USSR
+###  2007521 SOV Seek a soft peace with Germany
+###  2007522 U08 Soviet Russia seeks peace
+###  2007523 SOV Germany makes an offer
+###  2007524 SOV Germany refused our offer
+###  2007525 U08 Soviet Russia refused our offer
+###  2007526 SOV Seek peace with Germany at any cost
+###  2007527 U08 Soviet Russia begs for peace
+###  2007528 SOV Germany makes a harsh offer
+###  2007529 SOV The Brest Litovsk Treaty : initial conditions (peace_negotiations.txt)
+###  2007530 SOV The Brest Litovsk Treaty : harsh conditions (peace_negotiations.txt)
+###  2007531 SOV The Left Socialist-Revolutionaries leave the government
+###  2007532 SOV Rise of the Volunteer Army
+###  2007533 SOV The Arkhangelsk Government
+###  2007535 SOV Cossacks' Uprising
+###  2007536 SOV Red Terror
+###  2007541 SOV The revolt of the Czechoslovak Legion
+###  2007534 SOV The Ufa Directorate
+
+event = {
+	id = 2007501   # Sovnarkom formed
+	country = SOV
+
+	#triggered by RUS 2104530
+	
+	name = EVT1914_2007501_NAME
+	desc = EVT1914_2007501_DESC 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2007501_ACTIONA" # Storm the Winter Palace !
+		command = { type = dissent value = -20 }
+		command = { type = set_domestic which = democratic value = 2 } 
+		command = { type = set_domestic which = political_left value = 8 } #Leninist
+		command = { type = flag_ext where = SOV which = "_RSF" } #change name to Soviet Russia
+		command = { type = name where = SOV which = SOVSFR } #change flag to Soviet Russia
+	  	command = { trigger = { NOT = { year = 1919 } } type = headofstate which = 30095 } #Yakov Sverdlov
+	  	command = { trigger = { year = 1919 } type = wakeminister which = 30001 } #Mikhail I. Kalinin
+	  	command = { trigger = { year = 1919 } type = headofstate which = 30001 } #Mikhail I. Kalinin
+		command = { type = headofgovernment which = 30097 } #Vladimir Lenin
+		command = { type = foreignminister which = 30099 } #Leon Trotsky
+		command = { type = chiefofarmy which = 30125 } #Nikolay Krylenko
+		command = { type = alliance where = 3 when = 1 } #join the comintern
+		command = { type = event which = 2007505 where = SOV when = 60 } #Dissolution of the Constituent Assembly after 60 days
+		command = { type = removecore which = 617 } #Ukraine
+		command = { type = removecore which = 608 } 
+		command = { type = removecore which = 613 } 
+		command = { type = removecore which = 610 } 
+		command = { type = removecore which = 612 } 
+		command = { type = removecore which = 611 } 
+		command = { type = removecore which = 606 } 
+		command = { type = removecore which = 605 } 
+		command = { type = removecore which = 242 } 
+		command = { type = removecore which = 240 } 
+		command = { type = removecore which = 241 } 
+		command = { type = removecore which = 637 } 
+		command = { type = removecore which = 640 } 
+		command = { type = removecore which = 641 } 
+		command = { type = removecore which = 213 } 
+		command = { type = removecore which = 619 } 
+		command = { type = removecore which = 620 } 
+		command = { type = removecore which = 626 } 
+		command = { type = removecore which = 622 } 
+		command = { type = removecore which = 616 } 
+		command = { type = removecore which = 635 } 
+		command = { type = removecore which = 627 } 
+		command = { type = removecore which = 628 } 
+		command = { type = removecore which = 609 } 
+		command = { type = removecore which = 629 } 
+		command = { type = removecore which = 636 } 
+		command = { type = removecore which = 630 } 
+		command = { type = removecore which = 623 } 
+		command = { type = removecore which = 624 } 
+		command = { type = removecore which = 607 } 
+		command = { type = removecore which = 638 } 
+		command = { type = removecore which = 639 } 
+		command = { type = removecore which = 631 } 
+		command = { type = removecore which = 632 } 
+		command = { type = removecore which = 615 } 
+		command = { type = removecore which = 625 } 
+		command = { type = removecore which = 618 } 
+		command = { type = removecore which = 614 } 
+		command = { type = removecore which = 238 } 
+		command = { type = removecore which = 621 } 
+		command = { type = removecore which = 633 } 
+		command = { type = removecore which = 634 } 
+		command = { type = removecore which = 707 } #Georgia, Armenia, Azerbaijan
+		command = { type = removecore which = 708 }
+		command = { type = removecore which = 709 }
+		command = { type = removecore which = 710 }
+		command = { type = removecore which = 711 }
+		command = { type = removecore which = 712 }
+		command = { type = removecore which = 713 }
+		command = { type = removecore which = 714 }
+		command = { type = removecore which = 599 } #Byelorussia
+		command = { type = removecore which = 594 }
+		command = { type = removecore which = 595 }
+		command = { type = removecore which = 591 }
+		command = { type = removecore which = 600 }
+		command = { type = removecore which = 596 }
+		command = { type = removecore which = 597 }
+		command = { type = removecore which = 601 }
+		command = { type = removecore which = 598 }
+		command = { type = removecore which = 590 }
+		command = { type = removecore which = 592 }
+		command = { type = removecore which = 593 }
+		command = { type = removecore which = 248 }		
+	}
+}
+
+event = {
+	id = 2007502   # Dissolution of the Imperial Army
+	country = SOV
+	save_date = yes
+
+	#triggered by RUS 2104530
+	
+	name = EVT1914_2007502_NAME
+	desc = EVT1914_2007502_DESC
+	style = 2
+	picture = "russian_soldiers"
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		#the army is in chaos
+		command = { trigger = { army = { size = 46 } } type = demobilize which = hq when = 0 where = 1 value = 4 } #leave only 4 HQs (best models) if there are at least 46 land units, not return manpower to pool
+		command = { type = demobilize which = land when = 0 where = 1 value = 45 } #leave only 45 land units (best models), not return manpower to pool
+		command = { type = strength which = land when = 0 where = 0 value = 0.50 } #land units set to 50% strenght (deserters)
+		command = { type = morale which = land value = -12 } #will be restored by other events later
+		command = { type = max_organization which = land value = -12 } #will be restored by other events later
+		command = { type = add_division which = "1st Red Guards" value = infantry when = 3 }
+		command = { type = add_division which = "2nd Red Guards" value = infantry when = 3 }		
+		command = { type = add_division which = "3st Red Guards" value = infantry when = 3 }
+		command = { type = add_division which = "4nd Red Guards" value = infantry when = 3 }
+		command = { type = add_division which = "5nd Red Guards" value = infantry when = 3 }
+		command = { trigger = { technology = { country = SOV value = 1010 } } type = deactivate_unit_type which = infantry }		
+		command = { trigger = { technology = { country = SOV value = 1010 } } type = deactivate_unit_type which = garrison }		
+		command = { trigger = { technology = { country = SOV value = 13060 } } type = deactivate_unit_type which = cavalry }
+		command = { trigger = { technology = { country = SOV value = 1160 } } type = deactivate_unit_type which = bergsjaeger }		
+		command = { trigger = { technology = { country = SOV value = 1560 } } type = deactivate_unit_type which = marine }
+		command = { trigger = { technology = { country = SOV value = 1670 } } type = deactivate_unit_type which = paratrooper }
+		command = { trigger = { local_flag = MOB7 } type = manpowerpool value = -15 when = 1 }
+		command = { trigger = { local_flag = MOB8 } type = manpowerpool value = -80 when = 1 }
+		command = { trigger = { local_flag = MOB7 } type = local_setflag which = removedMOB7 }
+		command = { trigger = { local_flag = MOB8 } type = local_setflag which = removedMOB8 }		
+	}
+}
+
+event = {
+	id = 2007503   # The economy is collapsing!
+	country = SOV
+
+	#triggered by RUS 2104530
+	
+	name = EVT1914_2007503_NAME
+	desc = EVT1914_2007503_DESC
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = industrial_modifier which = total value = -40 } #-40% IC
+		command = { type = industrial_modifier which = supplies value = -50 } #-50% supplies creation
+	}
+}
+
+event = {
+	id = 2007504   # The Railway War
+	country = SOV
+
+	#triggered by RUS 2104530
+	
+	name = EVT1914_2007504_NAME
+	desc = EVT1914_2007504_DESC
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 0.2 }
+		command = { trigger = { control = { province = 1134 data = SOV } } type = revolt which = 1134 } #Orenburg (Orenburg Cossacks led by Alexander Dutov)
+		command = { trigger = { control = { province = 644 data = SOV } } type = revolt which = 644 } #Rostov (small Volunteer Army led by Alekseyev and Kornilov + Don Cossacks led by Alexey Kaledin)
+	}
+}
+
+event = {
+	id = 2007505   # Dissolution of the Constituent Assembly
+	country = SOV
+	
+	name = EVT1914_2007505_NAME
+	desc = EVT1914_2007505_DESC
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 2007506   # Decrees on Land
+	country = SOV
+	
+	trigger = {
+		event = 2007503 # The economy is collapsing!
+	}
+	
+	name = EVT1914_2007506_NAME
+	desc = EVT1914_2007506_DESC
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = -5 }
+		command = { type = money value = 500 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+}
+event = {
+	id = 2007507   # War communism - phase one
+	country = SOV
+	
+	decision = {
+		event = 2007506 # The economy is collapsing!
+	}
+
+	decision_trigger = {
+		NOT = { dissent = 10 }
+	}
+
+	trigger = {
+		event = 2007506 # The economy is collapsing!
+		NOT = { dissent = 10 }
+	}
+	
+	name = EVT1914_2007507_NAME
+	desc = EVT1914_2007507_DESC
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = industrial_modifier which = supplies value = 10 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+}
+
+event = {
+	id = 2007508   # Prodrazvyorstka
+	country = SOV
+	
+	decision = {
+		event = 2007507 # War communism - phase one
+	}
+
+	decision_trigger = {
+		NOT = { dissent = 10 }
+	}
+
+	trigger = {
+		event = 2007507 # War communism - phase one
+		NOT = { dissent = 10 }
+	}
+	
+	name = EVT1914_2007508_NAME
+	desc = EVT1914_2007508_DESC
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = supplies value = 15 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+}
+
+event = {
+	id = 2007509   # War communism - phase two
+	country = SOV
+	
+	decision = {
+		event = 2007507 # War communism - phase one
+	}
+
+	decision_trigger = {
+		NOT = { dissent = 10 }
+		control = { province = 572 data = -3 }  # Moscow
+		control = { province = 553 data = -3 }  # Petrograd		
+		control = { province = 663 data = -3 }  # Tsaritsyn		
+		control = { province = 672 data = -3 }  # Kazan
+	}
+
+	trigger = {
+		event = 2007507 # War communism - phase one
+		NOT = { dissent = 10 }
+		control = { province = 572 data = -3 }  # Moscow
+		control = { province = 553 data = -3 }  # Petrograd		
+		control = { province = 663 data = -3 }  # Tsaritsyn		
+		control = { province = 672 data = -3 }  # Kazan		
+	}
+	
+	name = EVT1914_2007509_NAME
+	desc = EVT1914_2007509_DESC
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = industrial_modifier which = supplies value = 10 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+}
+
+event = {
+	id = 2007510   # War communism - phase three
+	country = SOV
+	
+	decision = {
+		event = 2007509 # War communism - phase two
+	}
+
+	decision_trigger = {
+		NOT = { dissent = 10 }
+		control = { province = 572 data = -3 }  # Moscow
+		control = { province = 553 data = -3 }  # Petrograd		
+		control = { province = 663 data = -3 }  # Tsaritsyn		
+		control = { province = 672 data = -3 }  # Kazan
+	}
+
+	trigger = {
+		event = 2007509 # War communism - phase two
+		NOT = { dissent = 10 }
+		control = { province = 572 data = -3 }  # Moscow
+		control = { province = 553 data = -3 }  # Petrograd		
+		control = { province = 663 data = -3 }  # Tsaritsyn		
+		control = { province = 672 data = -3 }  # Kazan		
+	}
+	
+	name = EVT1914_2007510_NAME
+	desc = EVT1914_2007510_DESC
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1918 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = 20 }
+		command = { type = industrial_modifier which = supplies value = 15 }
+		command = { type = domestic which = free_market value = -2 }
+	}
+}
+
+event = {
+	id = 2007511   # New Economy Policy
+	country = SOV
+	
+	decision = {
+		event = 2007510 # War communism - phase three
+		event = 2007517 # Kronstadt Rebellion
+		headofgovernment = 30097 # Lenin
+	}
+
+	decision_trigger = {
+		headofgovernment = 30097 # Lenin
+	}
+
+	trigger = {
+		event = 2007510 # War communism - phase three
+		event = 2007517 # Kronstadt Rebellion	
+		headofgovernment = 30097 # Lenin
+	}
+	
+	name = EVT1914_2007511_NAME
+	desc = EVT1914_2007511_DESC
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1918 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = -10 }
+		command = { type = money value = 1000 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+}
+
+event = {
+	id = 2007512   # Creation of the Red Army
+	country = SOV
+	
+	decision = {
+		event = 2007502 # Dissolution of the Imperial Army
+	}
+
+	decision_trigger = {
+		money = 200 
+		supplies = 500 	
+		event = { id = 2007502 days = 45 }
+		NOT = { dissent = 15 }
+	}
+
+	trigger = {
+		event = 2007502	# Dissolution of the Imperial Army
+		event = { id = 2007502 days = 45 }
+		NOT = { dissent = 15 }
+		supplies = 500 	
+	}
+	
+	name = EVT1914_2007512_NAME
+	desc = EVT1914_2007512_DESC
+	style = 2
+	decision_picture = "decision_russian_mobilization"
+	picture = "russian_soldiers"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { trigger = { ai = no } type = money  value = -200 }		
+		command = { type = supplies value = -500 }
+		command = { type = morale which = land value = 6 }
+		command = { type = max_organization which = land value = 6 }
+		command = { trigger = { technology = { country = SOV value = 1010 } } type = activate_unit_type which = infantry }		
+		command = { trigger = { technology = { country = SOV value = 1010 } } type = activate_unit_type which = garrison }		
+		command = { trigger = { technology = { country = SOV value = 13060 } } type = activate_unit_type which = cavalry }
+		command = { trigger = { technology = { country = SOV value = 1160 } } type = activate_unit_type which = bergsjaeger }		
+		command = { trigger = { technology = { country = SOV value = 1560 } } type = activate_unit_type which = marine }
+		command = { trigger = { technology = { country = SOV value = 1670 } } type = activate_unit_type which = paratrooper }
+		
+	}
+}
+
+event = {
+	id = 2007513   # Order N. 228
+	country = SOV
+	
+	decision = {
+		event = 2007512 # Creation of the Red Army
+	}
+
+	decision_trigger = {
+		incabinet = 30108 # Trotsky as Armament Minister
+		NOT = { dissent = 15 }
+	}
+
+	trigger = {
+		event = 2007512	# Creation of the Red Army
+		##incabinet = 30108 # Trotsky as Armament Minister
+		NOT = { dissent = 15 }
+	}
+	
+	name = "EVT1914_2007513_NAME"
+	desc = "EVT1914_2007513_DESC" 
+	style = 2
+	decision_picture = "decision_russian_mobilization"
+	picture = "russian_soldiers"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = 6 }
+		command = { type = max_organization which = land value = 6 }
+		#wake ex-tsarist leaders
+		command = { type = wakeleader which = 30482 } #Shaposhnikov
+		command = { type = wakeleader which = 30569 } #Voroshilov
+		command = { type = wakeleader which = 30731 } #Brusilov
+		command = { type = wakeleader which = 30765 } #Vatsetis
+		command = { type = wakeleader which = 30784 } #Ivanov
+		command = { type = wakeleader which = 30795 } #Baluev
+		command = { type = wakeleader which = 30796 } #Belkovich
+		command = { type = wakeleader which = 30797 } #Dolgov
+		command = { type = wakeleader which = 30798 } #Klembovsky
+		command = { type = wakeleader which = 30799 } #Mikhnevich
+		command = { type = wakeleader which = 30800 } #Polivanov
+		command = { type = wakeleader which = 30801 } #Shuvaev
+		command = { type = wakeleader which = 30802 } #Manikovsky
+		command = { type = wakeleader which = 30803 } #Litvinov
+		command = { type = wakeleader which = 30804 } #Bagration
+		command = { type = wakeleader which = 30805 } #Vostrosablin
+		command = { type = wakeleader which = 30806 } #Chernavin
+		command = { type = wakeleader which = 30807 } #Durlyaher
+		command = { type = wakeleader which = 30808 } #Golenkin
+		command = { type = wakeleader which = 30809 } #Shoshin
+		command = { type = wakeleader which = 30810 } #Drozdov
+		command = { type = wakeleader which = 30811 } #Mikeladze V.A.
+		command = { type = wakeleader which = 30812 } #Chizhevsky
+		command = { type = wakeleader which = 30813 } #Verkhovsky A.
+		command = { type = wakeleader which = 30814 } #Svechin A.A.
+		command = { type = wakeleader which = 30815 } #Sobolev A.V.
+		command = { type = wakeleader which = 30816 } #Kuzmin-Karavaev D.D.
+		command = { type = wakeleader which = 30817 } #Stankevich A.V.
+		command = { type = wakeleader which = 30818 } #Velichko K.I.
+		command = { trigger = { ai = SOV } type = armamentminister which = 30108 } #Trotsky as Armament Minister
+	}
+}
+
+event = {
+	id = 2007514   # Mass Levy
+	country = SOV
+	
+	decision = {
+		event = 2007513 # Order N. 228
+	}
+
+	decision_trigger = {
+		money = 200 
+		supplies = 500 	
+		NOT = { dissent = 15 }
+	}
+
+	trigger = {
+		event = 2007513	# Order N. 228
+		NOT = { dissent = 15 }
+		supplies = 500 			
+	}
+	
+	name = "EVT1914_2007514_NAME"
+	desc = "EVT1914_2007514_DESC" 
+	style = 2
+	decision_picture = "decision_russian_mobilization"
+	picture = "russian_soldiers"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 10 }
+		command = { trigger = { ai = no } type = money  value = -200 }		
+		command = { type = supplies value = -500 }
+		command = { trigger = { local_flag = removedMOB7 } type = manpowerpool value = 15 when = 1 }
+		command = { trigger = { local_flag = removedMOB8 } type = manpowerpool value = 80 when = 1 }
+		command = { trigger = { local_flag = removedMOB7 } type = local_clrflag which = removedMOB7 }
+		command = { trigger = { local_flag = removedMOB8 } type = local_clrflag which = removedMOB8 }
+
+	}
+}
+
+event = {
+	id = 2007515   # Peasants Rebellion
+	country = SOV
+
+	trigger = {
+		event = 2007514	# Mass Levy		
+	}
+	
+	name = "EVT1914_2007515_NAME"
+	desc = "EVT1914_2007515_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 5 }
+		command = { trigger = { control = { province = 650 data = -1 } } type = revolt which  = 650 } #Tambov
+		command = { trigger = { control = { province = 579 data = -1 } } type = revolt which  = 579 } #Riazau
+		command = { trigger = { control = { province = 584 data = -1 } } type = revolt which  = 584 } #Tula
+		command = { trigger = { control = { province = 576 data = -1 } } type = revolt which  = 576 } #Kaluga
+		command = { trigger = { control = { province = 589 data = -1 } } type = revolt which  = 589 } #Smolensk
+		command = { trigger = { control = { province = 590 data = -1 } } type = revolt which  = 590 } #Vitebsk
+		command = { trigger = { control = { province = 566 data = -1 } } type = revolt which  = 566 } #Pskov
+		command = { trigger = { control = { province = 560 data = -1 } } type = revolt which  = 560 } #Novgorod
+		command = { trigger = { control = { province = 600 data = -1 } } type = revolt which  = 600 } #Mogilev
+		command = { trigger = { control = { province = 654 data = -1 } } type = revolt which  = 654 } #Voronezh
+		command = { trigger = { control = { province = 669 data = -1 } } type = revolt which  = 669 } #Saratov
+		command = { trigger = { control = { province = 658 data = -1 } } type = revolt which  = 658 } #Penza
+		command = { trigger = { control = { province = 581 data = -1 } } type = revolt which  = 581 } #Orel
+		command = { trigger = { control = { province = 569 data = -1 } } type = revolt which  = 569 } #Tver 
+	}
+}
+
+event = {
+	id = 2007516   # Tambov Rebellion
+	country = SOV
+
+	trigger = {
+		event = 2007515	# Peasants Rebellion
+		control = { province = 650 data = -1 } #Tambov
+	}
+	
+	name = "EVT1914_2007516_NAME"
+	desc = "EVT1914_2007516_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 3 }
+		command = { type = revolt which  = 650 } #Tambov
+		command = { type = revolt which  = 650 } #Tambov
+		command = { type = revolt which  = 650 } #Tambov
+		command = { type = revolt which  = 650 } #Tambov
+		command = { type = revolt which  = 650 } #Tambov
+		command = { type = revolt which  = 650 } #Tambov
+		command = { type = revolt which  = 650 } #Tambov
+	}
+}
+
+event = {
+	id = 2007517   # Kronstadt Rebellion
+	country = SOV
+
+	trigger = {
+		event = 2007516	# Tambov Rebellion
+		OR = {
+			dissent = 10
+			event = 2007510  # War communism - phase three
+		}
+		control = { province = 553 data = -1 }  # Petrograd		
+	}
+	
+	name = "EVT1914_2007517_NAME"
+	desc = "EVT1914_2007517_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = 3 }
+		command = { type = revolt which  = 553 } #Petrograd
+		command = { type = revolt which  = 553 } #Petrograd
+	}
+}
+
+event = {
+	id = 2007518   # Death of Sverdlov
+	country = SOV
+
+	name =  EVT_103_NAME
+	desc =  EVT_103_DESC
+	style = 2
+	picture = "minister_died"
+
+	date = { day = 15 month = march year = 1919 }
+
+	
+	action = {
+		name = EVT_362_ACTC
+		command = { trigger = { headofstate = 30095 } type = headofstate which = 30001 } #Mikhail I. Kalinin
+		command = { type = sleepminister which = 30095 } #Yakov Sverdlov
+	}
+}
+
+event = {
+	id = 2007519   # Lenin withdraws from politics
+	country = SOV
+
+	trigger = {
+		minister = 30097
+		OR = {
+			random = 2
+			AND = {
+				year = 1923
+				month = 8
+			}
+		}
+	}
+	
+	name = "EVT1914_2007519_NAME"
+	desc = "EVT1914_2007519_DESC"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 0 month = january year = 1921 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1923 }	
+
+	
+	action = {
+		name = EVT_362_ACTC
+		command = { trigger = { headofgovernment = 30097 } type = headofgovernment which = 30098 } #Aleksey Rykov
+		command = { type = sleepminister which = 30097 } #Lenin
+	}	
+}
+
+event = {
+	id = 2007520  # Foundation of USSR
+	country = SOV
+	
+	decision = {
+		atwar = no
+	}
+
+	decision_trigger = {
+		NOT = { exists = UER } #Kolchack
+		NOT = { exists = UTC } #Volunteer's Army
+		NOT = { exists = UGS } #Arkhangelsk Government
+		NOT = { exists = UPE } #Basmachi	
+		control = { province = 572 data = -1 }  # Moscow
+		control = { province = 553 data = -1 }  # Petrograd		
+		control = { province = 663 data = -1 }  # Tsaritsyn		
+		control = { province = 672 data = -1 }  # Kazan		
+		control = { province = 1138 data = -1 }  # Omsk
+		control = { province = 1191 data = -1 }  # Vladivostok		
+	}
+
+	trigger = {
+		atwar = no
+		NOT = { exists = UER } #Kolchack
+		NOT = { exists = UTC } #Volunteer's Army
+		NOT = { exists = UGS } #Arkhangelsk Government
+		NOT = { exists = UPE } #Basmachi	
+		control = { province = 572 data = -1 }  # Moscow
+		control = { province = 553 data = -1 }  # Petrograd		
+		control = { province = 663 data = -1 }  # Tsaritsyn		
+		control = { province = 672 data = -1 }  # Kazan		
+		control = { province = 1138 data = -1 }  # Omsk
+		control = { province = 1191 data = -1 }  # Vladivostok			
+	}
+	
+	name = "EVT1914_2007520_NAME"
+	desc = "EVT1914_2007520_DESC"	
+	style = 2
+	picture = "spread_revolution"
+	decision_picture = "decision_spread_revolution"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = -10 }
+		command = { type = name where = SOV } #change name from Soviet Russia to Soviet Union
+		command = { type = flag_ext where = SOV } #change flag from Soviet Russia to Soviet Union
+		command = { type = addcore which = 617 } #Ukraine
+		command = { type = addcore which = 608 } 
+		command = { type = addcore which = 613 } 
+		command = { type = addcore which = 610 } 
+		command = { type = addcore which = 612 } 
+		command = { type = addcore which = 611 } 
+		command = { type = addcore which = 606 } 
+		command = { type = addcore which = 605 } 
+		command = { type = addcore which = 637 } 
+		command = { type = addcore which = 640 } 
+		command = { type = addcore which = 641 } 
+		command = { type = addcore which = 619 } 
+		command = { type = addcore which = 620 } 
+		command = { type = addcore which = 626 } 
+		command = { type = addcore which = 622 } 
+		command = { type = addcore which = 616 } 
+		command = { type = addcore which = 635 } 
+		command = { type = addcore which = 627 } 
+		command = { type = addcore which = 628 } 
+		command = { type = addcore which = 609 } 
+		command = { type = addcore which = 629 } 
+		command = { type = addcore which = 636 } 
+		command = { type = addcore which = 630 } 
+		command = { type = addcore which = 623 } 
+		command = { type = addcore which = 624 } 
+		command = { type = addcore which = 607 } 
+		command = { type = addcore which = 638 } 
+		command = { type = addcore which = 639 } 
+		command = { type = addcore which = 631 } 
+		command = { type = addcore which = 632 } 
+		command = { type = addcore which = 615 } 
+		command = { type = addcore which = 625 } 
+		command = { type = addcore which = 618 } 
+		command = { type = addcore which = 614 }
+		command = { type = addcore which = 621 } 
+		command = { type = addcore which = 633 } 
+		command = { type = addcore which = 634 } 
+		command = { type = addcore which = 707 } #Georgia, Armenia, Azerbaijan
+		command = { type = addcore which = 708 }
+		command = { type = addcore which = 709 }
+		command = { type = addcore which = 710 }
+		command = { type = addcore which = 711 }
+		command = { type = addcore which = 712 }
+		command = { type = addcore which = 713 }
+		command = { type = addcore which = 714 }
+		command = { type = addcore which = 599 } #Byelorussia
+		command = { type = addcore which = 594 }
+		command = { type = addcore which = 595 }
+		command = { type = addcore which = 591 }
+		command = { type = addcore which = 600 }
+		command = { type = addcore which = 596 }
+		command = { type = addcore which = 597 }
+		command = { type = addcore which = 601 }
+		command = { type = addcore which = 598 }
+		command = { type = addcore which = 590 }
+		command = { type = addcore which = 592 }
+		command = { type = addcore which = 593 }
+		command = { type = addcore which = 248 }
+	}
+}
+
+event = {
+	id = 2007521  # Seek a soft peace with Germany
+	country = SOV
+	
+	decision = {
+		war = { country = U08 country = SOV } 
+	}
+
+	decision_trigger = {
+		NOT = { control = { province = 247 data = -1 } } #Brest-Litovsk
+		NOT = { control = { province = 269 data = -1 } } #Jelgava
+		NOT = { control = { province = 232 data = -1 } } #Warsaw
+		NOT = { control = { province = 258 data = -1 } } #Wilno
+		NOT = { control = { province = 243 data = -1 } } #Lublin
+		OR = {
+			control = { province = 617 data = -1 } #Kiev
+			control = { province = 601 data = -1 } #Gomel
+			control = { province = 599 data = -1 } #Minsk
+			control = { province = 566 data = -1 } #Pskov
+			control = { province = 274 data = -1 } #Narva
+		}	
+	}
+
+	trigger = {
+		war = { country = U08 country = SOV }
+		NOT = { control = { province = 247 data = -1 } } #Brest-Litovsk
+		NOT = { control = { province = 269 data = -1 } } #Jelgava
+		NOT = { control = { province = 232 data = -1 } } #Warsaw
+		NOT = { control = { province = 258 data = -1 } } #Wilno
+		NOT = { control = { province = 243 data = -1 } } #Lublin
+		OR = {
+			control = { province = 617 data = -1 } #Kiev
+			control = { province = 601 data = -1 } #Gomel
+			control = { province = 599 data = -1 } #Minsk
+			control = { province = 566 data = -1 } #Pskov
+			control = { province = 274 data = -1 } #Narva
+		}			
+	}
+	
+	name = "EVT1914_2007521_NAME"
+	desc = "EVT1914_2007521_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = dissent value = -2 } #It was promised
+		command = { type = trigger which = 2007522 }
+	}
+}
+event = {
+	id = 2007522 # Soviet Russia seeks peace
+	country = U08
+	
+	name = "EVT1914_2007521_NAME"
+	desc = "EVT1914_2007521_DESC"  
+	style = 2
+	picture = "news_paper"	
+	
+	action = {
+		name = "EVT1914_2007522_ACTIONA"
+		ai_chance = 95
+		command = { type = dissent value = -2 } #
+		command = { type = trigger which = 2007523 }
+	}
+	action = {
+		name = "EVT1914_2007522_ACTIONB"
+		ai_chance = 5
+		command = { type = dissent value = 2 } #people want the war to end
+		command = { type = belligerence value = 5 }
+		command = { type = trigger which = 2007524 }
+	}
+}
+
+event = {
+	id = 2007523 # Germany makes an offer
+	country = SOV
+	
+	name = "EVT1914_2007523_NAME"
+	desc = "EVT1914_2007523_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2007523_ACTIONA"
+		ai_chance = 95
+		command = { type = dissent value = 3 } #people want the war to end
+		command = { type = trigger which = 2007525 }
+	}
+	action = {
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 5
+		command = { type = peace which = U08 value = 1 }	
+		command = { type = peace which = U09 value = 1 }	
+		command = { type = trigger which = 2007531 } #The Left Socialist-Revolutionaries leave the government
+		command = { type = event which = 2007529 where = SOV when = 1 } #The Brest Litovsk Treaty : initial conditions
+		#do not fire negative events related to losses fire during civil war only
+		command = { type = local_setflag which = losses_mutinies }
+		command = { type = local_setflag which = war_weariness }
+		command = { type = local_setflag which = general_strikes }
+		command = { type = local_setflag which = lost_20 }	
+		command = { type = local_setflag which = lost_30 }	
+		command = { type = local_setflag which = lost_40 }
+		command = { type = local_setflag which = lost_50 }
+		command = { type = local_setflag which = mutinies }
+	}
+}
+
+event = {
+	id = 2007524 # Germany refused our offer
+	country = SOV
+	persistent = yes
+	
+	name = "EVT1914_2007524_NAME"
+	desc = "EVT1914_2007524_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = -1 } #at least we tried
+	}
+}
+
+event = {
+	id = 2007525 # Soviet Russia refused our offer
+	country = U08
+	persistent = yes
+	
+	name = "EVT1914_2007525_NAME"
+	desc = "EVT1914_2007525_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = -1 } #at least we tried
+	}
+}
+
+event = {
+	id = 2007526  # Seek peace with Germany at any cost
+	country = SOV
+	
+	decision = {
+		war = { country = U08 country = SOV } 
+	}
+
+	decision_trigger = {
+		NOT = { control = { province = 247 data = -1 } } #Brest-Litovsk
+		NOT = { control = { province = 269 data = -1 } } #Jelgava
+		NOT = { control = { province = 232 data = -1 } } #Warsaw
+		NOT = { control = { province = 258 data = -1 } } #Wilno
+		NOT = { control = { province = 243 data = -1 } } #Lublin
+		NOT = { control = { province = 617 data = -1 } } #Kiev
+		NOT = { control = { province = 601 data = -1 } } #Gomel
+		NOT = { control = { province = 599 data = -1 } } #Minsk
+		NOT = { control = { province = 566 data = -1 } } #Pskov
+		NOT = { control = { province = 274 data = -1 } } #Narva
+	}
+
+	trigger = {
+		war = { country = U08 country = SOV }
+		NOT = { control = { province = 247 data = -1 } } #Brest-Litovsk
+		NOT = { control = { province = 269 data = -1 } } #Jelgava
+		NOT = { control = { province = 232 data = -1 } } #Warsaw
+		NOT = { control = { province = 258 data = -1 } } #Wilno
+		NOT = { control = { province = 243 data = -1 } } #Lublin
+		NOT = { control = { province = 617 data = -1 } } #Kiev
+		NOT = { control = { province = 601 data = -1 } } #Gomel
+		NOT = { control = { province = 599 data = -1 } } #Minsk
+		NOT = { control = { province = 566 data = -1 } } #Pskov
+		NOT = { control = { province = 274 data = -1 } } #Narva			
+	}
+	
+	name = "EVT1914_2007526_NAME"
+	desc = "EVT1914_2007526_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = trigger which = 2007527 }
+	}
+}
+
+event = {
+	id = 2007527 # Soviet Russia begs for peace
+	country = U08
+	
+	name = "EVT1914_2007527_NAME"
+	desc = "EVT1914_2007526_DESC" 
+	style = 2
+	picture = "news_paper"	
+	
+	action = {
+		name = "EVT1914_2007527_ACTIONA" #Harsh conditions
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 2007528 }
+	}
+	action = {
+		name = "EVT1914_2007527_ACTIONB" # Crush the reds till the end
+		ai_chance = 0
+		command = { type = dissent value = 5 } #people want the war to end
+		command = { type = belligerence value = 15 }
+		command = { type = trigger which = 2007524 }
+	}
+}
+
+event = {
+	id = 2007528 # Germany makes a harsh offer
+	country = SOV
+	
+	name = "EVT1914_2007528_NAME"
+	desc = "EVT1914_2007526_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 100
+		command = { type = peace which = U08 value = 1 }	
+		command = { type = peace which = U09 value = 1 }	
+		command = { type = trigger which = 2007531 } #The Left Socialist-Revolutionaries leave the government
+		command = { type = event which = 2007530 where = SOV when = 1 } #The Brest Litovsk Treaty : harsh conditions
+		#do not fire negative events related to losses fire during civil war only
+		command = { type = local_setflag which = losses_mutinies }
+		command = { type = local_setflag which = war_weariness }
+		command = { type = local_setflag which = general_strikes }
+		command = { type = local_setflag which = lost_20 }	
+		command = { type = local_setflag which = lost_30 }	
+		command = { type = local_setflag which = lost_40 }
+		command = { type = local_setflag which = lost_50 }
+		command = { type = local_setflag which = mutinies }
+	}
+	action = {
+		name = "EVT1914_2007523_ACTIONA"
+		ai_chance = 0
+		command = { type = dissent value = 3 } #people want the war to end
+		command = { trigger = { headofgovernment = 30097} type = headofgovernment which = 30142 } #Lenin overruled, Bukharin replaces him as HoG
+		command = { type = trigger which = 2007525 }
+	}
+}
+
+event = {
+	id = 2007531 # The Left Socialist-Revolutionaries leave the government
+	country = SOV
+	
+	name = "EVT1914_2007531_NAME"
+	desc = "EVT1914_2007531_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 3 }
+		command = { type = revolt which = 572 } # Moscow
+		command = { type = sleepminister which = 30147 } #Maria Spiridonova
+		command = { type = sleepminister which = 30148 } #Boris Kamkov
+		command = { type = sleepminister which = 30149 } #Boris Savinkov
+		command = { type = sleepminister which = 30150 } #Mikhail Artemyevich Muravyov
+	}
+}
+
+event = {
+	id = 2007532
+	country = SOV
+	
+	trigger = { 
+		random = 15
+		event = 2104530 # Storm the Winter Palace ! (RUS turned into SOV)
+		control = { province = 644 data = SOV } #Rostov
+	}
+	
+	name = "EVT1914_2007532_NAME" # The Volunteer Army
+	desc = "EVT1914_2007532_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = remove_units which = land where = REB when = 0 value = 644 } #removes all Rebel units from Rostov province
+		command = { type = remove_units which = land where = REB when = 0 value = 626 } #removes all Rebel units from Odessa province
+		command = { type = remove_units which = land where = REB when = 0 value = 552 } #removes all Rebel units from Gdov province
+		command = { type = remove_units which = land where = REB when = 0 value = 566 } #removes all Rebel units from Pskov province
+		#if some of the rightful provinces of Volunteers' Army are currently occupied by rebels, controls goes from rebels to Soviet Russian and then to Volunteers' Army
+		command = { trigger = { owned = { province = 644 data = SOV } control = { province = 644 data = REB } } type = secedeprovince which = SOV value = 644 when = 2 } #Rostov
+		command = { trigger = { owned = { province = 626 data = SOV } control = { province = 626 data = REB } } type = secedeprovince which = SOV value = 626 when = 2 } #Odessa
+		command = { trigger = { owned = { province = 552 data = SOV } control = { province = 552 data = REB } } type = secedeprovince which = SOV value = 552 when = 2 } #Gdov
+		command = { trigger = { owned = { province = 566 data = SOV } control = { province = 566 data = REB } } type = secedeprovince which = SOV value = 566 when = 2 } #Pskov
+		command = { trigger = { NOT = { exists = UTC} } type = independence which = UTC value = 0 when = 1 }
+		command = { type = secedeprovince which = UTC value = 552 when = 1 } #North west, for Yudenitch (Gdov)
+		command = { type = secedeprovince which = UTC value = 566 when = 1 } #Pskov
+		command = { type = secedeprovince which = UTC value = 626 when = 1 } #Odessa, for the Drozdovsky
+	}
+}
+event = {
+	id = 2007533
+	country = SOV
+
+	trigger = { 
+		random = 15
+		event = 2007534 # Admiral Koltchak
+	}
+	
+	name = "EVT1914_2007533_NAME" # The Arkhangelsk Government
+	desc = "EVT1914_2007533_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = remove_units which = land where = REB when = 1 value = "Kola" } #removes all Rebel units from Kola area
+		command = { type = remove_units which = land where = REB when = 0 value = 537 } #removes all Rebel units from Kem province
+		command = { type = remove_units which = land where = REB when = 0 value = 538 } #removes all Rebel units from Segezha province
+		command = { type = remove_units which = land where = REB when = 0 value = 540 } #removes all Rebel units from Kestenga province
+		command = { type = remove_units which = land where = REB when = 0 value = 541 } #removes all Rebel units from Belomorsk province
+		command = { type = remove_units which = land where = REB when = 0 value = 542 } #removes all Rebel units from Arkhangelsk province
+		command = { type = remove_units which = land where = REB when = 0 value = 545 } #removes all Rebel units from Velsk province
+		command = { type = remove_units which = land where = REB when = 0 value = 546 } #removes all Rebel units from Sudostroy province
+		#if some of the rightful provinces of Volunteers' Army are currently occupied by rebels, controls goes from rebels to Soviet Russian and then to UGS
+		command = { trigger = { owned = { province = 534 data = SOV } control = { province = 534 data = REB } } type = secedeprovince which = SOV value = 534 when = 2 } #Kola
+		command = { trigger = { owned = { province = 535 data = SOV } control = { province = 535 data = REB } } type = secedeprovince which = SOV value = 535 when = 2 } #Murmansk
+		command = { trigger = { owned = { province = 536 data = SOV } control = { province = 536 data = REB } } type = secedeprovince which = SOV value = 536 when = 2 } #Kandalaksha
+		command = { trigger = { owned = { province = 537 data = SOV } control = { province = 537 data = REB } } type = secedeprovince which = SOV value = 537 when = 2 } #Kem
+		command = { trigger = { owned = { province = 538 data = SOV } control = { province = 538 data = REB } } type = secedeprovince which = SOV value = 538 when = 2 } #Segezha
+		command = { trigger = { owned = { province = 540 data = SOV } control = { province = 540 data = REB } } type = secedeprovince which = SOV value = 540 when = 2 } #Kestenga
+		command = { trigger = { owned = { province = 541 data = SOV } control = { province = 541 data = REB } } type = secedeprovince which = SOV value = 541 when = 2 } #Belomorsk
+		command = { trigger = { owned = { province = 542 data = SOV } control = { province = 542 data = REB } } type = secedeprovince which = SOV value = 542 when = 2 } #Arkhangelsk
+		command = { trigger = { owned = { province = 545 data = SOV } control = { province = 545 data = REB } } type = secedeprovince which = SOV value = 545 when = 2 } #Velsk
+		command = { trigger = { owned = { province = 546 data = SOV } control = { province = 546 data = REB } } type = secedeprovince which = SOV value = 546 when = 2 } #Sudostroy
+		command = { trigger = { owned = { province = 688 data = SOV } control = { province = 688 data = REB } } type = secedeprovince which = SOV value = 688 when = 2 } #Ukhta
+		command = { type = independence which = UGS value = 0 when = 1 }
+		command = { type = secedearea which = UGS value = "Kola" when = 1} #Kola, Murmansk, Kandalaksha
+		command = { type = secedeprovince which = UGS value = 537 when = 1 } #Kem
+		command = { type = secedeprovince which = UGS value = 538 when = 1 } #Segezha
+		command = { type = secedeprovince which = UGS value = 540 when = 1 } #Kestenga
+		command = { type = secedeprovince which = UGS value = 541 when = 1 } #Belomorsk
+		command = { type = secedeprovince which = UGS value = 542 when = 1 } #Arkhangelsk
+		command = { type = secedeprovince which = UGS value = 545 when = 1 } #Velsk
+		command = { type = secedeprovince which = UGS value = 546 when = 1 } #Sudostroy
+		command = { type = secedeprovince which = UGS value = 688 when = 1 } #Ukhta
+	}
+}
+
+event = {
+	id = 2007535
+	country = SOV
+
+	trigger = {
+		exists = UTC
+		OR = { 
+			AND = {
+				random = 5
+				event = 2007533 #Must be the last large rebellion
+			}
+			AND = {
+				NOT = { 
+					control = { province = 644 data = SOV } #Rostov
+					control = { province = 691 data = SOV } #Krasnodar
+				}
+				random = 30
+			}
+		}
+	}
+	
+	name = "EVT1914_2007535_NAME" # The Cossack's Rebellion
+	desc = "EVT1914_2007535_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+		command = { type = remove_units which = land where = REB when = 1 value = "Rostov" } #removes all Rebel units from Rostov area
+		command = { type = remove_units which = land where = REB when = 1 value = "Stalingrad" } #removes all Rebel units from Stalingrad area
+		command = { type = remove_units which = land where = REB when = 0 value = 697 } #removes all Rebel units from Volgodonsk province
+		#if some of the new provinces of Volunteers' Army are currently occupied by rebels, controls goes to Volunteers' Army
+		command = { trigger = { owned = { province = 642 data = SOV } control = { province = 642 data = REB } } type = secedeprovince which = UTC value = 642 when = 2 } #Surovikino
+		command = { trigger = { owned = { province = 643 data = SOV } control = { province = 643 data = REB } } type = secedeprovince which = UTC value = 643 when = 2 } #Morozovsk
+		command = { trigger = { owned = { province = 644 data = SOV } control = { province = 644 data = REB } } type = secedeprovince which = UTC value = 644 when = 2 } #Rostov-on-Don
+		command = { trigger = { owned = { province = 645 data = SOV } control = { province = 645 data = REB } } type = secedeprovince which = UTC value = 645 when = 2 } #Konstantinovsk
+		command = { trigger = { owned = { province = 649 data = SOV } control = { province = 649 data = REB } } type = secedeprovince which = UTC value = 649 when = 2 } #Kamensk-Shakhtinsky
+		command = { trigger = { owned = { province = 659 data = SOV } control = { province = 659 data = REB } } type = secedeprovince which = UTC value = 659 when = 2 } #Kalach-on-Don
+		command = { trigger = { owned = { province = 661 data = SOV } control = { province = 661 data = REB } } type = secedeprovince which = UTC value = 661 when = 2 } #Kamyshin
+		command = { trigger = { owned = { province = 662 data = SOV } control = { province = 662 data = REB } } type = secedeprovince which = UTC value = 662 when = 2 } #Kotelnikovo
+		command = { trigger = { owned = { province = 663 data = SOV } control = { province = 663 data = REB } } type = secedeprovince which = UTC value = 663 when = 2 } #Stalingrad
+		command = { trigger = { owned = { province = 697 data = SOV } control = { province = 697 data = REB } } type = secedeprovince which = UTC value = 697 when = 2 } #Volgodonsk
+		command = { type = secedearea which = UTC value = "Rostov" when = 1 }
+		command = { type = secedearea which = UTC value = "Stalingrad" when = 1 }
+		command = { type = secedeprovince which = UTC value = 697 when = 1 } #Volgodonsk
+		command = { type = trigger which = 2168503 } # Cossacks rise against the Bolsheviks #2173503 }
+	}
+}
+event = {
+	id = 2007536
+	country = SOV
+	persistent = yes
+
+	trigger = { 
+		random = 8
+		OR = { 
+			exists = UER #The Ufa Directory
+			exists = UTC #Volunteers' Army
+			exists = UGS # The Arkhangelsk Government
+		}
+		atwar = yes
+		NOT = { dissent = 25 }
+	}
+	
+	name = "EVT1914_2007536_NAME" # Red Terror
+	desc = "EVT1914_2007536_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = june year = 1914 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2007536_ACTIONA" # Peasants won't appeciate
+		command = { } #empty command to make event valid and reduce engine load
+		command = { trigger = { dissent = 20 } type = dissent value = 0.5 }
+		command = { trigger = { dissent = 10 NOT = { dissent = 20 } } type = dissent value = 1 }
+		command = { trigger = { NOT = { dissent = 10 } } type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 2007541   # The revolt of the Czechoslovak Legion
+	country = SOV
+
+	#triggered by Brest Litovsk
+	name = "EVT1914_2007541_NAME" # The revolt of the Czechoslovak Legion
+	desc = "EVT1914_2007541_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 0.5 }
+		command = { trigger = { control = { province = 668  data = SOV } } type = revolt which = 668  } #Samara/Kuybyshev
+		command = { trigger = { control = { province = 1132 data = SOV } } type = revolt which = 1132 } #Chelyabinsk
+		command = { trigger = { control = { province = 1137 data = SOV } } type = revolt which = 1137 } #Kurgan
+		command = { trigger = { control = { province = 501  data = SOV } } type = revolt which = 501  } #Kokchetav (for Petropavl)
+		command = { trigger = { control = { province = 1138 data = SOV } } type = revolt which = 1138 } #Omsk
+		command = { trigger = { control = { province = 1141 data = SOV } } type = revolt which = 1141 } #Barabinsk
+		command = { trigger = { control = { province = 1142 data = SOV } } type = revolt which = 1142 } #Novonikolaevsk/Novosibirsk
+		command = { trigger = { control = { province = 1148 data = SOV } } type = revolt which = 1148 } #Tomsk
+		command = { trigger = { control = { province = 1144 data = SOV } } type = revolt which = 1144 } #Kemerovo (for Mariinsk)
+		command = { trigger = { control = { province = 1157 data = SOV } } type = revolt which = 1157 } #Kansk
+		command = { trigger = { control = { province = 1069 data = SOV } } type = revolt which = 1069 } #Tayshet (for Nizhneudinsk)
+		command = { trigger = { control = { province = 1191 data = SOV } } type = revolt which = 1191 } #Vladivostok
+		command = { type = event which = 2007534 where = SOV when = 60 } #The Ufa Directorate
+	}
+}
+
+event = {
+	id = 2007534
+	country = SOV
+
+	name = "EVT1914_2007534_NAME" # The Ufa Directorate
+	desc = "EVT1914_2007534_DESC"
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = independence which = UER value = 0 when = 1 } #Ufa Directorate
+		command = { type = secedeprovince which = UER value = 668 when = 1 } #Samara/Kuybyshev
+		command = { type = secedeprovince which = UER value = 672 when = 1 } #Kazan
+		command = { type = secedeprovince which = UER value = 669 when = 1 } #Saratov
+		command = { type = secedeprovince which = UER value = 665 when = 1 } #Volsk
+		command = { type = secedeprovince which = UER value = 1162 when = 1 } #Irkutsk
+		command = { type = secederegion which = UER value = "Kazakstan" when = 1 }
+		command = { type = secederegion which = UER value = "Novosibirsk" when = 1 }
+		command = { type = secederegion which = UER value = "Eastern Russia" when = 1 }
+		command = { type = secederegion which = UER value = "Krasnoyarsk" when = 1 }
+		command = { type = secedearea which = UER value = "Irkutsk" when = 1 }
+		command = { type = secedearea which = UER value = "Primorski" when = 1 }
+		command = { type = independence which = U62 value = 0 when = 1 } #Far Eastern Host
+		command = { type = secedearea which = U62 value = "Zabaikalye" when = 1 }
+		command = { type = secedearea which = U62 value = "Amur" when = 1 }
+		command = { type = secedearea which = U62 value = "Khabarovsk" when = 1 }
+		command = { type = event which = 2173500 where = UER when = 1 } #The Ufa Directorate
+		command = { type = event which = 2041000 where = U62 when = 1 } #The Far Eastern Host
+		
+	}
+}

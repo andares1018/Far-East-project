@@ -1,0 +1,58 @@
+U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+1250001;Head of State;Wang Jingwei;1930;1945;1958;FA;Ruthless Powermonger;NA;M52041;X
+1250002;Head of Government;Wang Jingwei;1932;1945;1958;FA;Backroom Backstabber;NA;M52041;X
+1250003;Head of State;Chen Gongbo;1945;1964;1964;FA;Pig-headed Isolationist;Very High;M_Chen Gongbo;X
+1250004;Head of Government;Chen Gongbo;1932;1964;1964;FA;Political Protege;Very High;M_Chen Gongbo;X
+1250005;Head of Government;Zhou Fohai;1932;1999;1999;FA;Backroom Backstabber;Very High;8142;X
+1250006;Head of Government;Liang Hongzhi;1930;1999;1999;PA;Happy Amateur;Very High;9132;X
+1250007;Foreign Minister;Chu Minyi;1930;1999;1999;FA;Ideological Crusader;NA;8143;X
+1250008;Foreign Minister;Xu Liang;1939;1942;1942;FA;Great Compromiser;Very High;M_Xu Liang;X
+1250009;Foreign Minister;Li Shengwu;1940;1986;1986;FA;Apologetic Clerk;Very High;M_Li Shengwu;X
+1250010;Foreign Minister;Lin Bosheng;1940;1999;1999;FA;Happy Amateur;Very High;M_Lin Bosheng;X
+1250011;Foreign Minister;Zhou Longxiang;1945;1970;1970;FA;Happy Amateur;Very High;M_Zhou Longxiang;X
+1250012;Minister of Armament;Zhao Zunyue;1930;1999;1999;FA;Industrial Chemist;Very High;M_Zhao Zunyue;X
+1250013;Minister of Armament;Chen Gongbo;1930;1999;1999;FA;Keynesian Economy;Very High;M_Chen Gongbo;X
+1250014;Minister of Security;Chen Qun;1930;1999;1999;FA;Prince of Terror;NA;M_Chen Qun;X
+1250015;Minister of Security;Li Shengwu;1930;1986;1986;FA;Silent Lawyer;Very High;M_Li Shengwu;X
+1250016;Minister of Security;Mei Siping;1930;1999;1999;FA;Back Stabber;Very High;M_Mei Siping;X
+1250017;Minister of Security;Ding Mocun;1930;1999;1999;FA;Secret Police Chief;Very High;M_Ding Mocun;X
+1250018;Head of Military Intelligence;Ding Mocun;1930;1999;1999;FA;Political Specialist;Very High;M_Ding Mocun;X
+1250019;Head of Military Intelligence;Li Shiqun;1930;1944;1999;FA;Dismal Enigma;NA;M_Li Shiqun;X
+1250020;Head of Military Intelligence;Kagesa Sadaaki;1930;1999;1999;FA;Logistics Specialist;Very High;M_Kagesa Sadaaki;X
+1250021;Chief of Staff;Yang Kuiyi;1930;1943;1943;FA;School of Defence;Very High;M_Yang Kuiyi;X
+1250022;Chief of Staff;Ye Peng;1930;1999;1999;FA;School of Fire Support;Very High;M_Ye Peng;X
+1250023;Chief of Staff;Liu Yufen;1930;1944;1944;FA;School of Mass Combat;Very High;L502210;X
+1250024;Chief of Staff;Bao Wenyue;1930;1999;1999;FA;School of Defence;NA;9437;X
+1250025;Chief of Staff;Hu Yukun;1930;1999;1999;FA;School of Mass Combat;Very High;M_Hu Yukun;X
+1250026;Chief of Staff;Qi Xieyuan;1930;1999;1999;PA;School of Mass Combat;Very High;M_Qi Xieyuan;X
+1250027;Chief of Army;Bao Wenyue;1930;1999;1999;FA;Guns and Butter Doctrine;NA;9437;X
+1250028;Chief of Army;Ye Peng;1930;1999;1999;FA;Static Defence Doctrine;Very High;M_Ye Peng;X
+1250029;Chief of Army;Xiao Shuxuan;1930;1999;1999;FA;Static Defence Doctrine;Very High;8144;X
+1250030;Chief of Army;Qi Xieyuan;1930;1999;1999;PA;Decisive Battle Doctrine;Very High;M_Qi Xieyuan;X
+1250031;Chief of Navy;Ren Yuandao;1930;1999;1999;FA;Base Control Doctrine;NA;9447;X
+1250032;Chief of Navy;Ling Xiao;1940;1999;1999;FA;Decisive Naval Battle Doctrine;Very High;L502236;X
+1250033;Chief of Air Force;Chen Changzu;1930;1999;1999;FA;Air Superiority Doctrine;NA;M52020;X
+1250034;Chief of Air Force;Yao Xijiu;1940;1999;1999;FA;Army Aviation Doctrine;Very High;M_Yao Xijiu;X
+1250035;Chief of Air Force;Xie Wenda;1940;1984;1984;FA;Secret Police Chief;Very High;M_Xie Wenda;X
+1250036;Minister of Armament;Zhou Fohai;1940;1999;1999;FA;Laissez-Faire Capitalist;NA;8142;X
+1250037;Minister of Armament;Mei Siping;1940;1999;1999;FA;Mixed Economy;Very High;M_Mei Siping;X
+1250038;Minister of Armament;Chen Junhui;1940;1999;1999;FA;Keynesian Economy;Very High;M_Chen Junhui;X
+1250039;Minister of Security;Chen Junhui;1940;1999;1999;FA;Efficient Sociopath;Very High;M_Chen Junhui;X
+1250040;Minister of Armament;Zhou Longxiang;1940;1970;1970;FA;Secret Police Chief;Very High;M_Zhou Longxiang;X
+1250041;Minister of Armament;Luo Junqiang;1940;1971;1971;FA;Corrupt Kleptocrat;Very High;M_Luo Junqiang;X
+1250042;Head of Government;Li Shiyu;1940;1999;1999;FA;Backroom Backstabber;Very High;M_Li Shiyu;X
+1250043;Minister of Security;Su Chengde;1940;1999;1999;FA;Secret Police Chief;Very High;M_Su Chengde;X
+1250044;Minister of Security;Shen Erqiao;1940;1999;1999;FA;Compassionate Gentleman;Very High;M_Shen Erqiao;X
+1250045;Minister of Armament;Zhang Hu;1904;1938;1938;PA;Resource Industrialist;Very High;9522;X
+1250046;Minister of Security;Zhu Shen;1904;1938;1938;PA;Crime Fighter;Very High;9503;X
+1250047;Minister of Armament;Fu Xiaoan;1930;1941;1941;PA;Resource Industrialist;Very High;8595;X
+1250048;Minister of Security;Wang Yitang;1900;1931;1948;PA;Silent Lawyer;Very High;9479;X
+1250049;Minister of Security;Gao Lingwei;1910;1940;1940;PA;Compassionate Gentleman;Very High;9521;X
+1250050;Minister of Security;Jiang Kanghu;1930;1955;1955;PA;Health and Safety;Very High;M_Jiang Kanghu;X
+1250051;Minister of Security;Zhao Yusong;1930;1972;1972;PA;Compassionate Gentleman;Very High;M_Zhao Yusong;X
+1250052;Minister of Armament;Zhu Qinglai;1930;1964;1964;PA;Theoretical Scientist;Very High;M_Zhu Qinglai;X
+1250053;Head of State;Liang Hongzhi;1930;1964;1964;PA;Powerhungry Demagogue;Very High;9132;X
+1250054;Foreign Minister;Chen Lu;1930;1964;1964;PA;Biased Intellectual;Very High;M_Chen Lu;X
+1250055;Minister of Armament;Chen Jintao;1930;1940;1940;PA;Laissez-Faire Capitalist;Very High;M_Chen Jintao;X
+1250056;Minister of Armament;Wang Zihui;1930;1964;1964;PA;Laissez-Faire Capitalist;Very High;M_Wang Zihui;X

@@ -1,0 +1,2765 @@
+###
+###  Ottoman events (OTT - 145)
+###
+### By Rhysaxiel
+###
+### 
+###2145502	OTT	The Fall of Constantinople
+###2145511	OTT	The Armistice of Moudros
+###2145513	OTT	The Treaty of Sèvres
+##########################################################
+### 2191560  U08  Baghdad Railway
+### 2191561	 U08  Oil from Mosul
+### 2191562	 U08  Baghdad Railway: Karapinar-Dorak
+### 2191563	 U08  Section completed
+### 2191564	 U08  Baghdad Railway: Tall Abyad - Rasulain
+### 2191565	 U08  Section completed
+### 2191567	 U08  Baghdad Railway: Nusaybin - Tall Kutschak
+### 2191568	 U08  Section completed
+### 2191569	 U08  Baghdad Railway: Tall Kutschak – Samarra
+### 2191570	 U08  Section completed
+### 2191571	 U08  Baghdad Railway: Rasulain - Nusaybin
+### 2191572	 U08  Section completed
+##########################################################
+### 2145514 OTT Propose a defensive alliance to Germany?
+### 2191573 U08 The Ottomans propose a defensive pact
+### 2145515 OTT Secret alliance pact with Germany
+### 2001567 ENG HMS Erin and HMS Agincourt
+### 2145516 OTT The purchase of Sultan Osman and Reshadiye
+### 2145517 OTT The seizure of Sultan Osman and Reshadiye
+### 2191574 U08 The Sultan Osman joins our fleet
+
+### 2191575 U08 The Escape of SMS Goeben and SMS Breslau
+### 2145518 OTT The fate of the German Mittelmeerdivision
+### 2191576 U08 The Ottomans want to negotiate
+### 2145519 OTT The end of German-Ottoman cooperation
+### 2191577 U08 The end of German-Ottoman cooperation
+### 2191578 U08 The Ottomans agree
+### 2145520 OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+### 2001568 ENG Declare war on the Ottoman Empire
+
+### 2145521 OTT Join the Central Powers?
+### 2191579 U08 Try to persuade the Ottomans to intervene
+### 2145522 OTT Join the Central Powers?
+### 2145523 OTT Souchon bombards the Russian Coast
+### 2104549 RUS The Ottomans apologize for Souchon's actions
+### 2145524 OTT Souchon bombards the Egyptian Coast
+### 2001569 ENG The Ottomans apologize for Souchon's actions
+
+### 2191580 U08 Extend military mission in the Ottoman Empire
+### 2145525 OTT Germany extends its military support
+### 2191581 U08 Prepare the 'Asienkorps'
+### 2145526 OTT The German 'Asienkorps' arrive
+### 2145527 OTT The British naval mission leaves the country
+### 2001570 ENG The naval mission to the Ottoman Empire returns home
+### 2191582 U08 Send the Sonderkommando Kaiserliche Marine Türkei
+### 2145528 OTT Improve the Dardanelles defense network
+### 2145529 OTT Dardanelles defense network finished
+### 2001571 ENG Protect the oil fields in Southern Persia
+### 2031002 PER The United Kingdom occupies the oil fields in Southern Persia
+### 2104550 RUS Occupy Persian Azerbaijan
+### 2031003 PER Russia occupies Persian Azerbaijan
+### 2185006 U02 Return the southern provinces to Persia
+### 2104551 RUS/SOV Return Persian Azerbaijan
+
+### 2001572 ENG Make Qatar a Protectorate
+### 2145530 OTT Antiwar unrest
+### 2104552 RUS Declare war on the Ottoman Empire
+### 2145531 OTT The German military mission leaves the country
+### 2191583 U08 The military mission to the Ottoman Empire returns home
+
+### 2145532 OTT Join the Central Powers?
+### 2191584 U08 The Ottomans want to join the Central Powers
+### 2145533 OTT Join the Central Powers?
+
+
+
+# Defeat
+event = {
+	id = 2145502	# The Fall of Constantinople
+	country = OTT
+
+	trigger = {  
+		OR = { 
+			war = { country = OTT country = ENG } 
+			war = { country = OTT country = FRA } 
+			war = { country = OTT country = RUS } 
+		}	
+		NOT = { control = { province = 409 data = -1 } }  # Constantinople not controlled by OTT
+		NOT = { control = { province = 409 data = REB } }  # but Constantinople not controlled by REB either (so it's controlled by real enemy, not a simple rebellion)
+		random = 10
+	}
+	
+	name = "EVT1914_2145502_NAME"
+	desc = "EVT1914_2145502_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+	
+	date = { day = 0 month = october year = 1914 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2145502_ACTIONA" # We are defeated
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { war = { country = OTT country = RUS } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = OTT country = FRA } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = OTT country = SOV } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = OTT country = ENG } } type = peace which = ENG value = 1 }
+		command = { trigger = { war = { country = OTT country = USA } } type = peace which = USA value = 1 }
+		command = { trigger = { war = { country = OTT country = ITA } } type = peace which = ITA value = 1 }
+		command = { trigger = { war = { country = OTT country = JAP } } type = peace which = JAP value = 1 }
+		command = { trigger = { war = { country = OTT country = GRE } } type = peace which = GRE value = 1 }
+		command = { trigger = { war = { country = OTT country = BUL } } type = peace which = BUL value = 1 }
+		command = { trigger = { ai = no} type = dissent value = 20 }
+		# Future partitions
+		#PAL
+		command = { type = removecore which = 1009 }
+		command = { type = removecore which = 1010 }
+		command = { type = removecore which = 1011 }
+		command = { type = removecore which = 1172 }
+		command = { type = removecore which = 1013 }
+		#SYR
+		command = { type = removecore which = 1014 }
+		command = { type = removecore which = 1015 }
+		command = { type = removecore which = 1016 }
+		command = { type = removecore which = 1017 }
+		command = { type = removecore which = 1018 }
+		command = { type = removecore which = 1019 }
+		command = { type = removecore which = 1020 }
+		command = { type = removecore which = 1021 }
+		#JOR
+		command = { type = removecore which = 1022 }
+		command = { type = removecore which = 1023 }
+		command = { type = removecore which = 1024 }
+		command = { type = removecore which = 1025 }
+		command = { type = removecore which = 1026 }
+		#IRK
+		command = { type = removecore which = 1027 }
+		command = { type = removecore which = 1028 }
+		command = { type = removecore which = 1029 }
+		command = { type = removecore which = 1030 }
+		command = { type = removecore which = 1031 }
+		command = { type = removecore which = 1032 }
+		command = { type = removecore which = 1033 }
+		command = { type = removecore which = 1034 }
+		command = { type = removecore which = 1035 }
+		command = { type = removecore which = 1036 }
+		command = { type = removecore which = 1037 }
+		#Alexandretta
+		command = { type = removecore which = 1054 }		
+		
+		command = { type = trigger which = 2145513 } # The Treaty of Sèvres
+	}
+}
+# 2145503>2145510
+event = {
+	id = 2145511    # The Armistice of Moudros
+	country = OTT
+
+	trigger = { 
+		random = 20 
+		OR = { 
+			war = { country = OTT country = ENG } 
+			war = { country = OTT country = FRA } 
+			war = { country = OTT country = RUS } 
+		}
+		control = { province = 409 data = OTT }	# Must control Constantinople
+		NOT = { control = { province = 1172 data = OTT } } # Jerusalem
+		NOT = { control = { province = 1022 data = OTT } } # Amman
+		NOT = { control = { province = 1021 data = OTT } } # Aleppo
+		NOT = { control = { province = 900 data = OTT } } # Suez
+		NOT = { control = { province = 663 data = OTT } } # Tsaritsyn
+		NOT = { control = { province = 1004 data = OTT } } # El-Arish
+		OR = {	# Baghdad, Trabzon or Damascus
+			NOT = { control = { province = 1067 data = OTT } } #Trabzon
+			NOT = { control = { province = 1034 data = OTT } } #Baghdad
+			NOT = { control = { province = 1016 data = OTT } } #Damascus
+		}
+		OR = {
+			NOT = { alliance = { country = U08 country = OTT } }
+			AND = {
+				alliance = { country = U08 country = OTT }
+				NOT = { garrison = { country = U08 province = 1021 type = land size = 3 area = 2 } } # Not more then 2 German divisions in Middle East region
+			}
+		}
+	}
+  
+	name = "EVT1914_2145511_NAME"
+	desc = "EVT1914_2145511_DESC"
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2145502_ACTIONA" # We are defeated
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { war = { country = OTT country = RUS } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = OTT country = FRA } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = OTT country = SOV } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = OTT country = ENG } } type = peace which = ENG value = 1 }
+		command = { trigger = { war = { country = OTT country = USA } } type = peace which = USA value = 1 }
+		command = { trigger = { war = { country = OTT country = ITA } } type = peace which = ITA value = 1 }
+		command = { trigger = { war = { country = OTT country = JAP } } type = peace which = JAP value = 1 }
+		command = { trigger = { ai = no} type = dissent value = 10 }
+		# Future partitions
+		#PAL
+		command = { type = removecore which = 1008 }
+		command = { type = removecore which = 1009 }
+		command = { type = removecore which = 1010 }
+		command = { type = removecore which = 1011 }
+		command = { type = removecore which = 1172 }
+		command = { type = removecore which = 1013 }
+		#SYR
+		command = { type = removecore which = 1014 }
+		command = { type = removecore which = 1015 }
+		command = { type = removecore which = 1016 }
+		command = { type = removecore which = 1017 }
+		command = { type = removecore which = 1018 }
+		command = { type = removecore which = 1019 }
+		command = { type = removecore which = 1020 }
+		command = { type = removecore which = 1021 }
+		#JOR
+		command = { type = removecore which = 1022 }
+		command = { type = removecore which = 1023 }
+		command = { type = removecore which = 1024 }
+		command = { type = removecore which = 1025 }
+		command = { type = removecore which = 1026 }
+		#IRK
+		command = { type = removecore which = 1027 }
+		command = { type = removecore which = 1028 }
+		command = { type = removecore which = 1029 }
+		command = { type = removecore which = 1030 }
+		command = { type = removecore which = 1031 }
+		command = { type = removecore which = 1032 }
+		command = { type = removecore which = 1033 }
+		command = { type = removecore which = 1034 }
+		command = { type = removecore which = 1035 }
+		command = { type = removecore which = 1036 }
+		command = { type = removecore which = 1037 }
+		#Alexandretta
+		command = { type = removecore which = 1054 }
+		#Xanthi and Alexandroupoli
+		command = { type = removecore which = 363 }
+		command = { type = removecore which = 370 }
+		#remove claims
+		command = { type = removeclaim which = 644 } #Rostov-on-Don
+		command = { type = removeclaim which = 1041 } #Kuwait
+		command = { type = removeclaim which = 1044 } #Jebel Shammar
+		command = { type = removeclaim which = 1046 }
+		command = { type = removeclaim which = 1048 } #Hejaz
+		command = { type = removeclaim which = 1049 }
+		command = { type = removeclaim which = 1050 } #Yemen
+		command = { type = removeclaim which = 379 } #Rhodes
+		command = { type = removeclaim which = 387 } #Cyprus
+		command = { type = removeclaim which = 388 }
+		command = { type = removeclaim which = 778 } #Egypt
+		command = { type = removeclaim which = 779 }
+		command = { type = removeclaim which = 780 }
+		command = { type = removeclaim which = 781 }
+		command = { type = removeclaim which = 782 }
+		command = { type = removeclaim which = 783 }
+		command = { type = removeclaim which = 784 }
+		command = { type = removeclaim which = 785 }
+		command = { type = removeclaim which = 786 }
+		command = { type = removeclaim which = 787 }
+		command = { type = removeclaim which = 788 }
+		command = { type = removeclaim which = 789 }
+		command = { type = removeclaim which = 790 }
+		command = { type = removeclaim which = 791 }
+		command = { type = removeclaim which = 792 }
+		command = { type = removeclaim which = 793 }
+		command = { type = removeclaim which = 794 }
+		command = { type = removeclaim which = 795 }
+		command = { type = removeclaim which = 796 }
+		command = { type = removeclaim which = 797 }
+		command = { type = removeclaim which = 798 }
+		command = { type = removeclaim which = 799 }
+		command = { type = removeclaim which = 800 }
+		command = { type = removeclaim which = 801 }
+		command = { type = removeclaim which = 802 }
+		command = { type = removeclaim which = 900 }
+		command = { type = removeclaim which = 1004 }
+		command = { type = removeclaim which = 1005 }
+		command = { type = removeclaim which = 1006 }
+		command = { type = removeclaim which = 1007 }
+		
+		# demobilization (only 12 units at 33% strenght, around 50 700 men as per Treaty of Sèvres)
+		command = { type = demobilize which = land when = 0 where = 0 value = 12 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#remove bigger ships (as per Treaty of Sèvres)
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 0 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 0 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 0 }
+
+		command = { trigger = { not = { exists = U50 } } type = independence which = U50 value = 1 when = 0 }
+		command = { type = secedearea which = U50 value = "Hedjaz" when = 0 }
+		command = { trigger = { puppet = { country = U50 country = OTT } } type = end_mastery which = U50  } 		
+
+		command = { type = trigger which = 2145513 } # The Treaty of Sèvres
+	}
+}
+
+event = {
+	id = 2145513 # The Treaty of Sèvres
+	country = OTT
+	
+	name = "EVT1914_2145513_NAME"
+	desc = "EVT1914_2145513_DESC"
+	style = 2
+	picture = "defeat_ott"
+
+	action = {
+		name = "EVT1914_2145513_ACTIONA"
+		command = { type = trigger which = 2145531 } # The German military mission leaves the country
+		command = { trigger = { puppet = { country = YEM country = OTT } } type = end_mastery which = YEM }
+		command = { trigger = { puppet = { country = GEO country = OTT } } type = end_mastery which = GEO }
+		command = { trigger = { puppet = { country = ARM country = OTT } } type = end_mastery which = ARM }
+		command = { trigger = { puppet = { country = AZB country = OTT } } type = end_mastery which = AZB }
+		command = { trigger = { puppet = { country = PER country = OTT } } type = end_mastery which = PER }
+		command = { trigger = { puppet = { country = U91 country = OTT } } type = end_mastery which = U91 } #Kuwait
+		command = { trigger = { NOT = { event = 2191512 } } type = secedeprovince which = FRA value = 1054 when = 1 } #Alexandretta
+		command = { trigger = { NOT = { event = 2191512 } } type = secedearea which = FRA value = "Lebanon_Syria" when = 1 }
+		command = { trigger = { event = 2191512 participant = { country = ENG value = 1 } NOT = { participant = { country = FRA value = 1 } } }  type = secedeprovince which = ENG value = 1054 when = 1 } #Alexandretta
+		command = { trigger = { event = 2191512 participant = { country = ENG value = 1 } NOT = { participant = { country = FRA value = 1 } } }  type = secedearea which = ENG value = "Lebanon_Syria" when = 1 }
+		command = { trigger = { NOT = { event = 2191512 } alliance = { country = FRA country = ENG } } type = secedearea which = ENG value = "Palestine" when = 1 }  
+		command = { trigger = { NOT = { event = 2191512 } alliance = { country = FRA country = ENG } } type = secedearea which = ENG value = "Transjordan" when = 1 }  
+		command = { trigger = { NOT = { event = 2191512 } alliance = { country = FRA country = ENG } } type = secedearea which = ENG value = "Iraq" when = 1 }
+		command = { trigger = { NOT = { event = 2191512 } alliance = { country = FRA country = ENG } } type = secedeprovince which = ENG value = 1041 when = 1 }
+		command = { trigger = { event = 2191512 participant = { country = ENG value = 1 } NOT = { participant = { country = FRA value = 1 } } } type = secedeprovince which = ENG value = 1041 when = 1 }
+		command = { trigger = { event = 2191512 participant = { country = ENG value = 1 } NOT = { participant = { country = FRA value = 1 } } }  type = secedearea which = ENG value = "Palestine" when = 1 }  
+		command = { trigger = { event = 2191512 participant = { country = ENG value = 1 } NOT = { participant = { country = FRA value = 1 } } }  type = secedearea which = ENG value = "Transjordan" when = 1 }  
+		command = { trigger = { event = 2191512 participant = { country = ENG value = 1 } NOT = { participant = { country = FRA value = 1 } } }  type = secedearea which = ENG value = "Iraq" when = 1 }
+		command = { trigger = { event = 2191512 participant = { country = ENG value = 1 } NOT = { participant = { country = FRA value = 1 } } }  type = secedeprovince which = ENG value = 1041 when = 1 }	#Kuwait
+		command = { trigger = { NOT = { event = 2191512 alliance = { country = FRA country = ENG } } } type = secedearea which = FRA value = "Palestine" when = 1 }  
+		command = { trigger = { NOT = { event = 2191512 alliance = { country = FRA country = ENG } } } type = secedearea which = FRA value = "Transjordan" when = 1 }  
+		command = { trigger = { NOT = { event = 2191512 alliance = { country = FRA country = ENG } } } type = secedearea which = FRA value = "Iraq" when = 1 }
+		command = { trigger = { exists = RUS NOT = { exists = GEO } } type = secedeprovince which = RUS value = 1063 when = 1 } #Erzurum
+		command = { trigger = { exists = RUS NOT = { exists = GEO } } type = secedeprovince which = RUS value = 1067 when = 1 } #Trabzon
+		command = { trigger = { exists = RUS NOT = { exists = GEO } } type = secedeprovince which = RUS value = 386 when = 1 } #Kars
+		command = { trigger = { exists = ARM NOT = { exists = RUS war = { country = FRA country = ARM } } } type = secedeprovince which = ARM value = 1063 when = 1 } #Erzurum
+		command = { trigger = { exists = ARM NOT = { exists = RUS war = { country = FRA country = ARM } } } type = secedeprovince which = ARM value = 1067 when = 1 } #Trabzon
+		command = { trigger = { exists = ARM NOT = { exists = RUS war = { country = FRA country = ARM } } } type = secedeprovince which = ARM value = 386 when = 1 } #Kars
+		command = { trigger = { alliance = { country = FRA country = GRE } } type = secedeprovince which = GRE value = 384 when = 1 } #Gelibolu
+		command = { trigger = { alliance = { country = FRA country = GRE } } type = secedeprovince which = GRE value = 385 when = 1 } #Edirne
+		command = { trigger = { alliance = { country = FRA country = GRE } } type = secedeprovince which = GRE value = 1077 when = 1 } #Izmir
+		command = { trigger = { exists = GEO NOT = { exists = ARM } owned = { province = 711 data = OTT } } type = independence which = ARM value = 1 when = 1 } 
+		
+		#revert possible gains
+		command = { trigger = { event = 2006514 NOT = { war = { country = FRA country = ITA } } } type = secedeprovince which = ITA value = 378  when = 1 } #Kalymnos
+		command = { trigger = { event = 2006514 NOT = { war = { country = FRA country = ITA } } } type = secedeprovince which = ITA value = 379  when = 1 } #Rodos
+		command = { trigger = { event = 2006514 NOT = { war = { country = FRA country = ITA } } } type = secederegion which = ITA value = "Libya"  when = 1 }
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 387 when = 1 } #Famagusta
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 388 when = 1 } #Nicosia
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1004 when = 1 } #El Arish
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1005 when = 1 } #Sharm el Sheikh
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1006 when = 1 } #Al Qantarah
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1007 when = 1 } #Bur Tawfiq
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1041 when = 1 } #Kuwait
+    
+		#give independence to Persia in case of declared war and annexed
+		command = { trigger = { NOT = { exists = PER } } type = independence which = PER value = 1 when = 1 }
+		command = { type = secederegion which = PER value = "Persia" when = 1 }		
+		
+		#give independencr to Hejaz in case of annexed
+		command = { trigger = { NOT = { exists = U50 } } type = independence which = U50 value = 1 when = 1 }
+		command = { type = secedeprovince which = U50 value = 1048 when = 1 }
+		command = { type = secedeprovince which = U50 value = 1049 when = 1 }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }
+	}
+}
+
+
+### Baghdad Railway
+
+event = {
+	id = 2191560
+	random = no
+	country = U08
+
+	decision = { 
+		OR = {
+			alliance = { country = U08 country = OTT }
+			event = 2145515 #OTT Secret alliance pact with Germany
+		}
+		NOT = { event = 2191577 } #U08 The end of German-Ottoman cooperation
+	}
+		
+	decision_trigger = {
+		OR = {
+			alliance = { country = U08 country = OTT }
+			event = 2145515 #OTT Secret alliance pact with Germany
+		}
+		OR = {
+			control = { province = 1073 data = OTT } #Kayseri
+			control = { province = 1014 data = OTT } #Deir es Zor
+			control = { province = 1015 data = OTT } #El Qamisli
+			control = { province = 1029 data = OTT } #Mosul
+			control = { province = 1033 data = OTT } #El Hillah
+		}
+	}	
+
+	
+	trigger = {
+		OR = {
+			alliance = { country = U08 country = OTT }
+			event = 2145515 #OTT Secret alliance pact with Germany
+		}
+		OR = {
+			control = { province = 1073 data = OTT } #Kayseri
+			control = { province = 1014 data = OTT } #Deir es Zor
+			control = { province = 1015 data = OTT } #El Qamisli
+			control = { province = 1029 data = OTT } #Mosul
+			control = { province = 1033 data = OTT } #El Hillah
+		}
+	}
+		
+			
+	name = "EVT1914_2191560_NAME"
+	desc = "EVT1914_2191560_DESC"
+	style = 2
+	picture = "baghdad_railway"
+	decision_picture = "decision_baghdad_railway"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "EVT1914_2191560_ACTIONA"
+		command = { type = local_setflag which = baghdad }
+	}
+}	
+
+
+### Oil from Mosul
+
+event = {
+	id = 2191561
+	random = no
+	country = U08
+	
+	trigger = {
+		event = 2191563 #Section Kayseri constructed
+		event = 2191565 #Section Deir es Zor constructed
+		event = 2191572 #Section El Qamisli constructed
+		event = 2191568 #Section Mosul constructed
+		event = 2191570 #Section El Hillah constructed
+		control = { province = 1029 data = OTT } #Mosul
+		NOT = { war = { country = U08  country = OTT } }
+	}
+
+	name = "EVT1914_2191561_NAME"
+	desc = "EVT1914_2191561_DESC"
+	style = 2
+	picture = "oil_mosul"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = trade which = U08 where = OTT oil = 5 value = 1 }	
+		command = { type = trigger which = 2191566 }	
+	}
+}
+
+event = {
+	id = 2191566
+	random = no
+	country = OTT
+
+	name = "EVT1914_2191566_NAME"
+	desc = "EVT1914_2191566_DESC"
+	style = 2
+	picture = "oil_mosul"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = add_prov_resource which = 1029 value = 8 where = oil } #Mosul
+	}
+}
+
+
+### Baghdad Railway: Karapinar-Dorak
+
+event = {
+	id = 2191562
+	random = no
+	country = U08
+	save_date = yes
+
+	decision = { 
+		alliance = { country = U08 country = OTT }
+		control = { province = 1073 data = OTT } #Kayseri
+		local_flag = baghdad
+	}
+		
+	decision_trigger = {
+		money = 500
+		metal = 10000
+	}		
+
+	
+	trigger = {
+		money = 1000
+		metal = 15000
+		alliance = { country = U08 country = OTT }
+		control = { province = 1073 data = OTT }
+		local_flag = baghdad
+	}
+		
+			
+	name = "EVT1914_2191562_NAME"
+	desc = "EVT1914_2191562_DESC"
+	style = 2
+	picture = "br_adana"
+	decision_picture = "decision_br_adana"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "EVT1914_2191562_ACTIONA"
+		command = { type = local_setflag which = baghdad_1 }
+		command = { type = metalpool value = -10000 }
+		command = { type = money value = -500 }
+	}
+}		
+		
+		
+### Section completed
+
+event = {
+	id = 2191563
+	random = no
+	country = U08
+	
+	trigger = {
+		alliance = { country = U08 country = OTT }
+		control = { province = 1073 data = OTT }
+		local_flag = baghdad_1
+		OR = {
+			AND = {
+				event = { id = 2191562 days = 60  } #60 days passed
+				random =10
+			}
+			AND = {
+				event = { id = 2191562 days = 120  } #120 days passed
+				random =20
+			}
+			AND = {
+				event = { id = 2191562 days = 180  } #180 days passed
+				random =30
+			}
+			AND = {
+				event = { id = 2191562 days = 240  } #240 days passed
+				random =50
+			}
+			AND = {
+				event = { id = 2191562 days = 300  } #300 days passed
+				random =75
+			}
+			event = { id = 2191562 days = 360  } #360 days passed
+		}		
+	}
+
+	name = "EVT1914_2191563_NAME"
+	desc = "EVT1914_2191562_DESC"
+	style = 2
+	picture = "br_adana"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = construct which = infrastructure where = 1073 value = 30 }
+		command = { type = local_clrflag which = baghdad_1 }
+	}
+}		
+
+
+### Baghdad Railway: Tall Abyad - Rasulain
+
+event = {
+	id = 2191564
+	random = no
+	country = U08
+	save_date = yes
+
+	decision = { 
+		alliance = { country = U08 country = OTT }
+		control = { province = 1014 data = OTT } #Deir es Zor
+		local_flag = baghdad
+	}
+		
+	decision_trigger = {
+		money = 500
+		metal = 10000
+	}		
+
+	
+	trigger = {
+		money = 1000
+		metal = 15000
+		alliance = { country = U08 country = OTT }
+		control = { province = 1014 data = OTT }
+		local_flag = baghdad
+	}
+		
+			
+	name = "EVT1914_2191564_NAME"
+	desc = "EVT1914_2191564_DESC"
+	style = 2
+	picture = "br_deireszor"
+	decision_picture = "decision_br_deireszor"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "EVT1914_2191562_ACTIONA"
+		command = { type = local_setflag which = baghdad_2 }
+		command = { type = metalpool value = -10000 }
+		command = { type = money value = -500 }
+	}
+}		
+
+
+### Section completed
+
+event = {
+	id = 2191565
+	random = no
+	country = U08
+	
+	trigger = {
+		alliance = { country = U08 country = OTT }
+		control = { province = 1014 data = OTT } #Deir es Zor
+		local_flag = baghdad_2
+		OR = {
+			AND = {
+				event = { id = 2191564 days = 60  } #60 days passed
+				random =10
+			}
+			AND = {
+				event = { id = 2191564 days = 120  } #120 days passed
+				random =20
+			}
+			AND = {
+				event = { id = 2191564 days = 180  } #180 days passed
+				random =30
+			}
+			AND = {
+				event = { id = 2191564 days = 240  } #240 days passed
+				random =50
+			}
+			AND = {
+				event = { id = 2191564 days = 300  } #300 days passed
+				random =75
+			}
+			event = { id = 2191564 days = 360  } #360 days passed
+		}			
+	}
+
+	name = "EVT1914_2191563_NAME"
+	desc = "EVT1914_2191564_DESC"
+	style = 2
+	picture = "br_deireszor"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = construct which = infrastructure where = 1014 value = 30 }
+		command = { type = local_clrflag which = baghdad_2 }
+	}
+}	
+
+
+### Baghdad Railway: Nusaybin - Tall Kutschak
+
+event = {
+	id = 2191567
+	random = no
+	country = U08
+	save_date = yes
+
+	decision = { 
+		alliance = { country = U08 country = OTT }
+		control = { province = 1029 data = OTT } #Mosul
+		local_flag = baghdad
+	}
+		
+	decision_trigger = {
+		money = 500
+		metal = 10000
+	}		
+
+	
+	trigger = {
+		money = 1000
+		metal = 15000
+		alliance = { country = U08 country = OTT }
+		control = { province = 1029 data = OTT }
+		local_flag = baghdad
+	}
+		
+			
+	name = "EVT1914_2191567_NAME"
+	desc = "EVT1914_2191567_DESC"
+	style = 2
+	picture = "br_mosul"
+	decision_picture = "decision_br_mosul"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "EVT1914_2191562_ACTIONA"
+		command = { type = local_setflag which = baghdad_3 }
+		command = { type = metalpool value = -10000 }
+		command = { type = money value = -500 }
+	}
+}		
+	
+	
+### Section completed
+
+event = {
+	id = 2191568
+	random = no
+	country = U08
+	
+	trigger = {
+		alliance = { country = U08 country = OTT }
+		control = { province = 1029 data = OTT }
+		local_flag = baghdad_3
+		OR = {
+			AND = {
+				event = { id = 2191567 days = 60  } #60 days passed
+				random =10
+			}
+			AND = {
+				event = { id = 2191567 days = 120  } #120 days passed
+				random =20
+			}
+			AND = {
+				event = { id = 2191567 days = 180  } #180 days passed
+				random =30
+			}
+			AND = {
+				event = { id = 2191567 days = 240  } #240 days passed
+				random =50
+			}
+			AND = {
+				event = { id = 2191567 days = 300  } #300 days passed
+				random =75
+			}
+			event = { id = 2191567 days = 360  } #360 days passed
+		}			
+	}
+
+	name = "EVT1914_2191563_NAME"
+	desc = "EVT1914_2191567_DESC"
+	style = 2
+	picture = "br_mosul"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = construct which = infrastructure where = 1029 value = 30 }
+		command = { type = local_clrflag which = baghdad_3 }
+	}
+}	
+
+
+### Baghdad Railway: Tall Kutschak – Samarra
+
+event = {
+	id = 2191569
+	random = no
+	country = U08
+	save_date = yes
+
+	decision = { 
+		alliance = { country = U08 country = OTT }
+		control = { province = 1033 data = OTT } #El Hillah
+		local_flag = baghdad
+	}
+		
+	decision_trigger = {
+		money = 500
+		metal = 10000
+	}		
+
+	
+	trigger = {
+		money = 1000
+		metal = 15000
+		alliance = { country = U08 country = OTT }
+		control = { province = 1033 data = OTT }
+		local_flag = baghdad
+	}
+		
+			
+	name = "EVT1914_2191569_NAME"
+	desc = "EVT1914_2191569_DESC"
+	style = 2
+	picture = "br_elhillah"
+	decision_picture = "decision_br_elhillah"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "EVT1914_2191562_ACTIONA"
+		command = { type = local_setflag which = baghdad_4 }
+		command = { type = metalpool value = -10000 }
+		command = { type = money value = -500 }
+	}
+}		
+		
+### Section completed
+
+event = {
+	id = 2191570
+	random = no
+	country = U08
+	
+	trigger = {
+		alliance = { country = U08 country = OTT }
+		control = { province = 1033 data = OTT }
+		local_flag = baghdad_4
+		OR = {
+			AND = {
+				event = { id = 2191569 days = 60  } #60 days passed
+				random =10
+			}
+			AND = {
+				event = { id = 2191569 days = 120  } #120 days passed
+				random =20
+			}
+			AND = {
+				event = { id = 2191569 days = 180  } #180 days passed
+				random =30
+			}
+			AND = {
+				event = { id = 2191569 days = 240  } #240 days passed
+				random =50
+			}
+			AND = {
+				event = { id = 2191569 days = 300  } #300 days passed
+				random =75
+			}
+			event = { id = 2191569 days = 360  } #360 days passed
+		}			
+	} 
+
+	name = "EVT1914_2191563_NAME"
+	desc = "EVT1914_2191569_DESC"
+	style = 2
+	picture = "br_elhillah"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = construct which = infrastructure where = 1033 value = 30 }
+		command = { type = local_clrflag which = baghdad_4 }
+	}
+}
+
+
+### Baghdad Railway: Rasulain - Nusaybin
+
+event = {
+	id = 2191571
+	random = no
+	country = U08
+	save_date = yes
+
+	decision = { 
+		alliance = { country = U08 country = OTT }
+		control = { province = 1015 data = OTT } #El Qamisli
+		local_flag = baghdad
+	}
+		
+	decision_trigger = {
+		money = 500
+		metal = 10000
+	}		
+
+	
+	trigger = {
+		money = 1000
+		metal = 15000
+		alliance = { country = U08 country = OTT }
+		control = { province = 1015 data = OTT }
+		local_flag = baghdad
+	}
+		
+			
+	name = "EVT1914_2191571_NAME"
+	desc = "EVT1914_2191571_DESC"
+	style = 2
+	picture = "br_elqamisli"
+	decision_picture = "decision_br_elqamisli"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "EVT1914_2191562_ACTIONA"
+		command = { type = local_setflag which = baghdad_5 }
+		command = { type = metalpool value = -10000 }
+		command = { type = money value = -500 }
+	}
+}		
+	
+	
+### Section completed		
+
+event = {
+	id = 2191572
+	random = no
+	country = U08
+	
+	trigger = {
+		alliance = { country = U08 country = OTT }
+		control = { province = 1015 data = OTT }
+		local_flag = baghdad_5
+		OR = {
+			AND = {
+				event = { id = 2191571 days = 60  } #60 days passed
+				random =10
+			}
+			AND = {
+				event = { id = 2191571 days = 120  } #120 days passed
+				random =20
+			}
+			AND = {
+				event = { id = 2191571 days = 180  } #180 days passed
+				random =30
+			}
+			AND = {
+				event = { id = 2191571 days = 240  } #240 days passed
+				random =50
+			}
+			AND = {
+				event = { id = 2191571 days = 300  } #300 days passed
+				random =75
+			}
+			event = { id = 2191571 days = 360  } #360 days passed
+		}			
+	}
+
+	name = "EVT1914_2191563_NAME"
+	desc = "EVT1914_2191571_DESC"
+	style = 2
+	picture = "br_elqamisli"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1999 }
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = construct which = infrastructure where = 1015 value = 30 }
+		command = { type = local_clrflag which = baghdad_5 }
+	}
+}
+
+event = {
+	id = 2145514	# Propose a defensive alliance to Germany?
+	country = OTT
+
+	trigger = {
+		event = 2084502	# Ultimatum expires
+		OR = {
+			war = { country = U09 country = RUS }
+			puppet = { country = SER country = U09 }
+		}
+		NOT = { alliance = { country = U08 country = OTT } }
+		NOT = { alliance = { country = U09 country = OTT } }
+		NOT = { alliance = { country = RUS country = OTT } }
+		NOT = { alliance = { country = FRA country = OTT } }
+		NOT = { war = { country = FRA country = OTT } }
+		NOT = { war = { country = U08 country = OTT } }
+		NOT = { war = { country = U09 country = OTT } }
+		NOT = { war = { country = RUS country = OTT } }		
+	}
+	
+	name = "EVT1914_2145514_NAME" 
+	desc = "EVT1914_2145514_DESC" 
+	style = 2
+	picture = "kaiser_sultan"
+
+	date = { day = 0 month = july year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = august year = 1914 }	
+	
+	action_a = {
+		name = "ACTION_NAME_YES" 
+		ai_chance = 99
+		command = { type = trigger which = 2191573 }
+		command = { type = relation which = U08 value = 15 } 
+		
+	}
+	action_a = {
+		name = "ACTION_NAME_NEUTRAL" 
+		ai_chance = 1
+		command = { type = relation which = U08 value = -15 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { trigger = { NOT = { flag = End_to_U08_mission_to_OTT } } type = setflag which = End_to_U08_mission_to_OTT }
+		command = { type = event which = 2145531 where = OTT when = 1 } #OTT The German military mission leaves the country
+		
+	}
+}
+
+event = {
+	id = 2191573	# The Ottomans propose a defensive pact
+	country = U08
+
+	name = "EVT1914_2191573_NAME"
+	desc = "EVT1914_2191573_DESC"
+	style = 2
+	picture = "kaiser_sultan"
+	
+	action = {
+		trigger = { war = { country = U09 country = RUS } }
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 99
+		command = { type = relation which = OTT value = 25 }
+		command = { type = trigger which = 2145515 }
+	}
+	action = {
+		trigger = { war = { country = U09 country = RUS } }
+		name = ACTION_NAME_REFUSE
+		ai_chance = 1
+		command = { type = relation which = OTT value = -25 }
+		command = { trigger = { NOT = { flag = End_to_U08_mission_to_OTT } } type = setflag which = End_to_U08_mission_to_OTT }
+		command = { type = event which = 2145531 where = OTT when = 1 } #OTT The German military mission leaves the country
+	}
+	action = {
+		trigger = { NOT= { war = { country = U09 country = RUS } } }
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 30
+		command = { type = relation which = OTT value = 25 }
+		command = { type = trigger which = 2145515 }
+	}
+	action = {
+		trigger = { NOT= { war = { country = U09 country = RUS } } }
+		name = ACTION_NAME_REFUSE
+		ai_chance = 70
+		command = { type = relation which = OTT value = -25 }
+		command = { trigger = { NOT = { flag = End_to_U08_mission_to_OTT } } type = setflag which = End_to_U08_mission_to_OTT }
+		command = { type = event which = 2145531 where = OTT when = 1 } #OTT The German military mission leaves the country
+	}
+}
+
+event = {
+	id = 2145515	# Secret alliance treaty signed with Germany
+	country = OTT
+
+	name = "EVT1914_2145515_NAME"
+	desc = "EVT1914_2145515_DESC" 
+	style = 2
+	picture = "dreikaiser"
+	
+	action_a = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = dissent value = -1 }
+		command = { type = setflag which = U08_OTT_Secret_Treaty }
+		#command = { type = trigger which = 2145527 where = ENG when = 14 } #OTT The British naval mission leaves the country
+	}
+}
+
+event = {
+	id = 2001567	# Requisition the Ottoman battleships?
+	country = ENG
+
+	name = "EVT1914_2001567_NAME"
+	desc = "EVT1914_2001567_DESC"
+	style = 2
+
+	date = { day = 0 month = august year = 1914 }
+	
+	picture = "erin"
+	decision_picture = "decision_erin"
+	
+	action = {
+		trigger = { NOT = { war = { country = OTT country = ENG } } }
+		name = "EVT1914_2001567_ACTIONA"
+		ai_chance = 5
+		command = { type = trigger which = 2145516 } #OTT The purchase of Sultan Osman and Reshadiye
+	}
+	action = {
+		trigger = { 
+			OR = {
+				atwar = ENG
+				atwar = FRA
+				atwar = RUS
+				atwar = U08
+				atwar = U09
+			}
+		}
+		name = "EVT1914_2001567_ACTIONB"
+		ai_chance = 90
+		command = { type = relation which = OTT value = -50 }
+		command = { type = add_corps value = naval where = 25 } # Norwich (should be Newcastle but this is close enough)
+		command = { type = add_division which = "HMS Erin" value = battleship when = 2 }
+		command = { type = add_division which = "HMS Agincourt" value = battleship when = 3 }
+		command = { type = trigger which = 2145517 } # The seizure of Sultan Osman and Reshadiye
+	}
+	action = {
+		trigger = { 
+			OR = {
+				atwar = ENG
+				atwar = FRA
+				atwar = RUS
+				atwar = U08
+				atwar = U09
+			}
+			NOT = { war = { country = OTT country = ENG } }
+		}
+		name = "EVT1914_2001567_ACTIONC"
+		ai_chance = 5
+		command = { type = relation which = OTT value = -35 }
+		command = { type = money value = -200 }
+		command = { type = add_corps value = naval where = 25 } # Norwich (should be Newcastle but this is close enough)
+		command = { type = add_division which = "HMS Erin" value = battleship when = 2 }
+		command = { type = add_division which = "HMS Agincourt" value = battleship when = 3 }		
+		command = { type = setflag which = ENG_OTT_Refund }
+		command = { type = trigger which = 2145517 } # The seizure of Sultan Osman and Reshadiye
+	}
+}
+
+event = {
+	id = 2145516	# The purchase of Sultan Osman and Reshadiye
+	country = OTT
+
+	name = "EVT1914_2145516_NAME"
+	desc = "EVT1914_2145516_DESC" 
+	style = 2
+	picture = "agincourt"
+	
+	action = {
+		trigger = { 
+			OR = { 
+				NOT = { event = 2145515} # Secret alliance pact with Germany
+				war = { country = U08 country = ENG }
+			}
+		}	
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps value = naval where = 25 } # Norwich (should be Newcastle but this is close enough)
+		command = { type = add_division which = "Reshadiye" value = battleship when = 2 }
+		command = { type = add_division which = "Sultan Osman" value = battleship when = 3 }
+	}
+	action = {
+		trigger = { 
+			event = 2145515 # Secret alliance pact with Germany
+			NOT = { war = { country = U08 country = ENG } }
+		}	
+		ai_chance = 30
+		name = "EVT1914_2145516_ACTIONB"
+		command = { type = add_corps value = naval where = 25 } # Norwich (should be Newcastle but this is close enough)
+		command = { type = add_division which = "Reshadiye" value = battleship when = 2 }
+		command = { type = add_division which = "Sultan Osman" value = battleship when = 3 }
+		command = { type = trigger which = 2145519 } #OTT The end of German-Ottoman cooperation
+		command = { type = trigger which = 2191577 } #U08 The end of German-Ottoman cooperation		
+	}
+	action = {
+		trigger = { 
+			event = 2145515 # Secret alliance pact with Germany
+			NOT = { war = { country = U08 country = ENG } }
+		}	
+		ai_chance = 70
+		name = "EVT1914_2145516_ACTIONC"
+		command = { type = add_corps value = naval where = 25 } # Norwich (should be Newcastle but this is close enough)
+		command = { type = add_division which = "Reshadiye" value = battleship when = 2 }
+		command = { type = trigger which = 2191574 } #The Sultan Osman joins our fleet
+	}
+}
+
+event = {
+	id = 2145517	# The seizure of Sultan Osman and Reshadiye
+	country = OTT
+
+	name = "EVT1914_2145517_NAME"
+	desc = "EVT1914_2145517_DESC" 
+	style = 2
+	picture = "erin"
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { trigger = { flag =  ENG_OTT_Refund } type = money value = 200 }
+		command = { trigger = { flag =  ENG_OTT_Refund } type = clrflag which = ENG_OTT_Refund }
+	}
+}
+
+event = {
+	id = 2191574	# The Sultan Osman joins our fleet
+	country = U08
+
+	name = "EVT1914_2191574_NAME"
+	desc = "EVT1914_2191574_DESC"
+	style = 2
+	picture = "agincourt"
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps value = naval where = 25 } # Norwich (should be Newcastle but this is close enough)
+		command = { type = add_division which = "Sultan Osman" value = battleship when = 3 }
+	}
+}
+
+event = {
+	id = 2191575 # The Escape of SMS Goeben and SMS Breslau
+	country = U08
+
+	decision = {
+		division_exists = { type = 10100 id = 642 }
+		division_exists = { type = 10100 id = 643 }
+		exists = OTT
+		NOT = { war = { country = OTT country = U08 } }
+	}
+	decision_trigger = { 
+		war = { country = U08 country = ENG }
+		event = 2145515 #Secret alliance pact with Germany
+		division_in_province = { id = { type = 10100 id = 642 } province = 2742 }
+		division_in_province = { id = { type = 10100 id = 643 } province = 2742 }
+	}
+	trigger = { 
+		war = { country = U08 country = ENG }    
+		event = 2145515 #Secret alliance pact with Germany
+		exists = OTT
+		NOT = { war = { country = OTT country = U08 } }
+	}
+   
+	name = "EVT1914_2191547_NAME"
+	desc = "EVT1914_2191547_DESC" 
+	style = 2
+	picture = "mittelmeerdivision2"
+	decision_picture = "decision_mittelmeerdivision2"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1914 }
+	
+	action = {
+		name = "EVT1914_2191547_ACTIONA"
+		command = { type = relation which = OTT value = 10 } 
+		command = { type = trigger which = 2145518 } #OTT The fate of the German Mittelmeerdivision
+	}	
+}
+
+event = {
+	id = 2145518	# The fate of the German Mittelmeerdivision
+	country = OTT
+
+	name = "EVT1914_2145518_NAME"
+	desc = "EVT1914_2145518_DESC" 
+	style = 2
+	picture = "mittelmeerdivision2"
+	
+	action = {
+		name = "ACTION_NAME_YES"
+		ai_chance = 15
+		command = { type = trigger which = 2191578 } #U08 The Ottomans agree
+	}	
+	action = {
+		name = "ACTION_NAME_NO"
+		ai_chance = 5
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = trigger which = 2145519 } #OTT The end of German-Ottoman cooperation
+		command = { type = trigger which = 2191577 } #U08 The end of German-Ottoman cooperation
+	}	
+	action = {
+		name = "EVT1914_2145518_ACTIONC"
+		ai_chance = 80
+		command = { type = relation which = U08 value = -10 }
+		command = { type = trigger which = 2191576 } #U08 The Ottomans want to negotiate
+	}
+}
+
+event = {
+	id = 2191576 # The Ottomans make conditions
+	country = U08
+
+	name = "EVT1914_2191576_NAME"
+	desc = "EVT1914_2191576_DESC" 
+	style = 2
+	picture = "mittelmeerdivision2"
+	
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 95
+		command = { type = end_trades which = U08 where = OTT } #to break the forced trade (Capitulation of OE) that gives money to Germany
+		command = { type = remove_division which = 10100 value = 642 }
+		command = { type = remove_division which = 10100 value = 643 }		
+		command = { type = sleepleader which = 855038 }	#Souchon
+		command = { type = trigger which = 2145520 } #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+	}	
+	action = {
+		name = "ACTION_NAME_REFUSE"
+		ai_chance = 5
+		command = { type = trigger which = 2145519 } #OTT The end of German-Ottoman cooperation
+		command = { type = trigger which = 2191577 } #U08 The end of German-Ottoman cooperation
+	}		
+}
+
+event = {
+	id = 2145519	# The end of German-Ottoman cooperation
+	country = OTT
+
+	name = "EVT1914_2145519_NAME"
+	desc = "EVT1914_2145519_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 15
+		command = { type = relation which = U08 value = -50 }
+		command = { trigger = { flag = U08_OTT_Secret_Treaty } type = clrflag which = U08_OTT_Secret_Treaty }
+		command = { trigger = { NOT = { flag = End_to_U08_mission_to_OTT } } type = setflag which = End_to_U08_mission_to_OTT }
+		command = { trigger = { NOT = { event = 2145531 } } type = event which = 2145531 where = OTT when = 1 } #OTT The German military mission leaves the country		
+		command = { type = sleepevent which = 2145521 } #OTT Join the Central Powers?
+		command = { type = sleepevent which = 2145522 } #OTT Join the Central Powers?
+		command = { type = sleepevent which = 2145523 } #OTT Souchon bombards the Russian Coast
+		command = { type = sleepevent which = 2145524 } #OTT Souchon bombards the Egyptian Coast
+		command = { type = sleepevent which = 2145529 } #OTT Dardanelles defense network finished
+		command = { type = sleepevent which = 2145532 } #OTT Join the Central Powers?		
+	}	
+}
+
+event = {
+	id = 2191577	# The end of German-Ottoman cooperation
+	country = U08
+
+	name = "EVT1914_2145519_NAME"
+	desc = "EVT1914_2145519_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 15
+		command = { type = relation which = OTT value = -50 }
+		command = { trigger = { flag = U08_OTT_Secret_Treaty } type = clrflag which = U08_OTT_Secret_Treaty }
+		command = { trigger = { NOT = { flag = End_to_U08_mission_to_OTT } } type = setflag which = End_to_U08_mission_to_OTT }
+		command = { trigger = { NOT = { event = 2145531 } } type = event which = 2145531 where = OTT when = 2 } #OTT The German military mission leaves the country				
+		command = { type = sleepevent which = 2191574 } #U08 The Sultan Osman joins our fleet
+		command = { type = sleepevent which = 2191575 } #U08 The Escape of SMS Goeben and SMS Breslau
+		command = { type = sleepevent which = 2191579 } #U08 Try to persuade the Ottomans to intervene
+		command = { type = sleepevent which = 2191580 } #U08 Extend military mission in the Ottoman Empire
+		command = { type = sleepevent which = 2191581 } #U08 Prepare the 'Asienkorps'
+		command = { type = sleepevent which = 2191582 } #U08 Send the Sonderkommando Kaiserliche Marine Türkei
+		command = { type = sleepevent which = 2191560 } #U08  Baghdad Railway
+		command = { type = sleepevent which = 2191561 } #U08  Oil from Mosul
+		command = { type = sleepevent which = 2191562 } #U08  Baghdad Railway: Karapinar-Dorak
+		command = { type = sleepevent which = 2191563 } #U08  Section completed
+		command = { type = sleepevent which = 2191564 } #U08  Baghdad Railway: Tall Abyad - Rasulain
+		command = { type = sleepevent which = 2191565 } #U08  Section completed
+		command = { type = sleepevent which = 2191567 } #U08  Baghdad Railway: Nusaybin - Tall Kutschak
+		command = { type = sleepevent which = 2191568 } #U08  Section completed
+		command = { type = sleepevent which = 2191569 } #U08  Baghdad Railway: Tall Kutschak – Samarra
+		command = { type = sleepevent which = 2191570 } #U08  Section completed
+		command = { type = sleepevent which = 2191571 } #U08  Baghdad Railway: Rasulain - Nusaybin
+		command = { type = sleepevent which = 2191572 } #U08  Section completed		
+	}	
+}
+
+event = {
+	id = 2191578 # The Ottomans agree
+	country = U08
+
+	name = "EVT1914_2191578_NAME"
+	desc = "EVT1914_2191547_DESC" 
+	style = 2
+	picture = "mittelmeerdivision2"
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		ai_chance = 95
+		command = { type = remove_division which = 10100 value = 642 }
+		command = { type = remove_division which = 10100 value = 643 }		
+		command = { type = sleepleader which = 855038 }	#Souchon
+		command = { type = trigger which = 2145520 } #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+	}	
+}
+
+event = {
+	id = 2145520	# SMS Goeben and SMS Breslau join the Ottomans' Navy
+	country = OTT
+
+	name = "EVT1914_2145520_NAME"
+	desc = "EVT1914_2191547_DESC" 
+	style = 2
+	picture = "goeben_transfer"
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		ai_chance = 15
+		command = { type = relation which = U08 value = 20 }
+		command = { type = add_division which = "Midilli" value = light_cruiser when = 2 }
+		command = { type = add_division which = "Yavuz Sultan Selim" value = battlecruiser when = 0 }	  
+		command = { type = wakeleader which = 720308 } #Souchon
+		command = { type = wakeminister which = 720224 } #Souchon
+		command = { type = chiefofnavy which = 720224 } #Wilhelm Souchon
+		command = { trigger = {
+			war = { country = ENG country = U08 }
+			NOT = { war = { country = ENG country = OTT } }
+			} type = trigger which = 2001568 } #ENG Declare war on the Ottoman Empire
+	}
+}
+
+event = {
+	id = 2001568	# Declare war on the Ottoman Empire
+	country = ENG
+
+	name = "EVT1914_2001568_NAME"
+	desc = "EVT1914_2001568_DESC" 
+	style = 2
+	picture = "English_declaration_war"
+	
+	action = {
+		name = "EVT1914_2001568_ACTIONA" #"This means war!"
+		ai_chance = 5
+		command = { type = dissent value = 10 } #This is alldue to the HMS Erin a
+		command = { type = war which = OTT }
+		command = { trigger = { NOT = { alliance = { country = OTT country = U08} } } type = event which = 2145532 where = OTT when = 1} #OTT Join the Central Powers?
+	}	
+	action = {
+		name = "EVT1914_2001568_ACTIONB" #"There's nothing we can do" 
+		ai_chance = 95
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 2145521	# Join the Central Powers?
+	country = OTT
+	
+	decision = {
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		NOT = { war = { country = OTT country = U08 } }
+		NOT = { alliance = { country = OTT country = U08 } }
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		NOT = { event = 2191520 } #Armistice
+		OR = {
+			#this makes the decision visible only after either September 1st 1914 or after SMS Goeben and SMS Breslau already joined
+			event = 2145520 #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+			month = 8 #september
+			year = 1915
+		}
+	}
+	
+	decision_trigger = {
+		atwar = U08
+	}
+	
+	trigger = {
+		ai = no
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		NOT = { war = { country = OTT country = U08 } }
+		NOT = { alliance = { country = OTT country = U08 } }
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		NOT = { event = 2191520 } #Armistice			
+		atwar = U08
+		OR = {
+			under_attack = U08
+			AND = {
+				NOT = { under_attack = U08 }
+				random = 20
+			}
+		}	
+	}
+
+	name = "EVT1914_2145521_NAME"
+	desc = "EVT1914_2145521_DESC" 
+	style = 2
+	picture = "dreikaiser"
+	decision_picture = "decision_dreikaiser"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		trigger = { NOT = { under_attack = U08 } }
+		name = "ACTION_NAME_JOIN_CENTRAL"
+		ai_chance = 5
+		command = { type = relation which = U08 value = 20 }
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+	}
+	action = {
+		trigger = { NOT = { under_attack = U08 } }
+		name = "ACTION_NAME_NO"
+		ai_chance = 95
+		command = { type = relation which = U08 value = -10 }
+	}	
+	action = {
+		trigger = { under_attack = U08 }
+		name = "ACTION_NAME_JOIN_CENTRAL"
+		ai_chance = 95
+		command = { type = relation which = U08 value = 20 }
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+	}
+	action = {
+		trigger = { under_attack = U08 }
+		name = "ACTION_NAME_NO"
+		ai_chance = 5
+		command = { type = relation which = U08 value = -10 }
+	}
+}
+
+event = {
+	id = 2191579	# Try to persuade the Ottomans to intervene
+	country = U08
+	
+	decision = {
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		NOT = { war = { country = OTT country = U08 } }
+		NOT = { alliance = { country = OTT country = U08 } }
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		NOT = { event = 2191520 } #Armistice		
+	}
+	
+	decision_trigger = {
+		atwar = U08
+		money = 50
+		supplies = 500
+	}
+	
+	trigger = {
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		NOT = { war = { country = OTT country = U08 } }
+		NOT = { alliance = { country = OTT country = U08 } }
+		atwar = U08
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		NOT = { event = 2191520 } #Armistice		
+	}
+
+	name = "EVT1914_2191579_NAME"
+	desc = "EVT1914_2191579_DESC"  
+	style = 2
+	picture = "negotiaton"
+	decision_picture = "decision_negotiaton"
+
+	date = { day = 9 month = october year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "EVT1914_2191579_ACTIONA" #"Try it"
+		ai_chance = 5
+		command = { trigger = { NOT = { ai = U08 } } type = money value = -50 }
+		command = { trigger = { NOT = { ai = U08 } } type = supplies value = -500 }
+		command = { type = trigger which = 2145522 }
+	}
+}
+
+
+event = {
+	id = 2145522	# Join the Central Powers?
+	country = OTT
+
+	name = "EVT1914_2145522_NAME"
+	desc = "EVT1914_2191579_DESC" 
+	style = 2
+	picture = "dreikaiser"
+	
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		trigger = { NOT = { under_attack = U08 } }
+		ai_chance = 10
+		command = { type = money value = 50 }
+		command = { type = supplies value = 500 }		
+		command = { type = relation which = U08 value = 20 }
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+	}	
+	action = {
+		name = "EVT1914_2145522_ACTIONB" #"Keep the gold but do nothing"
+		trigger = { NOT = { under_attack = U08 } }
+		ai_chance = 90
+		command = { type = money value = 50 }
+		command = { type = supplies value = 500 }		
+		command = { type = relation which = U08 value = -20 }
+	}
+	action = {
+		trigger = { under_attack = U08 }
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 95
+		command = { type = money value = 50 }
+		command = { type = supplies value = 500 }		
+		command = { type = relation which = U08 value = 20 }
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+	}	
+	action = {
+		trigger = { under_attack = U08 }
+		name = "EVT1914_2145522_ACTIONB" #"Keep the gold but do nothing"
+		ai_chance = 5
+		command = { type = money value = 50 }
+		command = { type = supplies value = 500 }		
+		command = { type = relation which = U08 value = -20 }
+	}
+}
+
+event = {
+	id = 2145523	# Souchon bombards the Russian Coast
+	country = OTT
+	
+	trigger = {
+		random = 50
+		event = 2145522 #OTT Intervention
+		event = 2145520 #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+		event = 2191579	# Try to persuade the Ottomans to intervene
+		flag = U08_OTT_Secret_Treaty
+		NOT = { war = { country = OTT country = U08 } }
+		NOT = { alliance = { country = OTT country = U08 } }
+		war = { country = U08 country = RUS }
+		NOT = { war = { country = OTT country = RUS } }
+		OR = {
+			control = { province = 641 data = RUS } #Sevastopol
+			control = { province = 626 data = RUS } #Odessa
+		}
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		NOT = { event = 2191520 } #Armistice		
+	}
+
+	name = "EVT1914_2145523_NAME" 
+	desc = "EVT1914_2145523_DESC" 
+	style = 2	
+	picture = "mittelmeerdivision"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "EVT1914_2145523_ACTIONA" # "Try to appease"
+		ai_chance = 85
+		command = { type = relation which = U08 value = -20 }
+		command = { type = trigger which = 2104549 }
+	}
+	action = {
+		name = "EVT1914_2145523_ACTIONB" # "Let it escalate" 
+		ai_chance = 15
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { type = sleepevent which = 2145524 } #OTT Souchon bombards the Egyptian Coast		
+	}
+}
+
+event = {
+	id = 2104549	# The Ottomans want to appease for Souchon's actions
+	country = RUS
+
+	name = "EVT1914_2104549_NAME"
+	desc = "EVT1914_2145523_DESC" 
+	style = 2
+	picture = "negotiaton"
+	
+	action = {
+		name = "ACTION_NAME_WAR" 
+		ai_chance = 90
+		command = { type = sleepevent which = 2145524 } #OTT Souchon bombards the Egyptian Coast		
+		command = { type = war which = OTT }
+		command = { trigger = { NOT = { alliance = { country = OTT country = U08} } } type = event which = 2145532 where = OTT when = 1} #OTT Join the Central Powers?
+	}	
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 15
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 2145524	# Souchon bombards the Egyptian Coast
+	country = OTT
+	
+	trigger = {
+		random = 50
+		event = 2145522 #OTT Intervention
+		event = 2145520 #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+		event = 2191579	# Try to persuade the Ottomans to intervene		
+		flag = U08_OTT_Secret_Treaty
+		NOT = { war = { country = OTT country = U08 } }
+		NOT = { alliance = { country = OTT country = U08 } }
+		war = { country = U08 country = ENG }
+		NOT = { war = { country = OTT country = ENG } }
+		OR = {
+			control = { province = 789 data = ENG } #Alexandria
+			control = { province = 900 data = ENG } #Suez
+		}
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		NOT = { event = 2191520 } #Armistice		
+	}
+
+	name = "EVT1914_2145524_NAME" #"Souchon bombards the Egyptian Coast" 
+	desc = "EVT1914_2145523_DESC" 
+	style = 2
+	picture = "mittelmeerdivision"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "EVT1914_2145523_ACTIONA" # "Try to appease"
+		ai_chance = 85
+		command = { type = relation which = U08 value = -20 }
+		command = { type = trigger which = 2001569 }
+	}
+	action = {
+		name = "EVT1914_2145523_ACTIONB" # "Let it escalate" 
+		ai_chance = 15
+		command = { type = sleepevent which = 2145523 } #OTT Souchon bombards the Russian Coast
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+	}
+}
+
+event = {
+	id = 2001569	# The Ottomans want to appease for Souchon's actions
+	country = ENG
+
+	name = "EVT1914_2104549_NAME"
+	desc = "EVT1914_2145523_DESC" 
+	style = 2
+	picture = "negotiaton"
+	
+	action = {
+		name = "ACTION_NAME_WAR" 
+		ai_chance = 90
+		command = { type = sleepevent which = 2145523 } #OTT Souchon bombards the Russian Coast
+		command = { type = war which = OTT }
+		command = { trigger = { NOT = { alliance = { country = OTT country = U08} } } type = event which = 2145532 where = OTT when = 1} #OTT Join the Central Powers?
+	}	
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 15
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 2191580	# Extend military mission in the Ottoman Empire
+	country = U08
+	
+	decision = {
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		alliance = { country = OTT country = U08 }
+	}
+	
+	decision_trigger = {
+		atwar = U08
+		alliance = { country = BUL country = U08 }
+		NOT = { war = { country = SER country = U08 } }
+		supplies = 500
+	}
+	
+	trigger = {
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		alliance = { country = OTT country = U08 }
+		atwar = U08
+		atwar = OTT
+		alliance = { country = BUL country = U08 }
+		NOT = { war = { country = SER country = U08 } }
+	}
+
+	name = "EVT1914_2191580_NAME"
+	desc = "EVT1914_2191580_DESC" 
+	style = 2
+	picture = "german_military_mission"
+	decision_picture = "decision_german_military_mission"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { NOT = { ai = U08 } } type = supplies value = -500 }
+		command = { type = relation which = OTT value = 10 }
+		command = { type = trigger which = 2145525 }
+		command = { type = sleepleader which = 855235 } #Bronsart von Schellendorf
+		command = { type = sleepleader which = 855002 } #Goltz
+		command = { type = sleepleader which = 855214 } #Lossow
+		command = { type = sleepleader which = 855334 } #Buddecke
+		command = { type = sleepleader which = 855161 } #Serno	
+	}
+}
+
+event = {
+	id = 2145525	# Germany extends its military support
+	country = OTT
+
+	name = "EVT1914_2145525_NAME"
+	desc = "EVT1914_2191580_DESC" 
+	style = 2
+	picture = "german_military_mission"
+
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = supplies value = 500 }
+		command = { type = dissent value = -1 }
+		#
+		command = { type = wakeminister which = 720217 } #Waldemar Pieper
+		command = { type = wakeminister which = 720218 } #Heinrich August Meißner
+		command = { type = wakeminister which = 720220 } #Sievert
+		command = { type = wakeminister which = 720221 } #Etienne Perrinet von Thauvenay
+		command = { type = wakeminister which = 720222 } #Friedrich Bronsart von Schellendorf
+		command = { type = wakeminister which = 720226 } #Erich Serno
+		command = { type = wakeminister which = 720227 } #Konrad Goltz
+		#
+		command = { type = wakeleader which = 720268 } #Back
+		command = { type = wakeleader which = 720269 } #Böhme
+		command = { type = wakeleader which = 720270 } #Bronsart von Schellendorf
+		command = { type = wakeleader which = 720271 } #Eggert
+		command = { type = wakeleader which = 720272 } #Ehrke
+		command = { type = wakeleader which = 720274 } #Frankenberg und Proschlitz
+		command = { type = wakeleader which = 720275 } #Gleich
+		command = { type = wakeleader which = 720276 } #Goltz
+		command = { type = wakeleader which = 720277 } #Guhr
+		command = { type = wakeleader which = 720278 } #Hammerstein-Gesmold
+		command = { type = wakeleader which = 720279 } #Havik
+		command = { type = wakeleader which = 720280 } #Heuck
+		command = { type = wakeleader which = 720281 } #Hopman
+		command = { type = wakeleader which = 720282 } #Hunger
+		command = { type = wakeleader which = 720283 } #Kannengiesser
+		command = { type = wakeleader which = 720284 } #Kiesling auf Kieslingstein
+		command = { type = wakeleader which = 720285 } #Kreß von Kressenstein
+		command = { type = wakeleader which = 720286 } #Langenstraß
+		command = { type = wakeleader which = 720287 } #Lenthe
+		command = { type = wakeleader which = 720289 } #Lossow
+		command = { type = wakeleader which = 720290 } #Nicolai
+		command = { type = wakeleader which = 720291 } #Oppen
+		command = { type = wakeleader which = 720292 } #Posseldt
+		command = { type = wakeleader which = 720293 } #Pötrich
+		command = { type = wakeleader which = 720294 } #Rabe
+		command = { type = wakeleader which = 720295 } #Rohdewald
+		command = { type = wakeleader which = 720296 } #Schlee
+		command = { type = wakeleader which = 720297 } #Schraudenbach
+		command = { type = wakeleader which = 720299 } #Sodenstern
+		command = { type = wakeleader which = 720300 } #Tiller
+		command = { type = wakeleader which = 720301 } #Trommer
+		command = { type = wakeleader which = 720302 } #Weber
+		command = { type = wakeleader which = 720303 } #Weidtmann
+		command = { type = wakeleader which = 720304 } #Willmer
+		command = { type = wakeleader which = 720305 } #Merten
+		command = { type = wakeleader which = 720306 } #Pieper
+		command = { type = wakeleader which = 720310 } #Buddecke
+		command = { type = wakeleader which = 720311 } #Felmy
+		command = { type = wakeleader which = 720312 } #Goltz
+		command = { type = wakeleader which = 720313 } #Grone
+		command = { type = wakeleader which = 720314 } #Langfeld
+		command = { type = wakeleader which = 720315 } #Liebermann
+		command = { type = wakeleader which = 720316 } #Preußner
+		command = { type = wakeleader which = 720317 } #Schueler van Krieken
+		command = { type = wakeleader which = 720318 } #Serno
+		#
+		command = { type = waketeam which = 720031	} #Erich Serno
+		command = { type = waketeam which = 720032	} #Otto von Lossow
+		#		
+		command = { type = armamentminister which = 720217 } #Waldemar Pieper
+		command = { type = ministerofintelligence which = 720220 } #Sievert
+		command = { type = chiefofstaff which = 720222 } #Friedrich Bronsart von Schellendorf
+		command = { type = chiefofair which = 720226 } #Erich Serno
+	}
+}
+
+event = {
+	id = 2191581	# Prepare the 'Asienkorps'
+	country = U08
+	
+	decision = {
+		event = 2145525	# OTT Germany extends its military support
+		flag = U08_OTT_Secret_Treaty
+		alliance = { country = OTT country = U08 }
+	}
+	
+	decision_trigger = {
+		atwar = U08
+		alliance = { country = BUL country = U08 }
+		NOT = { war = { country = SER country = U08 } }
+		manpower = 15
+		supplies = 2000
+		OR = { #Ottoman Empire is losing
+			NOT = { control = { province = 1172 data = OTT } } # Jerusalem
+			NOT = { control = { province = 1022 data = OTT } } # Amman
+			NOT = { control = { province = 1021 data = OTT } } # Aleppo
+			NOT = { control = { province = 1067 data = OTT } } #Trabzon
+			NOT = { control = { province = 1034 data = OTT } } #Baghdad
+			NOT = { control = { province = 1016 data = OTT } } #Damascus
+		}		
+	}
+	
+	trigger = {
+		event = 2145525	# OTT Germany extends its military support
+		flag = U08_OTT_Secret_Treaty
+		alliance = { country = OTT country = U08 }
+		atwar = U08
+		atwar = OTT
+		alliance = { country = BUL country = U08 }
+		NOT = { war = { country = SER country = U08 } }
+		manpower = 30
+		supplies = 4000
+		OR = { #Ottoman Empire is losing
+			NOT = { control = { province = 1172 data = OTT } } # Jerusalem
+			NOT = { control = { province = 1022 data = OTT } } # Amman
+			NOT = { control = { province = 1021 data = OTT } } # Aleppo
+			NOT = { control = { province = 1067 data = OTT } } #Trabzon
+			NOT = { control = { province = 1034 data = OTT } } #Baghdad
+			NOT = { control = { province = 1016 data = OTT } } #Damascus
+		}
+	}
+
+	name = "EVT1914_2191581_NAME"
+	desc = "EVT1914_2191581_DESC" 
+	style = 2
+	picture = "asienkorps"
+	decision_picture = "decision_asienkorps"
+
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = relation which = OTT value = 10 }
+		command = { type = trigger which = 2145526 }
+		command = { type = manpowerpool value = -15 }
+		command = { trigger = { NOT = { ai = U08 } } type = supplies value = -2000 }
+		command = { type = sleepleader which = 855105 } #Seeckt
+		command = { type = sleepleader which = 855302 } #Falkenhayn
+		command = { type = sleepleader which = 855125 } #Rebeur-Paschwitz
+		#
+		command = { type = sleepminister which = 855039 } #Falkenhayn
+		command = { type = sleepminister which = 855073 } #Falkenhayn
+		command = { type = sleepminister which = 855075 } #Seeckt
+		command = { type = sleepminister which = 855083 } #Seeckt
+		#
+		command = { type = wakeleader which = 855235 } #Bronsart von Schellendorf
+		command = { type = wakeleader which = 855038 } #Souchon
+	}
+}
+
+event = {
+	id = 2145526	# The German 'Asienkorps' arrives
+	country = OTT
+
+	name = "EVT1914_2145526_NAME"
+	desc = "EVT1914_2191581_DESC"  
+	style = 2
+	picture = "asienkorps"
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -2 }
+		#
+		command = { type = add_corps which = "Asienkorps" value = land when = 720274 where = 409 }
+		command = { type = add_division which = "Pasha" value = infantry when = 4 where = artillery }
+		#
+		command = { type = add_corps which = "Yildirim Ordular Grubu" value = land when = 720273 where = 409 }
+		command = { type = add_division which = "Yildirim Ordular Grubu" value = hq when = 1 }		
+		#
+		command = { type = add_corps which = "Pascha" value = air when = 720311 where = 409 }
+		command = { type = add_division which = "FA 300-305/JS 55" value = multi_role when = 0 }
+		#
+		command = { type = wakeleader which = 720298 } #Seeckt
+		command = { type = wakeleader which = 720273 } #Falkenhayn
+		command = { type = wakeleader which = 720307 } #Rebeur-Paschwitz
+		#
+		command = { type = wakeminister which = 720223 } #Hans von Seeckt
+		command = { type = wakeminister which = 720225 } #Hubert von Rebeur-Paschwitz
+		#		
+		command = { type = sleepleader which = 720270 } #Bronsart von Schellendorf
+		command = { type = sleepminister which = 720222 } #Friedrich Bronsart von Schellendorf
+		command = { type = sleepleader which = 720308 } #Souchon
+		command = { type = sleepminister which = 720224 } #Wilhelm Souchon
+		#
+		command = { type = chiefofstaff which = 720223 } #Hans von Seeckt
+		command = { type = chiefofnavy which = 720225 } #Hubert von Rebeur-Paschwitz
+	}
+}
+
+event = {
+	id = 2145527	# The British naval mission leaves the country
+	country = OTT
+	
+	trigger = {
+		OR = { 
+			event = 2145520	# OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+			war = { country = OTT country = ENG }
+			war = { country = OTT country = RUS }
+		}
+	}
+
+	name = "EVT1914_2145527_NAME"
+	desc = "EVT1914_2145527_DESC"
+	style = 2
+	picture = "limpus"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1917 }
+		
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = sleepminister which = 720228 } #Arthur Henry Limpus
+		command = { type = sleepleader which = 720309  } #Limpus
+		command = { type = trigger which = 2001570 }
+	}
+}
+
+event = {
+	id = 2001570	# The naval mission to the Ottoman Empire returns home
+	country = ENG
+
+	name = "EVT1914_2001570_NAME"
+	desc = "EVT1914_2145527_DESC"
+	style = 2
+	picture = "limpus"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = relation which = OTT value = -25 }
+		#command = { type = wakeleader which = XXX } #Limpus
+	}
+}
+
+event = {
+	id = 2191582	# Overhaul coastal defence at the Dardanelles
+	country = U08
+	
+	decision = {
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		alliance = { country = OTT country = U08 }
+	}
+	
+	decision_trigger = {
+		alliance = { country = OTT country = U08 }
+		atwar = OTT
+		control = { province = 384 data = OTT } # Gallipoli
+		supplies = 100
+	}
+	
+	trigger = {
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		alliance = { country = OTT country = U08 }
+		atwar = U08
+		atwar = OTT
+		control = { province = 384 data = OTT } # Gallipoli	
+	}
+
+	name = "EVT1914_2191582_NAME"
+	desc = "EVT1914_2191582_DESC" 
+	style = 2
+	picture = "sk_kaiserliche_marine"
+	decision_picture = "decision_sk_kaiserliche_marine"
+	
+	
+	
+	date = { day = 28 month = july year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { trigger = { NOT = { ai = U08 } } type = supplies value = -100 }
+		command = { type = relation which = OTT value = 10 }
+		command = { type = trigger which = 2145528 }
+	}
+}
+
+event = {
+	id = 2145528	# The Dardanelles defense network will be improved
+	country = OTT
+
+	name = "EVT1914_2145528_NAME"
+	desc = "EVT1914_2191582_DESC"  
+	style = 2
+	picture = "sk_kaiserliche_marine"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = event which = 2145529 where = OTT when = 60 }
+		command = { type = wakeminister which = 720219 } #Guido von Usedom
+	}
+}
+
+event = {
+	id = 2145529	# Overhaul of Dardanelles defense network completed
+	country = OTT
+
+	name = "EVT1914_2145529_NAME"
+	desc = "EVT1914_2191582_DESC"
+	style = 2
+	picture = "gallipoli_fort"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { trigger = { control = { province = 384 data = OTT } } type = construct which = coastal_fort where = 384 value = 2 }
+	}
+}
+
+event = {
+	id = 2001571	# Protect the oil fields in southern Persia
+	country = ENG
+	
+	decision = {
+		war = { country = U08 country = ENG }
+		alliance = { country = U02 country = ENG }
+		NOT = { war = { country = PER country = ENG } }
+		exists = PER
+		event = 2145520 #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+	}
+	
+	decision_trigger = {
+		war = { country = U08 country = ENG }
+		control = { province = 1538 data = -3 } # Gwadar
+	}
+	
+	trigger = {
+		war = { country = U08 country = ENG }
+		alliance = { country = U02 country = ENG }
+		NOT = { war = { country = PER country = ENG } }
+		control = { province = 1538 data = -3 } # Gwadar
+		exists = PER
+		event = 2145520 #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+	}
+
+	name = "EVT1914_2001571_NAME"
+	desc = "EVT1914_2001571_DESC" 
+	style = 2
+	picture = "abadan_oil"
+	decision_picture = "decision_abadan_oil"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = relation which = PER value = -15 }
+		command = { type = trigger which = 2031002 }
+	}
+}
+
+event = {
+	id = 2031002	# The British Empire occupies southern territories
+	country = PER
+	
+	name = "EVT1914_2031002_NAME"
+	desc = "EVT1914_2001571_DESC" 
+	style = 2
+	picture = "baghdad_captured"
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = relation which = ENG value = -15 }
+		command = { type = relation which = U02 value = -15 }
+		command = { type = secedeprovince which = U02 value = 1089 when = 1 } #Ahvaz
+		#command = { type = secedeprovince which = U02 value = 1090 when = 1 } #Busher
+		#command = { type = secedeprovince which = U02 value = 1091 when = 1 } #Gameroon
+		#command = { type = secedeprovince which = U02 value = 1093 when = 1 } #Zahedan		
+		command = { type = addclaim which = 1089 where = U02 } #Ahvaz
+		#command = { type = addclaim which = 1090 where = U02 } #Busher
+		#command = { type = addclaim which = 1091 where = U02 } #Gameroon
+		#command = { type = addclaim which = 1093 where = U02 } #Zahedan
+
+	}
+}
+
+event = {
+	id = 2104550	# Occupy northern Persia
+	country = RUS
+	
+	decision = {
+		war = { country = U08 country = RUS }
+		NOT = { war = { country = PER country = RUS } }
+		exists = PER
+		event = 2145520 #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+	}
+	
+	decision_trigger = {
+		war = { country = U08 country = RUS }
+		control = { province = 713 data = -3 } # Baku
+	}
+	
+	trigger = {
+		war = { country = U08 country = RUS }
+		NOT = { war = { country = PER country = RUS } }
+		control = { province = 713 data = -3 } # Baku
+		exists = PER
+		event = 2145520 #OTT SMS Goeben and SMS Breslau join the Ottomans' Navy
+	}
+
+	name = "EVT1914_2104550_NAME"
+	desc = "EVT1914_2001571_DESC" 
+	style = 2
+	picture = "persia"
+	decision_picture = "decision_persia"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = relation which = PER value = -15 }
+		command = { type = trigger which = 2031003 }
+	}
+}
+
+event = {
+	id = 2031003	# Russia occupies Persian Azerbaijan
+	country = PER
+	
+	name = "EVT1914_2031003_NAME"
+	desc = "EVT1914_2001571_DESC"
+	style = 2
+	picture = "baghdad_captured"
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = relation which = RUS value = -15 }
+		command = { type = secedeprovince which = RUS value = 1080 when = 1 } #Sari
+		command = { type = secedeprovince which = RUS value = 1081 when = 1 } #Rast
+		command = { type = secedeprovince which = RUS value = 1082 when = 1 } #Rezaiyhe
+		command = { type = secedeprovince which = RUS value = 1083 when = 1 } #Tabriz
+		command = { type = addclaim which = 1080 where = RUS } #Sari
+		command = { type = addclaim which = 1081 where = RUS } #Rast
+		command = { type = addclaim which = 1082 where = RUS } #Rezaiyhe
+		command = { type = addclaim which = 1083 where = RUS } #Tabriz
+	}
+}
+
+event = {
+	id = 2185006	# Leave southern Persia
+	country = U02
+	
+	trigger = {
+		event = 2031002 # The United Kingdom occupies the oil fields in Southern Persia
+		NOT = { war = { country = PER country = U02 } }
+		NOT = { war = { country = OTT country = U02 } }
+		#event = 2145511 # The Armistice of Moudros
+		exists = PER
+		OR = {
+			control = { province = 1089 data = -1 } #Ahvaz
+			#control = { province = 1090 data = -1 } #Busher
+			#control = { province = 1091 data = -1 } #Gameroon
+			#control = { province = 1093 data = -1 } #Zahedan
+		}		
+	}
+
+	name = "EVT1914_2185006_NAME"
+	desc = "EVT1914_2185006_DESC" 
+	style = 2
+	picture = "persia"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 61
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = relation which = PER value = 5 }
+		command = { type = secedeprovince which = PER value = 1089 when = 1 } #Ahvaz
+		#command = { type = secedeprovince which = PER value = 1090 when = 1 } #Busher
+		#command = { type = secedeprovince which = PER value = 1091 when = 1 } #Gameroon
+		#command = { type = secedeprovince which = PER value = 1093 when = 1 } #Zahedan
+		command = { type = removeclaim which = 1089 where = U02 } #Ahvaz
+		#command = { type = removeclaim which = 1090 where = U02 } #Busher
+		#command = { type = removeclaim which = 1091 where = U02 } #Gameroon
+		#command = { type = removeclaim which = 1093 where = U02 } #Zahedan		
+		
+		
+	}
+}
+
+event = {
+	id = 2104551	# Leave northern Persia
+	TAG = { RUS SOV }
+	
+	trigger = {
+		event = 2031003 # Russia occupies Persian Azerbaijan
+		NOT = { war = { country = PER country = -1 } }
+		NOT = { war = { country = OTT country = -1 } }
+		#event = 2145511 # The Armistice of Moudros
+		exists = PER
+		OR = {
+			control = { province = 1080 data = -1 } #Sari
+			control = { province = 1081 data = -1 } #Rast
+			control = { province = 1082 data = -1 } #Rezaiyhe
+			control = { province = 1083 data = -1 } #Tabriz
+		}
+	}
+
+	name = "EVT1914_2104551_NAME"
+	desc = "EVT1914_2185006_DESC" 
+	style = 2
+	picture = "persia"
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 61
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = relation which = PER value = 5 }
+		command = { type = secedeprovince which = PER value = 1080 when = 1 } #Sari
+		command = { type = secedeprovince which = PER value = 1081 when = 1 } #Rast
+		command = { type = secedeprovince which = PER value = 1082 when = 1 } #Rezaiyhe
+		command = { type = secedeprovince which = PER value = 1083 when = 1 } #Tabriz
+		command = { type = removeclaim which = 1080 where = RUS } #Sari
+		command = { type = removeclaim which = 1081 where = RUS } #Rast
+		command = { type = removeclaim which = 1082 where = RUS } #Rezaiyhe
+		command = { type = removeclaim which = 1083 where = RUS } #Tabriz
+	}
+}
+
+event = {
+	id = 2001572	# Make Qatar a Protectorate
+	country = ENG
+
+	decision = {
+		exists = U51 #Qatar
+		NOT = { event = 2191551 } # The Balmoral Castle Treaty
+	}
+	decision_trigger = {
+		NOT = { war = { country = ENG country = U51 } }
+		NOT = { ispuppet = U51 }
+		OR = { #UK has interests and power in the area
+			puppet = { country = U02 country = ENG } #British Raj
+			puppet = { country = U53 country = ENG } #Trucial States
+			puppet = { country = OMN country = ENG } #Oman
+		}
+	}
+	trigger = {
+		exists = U51 #Qatar
+		NOT = { event = 2191551 } # The Balmoral Castle Treaty
+		NOT = { war = { country = ENG country = U51 } }
+		NOT = { ispuppet = U51 }
+		OR = { #UK has interests and power in the area
+			puppet = { country = U02 country = ENG } #British Raj
+			puppet = { country = U53 country = ENG } #Trucial States
+			puppet = { country = OMN country = ENG } #Oman
+		}
+	}
+
+	name = "EVT1914_2001572_NAME"
+	desc = "EVT1914_2001572_DESC" 
+	style = 2
+	picture = "qatar"
+	decision_picture = "decision_qatar"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 181
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { trigger = { NOT= { relation = { which = U51 value = 50 } } } type = set_relation which = U51 value = 50 }
+		command = { type = make_puppet which = U51 }
+	}
+}
+
+#event = {
+#	id = 2145530	# Antiwar unrest
+#	country = OTT
+#
+#	trigger = {
+#		OR = {
+#			war = { country = OTT country = RUS }
+#			war = { country = OTT country = ENG }
+#		}
+#	}
+#
+#	name = "Antiwar unrest" #"EVT1914_2145530_NAME"
+#	desc = "Antiwar unrest" #"EVT1914_2145530_DESC" 
+#	style = 2
+#
+#	date = { day = 0 month = january year = 1914 }
+#	offset = 181
+#	deathdate = { day = 29 month = december year = 1925 }
+#	
+#	action = {
+#		name = "ACTION_NAME_DAMN"
+#		command = { type = dissent value = 10 }
+#	}
+#}
+
+event = {
+	id = 2104552	# Declare war on the Ottoman Empire
+	country = RUS
+
+	decision = {
+		NOT = { event = 2145502 } #OTT	The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT	The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT	The Treaty of Sèvres		
+		NOT = { event = 2104546 } #RUS  Military Defeat
+		NOT = { event = 2104514 } #RUS Strikes at Petrograd
+	}
+	decision_trigger = {
+		NOT = { atwar = OTT }
+		NOT = { ispuppet = OTT }
+		NOT = { dissent = 15 }
+		NOT = { participant = { country = OTT value = 1 } } #Entente
+		NOT = { participant = { country = OTT value = 2 } } #Central Powers
+	}
+	trigger = {
+		NOT = { event = 2145515 } #OTT Secret alliance pact with Germany
+		NOT = { event = 2145502 } #OTT	The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT	The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT	The Treaty of Sèvres		
+		NOT = { event = 2104546 } #RUS  Military Defeat
+		NOT = { event = 2104514 } #RUS Strikes at Petrograd
+		NOT = { atwar = OTT }
+		NOT = { ispuppet = OTT }
+		NOT = { dissent = 15 }
+		NOT = { participant = { country = OTT value = 1 } } #Entente
+		NOT = { participant = { country = OTT value = 2 } } #Central Powers
+		garrison = { country = -1 province = 708 type = land size = 6 area = 2 }  # Kutaisi, Kaukasus region	
+	}
+
+	name = "EVT1914_2104552_NAME"
+	desc = "EVT1914_2104552_DESC" 
+	style = 2
+	picture = "russian_soldiers"
+
+	date = { day = 0 month = september year = 1916 }
+	offset = 181
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = ACTION_NAME_WAR
+		command = { type = war which = OTT }
+	}
+}
+
+event = {
+	id = 2145531	# The German military mission leaves the country
+	country = OTT
+
+	trigger = {
+		OR = {
+			flag = End_to_U08_mission_to_OTT
+			war = { country = U08 country = OTT }
+		}
+	}
+
+	name = "EVT1914_2145531_NAME"
+	desc = "EVT1914_2145531_DESC" 
+	style = 2
+	picture = "german_military_mission"
+
+	date = { day = 0 month = september year = 1916 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = end_trades which = U08 where = OTT }
+		command = { trigger = { flag = End_to_U08_mission_to_OTT } type = clrflag which = End_to_U08_mission_to_OTT }
+		command = { type = trigger which = 2191583 }
+		#
+		command = { type = sleepminister which = 720217 } # Waldemar Pieper
+		command = { type = sleepminister which = 720218 } # Heinrich August Meißner
+		command = { type = sleepminister which = 720219 } # Guido von Usedom
+		command = { type = sleepminister which = 720220 } # Sievert
+		command = { type = sleepminister which = 720221 } # Etienne Perrinet von Thauvenay
+		command = { type = sleepminister which = 720222 } # Friedrich Bronsart von Schellendorf
+		command = { type = sleepminister which = 720223 } # Hans von Seeckt
+		command = { type = sleepminister which = 720224 } # Wilhelm Souchon
+		command = { type = sleepminister which = 720225 } # Hubert von Rebeur-Paschwitz
+		command = { type = sleepminister which = 720226 } # Erich Serno
+		command = { type = sleepminister which = 720227 } # Konrad Goltz
+		#
+		command = { type = sleepleader which = 720268 } #Back
+		command = { type = sleepleader which = 720269 } #Böhme
+		command = { type = sleepleader which = 720270 } #Bronsart von Schellendorf
+		command = { type = sleepleader which = 720271 } #Eggert
+		command = { type = sleepleader which = 720272 } #Ehrke
+		command = { type = sleepleader which = 720273 } #Falkenhayn
+		command = { type = sleepleader which = 720274 } #Frankenberg und Proschlitz
+		command = { type = sleepleader which = 720275 } #Gleich
+		command = { type = sleepleader which = 720276 } #Goltz
+		command = { type = sleepleader which = 720277 } #Guhr
+		command = { type = sleepleader which = 720278 } #Hammerstein-Gesmold
+		command = { type = sleepleader which = 720279 } #Havik
+		command = { type = sleepleader which = 720280 } #Heuck
+		command = { type = sleepleader which = 720281 } #Hopman
+		command = { type = sleepleader which = 720282 } #Hunger
+		command = { type = sleepleader which = 720283 } #Kannengiesser
+		command = { type = sleepleader which = 720284 } #Kiesling auf Kieslingstein
+		command = { type = sleepleader which = 720285 } #Kreß von Kressenstein
+		command = { type = sleepleader which = 720286 } #Langenstraß
+		command = { type = sleepleader which = 720287 } #Lenthe
+		command = { type = sleepleader which = 720288 } #Liman von Sanders
+		command = { type = sleepleader which = 720289 } #Lossow
+		command = { type = sleepleader which = 720290 } #Nicolai
+		command = { type = sleepleader which = 720291 } #Oppen
+		command = { type = sleepleader which = 720292 } #Posseldt
+		command = { type = sleepleader which = 720293 } #Pötrich
+		command = { type = sleepleader which = 720294 } #Rabe
+		command = { type = sleepleader which = 720295 } #Rohdewald
+		command = { type = sleepleader which = 720296 } #Schlee
+		command = { type = sleepleader which = 720297 } #Schraudenbach
+		command = { type = sleepleader which = 720298 } #Seeckt
+		command = { type = sleepleader which = 720299 } #Sodenstern
+		command = { type = sleepleader which = 720300 } #Tiller
+		command = { type = sleepleader which = 720301 } #Trommer
+		command = { type = sleepleader which = 720302 } #Weber
+		command = { type = sleepleader which = 720303 } #Weidtmann
+		command = { type = sleepleader which = 720304 } #Willmer
+		command = { type = sleepleader which = 720305 } #Merten
+		command = { type = sleepleader which = 720306 } #Pieper
+		command = { type = sleepleader which = 720307 } #Rebeur-Paschwitz
+		command = { type = sleepleader which = 720308 } #Souchon
+		command = { type = sleepleader which = 720310 } #Buddecke
+		command = { type = sleepleader which = 720311 } #Felmy
+		command = { type = sleepleader which = 720312 } #Goltz
+		command = { type = sleepleader which = 720313 } #Grone
+		command = { type = sleepleader which = 720314 } #Langfeld
+		command = { type = sleepleader which = 720315 } #Liebermann
+		command = { type = sleepleader which = 720316 } #Preußner
+		command = { type = sleepleader which = 720317 } #Schueler van Krieken
+		command = { type = sleepleader which = 720318 } #Serno
+		#
+		command = { type = sleepteam which = 720031	} #Erich Serno
+		command = { type = sleepteam which = 720032	} #Otto von Lossow
+		command = { type = sleepteam which = 720033	} #Hans Humann
+		command = { type = sleepteam which = 720034	} #Georg Mayer	
+	}
+}
+
+event = {
+	id = 2191583	# The military mission to the Ottoman Empire returns home
+	country = U08
+
+	name = "EVT1914_2191583_NAME"
+	desc = "EVT1914_2191583_DESC" 
+	style = 2
+	picture = "german_military_mission"
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { }
+		command = { type = wakeleader which = 855235 } #Bronsart von Schellendorf
+		command = { type = wakeleader which = 855002 } #Goltz
+		command = { type = wakeleader which = 855214 } #Lossow
+		command = { type = wakeleader which = 855334 } #Buddecke
+		command = { type = wakeleader which = 855161 } #Serno
+		command = { type = wakeleader which = 855105 } #Seeckt
+		command = { type = wakeleader which = 855302 } #Falkenhayn
+		command = { type = wakeleader which = 855125 } #Rebeur-Paschwitz
+		#
+		command = { type = wakeminister which = 855039 } #Falkenhayn
+		command = { type = wakeminister which = 855073 } #Falkenhayn
+		command = { type = wakeminister which = 855075 } #Seeckt
+		command = { type = wakeminister which = 855083 } #Seeckt	
+	}
+}
+
+event = {
+	id = 2145532	# Join the Central Powers?
+	country = OTT
+
+	name = "EVT1914_2145532_NAME"
+	desc = "EVT1914_2145532_DESC" 
+	style = 2
+	picture = "dreikaiser"
+
+	action = {
+		name = "EVT1914_2145532_ACTIONA"
+		command = { trigger = { 
+						NOT = { alliance = { country = OTT country = U08} } 
+						NOT = { war = { country = OTT country = U08 } } 
+						OR = {
+							AND = {
+								war = { country = OTT country = ENG }
+								war = { country = U08 country = ENG }
+							}
+							AND = {
+								war = { country = OTT country = RUS }
+								war = { country = U08 country = RUS }
+							}
+						}
+					} type = trigger which = 2191584 }
+		command = { trigger = {
+						NOT = { alliance = { country = OTT country = U08} } 
+						NOT = { war = { country = OTT country = U08 } } 
+						OR = {
+							AND = {
+								war = { country = OTT country = ENG }
+								war = { country = U08 country = ENG }
+							}
+							AND = {
+								war = { country = OTT country = RUS }
+								war = { country = U08 country = RUS }
+							}
+						}
+						NOT = { policy = { type = professional_army value = 8 } }
+					} type = event which = 8300108 where = OTT when = 1 } #Mobilize?
+	}
+}
+
+event = {
+	id = 2191584	# The Ottomans want to join the Central Powers
+	country = U08
+
+	name = "EVT1914_2191584_NAME"
+	desc = "EVT1914_2191584_DESC" 
+	style = 2
+	picture = "dreikaiser"
+
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 100
+		command = { type = relation which = OTT value = 50 }
+		command = { type = alliance which = OTT when = 1 } 
+	}
+	action = {
+		name = "ACTION_NAME_REFUSE"
+		ai_chance = 0
+		command = { type = relation which = OTT value = -50 }
+		command = { trigger = { NOT = { flag = End_to_U08_mission_to_OTT } } type = setflag which = End_to_U08_mission_to_OTT }
+		command = { type = event which = 2145531 where = OTT when = 1 } #OTT The German military mission leaves the country
+	}
+}
+
+event = {
+	id = 2145533	# Join the Central Powers?
+	country = OTT
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		event = 2145515 #OTT Secret alliance pact with Germany
+		flag = U08_OTT_Secret_Treaty
+		NOT = { war = { country = OTT country = U08 } }
+		NOT = { alliance = { country = OTT country = U08 } }
+		NOT = { event = 2145502 } #OTT The Fall of Constantinople
+		NOT = { event = 2145511 } #OTT The Armistice of Moudros
+		NOT = { event = 2145513 } #OTT The Treaty of Sèvres		
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		NOT = { event = 2191520 } #Armistice			
+		atwar = U08
+		OR = {
+			under_attack = U08
+			AND = {
+				NOT = { under_attack = U08 }
+				random = 20
+			}
+		}	
+	}
+
+	name = "EVT1914_2145521_NAME"
+	desc = "EVT1914_2145521_DESC" 
+	style = 2
+	picture = "dreikaiser"
+	decision_picture = "decision_dreikaiser"
+
+	date = { day = 28 month = july year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1917 }
+	
+	action = {
+		trigger = { NOT = { under_attack = U08 } }
+		name = "ACTION_NAME_JOIN_CENTRAL"
+		ai_chance = 5
+		command = { type = relation which = U08 value = 20 }
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { type = sleepevent which = 2145533 }
+	}
+	action = {
+		trigger = { NOT = { under_attack = U08 } }
+		name = "ACTION_NAME_NEUTRAL"
+		ai_chance = 95
+		command = { type = relation which = U08 value = -10 }
+	}	
+	action = {
+		trigger = { under_attack = U08 }
+		name = "ACTION_NAME_JOIN_CENTRAL"
+		ai_chance = 95
+		command = { type = relation which = U08 value = 20 }
+		command = { type = alliance which = U08 when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { type = sleepevent which = 2145533 }
+	}
+	action = {
+		trigger = { under_attack = U08 }
+		name = "ACTION_NAME_NEUTRAL"
+		ai_chance = 5
+		command = { type = relation which = U08 value = -10 }
+	}
+}

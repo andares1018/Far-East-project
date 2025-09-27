@@ -1,0 +1,17 @@
+UC4;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+2000350;20th Factory;100770;2;1920;1970;general_equipment;artillery;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000351;50th Factory;T98705;2;1920;1970;general_equipment;artillery;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000352;Chengdu arsenal;T_Chengdu arsenal;3;1900;1947;general_equipment;training;munitions;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000353;Chongqing Weapon Repair Office;T_Sichuan Armory1;3;1929;1970;technical_efficiency;artillery;munitions;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000354;Chuankang Appeasement Director Bullet Factory;T_Sichuan Armory2;2;1926;1970;technical_efficiency;general_equipment;munitions;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000355;Chongqing Electric Power Steelmaking Plant;T_Chongqing Plant;3;1921;1970;technical_efficiency;industrial_engineering;management;mechanics;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000356;Chongqing University;T_Chongqing University;3;1929;1937;management;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000357;Chongqing University;T_Chongqing University;4;1937;1970;management;mathematics;training;mechanics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000358;Sichuan University;T_Sichuan University;4;1896;1970;industrial_engineering;management;mechanics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000359;Liu Xiang;T_Liu Xiang;2;1920;1938;training;management;individual_courage;centralized_execution;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000360;Huaxi Machinery Factory ;T_Huaxi Machinery Factory;2;1922;1970;munitions;industrial_engineering;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000361;Hu Ziang;T_Hu Ziang;4;1922;1970;management;industrial_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000362;West China Union University;T_WCUU;4;1906;1970;mathematics;management;medicine;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000363;Southwest University;100733;1;1906;1926;mathematics;chemistry;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000364;Southwest University;100733;2;1926;1945;mathematics;chemistry;medicine;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000365;Southwest University;100733;4;1945;1999;mathematics;chemistry;medicine;industrial_engineering;mechanics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;x

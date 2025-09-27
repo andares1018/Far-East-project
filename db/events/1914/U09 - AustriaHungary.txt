@@ -1,0 +1,1536 @@
+###
+### Austrohungarian events (U09 - 192)
+###
+### By Rhysaxiel
+###
+###2192500  U09  Assassination of Franz-Ferdinand
+###2192530  U09  Ultimatum to Serbia
+###2192501  U09  Serbia partially accepts
+###2192502  U09  War on Serbia ?
+###2192503  U09  Italian concessions ?
+###2192504  U09  Italy joins back the Central Powers
+###2192505  U09  Serb army evacuates through Albania !
+###2192506  U09  The Imperial Manifesto
+###2192507  U09  The Lansing Note
+###2192508  U09  Provisional Government of Czechoslovakia
+###2192509  U09  Serbs, Croats and Slovenes leave the Empire
+###2192510  U09  Galician provinces declare independence
+###2192532  U09  Galician provinces become part of Russia
+###2192511  U09  Hungary ends personnal union
+###2192512  U09  Trento joins Italy
+###2192513  U09  Military defeat
+###2192515  U09  Hungary is invaded
+###2192516  U09  Galicia is invaded !
+###2192517  U09  Przemysl is lost !
+###2192518  U09  Praha is lost !
+###2192519  U09  Bratislava is lost !
+###2192520  U09  Budapest is lost !
+###2192521  U09  Vienna is lost !
+###2192522  U09  Sarajevo is lost !
+###2192523  U09  Serbia accepts our ultimatum
+###2192524  U09  Rumors of a Russia military buildup
+###2192525  U09  Confirmed rumors of a Russia military buildup
+###2192526  U09  Confirmed rumors of a Russia military buildup
+###2192527  U09  Riots against Austro-Hungarian presence
+###2192528  U09  Launch operation Friedrich (preemptive striker on Russia)
+###2192529  U09  Agreement with Bulgaria
+###2192531  U09  Franz Joseph is dead
+###2192533  CZE  Provisional government of Czechoslovakia
+###2192534  U09  Armistice with Italy
+###2192535  U09  The Annexation of Serbia
+###2192536  U09  Armistice with Russia
+###2192537  U09  Armistice with France
+###2192538  U09  Bulgaria offers resources in exchange for Vardar Macedonia
+###2192539  U09  The future of Montenegro
+###2192540  MTN  Nikola I is restored as King of Montenegro
+###2192541  U09  The future of Albania
+###2192542  U09  Bulgaria refused our offer
+
+event = {
+	id = 2192500	# Assassination of Franz-Ferdinand
+	country = U09
+	
+	trigger = { }
+	
+	name = "EVT1914_2192500_NAME"
+	desc = "EVT1914_2192500_DESC" 
+	style = 2
+	picture = "franz_ferdinand_assassination"
+	
+	date = { day = 27 month = june year = 1914 hour = 10 }
+	
+	action = {
+		name = "EVT1914_2192500_ACTIONA" # Send ultimatum
+		command = { type = sleepminister which = 860053 } # Franz Ferdinand
+		command = { type = sleepleader which = 860049 } # Franz Ferdinand
+	}
+}
+
+event = {
+    id = 2192530 #Ultimatum to Serbia
+    random = no
+    country = U09
+
+    decision = {
+        NOT = { alliance = { country = U09 country = SER } }
+        }
+    
+    decision_trigger = {
+       event = 2192500 # Assassination of Franz-Ferdinand
+    }
+    
+    trigger = {
+        NOT = { alliance = { country = U09 country = SER } }
+        event = 2192500 # Assassination of Franz-Ferdinand   
+	}
+
+    name = "EVT1914_2192530b_NAME"
+    desc = "EVT1914_2192530b_DESC"
+
+    style = 2
+    picture = "Peace_conference"
+    decision_picture = "decision_peace_conference"
+
+    date = { day = 17 month = july year = 1914 }
+    offset = 4
+    deathdate = { day = 29 month = december year = 1914 }
+
+    action_a = {
+		ai_chance = 100
+		name = "EVT1914_2192530b_ACTIONA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = belligerence value = 5 }
+		command = { type = trigger which = 2084500 } # SER "Ultimatum : seek Russia's support ?"
+		command = { type = trigger which = 2006500 } # ITA "Concerns with serbian ultimatum"
+	}
+#    action_b = {
+#		ai_chance = 0
+#		name = "EVT1914_2192530b_ACTIONB"
+#		command = { type = dissent value = 30 }
+#		command = { type = sleepevent which = 2084500 } # SER "Ultimatum : seek #Russia's support ?"
+#		command = { type = sleepevent which = 2084502 } # SER "Ultimatum expires" 
+#	}
+}
+	  
+event = {
+	id = 2192501	# Serbia partially accepts
+	country = U09
+
+	#triggered by SER 2084502	
+	
+	name = "EVT1914_2192501_NAME"
+	desc = "EVT1914_2192501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2192501_ACTIONA" # The Gathering storm
+		command = { type = relation which = SER value = -5 }
+	}
+}
+event = {
+	id = 2192502	# War on Serbia ?
+	country = U09
+
+	decision = { 
+		event = 2192501 # U09 Serbia partially accepts
+		NOT = { event = 2192523 } # U09 Serbia accepts our ultimatum
+	} 
+	decision_trigger = { }
+	trigger = {
+		event = 2192501 # U09 Serbia partially accepts
+		NOT = { event = 2192523 } # U09 Serbia accepts our ultimatum
+		random = 25 
+	} 
+	
+	name = "EVT1914_2192502_NAME"
+	desc = "EVT1914_2192502_DESC" 
+	style = 2
+	picture = "austrohunarmy_march"
+	decision_picture = "decision_warwithserbia"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1914 }
+	
+	action = {
+		name = "EVT1914_2192502_ACTIONA" # Declare War
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = belligerence value = 5 }
+		command = { type = war which = SER }
+		command = { type = dissent value = -3 } #to counter DoW dissent
+		command = { type = addclaim which = 340 } #Sabac
+		command = { type = addclaim which = 342 } #Uzice
+		command = { type = addclaim which = 338 } #Belgrade
+		command = { type = addclaim which = 339 } #Bor
+		command = { type = addclaim which = 330 } #Nis
+		command = { type = addclaim which = 327 } #Krusevac
+		command = { type = addclaim which = 329 } #Pristina
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = trigger which = 2104501 } # RUS "AH DoW SER"
+		command = { type = trigger which = 2019501 } # GRE "AH DoW SER"
+	}
+}
+# Negotiations with italy
+event = {
+	id = 2192503	# Italian concessions ?
+	country = U09
+
+	decision = {
+		exists = ITA
+		participant = { country = U09 value = 2 }
+		NOT = { 
+			alliance = { country = U09 country = ITA } 
+			alliance = { country = FRA country = ITA } 
+			participant = { country = ITA value = 1 }
+			war = { country = U09 country = ITA }
+			event = 2006515 #ITA Military Defeat
+		} 
+	}
+	decision_trigger = { 
+		event = 2006500 # Italians concerns
+		control = { province = 401 data = -1 } #Trento
+	}
+	trigger = { 
+		exists = ITA
+		participant = { country = U09 value = 2 }
+		NOT = { 
+			alliance = { country = U09 country = ITA } 
+			alliance = { country = FRA country = ITA } 
+			participant = { country = ITA value = 1 }
+			war = { country = U09 country = ITA } 
+			event = 2006515 #ITA Military Defeat
+			dissent = 10
+		} 
+		event = 2006500 # Italians concerns
+		control = { province = 401 data = -1 } #Trento
+		random = 5
+	}
+   
+	name = "EVT1914_2192503_NAME"
+	desc = "EVT1914_2192503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = EVT1914_2192503_ACTIONA # Offer only Trento (historical)
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 2006501 } # ITA Italian concessions
+	}
+	action = {
+		name = EVT1914_2192503_ACTIONB # Offer Trento and Trieste
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 2006522 } # ITA Italian concessions
+	}
+	action = {
+		name = EVT1914_2192503_ACTIONC # Offer Trento, Trieste and the Dalmatian coast from Spalato to Ragusa
+		ai_chance = 0
+		command = { type = dissent value = 7 }
+		command = { type = trigger which = 2006523 } # ITA Italian concessions
+	}
+	action = {
+		name = "ACTION_NAME_DECLINE" #
+		ai_chance = 5
+		command = { type = relation which = ITA value = -10 }
+	}
+}
+event = {
+	id = 2192504	# Italy joins back the Central Powers
+	country = U09
+
+	#triggered by ITA 2006501
+	
+	name = "EVT1914_2192504_NAME"
+	desc = "EVT1914_2192504_DESC" 
+	style = 2
+	#picture = "Sarajevo"
+	
+	action = {
+		name = ACTION_NAME_PERFECT
+		command = { }
+		command = { trigger = { flag = U09_ITA_Trento } type = dissent value = 3 }
+		command = { trigger = { flag = U09_ITA_Trento_Trieste } type = dissent value = 5 }
+		command = { trigger = { flag = U09_ITA_Trento_Trieste_Dalmatia } type = dissent value = 7 }
+		command = { trigger = { OR = { flag = U09_ITA_Trento flag = U09_ITA_Trento_Trieste flag = U09_ITA_Trento_Trieste_Dalmatia } } type = secedeprovince which = ITA value = 401 } # Trento
+		command = { trigger = { OR = { flag = U09_ITA_Trento_Trieste flag = U09_ITA_Trento_Trieste_Dalmatia } } type = secedeprovince which = ITA value = 404 } # Trieste
+		command = { trigger = { flag = U09_ITA_Trento_Trieste_Dalmatia } type = secedeprovince which = ITA value = 350 } # Split
+		command = { trigger = { flag = U09_ITA_Trento_Trieste_Dalmatia } type = secedeprovince which = ITA value = 351 } # Knin
+		command = { trigger = { flag = U09_ITA_Trento_Trieste_Dalmatia } type = secedeprovince which = ITA value = 343 } # Dubrovnik
+		command = { trigger = { flag = U09_ITA_Trento } type = clrflag which = U09_ITA_Trento }
+		command = { trigger = { flag = U09_ITA_Trento_Trieste } type = clrflag which = U09_ITA_Trento_Trieste }
+		command = { trigger = { flag = U09_ITA_Trento_Trieste_Dalmatia } type = clrflag which = U09_ITA_Trento_Trieste_Dalmatia }
+	}
+}
+#event = {
+#	id = 2192505	# Serb army evacuates through Albania !
+#	country = U09
+#
+#	# triggered by ALB 2058500
+#  
+#	name = "EVT1914_2192505_NAME"
+#	desc = "EVT1914_2192505_DESC" 
+#	style = 2
+#	picture = "news_paper"
+#
+#	action_a = {
+#		name = "EVT1914_2192505_ACTIONA" # Invade Albania !
+#		ai_chance = 100
+#		command = { type = inherit which = SER }
+#		command = { type = war which = ALB }
+#		command = { type = dissent value = -2 }
+#	}
+#	action_b = {
+#		name = "EVT1914_2192505_ACTIONB" # Leave Albania
+#		command = { type = dissent value = 2 }
+#	}
+#}
+event = {
+	id = 2192506	# The Imperial Manifesto
+	country = U09
+
+	trigger = { 
+		OR = {
+			AND = {
+				random = 15
+				atwar = yes
+				dissent = 40
+				OR = {
+					lost_VP = { value = 30 }
+					lost_IC = { value = 30 }
+				}
+			}
+			AND = {
+				random = 15
+				ai = yes
+				atwar = yes
+				OR = {		 # German defeat
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				OR = {
+					lost_VP = { value = 5 }
+					lost_IC = { value = 5 }
+				}	
+			}
+			event = 2192513 # Military defeat
+			dissent = 60
+			OR = {
+				lost_VP = { value = 70 }
+				lost_IC = { value = 70 }
+			}
+		}
+	}
+   
+	name = "EVT1914_2192506_NAME"
+	desc = "EVT1914_2192506_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2192506_ACTIONA" # Save what we can
+		command = { type = dissent value = -5 }
+		command = { type = end_access which = U08 }
+		#CZE
+		command = { type = removecore which = 196 }
+		command = { type = removecore which = 197 }
+		command = { type = removecore which = 198 }
+		command = { type = removecore which = 199 }
+		command = { type = removecore which = 200 }
+		command = { type = removecore which = 201 }
+		command = { type = removecore which = 202 }
+		command = { type = removecore which = 203 }
+		command = { type = removecore which = 204 }
+		command = { type = removecore which = 205 }
+		command = { type = removecore which = 206 }
+		command = { type = removecore which = 207 }
+		command = { type = removecore which = 208 }
+		command = { type = removecore which = 209 }
+		command = { type = removecore which = 210 }
+		command = { type = removecore which = 211 }
+		command = { type = removecore which = 212 }
+		command = { type = removecore which = 213 }
+		command = { type = removecore which = 214 }
+		command = { type = removecore which = 215 }		
+		#Balkans
+		command = { type = removecore which = 336 }
+		command = { type = removecore which = 337 }
+		command = { type = removecore which = 338 }
+		command = { type = removecore which = 339 }
+		command = { type = removecore which = 340 }
+		command = { type = removecore which = 341 }
+		command = { type = removecore which = 343 }
+		command = { type = removecore which = 344 }
+		command = { type = removecore which = 345 }
+		command = { type = removecore which = 346 }
+		command = { type = removecore which = 347 }
+		command = { type = removecore which = 349 }
+		command = { type = removecore which = 350 }
+		command = { type = removecore which = 351 }
+		command = { type = removecore which = 352 }
+		command = { type = removecore which = 353 }
+		command = { type = removecore which = 354 }
+		command = { type = removecore which = 355 }
+		command = { type = removecore which = 356 }
+		command = { type = removecore which = 357 }
+		command = { type = removecore which = 358 }
+		#Galicia
+		command = { type = removecore which = 235 }
+		command = { type = removecore which = 236 }
+		command = { type = removecore which = 237 }
+		command = { type = removecore which = 238 }
+		command = { type = removecore which = 239 }
+		command = { type = removecore which = 240 }
+		command = { type = removecore which = 241 }
+		command = { type = removecore which = 242 }
+		command = { type = removecore which = 300 }
+		command = { type = removecore which = 301 }
+		# Greater Hungary
+		command = { type = removecore which = 276 }
+		command = { type = removecore which = 277 }
+		command = { type = removecore which = 278 }
+		command = { type = removecore which = 279 }
+		command = { type = removecore which = 280 }
+		command = { type = removecore which = 281 }
+		command = { type = removecore which = 282 }
+		command = { type = removecore which = 283 }
+		command = { type = removecore which = 284 }
+		command = { type = removecore which = 285 }
+		command = { type = removecore which = 286 }
+		command = { type = removecore which = 287 }
+		command = { type = removecore which = 288 }
+		command = { type = removecore which = 289 }
+		command = { type = removecore which = 291 }
+		command = { type = removecore which = 292 }
+		command = { type = removecore which = 293 }
+		command = { type = removecore which = 295 }
+		command = { type = removecore which = 296 }
+		# Greater Italy
+		command = { type = removecore which = 394 }
+		command = { type = removecore which = 401 }
+		command = { type = removecore which = 402 }
+		command = { type = removecore which = 403 }
+		command = { type = removecore which = 404 }
+		command = { type = removecore which = 405 }
+		command = { type = removecore which = 406 }
+		# Serbia
+		command = { type = removeclaim which = 338 } 
+		command = { type = removeclaim which = 330 }
+		command = { type = removeclaim which = 342 }
+		command = { type = removeclaim which = 329 }
+		command = { type = removeclaim which = 340 }
+		command = { type = removeclaim which = 339 }
+		command = { type = removeclaim which = 327 }
+		command = { type = removeclaim which = 332 }
+		command = { type = removeclaim which = 335 }
+		#Possible gains from Russia
+		command = { type = removeclaim which = 618 } #Kamenets-Podolsky
+		command = { type = removeclaim which = 619 } #Mogilev-Podolsky
+		command = { type = removeclaim which = 620 } #Balta
+		command = { type = removeclaim which = 621 } #Tiraspol
+		command = { type = removeclaim which = 625 } #Ochakov
+		command = { type = removeclaim which = 626 } #Odessa
+		command = { type = removeclaim which = 302 } #Hotin
+		command = { type = removeclaim which = 303 } #Balti
+		command = { type = removeclaim which = 304 } #Chisinau
+		command = { type = removeclaim which = 305 } #Cahul
+		command = { type = removeclaim which = 306 } #Ismail
+	}
+}
+event = {
+	id = 2192507	# The Lansing Note
+	country = U09
+
+	trigger = { 
+		event = 2192506 # The Imperial Manifesto
+		random = 40
+	}
+   
+	name = "EVT1914_2192507_NAME"
+	desc = "EVT1914_2192507_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192507_ACTIONA" # Damn..
+		command = { type = country which = AUS }
+		command = { trigger = { NOT = { event = 2192513 } } type = trigger which = 2192513 } # Military defeat
+		command = { trigger = { dissent = 60 } type = dissent value = -20 }
+		command = { trigger = { dissent = 50 } type = dissent value = -10 }
+		command = { trigger = { dissent = 40 } type = dissent value = -10 }
+	}
+}
+event = {
+	id = 2192508	# Provisional Government of Czechoslovakia
+	country = AUS
+
+	trigger = {
+		event = 2192507 # The Lansing Note
+	}
+
+	name = "EVT1914_2192508_NAME"
+	desc = "EVT1914_2192508_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192508_ACTIONA" # The Empire Crumbles
+		command = { type = independence which = CZE value = 1 when = 1 }
+		command = { trigger = { exists = CZE } type = secederegion which = CZE value = "Czechoslovakia" }
+		command = { trigger = { exists = CZE } type = secedeprovince which = CZE value = 203 } #Tesin
+		command = { trigger = { NOT = { ispuppet = CZE } } type = trigger which = 2192533 } #Republic of Czechoslovakia
+	}
+}
+event = {
+	id = 2192509	# Serbs, Croats and Slovenes leave the Empire
+	country = AUS
+
+	trigger = { 
+		event = 2192507 # The Lansing Note
+		random = 35
+	}
+
+	name = "EVT1914_2192509_NAME"
+	desc = "EVT1914_2192509_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192509_ACTIONA" # The Empire Crumbles
+		command = { trigger = { NOT = { exists = SER } } type = independence which = SER value = 1 when = 0}
+		command = { type = secedearea which = SER value = "East Serbia" }
+		command = { type = secedearea which = SER value = "Central Serbia" }
+		command = { type = secedearea which = SER value = "Croatia" }
+		command = { type = secedearea which = SER value = "Bosnia" }
+		command = { trigger = { NOT = { exists = ALB } } type = independence which = ALB value = 1 when = 0}
+		command = { type = secedearea which = ALB value = "Albania" }
+		command = { trigger = { NOT = { exists = GRE } } type = independence which = GRE value = 1 when = 1 }
+		command = { type = secedearea which = GRE value = "Thrace" }
+		command = { type = secedearea which = GRE value = "Attica" }
+		command = { type = secedearea which = GRE value = "Greek Island" }		  
+		command = { type = trigger which = 2084508 }
+	}
+}
+event = {
+	id = 2192510	# Galician provinces declare independence
+	country = AUS
+
+	trigger = { 
+		event = 2192507 # The Lansing Note
+		random = 35
+		OR = {
+			NOT = { exists = RUS }
+			event = 2104546 #RUS Military Defeat
+		}
+		NOT = { event = 2192532 } # Galician provinces become part of Russia
+		event = 2192508 #Provisional Government of Czechoslovakia
+	}
+	
+	name = "EVT1914_2192510_NAME"
+	desc = "EVT1914_2192510_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192510_ACTIONA" # The Empire Crumbles
+		command = { trigger = { NOT = { exists = POL } } type = independence which = POL value = 1 when = 0} # Regency Council breaks free
+		command = { trigger = { exists = POL } type = secederegion which = POL value = "Poland" when = 1 }
+		command = { trigger = { exists = ROM } type = secedeprovince which = ROM value = 300 when = 1 } #Cernauti
+		command = { trigger = { exists = ROM } type = secedeprovince which = ROM value = 301 when = 1 } #Suceava
+		command = { trigger = { puppet = { country = POL country = U08 } } type = addcore which = 238 where = POL } #Stanislow
+		command = { trigger = { puppet = { country = POL country = U08 } } type = addcore which = 240 where = POL } #Tarnopol
+		command = { trigger = { puppet = { country = POL country = U08 } } type = addcore which = 241 where = POL } #Strij
+		command = { trigger = { puppet = { country = POL country = U08 } } type = addcore which = 242 where = POL } #Lwow
+		command = { trigger = { exists = UKR puppet = { country = UKR country = U08 } } type = secederegion which = UKR value = "Ukraine" when = 1 }
+		command = { trigger = { OR = { 
+									NOT = { exists = UKR} 
+									NOT = { puppet = { country = UKR country = U08 } }
+								} 
+								NOT = { event = 2002534 } #Versailles Treaty (U08 defeated)
+					} type = secederegion which = U08 value = "Ukraine" when = 1 }
+		command = { trigger = { NOT = { event = 2193500 puppet = { country = POL country = U08 } } } type = trigger which = 2193500 } # The Republic of Poland
+	}
+}
+event = {
+	id = 2192532	# Galician provinces become part of Russia
+	country = AUS
+
+	trigger = { 
+		event = 2192507 # The Lansing Note
+		random = 35
+		exists = RUS
+		OR = { 
+			NOT = { event = 2104546} #RUS Military Defeat
+			event = 2002534 #Versailles Treaty (U08 defeated)
+		}
+		NOT = { event = 2192510 } # Galician provinces declare independence
+	}
+	
+	name = "EVT1914_2192532_NAME"
+	desc = "EVT1914_2192532_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192532_ACTIONA" # The Empire Crumbles
+		command = { type = secederegion which = RUS value = "Poland" when = 1 }
+		command = { trigger = { exists = ROM } type = secedeprovince which = ROM value = 300 when = 1 } #Cernauti
+		command = { trigger = { exists = ROM } type = secedeprovince which = ROM value = 301 when = 1 } #Suceava
+	}
+}
+event = {
+	id = 2192511	# Hungary ends personnal union
+	country = AUS
+
+	trigger = { 
+		event = 2192507 # The Lansing Note
+		random = 35
+	}
+   
+	name = "EVT1914_2192511_NAME"
+	desc = "EVT1914_2192511_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192511_ACTIONA" # The Empire Crumbles
+		command = { type = independence which = HUN value = 1 when = 0}
+		command = { type = secederegion which = HUN value = "Romania" }
+		command = { trigger = { exists = UKR puppet = { country = UKR country = U08 } } type = secederegion which = UKR value = "Ukraine" when = 1 }
+	}
+}
+event = {
+	id = 2192512	# Trento joins Italy
+	country = AUS
+
+	trigger = { 
+		event = 2192507 # The Lansing Note
+		random = 60
+	}
+   
+	name = "EVT1914_2192512_NAME"
+	desc = "EVT1914_2192512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192512_ACTIONA" # The Empire Crumbles
+		command = { type = secedeprovince which = ITA value = 394 } #Belluno
+		command = { type = secedeprovince which = ITA value = 401 } #Trento
+		command = { type = secedeprovince which = ITA value = 402 } #Bolzano
+		command = { type = secedeprovince which = ITA value = 403 } #Capodistria
+		command = { type = secedeprovince which = ITA value = 404 } #Trieste
+		command = { type = secedeprovince which = ITA value = 405 } #Udine
+		command = { type = secedeprovince which = ITA value = 406 } #Pola
+	}
+}
+event = {
+	id = 2192513	# Military defeat
+	tag = { U09 AUS }
+
+	trigger = {
+		atwar = yes
+		OR = {
+			event = 2192506 # The Imperial Manifesto
+			AND = {
+				NOT = { control = { province = 195 data = -1 } }  # Vienna
+				NOT = { control = { province = 284 data = -1 } }  # Budapest
+				NOT = { control = { province = 208 data = -1 } }  # Bratislava
+				NOT = { control = { province = 207 data = -1 } }  # Praha
+			}
+			OR = {
+				lost_VP = { value = 50 }
+				lost_IC = { value = 50 }
+				}	
+			AND = {
+				ai = yes
+				random = 15
+				OR = {
+					# U08 out
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+			}
+			dissent = 60
+			not = { ic = 20 }
+		}
+	}
+	
+	name = "EVT1914_2192513_NAME"
+	desc = "EVT1914_2192513_DESC" 
+	style = 2
+	picture = "Peace_conference"
+	
+	date = { day = 29 month = june year = 1914 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2192513_ACTIONA" # We have been defeated
+		command = { trigger = { war = { country = U09 country = FRA } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = U09 country = RUS } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = U09 country = SOV } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = U09 country = SER } } type = peace which = SER value = 1 }
+		command = { trigger = { war = { country = U09 country = ITA } } type = peace which = ITA value = 1 }
+		command = { trigger = { war = { country = AUS country = FRA } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = AUS country = RUS } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = AUS country = SOV } } type = peace which = SOV value = 1 }
+		command = { trigger = { war = { country = AUS country = SER } } type = peace which = SER value = 1 }
+		command = { trigger = { war = { country = AUS country = ITA } } type = peace which = ITA value = 1 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = end_access which = U08 }
+		command = { trigger = { country = U09 } type = military_control which = U08 where = U09 value = 0 }
+		command = { trigger = { country = AUS } type = military_control which = U08 where = AUS value = 0 }		
+		command = { type = dissent value = -10 }
+		command = { type = access which = FRA }
+		command = { trigger = { alliance = { country = FRA country = ITA } } type = access which = ITA }
+		command = { trigger = { alliance = { country = FRA country = ENG } } type = access which = ENG }
+		command = { trigger = { alliance = { country = FRA country = RUS } } type = access which = RUS }
+	}
+}
+# 2192514
+event = {
+	id = 2192515	# Hungary is invaded
+	country = U09
+	
+	trigger = {
+		atwar = yes 
+		OR = {
+			control = { province = 212 data = RUS }
+			control = { province = 213 data = RUS }
+			control = { province = 214 data = RUS }
+			control = { province = 292 data = RUS }
+		}
+	}	
+
+	name = "EVT1914_2192515_NAME"
+	desc = "EVT1914_2192515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2192515_ACTIONA" # That's dangerous!
+		ai_chance= 95
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2192516	# Galicia is invaded !
+	country = U09
+
+	trigger = {
+		atwar = yes 
+		OR = {
+			control = { province = 235 data = RUS }
+			control = { province = 237 data = RUS }
+			control = { province = 239 data = RUS }
+			control = { province = 240 data = RUS }
+			control = { province = 242 data = RUS }
+			control = { province = 300 data = RUS }
+		}
+		NOT = { event = 2192532 } #Galician provinces become part of Russia
+	}
+	
+	name = "EVT1914_2192516_NAME"
+	desc = "EVT1914_2192516_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		ai_chance= 95
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2192517   # Przemysl is lost !
+	country = U09
+
+	trigger = { 
+		atwar = yes 
+		NOT = { 
+			control = { province = 239 data = -1 }
+			control = { province = 239 data = REB }
+			event = 2192510 #Galician provinces declare independence
+			event = 2192532 #Galician provinces become part of Russia
+		}
+	}
+	
+	name = "EVT1914_2192517_NAME"
+	desc = "EVT1914_2192517_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2192518   # Praha is lost !
+	country = U09
+
+	trigger = { 
+		atwar = yes 
+		NOT = { 
+			control = { province = 207 data = -1 }
+			control = { province = 207 data = REB }
+			event = 2192508 #Provisional Government of Czechoslovakia
+		}
+	}
+	
+	name = "EVT1914_2192518_NAME"
+	desc = "EVT1914_2192518_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2192519   # Bratislava is lost !
+	country = U09
+
+	trigger = { 
+		atwar = yes 
+		NOT = { 
+			control = { province = 208 data = -1 }
+			control = { province = 208 data = REB }
+			event = 2192508 #Provisional Government of Czechoslovakia
+		}
+	}
+	
+	name = "EVT1914_2192519_NAME"
+	desc = "EVT1914_2192519_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2192520   # Budapest is lost !
+	country = U09
+
+	trigger = { 
+		atwar = yes 
+		NOT = { 
+			control = { province = 284 data = -1 }
+			control = { province = 284 data = REB }
+			event = 2192511 #Hungary ends personnal union
+		}
+	}
+	
+	name = "EVT1914_2192520_NAME"
+	desc = "EVT1914_2192520_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 10 }
+	}
+}
+event = {
+	id = 2192521   # Vienna is lost !
+	country = U09
+
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 195 data = -1 } } 
+		NOT = { control = { province = 195 data = REB } } 
+	}
+   
+	name = "EVT1914_2192521_NAME"
+	desc = "EVT1914_2192521_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 10 }
+	}
+}
+event = {
+	id = 2192522   # Sarajevo is lost !
+	country = U09
+
+	trigger = { 
+		atwar = yes 
+		NOT = { 
+			control = { province = 355 data = -1 }
+			control = { province = 355 data = REB }
+			event = 2192509 #Serbs, Croats and Slovenes leave the Empire
+		}
+	}
+	
+	name = "EVT1914_2192522_NAME"
+	desc = "EVT1914_2192522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+#### In case Serbia accepts our ultimatum
+event = {
+	id = 2192523   # Serbia accepts our ultimatum
+	country = U09
+
+	# Triggered by SER 2084502
+   
+	name = "EVT1914_2192523_NAME"
+	desc = "EVT1914_2192523_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2192523_ACTIONA" # Perfect !
+		command = { type = dissent value = -5 }
+		command = { type = make_puppet which = SER }
+	}
+}
+event = {
+	id = 2192524   # Rumors of a Russia military buildup
+	country = U09
+
+	trigger = { 
+		flag = 1915_WWI
+		intelligence = { country = RUS value = 20 } 
+		NOT = { intelligence = { country = RUS value = 30 } }
+		random = 10
+		NOT = { event = 2192526 } #U09 Confirmed rumors of a Russia military buildup
+		NOT = { war = { country = U08 country = RUS } } 
+	}
+	
+	name = "EVT1914_2192524_NAME"
+	desc = "EVT1914_2192524_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2192524_ACTIONA" # Threat Russia
+		command = { type = trigger which = 2104539 }
+	}
+	action_b = {
+		name = "EVT1914_2192524_ACTIONB" # Acknowledge
+		command = { type = relation which = RUS value = 10 }
+	}
+}
+event = {
+	id = 2192525   # Confirmed rumors of a Russia military buildup
+	country = U09
+
+	trigger = { 
+		flag = 1915_WWI
+		intelligence = { country = RUS value = 30 } 
+		random = 10
+		NOT = { event = 2192526 } #U09 Confirmed rumors of a Russia military buildup
+		NOT = { war = { country = U09 country = RUS } } 
+	}
+   
+	name = "EVT1914_2192525_NAME"
+	desc = "EVT1914_2192525_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2192525_ACTIONA" # Threat Russia
+		command = { type = trigger which = 2104540 }
+	}
+	action_b = {
+		name = "EVT1914_2192525_ACTIONB" # Acknowledge and build up for war
+		command = { type = trigger which = 2191538 }
+	}
+}
+event = {
+	id = 2192526   # Confirmed rumors of a Russia military buildup
+	country = U09
+
+	# Triggered by U08 2191537
+	
+	name = "EVT1914_2192525_NAME"
+	desc = "EVT1914_2192525_DESC" 
+	style = 2
+	picture = "news_paper"   
+	
+	action_a = {
+		name = "EVT1914_2192525_ACTIONB" # Acknowledge and build up to counterattack
+		command = { }
+	}
+}
+event = {
+	id = 2192527   # Riots against Austro-Hungarian presence
+	country = U09
+
+	# Triggered by RUS
+	
+	name = "EVT1914_2084506_NAME"
+	desc = "EVT1914_2084506_DESC" 
+	style = 2
+	picture = "news_paper"   
+	
+	action_a = {
+		name = "ACTION_NAME_DAMN" # Acknowledge and build up to counterattack
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2192528	# Launch operation Friedrich (preemptive striker on Russia)
+	country = U09
+
+	decision = { 
+		flag = 1915_WWI 
+		OR = {
+			event = 2192526 # U09 Confirmed rumors of a Russia military buildup
+			event = 2191538 #U08 Confirmed rumors of a Russia military buildup
+		}
+		NOT = { war = { country = U09 country = RUS } } 
+	}
+	decision_trigger = { 
+		AND = {
+			month = 2	# Try in March... ?
+			year = 1915
+		}
+	}
+	trigger = { 
+		flag = 1915_WWI
+		OR = {
+			event = 2192526 # U09 Confirmed rumors of a Russia military buildup
+			event = 2191538 # U08 Confirmed rumors of a Russia military buildup
+		}
+		NOT = { war = { country = U08 country = RUS } } 
+		AND = {
+			month = 3	# Wait for april's unfreezings
+			year = 1915
+		}
+		random = 8
+	}	 
+	
+	name = "EVT1914_2192528_NAME"
+	desc = "EVT1914_2192528_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = june year = 1916 }
+	
+	action = {
+		name = "EVT1914_2192528_ACTIONA" # Declare war
+		command = { trigger = { NOT = { war = { country = U08 country = U09 } } } type = alliance which = U08 when = 1 }
+		command = { type = belligerence value = 20 }
+		command = { type = war which = RUS }
+		#command = { type = dissent value = -2 } #to counter DoW dissent
+		command = { trigger = { NOT = { ai = U08 } } type = clrflag which = 1915_WWI }
+		command = { type = clrflag which = FTL_serbia_accepted }
+	}
+}
+event = {
+	id = 2192529	# Agreement with Bulgaria
+	country =  U09
+
+	decision = {
+		exists = BUL
+		atwar = yes
+		NOT = { 
+			alliance = { country = BUL country = U09 } 
+			alliance = { country = BUL country = FRA }
+			event = 2192506 # The Imperial Manifesto
+			event = 2192513 # Military defeat
+			event = 2020502	#BUL Armistice
+		}
+	}
+	decision_trigger = {
+		relation = { which = BUL value = 50 }
+	}
+	trigger = { 
+		random = 30
+		exists = BUL
+		exists = SER
+		war = { country = FRA  country = U09 }
+		NOT = { 
+			alliance = { country = BUL country = U09 } 
+			alliance = { country = BUL country = FRA }
+			event = 2192506 # The Imperial Manifesto
+			event = 2192513 # Military defeat		
+			event = 2020502	#BUL Armistice
+		}
+	}
+	
+	name = "EVT1914_2192529_NAME"
+	desc = "EVT1914_2192529_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = february year = 1915 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1915 }
+	
+	action = {
+		name = "EVT1914_2192529_ACTIONA" # Propose treaty !
+		ai_chance = 100
+		command = { type = trigger which = 2020501 }
+	}
+}
+
+event = {
+	id = 2192531 # Franz Joseph is dead
+	random = no
+	country = U09
+
+	name = "EVT1914_908007_NAME"
+	desc = "EVT1914_908007_DESC"
+    picture = "minister_died"
+	style = 2
+	
+	trigger = { headofstate = 860001 } #Franz Joseph
+
+	
+	date = { day = 20 month = november year = 1916 }
+
+	action_a = {
+		name = "EVT1914_908007_ACTIONA"
+		command = { type = sleepminister which = 860001 } #Franz Joseph I
+		command = { type = headofstate which = 860002 } #Karl I
+        command = { type = headofgovernment which = 860007 } #Ottokar Czernin
+        command = { type = foreignminister which = 860013 } #Ottokar Czernin
+	}
+}
+#####################################################################
+event = {
+	id = 2192533	# Provisional government of Czechoslovakia
+	country = CZE
+
+	#triggered by AUS 2192508
+   
+	name = "EVT1914_2192533_NAME"
+	desc = "EVT1914_2192533_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = set_domestic which = democratic value = 10 } #definitevely democracy
+		command = { type = set_domestic which = political_left value = 5 } #market liberal
+		command = { type = headofstate which = 120141 } #T.G.Masaryk
+		command = { type = headofgovernment which = 120140 } #Karel Kramar
+		command = { type = foreignminister which = 120135 } #Eduard Benes
+		command = { type = armamentminister which = 120149 } #Alois Rasin
+		command = { type = ministerofsecurity which = 120152 } #Antonín Svehla
+		command = { type = chiefofstaff which = 120134 } #M.R.Stefanik
+		command = { type = chiefofarmy which = 120133 } #M.R.Stefanik
+		command = { type = set_relation which = FRA value = 200 }
+		command = { type = set_relation which = ENG value = 150 }
+		command = { type = set_relation which = USA value = 150 }
+		command = { type = set_relation which = ROM value = 150 }
+		command = { type = set_relation which = SER value = 100 }
+		command = { type = set_relation which = U08 value = -20 }
+		command = { type = set_relation which = HUN value = -150 }
+		command = { type = set_relation which = AUS value = -100 }
+
+	}
+}
+
+### Armistice with Italy
+event = {
+	id = 2192534
+	country = U09	
+	
+	name = "EVT1914_2192534_NAME"
+	desc = "EVT1914_2192534_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 }
+		command = { type = peace which = ITA value = 1 }
+	}
+}
+
+### The Annexation of Serbia
+event = {
+	id = 2192535
+	country = U09	
+	
+	trigger = {
+		#atwar = yes
+		control = { province = 338 data = -1 } #Belgrade controlled by Austria-Hungary
+		owned = { province = 338 data = -1 } #Belgrade owned by Austria-Hungary
+		NOT = { exists = SER }
+		NOT = { event = 2192506 } #U09 The Imperial Manifesto
+		NOT = { event = 2192513 } #U09 Military defeat	
+	}
+	name = "EVT1914_2192535_NAME"
+	desc = "EVT1914_2192535_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 } 
+		command = { trigger = { alliance = { country = U09 country = BUL } NOT = { event = 2020502 } } type = secedeprovince which = BUL value = 328 } #Kumanovo
+		command = { trigger = { alliance = { country = U09 country = BUL } NOT = { event = 2020502 } } type = secedeprovince which = BUL value = 330 } #Nis
+		command = { trigger = { alliance = { country = U09 country = BUL } NOT = { event = 2020502 } } type = secedeprovince which = BUL value = 331 } #Pirot
+		command = { trigger = { alliance = { country = U09 country = BUL } NOT = { event = 2020502 } } type = secedeprovince which = BUL value = 333 } #Skopje
+		command = { trigger = { alliance = { country = U09 country = BUL } NOT = { event = 2020502 } } type = secedeprovince which = BUL value = 334 } #Tetovo
+		command = { trigger = { alliance = { country = U09 country = BUL } NOT = { event = 2020502 } } type = trigger which = 2020506 } #BUL The annexation of Serbia
+	}
+}
+
+###Armistice with Russia
+event = {
+	id = 2192536
+	country = U09	
+	
+	name = "EVT1914_2192536_NAME"
+	desc = "EVT1914_2192536_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 }
+		command = { trigger = { exists = RUS } type = peace which = RUS value = 1 }
+		command = { trigger = { exists = SOV } type = peace which = SOV value = 1 }
+	}
+}
+
+### Armistice with France
+event = {
+	id = 2192537
+	country = U09
+	
+	name = "EVT1914_2191552_NAME"
+	desc = "EVT1914_2191552_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 }
+		command = { type = peace which = FRA value = 1 }
+	}
+}
+
+event = {
+	id = 2192538	# Bulgaria offers resources in exchange for Vardar Macedonia
+	country = U09
+	
+	#triggered by 2020504 BUL
+	
+	name = "EVT1914_2192538_NAME" #Bulgaria offers resources in exchange for Vardar Macedonia
+	desc = "EVT1914_2192538_DESC" 
+	style = 2
+	picture = "Rapallo_conference"
+	
+	action = {
+		ai_chance = 80
+		name = "ACTION_NAME_OK" # Ok
+		command = { type = relation which = BUL value = 50 }
+		command = { type = removeclaim which = 328 } #Kumanovo
+		command = { type = removeclaim which = 333 } #Skopje
+		command = { type = removeclaim which = 334 } #Tetovo
+		command = { type = secedeprovince which = BUL value = 328 when = 1 } #Kumanovo
+		command = { type = secedeprovince which = BUL value = 333 when = 1 } #Skopje
+		command = { type = secedeprovince which = BUL value = 334 when = 1 } #Tetovo
+		command = { type = trade which = BUL where = U09 money = -0.1 when = 1800 value = 1 } #5 years
+		command = { type = trade which = BUL where = U09 supplies = -5 when = 1800 value = 1 } #5 years
+	}
+	action = {
+		ai_chance = 20
+		name = "ACTION_NAME_REFUSE" # 
+		command = { type = relation which = BUL value = -10 }
+		command = { type = revolt which = 328 } #Kumanovo
+		command = { type = revolt which = 333 } #Skopje
+		command = { type = revolt which = 333 } #Skopje
+	}
+}
+
+event = {
+	id = 2192539	# The future of Montenegro
+	country = U09
+	
+	trigger = {
+		NOT = { atwar = U09 }
+		NOT = { exists = MTN }
+		NOT = { event = 2192506 } #U09 The Imperial Manifesto
+		NOT = { event = 2192513 } #U09 Military defeat
+		owned = { province = 332 data = U09 } #Cetinje
+		owned = { province = 335 data = U09 } #Prijepolje
+		control = { province = 332 data = U09 } #Cetinje
+		control = { province = 335 data = U09 } #Prijepolje
+	}
+	
+	name = "EVT1914_2192539_NAME" #The future of Montenegro
+	desc = "EVT1914_2192539_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		trigger = { NOT = { government = communist } }
+		ai_chance = 10
+		name = "EVT1914_2192539_ACTIONA" #Release Montenegro as puppet (without annexing provinces)
+		command = { type = dissent value = -0.5 }
+		command = { type = removeclaim which = 332 } #Cetinje
+		command = { type = removeclaim which = 335 } #Prijepolje
+		command = { type = independence which = MTN value = 1 when = 0 }
+		command = { type = make_puppet which = MTN }
+		command = { type = event which = 2192540 where = MTN when = 1 } #The future of Montenegro
+	}
+	action = {
+		trigger = { NOT = { government = communist } }
+		ai_chance = 90
+		name = "EVT1914_2192539_ACTIONB" #Release Montenegro as puppet but keep control of Prijepolje
+		command = { type = dissent value = -1 }
+		command = { type = addclaim which = 335 } #Prijepolje
+		command = { type = removeclaim which = 332 } #Cetinje
+		command = { type = independence which = MTN value = 1 when = 0 }
+		command = { type = make_puppet which = MTN }
+		command = { type = setflag which = no_Prijepolje }
+		command = { type = event which = 2192540 where = MTN when = 1 } #The future of Montenegro
+	}
+	action = {
+		ai_chance = 0
+		name = "EVT1914_2192539_ACTIONC" #Annex the whole region
+		command = { type = addclaim which = 332 } #Cetinje
+		command = { type = addclaim which = 335 } #Prijepolje
+		command = { type = dissent value = 3 } #dissent among the slavs in the empire
+		command = { type = revolt which = 332 } #Cetinje
+	}
+}
+
+event = {
+	id = 2192540	# Nikola I is restored as King of Montenegro
+	country = MTN
+	
+	name = "EVT1914_2192540_NAME" # King Nikola I is restored
+	desc = "EVT1914_2192540_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_OK" #Ok
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 } #Paternal Autocracy
+		command = { type = headofstate which = 390056 } #Nikola I
+		command = { trigger = { flag = no_Prijepolje } type = secedeprovince which = U09 value = 335 when = 1 } #Prijepolje
+		command = { trigger = { flag = no_Prijepolje } type = clrflag which = no_Prijepolje }
+	}
+}
+
+event = {
+	id = 2192541	# The future of Albania
+	country = U09
+	
+	trigger = {
+		NOT = { atwar = U09 }
+		NOT = { exists = ALB }
+		NOT = { event = 2192506 } #U09 The Imperial Manifesto
+		NOT = { event = 2192513 } #U09 Military defeat
+		owned = { province = 359 data = U09 } #Tirana
+		control = { province = 359 data = U09 } #Tirana
+	}
+	
+	name = "EVT1914_2192541_NAME" # The future of Albania
+	desc = "EVT1914_2192541_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 46
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		trigger = { NOT = { government = communist } }
+		ai_chance = 80
+		name = "EVT1914_2192541_ACTIONA" #Release Albania as puppet under King Wilhelm of Wied
+		command = { type = dissent value = -1 }
+		command = { type = relation which = U08 value = 20 }
+		command = { type = removeclaim which = 359 } #Tirana
+		command = { type = removeclaim which = 360 } #Korce
+		command = { type = removeclaim which = 361 } #Shkoder
+		command = { type = removeclaim which = 362 } #Vlore
+		command = { type = independence which = ALB value = 1 when = 0 }
+		command = { type = make_puppet which = ALB }
+		command = { type = event which = 2058502 where = ALB when = 1 } #Wilhelm of Wied restored as King
+	}
+	action = {
+		trigger = { NOT = { government = communist } }
+		ai_chance = 19
+		name = "EVT1914_2192541_ACTIONB" #Release Albania as puppet under Ahmet Bej Zogolli as new King
+		command = { type = dissent value = -1 }
+		command = { type = removeclaim which = 359 } #Tirana
+		command = { type = removeclaim which = 360 } #Korce
+		command = { type = removeclaim which = 361 } #Shkoder
+		command = { type = removeclaim which = 362 } #Vlore
+		command = { type = independence which = ALB value = 1 when = 0 }
+		command = { type = make_puppet which = ALB }
+		command = { type = event which = 2058503 where = ALB when = 1 } #Ahmet Bej Zogolli is the new King Zog I
+	}
+	action = {
+		ai_chance = 0
+		name = "EVT1914_2192539_ACTIONC" #Annex the whole region
+		command = { type = addclaim which = 359 } #Tirana
+		command = { type = addclaim which = 360 } #Korce
+		command = { type = addclaim which = 361 } #Shkoder
+		command = { type = addclaim which = 362 } #Vlore
+		command = { type = dissent value = 5 } #dissent among the slavs in the empire
+		command = { type = revolt which = 359 } #Tirana
+	}
+	action = {
+		trigger = { 
+			alliance = { country = BUL country = U09 }
+			NOT = { event = 2020502 } #BUL Armistice
+			NOT = { event = 2020503 } #BUL Treaty of Neuilly
+			NOT = { government = { type = communist country = BUL } }
+		}
+		ai_chance = 1
+		name = "EVT1914_2192541_ACTIOND" #Give it to Bulgaria in exchange for resources
+		command = { type = dissent value = -2 }
+		command = { type = relation which = BUL value = 20 }
+		command = { type = removeclaim which = 359 } #Tirana
+		command = { type = removeclaim which = 360 } #Korce
+		command = { type = removeclaim which = 361 } #Shkoder
+		command = { type = removeclaim which = 362 } #Vlore
+		command = { type = secedeprovince which = BUL value = 359 when = 1 } #Tirana
+		command = { type = secedeprovince which = BUL value = 360 when = 1 } #Korce
+		command = { type = secedeprovince which = BUL value = 361 when = 1 } #Shkoder
+		command = { type = secedeprovince which = BUL value = 362 when = 1 } #Vlore
+		command = { type = trigger which = 2020505 }
+	}
+}
+
+event = {
+	id = 2192542	# Bulgaria refused our offer
+	country = U09
+	
+	name = "EVT1914_2192542_NAME"
+	desc = "EVT1914_2192542_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		trigger = { NOT = { government = communist } }
+		ai_chance = 80
+		name = "EVT1914_2192541_ACTIONA" #Release Albania as puppet under King Wilhelm of Wied
+		command = { type = dissent value = -1 }
+		command = { type = relation which = U08 value = 20 }
+		command = { type = removeclaim which = 359 } #Tirana
+		command = { type = removeclaim which = 360 } #Korce
+		command = { type = removeclaim which = 361 } #Shkoder
+		command = { type = removeclaim which = 362 } #Vlore
+		command = { type = independence which = ALB value = 1 when = 0 }
+		command = { type = make_puppet which = ALB }
+		command = { type = event which = 2058502 where = ALB when = 1 } #Wilhelm of Wied restored as King
+	}
+	action = {
+		trigger = { NOT = { government = communist } }
+		ai_chance = 20
+		name = "EVT1914_2192541_ACTIONB" #Release Albania as puppet under Ahmet Bej Zogolli as new King
+		command = { type = dissent value = -1 }
+		command = { type = removeclaim which = 359 } #Tirana
+		command = { type = removeclaim which = 360 } #Korce
+		command = { type = removeclaim which = 361 } #Shkoder
+		command = { type = removeclaim which = 362 } #Vlore
+		command = { type = independence which = ALB value = 1 when = 0 }
+		command = { type = make_puppet which = ALB }
+		command = { type = event which = 2058503 where = ALB when = 1 } #Ahmet Bej Zogolli is the new King Zog I
+	}
+	action = {
+		ai_chance = 0
+		name = "EVT1914_2192539_ACTIONC" #Annex the whole region
+		command = { type = addclaim which = 359 } #Tirana
+		command = { type = addclaim which = 360 } #Korce
+		command = { type = addclaim which = 361 } #Shkoder
+		command = { type = addclaim which = 362 } #Vlore
+		command = { type = dissent value = 5 } #dissent among the slavs in the empire
+		command = { type = revolt which = 359 } #Tirana
+	}
+}

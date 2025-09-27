@@ -1,0 +1,154 @@
+# Austrian 1914 War against Italy
+# 
+# 
+#####################################
+
+
+max_front_ratio = 1.2
+max_front_ratios = { 	
+	ITA = 2
+}
+max_garrison_prop = 0.60
+min_garrison_prop = 0.20
+neutrality = 20.000 
+war = 50
+
+target = {  
+# russian front
+	228 = 50
+	244 = 150
+	618 = 150
+	
+	# romanian front
+	297 = 50
+	309 = 50
+	316 = 50
+
+	# serbia
+	338 = 50
+	327 = 50
+	333 = 150
+	
+	# italy
+	398 = 50
+	400 = 50
+	410 = 150
+	419 = 150
+	
+	#Beaches at Adriatic coast
+	339 = 50 #Tirana
+	343 = 50 #Dubrovnik
+					
+	
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 1.0
+	home_peace_cap 		= 10
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0.0
+	revolt_risk_mult	= 0.1
+
+	# PRIORITIES:
+	beach			= 50	# Beach level 2
+	capital			= 4	# Our capital
+	human_border	= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	reserves 		= 5	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 0	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		RUS = 10
+		SER = 10
+		U08 = -1
+		ITA = 1
+		BUL = 2
+		ROM = 2
+		SCH = 1
+	}
+	ignore = { }
+	province_priorities = {
+		#russian Border
+		235 = 15
+		237 = 15
+		239 = 15
+		240 = 15
+		300 = 15
+		
+		#serbian  Border
+		335 = 8
+		336 = 8
+		337 = 8
+		
+		
+	}
+	area_multiplier = {
+		
+		
+		
+		
+	}
+}
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+ 
+	enemy_handicap = {
+		
+	} 
+      	passivity = {
+
+	} 
+	province_priorities = {
+	
+	# russian front
+	245 = 100
+	246 = 100
+	618 = 100
+	614 = 100
+	
+	
+	# serbian front
+	330 = 100
+	329 = 100
+	338 = 100
+	342 = 100
+	
+	
+	# Romania Bulgaria
+	321 = 50
+	325 =  50
+	326 =  50
+	
+	297 =  50	
+	310 =  50
+	311 =  150
+	316 =  50
+
+	# Italy
+	
+	400 =  50
+	408 =  50
+	419 =  190
+	399 =  90
+	396 = 100
+	422 = 80
+	
+	
+
+
+	}
+}
+
+
+###EOF

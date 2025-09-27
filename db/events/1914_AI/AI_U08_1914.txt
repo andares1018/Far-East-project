@@ -1,0 +1,232 @@
+## U08 chooses warplan
+
+event = {
+	id = 3191551	
+	random = no
+	country = U08
+
+	trigger = {
+		ai = U08
+		year = 1914
+		NOT = { war = { country = U09 country = U08 } }		
+		}
+   
+	name = "AI_EVENT"
+	style = 0
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {		 # Konprinz Plan
+		ai_chance = 10
+		command = { type = local_setflag which = Kronprinz }
+		command = { type = ai which = "switch/U08_1914_Kronprinz.ai" } 	
+		}
+		
+	action = {		# Schlieffen Plan
+		ai_chance = 60
+		command = { type = local_setflag which = Schlieffen } 
+		command = { type = ai which = "switch/U08_1914_Schlieffen.ai" }
+		}
+		
+	action = { 		# Expanded Schlieffen Plan
+		ai_chance =  20
+		command = { type = local_setflag which = SchlieffenExp } 
+		command = { type = ai which = "switch/U08_1914_SchlieffenExp.ai" }		
+		}
+		
+	action = {		# Rupprecht Plan
+		ai_chance =  10
+		command = { type = local_setflag which = Rupprecht }
+		command = { type = ai which = "switch/U08_1914_Rupprecht.ai" }
+		}
+}
+
+
+## U08 executes warplan
+
+# in case of war against FRA and RUS
+
+event = {
+	id = 3191552	
+	random = no
+	country = U08
+
+	trigger = {
+		ai = U08
+		OR = {
+				event = 2002501	# FRA German demands neutrality
+				AND = {		
+					flag = 1915_WWI
+					atwar = FRA
+					}		
+				}
+			}
+ 
+	name = "AI_EVENT" 
+	style = 0
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = { trigger = { local_flag = Kronprinz }
+		name = "EVT1914_2191505_ACTIONA" # Konprinz Plan
+		command = { type = belligerence value = 5 }
+		command = { type = war which = FRA }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { trigger = { NOT = { flag = 1915_WWI } } type = trigger which = 2002556 } #The Franco-Russian Alliance; triggers only if war starts in 1914 (historical)
+		command = { type = clrflag which = 1915_WWI }
+		command = { type = local_clrflag which = Kronprinz }
+	}
+	
+	action = { trigger = { local_flag = Schlieffen }
+		name = "EVT1914_2191505_ACTIONB" # Schlieffen Plan
+		command = { type = belligerence value = 10 }
+		command = { type = war which = FRA }
+		command = { type = war which = BEL }
+		command = { type = war which = LUX }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { trigger = { NOT = { flag = 1915_WWI } } type = trigger which = 2002556 } #The Franco-Russian Alliance; triggers only if war starts in 1914 (historical)
+		command = { type = clrflag which = 1915_WWI }
+		command = { type = local_clrflag which = Schlieffen }
+	}
+	
+	action = { trigger = { local_flag = SchlieffenExp }
+		name = "EVT1914_2191505_ACTIOND" # Expanded Schlieffen Plan
+		command = { type = belligerence value = 15 }
+		command = { type = war which = FRA }
+		command = { type = war which = BEL }
+		command = { type = war which = LUX }
+		command = { type = war which = HOL }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { trigger = { NOT = { flag = 1915_WWI } } type = trigger which = 2002556 } #The Franco-Russian Alliance; triggers only if war starts in 1914 (historical)
+		command = { type = clrflag which = 1915_WWI }
+		command = { type = local_clrflag which = SchlieffenExp }
+	}
+
+	action = { trigger = { local_flag = Rupprecht }
+		name = "EVT1914_2191505_ACTIONC" # Rupprecht Plan
+		command = { type = belligerence value = 5 }
+		command = { type = war which = FRA }
+		command = { trigger = { NOT = { war = { country = FRA country = SCH } } } type = war which = SCH }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { trigger = { NOT = { flag = 1915_WWI } } type = trigger which = 2002556 } #The Franco-Russian Alliance; triggers only if war starts in 1914 (historical)
+		command = { type = clrflag which = 1915_WWI }
+		command = { type = local_clrflag which = Rupprecht }
+	}
+}
+
+
+# in case of war against RUS only
+
+event = {
+	id = 3191553	
+	random = no
+	country = U08
+
+	trigger = {
+		ai = U08
+		flag = 1915_WWI
+		atwar = RUS		
+			}
+ 
+	name = "AI_EVENT" 
+	style = 0
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = { 
+		name = "EVT1914_2191505_ACTIONA" # Konprinz Plan
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 8300108 } #Mobilize?
+		command = { type = ai which = "switch/U08_1914_Kronprinz.ai" } 
+		command = { type = clrflag which = 1915_WWI }
+		command = { type = local_clrflag which = Kronprinz }
+		command = { type = local_clrflag which = Schlieffen }		
+		command = { type = local_clrflag which = SchlieffenExp }		
+		command = { type = local_clrflag which = Rupprecht }		
+	}
+}
+
+
+# If U08 and U09 both AI-controlled U08 takes military control over U09
+
+event = {
+	id = 3191554
+	random = no
+	country = U09
+
+	trigger = { 
+			ai = U08
+			ai = U09
+			alliance = { country = U08 country = U09 }
+			}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		command = { type = ai which = "switch/U09_1914ExpForcesToGER.ai" }
+		command = { type = ai which = "switch/U09_garrison.ai" }	
+		#command = { type = military_control which = U08 where = U09 value = 1 }	
+	}
+}
+
+######################################################################################
+# Build some INF units with H-Arm and Arm brigades when required techs are available #
+######################################################################################
+event = {
+	id = 3191555
+	random = no
+	country = U08
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = super_heavy_armor when = 6 cost = -0.1 where = 60 }
+		command = { type = build_brigade value = super_heavy_armor when = 6 cost = -0.1 where = 60 }
+		command = { type = build_brigade value = super_heavy_armor when = 6 cost = -0.1 where = 60 }
+	}
+}
+
+event = {
+	id = 3191556
+	random = no
+	country = U08
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = heavy_armor when = 6 cost = -0.1 where = 60 }
+		command = { type = build_brigade value = heavy_armor when = 6 cost = -0.1 where = 60 }
+		command = { type = build_brigade value = heavy_armor when = 6 cost = -0.1 where = 60 }
+	}
+}
+######################################################################################

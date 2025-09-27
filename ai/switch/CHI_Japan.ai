@@ -1,0 +1,42 @@
+# China at war against Japan
+
+neutrality = 100.000 
+war = 20
+exp_force_ratio = 0.0
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	JAP = 150
+}
+
+befriend = {
+	CSX = 100
+	SIK = 100
+	CXB = 100
+	CYN = 100
+}
+protect = {
+	CSX = 100
+	SIK = 100
+	CXB = 100
+	CYN = 100
+	CGX = 100
+}
+#target = { }
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	beach		= 100
+	capital		= 70	# Our capital
+	
+	# PRIORITIES:
+	province_priorities = {	1241 = 400 1328 = 400 1333 = 400 1334 = 400 1338 = 400 1358 = 400 1367 = 400 1369 = 400 1331 = -1 }
+	# Borders with specific countries
+}
+front = { 
+
+	province_priorities = { 1241 = 100 1328 = 100 1333 = 100 1334 = 100 1338 = 100 1358 = 100 1367 = 100 1369 = 100	}
+} 

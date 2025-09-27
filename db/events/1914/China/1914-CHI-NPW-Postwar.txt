@@ -1,0 +1,1150 @@
+# National Protection War - Postwar Peace Events
+# By Limith
+#-Beiyang Reformation-------------------------------------
+# U74 133011402 Death of the Great Chinese Empire - Forming Beiyang China
+# UCH 133011403 Death of the Yuan Shikai - The Anhui Era
+# UCH 133011604 Reformation of the Beiyang Government
+# UCH 133011200 Zhili Clique Rises (MAN used Temporarily)
+# MAN 133011201 Zhili Clique Rises (MAN -> U36)
+#-National Protection Alliance Events---------------------
+# CHI 133011603 Collapse of the First United Front (disbands the NPA)
+# *** 133011605 Guangxi Independence Event
+# *** 133011606 Yunnan Independence Event
+# *** 133011607 Breakup of Alliances
+# *** 133011608 Alternative Breakup Events
+# *** 133011609 Guangxi Independence Event
+#-Minister Changes----------------------------------------
+# CHI 133011401 Sun Zhongshan Returns
+# CYN 133011404 Death of Cai E
+# *** 133011405 Death of Cai E
+# CHI 133011406 Yunnan Domination (SZS Dead)
+# UCH 133011418 Wu Tingfang leaves the Republic of China
+#-Return of Rebel Territory-------------------------------
+# REB 133911000 AI_EVENT
+
+#######################
+# Beiyang Reformation #
+#######################
+
+# Death of the Great Chinese Empire - Forming Beiyang China
+event = {
+	id = 133011402
+	random = no
+	country = U74
+	
+	trigger = {
+		or = {
+			and = {
+				not = {
+					region = { region = "China" country = U74 data = 1 value = 30 }
+				}
+				exists = U74
+			}
+			and = {
+				not = {
+					region = { region = "China" country = UCH data = 1 value = 30 }
+				}
+				exists = UCH
+			}
+			dissent = 55
+		}
+	}
+	
+	name = EVT1914_133011402_NAME
+	desc = EVT1914_133011402_DESC
+	
+	picture = "ccip_npw"
+	style = 2
+	
+	date = { day = 0 month = 5 year = 1914 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1918 }
+	
+	action = {
+		name = EVT1914_133011402_ACTIONA #"There is no other choice"
+		command = { type = country which = UCH }
+		command = { type = name where = UCH which = UCH_CBY }
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { war = { country = CHI country = UCH } } type = peace which = CHI value = 1}
+		command = { trigger = { war = { country = CYN country = UCH } } type = peace which = CYN value = 1} #AHC
+		command = { trigger = { exists = CYN } type = inherit which = CYN value = 1} # AHC
+		command = { trigger = { war = { country = CXB country = UCH } } type = peace which = CXB value = 1}
+		command = { trigger = { war = { country = SIK country = UCH } } type = peace which = SIK value = 1}
+		command = { type = belligerence value = -50 }
+		command = { type = event which = 133011403 where = UCH when = 5 }
+		command = { type = trigger which = 133911000 }
+	}
+}
+
+# Death of the Yuan Shikai - The Anhui Era
+event = {
+	id = 133011403
+	random = no
+	country = UCH
+
+	#Triggered
+
+	name = EVT1914_133011403_NAME
+	desc = EVT1914_133011403_DESC
+
+	picture = "ccip_yuandead"
+	style = 2
+
+	action = {
+		name = EVT1914_133011403_ACTIONA #"He shall be remembered as a tyrant forevermore"
+			command = { type = secedearea which = CHI value = "Yunnan" when = 1 }
+		command = { type = secedeprovince which = CHI value = 1290 when = 1 }
+		command = { type = secedeprovince which = CHI value = 1294 when = 1 }
+		command = { type = secedeprovince which = CHI value = 1293 when = 1 }
+		command = { type = secedeprovince which = CHI value = 1292 when = 1 }
+		command = { type = secedeprovince which = CHI value = 1291 when = 1 }
+		command = { type = secedearea which = CHI value = "Guangxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Guangdong" when = 1 }
+		command = { type = sleepevent which = 133011022 } # Unhappiness over 21
+		command = { type = sleepevent which = 133011001 } # Government Denounced
+		command = { trigger = { not = { flag = 1913loan_revoked } } type = trigger which = 133011807 } # Continue Debt?
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = freedom value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 1325200 } # Li Yuanhong
+		command = { type = headofgovernment which = 1325120 } # Duan Qirui, Grouped under FT
+		command = { type = foreignminister which = 1325203 } # Tang Shaoyi Replaced by Lu Zhengxiang 1325117
+		command = { type = armamentminister which = 1325202 } # Chen Jintao Replaced in 1917 due to corruption, joined WJW
+		command = { type = ministerofsecurity which = 1325201 } # Xu Shiying Replaced in 1917 due to corruption, join foreignminister 1936 KMT.
+		command = { type = ministerofintelligence which = 1325123 } # Duan Qirui Replaced by Zhou Ziqi 1325104 in 1918-1920
+		command = { type = chiefofstaff which = 1325106 } # Duan Qirui
+		command = { type = chiefofarmy which = 1325107 } # Duan Qirui
+		command = { type = chiefofnavy which = 1325213 } # Sa Zhenbing Fairly stable
+		command = { type = chiefofair which = 1325109 } # Duan Qirui
+		command = { type = sleepminister which = 1325100 }
+		command = { type = sleepminister which = 1325101 }
+		#command = { type = sleepminister which = 1325102 }
+		command = { type = sleepminister which = 1325103 }
+		#command = { type = sleepminister which = 1325104 }
+		command = { type = sleepminister which = 1325105 }
+		#command = { type = sleepminister which = 1325106 }
+		#command = { type = sleepminister which = 1325107 }
+		#command = { type = sleepminister which = 1325108 }
+		#command = { type = sleepminister which = 1325109 }
+		#command = { type = sleepminister which = 1325110 }
+		#command = { type = sleepminister which = 1325111 }
+		#command = { type = sleepminister which = 1325112 }
+		command = { type = sleepminister which = 1325113 }
+		#command = { type = sleepminister which = 1325114 }
+		#command = { type = sleepminister which = 1325115 }
+		command = { type = sleepminister which = 1325116 }
+		command = { type = sleepminister which = 1325117 }
+		#command = { type = sleepminister which = 1325118 }
+		#command = { type = sleepminister which = 1325119 }
+		#command = { type = sleepminister which = 1325120 }
+		#command = { type = sleepminister which = 1325121 }
+		command = { type = sleepminister which = 1325122 }
+		#command = { type = sleepminister which = 1325123 }
+		command = { type = sleepteam which = 1325017 }
+		command = { type = dissent value = -5 }
+		command = { type = secedearea which = UCH value = "Anhui" when = 2 }
+		command = { type = event which = 133011603 where = CHI when = 2 }
+		command = { type = flag_ext where = UCH which = "_AHC" }
+	}
+}
+
+# Reformation of the Beiyang Government
+event = {
+	id = 133011604
+	random = no
+	country = UCH
+	
+	# Triggered
+	
+	name = EVT1914_133011604_NAME
+	desc = EVT1914_133011604_DESC
+
+	style = 2
+	picture = "ccip_npw"
+	action = {
+		name = ACTION_NAME_PERFECT
+		command = { type = addcore which = 1356 }
+		command = { type = addcore which = 1333 }
+		command = { type = addcore which = 1261 }
+		command = { type = addcore which = 1303 }
+		command = { type = addcore which = 1339 }
+		command = { type = addcore which = 1334 }
+		command = { type = addcore which = 1336 }
+		command = { type = addcore which = 1340 }
+		command = { type = addcore which = 1341 }
+		command = { type = addcore which = 1319 }
+		command = { type = addcore which = 1322 }
+		command = { type = addcore which = 1324 }
+		command = { type = addcore which = 1325 }
+		command = { type = addcore which = 1326 }
+		command = { type = addcore which = 1316 }
+		command = { type = addcore which = 1317 }
+		command = { type = addcore which = 1344 }
+		command = { type = addcore which = 1342 }
+		command = { type = addcore which = 1337 }
+		command = { type = addcore which = 1338 }
+		command = { type = addcore which = 1345 }
+		command = { type = addcore which = 1346 }
+		command = { type = addcore which = 1347 }
+		command = { type = addcore which = 1348 }
+		command = { type = addcore which = 1357 }
+		command = { type = addcore which = 1358 }
+		command = { type = addcore which = 1359 }
+		command = { type = addcore which = 1360 }
+		command = { type = addcore which = 1354 }
+		command = { type = addcore which = 1353 }
+		command = { type = addcore which = 1318 }
+		command = { type = addcore which = 1355 }
+		command = { type = addcore which = 1309 }
+		command = { type = addcore which = 1311 }
+		command = { type = addcore which = 1312 }
+		command = { type = addcore which = 1310 }
+		command = { type = addcore which = 1304 }
+		command = { type = addcore which = 1302 }
+		command = { type = addcore which = 1296 }
+		command = { type = addcore which = 1297 }
+		command = { type = addcore which = 1298 }
+		command = { type = addcore which = 1305 }
+		command = { type = addcore which = 1306 }
+		command = { type = addcore which = 1313 }
+		command = { type = addcore which = 1307 }
+		command = { type = addcore which = 1308 }
+		command = { type = addcore which = 1349 }
+		command = { type = addcore which = 1335 }
+		command = { type = addcore which = 1314 }
+		command = { type = addcore which = 1315 }
+		command = { type = addcore which = 1267 }
+		command = { type = addcore which = 1320 }
+		command = { type = addcore which = 1299 }
+		command = { type = addcore which = 1343 }
+		command = { type = addcore which = 1300 }
+		command = { type = addcore which = 1301 }
+		command = { type = addcore which = 1350 }
+		command = { type = addcore which = 1351 }
+		command = { type = addcore which = 1352 }
+		command = { type = addcore which = 1321 }
+		command = { type = addcore which = 1323 }
+		command = { type = addcore which = 1259 }
+		command = { type = addcore which = 1260 }
+		command = { type = addcore which = 1255 }
+		command = { type = addcore which = 1241 }
+		command = { type = addcore which = 1247 }
+		command = { type = addcore which = 1246 }
+		command = { type = addcore which = 1251 }
+		command = { type = addcore which = 1242 }
+		command = { type = addcore which = 1254 }
+		command = { type = addcore which = 1332 }
+		command = { type = addcore which = 1252 }
+		command = { type = addcore which = 1253 }
+		command = { type = addcore which = 1248 }
+		command = { type = addcore which = 1249 }
+		command = { type = addcore which = 1250 }
+		command = { type = addcore which = 1327 }
+		command = { type = addcore which = 1243 }
+		command = { type = addcore which = 1244 }
+		command = { type = addcore which = 1245 }
+		command = { type = addcore which = 1329 }
+		command = { type = addcore which = 1330 }
+		command = { type = addcore which = 1202 }
+		command = { type = addcore which = 1204 }
+		command = { type = addcore which = 1212 }
+		command = { type = addcore which = 1205 }
+		command = { type = addcore which = 1199 }
+		command = { type = addcore which = 1203 }
+		command = { type = addcore which = 1200 }
+		command = { type = addcore which = 1206 }
+		command = { type = addcore which = 1213 }
+		command = { type = addcore which = 1237 }
+		command = { type = addcore which = 1207 }
+		command = { type = addcore which = 1220 }
+		command = { type = addcore which = 1218 }
+		command = { type = addcore which = 1236 }
+		command = { type = addcore which = 1201 }
+		command = { type = addcore which = 1208 }
+		command = { type = addcore which = 1209 }
+		command = { type = addcore which = 1210 }
+		command = { type = addcore which = 1211 }
+		command = { type = addcore which = 1214 }
+		command = { type = addcore which = 1215 }
+		command = { type = addcore which = 1216 }
+		command = { type = addcore which = 1235 }
+		command = { type = addcore which = 1217 }
+		command = { type = addcore which = 1197 }
+		command = { type = addcore which = 1198 }
+		command = { type = addcore which = 1263 }
+		command = { type = addcore which = 1256 }
+		command = { type = addcore which = 1238 }
+		command = { type = addcore which = 1240 }
+		command = { type = addcore which = 1239 }
+		command = { type = addcore which = 1258 }
+		command = { type = addcore which = 1257 }
+		command = { type = addcore which = 1328 } # Shangdong
+		command = { type = addcore which = 1331 }
+		command = { trigger = { event = 133011051 } type = add_corps which = "Hunan Difangjun" where = 1308 } # Hunan
+		command = { trigger = { event = 133011051 } type = add_division which = "Hunan Lujun" value = infantry when = 2 }
+		command = { trigger = { not = { event = 133011051 } } type = unlock_division which = 22000 value = 10111 }
+		command = { trigger = { event = 133011052 } type = add_corps which = "Jiangxi Difangjun" where = 1352 } # Jiangxi
+		command = { trigger = { event = 133011052 } type = add_division which = "Jiangxi Lujun" value = infantry when = 1 }
+		command = { trigger = { not = { event = 133011052 } } type = unlock_division which = 22000 value = 10041 }
+		command = { trigger = { or = { event = 133011053 event = 133011055 } } type = add_corps which = "Jiangsu Huai-jun" where = 1337 } # Jiangsu
+		command = { trigger = { or = { event = 133011053 event = 133011055 } } type = add_division which = "Jiangsu Lujun" value = infantry when = 1 }
+		command = { trigger = { not = { or = { event = 133011053 event = 133011055 } } } type = unlock_division which = 22000 value = 10021 } # SHANGHAI BUND IS NOT UNLOCKED!
+		command = { trigger = { or = { event = 133011054 event = 133011056 } } type = add_corps which = "Shanxi Mingzhongjituan" where = 1252 } # Shanxi
+		command = { trigger = { or = { event = 133011054 event = 133011056 } } type = add_division which = "Shanxi Mingbin" value = militia when = 1 }
+		command = { trigger = { not = { or = { event = 133011054 event = 133011056 } } } type = unlock_division which = 22000 value = 10141 }
+		command = { trigger = { event = 133011058 } type = add_corps which = "Fujian Difangjun" where = 1360 } # Fujian
+		command = { trigger = { event = 133011058 } type = add_division which = "Fujian Mingbin" value = militia when = 0 }
+		command = { trigger = { not = { event = 133011058 } } type = unlock_division which = 22000 value = 10101 }
+		command = { trigger = { event = 133011059 } type = add_corps which = "Zhejiang Difangjun" where = 1345 } # Zhejiang
+		command = { trigger = { event = 133011059 } type = add_division which = "Zhejiang Lujun" value = infantry when = 1 }
+		command = { trigger = { not = { event = 133011059 } } type = unlock_division which = 22000 value = 10061 }
+		command = { trigger = { event = 133011060 } type = add_corps which = "Hubei Huai-jun" where = 1317 } # Hubei
+		command = { trigger = { event = 133011060 } type = add_division which = "Hubei Lujun" value = infantry when = 1 }
+		command = { trigger = { not = { event = 133011060 } } type = unlock_division which = 22000 value = 10011 }
+		command = { trigger = { event = 133011061 } type = add_corps which = "Guizhou Difangjun" where = 1305 } # Guizhou
+		command = { trigger = { event = 133011061 } type = add_division which = "Guizhou Lujun" value = infantry when = 2 }
+		command = { trigger = { not = { event = 133011061 } } type = unlock_division which = 22000 value = 10131 }
+		command = { trigger = { event = 133011062 } type = add_corps which = "Sichuan Difangjun" where = 1297 } # Sichuan
+		command = { trigger = { event = 133011062 } type = add_division which = "Sichuan Lujun" value = infantry when = 2 }
+		command = { trigger = { not = { event = 133011062 } } type = unlock_division which = 22000 value = 10071 }
+		command = { type = trigger which = 133011200 }
+		command = { type = sleepevent which = 133011051 }
+		command = { type = sleepevent which = 133011052 }
+		command = { type = sleepevent which = 133011053 }
+		command = { type = sleepevent which = 133011054 }
+		command = { type = sleepevent which = 133011055 }
+		command = { type = sleepevent which = 133011057 }
+		command = { type = sleepevent which = 133011058 }
+		command = { type = sleepevent which = 133011059 }
+		command = { type = sleepevent which = 133011060 }
+		command = { type = sleepevent which = 133011061 }
+		command = { type = sleepevent which = 133011062 }
+		command = { type = sleepevent which = 133011018 }
+	}
+	
+}
+
+# Zhili Clique Rises
+event = {
+	id =	133011200
+	random = no
+	country = UCH
+	
+	# Triggered
+
+	name = EVT1914_133011200_NAME
+	desc = EVT1914_133011200_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = independence which = MAN value = 1}
+		command = { type = make_puppet which = MAN }
+		command = { type = secedeprovince which = MAN value = 1236 when = 2 }
+		command = { type = secedeprovince which = MAN value = 1246 when = 2 }
+		command = { type = secedeprovince which = MAN value = 1243 when = 2 }
+		command = { type = secedeprovince which = MAN value = 1241 when = 2 }
+		command = { type = secedeprovince which = MAN value = 1242 when = 2 }
+		command = { type = secedeprovince which = MAN value = 1245 when = 2 }
+		command = { type = remove_division which = "Sichuan Lujun" value = UCH }
+		command = { type = remove_division which = "Frontal Division" value = UCH }
+		command = { type = remove_division which = "Left Division" value = UCH }
+		command = { type = remove_division which = "Hind Division" value = UCH }
+		command = { type = remove_division which = "Right Division" value = UCH }
+		command = { type = remove_division which = "Middle Division" value = UCH }
+		command = { type = remove_division which = "New Division" value = UCH }
+		command = { type = sleepminister which = 1325300 }
+		command = { type = sleepminister which = 1325301 }
+		command = { type = sleepminister which = 1325302 }
+		command = { type = sleepminister which = 1325303 }
+		command = { type = sleepminister which = 1325304 }
+		command = { type = sleepminister which = 1325305 }
+		command = { type = sleepminister which = 1325306 }
+		command = { type = sleepminister which = 1325307 }
+		command = { type = sleepminister which = 1325308 }
+		command = { type = sleepminister which = 1325309 }
+		command = { type = sleepminister which = 1325310 }
+		command = { type = sleepminister which = 1325311 }
+		#command = { type = sleepminister which = 1325312 }
+		command = { type = sleepminister which = 1325313 }
+		command = { type = sleepminister which = 1325314 }
+		command = { type = sleepminister which = 1325315 }
+		command = { type = sleepminister which = 1325316 }
+		command = { type = sleepminister which = 1325317 }
+		command = { type = sleepminister which = 1325318 }
+		command = { type = sleepminister which = 1325319 }
+		command = { type = sleepminister which = 1325320 }
+		command = { type = sleepminister which = 1325321 }
+		command = { type = sleepminister which = 1325322 }
+		command = { type = sleepminister which = 1325323 }
+		command = { type = sleepminister which = 1325324 }
+		command = { type = sleepminister which = 1325325 }
+		command = { type = sleepminister which = 1325326 }
+		command = { type = sleepminister which = 1325327 }
+		command = { type = sleepminister which = 1325328 }
+		command = { type = sleepminister which = 1325329 }
+		command = { type = sleepminister which = 1325330 }
+		command = { type = sleepminister which = 1325331 }
+		command = { type = sleepminister which = 1325332 }
+		command = { type = sleepminister which = 1325333 }
+		command = { type = sleepminister which = 1325334 }
+		command = { type = sleepminister which = 1325335 }
+		command = { type = trigger which = 133011201 }
+		command = { type = dissent value = 5 }
+	}
+	
+}
+
+# Zhili Clique Rises
+event = {
+	id =	133011201
+	random = no
+	country = MAN
+	
+	#Triggered
+
+	name = EVT1914_133011200_NAME
+	desc = EVT1914_133011200_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	
+	action = {
+		name = EVT1914_133011201_ACTIONA #"Down with the central government!"
+		command = { type = country which = U36 }
+		command = { type = secedearea which = UCH value = "Jilin" when = 1 }
+		command = { type = secedearea which = UCH value = "Heilongjiang" when = 1 }
+		command = { type = secedearea which = UCH value = "Rehe" when = 1 }
+		command = { type = secedearea which = UCH value = "Liaoning" when = 1 }
+		command = { type = secedeprovince which = U36 value = 1236 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1246 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1243 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1241 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1242 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1245 when = 2 }
+		command = { type = addcore which = 1236 }
+		command = { type = addcore which = 1246 }
+		command = { type = addcore which = 1243 }
+		command = { type = addcore which = 1241 }
+		command = { type = addcore which = 1247 }
+		command = { type = addcore which = 1242 }
+		command = { type = addcore which = 1245 }
+		command = { type = add_corps which = "Sichuan Difangjun" value = land where = 1297 }
+		command = { type = add_division which = "Sichuan Lujun" value = infantry when = 2 }
+		command = { type = add_corps which = "Wu-wei Jun" value = land where = 1241 }
+		command = { type = add_division which = "Frontal Division" value = infantry when = 3 }
+		command = { type = add_division which = "Hind Division" value = infantry when = 2 }
+		command = { type = add_division which = "Left Division" value = infantry when = 2 }
+		command = { type = add_division which = "Right Division" value = infantry when = 2 }
+		command = { type = add_division which = "Middle Division" value = infantry when = 2 }
+		command = { type = add_division which = "New Division" value = infantry when = 2 }
+		command = { type = capital which = 1241 }
+		command = { type = alliance which = UCH when = 1 }
+	}
+	
+}
+
+#######################################
+# National Protection Alliance Events #
+#######################################
+# Collapse of the First United Front
+event = {
+	id = 133011603
+	random = no
+	country = CHI
+	
+	#Triggered
+
+	name = EVT1914_133011603_NAME
+	desc = EVT1914_133011603_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		ai_chance = 100
+		name = EVT1914_133011603_ACTIONA #"Let us side with the CPM"
+		command = { trigger = { event = 133011051 } type = secedearea which = UCH value = "Hunan" when = 2 }
+		command = { trigger = { event = 133011051 } type = remove_division which = "Hunan Lujun" value = CHI }
+		command = { trigger = { event = 133011052 } type = secedearea which = UCH value = "Jiangxi" when = 2 }
+		command = { trigger = { event = 133011052 } type = remove_division which = "Jiangxi Lujun" value = CHI }
+		command = { trigger = { event = 133011053 } type = secedearea which = UCH value = "Jiangsu" when = 2 }
+		command = { trigger = { event = 133011054 } type = secedearea which = UCH value = "Shanxi" when = 2 }
+		command = { trigger = { event = 133011055 } type = secedearea which = UCH value = "Jiangsu" when = 2 }
+		command = { trigger = { event = 133011055 } type = remove_division which = "Jiangsu Lujun" value = CHI }
+		command = { trigger = { event = 133011055 } type = remove_division which = "Shanghai Mingbin" value = CHI }
+		command = { trigger = { event = 133011057 } type = secedearea which = UCH value = "Anhui" when = 2 }
+		command = { trigger = { event = 133011058 } type = secedearea which = UCH value = "Fujian" when = 2 }
+		command = { trigger = { event = 133011058 } type = remove_division which = "Fujian Mingbin" value = CHI }
+		command = { trigger = { event = 133011059 } type = secedearea which = UCH value = "Zhejiang" when = 2 }
+		command = { trigger = { event = 133011059 } type = remove_division which = "Zhejiang Lujun" value = CHI }
+		command = { trigger = { event = 133011060 } type = secedearea which = UCH value = "Hubei" when = 2 }
+		command = { trigger = { event = 133011060 } type = remove_division which = "Hubei Lujun" value = CHI }
+		command = { trigger = { event = 133011061 } type = secedearea which = UCH value = "Guizhou" when = 2 }
+		command = { trigger = { event = 133011061 } type = remove_division which = "Guizhou Lujun" value = CHI }
+		command = { trigger = { event = 133011062 } type = secedearea which = UCH value = "Sichuan" when = 2 }
+		command = { trigger = { event = 133011062 } type = remove_division which = "Congqing Mingbin" value = CHI }
+		command = { type = independence which = CGX value = 1}
+		command = { type = secedearea which = CGX value = "Yunnan" when = 1 }
+		command = { trigger = { not = { control = { province = 1290 data = TIB } } } type = secedeprovince which = CGX value = 1290 when = 1 }
+		command = { type = secedeprovince which = CGX value = 1294 when = 1 }
+		command = { type = secedeprovince which = CGX value = 1293 when = 1 }
+		command = { type = secedeprovince which = CGX value = 1292 when = 1 }
+		command = { type = secedeprovince which = CGX value = 1291 when = 1 }
+		command = { type = secedearea which = CGX value = "Guangxi" when = 2 }
+		command = { type = event which = 133011605 where = CGX when = 0 }
+		command = { type = capital which = 1369 } # Guangzhou
+		command = { type = leave_alliance when = 1 }
+		command = { type = remove_division which = "1 GX Division" value = CHI }
+		command = { type = remove_division which = "2 GX Division" value = CHI }
+		command = { type = remove_division which = "3 GX Division" value = CHI }
+		command = { type = remove_division which = "1 YQ Division" value = CHI }
+		command = { type = remove_division which = "2 YQ Division" value = CHI }
+		command = { type = remove_division which = "3 YQ Division" value = CHI }
+		command = { type = remove_division which = "4 YQ Division" value = CHI }
+		command = { type = remove_division which = "5 YQ Division" value = CHI }
+		command = { type = remove_division which = "6 YQ Division" value = CHI }
+		command = { type = name where = CHI which = CHI_CPM }
+		command = { type = event which = 133011607 where = SIK when = 0 }
+		command = { type = event which = 133011607 where = CXB when = 0 }
+		command = { type = event which = 133011607 where = CHC when = 0 }
+		command = { type = event which = 133011604 where = UCH when = 1 }
+		command = { type = wakeminister which = 55302 }
+		command = { type = wakeminister which = 55303 }
+		command = { type = wakeminister which = 55304 }
+		command = { type = wakeminister which = 55305 }
+		command = { type = wakeminister which = 55306 }
+		command = { type = wakeminister which = 55307 }
+		command = { type = wakeminister which = 55308 }
+		command = { type = wakeminister which = 55309 }
+		command = { type = wakeminister which = 55310 }
+		command = { type = wakeminister which = 55311 }
+		command = { type = wakeminister which = 55312 }
+		command = { type = wakeminister which = 55313 }
+		command = { type = wakeminister which = 55314 }
+		command = { type = wakeminister which = 55315 }
+		command = { type = wakeminister which = 55316 }
+		command = { type = wakeminister which = 55317 }
+		command = { type = wakeminister which = 55318 }
+		command = { type = wakeminister which = 55319 }
+		command = { type = wakeminister which = 55320 }
+		command = { type = wakeminister which = 55321 }
+		command = { type = wakeminister which = 55322 }
+		command = { type = wakeminister which = 55323 }
+		command = { type = wakeminister which = 55324 }
+		command = { type = wakeminister which = 55325 }
+		command = { type = wakeminister which = 55326 }
+		command = { type = headofstate which = 55319 } # Temporary
+		command = { type = headofgovernment which = 55326 } # Temporary
+		command = { type = foreignminister which = 55325 } # Wu Tingfang
+		command = { type = trigger which = 133011418 } # Sleep for UCH.
+		command = { type = armamentminister which = 55314 }
+		command = { type = ministerofsecurity which = 55303 } # Replaced by Chen Jiongming in 1918
+		command = { type = ministerofintelligence which = 55304 } # Replaced by Chen Jiongming in 1918
+		command = { type = chiefofstaff which = 55305 }
+		command = { type = chiefofarmy which = 55306 }
+		command = { type = chiefofnavy which = 55307 }
+		command = { type = chiefofair which = 55308 }
+		command = { type = sleepminister which = 55200 } # Constitutional Protection Movement Ministers
+		command = { type = sleepminister which = 55201 }
+		command = { type = sleepminister which = 55202 }
+		command = { type = sleepminister which = 55203 }
+		command = { type = sleepminister which = 55204 }
+		command = { type = sleepminister which = 55205 }
+		command = { type = sleepminister which = 55206 }
+		command = { type = sleepminister which = 55207 }
+		command = { type = sleepminister which = 55208 }
+		command = { type = sleepminister which = 55209 }
+		command = { type = sleepminister which = 55210 }
+		command = { type = sleepminister which = 55211 }
+		command = { type = sleepminister which = 55212 }
+		command = { type = sleepminister which = 55213 }
+		command = { type = sleepminister which = 55214 }
+		#command = { type = sleepminister which = 55215 }
+		command = { type = sleepminister which = 55216 }
+		#command = { type = sleepminister which = 55217 }
+		command = { type = sleepminister which = 55218 }
+		command = { type = sleepminister which = 55219 }
+		command = { type = sleepminister which = 55220 }
+		command = { type = sleepminister which = 55221 }
+		command = { type = sleepminister which = 55222 }
+		command = { type = sleepminister which = 55223 }
+		command = { type = sleepminister which = 55224 }
+		command = { type = sleepminister which = 55225 }
+		command = { trigger = { not = { flag = szs_dead } } type = event which = 133011401 where = CHI when = 30 }
+		command = { trigger = { flag = szs_dead } type = event which = 133011406 where = CHI when = 30 }
+		command = { type = non_aggression which = CHI where = UCH }
+		command = { type = belligerence which = CHI	value = -30 }
+	}
+	
+	action = {
+		ai_chance = 0
+		name = EVT1914_133011603_ACTIONB #"Let us follow Cai E"
+		command = { trigger = { event = 133011062 } type = remove_division which = "Congqing Mingbin" value = CHI }
+		command = { trigger = { event = 133011051 } type = remove_division which = "Hunan Lujun" value = CHI }
+		command = { trigger = { event = 133011052 } type = remove_division which = "Jiangxi Lujun" value = CHI }
+		command = { trigger = { event = 133011055 } type = remove_division which = "Jiangsu Lujun" value = CHI }
+		command = { trigger = { event = 133011055 } type = remove_division which = "Shanghai Mingbin" value = CHI }
+		command = { trigger = { event = 133011058 } type = remove_division which = "Fujian Mingbin" value = CHI }
+		command = { trigger = { event = 133011059 } type = remove_division which = "Zhejiang Lujun" value = CHI }
+		command = { trigger = { event = 133011060 } type = remove_division which = "Hubei Lujun" value = CHI }
+		command = { trigger = { event = 133011061 } type = remove_division which = "Guizhou Lujun" value = CHI }
+		command = { type = remove_division which = "1 GX Division" value = CHI }
+		command = { type = remove_division which = "2 GX Division" value = CHI }
+		command = { type = remove_division which = "3 GX Division" value = CHI }
+		command = { type = remove_division which = "1 GD Division" value = CHI }
+		command = { type = remove_division which = "2 GD Division" value = CHI }
+		command = { type = remove_division which = "3 GD Division" value = CHI }
+		command = { type = remove_division which = "4 GD Division" value = CHI }
+		command = { type = country which = CYN }
+		command = { type = independence which = CHI value = 1 }
+		command = { type = name where = CYN }
+		command = { type = event which = 133011608 where = CHI when = 0 }
+		command = { trigger = { not = { flag = szs_dead } } type = event which = 133011401 where = CHI when = 30 }
+		command = { trigger = { flag = szs_dead } type = event which = 133011406 where = CHI when = 30 }
+		command = { type = event which = 133011607 where = SIK when = 0 }
+		command = { type = event which = 133011607 where = CXB when = 0 }
+		command = { type = event which = 133011607 where = CHC when = 0 }
+		command = { type = event which = 133011604 where = UCH when = 1 }
+			command = { type = wakeminister which = 615100 }
+		command = { type = wakeminister which = 615101 }
+		command = { type = wakeminister which = 615102 }
+		command = { type = wakeminister which = 615103 }
+		command = { type = wakeminister which = 615104 }
+		command = { type = wakeminister which = 615105 }
+		command = { type = wakeminister which = 615106 }
+		command = { type = wakeminister which = 615107 }
+		command = { type = wakeminister which = 615108 }
+		command = { type = wakeminister which = 615109 }
+		command = { type = wakeminister which = 615110 }
+		command = { type = wakeminister which = 615111 }
+		command = { type = wakeminister which = 615112 }
+		command = { type = wakeminister which = 615113 }
+		command = { type = wakeminister which = 615114 }
+		#command = { type = wakeminister which = 615115 } # Li Liejun
+		command = { type = wakeminister which = 615116 }
+		#command = { type = wakeminister which = 615117 }
+		command = { type = wakeminister which = 615118 }
+		command = { type = wakeminister which = 615119 }
+		command = { type = wakeminister which = 615120 }
+		command = { type = wakeminister which = 615121 }
+		command = { type = wakeminister which = 615122 }
+		command = { type = wakeminister which = 615123 }
+		command = { type = wakeminister which = 615124 }
+		command = { type = wakeminister which = 615125 }
+			command = { type = sleepminister which = 615200 }
+		command = { type = sleepminister which = 615201 }
+		command = { type = sleepminister which = 615202 }
+		command = { type = sleepminister which = 615203 }
+		command = { type = sleepminister which = 615204 }
+		command = { type = sleepminister which = 615205 }
+		command = { type = sleepminister which = 615206 }
+		command = { type = sleepminister which = 615207 }
+		command = { type = sleepminister which = 615208 }
+		command = { type = sleepminister which = 615209 }
+		command = { type = sleepminister which = 615210 }
+		command = { type = sleepminister which = 615211 }
+		command = { type = sleepminister which = 615212 }
+		command = { type = sleepminister which = 615213 }
+		command = { type = sleepminister which = 615214 }
+		command = { type = sleepminister which = 615215 }
+		command = { type = sleepminister which = 615216 }
+		command = { type = sleepminister which = 615217 }
+		command = { type = sleepminister which = 615218 }
+		command = { type = sleepminister which = 615219 }
+		command = { type = sleepminister which = 615220 }
+		command = { type = sleepminister which = 615221 }
+			command = { type = wakeminister which = 615100 } # In case something is slept by above.
+		command = { type = wakeminister which = 615101 }
+		command = { type = wakeminister which = 615102 }
+		command = { type = wakeminister which = 615103 }
+		command = { type = wakeminister which = 615104 }
+		command = { type = wakeminister which = 615105 }
+		command = { type = wakeminister which = 615106 }
+		command = { type = wakeminister which = 615107 }
+		command = { type = wakeminister which = 615108 }
+		command = { type = wakeminister which = 615109 }
+		command = { type = wakeminister which = 615110 }
+		command = { type = wakeminister which = 615111 }
+		command = { type = wakeminister which = 615112 }
+		command = { type = wakeminister which = 615113 }
+		command = { type = wakeminister which = 615114 }
+		#command = { type = wakeminister which = 615115 } # Li Liejun
+		command = { type = wakeminister which = 615116 }
+		#command = { type = wakeminister which = 615117 }
+		command = { type = wakeminister which = 615118 }
+		command = { type = wakeminister which = 615119 }
+		command = { type = wakeminister which = 615120 }
+		command = { type = wakeminister which = 615121 }
+		command = { type = wakeminister which = 615122 }
+		command = { type = wakeminister which = 615123 }
+		command = { type = wakeminister which = 615124 }
+		command = { type = wakeminister which = 615125 }
+		command = { type = headofstate which = 615110 }
+		command = { type = foreignminister which = 615112 }
+		command = { type = event which = 133011404 where = CYN when = 15 }
+		command = { type = non_aggression which = CHI where = UCH }
+		command = { type = belligerence which = CYN	value = -30 }
+	}
+}
+
+# Guangxi Independence Event
+event = {
+	id = 133011605
+	random = no
+	
+	# Triggered
+	
+	name = EVT1914_133011603_NAME
+	desc = EVT1914_133011603_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = independence which = CYN value = 1 }
+		command = { type = secedearea which = CYN value = "Yunnan" when = 1 }
+		command = { trigger = { not = { control = { province = 1290 data = TIB } } } type = secedeprovince which = CYN value = 1290 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1294 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1293 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1292 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1291 when = 1 }
+		command = { type = add_corps which = "Guangxi Difangjun" value = land where = 1378 }
+		command = { type = add_division which = "1 GX Division" value = infantry when = 2 }
+		command = { type = add_division which = "2 GX Division" value = militia when = 1 }
+		command = { type = add_division which = "3 GX Division" value = militia when = 0 }
+		command = { type = event which = 133011606 where = CYN when = 0 }
+	}
+}
+
+# Yunnan Independence Event
+event = {
+	id = 133011606
+	random = no
+	
+	# Triggered
+	
+	name = EVT1914_133011603_NAME
+	desc = EVT1914_133011603_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = add_corps which = "Kunming Ye Quan Jun" value = land where = 1390 }
+		command = { type = add_division which = "1 YQ Division" value = infantry when = 2 }
+		command = { type = add_division which = "2 YQ Division" value = infantry when = 1 }
+		command = { type = add_division which = "3 YQ Division" value = infantry when = 1 }
+		command = { type = add_corps which = "Ya'an Ye Quan Jun" value = land where = 1292 }
+		command = { type = add_division which = "4 YQ Division" value = infantry when = 2 }
+		command = { type = add_division which = "5 YQ Division" value = infantry when = 1 }
+		command = { type = add_division which = "6 YQ Division" value = infantry when = 1 }
+			command = { type = wakeminister which = 615100 }
+		command = { type = wakeminister which = 615101 }
+		command = { type = wakeminister which = 615102 }
+		command = { type = wakeminister which = 615103 }
+		command = { type = wakeminister which = 615104 }
+		command = { type = wakeminister which = 615105 }
+		command = { type = wakeminister which = 615106 }
+		command = { type = wakeminister which = 615107 }
+		command = { type = wakeminister which = 615108 }
+		command = { type = wakeminister which = 615109 }
+		command = { type = wakeminister which = 615110 }
+		command = { type = wakeminister which = 615111 }
+		command = { type = wakeminister which = 615112 }
+		command = { type = wakeminister which = 615113 }
+		command = { type = wakeminister which = 615114 }
+		#command = { type = wakeminister which = 615115 } # Li Liejun
+		command = { type = wakeminister which = 615116 }
+		#command = { type = wakeminister which = 615117 }
+		command = { type = wakeminister which = 615118 }
+		command = { type = wakeminister which = 615119 }
+		command = { type = wakeminister which = 615120 }
+		command = { type = wakeminister which = 615121 }
+		command = { type = wakeminister which = 615122 }
+		command = { type = wakeminister which = 615123 }
+		command = { type = wakeminister which = 615124 }
+		command = { type = wakeminister which = 615125 }
+			command = { type = sleepminister which = 615200 }
+		command = { type = sleepminister which = 615201 }
+		command = { type = sleepminister which = 615202 }
+		command = { type = sleepminister which = 615203 }
+		command = { type = sleepminister which = 615204 }
+		command = { type = sleepminister which = 615205 }
+		command = { type = sleepminister which = 615206 }
+		command = { type = sleepminister which = 615207 }
+		command = { type = sleepminister which = 615208 }
+		command = { type = sleepminister which = 615209 }
+		command = { type = sleepminister which = 615210 }
+		command = { type = sleepminister which = 615211 }
+		command = { type = sleepminister which = 615212 }
+		command = { type = sleepminister which = 615213 }
+		command = { type = sleepminister which = 615214 }
+		command = { type = sleepminister which = 615215 }
+		command = { type = sleepminister which = 615216 }
+		command = { type = sleepminister which = 615217 }
+		command = { type = sleepminister which = 615218 }
+		command = { type = sleepminister which = 615219 }
+		command = { type = sleepminister which = 615220 }
+		command = { type = sleepminister which = 615221 }
+			command = { type = wakeminister which = 615100 }
+		command = { type = wakeminister which = 615101 }
+		command = { type = wakeminister which = 615102 }
+		command = { type = wakeminister which = 615103 }
+		command = { type = wakeminister which = 615104 }
+		command = { type = wakeminister which = 615105 }
+		command = { type = wakeminister which = 615106 }
+		command = { type = wakeminister which = 615107 }
+		command = { type = wakeminister which = 615108 }
+		command = { type = wakeminister which = 615109 }
+		command = { type = wakeminister which = 615110 }
+		command = { type = wakeminister which = 615111 }
+		command = { type = wakeminister which = 615112 }
+		command = { type = wakeminister which = 615113 }
+		command = { type = wakeminister which = 615114 }
+		#command = { type = wakeminister which = 615115 } # Li Liejun
+		command = { type = wakeminister which = 615116 }
+		#command = { type = wakeminister which = 615117 }
+		command = { type = wakeminister which = 615118 }
+		command = { type = wakeminister which = 615119 }
+		command = { type = wakeminister which = 615120 }
+		command = { type = wakeminister which = 615121 }
+		command = { type = wakeminister which = 615122 }
+		command = { type = wakeminister which = 615123 }
+		command = { type = wakeminister which = 615124 }
+		command = { type = wakeminister which = 615125 }
+		command = { type = headofstate which = 615110 }
+		command = { type = foreignminister which = 615112 }
+		command = { type = event which = 133011404 where = CYN when = 15 }
+	}
+}
+
+# Breakup of Alliances
+event = {
+	id = 133011607
+	persistent = yes
+	random = no
+	
+	# Triggered
+
+	name = EVT1914_133011603_NAME
+	desc = EVT1914_133011603_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = leave_alliance when = 1 }
+	}
+}
+
+# Alternative Breakup Events
+# CHI releases CGX
+event = {
+	id = 133011608
+	random = no
+	
+	# Triggered
+	
+	name = EVT1914_133011603_NAME
+	desc = EVT1914_133011603_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = name where = CHI which = CHI_CPM }
+		command = { type = flag_ext where = CHI which = "_REP" }
+		command = { type = wakeminister which = 55302 }
+		command = { type = wakeminister which = 55303 }
+		command = { type = wakeminister which = 55304 }
+		command = { type = wakeminister which = 55305 }
+		command = { type = wakeminister which = 55306 }
+		command = { type = wakeminister which = 55307 }
+		command = { type = wakeminister which = 55308 }
+		command = { type = wakeminister which = 55309 }
+		command = { type = wakeminister which = 55310 }
+		command = { type = wakeminister which = 55311 }
+		command = { type = wakeminister which = 55312 }
+		command = { type = wakeminister which = 55313 }
+		command = { type = wakeminister which = 55314 }
+		command = { type = wakeminister which = 55315 }
+		command = { type = wakeminister which = 55316 }
+		command = { type = wakeminister which = 55317 }
+		command = { type = wakeminister which = 55318 }
+		command = { type = wakeminister which = 55319 }
+		command = { type = wakeminister which = 55320 }
+		command = { type = wakeminister which = 55321 }
+		command = { type = wakeminister which = 55322 }
+		command = { type = wakeminister which = 55323 }
+		command = { type = wakeminister which = 55324 }
+		command = { type = wakeminister which = 55325 }
+		command = { type = wakeminister which = 55326 }
+		command = { type = headofstate which = 55319 } # Temporary
+		command = { type = headofgovernment which = 55326 } # Temporary
+		command = { type = foreignminister which = 55325 } # Wu Tingfang
+		command = { type = trigger which = 133011418 } # Sleep for UCH.
+		command = { type = armamentminister which = 55314 }
+		command = { type = ministerofsecurity which = 55303 } # Replaced by Chen Jiongming in 1918
+		command = { type = ministerofintelligence which = 55304 } # Replaced by Chen Jiongming in 1918
+		command = { type = chiefofstaff which = 55305 }
+		command = { type = chiefofarmy which = 55306 }
+		command = { type = chiefofnavy which = 55307 }
+		command = { type = chiefofair which = 55308 }
+		command = { type = sleepminister which = 55200 } # Constitutional Protection Movement Ministers
+		command = { type = sleepminister which = 55201 }
+		command = { type = sleepminister which = 55202 }
+		command = { type = sleepminister which = 55203 }
+		command = { type = sleepminister which = 55204 }
+		command = { type = sleepminister which = 55205 }
+		command = { type = sleepminister which = 55206 }
+		command = { type = sleepminister which = 55207 }
+		command = { type = sleepminister which = 55208 }
+		command = { type = sleepminister which = 55209 }
+		command = { type = sleepminister which = 55210 }
+		command = { type = sleepminister which = 55211 }
+		command = { type = sleepminister which = 55212 }
+		command = { type = sleepminister which = 55213 }
+		command = { type = sleepminister which = 55214 }
+		#command = { type = sleepminister which = 55215 }
+		command = { type = sleepminister which = 55216 }
+		#command = { type = sleepminister which = 55217 }
+		command = { type = sleepminister which = 55218 }
+		command = { type = sleepminister which = 55219 }
+		command = { type = sleepminister which = 55220 }
+		command = { type = sleepminister which = 55221 }
+		command = { type = sleepminister which = 55222 }
+		command = { type = sleepminister which = 55223 }
+		command = { type = sleepminister which = 55224 }
+		command = { type = sleepminister which = 55225 }
+		command = { trigger = { event = 133011051 } type = secedearea which = UCH value = "Hunan" when = 2 }
+		command = { trigger = { event = 133011052 } type = secedearea which = UCH value = "Jiangxi" when = 2 }
+		command = { trigger = { event = 133011053 } type = secedearea which = UCH value = "Jiangsu" when = 2 }
+		command = { trigger = { event = 133011054 } type = secedearea which = UCH value = "Shanxi" when = 2 }
+		command = { trigger = { event = 133011055 } type = secedearea which = UCH value = "Jiangsu" when = 2 }
+		command = { trigger = { event = 133011057 } type = secedearea which = UCH value = "Anhui" when = 2 }
+		command = { trigger = { event = 133011058 } type = secedearea which = UCH value = "Fujian" when = 2 }
+		command = { trigger = { event = 133011059 } type = secedearea which = UCH value = "Zhejiang" when = 2 }
+		command = { trigger = { event = 133011060 } type = secedearea which = UCH value = "Hubei" when = 2 }
+		command = { trigger = { event = 133011061 } type = secedearea which = UCH value = "Guizhou" when = 2 }
+		command = { trigger = { event = 133011062 } type = secedearea which = UCH value = "Sichuan" when = 2 }
+		command = { type = independence which = CGX value = 1 }
+		command = { type = secedearea which = CGX value = "Guangxi" when = 2 }
+		command = { type = add_corps which = "Guangdong Difangjun" value = land where = 1369 }
+		command = { type = add_division which = "1 GD Division" value = infantry when = 2 }
+		command = { type = add_division which = "2 GD Division" value = infantry when = 2 }
+		command = { type = add_division which = "3 GD Division" value = infantry when = 1 }
+		command = { type = add_division which = "4 GD Division" value = infantry when = 1 }
+		command = { type = event which = 133011609 where = CGX when = 0 }
+	}
+}
+
+# Guangxi Independence Event
+event = {
+	id = 133011609
+	random = no
+	
+	# Triggered
+	
+	name = EVT1914_133011603_NAME
+	desc = EVT1914_133011603_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = add_corps which = "Guangxi Difangjun" value = land where = 1378 }
+		command = { type = add_division which = "1 GX Division" value = infantry when = 2 }
+		command = { type = add_division which = "2 GX Division" value = militia when = 1 }
+		command = { type = add_division which = "3 GX Division" value = militia when = 0 }
+	}
+}
+
+####################
+# Minister Changes #
+####################
+
+# Sun Zhongshan Returns - 1917
+event = {
+	id = 133011401
+	random = no
+	country = CHI
+	
+	# Triggered
+
+	name = EVT1914_133011401_NAME
+	desc = EVT1914_133011401_DESC
+
+	picture = "ccip_szsexile"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_GOOD
+		command = { type = dissent value = -5 }
+		command = { type = wakeminister which = 55300 }
+		command = { type = wakeminister which = 55301 }
+		command = { type = headofstate which = 55300 }
+		command = { type = headofgovernment which = 55301 }
+		command = { trigger = { not = { relation = { which = JAP value = 100 } } }type = set_relation which = JAP value = 100 }
+		command = { trigger = { relation = { which = UCH value = -150 } } type = set_relation which = UCH value = -150 }
+		command = { trigger = { war = { country = JAP } } type = peace which = JAP }
+		command = { type = non_aggression which = CHI where = JAP }
+		command = { type = event which = 133011500 where = CHI when = 2 }
+	}
+}
+
+# Death of Cai E
+event = {
+	id = 133011404
+	random = no
+	country = CYN
+	
+	# Triggered
+
+	name = EVT1914_133011404_NAME
+	desc = DPERSONALITY_CAI_E
+
+	picture = "ccip_caie"
+	style = 2
+	
+	action = {
+		name = EVT1914_133011404_ACTIONA # "May he rest in peace"
+		command = { type = dissent value = -5 }
+		command = { type = sleepminister which = 615110 }
+		command = { type = sleepminister which = 615112 }
+		command = { type = sleepminister which = 615116 }
+		command = { trigger = { exists = UCH } type = event which = 133011405 where = UCH when = 3 }
+		command = { trigger = { exists = CGX } type = event which = 133011405 where = CGX when = 3 }
+		command = { trigger = { exists = CHI } type = event which = 133011405 where = CHI when = 3 }
+		command = { trigger = { exists = CSX } type = event which = 133011405 where = CSX when = 3 }
+		command = { trigger = { exists = SIK } type = event which = 133011405 where = SIK when = 3 }
+		command = { trigger = { exists = MEN } type = event which = 133011405 where = MEN when = 3 }
+		command = { trigger = { exists = CHC } type = event which = 133011405 where = CHC when = 3 }
+	}
+}
+
+# Death of Cai E
+event = {
+	id = 133011405
+	random = no
+	persistent = yes
+	
+	# Triggered
+	
+	name = EVT1914_133011404_NAME
+	desc = DPERSONALITY_CAI_E
+	
+	picture = "ccip_caie"
+	style = 2
+	
+	action = {
+		name = EVT1914_133011404_ACTIONA # "May he rest in peace"
+		command = { type = dissent value = -5 }
+	}
+}
+
+# CHI 133011406 Yunnan Domination (SZS Dead)
+event = {
+	id = 133011406
+	random = no
+	country = CHI
+	
+	#Triggered
+
+	name = EVT1914_133011406_NAME
+	desc = EVT1914_133011406_DESC
+
+	#picture = "ccip_yunnan"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_OK
+			command = { type = sleepminister which = 55200 } # Constitutional Protection Movement Ministers
+		command = { type = wakeminister which = 55201 }
+		command = { type = wakeminister which = 55202 }
+		command = { type = wakeminister which = 55203 }
+		command = { type = wakeminister which = 55204 }
+		command = { type = wakeminister which = 55205 }
+		command = { type = wakeminister which = 55206 }
+		command = { type = wakeminister which = 55207 }
+		command = { type = wakeminister which = 55208 }
+		command = { type = wakeminister which = 55209 }
+		#command = { type = wakeminister which = 55210 }
+		command = { type = wakeminister which = 55211 }
+		#command = { type = wakeminister which = 55212 }
+		command = { type = wakeminister which = 55213 }
+		command = { type = wakeminister which = 55214 }
+		#command = { type = wakeminister which = 55215 }
+		#command = { type = wakeminister which = 55216 }
+		#command = { type = wakeminister which = 55217 }
+		command = { type = wakeminister which = 55218 }
+		command = { type = wakeminister which = 55219 }
+		#command = { type = wakeminister which = 55220 }
+		command = { type = wakeminister which = 55221 }
+		command = { type = wakeminister which = 55222 }
+		command = { type = wakeminister which = 55223 }
+		command = { type = wakeminister which = 55224 }
+		command = { type = wakeminister which = 55225 }
+			command = { type = headofstate which = 55200 }
+		command = { type = headofgovernment which = 55201 }
+		command = { type = chiefofstaff which = 55206 }
+		command = { type = inherit which = CYN value = 1 }
+		command = { type = secedearea which = CHI value = "Yunnan" when = 2 }
+		command = { trigger = { not = { control = { province = 1290 data = TIB } } } type = secedeprovince which = CHI value = 1290 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1294 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1293 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1292 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1291 when = 2 }
+		command = { type = event which = 133011500 where = CHI when = 2 }
+	}
+}
+
+# UCH 133011418 Wu Tingfang leaves the Republic of China
+event = {
+	id = 133011418
+	random = no
+	country = UCH
+
+	# Triggered
+
+	picture = "ccip_wutingfang"
+	style = 2
+
+	name = EVT1914_133011418_NAME
+	desc = EVT1914_133011418_DESC
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 1325208 }
+		command = { type = non_aggression which = UCH where = CYN }
+		command = { type = non_aggression which = UCH where = CGX }
+		command = { type = non_aggression which = UCH where = CXB }
+		command = { type = non_aggression which = UCH where = SIK }
+	}
+}
+
+#############################
+# Return of Rebel Territory #
+#############################
+
+event = {
+	id = 133911000
+	random = no
+	country = REB
+
+	#Triggered
+
+	name = AI_EVENT
+
+	action = {
+		command = { type = secederegion value = "China" which = UCH when = 1 }
+	}
+}

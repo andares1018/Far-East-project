@@ -1,0 +1,51 @@
+######################################################################################
+# Build some INF units with H-Arm and Arm brigades when required techs are available #
+######################################################################################
+event = {
+	id = 3049100
+	random = no
+	country = USA
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = 2 }
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = 2 }
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = 2 }
+	}
+}
+
+event = {
+	id = 3049101
+	random = no
+	country = USA
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = heavy_armor when = 3 cost = 2 }
+		command = { type = build_brigade value = heavy_armor when = 3 cost = 2 }
+		command = { type = build_brigade value = heavy_armor when = 3 cost = 2 }
+	}
+}
+######################################################################################

@@ -1,0 +1,354 @@
+###
+### Japanese events (JAP - 011)
+###
+### By Rhysaxiel
+###
+#War entry
+### 2011500 JAP Ultimatum to Germany
+### 2011501	JAP Germany did not answer
+### 2011502 JAP Germany accept our ultimatum
+### 2011503 JAP Peace with Germany?
+### 2011504 U08 Japan offers a white peace
+### 2011505 JAP Germany accepted our proposal
+### 2011506 JAP Leaving the Entente
+### 2011507 SIA A new flag
+
+event = {
+	id = 2011500	# Ultimatum to Germany
+	country = JAP
+
+	decision = { 
+		war = { country = U08 country = ENG }  
+		atwar = no 
+	}
+	decision_trigger = { 
+		NOT = { alliance = { country = JAP country = ENG } } 
+	}
+	trigger = { 
+		war = { country = U08 country = ENG } 
+		atwar = no 
+		random = 30 
+	}
+	
+	name = "EVT1914_2011500_NAME"
+	desc = "EVT1914_2011500_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2011500_ACTIONA" # Send ultimatum
+		ai_chance = 95
+		command = { type = trigger which = 2191540 } # U08's Jap ultimatum
+	}
+	action = {
+		name = "EVT1914_2011500_ACTIONB" # Ask also for New Guinea, Samoa and Bismarck Archipelago!
+		ai_chance = 5
+		command = { type = setflag which = JAP_ultimatum_extended } 
+		command = { type = trigger which = 2191540 } # U08's Jap ultimatum
+	}	
+}
+event = {
+	id = 2011501	# Germany did not answer
+	country = JAP
+
+	# Triggered
+   
+	name = "EVT1914_2011501_NAME"
+	desc = "EVT1914_2011501_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action_a = {
+		name = "EVT1914_2011501_ACTIONA" # Declare war
+		ai_chance = 99
+		command = { type = alliance which = ENG when = 1 }
+		command = { type = addclaim which = 1328 } #Qindao
+		command = { type = addclaim which = 1665 } #Ponape
+		command = { type = addclaim which = 1666 } #Kusaie
+		command = { type = addclaim which = 1667 } #Truk
+		command = { type = addclaim which = 1668 } #Wolelai
+		command = { type = addclaim which = 1669 } #Yap
+		command = { type = addclaim which = 1670 } #Palau
+		command = { type = addclaim which = 1671 } #Kloulklubed
+		command = { type = addclaim which = 1674 } #Bikini
+		command = { type = addclaim which = 1675 } #Eniwetok
+		command = { type = addclaim which = 1676 } #Kwajalein
+		command = { type = addclaim which = 1677 } #Majuro
+		command = { type = addclaim which = 1681 } #Wotje
+		command = { type = addclaim which = 1684 } #Rota
+		command = { type = addclaim which = 1685 } #Saipan
+		command = { type = addclaim which = 1686 } #Pagan
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1731 } #Apia
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1605 } #Wewak
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1610 } #Mendi
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1603 } #Mount Hagen
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1602 } #Lae
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1234 } #Buna
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1727 } #Kimbe
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1726 } #Rabaul
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1725 } #Kavieng
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1587 } #Bougainville
+		command = { trigger = { flag = JAP_ultimatum_extended } type = clrflag which = JAP_ultimatum_extended }
+	}
+	action_b = {
+		name = "EVT1914_2011501_ACTIONB" # Back Down
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { trigger = { flag = JAP_ultimatum_extended } type = clrflag which = JAP_ultimatum_extended }		
+	}
+}
+event = {
+	id = 2011502	# Germany accept our ultimatum
+	country = JAP
+
+	# Triggered
+	
+	name = "EVT1914_2011502_NAME"
+	desc = "EVT1914_2011502_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2011502_ACTIONA" # Honour our promise
+		ai_chance = 99
+		command = { type = addclaim which = 1328 } #Qindao
+		command = { type = addclaim which = 1665 } #Ponape
+		command = { type = addclaim which = 1666 } #Kusaie
+		command = { type = addclaim which = 1667 } #Truk
+		command = { type = addclaim which = 1668 } #Wolelai
+		command = { type = addclaim which = 1669 } #Yap
+		command = { type = addclaim which = 1670 } #Palau
+		command = { type = addclaim which = 1671 } #Kloulklubed
+		command = { type = addclaim which = 1674 } #Bikini
+		command = { type = addclaim which = 1675 } #Eniwetok
+		command = { type = addclaim which = 1676 } #Kwajalein
+		command = { type = addclaim which = 1677 } #Majuro
+		command = { type = addclaim which = 1681 } #Wotje
+		command = { type = addclaim which = 1684 } #Rota
+		command = { type = addclaim which = 1685 } #Saipan
+		command = { type = addclaim which = 1686 } #Pagan
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1731 } #Apia
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1605 } #Wewak
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1610 } #Mendi
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1603 } #Mount Hagen
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1602 } #Lae
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1234 } #Buna
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1727 } #Kimbe
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1726 } #Rabaul
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1725 } #Kavieng
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1587 } #Bougainville
+		command = { trigger = { flag = JAP_ultimatum_extended } type = clrflag which = JAP_ultimatum_extended }
+		command = { type = relation which = ENG value = -25 }
+	}
+	action_b = {
+		name = "EVT1914_2011502_ACTIONB" # Help our allies anyway
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = belligerence value = 20 }
+		command = { type = alliance which = ENG when = 1 }
+		command = { type = addclaim which = 1328 } #Qindao
+		command = { type = addclaim which = 1665 } #Ponape
+		command = { type = addclaim which = 1666 } #Kusaie
+		command = { type = addclaim which = 1667 } #Truk
+		command = { type = addclaim which = 1668 } #Wolelai
+		command = { type = addclaim which = 1669 } #Yap
+		command = { type = addclaim which = 1670 } #Palau
+		command = { type = addclaim which = 1671 } #Kloulklubed
+		command = { type = addclaim which = 1674 } #Bikini
+		command = { type = addclaim which = 1675 } #Eniwetok
+		command = { type = addclaim which = 1676 } #Kwajalein
+		command = { type = addclaim which = 1677 } #Majuro
+		command = { type = addclaim which = 1681 } #Wotje
+		command = { type = addclaim which = 1684 } #Rota
+		command = { type = addclaim which = 1685 } #Saipan
+		command = { type = addclaim which = 1686 } #Pagan
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1731 } #Apia
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1605 } #Wewak
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1610 } #Mendi
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1603 } #Mount Hagen
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1602 } #Lae
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1234 } #Buna
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1727 } #Kimbe
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1726 } #Rabaul
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1725 } #Kavieng
+		command = { trigger = { flag = JAP_ultimatum_extended } type = addclaim which = 1587 } #Bougainville		
+		command = { trigger = { flag = JAP_ultimatum_extended } type = clrflag which = JAP_ultimatum_extended }
+	}
+}
+
+#########################################################################
+#  Peace with Germany
+#########################################################################
+event = {
+	id = 2011503 
+	country = JAP
+	
+	decision = { 
+		war = { country = JAP country = U08 }
+		participant = { country = JAP value = 1 } #part of the Entente
+	}
+	
+	decision_trigger = { 
+		NOT = { alliance = { country = FRA country = JAP } }
+		NOT = { alliance = { country = RUS country = JAP } }
+		NOT = { alliance = { country = ENG country = JAP } }
+		NOT = { alliance = { country = USA country = JAP } }
+		NOT = { war = { country = SOV country = U08 } }
+		NOT = { lost_national = { country = JAP value = 5 } }
+		NOT = { lost_national = { country = U08 value = 5 } }
+	}
+	trigger = { 
+		war = { country = JAP country = U08 }
+		participant = { country = JAP value = 1 } #part of the Entente
+		NOT = { alliance = { country = FRA country = JAP } }
+		NOT = { alliance = { country = RUS country = JAP } }
+		NOT = { alliance = { country = ENG country = JAP } }
+		NOT = { alliance = { country = USA country = JAP } }
+		NOT = { war = { country = SOV country = U08 } }
+		NOT = { lost_national = { country = JAP value = 5 } }
+		NOT = { lost_national = { country = U08 value = 5 } }
+	}
+	
+	name = "EVT1914_2001542_NAME"
+	desc = "EVT1914_2001542_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 24 month = april year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		ai_chance = 100
+		name = "EVT1914_2001542_ACTIONA" 
+		command = { type = trigger which = 2011504 } 
+	}	
+	action = {
+		ai_chance = 0
+		name = "EVT1914_2001542_ACTIONB"
+		command = { type = dissent value = 5 } 
+	}
+}
+event = {
+	id = 2011504   
+	country = U08
+
+	
+	name = "EVT1914_2011504_NAME"
+	desc = "EVT1914_2011504_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = dissent value = -10 } 
+		command = { trigger = { alliance = { country = JAP country = SER } exists = U09 } type = trigger which = 2001544 } #Serbia leaves alliance
+		command = { trigger = { alliance = { country = JAP country = MTN } exists = U09 } type = trigger which = 2001545 } #Montenegro leaves alliance
+		command = { trigger = { alliance = { country = JAP country = U50 }  war = { country = OTT country = U50 } } type = trigger which = 2001549 } #Hedjaz leaves alliance
+		command = { trigger = { alliance = { country = JAP country = U91 }  war = { country = OTT country = U91 } } type = trigger which = 2001551 } #Kuwait leaves alliance
+		command = { type = trigger which = 2011505 } 
+	}
+	action = {
+		ai_chance = 0
+		name = "ACTION_NAME_REFUSE" 
+		command = { type = dissent value = 5 } 
+	}	
+}
+
+event = {
+	id = 2011505   
+	country = JAP
+	
+	name = "EVT1914_2001546_NAME"
+	desc = "EVT1914_2001546_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "EVT1914_2001546_ACTIONA" 
+		command = { type = dissent value = -10 } 
+		command = { type = peace which = U08 value = 0 }
+		command = { type = peace which = U09 value = 0 }
+		command = { type = setflag which = German_EndWWI }
+	}
+}
+
+event = {
+	id = 2011506   # Leaving the Entente
+	country = JAP
+
+	trigger = {
+		participant = { country = JAP value = 1 } #part of the Entente
+		NOT = { war = { country = JAP country = U08 } }
+		NOT = { war = { country = JAP country = U09 } }
+		NOT = { war = { country = JAP country = GER } }
+		NOT = { war = { country = JAP country = AUS } }
+		NOT = { war = { country = JAP country = OTT } }
+		NOT = { war = { country = JAP country = BUL } }
+		NOT = { war = { country = JAP country = ITA } }
+		NOT = { war = { country = JAP country = GRE } }
+		NOT = { war = { country = JAP country = ROM } }
+		NOT = { war = { country = JAP country = SOV } }
+		NOT = { war = { country = JAP country = RUS } }
+		NOT = { war = { country = JAP country = SER } }
+		NOT = { war = { country = JAP country = BEL } }
+		NOT = { war = { country = JAP country = FRA } }
+		NOT = { war = { country = JAP country = ENG } }
+		NOT = { war = { country = JAP country = USA } }
+		NOT = { war = { country = JAP country = CHI } }
+		NOT = { lost_national = { value = 5 } }
+		or = { # So Japan can get concessions.
+			event = 133011623
+			event = 133011624
+			event = 133011625
+			event = 2001546 #  ENG  Germany accepted our proposal
+		}
+	}
+
+	name = "EVT1914_2049541_NAME" #Leaving the Entente
+	desc = "EVT1914_2049541_DESC"
+	style = 2
+	picture = "negotiaton"
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 121
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_NEUTRAL"
+		command = { type = dissent value = -5 }
+		command = { type = belligerence value = -20 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = domestic which = defense_lobby value = -5 }
+		command = { type = domestic which = interventionism value = -5 }
+	}
+	action = {
+		ai_chance = 0
+		name = "ACTION_NAME_NO"
+		command = { type = dissent value = 10 }
+		command = { type = belligerence value = 5 }
+	}
+}
+
+event = {
+	id = 2011507 #A new flag
+	country = SIA
+
+	name = "EVT_2003127_NAME" #A new flag
+	desc = "EVT_2003127_DESC"
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 27 month = september year = 1917 }
+
+	action_a = {
+		name = "ACTION_NAME_EXCELLENT" #Excellent
+		command = { type = flag_ext where = SIA which = "" } #reset to standard flag
+	}
+}

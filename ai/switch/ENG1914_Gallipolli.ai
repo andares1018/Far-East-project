@@ -1,0 +1,59 @@
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+	invasion			= yes
+ 	base				= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random				= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal				= 0.1	#increase to avoid coastal forts more.
+	beach				= 0.1	#higher, avoid worst beaches.
+	max_distance   		= 250.0  
+	max_staging_distance = 15	# How far should the staging area be from the target invasion point
+	distance			= 0.1	#higher = avoid long distance.
+	pocket				= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island				= 0.1	#prioritise taking pure islands.
+	enemy				= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 		= 2.0	#higher = much more vary of troops nearby
+	air_base			= 1.5 
+   	naval_base 			= 0.1 
+   	air_support 		= 3.0 
+   	redirect 			= priority
+	ignore				= no
+	help_allies 		= yes	#[yes/no]
+      
+	staging_province = {
+		18 # Sheffield 
+		20 # Plymouth 
+		429 # Malta 
+		747 # Tunis 
+		348 # Gibraltar
+		49 # Calais
+	}
+	target = {
+		# german beaches except eastern prussia for testing
+		147 = -1
+		152 = -1
+		153 = -1
+		158 = -1
+		226 = -1
+		181 = -1
+		184 = -1
+
+		# Baltics
+		264 = -1
+		269 = -1
+		270 = -1
+		275 = -1
+		
+		# A-H coast
+		343 = -1
+		
+		#calais expcorps
+		49 = 20
+		# bruges
+		114 = 30
+		
+		384 = 500
+		1078 = 200
+	} 
+} 

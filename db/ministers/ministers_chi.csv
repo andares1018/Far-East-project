@@ -1,0 +1,306 @@
+CHI;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+55200;Head of State;Tang Jiyao;1913;1927;1927;PA;Autocratic Charmer;High;9457;X
+55201;Head of Government;Ren Kecheng;1914;1933;1933;PA;Silent Workhorse;High;9458;X
+55202;Foreign Minister;Long Jinguang;1913;1930;1930;PA;General Staffer;High;9459;X
+55203;Minister of Armament;Ren Kecheng;1913;1933;1933;PA;Military Entrepreneur;Medium;9458;X
+55204;Minister of Security;Tang Jiyao;1913;1927;1927;PA;Man of the People;Medium;9457;X
+55205;Head of Military Intelligence;Tang Jiyao;1913;1927;1927;PA;Political Specialist;Medium;9457;X
+55206;Chief of Staff;Tang Jiyao;1913;1927;1927;PA;School of Psychology;High;9457;X
+55207;Chief of Army;Long Jinguang;1913;1930;1930;PA;Decisive Battle Doctrine;Medium;9459;X
+55208;Chief of Navy;Ren Kecheng;1914;1933;1933;PA;Open Seas Doctrine;Medium;9458;X
+55209;Chief of Air Force;Tang Jiyao;1913;1927;1927;PA;Army Aviation Doctrine;Medium;9457;X
+55210;Head of State;Cai E;1900;1917;1917;SC;Cai E;High;9460;X
+55211;Head of Government;Zhou Zhongyue;1915;1930;1930;SC;Naive Optimist;High;9461;X
+55212;Foreign Minister;Cai E;1900;1917;1917;SC;Ideological Crusader;Medium;9460;X
+55213;Minister of Armament;Zhou Zhongyue;1915;1930;1930;SC;Laissez-Faire Capitalist;Medium;9461;X
+55214;Minister of Security;Liang Qichao;1895;1918;1918;ML;Compassionate Gentleman;Medium;9462;X
+55215;Head of Military Intelligence;Li Liejun;1908;1947;1947;SC;Dismal Enigma;Medium;9463;X
+55216;Chief of Staff;Cai E;1900;1917;1917;SC;School of Mass Combat;Medium;9460;X
+55218;Chief of Navy;Li Dingxin;1886;1930;1930;PA;Decisive Naval Battle Doctrine;High;9464;X
+55219;Head of Government;Tang Jiyao;1913;1927;1927;PA;Old General;High;9457;X
+55220;Chief of Army;Tang Jiyao;1913;1927;1927;PA;Decisive Battle Doctrine;Medium;9457;X
+55221;Head of State;Long Jinguang;1916;1930;1930;PA;Resigned Generalissimo;High;9459;X
+55222;Head of Government;Gu Pinzhen;1921;1933;1933;PA;Silent Workhorse;High;9465;X
+55223;Chief of Staff;Luo Peijin;1909;1923;1923;PA;School of Fire Support;High;9551;X
+55224;Chief of Staff;Wang Jiuling;1911;1927;1952;SC;School of Fire Support;Medium;9410;X
+55225;Minister of Armament;Wang Jiuling;1911;1927;1952;SC;Theoretical Scientist;Medium;9410;X
+55300;Head of State;Sun Zhongshan;1895;1926;1926;SD;Sun Zhongshan_1;High;9511;X
+55301;Head of Government;Sun Zhongshan;1895;1926;1926;SD;Sun Zhongshan_2;High;9511;X
+55302;Head of Government;Wu Tingfang;1900;1922;1922;ML;Naive Optimist;High;9488;X
+55303;Foreign Minister;Wu Tingfang;1900;1922;1922;ML;Biased Intellectual;High;9488;X
+55304;Minister of Armament;Wu Tingfang;1900;1922;1922;ML;Laissez-Faire Capitalist;High;9488;X
+55305;Minister of Armament;Tang Shaoyi;1916;1930;1930;SC;Resource Industrialist;High;9486;X
+55306;Minister of Security;Sun Hongyi;1900;1936;1936;ML;Silent Lawyer;High;M_Sun Hongyi;X
+55307;Foreign Minister;Wu Chaoshu;1913;1935;1935;SC;Apologetic Clerk;High;9517;X
+55308;Head of Government;Liao Zhongkai;1905;1937;1937;SD;Naive Optimist;High;9518;X
+55309;Minister of Armament;Liao Zhongkai;1905;1937;1937;SD;Administrative Genius;High;9518;X
+55310;Minister of Security;Xu Shaozhen;1904;1926;1926;SC;Crime Fighter;High;9519;X
+55311;Chief of Staff;Xu Shaozhen;1904;1926;1926;SC;School of Fire Support;High;9519;X
+55312;Head of Military Intelligence;Mikhail Borodin;1923;1929;1929;LE;Political Specialist;High;9520;X
+55313;Head of Government;Chen Jiongming;1909;1933;1933;ML;Ambitious Union Boss;High;9515;X
+55314;Minister of Security;Chen Jiongming;1909;1933;1933;ML;Man of the People;High;9515;X
+55315;Chief of Staff;Chen Jiongming;1909;1933;1933;ML;School of Defence;High;9515;X
+55315;Chief of Army;Chen Jiongming;1909;1933;1933;ML;Guns and Butter Doctrine;High;9515;X
+55317;Head of Military Intelligence;Zhu Qinglan;1893;1942;1942;SC;Political Specialist;High;9548;X
+55318;Minister of Security;Zhu Qinglan;1893;1942;1942;SC;Compassionate Gentleman;High;9548;X
+55319;Head of State;Cen Chenxuan;1914;1933;1933;SC;Cen Chenxuan;High;9552;X
+55320;Minister of Security;Cen Chenxuan;1914;1933;1933;SC;Back Stabber;High;9552;X
+55321;Minister of Security;Wang Boqun;1920;1945;1945;SC;Compassionate Gentleman;High;9414;X
+55322;Chief of Navy;Lin Baoyi;1900;1931;1931;PA;Decisive Naval Battle Doctrine;High;9550;X
+55323;Chief of Navy;Cheng Biguang;1900;1918;1918;SC;Decisive Naval Battle Doctrine;High;9514;X
+55324;Chief of Navy;Tang Tingguang;1900;1933;1933;ML;Indirect Approach Doctrine;High;M_Tang Tingguang;X
+55325;Head of Military Intelligence;Jiang Jieshi;1920;1976;1976;PA;Industrial Specialist;High;9516;X
+55326;Chief of Staff;Jiang Jieshi;1920;1976;1976;PA;School of Mass Combat;High;9516;X
+55327;Chief of Army;Jiang Jieshi;1923;1976;1976;PA;Decisive Battle Doctrine;High;9516;X
+55328;Chief of Air Force;Wang Shuming;1933;1970;1970;SC;Vertical Envelopment Doctrine;High;9422;X
+55330;Minister of Security;Bai Wenwei;1906;1948;1948;SD;Man of the People;High;M_Bai Wenwei;X
+55331;Minister of Security;Tan Yankai;1907;1931;1931;SC;Man of the People;High;9528;X
+55332;Head of Government;Tan Yankai;1907;1931;1931;SC;Naive Optimist;High;9528;X
+55333;Chief of Navy;Li Zhilong;1921;1963;1963;LWR;Power Projection Doctrine;High;9439;X
+55334;Chief of Staff;Bai Wenwei;1906;1948;1948;SD;School of Psychology;High;M_Bai Wenwei;X
+55335;Head of State;Wang Jingwei;1920;1958;1958;SD;Barking Buffoon;High;M52041;X
+55336;Head of Government;Wang Jingwei;1920;1958;1958;SD;Naive Optimist;High;M52041;X
+55337;Minister of Armament;Chen Gongbo;1926;1968;1968;LWR;Keynesian Economy;High;M_Chen Gongbo;X
+55338;Minister of Armament;Zhou Fohai;1927;1945;1945;SD;Laissez-Faire Capitalist;High;8142;X
+55339;Chief of Staff;Tang Shengzhi;1925;1970;1970;SL;School of Psychology;High;L50280;X
+55340;Chief of Army;Tang Shengzhi;1925;1970;1970;SL;Decisive Battle Doctrine;High;L50280;X
+55341;Minister of Security;Xu Qian;1925;1941;1941;SD;Crime Fighter;High;M_Xu Qian;X
+55342;Foreign Minister;Wu Tiecheng;1926;1954;1954;SC;Iron Fisted Brute;High;M_Wu Tiecheng;X
+55343;Head of Military Intelligence;Wu Tiecheng;1926;1954;1954;PA;Political Specialist;High;M_Wu Tiecheng;X
+55344;Head of Government;Hu Hanmin;1907;1937;1937;SC;Ambitious Union Boss;High;9512;X
+55345;Foreign Minister;Hu Hanmin;1907;1937;1937;SC;Ideological Crusader;High;9512;X
+55346;Minister of Security;Hu Hanmin;1907;1937;1937;SC;Back Stabber;High;9512;X
+55347;Head of Military Intelligence;Hu Hanmin;1907;1937;1937;SC;Political Specialist;High;9512;X
+55348;Head of State;Hu Hanmin;1925;1937;1937;SC;Weary Stiffneck;High;9512;X
+55349;Head of Government;Sun Fo;1926;1973;1973;SC;Happy Amateur;High;9307;X
+55350;Head of State;Sun Fo;1926;1973;1973;SC;Barking Buffoon;High;9307;X
+55351;Minister of Armament;Sun Fo;1923;1973;1973;SL;Balanced Budget Economy;High;9307;X
+55352;Foreign Minister;Wang Zhengting;1911;1933;1962;SC;Apologetic Clerk;High;3391;X
+55353;Foreign Minister;Lin Sen;1914;1944;1944;SC;Apologetic Clerk;High;2341;X
+55354;Minister of Armament;Gu Yingfen;1914;1932;1932;SC;Resource Industrialist;High;M_Gu Yingfen;X
+55355;Minister of Armament;Deng Zeru;1914;1935;1935;SC;Laissez-Faire Capitalist;High;M_Deng Zeru;X
+55356;Minister of Armament;Qian Yongming;1926;1959;1959;PA;Laissez-Faire Capitalist;High;M_Qian Yongming;X
+55357;Chief of Staff;Xu Chongzhi;1906;1951;1951;SC;School of Manoeuvre;High;9513;X
+55358;Chief of Army;Xu Chongzhi;1906;1951;1951;SC;Decisive Battle Doctrine;High;9513;X
+55359;Head of Military Intelligence;Xu Chongzhi;1906;1951;1951;SC;Logistics Specialist;High;9513;X
+55360;Chief of Staff;Li Liejun;1908;1947;1947;SC;School of Mass Combat;High;9463;X
+55361;Head of Government;Lu Rongting;1900;1925;1929;PA;Old General;High;9544;X
+55362;Minister of Armament;Chen Bingkun;1900;1925;1928;PA;Resource Industrialist;High;9546;X
+55363;Head of Military Intelligence;Ma Junwu;1902;1925;1941;PA;Political Specialist;High;9553;X
+55364;Head of State;Li Zongren;1933;1966;1966;PA;Resigned Generalissimo;High;620;X
+55365;Head of Government;Li Zongren;1920;1966;1966;PA;Naive Optimist;High;620;X
+55366;Chief of Army;Li Zongren;1920;1966;1966;PA;Elastic Defence Doctrine;High;620;X
+55367;Head of Government;Huang Shaohong;1924;1961;1961;PA;Old General;High;9416;X
+55368;Minister of Security;Huang Shaohong;1924;1961;1961;PA;Compassionate Gentleman;High;9416;X
+55369;Chief of Staff;Bai Chongxi;1922;1967;1967;PA;School of Manoeuvre;High;L50247;X
+55370;Chief of Staff;Li Zongren;1920;1966;1966;PA;School of Mass Combat;High;620;X
+55371;Chief of Army;Yu Hanmou;1920;1962;1962;SC;Elastic Defence Doctrine;High;M502004;X
+55372;Chief of Army;Chen Jitang;1908;1933;1955;PA;Static Defence Doctrine;High;M_Chen Jitang;X
+55373;Chief of Staff;Xu Yongchang;1924;1960;1960;PA;School of Manoeuvre;High;M52046;X
+55374;Minister of Armament;Xu Yongchang;1924;1960;1960;PA;Military Entrepreneur;High;M52046;X
+55375;Minister of Security;He Jian;1929;1957;1957;PA;Prince of Terror;High;M_He Jian;X
+55376;Head of Government;Yan Xishan;1930;1961;1961;PA;Old General;High;948;X
+55377;Foreign Minister;Chen Youren;1920;1945;1945;SD;Ideological Crusader;High;9308;X
+55378;Head of Military Intelligence;Deng Yanda;1927;1950;1950;SD;Political Specialist;High;M_Deng Yanda;X
+55379;Chief of Staff;Deng Yanda;1928;1950;1950;SD;School of Mass Combat;High;M_Deng Yanda;X
+55380;Minister of Security;Yu Youren;1928;1950;1950;SL;Compassionate Gentleman;High;M_Yu Youren;X
+55381;Chief of Navy;Yang Shuzhuang;1900;1934;1934;PA;Decisive Naval Battle Doctrine;High;M_Yang Shuzhuang;X
+55382;Chief of Army;Mo Rongxin;1914;1924;1930;SC;Elastic Defence Doctrine;High;M_Mo Rongxin;X
+55383;Head of Military Intelligence;Tan Pingshan;1921;1957;1957;LE;Political Specialist;High;M_Tan Pingshan;X
+55384;Head of State;Tan Yankai;1926;1931;1931;SC;Benevolent Gentleman;High;9528;X
+55385;Head of Military Intelligence;Wu Yuzhang;1922;1967;1967;LE;Technical Specialist;High;M_Wu Yuzhang;X
+55386;Chief of Air Force;Zhang Huichang;1918;1981;1981;SC;Air Superiority Doctrine;High;M_Zhang Huichang;X
+55387;Chief of Air Force;Huang Guangrui;1921;1985;1985;SC;Carpet Bombing Doctrine;High;L50374;X
+55388;Minister of Security;Zhao Daiwen;1928;1944;1944;PA;Compassionate Gentleman;High;M_Zhao Daiwen;X
+55389;Foreign Minister;Shi Zhaoji;1930;1959;1959;SC;Apologetic Clerk;High;9530;X
+55001;Head of State;Jiang Jieshi;1925;1976;1976;PA;Resigned Generalissimo;High;9516;X
+55002;Head of Government;Jiang Jieshi;1928;1976;1976;PA;Jiang_Jieshi_1;High;9516;X
+55003;Head of Government;Yu Hongjun;1950;1961;1961;PA;Happy Amateur;High;M_Yu Hongjun;X
+55004;Minister of Armament;Yu Hongjun;1940;1961;1961;PA;Laissez-Faire Capitalist;High;M_Yu Hongjun;X
+55005;Head of Government;Yan Jiagan;1955;1975;1994;PA;Political Protege;High;M_Yan Jiagan;X
+55006;Minister of Armament;Yan Jiagan;1942;1975;1994;PA;Administrative Genius;High;M_Yan Jiagan;X
+55007;Head of Government;Kong Xiangxi;1933;1968;1999;PA;Corporate Suit;High;M52030;X
+55008;Minister of Armament;Kong Xiangxi;1911;1968;1968;PA;Laissez-Faire Capitalist;High;M52030;X
+55009;Foreign Minister;Kong Xiangxi;1911;1968;1968;PA;The Cloak N Dagger Schemer;High;M52030;X
+55010;Head of Government;Song Ziwen;1930;1967;1967;SC;Silent Workhorse;High;9235;X
+55011;Foreign Minister;Song Ziwen;1930;1967;1967;SC;Apologetic Clerk;High;9235;X
+55012;Minister of Armament;Song Ziwen;1925;1967;1967;SC;Administrative Genius;High;9235;X
+55013;Head of Government;Wang Yunwu;1950;1961;1961;PA;Happy Amateur;High;M_Wang Yunwu;X
+55014;Foreign Minister;Wang Shijie;1942;1967;1967;PA;Apologetic Clerk;High;M52038;X
+55015;Minister of Armament;Liu Shangqing;1911;1948;1948;PA;Infantry Proponent;High;9305;X
+55016;Minister of Security;Liu Shangqing;1911;1948;1948;PA;Back Stabber;High;9305;X
+55017;Minister of Armament;Huang Hanliang;1928;1933;1933;SL;Resource Industrialist;High;M_Huang Hanliang;X
+55018;Chief of Navy;Chen Shaokuan;1926;1955;1955;PA;Decisive Naval Battle Doctrine;High;9443;X
+55019;Foreign Minister;Luo Wengan;1912;1964;1964;SC;Biased Intellectual;High;9412;X
+55020;Foreign Minister;Guo Taiqi;1933;1953;1953;SC;Ideological Crusader;High;9413;X
+55021;Chief of Air Force;Zhou Zhirou;1934;1964;1964;PA;Army Aviation Doctrine;High;9407;X
+55022;Chief of Staff;Zhu Peide;1921;1936;1937;SC;School of Mass Combat;High;M_Zhu Peide;X
+55023;Chief of Army;Zhu Peide;1921;1936;1937;SC;Static Defence Doctrine;High;M_Zhu Peide;X
+55024;Minister of Armament;Yu Feipeng;1913;1967;1967;PA;Military Entrepreneur;High;M52053;X
+55025;Minister of Armament;Zhang Jiaao;1909;1964;1964;SC;Construction Magnate;High;9419;X
+55026;Minister of Armament;Yu Dawei;1930;1973;1973;PA;Military Entrepreneur;High;9421;X
+55027;Chief of Staff;Du Jianshi;1940;1971;1971;SC;School of Fire Support;High;9424;X
+55028;Minister of Security;Huang Musong;1928;1938;1938;PA;Efficient Sociopath;High;M52066;X
+55029;Minister of Security;Gu Zhenglun;1931;1954;1954;PA;Crime Fighter;High;9426;X
+55030;Head of Military Intelligence;Yang Xuancheng;1943;1963;1963;PA;Naval Intelligence Specialist;High;M52082;X
+55031;Chief of Staff;Jiang Baili;1933;1939;1939;SC;School of Psychology;High;9434;X
+55032;Chief of Staff;Qian Dajun;1935;1958;1958;PA;School of Defence;High;9435;X
+55033;Chief of Air Force;Qian Dajun;1935;1958;1958;PA;Carpet Bombing Doctrine;High;9435;X
+55034;Chief of Army;Zhang Fakui;1927;1949;1981;SL;Static Defence Doctrine;High;L50006;X
+55035;Chief of Staff;Xu Zuyi;1928;1961;1961;SC;School of Defence;High;M52093;X
+55036;Chief of Army;Gu Zhutong;1930;1958;1958;PA;Decisive Battle Doctrine;High;9436;X
+55037;Chief of Staff;Gu Zhutong;1930;1958;1958;PA;School of Defence;High;9436;X
+55038;Chief of Navy;Zeng Yiding;1922;1958;1958;SC;Indirect Approach Doctrine;High;9444;X
+55039;Chief of Navy;Chen Ce;1917;1950;1950;SC;Open Seas Doctrine;High;9445;X
+55040;Chief of Army;Gui Yongqing;1935;1955;1955;PA;Static Defence Doctrine;High;M52104;X
+55041;Chief of Navy;Gui Yongqing;1945;1955;1955;PA;Decisive Naval Battle Doctrine;High;M52104;X
+55042;Head of Government;He Yingqin;1933;1988;1988;PA;Ambitious Union Boss;High;9306;X
+55043;Chief of Army;He Yingqin;1928;1988;1988;PA;Decisive Battle Doctrine;High;9306;X
+55044;Chief of Staff;He Yingqin;1926;1988;1988;PA;School of Psychology;High;9306;X
+55045;Head of Military Intelligence;He Yingqin;1924;1988;1988;PA;Logistics Specialist;High;9306;X
+55046;Head of State;Chen Cheng;1948;1963;1963;PA;Resigned Generalissimo;High;9446;X
+55047;Head of Government;Chen Cheng;1945;1963;1963;PA;Political Protege;High;9446;X
+55048;Chief of Staff;Chen Cheng;1930;1963;1963;PA;School of Fire Support;High;9446;X
+55049;Chief of Army;Chen Cheng;1930;1963;1963;PA;Static Defence Doctrine;High;9446;X
+55050;Chief of Air Force;Mao Bangchu;1929;1951;1970;PA;Vertical Envelopment Doctrine;High;9448;X
+55051;Chief of Air Force;Gao Zhihang;1928;1938;1973;PA;Air Superiority Doctrine;High;9449;X
+55052;Chief of Air Force;Liu Cuigang;1934;1938;1979;PA;Air Superiority Doctrine;High;9598;X
+55053;Chief of Air Force;Chen Chonghui;1935;1938;1977;PA;Naval Aviation Doctrine;High;2342;X
+55054;Foreign Minister;Yeh Kungchao;1940;1982;1982;SC;Biased Intellectual;High;M_Yeh Kungchao;X
+55055;Head of Government;Wu Guozhen;1945;1968;1984;SC;Naive Optimist;High;M_Wu Kuochen;X
+55056;Foreign Minister;Wu Guozhen;1942;1968;1984;SC;Apologetic Clerk;High;M_Wu Kuochen;X
+55057;Foreign Minister;Huang Shaoku;1940;1970;1996;PA;The Cloak N Dagger Schemer;High;M_Huang Shaoku;X
+55058;Foreign Minister;Shen Changhuan;1945;1998;1998;PA;Apologetic Clerk;High;M_Shen Changhuan;X
+55059;Foreign Minister;Victor Hoo;1930;1973;1973;ML;Apologetic Clerk;High;M_Victor Zai;X
+55060;Head of Military Intelligence;Cai Wenzhi;1942;1970;1994;PA;Dismal Enigma;High;M_Cai Wenzhi;X
+55061;Head of Military Intelligence;Xiong Shihui;1932;1970;1999;SC;Political Specialist;High;M_Xiong Shihui;X
+55062;Foreign Minister;Zhang Lisheng;1936;1971;1971;SC;Apologetic Clerk;High;M_Zhang Lisheng;X
+55063;Chief of Staff;Zhou Zhirou;1936;1964;1964;PA;School of Fire Support;High;9407;X
+55064;Head of State;Jiang Jingguo;1964;1989;1999;PA;Die-hard Reformer;High;9423;X
+55065;Minister of Armament;Jiang Jingguo;1950;1989;1989;PA;Mixed Economy;High;9423;X
+55066;Head of Military Intelligence;Jiang Jingguo;1945;1989;1989;PA;Dismal Enigma;High;9423;X
+55067;Minister of Security;Xue Dubi;1927;1973;1973;SC;Silent Lawyer;High;M_Xue Dubi;X
+55068;Minister of Security;Niu Yongjian;1914;1952;1952;SC;Health and Safety;High;M_Niu Yongjian;X
+55069;Minister of Security;Zhang Wohua;1914;1939;1939;SC;Compassionate Gentleman;High;M_Zhang Wohua;X
+55070;Minister of Security;Li Wenfan;1914;1950;1950;SC;Compassionate Gentleman;High;M_Li Wenfan;X
+55071;Minister of Security;Gan Naiguang;1928;1957;1957;SC;Compassionate Gentleman;High;M_Gan Naiguang;X
+55072;Minister of Security;Huang Fu;1930;1937;1937;SC;Silent Lawyer;High;M_Huang_Fo;X
+55073;Minister of Security;Tao Lvqian;1928;1945;1945;SC;Silent Lawyer;High;M_Tao Lvqian;X
+55074;Foreign Minister;Tao Lvqian;1927;1945;1945;SC;Apologetic Clerk;High;M_Tao Lvqian;X
+55075;Minister of Security;Jiang Zuobin;1928;1943;1943;PA;Compassionate Gentleman;High;M_Jiang Zuobin;X
+55076;Foreign Minister;Jiang Zuobin;1919;1943;1943;PA;Apologetic Clerk;High;M_Jiang Zuobin;X
+55077;Minister of Security;Zhou Zhongyue;1930;1955;1955;SC;Man of the People;High;9461;X
+55078;Minister of Security;Peng Zhaoxian;1930;1970;1980;PA;Back Stabber;High;M_Peng Zhaoxian;X
+55079;Minister of Security;Li Hanhun;1945;1970;1988;PA;Compassionate Gentleman;High;M_Li Hanhun;X
+55080;Minister of Security;Gu Zhenggang;1928;1970;1994;SD;Health and Safety;High;M_Gu Zhenggang;X
+55081;Minister of Security;Yu Jingtang;1950;1970;1985;SC;Man of the People;High;M_Yu Jingtang;X
+55082;Minister of Security;Wang Depu;1950;1974;1991;PA;Silent Lawyer;High;M_Wang Depu;X
+55083;Minister of Security;Tian Jiongjin;1948;1977;1977;PA;Compassionate Gentleman;High;M_Tian Jiongjin;X
+55084;Minister of Security;Lian Zhendong;1950;1970;1987;PA;Compassionate Gentleman;High;M_Lian Zhendong;X
+55085;Minister of Armament;Li Guoding;1951;1977;2001;SC;Planned Economy Proponent;High;M_Li Guoding;X
+55086;Foreign Minister;Fu Bingchang;1927;1964;1964;SC;Biased Intellectual;High;M_Fu Bingchang;X
+55087;Foreign Minister;Ye Gongchao;1948;1981;1981;SC;Biased Intellectual;High;M_Yeh Kungchao;X
+55088;Chief of Air Force;Huang Bingheng;1928;1990;1990;PA;Army Aviation Doctrine;High;L50375;X
+55089;Chief of Staff;Wang Shuming;1936;1970;1970;SC;School of Defence;High;9422;X
+55090;Minister of Armament;Sun Yueqi;1942;1996;1996;SD;Resource Industrialist;High;M_Sun Yueqi;X
+55091;Minister of Armament;Zhi Bingyuan;1945;1971;1971;SD;Theoretical Scientist;High;M_Zhi Bingyuan;X
+55092;Minister of Armament;Gu Mengyu;1928;1972;1972;SD;Industrial Chemist;High;9418;X
+55093;Head of Government;Cheng Qian;1950;1968;1968;SD;Old General;High;L50041;X
+55094;Chief of Army;Cheng Qian;1940;1968;1968;SL;Guns and Butter Doctrine;High;L50041;X
+55095;Head of Government;Li Jishen;1925;1960;1960;SD;Old General;High;2333;X
+55096;Chief of Staff;Li Jishen;1925;1960;1960;SL;School of Manoeuvre;High;2333;X
+55097;Chief of Army;Li Jishen;1925;1960;1960;SL;Decisive Battle Doctrine;High;2333;X
+55098;Head of State;Feng Yuxiang;1927;1960;1960;SD;Resigned Generalissimo;High;9303;X
+55099;Chief of Army;Feng Yuxiang;1927;1960;1960;SD;Guns and Butter Doctrine;High;9303;X
+55100;Chief of Army;Cheng Mingshu;1931;1955;1955;SD;Static Defence Doctrine;High;9415;X
+55101;Minister of Armament;He Yaozu;1933;1962;1962;SL;Infantry Proponent;High;M52079;X
+55102;Head of Military Intelligence;He Yaozu;1928;1962;1962;SL;Industrial Specialist;High;M52079;X
+55103;Minister of Security;Li Zhangda;1930;1953;1953;SD;Crime Fighter;High;M_Li Zhangda;X
+55104;Head of Military Intelligence;Li Zhangda;1926;1953;1953;SD;Logistics Specialist;High;M_Li Zhangda;X
+55105;Foreign Minister;Huang Qixiang;1933;1970;1971;SD;General Staffer;High;M_Huang Qixiang;X
+55106;Chief of Staff;Huang Qixiang;1933;1971;1971;SD;School of Fire Support;High;M_Huang Qixiang;X
+55107;Chief of Army;Jiang Guangnai;1933;1968;1968;SD;Static Defence Doctrine;High;M_Jiang Guangnai;X
+55108;Minister of Armament;Sun Yueqi;1942;1964;1996;PA;Resource Industrialist;High;M_Sun Yueqi;X
+55109;Head of Government;Wang Jingwei;1930;1958;1958;PA;Backroom Backstabber;High;M52041;X
+55110;Foreign Minister;Wang Jingwei;1930;1958;1958;PA;Iron Fisted Brute;High;M52041;X
+55111;Minister of Armament;Chen Gongbo;1930;1947;1968;PA;Keynesian Economy;High;M_Chen Gongbo;X
+55112;Minister of Armament;Zhou Fohai;1930;1945;1945;PA;Laissez-Faire Capitalist;High;8142;X
+55113;Chief of Army;Bao Wenyue;1931;1939;1958;PA;Static Defence Doctrine;High;9437;X
+55114;Chief of Staff;Ren Yuandao;1933;1981;1981;PA;School of Defence;High;9447;X
+55115;Chief of Navy;Ren Yuandao;1933;1981;1981;PA;Open Seas Doctrine;High;9447;X
+55116;Minister of Armament;Zeng Zhongming;1930;1940;1940;PA;Steel Magnate;High;M_Zeng Zhongming;X
+55117;Foreign Minister;Zhang Qun;1928;1965;1964;SC;Apologetic Clerk;High;9406;X
+55118;Head of Government;Zhang Qun;1928;1964;1964;SC;Political Protege;High;9406;X
+55119;Head of Government;Wang Chonghui;1936;1959;1959;SC;Corporate Suit;High;9524;X
+55120;Foreign Minister;Wang Chonghui;1928;1959;1959;SC;Ideological Crusader;High;9524;X
+55121;Minister of Security;Weng Wenhao;1932;1965;1965;SC;Compassionate Gentleman;High;9425;X
+55122;Head of Government;Weng Wenhao;1940;1965;1965;SC;Silent Workhorse;High;9425;X
+55123;Head of Military Intelligence;Yang Yongtai;1930;1937;1939;SC;Political Specialist;High;M_Yang Yongtai;X
+55124;Foreign Minister;Yang Yongtai;1930;1937;1939;SC;Iron Fisted Brute;High;M_Yang Yongtai;X
+55125;Head of Government;Chen Lifu;1940;1975;2002;PA;Ambitious Union Boss;High;9405;X
+55126;Minister of Security;Chen Lifu;1930;1975;2002;PA;Efficient Sociopath;High;9405;X
+55127;Head of Military Intelligence;Chen Lifu;1928;1975;2002;PA;Political Specialist;High;9405;X
+55128;Head of Government;Zhu Jiahua;1945;1964;1964;SC;Corporate Suit;High;9417;X
+55129;Minister of Armament;Zhu Jiahua;1920;1964;1964;SC;Theoretical Scientist;High;9417;X
+55130;Minister of Security;Chen Guofu;1925;1952;1952;PA;Prince of Terror;High;M52005;X
+55131;Minister of Armament;Wu Zhongxin;1906;1960;1960;PA;Infantry Proponent;High;M52065;X
+55132;Chief of Staff;Wu Zhongxin;1906;1960;1960;PA;School of Fire Support;High;M52065;X
+55133;Minister of Security;Zhang Lisheng;1936;1971;1971;PA;Silent Lawyer;High;M_Zhang Lisheng;X
+55134;Head of Military Intelligence;Hong Lanyou;1936;1958;1958;PA;Political Specialist;High;M_Hong Lanyou;X
+55135;Minister of Security;Hong Lanyou;1936;1958;1958;PA;Silent Lawyer;High;M_Hong Lanyou;X
+55136;Head of Government;Ju Zheng;1936;1951;1951;SC;Happy Amateur;High;M_Ju Zheng;X
+55137;Minister of Security;Ju Zheng;1912;1951;1951;SC;Silent Lawyer;High;M_Ju Zheng;X
+55138;Head of State;Lin Sen;1926;1944;1944;PA;Weary Stiffneck;High;2341;X
+55139;Minister of Security;Huang Jilu;1924;1970;1985;SC;Media Magnate;High;M_Huang_Jilu;X
+55140;Minister of Security;Dai Chunfeng;1927;1947;1973;FA;Dai_Li_1;High;M52063;X
+55141;Head of Military Intelligence;Dai Chunfeng;1927;1947;1973;FA;Dai_Li_2;High;M52063;X
+55142;Head of Military Intelligence;Ma Hansan;1938;1949;1982;PA;Logistics Specialist;High;9432;X
+55143;Head of Military Intelligence;Mao Renfeng;1937;1957;1957;FA;Logistics Specialist;High;9429;X
+55144;Minister of Security;He Zhonghan;1930;1966;1966;FA;Man of the People;High;9442;X
+55145;Chief of Staff;Zheng Jiemin;1931;1960;1960;FA;School of Psychology;High;9430;X
+55146;Chief of Staff;Hu Zongnan;1936;1962;1962;PA;School of Defence;High;L50122;X
+55147;Foreign Minister;Chen Zhiping;1940;1984;1984;FA;Biased Intellectual;High;M_Chih Ping-Chen;X
+55148;Head of Government;Zhang Junmai;1936;1970;1970;SL;Corporate Suit;High;M_Zhang Junmai;X
+55149;Foreign Minister;Zhang Junmai;1936;1970;1970;SL;Ideological Crusader;High;M_Zhang Junmai;X
+55150;Head of State;Xu Fulin;1940;1958;1958;SL;Pig-headed Isolationist;High;M_Xu Fulin;X
+55151;Foreign Minister;Zhang Shenfu;1936;1986;1986;SD;Ideological Crusader;High;M_Zhang Shenfu;X
+55152;Head of State;Hu Shih;1940;1963;1963;ML;Die-hard Reformer;High;M_Hu Shih;X
+55153;Foreign Minister;Hu Shih;1940;1963;1963;ML;Biased Intellectual;High;M_Hu Shih;X
+55154;Minister of Armament;Li Huang;1930;1991;1991;ML;Theoretical Scientist;High;M_Li Huang;X
+55155;Foreign Minister;V.K. Wellington Koo;1929;1968;1986;ML;Great Compromiser;High;M_Wellington;X
+55156;Minister of Security;Wu Kaisheng;1933;1970;1998;SL;Compassionate Gentleman;High;M_Wu Kaisheng;X
+55157;Foreign Minister;Wu Kaisheng;1933;1970;1998;SL;Ideological Crusader;High;M_Wu Kaisheng;X
+55158;Minister of Security;Lei Chen;1945;1980;1980;ML;Compassionate Gentleman;High;M_Lei Chen;X
+55159;Head of Military Intelligence;Xia Taosheng;1942;1967;1967;ML;Political Specialist;High;M_Xia Taosheng;X
+55160;Head of Military Intelligence;Zhang Yunchuan;1933;1965;1965;SD;Political Specialist;High;M_Zhang Yunchuan;X
+55161;Minister of Armament;Zhang Bojun;1933;1969;1969;SD;Construction Magnate;High;M_Zhang Bojun;X
+55163;Chief of Army;Xu Yongchang;1924;1953;1953;PA;Decisive Battle Doctrine;High;M52046;X
+55164;Chief of Army;Sun Lijen;1940;1970;1990;SC;Armoured Spearhead Doctrine;High;L50265;X
+55165;Chief of Staff;Sun Lijen;1940;1970;1990;SC;School of Manoeuvre;High;L50265;X
+55166;Chief of Army;Guan Linzheng;1940;1970;1980;PA;Guns and Butter Doctrine;High;L50154;X
+55167;Chief of Army;Huang Chieh;1950;1995;1995;PA;Static Defence Doctrine;High;M_Huang Chieh;X
+55168;Chief of Staff;Peng Mengji;1950;1970;1997;PA;School of Psychology;High;M_Peng Mengji;X
+55169;Chief of Army;Peng Mengji;1950;1970;1997;PA;Static Defence Doctrine;High;M_Peng Mengji;X
+55170;Chief of Army;Liu An-chi;1950;1970;1995;PA;Elastic Defence Doctrine;High;M_Liu An-chi;X
+55171;Foreign Minister;Wang Jiazhen;1930;1970;1984;SD;Biased Intellectual;High;M_Wang Jiazhen;X
+55172;Chief of Army;Luo Lie;1955;1976;1976;PA;Decisive Battle Doctrine;High;M_Luo Lie;X
+55173;Head of Military Intelligence;Zheng Jiemin;1931;1960;1960;FA;Political Specialist;High;9430;X
+55174;Minister of Armament;Weng Wenhao;1932;1950;1965;SC;Resource Industrialist;High;9425;X
+55175;Minister of Armament;Wang Yunwu;1940;1965;1979;SC;Balanced Budget Economy;High;M_Wang Yunwu;X
+55176;Minister of Security;Li Shizhen;1936;1965;1998;FA;Crime Fighter;High;M_Li Shizhen;X
+55177;Chief of Staff;Li Shizhen;1936;1965;1998;FA;School of Fire Support;High;M_Li Shizhen;X
+55178;Head of Government;Gu Mengyu;1930;1972;1972;SD;Corporate Suit;High;9418;X
+55179;Minister of Armament;Zhou Dewei;1936;1987;1987;SL;Mixed Economy;High;M_Zhou Dewei;X
+55180;Head of Government;Chen Gongbo;1936;1947;1968;PA;Political Protege;High;M_Chen Gongbo;X
+55181;Head of Military Intelligence;Chen Guofu;1926;1952;1952;PA;Political Specialist;High;M52005;X
+55182;Minister of Armament;Wu Dingchang;1930;1951;1951;SC;Military Entrepreneur;High;M_Wu Dingchang;X
+55183;Minister of Armament;Cheng Tiangu;1925;1975;1975;SC;Administrative Genius;High;M_Cheng Tiangu;X
+55184;Minister of Armament;Chen Qitian;1930;1985;1985;ML;Reformer;High;M_Chen Qitian;X
+55185;Minister of Armament;Liu Weichi;1930;1956;1956;PA;Steel Magnate;High;M_Liu Weichi;X
+55186;Minister of Armament;Liu Hangchen;1945;1964;1976;SC;Laissez-Faire Capitalist;High;M_Liu Hangchen;X
+55187;Minister of Armament;Zheng Daoru;1945;1964;1976;PA;Industrial Chemist;High;M_Zheng Daoru;X
+55188;Minister of Armament;Zhang Zikai;1945;1982;1984;PA;Administrative Genius;High;M_Zhang Zikai;X
+55189;Minister of Armament;Yin Zhongrong;1949;1964;1964;SC;Administrative Genius;High;M_Yin Zhongrong;X
+55190;Minister of Armament;Jiang Piao;1950;1981;1981;PA;Resource Industrialist;High;M_Jiang Piao;X
+55191;Minister of Armament;Yang Jizeng;1940;1964;1993;PA;Military Entrepreneur;High;M_Yang Jizeng;X

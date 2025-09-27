@@ -1,0 +1,87 @@
+Events for testing - remove them later
+... erased
+
+German events
+3191501	Summer 1914 Choosing a Warplan
+3191502	Decision Schlieffen/Hindenburg
+3191503 Start War with Switzerland
+3191504 Both Ah and GER are Ai
+
+3191505	Ah & DR are AI Summer 1914 Choosing a Warplan
+3191506	Ah & DR are AI Decision Schlieffen/Hindenburg
+3191507 Ah & DR are AI Start War with Switzerland
+3191508 Zar Nikolaus fled , move troops to the West
+3191509 End WWI
+
+3191514  Ah grants MC
+
+
+
+Austria-Hungary events
+3192501 Summer 1914 Choosing a Warplan
+3192502 Summer 1914 SER & MON only
+3192503 1914 War War against BUL or Rom
+3192504 1914 war against greece
+3192505 1914 war against Italy
+3192506 1914 war pahse two attack
+3192507 1914 war pahse three attack
+3192508 1914 cyclic reset of the AI, helps to solve strange behavior
+3192509 1914 Vienna is under attack!
+3192510 1914 siege of Vienna is lifted!
+3192511 1914 AH gives military control to Germany
+
+
+
+Russian events
+3104501	Summer 1914 Choosing Warplans
+3104502 build a second defence line
+3104503 raise dissent if poland is under german control
+3104504 raise dissent if belarus is under german control
+3104505 raise dissent if riga is under german control
+
+Sovjet events
+3104510 Basic setup
+
+French Events
+3002501	Summer 1914 Choosing Warplans
+3002502 Stop Spying ITA
+
+England Events
+3001501 Stop spying ITA
+3001502 Gallipolli
+
+Ottoman Events
+
+3145501 War Entry
+
+
+Romanian Events
+3023501 War Startup
+
+Bulgarian Events
+3020501 War Startup
+
+Australien Events
+3046501 War Startup
+
+NewZealand Events
+3044501 War Startup
+
+Japan Events
+3011501 War Startup
+
+Italy Events
+3006501 War Setup
+
+
+General Events 
+
+Reinforcement boost events
+3001001 reinforcements boost ENG
+3002001 reinforcements boost FRA
+3007001 reinforcements boost SOV
+3049001 reinforcements boost USA
+3003001 reinforcements boost GER
+3006001 reinforcements boost ITA
+3011001 reinforcements boost JAP
+

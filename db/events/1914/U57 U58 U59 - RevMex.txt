@@ -1,0 +1,620 @@
+###
+###  Mexican rebels events 
+###
+### By Rhysaxiel
+###
+###	U57 Constitucionalistas
+### U58 Villistas
+### U59 Zapatistas
+###
+### 2250500	 U58  Raids on Tucson
+### 2250501  U58  Raid result (resistance encountered)
+### 2250502  U58  Raid result (no resistance encountered)
+### 2250503	 U58  Raids on El Paso
+### 2250504	 U58  Raids on San Antonio
+### 2250505	 U58  Raids on Corpus Christii
+### 2250506	 U58  Raids on San Diego
+### 2250507  U58  New recruits
+### 2250508  U58  We have taken the Capital!
+### 2250509  U58  Loss of Mexico city
+###
+### 2038550  U59  We have taken the Capital!
+### 2038551  U59  Loss of Mexico city
+### 2038552  U59  Captured supplies
+### 2038553  U59  Smuggled supplies
+### 2038554  U59  New recruits
+###
+
+event = {
+	id = 2250500	# Raids on Tucson
+	country = U58 #Villistas
+	persistent = yes
+
+	decision = { 
+		atwar = yes 
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+	}
+	decision_trigger = { 
+		money = 100 
+		garrison = { country = U58 province = 1979 type = land size = 1 area = no }  
+	}
+	trigger = { 
+		atwar = yes 
+		NOT = { war = { country = MEX country = USA } }
+		NOT = { war = { country = U58 country = USA } }
+		money = 100 
+		garrison = { country = U58 province = 1979 type = land size = 1 area = no } 
+		random = 5 
+	}   
+	
+	name = "EVT1914_2250500_NAME"
+	desc = "EVT1914_2250500_DESC" 
+	style = 2
+	picture = "villa_raid"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2250500_ACTIONA" # Launch raid 
+	command = { type = money value = -100 }
+	command = { trigger = { garrison = { country = USA province = 1901 type = land size = 1 area = no } } 
+				type = trigger which = 2250501 } # Raid result for MEX if USA garrison
+	command = { trigger = { garrison = { country = USA province = 1901 type = land size = 1 area = no } } 
+				type = trigger which = 2049512 } # Raid result for USA if USA garrison (Tucson)
+	command = { trigger = { NOT = { garrison = { country = USA province = 1901 type = land size = 1 area = no } } } 
+				type = trigger which = 2250502 } # Raid result for MEX if no USA garrison
+	command = { trigger = { NOT = { garrison = { country = USA province = 1901 type = land size = 1 area = no } } } 
+				type = trigger which = 2049513 } # Raid result for USA if no USA garrison (Tucson)
+	}
+}
+event = {
+	id = 2250501   # Raid result (resistance encountered)
+	country = U58 #Villistas
+	persistent = yes
+
+	name = "EVT1914_2250501_NAME"
+	desc = "EVT1914_2250501_DESC" 
+	style = 2
+	picture = "villa_raid"
+	
+	action = {
+		name = "ACTION_NAME_OK" # Ok
+		command = { type = supplies value = 80 }
+		command = { type = rarematerialspool value = 10 }
+		command = { type = oilpool value = 10 }
+		command = { type = metalpool value = 20 }
+		command = { type = energypool value = 35 }
+	}
+}
+event = {
+	id = 2250502   # Raid result (no resistance encountered)
+	country = U58 #Villistas
+	persistent = yes
+   
+	name = "EVT1914_2250502_NAME"
+	desc = "EVT1914_2250502_DESC" 
+	style = 2
+	picture = "villa_raid"
+	
+	action = {
+		name = "ACTION_NAME_OK" # Ok
+		command = { type = supplies value = 160 }
+		command = { type = rarematerialspool value = 20 }
+		command = { type = oilpool value = 20 }
+		command = { type = metalpool value = 40 }
+		command = { type = energypool value = 70 }
+	}
+}
+event = {
+	id = 2250503	# Raids on El Paso
+	country = U58 #Villistas
+	persistent = yes
+
+	decision = { 
+		atwar = yes
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+	}
+	decision_trigger = { 
+		money = 100 
+		garrison = { country = U58 province = 1977 type = land size = 1 area = no }  
+	}
+	trigger = { 
+		atwar = yes
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+		money = 100 
+		garrison = { country = U58 province = 1977 type = land size = 1 area = no } 
+		random = 5 
+	}
+	
+	name = "EVT1914_2250503_NAME"
+	desc = "EVT1914_2250503_DESC" 
+	style = 2
+	picture = "villa_raid"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2250503_ACTIONA" # Launch raid 
+	command = { type = money value = -100 }
+	command = { trigger = { garrison = { country = USA province = 1923 type = land size = 1 area = no } } 
+				type = trigger which = 2250501 } # Raid result for MEX if USA garrison
+	command = { trigger = { garrison = { country = USA province = 1923 type = land size = 1 area = no } } 
+				type = trigger which = 2049514 } # Raid result for USA if USA garrison (El Paso)
+	command = { trigger = { NOT = { garrison = { country = USA province = 1923 type = land size = 1 area = no } } } 
+				type = trigger which = 2250502 } # Raid result for MEX if no USA garrison
+	command = { trigger = { NOT = { garrison = { country = USA province = 1923 type = land size = 1 area = no } } } 
+				type = trigger which = 2049515 } # Raid result for USA if no USA garrison (El Paso)
+	}
+}
+event = {
+   id = 2250504	# Raids on San Antonio
+   country = U58 #Villistas
+   persistent = yes
+
+	decision = { 
+		atwar = yes
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+	}
+	decision_trigger = { 
+		money = 100 
+		garrison = { country = U58 province = 1976 type = land size = 1 area = no }  
+	}
+	trigger = { 
+		atwar = yes
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+		money = 100 
+		garrison = { country = U58 province = 1976 type = land size = 1 area = no } 
+		random = 5 
+	}
+	
+	name = "EVT1914_2250504_NAME"
+	desc = "EVT1914_2250504_DESC" 
+	style = 2
+	picture = "villa_raid"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2250504_ACTIONA" # Launch raid 
+	command = { type = money value = -100 }
+	command = { trigger = { garrison = { country = USA province = 1926 type = land size = 1 area = no } } 
+				type = trigger which = 2250501 } # Raid result for MEX if USA garrison
+	command = { trigger = { garrison = { country = USA province = 1926 type = land size = 1 area = no } } 
+				type = trigger which = 2049516 } # Raid result for USA if USA garrison (San Antonio)
+	command = { trigger = { NOT = { garrison = { country = USA province = 1926 type = land size = 1 area = no } } } 
+				type = trigger which = 2250502 } # Raid result for MEX if no USA garrison
+	command = { trigger = { NOT = { garrison = { country = USA province = 1926 type = land size = 1 area = no } } } 
+				type = trigger which = 2049517 } # Raid result for USA if no USA garrison (San Antonio)
+	}
+}
+event = {
+   id = 2250505	# Raids on Corpus Christii
+   country = U58 #Villistas
+   persistent = yes
+
+	decision = { 
+		atwar = yes
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+	}
+	decision_trigger = { 
+		money = 100 
+		OR = { 
+			garrison = { country = U58 province = 1975 type = land size = 1 area = no } 
+			garrison = { country = U58 province = 1967 type = land size = 1 area = no } 
+		} 
+	}
+	trigger = { 
+		atwar = yes
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+		money = 100 
+		OR = { 
+			garrison = { country = U58 province = 1975 type = land size = 1 area = no } 
+			garrison = { country = U58 province = 1967 type = land size = 1 area = no } 
+		} 
+		random = 5 
+	}
+	
+	name = "EVT1914_2250505_NAME"
+	desc = "EVT1914_2250505_DESC" 
+	style = 2
+	picture = "villa_raid"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2250505_ACTIONA" # Launch raid 
+	command = { type = money value = -100 }
+	command = { trigger = { garrison = { country = USA province = 1922 type = land size = 1 area = no } } 
+				type = trigger which = 2250501 } # Raid result for MEX if USA garrison
+	command = { trigger = { garrison = { country = USA province = 1922 type = land size = 1 area = no } } 
+				type = trigger which = 2049518 } # Raid result for USA if USA garrison (San Antonio)
+	command = { trigger = { NOT ={ garrison = { country = USA province = 1922 type = land size = 1 area = no } } } 
+				type = trigger which = 2250502 } # Raid result for MEX if no USA garrison
+	command = { trigger = { NOT= { garrison = { country = USA province = 1922 type = land size = 0 area = no } } } 
+				type = trigger which = 2049519 } # Raid result for USA if no USA garrison (San Antonio)
+	}
+}
+event = {
+   id = 2250506	# Raids on San Diego
+   country = U58 #Villistas
+   persistent = yes
+
+	decision = { 
+		atwar = yes
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+	}
+	decision_trigger = { 
+		money = 100 
+		garrison = { country = U58 province = 1981 type = land size = 1 area = no } 
+	}
+	trigger = { 
+		atwar = yes 
+		NOT = { war = { country = MEX country = USA } } 
+		NOT = { war = { country = U58 country = USA } }
+		money = 100 
+		garrison = { country = U58 province = 1981 type = land size = 1 area = no } 
+		random = 5 
+	}
+	
+	name = "EVT1914_2250506_NAME"
+	desc = "EVT1914_2250506_DESC" 
+	style = 2
+	picture = "villa_raid"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2250506_ACTIONA" # Launch raid 
+	command = { type = money value = -100 }
+	command = { trigger = { garrison = { country = USA province = 1886 type = land size = 1 area = no } } 
+				type = trigger which = 2250501 } # Raid result for MEX if USA garrison
+	command = { trigger = { garrison = { country = USA province = 1886 type = land size = 1 area = no } } 
+				type = trigger which = 2049520 } # Raid result for USA if USA garrison (San Antonio)
+	command = { trigger = { garrison = { country = USA province = 1886 type = land size = 0 area = no } } 
+				type = trigger which = 2250502 } # Raid result for MEX if no USA garrison
+	command = { trigger = { garrison = { country = USA province = 1886 type = land size = 0 area = no } } 
+				type = trigger which = 2049521 } # Raid result for USA if no USA garrison (San Antonio)
+	}
+}
+
+event = {
+	id = 2250507 #New recruits
+	country = U58 #Villistas
+	random = yes
+	persistent = yes
+	one_action = yes 
+
+	trigger = {
+		atwar = yes
+		random = 10
+		NOT = { IC = 7 }
+	}
+
+	name = "EVT1914_2250507_NAME"
+	desc = "EVT1914_2250507_DESC"
+	picture = "soviet_reinforcements"
+	style = 2
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1964 }
+   
+	action = {
+		ai_chance = 5
+		name = "ACTION_NAME_OK"
+		command = { type = manpowerpool value = 0.5 when = 1 }
+	}
+	action = {
+		ai_chance = 10
+		name = "ACTION_NAME_GOOD"
+		command = { type = manpowerpool value = 1 when = 1 }
+	}
+	action = {
+		ai_chance = 20
+		name = "ACTION_NAME_GREAT"
+		command = { type = manpowerpool value = 2 when = 1 }
+	}
+	action = {
+		ai_chance = 50
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = manpowerpool value = 5 when = 1 }
+	}
+}
+
+event = {
+	id = 2250508 #Victory in Mexico city!
+	country = U58 #Villistas
+	persistent = yes
+
+	trigger = {
+		control = { province = 1974 data = U58 } #Mexico City
+		atwar = yes
+		NOT = { tech_team = 1114510 }
+		NOT = { tech_team = 1114511 }
+		NOT = { tech_team = 1114512 }
+	}
+
+	date = { day = 0 month = january year = 1910 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT1914_2038550_NAME"
+	desc = "EVT1914_2038550_DESC"
+	picture = "WW1_Offensive"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = waketeam which = 1114510 }
+		command = { type = waketeam which = 1114511 }
+		command = { type = waketeam which = 1114512 }
+		command = { type = supplies value = -100 }
+		command = { type = money value = -30 }
+		command = { type = dissent value = -2 }
+		command = { trigger = { exists = U59 NOT = { war = { country = U59 country = U58 } } } type = relation which = U59 value = 5 }
+		command = { trigger = { exists = MEX war = { country = U59 country = MEX } } type = steal_tech which = MEX }
+		command = { trigger = { exists = U57 war = { country = U59 country = U57 } } type = steal_tech which = U57 }
+	}
+}
+
+event = {
+	id = 2250509 #Loss of Mexico city
+	country = U58 #Villistas
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1974 data = U58 } } #Mexico City
+		tech_team = 1114510
+		tech_team = 1114511
+		tech_team = 1114512      
+	}
+
+	name = "EVT1914_2038551_NAME"
+	desc = "EVT1914_2038551_DESC"
+	picture = "WW1_Offensive"
+	style = 2
+
+	date = { day = 0 month = january year = 1910 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT1914_2038551_ACTIONA"
+		command = { type = sleepteam which = 1114510 }
+		command = { type = sleepteam which = 1114511 }
+		command = { type = sleepteam which = 1114512 }
+		command = { type = supplies value = 20 }
+		command = { type = dissent value = 1 }
+	}
+}
+
+
+############################################################################################################
+
+event = {
+	id = 2038550 #Victory in Mexico city!
+	country = U59 #Zapatistas
+	persistent = yes
+
+	trigger = {
+		control = { province = 1974 data = U59 } #Mexico City
+		atwar = yes
+		NOT = { tech_team = 1110010 }
+		NOT = { tech_team = 1110011 }
+		NOT = { tech_team = 1110012 }
+	}
+
+	date = { day = 0 month = january year = 1910 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT1914_2038550_NAME"
+	desc = "EVT1914_2038550_DESC"
+	picture = "WW1_Offensive"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = waketeam which = 1110010 }
+		command = { type = waketeam which = 1110011 }
+		command = { type = waketeam which = 1110012 }
+		command = { type = supplies value = -100 }
+		command = { type = money value = -30 }
+		command = { type = dissent value = -2 }
+		command = { trigger = { exists = U58 NOT = { war = { country = U59 country = U58 } } } type = relation which = U58 value = 5 }
+		command = { trigger = { exists = MEX war = { country = U59 country = MEX } } type = steal_tech which = MEX }
+		command = { trigger = { exists = U57 war = { country = U59 country = U57 } } type = steal_tech which = U57 }
+	}
+}
+
+event = {
+	id = 2038551 #Loss of Mexico city
+	country = U59 #Zapatistas
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1974 data = U59 } } #Mexico City
+		tech_team = 1110010
+		tech_team = 1110011
+		tech_team = 1110012      
+	}
+
+	name = "EVT1914_2038551_NAME"
+	desc = "EVT1914_2038551_DESC"
+	picture = "WW1_Offensive"
+	style = 2
+
+	date = { day = 0 month = january year = 1910 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT1914_2038551_ACTIONA"
+		command = { type = sleepteam which = 1110010 }
+		command = { type = sleepteam which = 1110011 }
+		command = { type = sleepteam which = 1110012 }
+		command = { type = supplies value = 20 }
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 2038552 #Captured supplies
+	country = U59 #Zapatistas
+	persistent = yes
+	one_action = yes
+
+	trigger = {
+		atwar = yes
+		random = 5
+		NOT = { supplies = 1000 }   
+		NOT = { IC = 7 }
+	}
+
+	name = "EVT1914_2038552_NAME"
+	desc = "EVT1914_2038552_DESC"
+	picture = "lend_lease"
+	style = 2
+
+	date = { day = 0 month = january year = 1910 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		ai_chance = 5
+		name = "ACTION_NAME_OK"
+		command = { type = resource which = supplies value = 25 }
+	}
+	action = {
+		ai_chance = 10
+		name = "ACTION_NAME_GOOD"
+		command = { type = resource which = supplies value = 50 }
+	}
+	action = {
+		ai_chance = 20
+		name = "ACTION_NAME_GREAT"
+		command = { type = resource which = supplies value = 200 }
+		command = { type = resource which = money value = 20 }
+	}
+	action = {
+		ai_chance = 50
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = resource which = supplies value = 350 }
+		command = { type = resource which = money value = 50 }
+	}
+}
+
+event = {
+	id = 2038553 #Smuggled supplies
+	country = U59 #Zapatistas
+	persistent = yes
+	one_action = yes
+
+	trigger = {
+		atwar = yes
+		random = 7
+		NOT = { supplies = 1000 }
+		NOT = { IC = 5 }
+		OR = {
+			AND = {
+				control = { province = 1974 data = MEX } #Mexico City
+				war = { country = U59 country = MEX }
+			}
+			AND = {
+				control = { province = 1974 data = U57 } #Mexico City
+				war = { country = U59 country = U57 }
+			}
+		}
+	}
+	name = "EVT1914_2038553_NAME"
+	desc = "EVT1914_2038553_DESC"
+	picture = "lend_lease"
+	style = 2
+
+	date = { day = 0 month = january year = 1910 }
+	offset = 45
+	deathdate = { day = 29 month = december year = 1917 }
+
+	action = {
+		ai_chance = 3
+		name = "ACTION_NAME_OK"
+		command = { type = resource which = supplies value = 20 }
+	}
+	action = {
+		ai_chance = 10
+		name = "ACTION_NAME_GOOD"
+		command = { type = resource which = supplies value = 40 }
+	}
+	action = {
+		ai_chance = 20
+		name = "ACTION_NAME_GREAT"
+		command = { type = resource which = supplies value = 60 }
+	}
+	action = {
+		ai_chance = 35
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = resource which = supplies value = 100 }
+	}
+}
+
+event = {
+	id = 2038554 #New recruits
+	country = U59 #Zapatistas
+	random = yes
+	persistent = yes
+	one_action = yes 
+
+	trigger = {
+		atwar = yes
+		random = 10
+		NOT = { IC = 7 }
+	}
+
+	name = "EVT1914_2038554_NAME"
+	desc = "EVT1914_2038554_DESC"
+	picture = "soviet_reinforcements"
+	style = 2
+
+	date = { day = 0 month = january year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1964 }
+   
+	action = {
+		ai_chance = 5
+		name = "ACTION_NAME_OK"
+		command = { type = manpowerpool value = 0.5 when = 1 }
+	}
+	action = {
+		ai_chance = 10
+		name = "ACTION_NAME_GOOD"
+		command = { type = manpowerpool value = 1 when = 1 }
+	}
+	action = {
+		ai_chance = 20
+		name = "ACTION_NAME_GREAT"
+		command = { type = manpowerpool value = 2 when = 1 }
+	}
+	action = {
+		ai_chance = 50
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = manpowerpool value = 5 when = 1 }
+	}
+}

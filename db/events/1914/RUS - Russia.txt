@@ -1,0 +1,1485 @@
+###
+### By Rhysaxiel
+###
+### used global flags
+### october_revolution  = the revolution will start soon
+###
+### 2104500  RUS  Support Serbia ?
+### 2104501  RUS  AH DoWs - Support Serbia ?
+### 2104502  RUS  Germany sends an ultimatum
+### 2104503  RUS  Warsaw is lost !
+### 2104504  RUS  Riga is lost !
+### 2104505  RUS  Minsk is lost !
+### 2104506  RUS  Kyiv is lost !
+### 2104507  RUS  Odessa is lost !
+### 2104508  RUS  Talinn is lost !
+### 2104509  RUS  Petrograd is lost !
+### 2104510  RUS  Moscow is lost !
+### 2104511  RUS  Erevan is lost !
+### 2104512  RUS  Baki is lost !
+### 2104513  RUS  Tbilisi is lost !
+### 2104514  RUS  Strikes at Petrograd
+### 2104515  RUS  Activity has ceased at Petrograd
+### 2104516  RUS  Major riots in Petrograd
+### 2104517  RUS  Nicholas the IInd flees
+### 2104518  RUS  Provisional government proclaimed !
+### 2104519  RUS  Petrograd soviet formed !
+### 2104520  RUS  Nicholas the IInd abdicates
+### 2104521  RUS  Kerensky comes into power
+### 2104522  RUS  Lenin is back
+### 2104523  RUS  Bolshevik's popularity rises
+### 2104525  RUS  Major revolts against provisional governemnt in Petrograd !
+### 2104526  RUS  Conservative elements are concerned
+### 2104527  RUS  Quiproquo between Kornilov and Kerensky
+### 2104528  RUS  The Kornilov affair
+### 2104529  RUS  Free Bolsheviks prisoners
+### 2104524  RUS  Peasants' uprising
+### 2104530  RUS  Revolution !
+### 2104531  RUS  Serbia accepts austrian ultimatum
+### 2104532  RUS  Secretely mobilize
+### 2104533  RUS  Secret negotiations with France
+### 2104534  RUS  France supports us !
+### 2104535  RUS  France won't follow us !
+### 2104536  RUS  Secret negotiations with UK
+### 2104537  RUS  UK supports us !
+### 2104538  RUS  UK won't follow us !
+### 2104539  RUS  Central powers threat us
+### 2104540  RUS  Central powers threat us
+### 2104541  RUS  Launch operation Belgrade
+### 2104542  RUS  Support anti-Austro-Hungarian movements in Serbia
+### 3104503  RUS  Poland is still under enemy control
+### 3104504  RUS  Belarus is still under enemy control
+### 3104505  RUS  Riga is still under enemy control
+### 2104543  RUS  The Franco-Russian Alliance
+### 2104544  RUS  Armistice with Germany
+### 2104545  RUS  Tsaritsyn is lost !
+### 2104546  RUS  Military Defeat
+### 2104553  RUS  Wave of patriotism
+### 2104554  RUS  Rally round the Tsar!
+
+event = {
+	id = 2104500	# Support Serbia ?
+	country = RUS
+
+	# triggered by SER 2084500
+	
+	name = "EVT1914_2104500_NAME"
+	desc = "EVT1914_2104500_DESC" 
+	style = 2
+	picture = "German_mobilization2"
+	
+	action = {
+		name = "EVT1914_2104500_ACTIONA" #Support Serbia
+		ai_chance = 100
+		command = { type = trigger which = 2084501 } #SER "Russia supports us"
+		command = { type = belligerence value = 3 }
+		command = { type = guarantee which = RUS where = SER }
+	}
+	action = {
+		name = "EVT1914_2104500_ACTIONB" #Do not Support Serbia
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = relation which = SER value = -20 }
+	}
+}
+event = {
+	id = 2104501	#AH DoWs - Support Serbia ?
+	country = RUS
+	
+	# triggered by U09 2192502	
+	
+	name = "EVT1914_2104501_NAME"
+	desc = "EVT1914_2104501_DESC" 
+	style = 2
+	picture = "German_mobilization2"
+	
+	action = {
+		name = "EVT1914_2104500_ACTIONA" #Support Serbia
+		command = { type = belligerence value = 10 }
+		command = { type = alliance which = SER when = 1 }
+		command = { type = alliance which = MTN when = 1 }
+		command = { type = trigger which = 2191500 } # U08 "Russia Mobilises
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+}
+event = {
+	id = 2104502	# Germany sends an ultimatum
+	country = RUS
+
+	trigger = { event = 2191500 } # U08 "Send ultimatum"
+	
+	name = "EVT1914_2104502_NAME"
+	desc = "EVT1914_2104502_DESC" 
+	style = 2
+	picture = "German_mobilization2"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1914 }
+	
+	action = {
+		name = "EVT1914_2104502_ACTIONA" # Reject ultimatum
+		command = { type = alliance_leader which = RUS where = 0 } #Russia becomes leader of the alliance with Serbia and Montenegro
+		command = { type = trigger which = 2191501 } # U08 "Russia keeps mobilising"
+	}
+}
+event = {
+	id = 2104503	# Warsaw is lost !
+	country = RUS
+
+	trigger = { atwar = yes NOT = { control = { province = 232 data = -3 } } }
+	
+	name = "EVT1914_2104503_NAME"
+	desc = "EVT1914_2104503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 8 }
+	}
+}
+event = {
+	id = 2104504	# Riga is lost !
+	country = RUS
+
+	trigger = { atwar = yes NOT = { control = { province = 264 data = -1 } } }
+	
+	name = "EVT1914_2104504_NAME"
+	desc = "EVT1914_2104504_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2104505	# Minsk is lost !
+	country = RUS
+
+	trigger = { atwar = yes NOT = { control = { province = 599 data = -1 } } }
+	
+	name = "EVT1914_2104505_NAME"
+	desc = "EVT1914_2104505_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2104506	# Kyiv is lost !
+	country = RUS
+	
+	trigger = { atwar = yes NOT = { control = { province = 617 data = -1 } } }
+	
+	name = "EVT1914_2104506_NAME"
+	desc = "EVT1914_2104506_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 8 }
+	}
+}
+event = {
+	id = 2104507	# Odessa is lost !
+	country = RUS
+	
+	trigger = { atwar = yes NOT = { control = { province = 626 data = -1 } } }
+	
+	name = "EVT1914_2104507_NAME"
+	desc = "EVT1914_2104507_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2104508	# Talinn is lost !
+	country = RUS
+	
+	trigger = { atwar = yes NOT = { control = { province = 270 data = -1 } } }
+	
+	name = "EVT1914_2104508_NAME"
+	desc = "EVT1914_2104508_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2104509   # Petrograd is lost !
+	country = RUS
+	
+	trigger = { atwar = yes NOT = { control = { province = 553 data = -1 } } }
+	
+	name = "EVT1914_2104509_NAME"
+	desc = "EVT1914_2104509_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 15 }
+	}
+}
+event = {
+	id = 2104510   # Moscow is lost !
+	country = RUS
+	
+	trigger = { atwar = yes NOT = { control = { province = 572 data = -1 } } }
+	
+	name = "EVT1914_2104510_NAME"
+	desc = "EVT1914_2104510_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 10 }
+	}
+}
+event = {
+	id = 2104511   # Erevan is lost !
+	country = RUS
+
+	trigger = { atwar = yes NOT = { control = { province = 711 data = -1 } } }
+	
+	name = "EVT1914_2104511_NAME"
+	desc = "EVT1914_2104511_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2104512   # Baki is lost !
+	country = RUS
+
+	trigger = { atwar = yes NOT = { control = { province = 713 data = -1 } } }
+	
+	name = "EVT1914_2104512_NAME"
+	desc = "EVT1914_2104512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2104513   # Tbilisi is lost !
+	country = RUS
+	
+	trigger = { atwar = yes NOT = { control = { province = 709 data = -1 } } }
+	
+	name = "EVT1914_2104513_NAME"
+	desc = "EVT1914_2104513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+### Russian revolution
+event = {
+	id = 2104514   # Strikes at Petrograd
+	country = RUS
+
+	trigger = { 
+		#random = 25
+		atwar = yes
+		OR= {
+			dissent = 35
+			AND = {
+				dissent = 30
+				random = 80
+			}
+			AND = {
+				year = 1916 
+				dissent = 25
+				random = 60
+			}
+			AND = {
+				year = 1917 
+				dissent = 16
+				random = 60
+			}
+		}
+	}
+	
+	name = "EVT1914_2104514_NAME"
+	desc = "EVT1914_2104514_DESC" 
+	style = 2
+	picture = "strikesruspetro"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 6 }
+	}
+}
+event = {
+	id = 2104515   # Activity has ceased at Petrograd
+	country = RUS
+
+	trigger = { 
+		event = 2104514 # Strikes at Petrograd
+	}
+	
+	name = "EVT1914_2104515_NAME"
+	desc = "EVT1914_2104515_DESC" 
+	style = 2
+	picture = "strikesruspetro"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104515_ACTIONA" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2104516   # Major riots in Petrograd
+	country = RUS
+	
+	trigger = { 
+		random = 10
+		event = 2104515 # Activity has ceased at Petrograd
+	}
+	
+	name = "EVT1914_2104516_NAME"
+	desc = "EVT1914_2104516_DESC" 
+	style = 2
+	picture = "strikesruspetro1"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104516_ACTIONA" # Send the troops !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2104517   # Nicholas the IInd flees
+	country = RUS
+	
+	trigger = { 
+		random = 50
+		event = 2104516 # Major riots in Petrograd
+	}
+	
+	name = "EVT1914_2104517_NAME"
+	desc = "EVT1914_2104517_DESC" 
+	style = 2
+	picture = "nicolausIIfled"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104517_ACTIONA" # Russia has turned upside down 
+		#the army is in chao
+		command = { type = dissent value = 2 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = setflag which = ZarFled }
+	}
+}
+event = {
+	id = 2104518   # Provisional government proclaimed !
+	country = RUS
+	
+	trigger = { 
+		random = 40
+		event = 2104517 # Nicholas the IInd flees
+	}
+	
+	name = "EVT1914_2104518_NAME"
+	desc = "EVT1914_2104518_DESC" 
+	style = 2
+	picture = "provisionalgovernment"
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "ACTION_NAME_OK" # Ok
+		command = { type = set_domestic which = democratic value = 7 } #democracy
+		command = { type = set_domestic which = political_left value = 5 } #market liberal		
+		command = { type = headofstate which = 515095 } #Nicholas II
+		command = { type = headofgovernment which = 515112 } #Georgy Lvov
+		command = { type = foreignminister which = 515119 } #Pavel Milyukov
+		command = { type = armamentminister which = 515124 } #Mikhail Tereshchenko
+		command = { type = ministerofsecurity which = 515151 } #Georgy Lvov
+		command = { type = flag_ext where = RUS which = "_prov_gov" }
+	}
+}
+event = {
+	id = 2104519   # Petrograd soviet formed !
+	country = RUS
+	
+	trigger = { 
+		random = 90
+		event = 2104518 # Provisional government proclaimed !
+	}
+	
+	name = "EVT1914_2104519_NAME"
+	desc = "EVT1914_2104519_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = {   }
+	}
+}
+event = {
+	id = 2104520   # Nicholas the IInd abdicates
+	country = RUS
+
+	trigger = { 
+		random = 50
+		event = 2104518 # Provisional government proclaimed !
+	}
+	
+	name = "EVT1914_2104520_NAME"
+	desc = "EVT1914_2104520_DESC" 
+	style = 2
+	picture = "nicolausIIfled"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2104520_ACTIONA" # Will this calm them down ?
+		command = { type = dissent  value = -50 }
+		command = { type = set_domestic which = democratic value = 7 } #democracy
+		command = { type = set_domestic which = political_left value = 6 } #social liberal
+		command = { type = headofstate which = 515097 } #Georgy Lvov
+		command = { type = headofgovernment which = 515112 } #Georgy Lvov
+		command = { type = foreignminister which = 515120 } #Mikhail Tereshchenko
+		command = { type = armamentminister which = 515125 } #Andrei Shingarev
+		command = { type = ministerofsecurity which = 515151 } #Georgy Lvov
+		command = { type = chiefofarmy which = 515184 } #Aleksandr Kerensky
+	}
+}
+event = {
+	id = 2104521   # Kerensky comes into power
+	country = RUS
+
+	trigger = { 
+		random = 20
+		event = 2104520
+	}
+   
+	name = "EVT1914_2104521_NAME"
+	desc = "EVT1914_2104521_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104521_ACTIONA" # Interesting...
+		command = { type = dissent  value = -5 }
+		command = { type = set_domestic which = democratic value = 7 } #democracy
+		command = { type = set_domestic which = political_left value = 7 } #socialdemocrat
+		command = { type = headofstate which = 515098 } #Aleksandr Kerensky
+		command = { type = headofgovernment which = 515113 } #Aleksandr Kerensky
+		command = { type = foreignminister which = 515120 } #Mikhail Tereshchenko
+		command = { type = armamentminister which = 515126 } #Nikolai Nekrasov
+		command = { type = ministerofsecurity which = 515153 } #Alexey Nikitin
+		command = { type = chiefofarmy which = 515185 } #Nikolay Dukhonin
+	}
+}
+event = {
+	id = 2104522   # Lenin is back
+	country = RUS
+
+	#triggered by GER 2191511
+	
+	name = "EVT1914_2104522_NAME"
+	desc = "EVT1914_2104522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2104522_ACTIONA" # Oh well...
+		command = { type = dissent  value = 2 }
+	}
+}
+event = {
+	id = 2104523   # Bolshevik's popularity rises
+	country = RUS
+
+	trigger = { 
+		random = 40
+		event = 2104522 #Lenin is back
+	}
+	
+	name = "EVT1914_2104523_NAME"
+	desc = "EVT1914_2104523_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104523_ACTIONA" # Again ?!
+		command = { type = dissent  value = 5 }
+	}
+}
+
+event = {
+	id = 2104525   # Major revolts against provisional governemnt in Petrograd !
+	country = RUS
+
+	trigger = { 
+		atwar = yes
+		random = 25
+		event = 2104523 # Bolshevik's popularity rises
+	}
+	
+	name = "EVT1914_2104525_NAME"
+	desc = "EVT1914_2104525_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104525_ACTIONA" # The Bolsheviks were not prepared
+		command = { type = dissent  value = 6 }
+	}
+}
+event = {
+	id = 2104526   # Conservative elements are concerned
+	country = RUS
+
+	trigger = { 
+		atwar = yes
+		random = 25
+		event = 2104525 # Major revolts against provisional governemnt in Petrograd !
+		headofstate = 515098 #Aleksandr Kerensky
+	}
+	
+	name = "EVT1914_2104526_NAME"
+	desc = "EVT1914_2104526_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104526_ACTIONA" # Appoint Kornilov
+		command = { type = dissent value = -1 }
+		command = { type = chiefofarmy which = 515183 } #Lavrentij Kornilov
+	}
+}
+event = {
+	id = 2104527   # Quiproquo between Kornilov and Kerensky
+	country = RUS
+
+	trigger = { 
+		atwar = yes
+		random = 30
+		event = 2104526 # Conservative elements are concerned
+		headofstate = 515098 #Aleksandr Kerensky
+		incabinet = 515183 #Lavrentij Kornilov
+	}
+	
+	name = "EVT1914_2104527_NAME"
+	desc = "EVT1914_2104527_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104527_ACTIONA" # Uh oh...
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2104528   # The Kornilov affair
+	country = RUS
+	
+	trigger = { 
+		atwar = yes
+		random = 25
+		event = 2104527 # Quiproquo between Kornilov and Kerensky
+		headofstate = 515098 #Aleksandr Kerensky
+		incabinet = 515183 #Lavrentij Kornilov	
+	}
+	
+	name = "EVT1914_2104528_NAME"
+	desc = "EVT1914_2104528_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2104528_ACTIONA" # Suppress him with the Bolsheviks
+		command = { type = dissent  value = 3 }
+		command = { type = chiefofarmy which = 515181 } #Mikhail Alexeev
+		command = { type = trigger which = 2104529}
+		#the army is in chaos
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }
+		command = { type = disorg_division which = -1 where = 50 }		
+	}
+}
+event = {
+	id = 2104529   # Free Bolsheviks prisoners
+	country = RUS
+	
+	trigger = { 
+		atwar = yes
+		random = 30
+		event = 2104525 # Major revolts against provisional governemnt in Petrograd !
+		event = 2104528 # The Kornilov affair
+	}
+	
+	name = "EVT1914_2104529_NAME"
+	desc = "EVT1914_2104529_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2104529_ACTIONA" # Free them
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = setflag which = october_revolution }
+	}
+	action_b = {
+		name = "EVT1914_2104529_ACTIONB" # Keep them
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2104524	# Peasants' uprising
+	country = RUS
+
+	trigger = { 
+		event = 2104529 # Free Bolsheviks prisoners
+	}
+	
+	name = "EVT1914_2104524_NAME"
+	desc = "EVT1914_2104524_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104524_ACTIONA" # Soldiers go back to the contryside
+		command = { type = demobilize which = land when = 0 where = 0 value = -30 } #remove 30 land division
+	}
+}
+event = {
+	id = 2104530   # Revolution !
+	country = RUS
+
+	trigger = {
+		random = 25
+		event = 2104525 # Major revolts against provisional governemnt in Petrograd !
+		OR = {
+			flag = october_revolution
+			dissent = 35
+		}
+	}
+	
+	name = "EVT1914_2104530_NAME"
+	desc = "EVT1914_2104530_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2104530_ACTIONA" # Storm the Winter Palace !
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = USA } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG } } } 
+				type = alliance_leader which = USA where = 0 } #USA becomes leader of the alliance
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = ITA } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG }
+						alliance = { country = RUS country = USA } } } 
+				type = alliance_leader which = ITA where = 0 } #ITA becomes leader of the alliance
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = ROM } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG }
+						alliance = { country = RUS country = USA } 
+						alliance = { country = RUS country = ITA } } } 
+				type = alliance_leader which = ROM where = 0 } #ROM becomes leader of the alliance	
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = GRE } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG }
+						alliance = { country = RUS country = USA } 
+						alliance = { country = RUS country = ITA } 
+						alliance = { country = RUS country = ROM } } } 
+				type = alliance_leader which = GRE where = 0 } #GRE becomes leader of the alliance		
+		command = { type = leave_alliance when = 0 }
+		command = { type = country which = SOV }
+		command = { type = trigger which = 2007501 } #SOV Sovnarkom formed
+		command = { type = trigger which = 2007502 } #SOV Dissolution of the Imperial Army
+		command = { type = trigger which = 2007503 } #SOV The economy is collapsing!
+		command = { type = trigger which = 2007504 } #SOV The Railway War
+		command = { type = trigger which = 2191533 } #U08 Revolution in Russia
+		command = { type = trigger which = 3104510 } #AI event SOV
+	}
+}
+##### Path if Serbia did accept austrian ultimatum
+event = {
+	id = 2104531   # Serbia accepts austrian ultimatum
+	country = RUS
+	
+	# Triggered by SER 2084502
+	
+	name = "EVT1914_2104531_NAME"
+	desc = "EVT1914_2104531_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2104531_ACTIONA" # Issue a strong protest !
+		ai_chance = 99
+		command = { type = setflag which = FTL_serbia_accepted }
+	}
+	action_b = {
+		name = "EVT1914_2104531_ACTIONB" # They got us cold
+		ai_chance = 1
+		command = { type = dissent value = 10 }
+	}
+}
+event = {
+	id = 2104532	# Secretely mobilize
+	country = RUS
+	
+	decision = { 
+		flag = FTL_serbia_accepted 
+		OR = { 
+			event = 2104533 # Secret negotiations with France
+			alliance = { country = FRA country = RUS }
+		}
+		OR = {
+			event = 2104536 # Secret negotiations with UK
+			alliance = { country = ENG country = RUS }
+		}
+	}
+	decision_trigger = { }
+	trigger = { 
+		flag = FTL_serbia_accepted 
+		year = 1915
+		OR = {
+			#both ENG and FRA accepted or are allied
+			AND = { 
+				OR = { 
+					event = 2104534 # France supports us !
+					alliance = { country = FRA country = RUS }
+				}
+				OR = {
+					event = 2104537 # UK supports us !
+					alliance = { country = ENG country = RUS }
+				}
+				random = 25 
+			}
+			#at least one between ENG and FRA supports or is allied with us (or even both of them!)
+			AND = { 
+				OR = { 
+					event = 2104534 # France supports us !
+					event = 2104537 # UK supports us !
+					alliance = { country = FRA country = RUS }
+					alliance = { country = ENG country = RUS }					
+				} 
+				random = 10 
+			}
+			#neither FRA nor ENG supports or is allied with FRA
+			AND = { 
+				NOT = { 
+					event = 2104534 # France supports us !
+					event = 2104537 # UK supports us !
+					alliance = { country = FRA country = RUS }
+					alliance = { country = ENG country = RUS }					
+				} 
+				random = 4 
+			}
+		}
+	}
+	
+	name = "EVT1914_2104532_NAME"
+	desc = "EVT1914_2104532_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1915 }
+	
+	action = {
+		name = "EVT1914_2104532_ACTIONA" # Mobilize
+		command = { type = setflag which = 1915_WWI }
+	}
+}
+#Nego with France
+event = {
+	id = 2104533	# Secret negotiations with France
+	country = RUS
+	
+	decision = { 
+		flag = FTL_serbia_accepted 
+		exists = FRA
+		NOT = { war = { country = FRA country = RUS } }
+		NOT = { alliance = { country = FRA country = RUS } }
+	}
+	decision_trigger = { 
+		relation = { which = FRA value = 50 } 
+	}
+	trigger = { 
+		random = 25 
+		flag = FTL_serbia_accepted 
+		exists = FRA
+		NOT = { war = { country = FRA  country = RUS } }
+		NOT = { alliance = { country = FRA country = RUS } }		
+	}
+	
+	name = "EVT1914_2104533_NAME"
+	desc = "EVT1914_2104533_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1915 }
+	
+	action = {
+		name = "EVT1914_2104533_ACTIONA" # Send diplomats
+		command = { type = trigger which = 2002548 } # FRA
+	}
+}
+event = {
+	id = 2104534   # France supports us !
+	country = RUS
+	
+	# Triggered by FRA 2002548
+	
+	name = "EVT1914_2104534_NAME"
+	desc = "EVT1914_2104534_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2104534_ACTIONA" # Perfect !
+		command = { type = relation which = FRA value = 25 }
+	}
+}
+event = {
+	id = 2104535   # France won't follow us !
+	country = RUS
+	
+	# Triggered by FRA 2002548
+	
+	name = "EVT1914_2104535_NAME"
+	desc = "EVT1914_2104535_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = relation which = FRA value = -15 }
+	}
+}
+#Nego with UK
+event = {
+	id = 2104536	# Secret negotiations with UK
+	country = RUS
+
+	decision = { 
+		flag = FTL_serbia_accepted 
+		exists = ENG
+		NOT = { war = { country = ENG  country = RUS } }
+		NOT = { alliance = { country = ENG country = RUS } }
+	}
+	decision_trigger = { 
+		relation = { which = ENG value = 75 } 
+	}
+	trigger = { 
+		random = 25 
+		flag = FTL_serbia_accepted 
+		exists = ENG
+		NOT = { war = { country = ENG  country = RUS } }
+		NOT = { alliance = { country = ENG country = RUS } }		
+	}
+	
+	name = "EVT1914_2104536_NAME"
+	desc = "EVT1914_2104536_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1915 }
+	
+	action = {
+		name = "EVT1914_2104536_ACTIONA" # Send diplomats
+		command = { type = trigger which = 2001529 } # ENG
+	}
+}
+event = {
+	id = 2104537   # UK supports us !
+	country = RUS
+	
+	# Triggered by ENG 2001529
+	
+	name = "EVT1914_2104537_NAME"
+	desc = "EVT1914_2104537_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2104537_ACTIONA" # Perfect !
+		command = { type = relation which = ENG value = 25 }
+	}
+}
+event = {
+	id = 2104538   # UK won't follow us !
+	country = RUS
+	
+	# Triggered by ENG 2001529
+	
+	name = "EVT1914_2104538_NAME"
+	desc = "EVT1914_2104538_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = relation which = ENG value = -15 }
+	}
+}
+### "Operation Belgrade" (WWI outbreak in early '15)
+# CP's SS manage to know about the buildup : threats
+event = {
+	id = 2104539 # Central powers threat us
+	country = RUS
+	persistent = yes
+	
+	# Triggered by U08 2191536 or U09 2192524
+	
+	name = "EVT1914_2104539_NAME"
+	desc = "EVT1914_2104539_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2104539_ACTIONA" # Not good
+		command = { type = relation which = U08 value = -10 }
+		command = { type = relation which = U09 value = -10 }
+	}
+}
+event = {
+	id = 2104540 # Central powers threat us
+	country = RUS
+	persistent = yes
+
+	# Triggered by U08 2191537 or U09 2192525
+	
+	name = "EVT1914_2104539_NAME"
+	desc = "EVT1914_2104539_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2104539_ACTIONA" # Not good
+		command = { type = relation which = U08 value = -20 }
+		command = { type = relation which = U09 value = -20 }
+	}
+}
+event = {
+	id = 2104541	# Launch operation Belgrade
+	country = RUS
+	
+	decision = { 
+		flag = 1915_WWI 
+		exists = U09
+		NOT = { war = { country = U09 country = RUS } }
+		NOT = { alliance = { country = U09 country = RUS } }			
+	}
+	decision_trigger = { 
+		NOT = { year = 1917 }
+	}
+	trigger = { 
+		random = 10
+		flag = 1915_WWI
+		exists = U09
+		NOT = { war = { country = U09 country = RUS } }
+		NOT = { alliance = { country = U09 country = RUS } }			
+		NOT = { year = 1917 } 
+		AND = {
+			month = 3	# Wait for april's unfreezings (AI only)
+			year = 1915
+		}
+	}	 
+	
+	name = "EVT1914_2104541_NAME"
+	desc = "EVT1914_2104541_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1916 }
+	
+	action = {
+		name = "EVT1914_2104541_ACTIONA" # Declare war
+		command = { type = war which = U09 }
+		command = { type = trigger which = 2191503 } # War on Russia ?
+		command = { trigger = { NOT = { year = 1916 } } type = belligerence value = 5 }
+		command = { trigger = { year = 1916 } type = belligerence value = 25 }
+		command = { trigger = { NOT = { ai = U08 } } type = clrflag which = 1915_WWI }
+		command = { type = clrflag which = FTL_serbia_accepted }
+		command = { trigger = { event = 2104534 participant = { country = FRA value = 1 } alliance = { country = SER country = RUS } } type = event which = 2084509 where = SER when = 2 } #make SER join the Entente or Russia in a few days
+		command = { trigger = { event = 2104534 participant = { country = FRA value = 1 } } type = alliance where = 2 when = 1 } #join the entente with France
+		command = { trigger = { event = 2104537 } type = alliance which = ENG when = 1 }
+		command = { trigger = { ai = U08 ai = U09 alliance = { country = FRA country = RUS } } type = trigger which = 3191552 } # U08 and U09 are AI-controlled, RUS and FRA are allied
+	}
+}
+event = {
+	id = 2104542	# Support anti-Austro-Hungarian movements in Serbia
+	country = RUS
+	
+	decision = { 
+		OR= { 
+			flag = 1915_WWI 
+			AND = {
+				war = { country = U09 country = RUS }
+				event = 2104541	# Launch operation Belgrade
+			}
+		}
+	}
+	decision_trigger = { 
+		money = 250 
+		supplies = 1000 
+	}
+	trigger = { 
+		random = 35
+		money = 250 
+		supplies = 1000 
+		OR= { 
+			flag = 1915_WWI 
+			AND = {
+				war = { country = U09 country = RUS }
+				event = 2104541	# Launch operation Belgrade
+			}
+		}
+	}	 
+	
+	name = "EVT1914_2104542_NAME"
+	desc = "EVT1914_2104542_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = june year = 1916 }
+	
+	action = {
+		name = "EVT1914_2104542_ACTIONA" # Support partisans
+		command = { type = supplies value = -1000 }
+		command = { type = money value = -250 }
+		command = { type = trigger which = 2084506 } #SER Riots against Austro-Hungarian presence
+		command = { type = trigger which = 2192527 } #U09 Riots against Austro-Hungarian presence
+	}
+}
+
+event = {
+	id = 3104503   # Poland is still under german control
+	country = RUS
+	persistent = yes
+
+	trigger = { 	
+		atwar = yes 
+		event = 2104503 #Warsaw is lost
+		NOT = { control = { province = 232 data = -3 } } #Warsaw
+	}
+	
+	name = "EVT1914_3104503_NAME"
+	desc = "EVT1914_3104503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 3104504   # Belarus is still under german control
+	country = RUS
+	persistent = yes
+
+	trigger = { 	
+		atwar = yes 
+		event = 2104505 #Minsk is lost
+		NOT = { control = { province = 599 data = -1 } } #Minsk
+	}
+	
+	name = "EVT1914_3104504_NAME"
+	desc = "EVT1914_3104504_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 3104505   # lettland is still under german control
+	country = RUS
+	persistent = yes
+
+	trigger = { 	
+		atwar = yes 
+		event = 2104504 #Riga is lost
+		NOT = { control = { province = 264 data = -1 } } #Riga
+	}
+	
+	name = "EVT1914_3104505_NAME"
+	desc = "EVT1914_3104505_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 360
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 2104543
+	country = RUS
+	style = 2
+	
+	name = "EVT1914_2002556_NAME"
+	desc = "EVT1914_2002556_DESC" 
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = event which = 2002557 where = FRA when = 1 } #FRA The Franco-Russian Alliance
+	}
+}
+
+event = {
+	id = 2104544
+	country = RUS
+	
+	name = "EVT1914_2104544_NAME"
+	desc = "EVT1914_2104544_DESC" 
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 } 
+	}
+}
+
+event = {
+	id = 2104545   # Tsaritsyn is lost !
+	country = RUS
+	
+	trigger = { atwar = yes NOT = { control = { province = 663 data = -1 } } }
+	
+	name = "EVT1914_2104545_NAME"
+	desc = "EVT1914_2104545_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 8 }
+	}
+}
+
+event = {
+   id = 2104546   # Military defeat
+   country = RUS
+
+	trigger = { 
+		random = 25
+		war = {country = U08 country = RUS }
+		control = { province = 553 data = -2 } #Petrograd is controlled by Enemy
+		control = { province = 572 data = -2 } #Moscow is controlled by Enemy
+		control = { province = 663 data = -2 } #Tsaritsyn is controlled by Enemy
+		lost_national = { value = 10 } #just be sure that they are losing
+	}
+   
+	name = "EVT1914_2104546_NAME"
+	desc = "EVT1914_2104546_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = december year = 1914 }
+	offset = 7
+	deathdate = { day = 15 month = november year = 1925 }
+	
+	action = {
+		name = "EVT1914_2001540_ACTIONA" # We have been defeated
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = USA } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG } } } 
+				type = alliance_leader which = USA where = 0 } #USA becomes leader of the alliance
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = ITA } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG }
+						alliance = { country = RUS country = USA } } } 
+				type = alliance_leader which = ITA where = 0 } #ITA becomes leader of the alliance
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = ROM } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG }
+						alliance = { country = RUS country = USA } 
+						alliance = { country = RUS country = ITA } } } 
+				type = alliance_leader which = ROM where = 0 } #ROM becomes leader of the alliance	
+		command = { trigger = { 
+					participant = { country = RUS value = 1 } #part of the Entente
+					alliance = { country = RUS country = GRE } 
+					NOT = { 
+						alliance = { country = RUS country = FRA }
+						alliance = { country = RUS country = ENG }
+						alliance = { country = RUS country = USA } 
+						alliance = { country = RUS country = ITA } 
+						alliance = { country = RUS country = ROM } } } 
+				type = alliance_leader which = GRE where = 0 } #GRE becomes leader of the alliance		
+		command = { type = dissent value = 10 }
+		command = { trigger = { war = { country = U08 country = RUS } } type = trigger which = 2191554 } #U08 Armistice with Russia
+		command = { trigger = { war = { country = U09 country = RUS } } type = trigger which = 2192536 } #U09 Armistice with Russia
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+		command = { type = peace which = U09 value = 1 }
+	}
+	action = {
+		name = "EVT1914_2001542_ACTIONB" # We will fight till our death
+		command = { type = dissent value = 30 }
+		command = { type = sleepevent which = 2191555 } # U08 The Treaty of Alexander Palace
+		command = { type = sleepevent which = 2104547 } # RUS The Treaty of Alexander Palace : Harsh conditions
+		command = { type = sleepevent which = 2104548 } # RUS The Treaty of Alexander Palace : Soft conditions	
+		command = { type = strength which = land when = 1 where = 0 value = -0.15 } #land units lose 15% strenght (deserters, mutinies)
+	}
+}
+
+event = {
+	country = RUS
+	id = 2104553
+	random = no
+	style = 2
+	
+	trigger = {
+		war = { country = U08  country = RUS }
+		alliance = { country = FRA  country = RUS }
+	}
+	
+	name = "2104553name"		
+	desc = "2104553desc"
+	picture = "nicolausIIfled"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 0 month = july year = 1916 }
+
+	action_a = {
+		name = "ACTION_NAME_HURRAH"
+		command = { type = dissent value = -4 }
+	}
+}
+
+event = {
+	country = RUS
+	id = 2104554
+	random = no
+	style = 2
+		
+	trigger = {
+		war = { country = U08  country = RUS }
+		alliance = { country = FRA  country = RUS }
+	}
+
+	name = "2104554name"
+	desc = "2104554desc"
+	picture = "nicolausIIfled"
+		
+	date = { day = 0 month = january year = 1914 }
+	offset = 15	
+	deathdate = { day = 0 month = july year = 1916 }
+		
+	action_a = {
+		name = "ACTION_NAME_HURRAH"
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+	

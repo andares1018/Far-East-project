@@ -1,0 +1,292 @@
+###
+### Serb events (SER - 084)
+###
+### By Rhysaxiel
+###
+### 2084500 SER Ultimatum : seek Russia's support ?
+### 2084501 SER Russia supports us !
+### 2084502 SER Ultimatum expires
+### 2084503 SER Evacuate through Albania ?
+### 2084504 SER Evacuation through Albania !
+### 2084506 SER Riots against Austro-Hungarian presence
+### 2084507 SER Break the Austro-Hungarian rule
+### 2084508 SER The Kingdom of Serbs, Croats and Slovenes
+### 2084509 SER Join the war with Russia
+
+event = {
+	id = 2084500	# Ultimatum : seek Russia's support ?
+	country = SER
+
+	# triggered by U09 2192500
+   
+	name = "EVT1914_2084500_NAME"
+	desc = "EVT1914_2084500_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2084500_ACTIONA" #Seek Russia's support
+		command = { type = trigger which = 2104500 } # RUS "Support Serbia ?"
+	}
+}
+event = {
+	id = 2084501	# Russia supports us !
+	country = SER
+
+	# triggered by RUS 2084500
+   
+	name = "EVT1914_2084501_NAME"
+	desc = "EVT1914_2084501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2084501_ACTIONA" #Great !
+		command = { type = relation which = RUS value = 50 }
+	}
+}
+event = {
+	id = 2084502	# Ultimatum expires
+ 	country = SER
+
+	trigger = { 
+		event = 2084500 # Ultimatum
+		NOT = { event = 2192523 } # U09 Serbia accepts our ultimatum
+	}
+   
+	name = "EVT1914_2084502_NAME"
+	desc = "EVT1914_2084502_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 25 month = july year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1914 }
+
+	action_a = {
+		trigger = { event = 2084501 } # Russia supports us !
+		ai_chance = 95
+		name = "EVT1914_2084502_ACTIONA" # Accept all but one condition
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #General Mob
+		command = { trigger = { alliance = { country = MTN country = SER } NOT = { policy = { country = MTN type = professional_army value = 8 } } } type = event which = 1350007 where = MTN } #General Mob
+		command = { type = trigger which = 2192501 } #U09 "Serbia partially accepts"
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT1914_2084502_ACTIONB" # Accept all conditions
+		command = { type = trigger which = 2192523 } # U09
+		command = { type = trigger which = 2104531 } # RUS
+		command = { type = dissent value = 5 }
+		command = { type = demobilize which = land when = 0 where = 0 value = 12 } #leave only 12 divisions (out of 22)
+	}
+}
+# Defeat, Evacuation and Armistice
+event = {
+	id = 2084503	# Evacuate through Albania ?
+	country = SER
+
+	decision = {
+		exists = ALB
+		lost_VP = { value = 50 }
+		lost_IC = { value = 50 }
+		OR = { #border with Albania still open
+			control = { province = 329 data = -3 } #Pristina
+			control = { province = 333 data = -3 } #Skopje
+			control = { province = 334 data = -3 } #Tetovo
+			control = { province = 335 data = -3 } #Prijepolje
+			control = { province = 332 data = -3 } #Cetinje
+		}
+		NOT = { 
+			control = { province = 338 data = -3 } #Belgrade
+			control = { province = 330 data = -3 } #Nis
+			war = { country = SER country = ALB }
+			alliance = { country = SER country = ALB }
+		}
+	}
+	decision_trigger = {
+		OR = { #border with Albania still open
+			control = { province = 329 data = -3 } #Pristina
+			control = { province = 333 data = -3 } #Skopje
+			control = { province = 334 data = -3 } #Tetovo
+			control = { province = 335 data = -3 } #Prijepolje
+			control = { province = 332 data = -3 } #Cetinje
+		}
+	}
+	trigger = {
+		exists = ALB
+		lost_VP = { value = 50 }
+		lost_IC = { value = 50 }
+		OR = {
+			control = { province = 329 data = -3 } #Pristina
+			control = { province = 333 data = -3 } #Skopje
+			control = { province = 334 data = -3 } #Tetovo
+			control = { province = 335 data = -3 } #Prijepolje
+			control = { province = 332 data = -3 } #Cetinje			
+			}
+		NOT = { 
+			control = { province = 338 data = -3 } #Belgrade
+			control = { province = 330 data = -3 } #Nis
+			war = { country = SER country = ALB }
+			alliance = { country = SER country = ALB }
+		}
+	}
+   
+	name = "EVT1914_2084503_NAME"
+	desc = "EVT1914_2084503_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2084503_ACTIONA" # Retreat into Albania
+		command = { type = trigger which = 2058500 }
+	}
+	action_b = { trigger = { ai = yes }
+		name = "EVT1914_2084503_ACTIONB" # Do not retreat into Albania
+		command = {  }
+	}
+}
+event = {
+	id = 2084504	# Evacuation through Albania!
+	country = SER
+
+	# triggered by ALB 2058500
+   
+	name = "EVT1914_2084504_NAME"
+	desc = "EVT1914_2084504_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action = {
+		name = "ACTION_NAME_GREAT" #Great !
+		command = { type = inherit which = ALB when = 3}
+		command = { type = strength which = land when = 1 where = 1 value = -0.25 } #units loses 25% strenght during evacuation
+		command = { type = disorg_division which = -1 where = 50 }
+		#command = { type = trigger which = 2192505 } # U09
+   }
+}
+
+event = {
+	id = 2084506   # Riots against Austro-Hungarian presence
+	country = SER
+
+	# Triggered by RUS 2104542	# Support anti-Austro-Hungarian movements in Serbia
+   
+	name = "EVT1914_2084506_NAME"
+	desc = "EVT1914_2084506_DESC" 
+	style = 2
+	picture = "news_paper"   
+	
+	action_a = {
+		name = "ACTION_NAME_DAMN" # Damn
+		command = { type = dissent value = 5 }
+		command = { type = ai_prepare_war which = U09 }
+	}
+}
+event = {
+	id = 2084507   # Break the Austro-Hungarian rule
+	country = SER
+
+	decision = { 
+		event = 2084506 # Riots against Austro-Hungarian presence
+		ispuppet = SER 
+	}
+	decision_trigger = { 
+		event = 2104542 #RUS Support anti-Austro-Hungarian movements in Serbia
+		army = 8 
+	}
+	trigger = { 
+		event = 2084506 # Riots against Austro-Hungarian presence
+		ispuppet = SER 
+		event = 2104542 #RUS Support anti-Austro-Hungarian movements in Serbia
+		army = 8 
+	}	 
+   
+	name = "EVT1914_2084507_NAME"
+	desc = "EVT1914_2084507_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = june year = 1916 }  
+	
+	action_a = {
+		name = "EVT1914_2084507_ACTIONA" # Break from Austrian rule
+		command = { type = end_puppet }
+		command = { type = end_access which = U08 }
+		command = { type = end_access which = U09 }
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { war = { country = SER country = RUS } } type = event which = 2084509 where = SER when = 2 } #make SER join the Entente or Russia in a few days
+		command = { trigger = { war = { country = SER country = RUS } } type = peace which = RUS value = 1 }
+		command = { type = alliance which = RUS when = 1 }
+		command = { type = dissent value = -20 }
+	}
+}
+event = {
+	id = 2084508   # The Kingdom of Serbs, Croats and Slovenes
+	country = SER 
+	
+	#triggered by U09 2192509
+	
+	name = "EVT1914_2084508_NAME"
+	desc = "EVT1914_2084508_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "ACTION_NAME_GREAT" #Great!
+		command = { trigger = { exists = MTN ai = MTN NOT = { war = { country = MTN country = SER } } } type = inherit which = MTN }
+		command = { trigger = { exists = SLV ai = SLV NOT = { war = { country = SLV country = SER } } } type = inherit which = SLV }
+		command = { trigger = { exists = CRO ai = CRO NOT = { war = { country = CRO country = SER } } } type = inherit which = CRO }
+		command = { trigger = { exists = BOS ai = BOS NOT = { war = { country = BOS country = SER } } } type = inherit which = BOS }
+		command = { trigger = { control = { province = 338 data = -1 } } type = capital which = 338 } #Belgrade
+		command = { type = addcore which = 332 } #Cetinje
+		command = { type = addcore which = 335 } #Prijepolje
+		command = { type = addclaim which = 354 } #Tuzla
+		command = { type = addclaim which = 328 } #Kumanovo
+		command = { type = addclaim which = 333 } #Skopje
+		command = { type = addclaim which = 334 } #Tetovo
+		command = { type = addclaim which = 341 } #Sabac
+		command = { type = addclaim which = 343 } #Dubrovnik
+		command = { type = addclaim which = 344 } #Osijek
+		command = { type = addclaim which = 345 } #Bjelovar
+		command = { type = addclaim which = 346 } #Maribor
+		command = { type = addclaim which = 347 } #Karlovac
+		command = { type = addclaim which = 349 } #Ljubljana
+		command = { type = addclaim which = 350 } #Split
+		command = { type = addclaim which = 351 } #Knin
+		command = { type = addclaim which = 352 } #Zagreb
+		command = { type = addclaim which = 353 } #Banja Luka
+		command = { type = addclaim which = 355 } #Sarajevo
+		command = { type = addclaim which = 356 } #Mostar
+		command = { type = addclaim which = 357 } #Bihac
+		command = { type = addclaim which = 358 } #Travnik
+		command = { type = name where = SER which = SER1919 } 
+		command = { type = flag_ext where = SER which = "_serbs_croats_slovenes" }
+		command	= { trigger = { ai = yes NOT = { manpower = 39 } } type = manpowerpool value = 39 } # Add required MP for the 3 free units 
+		command = { trigger = { ai = yes NOT = { army = 4 } } type = build_division which = infantry cost = -0.1 where = 3 }
+		command = { trigger = { ai = yes NOT = { army = 4 } } type = build_division which = infantry cost = -0.1 where = 3 }
+		command = { trigger = { ai = yes NOT = { army = 4 } } type = build_division which = infantry cost = -0.1 where = 3 }
+	}
+}
+
+event = {
+	id = 2084509
+	country = SER
+	style = 2
+	
+	name = "EVT1914_2084509_NAME"
+	desc = "EVT1914_2084509_DESC" 
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { participant = { country = RUS value = 1 } } type = alliance where = 2 when = 1 } #Join the Entente, together with Russia
+		command = { trigger = { NOT = { participant = { country = RUS value = 1 } } } type = alliance which = RUS when = 1 } #simply ally with Russia
+	}
+}

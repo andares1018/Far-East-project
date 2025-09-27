@@ -1,0 +1,494 @@
+# First Guangdong-Guangxi War (Includes CYN)
+# By Limith
+#-Guangxi Coup of the CRP------------------
+# CGX 133011501 Reforming the Chinese Revolutionary Party
+# CHI 133011512 The Ouster of Sun Zhongshan
+# CHI 133011513 The Ouster of Tang Jiyao
+# CHI 133011514 Formation of the Chinese KMT 1919
+# CGX 133011515 Guangxi Ousted from Power
+#-First Guangdong-Guangxi War--------------
+# CHI 133011516 Guangdong-Guangxi War. 1920-1921
+# CHI 133011517 Guangxi-Yunnan War. 1920-1921 (SZS Dead)
+# CHI 133011518 Outcome of the War New Guangxi Forms - Peace with CGX, CGX is couped, made puppet of CHI. 1921
+# CGX 133011519 Guangxi in Ruins
+# CGX 133011520 Victory! (Annex CHI, CGX->CHI)
+# CHI 133011521 The Coup Succeeds
+# CGX 133011522 Reforming the Guangzhou Government
+#-Chen Jiaoming's Rebellion----------------
+# CHI 1330115XX Chen Jiaoming's Rebellion - 1922
+# UCH 1330115XX Reforming the Guangxi Clique
+# CGX 1330115XX Guangxi Clique Reforms - Lead to 2nd Guangdong-Guangxi War.
+
+
+###########################
+# Guangxi Coup of the CRP #
+###########################
+
+# Reforming the Chinese Revolutionary Party
+event = {
+	id = 133011501
+	random = no
+	country = CGX
+
+	#Triggered
+
+	name = EVT1914_133011501_NAME
+	desc = EVT1914_133011501_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { trigger = { event = 133011401 } type = event which = 133011512 where = CHI when = 7 }
+		command = { trigger = { event = 133011406 } type = event which = 133011513 where = CHI when = 7 }
+	}
+}
+
+# The Ouster of Sun Zhongshan
+event = {
+	id = 133011512
+	random = no
+	country = CHI
+
+	#Triggered
+
+	name = EVT1914_133011512_NAME
+	desc = EVT1914_133011512_DESC
+
+	picture = "ccip_szsexile"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 55300 }
+		command = { type = sleepminister which = 55301 }
+	}
+}
+
+# The Ouster of Tang Jiyao
+event = {
+	id = 133011513
+	random = no
+	country = CHI
+
+	#Triggered
+
+	name = EVT1914_133011513_NAME
+	desc = EVT1914_133011513_DESC
+
+	picture = "ccip_szsexile"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = sleepminister which = 55219 }
+	}
+}
+
+# The Formation of the Chinese KMT
+event = {
+	id = 133011514
+	random = no
+	country = CHI
+
+	trigger = {
+		event = 133011501
+		exists = CGX
+		not = { ispuppet = CHI }
+		random = 20
+	}
+
+	name = EVT1914_133011514_NAME
+	desc = EVT1914_133011514_DESC
+
+	picture = "ccip_gmd"
+	style = 2
+
+	date = { day = 5 month = 5 year = 1918 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1923 }
+
+	action = {
+		trigger = {
+			event = 133011401
+		}
+		name = EVT1914_133011514_ACTIONA #"Welcome back!"
+		command = { type = wakeminister which = 55300 }
+		command = { type = wakeminister which = 55301 }
+		command = { type = headofstate which = 55300 }
+		command = { type = headofgovernment which = 55301 }
+		command = { type = event which = 133011515 where = CGX when = 7 }
+	}
+
+	action = {
+		trigger = {
+			event = 133011406
+		}
+		name = EVT1914_133011514_ACTIONA #"Welcome back!"
+		command = { type = wakeminister which = 55200 }
+		command = { type = wakeminister which = 55204 }
+		command = { type = wakeminister which = 55205 }
+		command = { type = wakeminister which = 55206 }
+		command = { type = wakeminister which = 55209 }
+		command = { type = wakeminister which = 55219 }
+		#command = { type = wakeminister which = 55220 }
+		command = { type = wakeminister which = 55309 }
+		command = { type = wakeminister which = 55301 }
+		command = { type = headofstate which = 55200 }
+		command = { type = headofgovernment which = 55219 }
+		command = { type = event which = 133011515 where = CGX when = 7 }
+	}
+}
+
+# Guangxi Ousted from Power
+event = {
+	id = 133011515
+	random = no
+	country = CGX
+
+	#Triggered
+
+	name = EVT1914_133011515_NAME
+	desc = EVT1914_133011515_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_CURSES
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { event = 133011401 } type = trigger which = 133011516 }
+		command = { trigger = { event = 133011406 } type = trigger which = 133011517 }
+	}
+}
+	
+###############################
+# First Guangdong-Guangxi War #
+###############################
+
+# Guangdong-Guangxi War. 1920-1921
+event = {
+	id = 133011516
+	random = no
+	country = CHI
+	save_date = yes
+
+	#Triggered
+
+	name = EVT1914_133011516_NAME
+	desc = EVT1914_133011516_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_WAR
+		command = { type = war which = CGX }
+		#command = { type = belligerence which = CHI value = -30 }
+	}
+}
+
+# Guangxi-Yunnan War. 1920-1921 (SZS Dead)
+event = {
+	id = 133011517
+	random = no
+	country = CHI
+	save_date = yes
+
+	#Triggered
+
+	name = EVT1914_133011517_NAME
+	desc = EVT1914_133011517_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_WAR
+		command = { type = war which = CGX }
+		#command = { type = belligerence which = CHI value = -30 }
+	}
+}
+
+# Outcome of the War New Guangxi Forms - Peace with CGX, CGX is couped, made puppet of CHI. 1921
+event = {
+	id = 133011518
+	random = no
+	country = CHI
+
+	trigger = {
+		war = { country = CGX country = CHI }
+		or = {
+			event = 133011516
+			event = 133011517
+		}
+		or = {
+			and = {
+				or = {
+					event = { id = 133011516 days = 30  }
+					event = { id = 133011517 days = 30  }
+				}
+				not = {
+					or = {
+						area = { area = "Guangdong" country = CGX data = 1 value = 70 }
+						area = { area = "Yunnan" country = CGX data = 1 value = 70 }
+						area = { area = "Guizhou" country = CGX data = 1 value = 70 }
+						area = { area = "Hunan" country = CGX data = 1 value = 70 }
+					}
+				}
+				not = {
+					area = { area = "Guangxi" country = CGX data = 1 value = 40 } # Still surrender if 60%  CGX Lost.
+				}
+			}
+			and = {
+				area = { area = "Guangxi" country = -3 data = 1 value = 10 }
+				not = {
+					or = {
+						area = { area = "Guangdong" country = CGX data = 1 value = 70 }
+						area = { area = "Yunnan" country = CGX data = 1 value = 70 }
+						area = { area = "Guizhou" country = CGX data = 1 value = 70 }
+						area = { area = "Hunan" country = CGX data = 1 value = 70 }
+					}
+				}
+			}
+		}
+	}
+
+	name = EVT1914_133011518_NAME
+	desc = EVT1914_133011518_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	date = { day = 5 month = 5 year = 1915 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = ACTION_NAME_VICTORY
+		command = { type = peace which = CGX value = 0 }
+		command = { type = make_puppet which = CGX }
+		command = { type = trigger which = 133011519 }
+		command = { type = sleepevent which = 133011520 }
+	}
+
+}
+# Guangxi in Ruins
+event = {
+	id = 133011519
+	random = no
+	country = CGX
+
+	# Triggered
+
+	name = EVT1914_133011518_NAME
+	desc = EVT1914_133011518_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = EVT1914_133011402_ACTIONA #"There is no other choice"
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CYN value = 0 }
+		command = { type = alliance which = CHI when = 2 }
+		command = { type = set_relation which = CHI value = 200 }
+		command = { type = set_relation which = CYN value = 200 }
+			command = { type = sleepminister which = 585100 }
+		command = { type = sleepminister which = 585101 }
+		command = { type = sleepminister which = 585102 }
+		command = { type = sleepminister which = 585103 }
+		command = { type = sleepminister which = 585104 }
+		command = { type = sleepminister which = 585105 }
+		command = { type = sleepminister which = 585106 }
+		command = { type = sleepminister which = 585107 }
+		command = { type = sleepminister which = 585108 }
+		command = { type = sleepminister which = 585109 }
+		command = { type = sleepminister which = 585110 }
+		command = { type = sleepminister which = 585111 }
+		command = { type = sleepminister which = 585112 }
+		command = { type = sleepminister which = 585113 }
+		command = { type = sleepminister which = 585114 }
+		command = { type = sleepminister which = 585115 }
+		command = { type = sleepminister which = 585116 }
+		command = { type = sleepminister which = 585117 }
+			command = { type = wakeminister which = 585001 }
+		command = { type = wakeminister which = 585002 }
+		command = { type = wakeminister which = 585003 }
+		command = { type = wakeminister which = 585004 }
+		command = { type = wakeminister which = 585005 }
+		command = { type = wakeminister which = 585006 }
+		command = { type = wakeminister which = 585007 }
+		command = { type = wakeminister which = 585008 }
+		command = { type = wakeminister which = 585009 }
+		command = { type = wakeminister which = 585010 }
+		command = { type = wakeminister which = 585011 }
+		command = { type = wakeminister which = 585012 }
+		command = { type = wakeminister which = 585013 }
+		command = { type = wakeminister which = 585014 }
+		command = { type = wakeminister which = 585015 }
+		command = { type = wakeminister which = 585016 }
+	}
+}
+
+# Victory!
+event = {
+	id = 133011520
+	random = no
+	country = CGX
+
+	trigger = {
+		war = { country = CGX country = CHI }
+		or = {
+			event = 133011516
+			event = 133011517
+		}
+		area = { area = "Guangxi" country = CGX data = 1 value = 40 }
+		or = {
+			area = { area = "Guangdong" country = CGX data = 1 value = 70 }
+			area = { area = "Yunnan" country = CGX data = 1 value = 70 }
+			area = { area = "Guizhou" country = CGX data = 1 value = 70 }
+			area = { area = "Hunan" country = CGX data = 1 value = 70 }
+		}
+	}
+
+	name = ACTION_NAME_VICTORY
+	desc = EVT1914_133011520_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	date = { day = 5 month = 5 year = 1915 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = ACTION_NAME_VICTORY
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CYN value = 0 }
+		command = { type = make_puppet which = CYN }
+		command = { type = inherit which = CHI value = 1 }
+		command = { trigger = { exists = CHI } type = event which = 133011521 where = CHI when = 0 }
+		command = { trigger = { not = { exists = CHI } } type = event which = 133011522 where = CGX when = 2 }
+		command = { type = sleepevent which = 133011519 }
+		command = { type = sleepevent which = 133011518 }
+	}
+
+}
+
+# CHI 133011521 The Coup Succeeds
+
+event = {
+	id = 133011521
+	random = no
+	country = CHI
+
+	#Triggered
+
+	name = ACTION_NAME_COUP_SUCCEEDS
+	desc = EVT1914_133011520_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = event which = 133011522 where = CGX when = 2 }
+		command = { type = secederegion value = "China" which = CGX when = 1 }
+	}
+
+}
+
+# CGX 133011522 Reforming the Guangzhou Government
+event = {
+	id = 133011522
+	random = no
+	country = CGX
+
+	#Triggered
+
+	name = ACTION_NAME_COUP_SUCCEEDS
+	desc = EVT1914_133011520_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = country which = CHI }
+		command = { type = name where = CHI which = CHI_CPM }
+		command = { type = flag_ext where = CHI which = "_REP" }
+			command = { type = sleepminister which = 55300 } # CPM
+		command = { type = sleepminister which = 55301 }
+		command = { type = sleepminister which = 55302 }
+		command = { type = sleepminister which = 55303 }
+		command = { type = sleepminister which = 55304 }
+		command = { type = sleepminister which = 55305 }
+		command = { type = sleepminister which = 55306 }
+		command = { type = sleepminister which = 55307 }
+		command = { type = sleepminister which = 55308 }
+		command = { type = sleepminister which = 55309 }
+		command = { type = sleepminister which = 55310 }
+		command = { type = sleepminister which = 55311 }
+		command = { type = sleepminister which = 55312 }
+		command = { type = sleepminister which = 55313 }
+		command = { type = sleepminister which = 55314 }
+		command = { type = sleepminister which = 55315 }
+		command = { type = sleepminister which = 55316 }
+		command = { type = sleepminister which = 55317 }
+		command = { type = sleepminister which = 55318 }
+		command = { type = sleepminister which = 55319 }
+		command = { type = sleepminister which = 55320 }
+		command = { type = sleepminister which = 55321 }
+		command = { type = sleepminister which = 55322 }
+		command = { type = sleepminister which = 55323 }
+		command = { type = sleepminister which = 55324 }
+		command = { type = sleepminister which = 55325 }
+		command = { type = sleepminister which = 55326 }
+			command = { type = sleepminister which = 55201 } # CYN
+		command = { type = sleepminister which = 55202 }
+		command = { type = sleepminister which = 55203 }
+		command = { type = sleepminister which = 55204 }
+		command = { type = sleepminister which = 55205 }
+		command = { type = sleepminister which = 55206 }
+		command = { type = sleepminister which = 55207 }
+		command = { type = sleepminister which = 55208 }
+		command = { type = sleepminister which = 55209 }
+		command = { type = sleepminister which = 55210 }
+		command = { type = sleepminister which = 55211 }
+		command = { type = sleepminister which = 55212 }
+		command = { type = sleepminister which = 55213 }
+		command = { type = sleepminister which = 55214 }
+		command = { type = sleepminister which = 55215 }
+		command = { type = sleepminister which = 55216 }
+		command = { type = sleepminister which = 55217 }
+		command = { type = sleepminister which = 55218 }
+		command = { type = sleepminister which = 55219 }
+		command = { type = sleepminister which = 55220 }
+		command = { type = sleepminister which = 55221 }
+		command = { type = sleepminister which = 55222 }
+		command = { type = sleepminister which = 55223 }
+		command = { type = sleepminister which = 55224 }
+		command = { type = sleepminister which = 55225 }
+			command = { type = wakeminister which = 55350 } # Old GXC
+		command = { type = wakeminister which = 55351 }
+		command = { type = wakeminister which = 55352 }
+		command = { type = wakeminister which = 55353 }
+		command = { type = wakeminister which = 55354 }
+		command = { type = wakeminister which = 55355 }
+		command = { type = wakeminister which = 55356 }
+		command = { type = wakeminister which = 55357 }
+		command = { type = wakeminister which = 55358 }
+		command = { type = wakeminister which = 55359 }
+		command = { type = wakeminister which = 55360 }
+		command = { type = wakeminister which = 55361 }
+		command = { type = wakeminister which = 55362 }
+		command = { type = wakeminister which = 55363 }
+		command = { type = wakeminister which = 55364 }
+		command = { type = wakeminister which = 55365 }
+		command = { type = wakeminister which = 55366 }
+		command = { type = wakeminister which = 55367 }
+	}
+
+}

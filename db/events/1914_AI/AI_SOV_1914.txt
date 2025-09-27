@@ -1,0 +1,26 @@
+
+event = {
+	id = 3104510
+	random = no
+	country = SOV
+	# trigger once, if neede twice or more add a flag to stop polling		
+	
+	trigger = {
+		ai = yes
+				
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+		{
+			ai_chance = 100
+			command = { type = ai which = "SOV_1914.ai" }	
+			command = { type = setflag which = SOV1914StartupDone }
+		}
+}

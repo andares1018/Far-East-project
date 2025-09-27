@@ -1,0 +1,171 @@
+U03;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+830002;Head of Government;Albert Sarraut;1914;1940;1999;SL;Happy Amateur;Medium;5900;X
+830003;Foreign Minister;Louis Marty;1914;1933;1999;ML;The Cloak N Dagger Schemer;Medium;7887;X
+830004;Minister of Armament;Albert Sarraut;1914;1940;1999;SL;Balanced Budget Economy;Medium;5900;X
+830005;Minister of Security;Albert Sarraut;1914;1940;1999;SL;Man of the People;Medium;5900;X
+830006;Head of Military Intelligence;Louis Marty;1914;1940;1999;ML;Political Specialist;Medium;7887;X
+830007;Chief of Staff;Leon Georges Gustave Lombard;1914;1932;1999;ML;School of Defence;Medium;unknownminister;X
+830008;Chief of Army;Leon Georges Gustave Lombard;1914;1932;1999;ML;Guns and Butter Doctrine;Medium;unknownminister;X
+830009;Chief of Navy;Albert Louis Marie Huguet;1914;1918;1999;ML;Open Seas Doctrine;Medium;unknownminister;X
+830010;Chief of Air Force;Nestor Roume;1914;1941;1999;ML;Army Aviation Doctrine;Medium;7888;X
+830011;Head of State;Joost van Vollenhoven;1912;1918;1918;PA;Benevolent Gentleman;Medium;6894;X
+830202;Head of State;Nestor Roume;1914;1933;1941;ML;Barking Buffoon;Medium;7888;X
+830203;Head of State;Albert Sarraut;1914;1933;1962;SL;Resigned Generalissimo;Medium;5900;X
+830204;Head of State;Maurice Long;1914;1923;1923;ML;Benevolent Gentleman;Medium;7911;X
+830205;Head of State;Maurice Le Gallen;1914;1925;1999;ML;Benevolent Gentleman;Medium;unknownminister;X
+830206;Head of State;François Marius Baudoin;1914;1933;1955;ML;Insignificant Layman;Medium;unknownminister;X
+830207;Head of State;Martial Henri Merlin;1918;1935;1935;ML;Barking Buffoon;Medium;M_Martial Henri Merlin;X
+830208;Head of State;Maurice Montguillot;1918;1933;1945;ML;Resigned Generalissimo;Medium;M_Maurice Montguillot;X
+830209;Head of State;Alexandre Varenne;1925;1933;1947;SL;Benevolent Gentleman;Medium;M_Alexandre Varenne;X
+830210;Head of State;Pierre Pasquier;1921;1935;1935;ML;Weary Stiffneck;Medium;M_Pierre Pasquier;X
+830211;Head of State;René Robin;1928;1954;1954;ML;Autocratic Charmer;Medium;M_Rene Robin;X
+830212;Head of State;Jules Brévié;1930;1945;1964;PA;Resigned Generalissimo;Medium;M542010;X
+830213;Head of State;Georges Catroux;1939;1969;1969;ML;Resigned Generalissimo;Medium;L24029;X
+830214;Head of State;Jean Decoux;1939;1946;1964;PA;Local Tyrant2;Medium;M542006;X
+830215;Head of State;Philippe Leclerc de Hauteclocque;1940;1947;1947;ML;Stern Imperialist;Medium;L24116;X
+830216;Head of State;Georges Thierry d'Argenlieu;1940;1964;1964;ML;Resigned Generalissimo;Medium;L24173;X
+830217;Head of State;Émile Bollaert;1940;1952;1978;ML;Benevolent Gentleman;Medium;M542017;X
+830218;Head of State;Léon Pignon;1945;1952;1976;ML;Benevolent Gentleman;Medium;7913;X
+830219;Head of State;Jean de Lattre de Tassigny;1945;1952;1952;ML;Resigned Generalissimo;Medium;5903;X
+830220;Head of State;Jean Letourneau;1946;1956;1986;ML;Insignificant Layman;Medium;M_Jean Letourneau;X
+830042;Head of Government;Joost van Vollenhoven;1914;1918;1999;SC;Old General;Medium;6894;X
+830043;Head of Government;Nestor Roume;1915;1941;1999;ML;Silent Workhorse;Medium;7888;X
+830044;Head of Government;Jean Eugene Charles;1916;1917;1999;ML;Happy Amateur;Medium;unknownminister;X
+830045;Head of Government;Maurice Montguillot;1919;1928;1945;ML;Happy Amateur;Medium;M_Maurice Montguillot;X
+830046;Head of Government;Maurice Long;1920;1923;1999;SL;Corporate Suit;Medium;7911;X
+830047;Head of Government;Francois Marius Baudoin;1922;1923;1999;ML;Happy Amateur;Medium;unknownminister;X
+830048;Head of Government;Martial Henri Merlin;1922;1925;1999;ML;Political Protege;Medium;M_Martial Henri Merlin;X
+830049;Head of Government;Alexandre Claude Varenne;1925;1933;1999;SL;Naive Optimist;Medium;7912;X
+830050;Head of Government;Pierre Marie Antoine Pasquier;1928;1934;1934;ML;Old Admiral;Medium;M542009;X
+830051;Head of Government;René Robin;1933;1964;1999;ML;Flamboyant Tough Guy;High;M_Rene Robin;X
+830052;Head of Government;Jules Brévié;1933;1964;1999;PA;Old Airmarshal;High;M542010;X
+830053;Head of Government;Georges Catroux;1939;1964;1999;ML;Old General;High;L24029;X
+830054;Head of Government;Jean Decoux;1940;1964;1999;PA;Naive Optimist;High;M542006;X
+830055;Head of Government;Adrien A.M. Roques;1940;1964;1999;ML;Old General;High;M540007;X
+830056;Head of Government;Louis A.M. Brasey;1941;1964;1999;ML;Ambitious Union Boss;High;M540006;X
+830057;Head of Government;Georges Thierry d'Argenlieu;1940;1964;1999;ML;Old Admiral;High;L24173;X
+830058;Head of Government;Emilé Bollaert;1947;1964;1999;ML;Corporate Suit;High;M542017;X
+830059;Head of Government;Leon Pignon;1948;1964;1999;ML;Naive Optimist;Medium;7913;X
+830060;Head of Government;Jean de Lattre de Tassigny;1950;1952;1999;ML;Old General;Medium;5903;X
+830061;Foreign Minister;Alexandre Claude Varenne;1925;1933;1999;SL;Apologetic Clerk;Medium;7912;X
+830062;Foreign Minister;Achille Clarac;1933;1964;1999;ML;Ideological Crusader;Medium;7914;X
+830065;Foreign Minister;Louis Jauffré;1938;1964;1999;ML;Great Compromiser;High;M542020;X
+830066;Foreign Minister;Georges Catroux;1939;1964;1999;ML;General Staffer;Medium;L24029;X
+830067;Foreign Minister;Leonce Jore;1940;1964;1999;SC;General Staffer;High;M542021;X
+830068;Foreign Minister;Jean Sainteny;1940;1964;1999;ML;Great Compromiser;Medium;7915;X
+830069;Foreign Minister;Leon Pignon;1946;1964;1999;ML;Apologetic Clerk;Medium;7913;X
+830070;Foreign Minister;Zinovi Pechkoff;1946;1964;1999;ML;General Staffer;Medium;7916;X
+830071;Foreign Minister;Emilé Bollaert;1947;1964;1999;ML;The Cloak N Dagger Schemer;Medium;M542017;X
+830072;Foreign Minister;Jean de Lattre de Tassigny;1950;1952;1999;ML;General Staffer;Medium;5903;X
+830073;Minister of Armament;Leon Georges Gustave Lombard;1914;1932;1999;ML;Military Entrepreneur;Medium;unknownminister;X
+830074;Minister of Armament;Joost van Vollenhoven;1914;1918;1999;SC;Administrative Genius;Medium;6894;X
+830075;Minister of Armament;Nestor Roume;1915;1941;1999;ML;Resource Industrialist;Medium;7888;X
+830076;Minister of Armament;Alexandre Claude Varenne;1925;1933;1999;SL;Theoretical Scientist;Medium;7912;X
+830077;Minister of Armament;Edgard de Larminat;1928;1940;1999;ML;Military Entrepreneur;Medium;7873;X
+830078;Minister of Armament;Paul Baudouin;1930;1945;1999;PA;Laissez-Faire Capitalist;Medium;7917;X
+830081;Minister of Armament;Jacques Mouchel-Blaisot;1933;1964;1999;ML;Resource Industrialist;Medium;M540004;X
+830083;Minister of Armament;Fernand Gaucher;1938;1945;1999;ML;Military Entrepreneur;Medium;unknownminister;X
+830084;Minister of Armament;Leon Martinaud-Déplat;1942;1964;1999;ML;Tank Proponent;Medium;M540024;X
+830087;Minister of Armament;Marcel Alessandri;1940;1955;1999;ML;Military Entrepreneur;Medium;9292;X
+830088;Minister of Armament;Leclerc de Hauteclocque;1945;1947;1999;ML;Military Entrepreneur;Medium;L24116;X
+830089;Minister of Armament;Michel Bollot;1946;1964;1999;ML;Infantry Proponent;Medium;unknownminister;X
+830090;Minister of Security;Leon Sogny;1914;1945;1999;ML;Prince of Terror;Medium;7918;X
+830091;Minister of Security;Maurice La Gallen;1914;1945;1956;ML;Compassionate Gentleman;Medium;unknownminister;X
+830092;Minister of Security;Paul Blanchard de la Brosse;1914;1944;1944;ML;Prince of Terror;Medium;unknownminister;X
+830093;Minister of Security;Jules Maurice Gourbeil;1914;1916;1999;ML;Prince of Terror;Medium;unknownminister;X
+830094;Minister of Security;Jules Bosc;1914;1933;1999;ML;Prince of Terror;Medium;unknownminister;X
+830095;Minister of Security;Louis Marty;1915;1940;1999;ML;Back Stabber;Medium;7887;X
+830096;Minister of Security;Maurice Long;1920;1923;1999;SL;Silent Lawyer;Medium;7911;X
+830097;Minister of Security;Maurice Cognacq;1921;1945;1999;ML;Prince of Terror;Medium;unknownminister;X
+830098;Minister of Security;Pierre Marie Antoine Pasquier;1921;1934;1934;ML;Efficient Sociopath;Medium;M542009;X
+830099;Minister of Security;Alexandre Claude Varenne;1925;1933;1999;SL;Man of the People;Medium;7912;X
+830102;Minister of Security;Eugene H.R. Eutrope;1933;1964;1999;ML;Efficient Sociopath;High;M540002;X
+830104;Minister of Security;Francois Heckenroth;1938;1964;1999;ML;Man of the People;Medium;unknownminister;X
+830105;Minister of Security;René Lacombe;1940;1964;1999;ML;Man of the People;Medium;M541034;X
+830106;Minister of Security;Jean d'Hers;1940;1945;1999;ML;Man of the People;Medium;7919;X
+830109;Minister of Security;Francois Faure;1943;1964;1999;PA;Compassionate Gentleman;Medium;M541038;X
+830110;Minister of Security;Georges A.L. Gauthier;1943;1964;1999;ML;Efficient Sociopath;High;M541007;X
+830111;Minister of Security;Jean De Raymond;1940;1951;1999;ML;Prince of Terror;Medium;7920;X
+830112;Minister of Security;Leon Pignon;1940;1964;1999;ML;Back Stabber;Medium;7913;X
+830113;Minister of Security;Raymond Delange;1945;1964;1999;ML;Efficient Sociopath;Medium;7921;X
+830114;Minister of Security;Jean Sassi;1945;1964;1999;SL;Efficient Sociopath;Medium;7922;X
+830115;Minister of Security;Pierre Messmer;1946;1964;1999;ML;Compassionate Gentleman;Medium;7923;X
+830116;Minister of Security;Emilé Bollaert;1947;1964;1999;ML;Prince of Terror;Medium;M542017;X
+830117;Minister of Security;Andre Robert;1947;1964;1999;ML;Man of the People;Medium;unknownminister;X
+830118;Minister of Security;Lawrence Ravix;1951;1964;1999;ML;Compassionate Gentleman;Medium;unknownminister;X
+830119;Minister of Security;Marcel Sammarcelli;1952;1964;1999;ML;Silent Lawyer;Medium;7924;X
+830120;Head of Military Intelligence;Leon Sogny;1914;1945;1999;ML;Political Specialist;Medium;7918;X
+830121;Head of Military Intelligence;Louis A.M. Brasey;1933;1964;1999;ML;Dismal Enigma;Medium;M540006;X
+830122;Head of Military Intelligence;Jean Decoux;1933;1964;1999;PA;Logistics Specialist;Medium;M542006;X
+830123;Head of Military Intelligence;Jean d'Hers;1940;1945;1999;ML;Logistics Specialist;Medium;7919;X
+830124;Head of Military Intelligence;Emilé Bollaert;1940;1964;1999;ML;Political Specialist;Medium;M542017;X
+830126;Head of Military Intelligence;Roger Blaizot;1943;1964;1999;ML;Logistics Specialist;Medium;7883;X
+830127;Head of Military Intelligence;Pierre Iehlé;1940;1964;1999;ML;Naval Intelligence Specialist;Medium;M542037;X
+830128;Head of Military Intelligence;Andre Dewavrin-Passy;1944;1964;1999;ML;Technical Specialist;Medium;7925;X
+830129;Head of Military Intelligence;Jean Sainteny;1945;1964;1999;ML;Industrial Specialist;Medium;7915;X
+830130;Head of Military Intelligence;Jean Sassi;1945;1964;1999;SL;Dismal Enigma;Medium;7922;X
+830131;Head of Military Intelligence;Adrien Goybet;1951;1964;1999;ML;Naval Intelligence Specialist;Medium;7926;X
+830132;Chief of Staff;Joost van Vollenhoven;1914;1918;1999;SC;School of Psychology;Medium;6894;X
+830133;Chief of Staff;Georges Catroux;1914;1964;1999;ML;School of Manoeuvre;Medium;L24029;X
+830134;Chief of Staff;Paul Legentilhomme;1919;1937;1999;ML;School of Fire Support;Medium;L24108;X
+830135;Chief of Staff;Gaston Billotte;1930;1940;1941;ML;School of Defence;Medium;7882;X
+830136;Chief of Staff;Bernard Verdier;1932;1945;1999;ML;School of Defence;Medium;unknownminister;X
+830137;Chief of Staff;Georges A.L. Gauthier;1933;1964;1999;ML;School of Defence;Medium;M541007;X
+830138;Chief of Staff;Adrien A.M. Roques;1933;1964;1999;ML;School of Defence;Medium;M540007;X
+830139;Chief of Staff;Jules Antoine Buhrer;1935;1941;1999;ML;School of Defence;Medium;9842;X
+830140;Chief of Staff;Maurice Martin;1933;1964;1999;ML;School of Defence;Medium;M_Maurice Martin;X
+830141;Chief of Staff;Marcel Alessandri;1933;1955;1999;ML;School of Defence;Medium;9292;X
+830142;Chief of Staff;Leonce Jore;1940;1964;1999;SC;School of Fire Support;Medium;M542021;X
+830143;Chief of Staff;Eugene Mordant;1933;1945;1999;ML;School of Manoeuvre;Medium;9293;X
+830144;Chief of Staff;Roger Sinaud;1942;1964;1999;ML;School of Mass Combat;Medium;M540033;X
+830145;Chief of Staff;Camille Sabattier;1942;1955;1999;ML;School of Psychology;Medium;9294;X
+830146;Chief of Staff;Marcel Carpentier;1943;1964;1999;ML;School of Defence;Medium;7875;X
+830147;Chief of Staff;Roger Blaizot;1943;1964;1999;ML;School of Manoeuvre;Medium;7883;X
+830148;Chief of Staff;Adolphe Vezinet;1945;1967;1999;ML;School of Manoeuvre;Medium;L540026;X
+830149;Chief of Staff;Pierre Iehlé;1945;1964;1999;ML;School of Fire Support;Medium;M542037;X
+830150;Chief of Staff;Raymond Appert;1945;1964;1999;ML;Stubborn Disciplinarian;Medium;7872;X
+830151;Chief of Staff;Pierre Messmer;1946;1964;1999;ML;School of Fire Support;Medium;7923;X
+830152;Chief of Staff;Jean de Lattre de Tassigny;1950;1952;1999;ML;School of Mass Combat;Medium;5903;X
+830153;Chief of Staff;Paul Ely;1952;1964;1999;ML;School of Fire Support;Medium;L24069;X
+830154;Chief of Army;Joost van Vollenhoven;1914;1918;1999;SC;Guns and Butter Doctrine;Medium;6894;X
+830156;Chief of Army;Gaston Billotte;1930;1940;1941;ML;Guns and Butter Doctrine;Medium;7882;X
+830157;Chief of Army;Bernard Verdier;1932;1945;1999;ML;Guns and Butter Doctrine;Medium;unknownminister;X
+830158;Chief of Army;Jules Antoine Buhrer;1935;1941;1999;ML;Guns and Butter Doctrine;Medium;9842;X
+830161;Chief of Army;Maurice Martin;1933;1964;1999;ML;Static Defence Doctrine;Medium;M_Maurice Martin;X
+830162;Chief of Army;Marcel Alessandri;1933;1955;1999;ML;Static Defence Doctrine;Medium;9292;X
+830163;Chief of Army;Eugene Mordant;1933;1945;1999;ML;Elastic Defence Doctrine;Medium;9293;X
+830164;Chief of Army;Jean Decoux;1940;1964;1999;PA;Decisive Battle Doctrine;Medium;M542006;X
+830166;Chief of Army;Camille Sabattier;1940;1955;1999;ML;Guns and Butter Doctrine;Medium;9294;X
+830168;Chief of Army;Roger Blaizot;1943;1964;1999;ML;Elastic Defence Doctrine;Medium;7883;X
+830169;Chief of Army;Marcel Carpentier;1945;1964;1999;ML;Guns and Butter Doctrine;Medium;7875;X
+830170;Chief of Army;Jean de Lattre de Tassigny;1950;1952;1999;ML;Armoured Spearhead Doctrine;Medium;5903;X
+830171;Chief of Army;Louis Dio;1951;1969;1999;ML;Armoured Spearhead Doctrine;Medium;7868;X
+830172;Chief of Army;Paul Ely;1952;1964;1999;ML;Elastic Defence Doctrine;Medium;L24069;X
+830174;Chief of Navy;Joseph Emmanuel Henri Frochot;1923;1929;1933;ML;Power Projection Doctrine;Medium;7939;X
+830175;Chief of Navy;Pierre Marie Antoine Pasquier;1928;1934;1934;ML;Decisive Naval Battle Doctrine;Medium;M542009;X
+830176;Chief of Navy;Henri Blehaut;1932;1962;1999;ML;Indirect Approach Doctrine;Medium;7909;X
+830179;Chief of Navy;André Patou;1933;1970;1999;ML;Decisive Naval Battle Doctrine;Medium;M541053;X
+830180;Chief of Navy;Jean Decoux;1939;1964;1999;PA;Decisive Naval Battle Doctrine;Medium;M542006;X
+830181;Chief of Navy;Francois Jaubert;1940;1946;1999;ML;Base Control Doctrine;Medium;7869;X
+830182;Chief of Navy;Pierre Iehlé;1942;1964;1999;ML;Base Control Doctrine;Medium;M542037;X
+830184;Chief of Navy;Jacques Trolley de Prevaux;1943;1964;1999;ML;Open Seas Doctrine;Medium;M541052;X
+830185;Chief of Navy;Georges Thierry d'Argenlieu;1940;1964;1999;ML;Open Seas Doctrine;Medium;L24173;X
+830186;Chief of Navy;Philippe Auboyneau;1945;1964;1999;ML;Open Seas Doctrine;Medium;L24147;X
+830187;Chief of Navy;Emilé Bollaert;1940;1964;1999;ML;Base Control Doctrine;Medium;M542017;X
+830188;Chief of Navy;Paul Ortoli;1949;1964;1999;ML;Base Control Doctrine;Medium;L24228;X
+830189;Chief of Navy;Jean-Marie Querville;1954;1964;1999;ML;Indirect Approach Doctrine;Medium;7865;X
+830190;Chief of Navy;Georges Cabanier;1954;1964;1999;ML;Open Seas Doctrine;Medium;L24227;X
+830191;Chief of Air Force;Jules Brévié;1933;1964;1999;ML;Army Aviation Doctrine;Medium;M542010;X
+830192;Chief of Air Force;Georges A.L. Gauthier;1933;1964;1999;ML;Vertical Envelopment Doctrine;Medium;M541007;X
+830193;Chief of Air Force;Jacques Soufflet;1933;1964;1999;SC;Naval Aviation Doctrine;Medium;M541057;X
+830195;Chief of Air Force;Pierre Pouyade;1940;1964;1999;ML;Air Superiority Doctrine;Medium;7870;X
+830197;Chief of Air Force;Michel Boudier;1942;1964;1999;ML;Naval Aviation Doctrine;Medium;M542053;X
+830199;Chief of Air Force;Bernard Fuchs;1946;1964;1999;ML;Air Superiority Doctrine;Medium;7928;X
+830200;Chief of Air Force;Jacques Paris de Bollardiere;1950;1964;1999;ML;Carpet Bombing Doctrine;Medium;7927;X
+830201;Chief of Air Force;Olivier Massart;1953;1964;1999;ML;Army Aviation Doctrine;Medium;7871;X
+830221;Head of State;Maurice Graffeuil;1933;1942;1942;ML;Barking Buffoon;Medium;M_Maurice Graffeuil;X
+830222;Minister of Armament;Maurice Graffeuil;1930;1942;1942;ML;Resource Industrialist;Medium;M_Maurice Graffeuil;X
+830223;Chief of Staff;Georges Thierry d'Argenlieu;1940;1965;1965;ML;School of Defence;Medium;L24173;X
+830224;Chief of Army;Philippe Leclerc de Hauteclocque;1940;1948;1948;ML;Static Defence Doctrine;Medium;L24116;X
+830225;Chief of Army;Jean Étienne Valluy;1940;1965;1970;ML;Guns and Butter Doctrine;Medium;M_Jean Valluy;X

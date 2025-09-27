@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "FE1-W-SW.bmp"
+	Origin = { x = 95 y = 80 }
+	Frames = 16
+	Speed = 5
+	Palette = "FE1.bmp"
+}

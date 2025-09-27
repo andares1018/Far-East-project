@@ -1,0 +1,23 @@
+HOL;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+15001;Artillerie Inrichtingen Hembrug;T2300;4;1890;1970;artillery;munitions;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15002;DAF;T2301;5;1900;1970;mechanics;munitions;artillery;vehicle_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15003;Fokker;T2302;6;1919;1970;bomber_design;aeronautics;aircraft_testing;avionics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15004;HIH Siderius;T2303;5;1920;1970;mechanics;artillery;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15005;Koninklijke Maatschappij;T2304;4;1888;1970;naval_engineering;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15006;Koolhoven;T2305;5;1926;1956;aeronautics;fighter_design;general_equipment;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15007;NSM Amsterdam;T2306;6;1900;1970;naval_engineering;naval_artillery;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15008;Shell;T2307;7;1890;1970;industrial_engineering;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15009;Wilton-Fijenoord;T2308;6;1929;1970;naval_engineering;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15010;Royal Netherland Army;T2309;4;1900;1940;infantry_focus;centralized_execution;small_unit_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15011;Johannes Furstner;T2310;4;1930;1962;large_taskforce_tactics;naval_training;seamanship;small_taskforce_tactics;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15012;Royal Netherlands Air Force;T2311;4;1930;1940;fighter_tactics;centralized_execution;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15013;Petrus Best;T2312;3;1937;1951;bomber_tactics;piloting;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15014;Henri Winkelman;T2313;4;1931;1946;decentralized_execution;small_unit_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15015;Philips;100157;7;1936;1970;electronics;mathematics;technical_efficiency;nuclear_physics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15016;Philips;100158;6;1891;1935;electronics;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15017;Frits Zernike;T2316;6;1915;1966;electronics;chemistry;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15018;Spyker-Trompenburg;100395;4;1880;1929;aeronautics;mechanics;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15019;DSM;100159;5;1902;1970;mechanics;general_equipment;chemistry;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15020;Rijkswerf Amsterdam;100160;6;1890;1970;naval_engineering;naval_artillery;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15021;Koninklijke Militaire Academie;100396;4;1890;1970;centralized_execution;small_unit_tactics;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+15022;Koninklijk Instituut voor de Marine;100397;4;1890;1970;small_taskforce_tactics;submarine_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

@@ -1,0 +1,518 @@
+###
+### Italian events (ITA - 006)
+###
+### By Rhysaxiel
+###
+#War entry
+### 2006500	ITA	Concerns with serbian ultimatum
+### 2006501	ITA	Austria-Hungary offers Trento
+### 2006502	ITA	The Treaty of London
+### 2006503	ITA	Italy joins the Entente
+### 2006504	ITA	Bergamo is lost !
+### 2006505	ITA	Brescia is lost !
+### 2006506	ITA	Venice is lost !
+### 2006507	ITA	Udine is lost !
+### 2006508	ITA	Turin is lost !
+### 2006509	ITA	Parma is lost !
+### 2006510	ITA	Ancona is lost !
+### 2006511	ITA	Roma is lost !
+### 2006512	ITA	Naples is lost !
+### 2006515	ITA	Military defeat
+### 2006516	ITA	Appoint Armando Diaz
+### 2006522	ITA	Austria-Hungary offers Trento and Trieste
+### 2006523	ITA	Austria-Hungary offers Trento, Trieste and the Dalmatian coast from Split to Dubrovnik
+#
+# Italian war entry
+event = {
+	id = 2006500	# Concerns with serbian ultimatum
+	country = ITA
+
+	# triggered by U09 2192530
+   
+	name = "EVT1914_2006500_NAME"
+	desc = "EVT1914_2006500_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "EVT1914_2006500_ACTIONA" # We're upset
+		command = { type = leave_alliance when = 1 }
+		command = { type = relation which = U09 value = -50 }
+	}
+}
+event = {
+	id = 2006501	#  Austria-Hungary offers Trento
+	country = ITA
+
+	#triggered by U09 2192503
+   
+	name = "EVT1914_2006501_NAME"
+	desc = "EVT1914_2006501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_REFUSE
+		ai_chance = 90
+		command = { type = relation which = U09 value = -20 }
+		command = { trigger = { alliance = { country = U09 country = ITA } } type = leave_alliance when = 1 }
+	}
+	action = {
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 10
+		command = { type = relation which = U09 value = 50 }
+		command = { trigger = { NOT = { alliance = { country = U09 country = ITA } } } type = alliance where = 1 when = 1 }
+		command = { type = setflag which = U09_ITA_Trento }
+		command = { type = addcore which = 401 } #Trento
+		command = { type = trigger which = 2192504 }
+	}
+}
+event = {
+	id = 2006502	# The Treaty of London
+	country = ITA
+
+	#triggered by FRA 2002502
+   
+	name = "EVT1914_2006502_NAME"
+	desc = "EVT1914_2006502_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2006502_ACTIONA" # Sign it
+		ai_chance = 100
+		command = { type = trigger which = 2002503 }
+	}
+	action_b = {
+		name = "EVT1914_2006502_ACTIONB" # Don't sign it
+		ai_chance = 0
+		command = { type = relation which = FRA value = -20 }
+	}
+}
+event = {
+	id = 2006503	# Join the Entente
+	country = ITA
+
+	trigger = {  
+		event = 2002503   # FRA - The Treaty of London is signed
+		war = { country = FRA country = U08 }
+	}
+   
+	name = "EVT1914_2006503_NAME"
+	desc = "EVT1914_2006503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = march year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1918 }
+	
+	action = {
+		name = "EVT1914_2006503_ACTIONA" # We are at war
+		command = { type = alliance which = FRA when = 1 }
+		command = { type = setflag which = ITAEntente }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { trigger = { 
+						alliance = { country = FRA country = ENG }
+						war	= { country = ENG country = LBY }
+					} type = event which = 2032003 where = LBY when = 1 } #LBY Truce with Italy and France
+	}
+}
+#######################################################
+### TERRITORIAL LOSSES
+#######################################################
+### Austrian Border
+event = {
+	id = 2006504   # Bergamo is lost !
+	country = ITA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 395 data = -3 } } 
+		NOT = { control = { province = 395 data = REB } } 
+	}
+	
+	name = "EVT1914_2006504_NAME"
+	desc = "EVT1914_2006504_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2006505   # Brescia is lost !
+	country = ITA
+
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 393 data = -3 } } 
+		NOT = { control = { province = 393 data = REB } } 
+	}
+	
+	name = "EVT1914_2006505_NAME"
+	desc = "EVT1914_2006505_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2006506   # Venice is lost !
+	country = ITA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 400 data = -3 } } 
+		NOT = { control = { province = 400 data = REB } } 
+	}
+	
+	name = "EVT1914_2006506_NAME"
+	desc = "EVT1914_2006506_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 2006507   # Udine is lost !
+	country = ITA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 405 data = -3 } } 
+		NOT = { control = { province = 405 data = REB } } 
+	}
+	
+	name = "EVT1914_2006507_NAME"
+	desc = "EVT1914_2006507_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+### Main cities
+event = {
+	id = 2006508   # Turin is lost !
+	country = ITA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 398 data = -3 } } 
+		NOT = { control = { province = 398 data = REB } } 
+	}
+	
+	name = "EVT1914_2006508_NAME"
+	desc = "EVT1914_2006508_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2006509   # Parma is lost !
+	country = ITA
+
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 408 data = -3 } } 
+		NOT = { control = { province = 408 data = REB } } 
+	}
+	
+	name = "EVT1914_2006509_NAME"
+	desc = "EVT1914_2006509_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2006510   # Ancona is lost !
+	country = ITA
+
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 412 data = -3 } } 
+		NOT = { control = { province = 412 data = REB } } 
+	}
+	
+	name = "EVT1914_2006510_NAME"
+	desc = "EVT1914_2006510_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2006511   # Roma is lost !
+	country = ITA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 419 data = -3 } } 
+		NOT = { control = { province = 419 data = REB } } 
+	}
+	
+	name = "EVT1914_2006511_NAME"
+	desc = "EVT1914_2006511_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 10 }
+	}
+}
+event = {
+	id = 2006512   # Naples is lost !
+	country = ITA
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 421 data = -3 } } 
+		NOT = { control = { province = 421 data = REB } } 
+	}
+	
+	name = "EVT1914_2006512_NAME"
+	desc = "EVT1914_2006512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+
+###### Military Defeat
+event = {
+	id = 2006515   # Military defeat
+	country = ITA
+	
+	trigger = {
+		random = 35
+		OR = {
+			war = { country = ITA country = FRA }
+			war = { country = U08 country = ITA }
+		}
+		NOT = { control = { province = 419 data = ITA } } #Roma
+		OR = {
+			lost_VP = { value = 40 }
+			lost_IC = { value = 40 }	
+		}
+	}
+	
+	name = "EVT1914_2006515_NAME"
+	desc = "EVT1914_2006515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2006515_ACTIONA" # We have been defeated
+		command = { trigger = { 
+					participant = { country = ITA value = 1 } #part of the Entente
+					alliance = { country = ITA country = ROM } 
+					NOT = { 
+						alliance = { country = ITA country = FRA }
+						alliance = { country = ITA country = ENG }
+						alliance = { country = ITA country = RUS } 
+						alliance = { country = ITA country = USA } } } 
+				type = alliance_leader which = ROM where = 0 } #ROM becomes leader of the alliance	
+		command = { trigger = { 
+					participant = { country = ITA value = 1 } #part of the Entente
+					alliance = { country = ITA country = GRE } 
+					NOT = { 
+						alliance = { country = ITA country = FRA }
+						alliance = { country = ITA country = ENG }
+						alliance = { country = ITA country = RUS } 
+						alliance = { country = ITA country = USA } 
+						alliance = { country = ITA country = ROM } } } 
+				type = alliance_leader which = GRE where = 0 } #GRE becomes leader of the alliance		
+		command = { trigger = { war = { country = ITA country = U08 } } type = access which = U08 }
+		command = { trigger = { war = { country = ITA country = U09 } } type = access which = U09 }
+		command = { trigger = { war = { country = ITA country = FRA } } type = access which = FRA }
+		command = { trigger = { war = { country = ITA country = ENG } } type = access which = ENG }
+		command = { type = dissent value = 5 }
+		command = { trigger = { war = { country = ITA country = U08 } } type = trigger which = 2191553 } #U08 Armistice with Italy
+		command = { trigger = { war = { country = ITA country = U09 } } type = trigger which = 2192534 } #U09 Armistice with Italy
+		command = { trigger = { war = { country = ITA country = FRA } } type = trigger which = 2002559 } #FRA Armistice with Italy
+		command = { trigger = { war = { country = ITA country = U08 } } type = setflag which = ITA_against_U08 } #just to be sure
+		command = { trigger = { war = { country = ITA country = FRA } } type = setflag which = ITA_against_FRA } #just to be sure
+		command = { trigger = { war = { country = ITA country = U08 } } type = peace which = U08 value = 1 }
+		command = { trigger = { war = { country = ITA country = FRA } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = ITA country = RUS } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = ITA country = SOV } } type = peace which = SOV value = 1 }
+		command = { type = leave_alliance when = 1 }
+	}
+}
+######## Appoint Armando Diaz
+event = {
+	id = 2006516	# Appoint Armando Diaz
+	country = ITA
+	
+	decision = { 
+		war = { country = ITA country = U09 }
+	}
+	
+	decision_trigger = {
+		incabinet = 25154 #Luigi Cadorna
+		NOT = { incabinet = 25157 } #Armando Diaz
+		OR = {
+			NOT = { control = { province = 405 data = -1 } } #Italy does not control Udine
+			NOT = { control = { province = 400 data = -1 } } #Italy does not control Venice
+			NOT = { control = { province = 394 data = -1 } } #Italy does not control Belluno
+		}
+	}
+	
+	trigger = { 
+		random = 35
+		war = { country = ITA country = U09 }
+		incabinet = 25154 #Luigi Cadorna
+		NOT = { incabinet = 25157 } #Armando Diaz
+		OR = {
+			NOT = { control = { province = 405 data = -1 } } #Italy does not control Udine
+			NOT = { control = { province = 400 data = -1 } } #Italy does not control Venice
+			NOT = { control = { province = 394 data = -1 } } #Italy does not control Belluno
+		}
+	}
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	name = "EVT1914_2006516_NAME"
+	desc = "EVT1914_2006516_DESC" 
+	style = 2
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "WW1_Offensive"
+	
+	action = {
+	name = "EVT1914_2006516_ACTIONA"
+		command = { type = chiefofstaff which = 25157 } # Armando Diaz
+		command = { trigger = { incabinet = 25143 } type = chiefofarmy which = 25145 } # eventually replace Cadorna as Chief of Army too
+		command = { type = sleepminister which = 25143 } # Luigi Cadorna
+		command = { type = sleepleader which = 25319 } # Cadorna
+		command = { type = dissent value = -1 }
+	}
+}
+
+event = {
+	id = 2006522	#  Austria-Hungary offers Trento and Trieste
+	country = ITA
+
+	#triggered by U09 2192503
+   
+	name = "EVT1914_2006522_NAME"
+	desc = "EVT1914_2006522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_REFUSE
+		ai_chance = 80
+		command = { type = relation which = U09 value = -20 }
+		command = { trigger = { alliance = { country = U09 country = ITA } } type = leave_alliance when = 1 }
+	}
+	action = {
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 20
+		command = { type = relation which = U09 value = 70 }
+		command = { trigger = { NOT = { alliance = { country = U09 country = ITA } } } type = alliance where = 1 when = 1 }
+		command = { type = setflag which = U09_ITA_Trento_Trieste }
+		command = { type = addcore which = 401 } #Trento
+		command = { type = addcore which = 404 } #Trieste
+		command = { type = trigger which = 2192504 }
+	}
+}
+
+event = {
+	id = 2006523	#  Austria-Hungary offers Trento, Trieste and the Dalmatian coast from Split to Dubrovnik
+	country = ITA
+
+	#triggered by U09 2192503
+   
+	name = "EVT1914_2006523_NAME"
+	desc = "EVT1914_2006523_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = ACTION_NAME_REFUSE
+		ai_chance = 70
+		command = { type = relation which = U09 value = -20 }
+		command = { trigger = { alliance = { country = U09 country = ITA } } type = leave_alliance when = 1 }
+	}
+	action = {
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 3000
+		command = { type = relation which = U09 value = 100 }
+		command = { trigger = { NOT = { alliance = { country = U09 country = ITA } } } type = alliance where = 1 when = 1 }
+		command = { type = setflag which = U09_ITA_Trento_Trieste_Dalmatia }
+		command = { type = addcore which = 401 } #Trento
+		command = { type = addcore which = 404 } #Trieste
+		command = { type = addcore which = 350 } #Split
+		command = { type = addcore which = 343 } #Dubrovnik
+		command = { type = addclaim which = 351 } #Knin
+		command = { type = trigger which = 2192504 }
+	}
+}

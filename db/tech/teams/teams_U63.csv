@@ -1,0 +1,21 @@
+UC1;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+2000200;Guangdong Arsenal;100723;3;1900;1999;mechanics;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000201;Guangzhou Shipyard;T8702;2;1881;1999;naval_engineering;naval_artillery;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000202;Chen Jitang;100724;3;1908;1955;centralized_execution;combined_arms_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000203;Sun Zhongshan Academy;100726;3;1924;1999;mechanics;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000204;Ministry of Defense;T8707;2;1900;1999;naval_training;centralized_execution;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000205;Guangdong Naval Academy;100727;1;1882;1911;small_taskforce_tactics;seamanship;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000206;Guangdong-Hankou Railway Authority;100728;1;1936;1999;industrial_engineering;mechanics;general_equipment;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000207;Guangzhou Diesel Engine Factory;100729;1;1911;1928;mechanics;general_equipment;vehicle_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000208;Guangzhou Diesel Engine Factory;100729;2;1928;1936;mechanics;general_equipment;vehicle_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000209;Guangzhou Diesel Engine Factory;100729;4;1936;1999;mechanics;general_equipment;vehicle_engineering;electronics;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000210;Shaoguan Airplane Factory;100730;1;1936;1945;aeronautics;general_equipment;aircraft_testing;bomber_design;avionics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000211;Dongshan Airplane Factory;100731;1;1928;1933;aeronautics;general_equipment;aircraft_testing;fighter_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000212;Kaiping Coal Mine;T1004;3;1877;1898;industrial_engineering;management;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000213;Kaiping Coal Mine;T1004;1;1898;1912;industrial_engineering;management;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000214;Kailan Mining Administration ;T1004;2;1912;1999;industrial_engineering;management;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000215;Huangpu Shipyard;100751;1;1924;1945;naval_engineering;naval_training;submarine_design;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000216;Huangpu Shipyard;100751;2;1945;1999;naval_engineering;naval_training;submarine_design;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000217;Huangpu Naval Academy;100727;2;1911;1940;small_taskforce_tactics;seamanship;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000218;Hong Kong Tramways Ltd;100747;2;1910;1922;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+2000219;Hong Kong Electric Co. Ltd;100747;3;1922;1999;electronics;industrial_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

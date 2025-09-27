@@ -1,0 +1,2549 @@
+###
+### Peace negotiation events
+###
+### By Rhysaxiel
+###
+###### reversed Versailles treaty (between FRA, BEL and U08)
+###
+###	(prereq. : FRA 2002528 or 2002529)
+### U08 2191512 : The Versailles Treaty
+### FRA 2002530 : The Versailles Treaty : Harsh conditions
+### FRA 2002531 : The Versailles Treaty : Mild conditions
+### FRA 2002532 : The Versailles Treaty : Soft conditions
+### U08 2191513 : The Versailles Treaty : Fate of Belgium
+### BEL 2015500 : Germany's choice: Wallonia and Congo
+### BEL 2015501 : Germany's choice: Congo
+### U08 2191550 : The Versailles Treaty : Fate of Netherlands
+### HOL 2015502 : Germany's choice: Dutch Antilles and Dutch Guyana
+### HOL 2015503 : Germany's choice: Maastricht, Dutch East Indies, Antilles and Guyana
+###
+###### Versailles treaty (between ENG, FRA, BEL and U08)
+###
+### (prereq. : U08 2191514 or 2191520 )
+### FRA 2002534 : The Versailles Treaty
+### U08 2191521 : The Versailles Treaty : Harsh conditions
+### U08 2191522 : The Versailles Treaty : Mild conditions
+### U08 2191523 : The Versailles Treaty : Soft conditions
+###
+###### Austria-Hungary related treaties : Historical Trianon and Saint Germain
+### AUS 2024501 : The Saint-Germain-En-Laye Treaty
+### HUN 2022501 : The Trianon Treaty
+###
+###### Brest-Litovsk treaties : Historical Brest-Litovsk
+### SOV 2007529 : The Brest Litovsk Treaty : initial conditions
+### SOV 2007530 : The Brest Litovsk Treaty : harsh conditions
+###
+###### Italy related treaties :
+### FRA	2002553	The Treaty of Grenoble
+### ITA	2006513	The Grenoble Treaty (ITA)
+### U08	2191548	The Treaty of Grenoble
+### ITA	2006514	The Grenoble Treaty (ITA)
+#########
+### U08 2191551 : The Balmoral Castle Treaty
+### ENG 2001550 : The Balmoral Castle Treaty : Harsh conditions
+### ENG 2001551 : The Balmoral Castle Treaty : Soft conditions
+#########
+### U08 2191555 : The Treaty of Alexander Palace
+### RUS 2104547 : The Treaty of Alexander Palace : Harsh conditions
+### RUS 2104548 : The Treaty of Alexander Palace : Soft conditions
+#########
+event = {
+	id = 2191512	# The Versailles Treaty 
+	country = U08
+
+	trigger = {
+		random = 25
+		OR = {		 # French defeat
+			event = 2002528
+			event = 2002529
+		}
+	}
+	
+	name = "EVT1914_2191512_NAME"
+	desc = "EVT1914_2191512_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2191512_ACTIONA" # Impose harsh conditions
+		command = { type = trigger which = 2002530 }
+		command = { type = dissent value = -20 }
+		command = { type = addclaim which = 96 } #Longwy
+		command = { type = addclaim which = 106 } #Nancy
+		command = { type = addclaim which = 717 } #Rabat
+		command = { type = addclaim which = 718 } #Casablanca
+		command = { type = addclaim which = 719 } #Tiznit
+		command = { type = addclaim which = 720 } #Agadir
+		command = { type = addclaim which = 721 } #Fes
+		command = { type = addclaim which = 722 } #Marrakech
+		command = { type = addclaim which = 723 } #Khenifra
+		command = { type = addclaim which = 724 } #Oujda
+		command = { type = addclaim which = 725 } #Ouarzazate
+		command = { type = addclaim which = 726 } #El Rachidia
+		command = { trigger = { NOT = { alliance = { country = U08 country = ITA } } } type = addclaim which = 833 } # Djibouti only if not allied with Italy
+		command = { type = addclaim which = 960 } #Yamoussoukro
+		command = { type = addclaim which = 961 } #Bouake
+		command = { type = addclaim which = 962 } #Abidjan
+		command = { type = addclaim which = 965 } #Labe
+		command = { type = addclaim which = 966 } #Conakri
+		command = { type = addclaim which = 967 } #Kankan
+		command = { type = addclaim which = 968 } #Korhogo
+		command = { type = addclaim which = 970 } #San Pedro
+		command = { type = addclaim which = 949 } #Natitingou
+		command = { type = addclaim which = 951 } #Cotonou
+		command = { type = addclaim which = 922 } #Faya
+		command = { type = addclaim which = 920 } #Fort Lamy
+		command = { type = addclaim which = 921 } #Abeche
+		command = { type = addclaim which = 923 } #Bambari
+		command = { type = addclaim which = 924 } #Moundou
+		command = { type = addclaim which = 926 } #Bangui
+		command = { type = addclaim which = 927 } #Ouadda
+		command = { type = addclaim which = 907 } #Brazzaville
+		command = { type = addclaim which = 914 } #Franceville
+		command = { type = addclaim which = 915 } #Libreville
+		command = { type = addclaim which = 917 } #Point Noire
+		command = { type = addclaim which = 918 } #Port Gentil
+		command = { type = addclaim which = 996 } #Sant Denis de la Reunion
+		command = { type = addclaim which = 999 } #Muruni
+		command = { type = addclaim which = 1000 } #Mamoudzou
+		command = { type = addclaim which = 1001 } #Tananarive
+		command = { type = addclaim which = 1002 } #Tamatave
+		command = { type = addclaim which = 1003 } #Fort Dauphin
+	}
+	action_b = {
+		ai_chance = 7
+		name = "EVT1914_2191512_ACTIONB" # Impose mild conditions
+		command = { type = trigger which = 2002531 }
+		command = { type = dissent value = -20 }
+		command = { type = addclaim which = 960 } #Yamoussoukro
+		command = { type = addclaim which = 961 } #Bouake
+		command = { type = addclaim which = 962 } #Abidjan
+		command = { type = addclaim which = 965 } #Labe
+		command = { type = addclaim which = 966 } #Conakri
+		command = { type = addclaim which = 967 } #Kankan
+		command = { type = addclaim which = 968 } #Korhogo
+		command = { type = addclaim which = 970 } #San Pedro
+		command = { type = addclaim which = 949 } #Natitingou
+		command = { type = addclaim which = 951 } #Cotonou
+		command = { type = addclaim which = 922 } #Faya
+		command = { type = addclaim which = 920 } #Fort Lamy
+		command = { type = addclaim which = 921 } #Abeche
+		command = { type = addclaim which = 923 } #Bambari
+		command = { type = addclaim which = 924 } #Moundou
+		command = { type = addclaim which = 926 } #Bangui
+		command = { type = addclaim which = 927 } #Ouadda
+		command = { type = addclaim which = 907 } #Brazzaville
+		command = { type = addclaim which = 914 } #Franceville
+		command = { type = addclaim which = 915 } #Libreville
+		command = { type = addclaim which = 917 } #Point Noire
+		command = { type = addclaim which = 918 } #Port Gentil
+		command = { type = addclaim which = 996 } #Sant Denis de la Reunion
+		command = { type = addclaim which = 999 } #Muruni
+		command = { type = addclaim which = 1000 } #Mamoudzou
+		command = { type = addclaim which = 1001 } #Tananarive
+		command = { type = addclaim which = 1002 } #Tamatave
+		command = { type = addclaim which = 1003 } #Fort Dauphin	  
+	}
+	action_c = {
+		ai_chance = 3
+		name = "EVT1914_2191512_ACTIONC" # Impose soft conditions
+		command = { type = trigger which = 2002532 }
+		command = { type = dissent value = -20 }
+	}
+}
+event = {
+	id = 2002530	# The Versailles Treaty : Harsh conditions
+	country = FRA
+
+	#triggered by U08 2191512
+	
+	name = "EVT1914_2002530_NAME"
+	desc = "EVT1914_2002530_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2002530_ACTIONA" # France lives its Darkest Hour...
+		command = { trigger = { ai = no not = { dissent = 20 } } type = dissent value = 10 }
+		command = { trigger = { ai = no not = { dissent = 30 } } type = dissent value = 5 }
+		command = { trigger = { ai = no not = { dissent = 40 } } type = dissent value = 5 }
+		command = { trigger = { dissent = 60 } type = dissent value = -20 }
+		command = { trigger = { dissent = 55 } type = dissent value = -10 }
+		command = { trigger = { dissent = 50 } type = dissent value = -5 }
+		# loose cores on alsace Lorraine
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		# African colonies
+		command = { type = secedearea which = U08 value = "Slave Coast" when = 1 }
+		command = { type = secedearea which = U08 value = "Ivory Coast" when = 1 }
+		command = { type = secedearea which = U08 value = "Guinean Coast" when = 1 }
+		command = { type = secedearea which = U08 value = "Cameroonian Jungle" when = 1 }
+		command = { type = secedearea which = U08 value = "Central Africa Plains" when = 1 }
+		command = { type = secedeprovince which = U08 value = 922 when = 1 } #Faya
+		command = { type = secedearea which = U08 value = "Madagascar" when = 1 }
+		command = { type = secederegion which = U08 value = "Morocco" when = 1 }	  
+		command = { type = end_mastery which = IDC  }
+		#Lorraine
+		command = { type = secedeprovince which = U08 value = 96 when = 1 }
+		command = { type = secedeprovince which = U08 value = 106 when = 1 }
+		#possible fix to problem
+		command = { type = secederegion which = U08 value = "Germany" when = 1 }	  
+		command = { type = secederegion which = U08 value = "Benelux" when = 1 }	  
+		# war reparations
+		command = { type = trade which = FRA where = U08 money = -3 when = 7200 value = 1 }	  
+		command = { type = trade which = FRA where = U08 supplies = -30 when = 7200 value = 1 }	  
+		# special conditions if Italy is CP : secede Tuninia
+		command = { trigger = { OR = { event = 2192504 alliance = { country = U08 country = ITA }  } } type = secederegion which = ITA value = "Tunisia" when = 1 }	 
+		command = { trigger = { OR = { event = 2192504 alliance = { country = U08 country = ITA }  } } type = secedeprovince which = ITA value = 833 when = 1 } # Djibouti
+		command = { trigger = { NOT = { alliance = { country = U08 country = ITA } } } type = secedeprovince which = U08 value = 833 when = 1 } # Djibouti
+		command = { trigger = { OR = { event = 2192504 alliance = { country = U08 country = ITA }  } } type = secedeprovince which = ITA value = 94 when = 1 } # Corsica
+		command = { trigger = { OR = { event = 2192504 alliance = { country = U08 country = ITA }  } } type = secedeprovince which = ITA value = 91 when = 1 } # Chambéry
+		command = { trigger = { OR = { event = 2192504 alliance = { country = U08 country = ITA }  } } type = secedeprovince which = ITA value = 87 when = 1 } # Nice
+		# demobilization (only 24 units at 33% strenght, around 100 000 men as per Treaty of Versailles)
+		command = { type = demobilize which = land when = 0 where = 0 value = 24 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on bigger ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 6 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 6 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 10 }		
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }
+	}
+}
+event = {
+	id = 2002531	# The Versailles Treaty : Mild conditions
+	country = FRA
+	
+	#triggered by U08 2191512
+	
+	name = "EVT1914_2002531_NAME"
+	desc = "EVT1914_2002531_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2002531_ACTIONA" # France lives its Darkest Hour...
+		command = { trigger = { ai = no not = { dissent = 10 } } type = dissent value = 5 }
+		command = { trigger = { ai = no not = { dissent = 20 } } type = dissent value = 3 }
+		command = { trigger = { ai = no not = { dissent = 35 } } type = dissent value = 3 }
+		command = { trigger = { dissent = 60 } type = dissent value = -25 }
+		command = { trigger = { dissent = 55 } type = dissent value = -15 }
+		command = { trigger = { dissent = 50 } type = dissent value = -10 }
+		# loose cores on alsace Lorraine
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		# African colonies
+		command = { type = secedearea which = U08 value = "Slave Coast" when = 1 }
+		command = { type = secedearea which = U08 value = "Ivory Coast" when = 1 }
+		command = { type = secedearea which = U08 value = "Guinean Coast" when = 1 }
+		command = { type = secedearea which = U08 value = "Cameroonian Jungle" when = 1 }
+		command = { type = secedearea which = U08 value = "Central Africa Plains" when = 1 }
+		command = { type = secedeprovince which = U08 value = 922 when = 1 } #Faya
+		command = { type = secedearea which = U08 value = "Madagascar" when = 1 }
+		#possible fix to problem
+		command = { type = secederegion which = U08 value = "Germany" when = 1 }	  
+		command = { type = secederegion which = U08 value = "Benelux" when = 1 }	  
+		# war reparations
+		command = { type = trade which = FRA where = U08 money = -2 when = 7200 value = 1 }
+		command = { type = trade which = FRA where = U08 supplies = -20 when = 7200 value = 1 }
+		# special conditions if Italy is CP : secede Tuninia
+		command = { trigger = { OR = { event = 2192504 alliance = { country = U08 country = ITA }  } } type = secederegion which = ITA value = "Tunisia" when = 1 }	 
+		command = { trigger = { OR = { event = 2192504 alliance = { country = U08 country = ITA }  } } type = secedeprovince which = ITA value = 833 when = 1 } # Djibouti 
+		# demobilization (only 36 units at 33% strenght, around 150 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 36 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on bigger ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 12 }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+event = {
+	id = 2002532	# The Versailles Treaty : Soft conditions
+	country = FRA
+	
+	#triggered by U08 2191512
+	
+	name = "EVT1914_2002532_NAME"
+	desc = "EVT1914_2002532_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2002532_ACTIONA" # France lives its Darkest Hour...
+		command = { trigger = { ai = no not = { dissent = 10 } } type = dissent value = 3 }
+		command = { trigger = { ai = no not = { dissent = 20 } } type = dissent value = 2 }
+		command = { trigger = { ai = no not = { dissent = 25 } } type = dissent value = 2 }
+		command = { trigger = { dissent = 60 } type = dissent value = -35 }
+		command = { trigger = { dissent = 50 } type = dissent value = -20 }
+		command = { trigger = { dissent = 40 } type = dissent value = -10 }
+		# loose cores on alsace Lorraine
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		#possible fix to problem
+		command = { type = secederegion which = U08 value = "Germany" when = 1 }	  
+		command = { type = secederegion which = U08 value = "Benelux" when = 1 }	  
+		# war reparations
+		command = { type = trade which = FRA where = U08 money = -1 when = 7200 value = 1 }
+		command = { type = trade which = FRA where = U08 supplies = -10 when = 7200 value = 1 }
+		# demobilization (only 48 units at 33% strenght, around 200 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 48 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on bigger ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 12 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 12 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 20 }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+event = {
+	id = 2191513	# The Versailles Treaty : Fate of Belgium
+	country = U08
+	
+	trigger = {
+		event = 2191512 	# reversed Versailles Treaty for France
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		OR = {
+			participant = { country = BEL value = 1 } #part of the Entente
+			event = 2001501 #Germany declared war on Belgium
+		}
+		OR = { 
+			NOT = { war = { country = BEL country = U08 } } #War is over between Entente and Germany
+			area = { area = Wallonia country = -1 data = 1 value = 100 } 
+			area = { area = Flanders country = -1 data = 1 value = 100 }
+		}
+	}
+	
+	name = "EVT1914_2191513_NAME"
+	desc = "EVT1914_2191513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		ai_chance = 95
+		name = "EVT1914_2191513_ACTIONA" # Annex part of Wallonia and Congo
+		command = { type = make_puppet which = BEL  }
+		command = { type = addclaim which = 108 } #Liege
+		command = { type = addclaim which = 111 } #Arlon
+		command = { type = addclaim which = 894 } #Matadi
+		command = { type = addclaim which = 897 } #Kolwezi
+		command = { type = addclaim which = 898 } #Elisabethville
+		command = { type = addclaim which = 899 } #Leopoldville
+		command = { type = addclaim which = 901 } #Kikwit
+		command = { type = addclaim which = 902 } #Luluabourg
+		command = { type = addclaim which = 903 } #Aba
+		command = { type = addclaim which = 904 } #Stanleyville
+		command = { type = addclaim which = 905 } #Costermansville
+		command = { type = addclaim which = 906 } #Coquilhatville
+		#command = { type = secedearea which = BEL value = Flanders when = 1 } # Brugge - Benelux
+		#command = { type = secedearea which = BEL value = Wallonia when = 1 } # Rotterdam - Benelux
+		command = { type = trigger which = 2015500  } 
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT1914_2191513_ACTIONB" # Annex Congo
+		command = { type = make_puppet which = BEL }
+		command = { type = addclaim which = 894 } #Matadi
+		command = { type = addclaim which = 897 } #Kolwezi
+		command = { type = addclaim which = 898 } #Elisabethville
+		command = { type = addclaim which = 899 } #Leopoldville
+		command = { type = addclaim which = 901 } #Kikwit
+		command = { type = addclaim which = 902 } #Luluabourg
+		command = { type = addclaim which = 903 } #Aba
+		command = { type = addclaim which = 904 } #Stanleyville
+		command = { type = addclaim which = 905 } #Costermansville
+		command = { type = addclaim which = 906 } #Coquilhatville
+		#command = { type = secedearea which = BEL value = Flanders when = 1 } # Brugge - Benelux
+		#command = { type = secedearea which = BEL value = Wallonia when = 1 } # Rotterdam - Benelux
+		command = { type = trigger which = 2015501  } 
+   }
+}
+
+event = {
+	id = 2015500	# Germany's choice : Wallonia and Congo
+	country = BEL
+
+	#triggered by U08 2191512
+	
+	name = "EVT1914_2015500_NAME"
+	desc = "EVT1914_2015500_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2015500_ACTIONA" # Belgium lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		# war reparations
+		command = { type = trade which = BEL where = U08 money = -1 when = 7200 value = 1 }
+		# secede part of Wallonia + Congo + loses claims on Congo
+		command = { type = secedeprovince which = U08 value = 108 when = 1 } #Liege
+		command = { type = secedeprovince which = U08 value = 111 when = 1 } #Arlon 
+		command = { type = secederegion which = U08 value = "Central Africa" when = 1 }
+		command = { type = removeclaim which = 894 } #Matadi
+		command = { type = removeclaim which = 897 } #Kolwezi
+		command = { type = removeclaim which = 898 } #Elisabethville
+		command = { type = removeclaim which = 899 } #Leopoldville
+		command = { type = removeclaim which = 901 } #Kikwit
+		command = { type = removeclaim which = 902 } #Luluabourg
+		command = { type = removeclaim which = 903 } #Aba
+		command = { type = removeclaim which = 904 } #Stanleyville
+		command = { type = removeclaim which = 905 } #Costermansville
+		command = { type = removeclaim which = 906 } #Coquilhatville	  
+		# demobilization (only 5 units at 33% strenght, around 20 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 5 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+event = {
+	id = 2015501	# Germany's choice : Congo
+	country = BEL
+
+#triggered by U08 2191512
+	
+	name = "EVT1914_2015501_NAME"
+	desc = "EVT1914_2015501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2015501_ACTIONA" # Belgium lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 3 }
+		# war reparations
+		command = { type =  trade which = BEL where = U08  money = -0.5 when = 7200 value = 1 }
+		command = { type = secederegion which = U08 value = "Central Africa" when = 1 }
+		# secede Congo + loses claims on Congo
+		command = { type = removeclaim which = 894 } #Matadi
+		command = { type = removeclaim which = 897 } #Kolwezi
+		command = { type = removeclaim which = 898 } #Elisabethville
+		command = { type = removeclaim which = 899 } #Leopoldville
+		command = { type = removeclaim which = 901 } #Kikwit
+		command = { type = removeclaim which = 902 } #Luluabourg
+		command = { type = removeclaim which = 903 } #Aba
+		command = { type = removeclaim which = 904 } #Stanleyville
+		command = { type = removeclaim which = 905 } #Costermansville
+		command = { type = removeclaim which = 906 } #Coquilhatville	  	  
+		# demobilization (only 5 units at 33% strenght, around 20 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 5 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+event = {
+	id = 2191550	# The Versailles Treaty : Fate of Netherlands
+	country = U08
+
+	trigger = {
+		event = 2191512 	# reversed Versailles Treaty for France
+		NOT = { event = 2191532 } #Fall of Berlin '14
+		NOT = { event = 2191514 } #Military defeat
+		participant = { country = HOL value = 1 } #part of the Entente
+		OR = { 
+			NOT = { war = { country = HOL country = U08 } } #War is over between Entente and Germany
+			area = { area = Netherlands country = -1 data = 1 value = 100 }
+		}
+	}
+	
+	name = "EVT1914_2191550_NAME"
+	desc = "EVT1914_2191550_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		ai_chance = 95
+		name = "EVT1914_2191550_ACTIONA" # Annex Dutch Antilles and Dutch Guyana
+		command = { type = make_puppet which = HOL }
+		command = { type = addclaim which = 1761 } #Saba Island
+		command = { type = addclaim which = 1762 } #Netherlands Antilles
+		command = { type = addclaim which = 1999 } #Paramaribo
+		command = { type = trigger which = 2015502 } 
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT1914_2191550_ACTIONB" # Annex Maastricht, Dutch East Indies, Antilles and Guyana!
+		command = { type = make_puppet which = HOL }
+		command = { type = inherit which = U05 } #Dutch East Indies
+		command = { type = addclaim which = 121 } #Maastricht
+		command = { type = addclaim which = 1594 } #Netherland East Indies
+		command = { type = addclaim which = 1595 }
+		command = { type = addclaim which = 1596 }
+		command = { type = addclaim which = 1597 }
+		command = { type = addclaim which = 1598 }
+		command = { type = addclaim which = 1599 }
+		command = { type = addclaim which = 1600 }
+		command = { type = addclaim which = 1601 }
+		command = { type = addclaim which = 1615 }
+		command = { type = addclaim which = 1616 }
+		command = { type = addclaim which = 1618 }
+		command = { type = addclaim which = 1619 }
+		command = { type = addclaim which = 1620 }
+		command = { type = addclaim which = 1621 }
+		command = { type = addclaim which = 1622 }
+		command = { type = addclaim which = 1623 }
+		command = { type = addclaim which = 1627 }
+		command = { type = addclaim which = 1628 }
+		command = { type = addclaim which = 1629 }
+		command = { type = addclaim which = 1630 }
+		command = { type = addclaim which = 1631 }
+		command = { type = addclaim which = 1632 }
+		command = { type = addclaim which = 1633 }
+		command = { type = addclaim which = 1634 }
+		command = { type = addclaim which = 1635 }
+		command = { type = addclaim which = 1636 }
+		command = { type = addclaim which = 1637 }
+		command = { type = addclaim which = 1638 }
+		command = { type = addclaim which = 1639 }
+		command = { type = addclaim which = 1640 }
+		command = { type = addclaim which = 1641 }
+		command = { type = addclaim which = 1642 }
+		command = { type = addclaim which = 1643 }
+		command = { type = addclaim which = 1644 }
+		command = { type = addclaim which = 1645 }
+		command = { type = addclaim which = 1646 }
+		command = { type = addclaim which = 1647 }
+		command = { type = addclaim which = 1648 }
+		command = { type = addclaim which = 1649 }
+		command = { type = addclaim which = 1650 }
+		command = { type = addclaim which = 1651 }
+		command = { type = addclaim which = 1652 }
+		command = { type = addclaim which = 1653 }
+		command = { type = addclaim which = 1654 }
+		command = { type = addclaim which = 1655 }
+		command = { type = addclaim which = 1656 }
+		command = { type = addclaim which = 1657 }
+		command = { type = addclaim which = 1658 }
+		command = { type = addclaim which = 1659 }
+		command = { type = addclaim which = 1660 }
+		command = { type = addclaim which = 1761 } #Saba Island
+		command = { type = addclaim which = 1762 } #Netherlands Antilles
+		command = { type = addclaim which = 1999 } #Paramaribo
+		command = { type = trigger which = 2015503 }
+	}
+}
+
+event = {
+	id = 2015502	# Germany's choice : Dutch Antilles and Dutch Guyana
+	country = HOL
+
+	#triggered by U08 2191550
+	
+	name = "EVT1914_2015502_NAME"
+	desc = "EVT1914_2015502_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2015502_ACTIONA" # Netherlands lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		# war reparations
+		command = { type = trade which = HOL where = U08  money = -0.5 when = 7200 value = 1 }
+		# secede Dutch Antilles and Dutch Guyana
+		command = { type = secedeprovince which = U08 value = 1761 when = 1 } #Saba Island
+		command = { type = secedeprovince which = U08 value = 1762 when = 1 } #Netherlands Antilles
+		command = { type = secedeprovince which = U08 value = 1999 when = 1 } #Paramaribo
+		command = { type = removeclaim which = 1761 } #Saba Island
+		command = { type = removeclaim which = 1762 } #Netherlands Antilles
+		command = { type = removeclaim which = 1999 } #Paramaribo
+		# demobilization (only 10 units at 33% strenght, around 40 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 10 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+
+	}
+}
+event = {
+	id = 2015503	# Germany's choice : Maastricht, Dutch East Indies, Antilles and Guyana
+	country = HOL
+
+	#triggered by U08 2191550
+	
+	name = "EVT1914_2015503_NAME"
+	desc = "EVT1914_2015503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2015503_ACTIONA" # Netherlands lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 3 }
+		# war reparations
+		command = { type = trade which = HOL where = U08  money = -1 when = 7200 value = 1 }
+		# secede Maastricht, Dutch East Indies, Dutch Antilles and Dutch Guyana
+		command = { type = secedeprovince which = U08 value = 121 when = 1 } #Maastricht
+		command = { type = secedeprovince which = U08 value = 1761 when = 1 } #Saba Island
+		command = { type = secedeprovince which = U08 value = 1762 when = 1 } #Netherlands Antilles
+		command = { type = secedeprovince which = U08 value = 1999 when = 1 } #Paramaribo
+		command = { type = secederegion which = U08 value = "Indonesia" when = 1 } 
+		command = { type = removeclaim which = 1761 } #Saba Island
+		command = { type = removeclaim which = 1762 } #Netherlands Antilles
+		command = { type = removeclaim which = 1999 } #Paramaribo
+		command = { type = removeclaim which = 1594 } #Netherland East Indies
+		command = { type = removeclaim which = 1595 }
+		command = { type = removeclaim which = 1596 }
+		command = { type = removeclaim which = 1597 }
+		command = { type = removeclaim which = 1598 }
+		command = { type = removeclaim which = 1599 }
+		command = { type = removeclaim which = 1600 }
+		command = { type = removeclaim which = 1601 }
+		command = { type = removeclaim which = 1615 }
+		command = { type = removeclaim which = 1616 }
+		command = { type = removeclaim which = 1618 }
+		command = { type = removeclaim which = 1619 }
+		command = { type = removeclaim which = 1620 }
+		command = { type = removeclaim which = 1621 }
+		command = { type = removeclaim which = 1622 }
+		command = { type = removeclaim which = 1623 }
+		command = { type = removeclaim which = 1627 }
+		command = { type = removeclaim which = 1628 }
+		command = { type = removeclaim which = 1629 }
+		command = { type = removeclaim which = 1630 }
+		command = { type = removeclaim which = 1631 }
+		command = { type = removeclaim which = 1632 }
+		command = { type = removeclaim which = 1633 }
+		command = { type = removeclaim which = 1634 }
+		command = { type = removeclaim which = 1635 }
+		command = { type = removeclaim which = 1636 }
+		command = { type = removeclaim which = 1637 }
+		command = { type = removeclaim which = 1638 }
+		command = { type = removeclaim which = 1639 }
+		command = { type = removeclaim which = 1640 }
+		command = { type = removeclaim which = 1641 }
+		command = { type = removeclaim which = 1642 }
+		command = { type = removeclaim which = 1643 }
+		command = { type = removeclaim which = 1644 }
+		command = { type = removeclaim which = 1645 }
+		command = { type = removeclaim which = 1646 }
+		command = { type = removeclaim which = 1647 }
+		command = { type = removeclaim which = 1648 }
+		command = { type = removeclaim which = 1649 }
+		command = { type = removeclaim which = 1650 }
+		command = { type = removeclaim which = 1651 }
+		command = { type = removeclaim which = 1652 }
+		command = { type = removeclaim which = 1653 }
+		command = { type = removeclaim which = 1654 }
+		command = { type = removeclaim which = 1655 }
+		command = { type = removeclaim which = 1656 }
+		command = { type = removeclaim which = 1657 }
+		command = { type = removeclaim which = 1658 }
+		command = { type = removeclaim which = 1659 }
+		command = { type = removeclaim which = 1660 }		
+		# demobilization (only 10 units at 33% strenght, around 40 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 10 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+######### Historical Versailles treaty
+event = {
+	id = 2002534	# The Versailles Treaty 
+	country = FRA
+
+	trigger = {
+		random = 25
+		# German defeat
+		OR = {	
+			event = 2191514 #Mil. defeat
+			event = 2191520 #Abdication + Armistice
+			event = 2191532 #Early defeat
+			}
+		}
+	
+	name = "EVT1914_2002534_NAME"
+	desc = "EVT1914_2002534_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2002534_ACTIONA" # Impose harsh conditions
+		command = { type = trigger which = 2191521 }
+		command = { type = dissent value = -20 }
+		command = { trigger = { NOT = { exists = HOL } } type = independence which = HOL value = 1 when = 1 }
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1  } #Liege
+		command = { type = secedeprovince which = HOL value = 1761 when = 1  } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1  } #Netherland Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1  } #Paramaribo
+		command = { trigger = { NOT = { exists = BEL } } type = independence which = BEL value = 1 when = 1 }
+		command = { type = secedeprovince which = BEL value = 108 when = 1  } #Liege
+		command = { type = secedeprovince which = BEL value = 111 when = 1  } #Arlon
+		command = { type = secedeprovince which = BEL value = 112 when = 1  } #Mons
+		command = { type = secedeprovince which = BEL value = 113 when = 1  } #Namur
+		command = { type = secedeprovince which = BEL value = 114 when = 1  } #Bruges
+		command = { type = secedeprovince which = BEL value = 115 when = 1  } #Antwerpen
+		command = { type = secedeprovince which = BEL value = 116 when = 1  } #Brussels
+		command = { type = secedeprovince which = BEL value = 117 when = 1  } #Hasselt
+		command = { type = addclaim which = 127 } #Saarbrücken
+		command = { type = addclaim which = 128 } #Trier
+		command = { type = addclaim which = 129 } #Koblenz
+		command = { type = addclaim which = 130 } #Mainz
+		command = { type = addclaim which = 948 } #Kara
+		command = { type = addclaim which = 950 } #Lome
+		command = { type = addclaim which = 908 } #Ouesso
+		command = { type = addclaim which = 909 } #Yaounde
+		command = { type = addclaim which = 910 } #Bertoua
+		command = { type = addclaim which = 911 } #Douala
+		command = { type = addclaim which = 919 } #Bouar
+		command = { type = addclaim which = 925 } #Maroua
+		command = { type = addclaim which = 928 } #N'Gaoundere	
+	}
+	action_b = {
+		ai_chance = 7
+		name = "EVT1914_2002534_ACTIONB" # Impose mild conditions
+		command = { type = trigger which = 2191522 }
+		command = { type = dissent value = -20 }
+		command = { trigger = { NOT = { exists = HOL } } type = independence which = HOL value = 1 when = 1 }
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1  } #Liege
+		command = { type = secedeprovince which = HOL value = 1761 when = 1  } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1  } #Netherland Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1  } #Paramaribo
+		command = { trigger = { NOT = { exists = BEL } } type = independence which = BEL value = 1 when = 1 }
+		command = { type = secedeprovince which = BEL value = 108 when = 1  } #Liege
+		command = { type = secedeprovince which = BEL value = 111 when = 1  } #Arlon
+		command = { type = secedeprovince which = BEL value = 112 when = 1  } #Mons
+		command = { type = secedeprovince which = BEL value = 113 when = 1  } #Namur
+		command = { type = secedeprovince which = BEL value = 114 when = 1  } #Bruges
+		command = { type = secedeprovince which = BEL value = 115 when = 1  } #Antwerpen
+		command = { type = secedeprovince which = BEL value = 116 when = 1  } #Brussels
+		command = { type = secedeprovince which = BEL value = 117 when = 1  } #Hasselt
+		command = { type = addclaim which = 127 } #Saarbrücken
+		command = { type = addclaim which = 948 } #Kara
+		command = { type = addclaim which = 950 } #Lome
+		command = { type = addclaim which = 908 } #Ouesso
+		command = { type = addclaim which = 909 } #Yaounde
+		command = { type = addclaim which = 910 } #Bertoua
+		command = { type = addclaim which = 911 } #Douala
+		command = { type = addclaim which = 919 } #Bouar
+		command = { type = addclaim which = 925 } #Maroua
+		command = { type = addclaim which = 928 } #N'Gaoundere			
+	}
+	action_c = {
+		ai_chance = 3
+		name = "EVT1914_2002534_ACTIONC" # Impose soft conditions
+		command = { type = trigger which = 2191523 }
+		command = { trigger = { NOT = { exists = HOL } } type = independence which = HOL value = 1 when = 1 }
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1  } #Liege
+		command = { type = secedeprovince which = HOL value = 1761 when = 1  } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1  } #Netherland Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1  } #Paramaribo
+		command = { trigger = { NOT = { exists = BEL } } type = independence which = BEL value = 1 when = 1 }
+		command = { type = secedeprovince which = BEL value = 108 when = 1  } #Liege
+		command = { type = secedeprovince which = BEL value = 111 when = 1  } #Arlon
+		command = { type = secedeprovince which = BEL value = 112 when = 1  } #Mons
+		command = { type = secedeprovince which = BEL value = 113 when = 1  } #Namur
+		command = { type = secedeprovince which = BEL value = 114 when = 1  } #Bruges
+		command = { type = secedeprovince which = BEL value = 115 when = 1  } #Antwerpen
+		command = { type = secedeprovince which = BEL value = 116 when = 1  } #Brussels
+		command = { type = secedeprovince which = BEL value = 117 when = 1  } #Hasselt
+		command = { type = dissent value = -20 }
+	}
+}
+event = {
+	id = 2191521	# The Versailles Treaty : Harsh conditions
+	country = U08
+	
+	#triggered by U08 2191512
+	
+	name = "EVT1914_2191521_NAME"
+	desc = "EVT1914_2191521_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2191521_ACTIONA" # Germany lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		command = { type = access which = FRA }
+		command = { trigger = { alliance = { country = FRA country = ITA } } type = access which = ITA }
+		command = { trigger = { alliance = { country = FRA country = ENG } } type = access which = ENG }
+		command = { trigger = { puppet = { country = BEL country = U08 } } type = end_mastery which = BEL }
+		command = { trigger = { puppet = { country = HOL country = U08 } } type = end_mastery which = HOL }
+		# loose cores on alsace Lorraine (2 times, it's correct!)
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = secedeprovince which = FRA value = 104 when = 1 }
+		command = { type = secedeprovince which = FRA value = 105 when = 1 }
+		command = { type = secedeprovince which = FRA value = 107 when = 1 }
+		# Europe
+		command = { type = secedeprovince which = FRA value = 127 when = 1 } #Saarbrücken
+		command = { type = secedeprovince which = FRA value = 128 when = 1 } #Trier
+		command = { type = secedeprovince which = FRA value = 129 when = 1 } #Koblenz
+		command = { type = secedeprovince which = FRA value = 130 when = 1 } #Mainz	
+		command = { trigger = { NOT = { exists = HOL } } type = independence which = HOL value = 1 when = 1 }
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1  } #Liege
+		command = { type = secedeprovince which = HOL value = 1761 when = 1  } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1  } #Netherland Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1  } #Paramaribo
+		command = { trigger = { NOT = { exists = BEL } } type = independence which = BEL value = 1 when = 1 }
+		command = { type = secedeprovince which = BEL value = 108 when = 1  } #Liege
+		command = { type = secedeprovince which = BEL value = 111 when = 1  } #Arlon
+		command = { type = secedeprovince which = BEL value = 112 when = 1  } #Mons
+		command = { type = secedeprovince which = BEL value = 113 when = 1  } #Namur
+		command = { type = secedeprovince which = BEL value = 114 when = 1  } #Bruges
+		command = { type = secedeprovince which = BEL value = 115 when = 1  } #Antwerpen
+		command = { type = secedeprovince which = BEL value = 116 when = 1  } #Brussels
+		command = { type = secedeprovince which = BEL value = 117 when = 1  } #Hasselt
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 110 when = 1 } # Eupen if Germany invades Belgium
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 126 when = 1 } #Aachen
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 131 when = 1 } #Cologne
+		command = { trigger = { event = 2001501 } type = addcore which = 110 where = BEL } # Eupen
+		command = { trigger = { event = 2001501 } type = addclaim which = 126 where = BEL } #Aachen
+		command = { trigger = { event = 2001501 } type = addclaim which = 131 where = BEL } #Cologne		
+		command = { trigger = { not = { exists = DEN } control = { province = 294 data = U08 } } type = independence which = DEN value = 1 when = 0 } #create Denmark if Copenhagen is German-controlled
+		command = { trigger = { exists = DEN NOT= { war = { country = DEN country = FRA } } NOT= { puppet = { country = DEN country = U08 } } } 
+					type = secedeprovince which = DEN value = 216 when = 1 } #Abenra
+		command = { trigger = { NOT = { exists = LUX } control = { province = 109 data = U08 } } 
+					type = independence which = LUX value = 1 when = 1 }
+		# Eastern Europe dependant territory moves
+		command = { trigger = { exists = CZE control = { province = 203 data = U08 } } 
+					type = secedeprovince which = CZE value = 203 when = 1 } # Tescin
+		#if CZE does not exist, temporarily give it to A-H or AUS who will secede them later
+		command = { trigger = { NOT= { exists = CZE } exists = U09 control = { province = 203 data = U08 } } 
+					type = secedeprovince which = U09 value = 203 when = 1 } # Tescin
+		command = { trigger = { NOT= { exists = CZE } exists = AUS control = { province = 203 data = U08 } } 
+					type = secedeprovince which = AUS value = 203 when = 1 } # Tescin
+		#change status of puppets
+		command = { type = addcore which = 261 } # Klaipeda
+		command = { trigger = { exists = RUS puppet = { country = POL country = U08 } } type = inherit which = POL } #Poland inherited  (ceded by later commands - for now, in future specific events to deal with this)
+		command = { trigger = { puppet = { country = POL country = U08 } } type = event which = 2193500 where = POL when = 1 } # The Republic of Poland
+		command = { trigger = { puppet = { country = POL country = U08 } } type = name where = POL } #reset name to Poland
+		command = { trigger = { puppet = { country = POL country = U08 } } type = end_mastery which = POL }
+		command = { trigger = { exists = RUS puppet = { country = LIT country = U08 } } type = inherit which = LIT } #Lithuania inherited  (ceded by later commands - for now, in future specific events to deal with this)
+		command = { trigger = { puppet = { country = LIT country = U08 } } type = name where = LIT } #reset name to Lithuania
+		command = { trigger = { puppet = { country = LIT country = U08 } } type = end_mastery which = LIT }
+		#command = { trigger = { puppet = { country = UKR country = U08 } } type = name where = UKR } #reset name to Ukraine
+		#command = { trigger = { puppet = { country = UKR country = U08 } } type = end_mastery which = UKR }
+		command = { trigger = { puppet = { country = UKR country = U08 } } type = inherit which = UKR } #Ukraine inherited  (ceded by later commands - for now, in future specific events to deal with this)
+		command = { trigger = { puppet = { country = BLR country = U08 } } type = inherit which = BLR } #Belarus inherited  (ceded by later commands)
+		command = { trigger = { puppet = { country = U37 country = U08 } } type = inherit which = U37 } #United Baltic Duchy inherited (cede by later commands)		
+		# Poland, Gleiwitz and Klaipeda are seceeded to Russia if no revolution occured
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedearea which = RUS value = Lvov when = 1 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 168 when = 1 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 164 when = 1 } # Oppeln
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 182 when = 1 } # Tilsit
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 221 when = 1 } # Katowice
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 224 when = 1 } # Poznan
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 225 when = 1 } # Bydgoszcz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 222 when = 1 } # Torun
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 185 when = 1 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = LIT war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 261 when = 1 } # Allenstein
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 168 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 164 } # Oppeln
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 182 } # Tilsit
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 221 } # Katowice
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 224 } # Poznan
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 225 } # Bydgoszcz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 222 } # Torun
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 185 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 227 } #Czestochowa
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 233 } #Sosnowiec
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 223 } #Lodz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 231 } #Wlokawek
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 230 } #Plock
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 232 } #Warsaw
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 234 } #Radom
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 243 } #Lublin
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 228 } #Siedlce
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 229 } #Ostroleka
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 246 } #Chelm
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 250 } #Lomza
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 254 } #Byalistok
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 252 } #Swalki
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 263 } #Alytus
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 235 } #Krakow
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 236 } #Nowy Sacz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 237 } #Tarnow
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 238 } #Stanislawow
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 239 } #Przemysl
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 240 } #Tarnopol
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 241 } #Stryj
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 242 } #Lwow
+		command = { trigger = { exists = RUS NOT = { exists = LIT war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 261 } # Allenstein
+	
+		# Otherwise, Poland and Lithuania get them
+		command = { trigger = { exists = POL NOT = { exists = RUS war = { country = POL country = FRA } } NOT = { exists = U06 } control = { province = 181 data = U08 } } type = independence which = U06 value = 1 when = 1 } # Free city of Danzig		
+		command = { trigger = { exists = POL NOT = { exists = RUS war = { country = POL country = FRA } } } type = secederegion which = POL value = "Poland" when = 1 }
+		command = { trigger = { exists = POL NOT = { exists = RUS war = { country = POL country = FRA } } } type = secedeprovince which = POL value = 168 when = 1 } # Gleiwitz		
+		# Or Poland and Lithuania gain independence
+		command = { trigger = { NOT = { exists = POL exists = RUS } } type = setflag which = POL_indep_WWI }
+		command = { trigger = { 
+						flag = POL_indep_WWI 
+						NOT = { 
+							exists = RUS 
+							exists = U06 
+							war = { country = POL country = FRA }
+							owned = { province = 232 data = SOV } #Warsaw
+						} 
+						control = { province = 181 data = U08 } #Danzig
+					} type = independence which = U06 value = 1 when = 1 } # Free city of Danzig				
+		command = { trigger = { flag = POL_indep_WWI } type = independence which = POL value = 1 when = 1 }
+		command = { trigger = { flag = POL_indep_WWI } type = secederegion which = POL value = "Poland" when = 1 }	
+		command = { trigger = { flag = POL_indep_WWI } type = trigger which = 2193500 } # The Republic of Poland
+		command = { trigger = { flag = POL_indep_WWI } type = clrflag which = POL_indep_WWI } # The Republic of Poland
+		command = { trigger = { NOT = { exists = LIT exists = RUS } } type = independence which = LIT value = 1 when = 1 }
+		command = { trigger = { exists = LIT NOT = { exists = RUS war = { country = LIT country = FRA } } } type = secedeprovince which = LIT value = 261 when = 1 } # Klaipeda
+		#Revert possible gains from peace with Russia if Russia is not at war with France
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Finland" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Baltic States" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Belarus" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Ukraine" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 223 when = 1 } #Lodz
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 227 when = 1 } #Czestochowa
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 258 when = 1 } #Wilno
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Warsaw" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Krakow" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Grodno" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Polotsk" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Brest Litovsk" when = 1 }
+		# If Brest-Litovsk treaty occurred, create Latvia and Estonia and secede the other provinces to SOV
+		command = { trigger = { NOT = { exists = LAT exists = RUS } } type = independence which = LAT value = 1  when = 1 }
+		command = { trigger = { NOT = { exists = EST exists = RUS } } type = independence which = EST value = 1  when = 1 }
+		command = { trigger = { exists = ROM NOT = { exists = RUS war = { country = ROM country = FRA } } } type = secedearea which = ROM value = "Bessarabia" when = 1 }
+		command = { trigger = { exists = SOV } type = secederegion which = SOV value = "Baltic States" when = 1 }
+		command = { trigger = { exists = SOV } type = secederegion which = SOV value = "Belarus" when = 1 }
+		command = { trigger = { exists = SOV } type = secederegion which = SOV value = "Ukraine" when = 1 }
+		#African colonies
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 846 when = 1 } 		
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 847 when = 1 } 		
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedeprovince which = ENG value = 933 when = 1 } #Buea
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedeprovince which = ENG value = 936 when = 1 } #Yola
+		command = { trigger = { NOT= { war = { country = SAF country = FRA } } } 
+					type = secederegion which = SAF value = "Southwest Africa" when = 1 }
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedearea which = ENG value = "Tanganyika" when = 1 }
+		command = { trigger = { NOT= { war = { country = BEL country = FRA } } } 
+					type = secedeprovince which = BEL value = 846 when = 1 } #Kigali
+		command = { trigger = { NOT= { war = { country = BEL country = FRA } } } 
+					type = secedeprovince which = BEL value = 847 when = 1 } #Usumbura
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedearea which = ENG value = "Gold Coast" when = 1 }
+		command = { type = secedearea which = FRA value = "Slave Coast" when = 1 }
+		command = { type = secedearea which = FRA value = "Cameroonian Jungle" when = 1 }
+		command = { type = secedearea which = FRA value = "Central Africa Plains" when = 1 }		
+		# Asia - pacific 
+		#Qingdao to JAP, otherwise to China if possible, otherwise to FRA
+		command = { trigger = { alliance = { country = JAP country = FRA } }  
+					type = secedeprovince which = JAP value = 1328 when = 1 } # Qingdao		
+		command = { trigger = { NOT= { war = { country = UCH country = FRA } } }  
+					type = secedeprovince which = UCH value = 1328 when = 1 } # Qingdao
+		command = { trigger = { OR= { NOT= { exists = UCH } war = { country = UCH country = FRA } } }  
+					type = secedeprovince which = FRA value = 1328 when = 1 } # Qingdao
+		#Guinea + Solomon + Bismarck Archipelago to Australia if possible, otherwise to FRA	
+		command = { trigger = { exists = AST NOT= { war = { country = AST country = FRA } } } 
+					type = secederegion which = AST value = "New Guinea" when = 1 }
+		command = { trigger = { exists = AST NOT= { war = { country = AST country = FRA } } } 
+					type = secederegion which = AST value = "Bismarck Archipelago" when = 1 }
+		command = { trigger = { exists = AST NOT= { war = { country = AST country = FRA } } } 
+					type = secederegion which = AST value = "North Solomon Islands" when = 1 }
+		command = { trigger = { exists = NZL NOT= { war = { country = NZL country = FRA } } }
+					type = secedeprovince which = NZL value = 1731 when = 1 } #Apia - Samoa					
+		command = { trigger = { OR= { NOT= { exists = AST } war = { country = AST country = FRA } } }  
+					type = secederegion which = FRA value = "New Guinea" when = 1 }
+		command = { trigger = { OR= { NOT= { exists = AST } war = { country = AST country = FRA } } }  
+					type = secederegion which = FRA value = "Bismarck Archipelago" when = 1 }
+		command = { trigger = { OR= { NOT= { exists = AST } war = { country = AST country = FRA } } }  
+					type = secederegion which = FRA value = "North Solomon Islands" when = 1 }	
+		command = { trigger = { OR= { NOT= { exists = NZL } war = { country = NZL country = FRA } } }  
+					type = secedeprovince which = FRA value = 1731 } #Apia - Samoa
+		#The other German Pacific islands: Japan gets them if in the Entente, otherwise USA if in the Entente, otherwise UK if in the Entente, otherwise FRA gets them
+		command = { trigger = { alliance = { country = JAP country = FRA } } 
+					type = secederegion which = JAP value = "Asian Pacific" when = 1 }
+		command = { trigger = { NOT = { alliance = { country = JAP country = FRA } } alliance = { country = USA country = FRA }}
+					type = secederegion which = USA value = "Asian Pacific" when = 1 }
+		command = { trigger = { NOT = { alliance = { country = JAP country = FRA } alliance = { country = USA country = FRA } } alliance = { country = ENG country = FRA }}
+					type = secederegion which = ENG value = "Asian Pacific" when = 1 }
+		command = { trigger = { NOT = { alliance = { country = JAP country = FRA } alliance = { country = USA country = FRA } alliance = { country = ENG country = FRA } } }
+					type = secederegion which = FRA value = "Asian Pacific" when = 1 }
+		#revert gains from previous treaties with ENG
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Bechuanaland" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "North Rhodesia" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "South Rhodesia" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Gold Coast" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "North Nigeria" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "South Nigeria" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Kenya" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 844 when = 1 } #Uganda
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 845 when = 1 }
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 832 when = 1 } #Somaliland
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 838 when = 1 } #Kismayo
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 852 when = 1 } #Zanzibar
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 964 when = 1 } #Freetown, Sierra Leone
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 979 when = 1 } #Banjul, Gambia
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1053 when = 1 } #Aden
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1051 when = 1 } #El Muskalla
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 840 when = 1 } #Socotra
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Bougainville" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Guadalcanal" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Central Solomons" when = 1 }
+		#revert gains from previous treaties with FRA 
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Slave Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Ivory Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Guinean Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Cameroonian Jungle" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Central Africa Plains" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Madagascar" when = 1 }
+		command = { trigger = { event = 2191512} type = secederegion which = FRA value = "Morocco" when = 1 }	  
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 922 when = 1 } #Faya
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 833 when = 1 } #Djibouti
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 96 when = 1 } #Longwy
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 106 when = 1 } #Nancy
+		#revert gains from previous treaties with ITA
+		command = { trigger = { event = 2191548 } type = secederegion which = ITA value = "Libya" when = 1 }
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 815 when = 1 } #Eritrea
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 816 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 817 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 834 when = 1 } #Somalia
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 835 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 836 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 837 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 378 when = 1 } #Kalymnos
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 379 when = 1 } #Rodos		
+		#revert gains from previous treaties with BEL
+		command = { type = secedearea which = BEL value = Wallonia when  = 1 }
+		command = { type = secedearea which = BEL value = Flanders when  = 1 }
+		command = { type = secedearea which = BEL value = Shaba when = 1 }
+		command = { type = secedearea which = BEL value = "Kongolese Jungle" when = 1}
+		command = { type = secedeprovince which = BEL value = 894  when = 1 }
+		#revert gains from previous treaties with HOL
+		command = { type = secedearea which = HOL value = Netherlands when = 1 }
+		command = { type = secedeprovince which = HOL value = 1761 when = 1 } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1 } #Netherlands Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1 } #Paramaribo
+		command = { type = secederegion which = HOL value = Indonesia when = 1 }
+		#revert gains from previous treaties with SCH
+		command = { trigger = { NOT = { exists = SCH } } type = independence which = SCH value = 1 when = 1 }
+		command = { type = secedearea which = SCH value = Switzerland when = 1 }
+		#revert gains from SER, ALB, GRE, ROM
+		command = { trigger = { NOT = { exists = SER } } type = independence which = SER value = 1 when = 0}
+		command = { type = secedearea which = SER value = "East Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "Croatia" when = 1 }
+		command = { type = secedearea which = SER value = "Bosnia" when = 1 }
+		command = { trigger = { NOT = { exists = ALB } } type = independence which = ALB value = 1 when = 0}
+		command = { type = secedearea which = ALB value = "Albania" when = 1 }
+		command = { trigger = { NOT = { exists = GRE } } type = independence which = GRE value = 1 when = 1 }
+		command = { type = secedearea which = GRE value = "Thrace" when = 1 }
+		command = { type = secedearea which = GRE value = "Attica" when = 1 }
+		command = { type = secedearea which = GRE value = "Greek Island" when = 1 }		
+		command = { trigger = { NOT = { exists = ROM } } type = independence which = ROM value = 1 when = 0}
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+		# war reparations
+		command = { type = trade which = U08 where = FRA money = -3 when = 7200 value = 1 }
+		command = { type = trade which = U08 where = FRA supplies = -30 when = 7200 value = 1 }
+		# demobilization (only 24 units at 33% strenght, around 100 000 men as per Treaty of Versailles)
+		command = { type = demobilize which = land when = 0 where = 0 value = 24 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 6 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 6 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 6 }	
+		command = { type = demobilize which = light_cruiser when = 0 where = 0 value = 6 }	
+		command = { type = demobilize which = destroyer when = 0 where = 0 value = 12 }	
+		command = { type = demobilize which = submarine when = 0 where = 0 value = 0 } #remove all submarines
+		#Revert military occupation in Romania
+		command = { trigger = { owned = { province = 310 data = U08 } } type = secedeprovince which = ROM value = 310 when = 2 } #Costanza
+		command = { trigger = { owned = { province = 313 data = U08 } } type = secedeprovince which = ROM value = 313 when = 2 } #Sulina
+		command = { trigger = { owned = { province = 309 data = U08 } } type = secedeprovince which = ROM value = 309 when = 2 } #Braila
+		command = { trigger = { owned = { province = 314 data = U08 } } type = secedeprovince which = ROM value = 314 when = 2 } #Calarasi
+		command = { trigger = { owned = { province = 311 data = U08 } } type = secedeprovince which = ROM value = 311 when = 2 } #Ploesti
+		command = { trigger = { owned = { province = 316 data = U08 } } type = secedeprovince which = ROM value = 316 when = 2 } #Bucharest
+		command = { trigger = { owned = { province = 308 data = U08 } } type = secedeprovince which = ROM value = 308 when = 2 } #Giurgiu
+		command = { trigger = { owned = { province = 315 data = U08 } } type = secedeprovince which = ROM value = 315 when = 2 } #Craiova	
+		command = { trigger = { owned = { province = 312 data = U08 } } type = secedeprovince which = ROM value = 312 when = 2 } #Turnu Severin
+		command = { trigger = { owned = { province = 307 data = U08 } } type = secedeprovince which = ROM value = 307 when = 2 } #Dobrich
+		command = { type = removeclaim which = 310 where = U08 } #Costanza
+		command = { type = removeclaim which = 313 where = U08 } #Sulina
+		command = { type = removeclaim which = 309 where = U08 } #Braila
+		command = { type = removeclaim which = 314 where = U08 } #Calarasi
+		command = { type = removeclaim which = 311 where = U08 } #Ploesti
+		command = { type = removeclaim which = 316 where = U08 } #Bucharest
+		command = { type = removeclaim which = 308 where = U08 } #Giurgiu
+		command = { type = removeclaim which = 315 where = U08 } #Craiova	
+		command = { type = removeclaim which = 312 where = U08 } #Turnu Severin
+		command = { type = removeclaim which = 307 where = U08 } #Dobrich
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+
+event = {
+	id = 2191522	# The Versailles Treaty : Medium conditions
+	country = U08
+
+	#triggered by U08 2191512
+	
+	name = "EVT1914_2191522_NAME"
+	desc = "EVT1914_2191522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2191522_ACTIONA" # Germany lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 3 }
+		command = { type = access which = FRA }
+		command = { trigger = { alliance = { country = FRA country = ITA } } type = access which = ITA }
+		command = { trigger = { alliance = { country = FRA country = ENG } } type = access which = ENG }
+		command = { trigger = { puppet = { country = BEL country = U08 } } type = end_mastery which = BEL }
+		command = { trigger = { puppet = { country = HOL country = U08 } } type = end_mastery which = HOL }
+		# loose cores on alsace Lorraine (2 times, it's correct!)
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = secedeprovince which = FRA value = 104 when = 1 }
+		command = { type = secedeprovince which = FRA value = 105 when = 1 }
+		command = { type = secedeprovince which = FRA value = 107 when = 1 }
+		# Europe
+		command = { type = secedeprovince which = FRA value = 127 when = 1 } #Saarbrücken
+		command = { trigger = { NOT = { exists = HOL } } type = independence which = HOL value = 1 when = 1 }
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1  } #Liege
+		command = { type = secedeprovince which = HOL value = 1761 when = 1  } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1  } #Netherland Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1  } #Paramaribo
+		command = { trigger = { NOT = { exists = BEL } } type = independence which = BEL value = 1 when = 1 }
+		command = { type = secedeprovince which = BEL value = 108 when = 1  } #Liege
+		command = { type = secedeprovince which = BEL value = 111 when = 1  } #Arlon
+		command = { type = secedeprovince which = BEL value = 112 when = 1  } #Mons
+		command = { type = secedeprovince which = BEL value = 113 when = 1  } #Namur
+		command = { type = secedeprovince which = BEL value = 114 when = 1  } #Bruges
+		command = { type = secedeprovince which = BEL value = 115 when = 1  } #Antwerpen
+		command = { type = secedeprovince which = BEL value = 116 when = 1  } #Brussels
+		command = { type = secedeprovince which = BEL value = 117 when = 1  } #Hasselt
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 110 when = 1 } # Eupen if Germany invades Belgium
+		command = { trigger = { event = 2001501 } type = addcore which = 110 where = BEL } # Eupen		
+		command = { trigger = { NOT = { exists = LUX } control = { province = 109 data = U08 } } 
+					type = independence which = LUX value = 1 when = 1 }
+		#change status of puppets
+		command = { trigger = { exists = RUS puppet = { country = POL country = U08 } } type = inherit which = POL } #Poland inherited  (ceded by later commands - for now, in future specific events to deal with this)
+		command = { trigger = { puppet = { country = POL country = U08 } } type = event which = 2193500 where = POL when = 1 } # The Republic of Poland
+		command = { trigger = { puppet = { country = POL country = U08 } } type = name where = POL } #reset name to Poland
+		command = { trigger = { puppet = { country = POL country = U08 } } type = end_mastery which = POL }
+		command = { trigger = { exists = RUS puppet = { country = LIT country = U08 } } type = inherit which = LIT } #Lithuania inherited  (ceded by later commands - for now, in future specific events to deal with this)
+		command = { trigger = { puppet = { country = LIT country = U08 } } type = name where = LIT } #reset name to Lithuania
+		command = { trigger = { puppet = { country = LIT country = U08 } } type = end_mastery which = LIT }
+		#command = { trigger = { puppet = { country = UKR country = U08 } } type = name where = UKR } #reset name to Ukraine
+		#command = { trigger = { puppet = { country = UKR country = U08 } } type = end_mastery which = UKR }
+		command = { trigger = { puppet = { country = UKR country = U08 } } type = inherit which = UKR } #Ukraine inherited  (ceded by later commands - for now, in future specific events to deal with this)
+		command = { trigger = { puppet = { country = BLR country = U08 } } type = inherit which = BLR } #Belarus inherited  (ceded by later commands)					
+		command = { trigger = { puppet = { country = U37 country = U08 } } type = inherit which = U37 } #United Baltic Duchy inherited (ceded by later commands)
+		# Poland, Gleiwitz and Klaipeda are seceeded to Russia if no revolution occured
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedearea which = RUS value = Lvov when = 1 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 168 when = 1 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 164 when = 1 } # Oppeln
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 182 when = 1 } # Tilsit
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 221 when = 1 } # Katowice
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 224 when = 1 } # Poznan
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 225 when = 1 } # Bydgoszcz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 222 when = 1 } # Torun
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 185 when = 1 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = LIT war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 261 when = 1 } # Allenstein
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 168 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 164 } # Oppeln
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 182 } # Tilsit
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 221 } # Katowice
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 224 } # Poznan
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 225 } # Bydgoszcz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 222 } # Torun
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 185 } # Gleiwitz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 227 } #Czestochowa
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 233 } #Sosnowiec
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 223 } #Lodz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 231 } #Wlokawek
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 230 } #Plock
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 232 } #Warsaw
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 234 } #Radom
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 243 } #Lublin
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 228 } #Siedlce
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 229 } #Ostroleka
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 246 } #Chelm
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 250 } #Lomza
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 254 } #Byalistok
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 252 } #Swalki
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 263 } #Alytus
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 235 } #Krakow
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 236 } #Nowy Sacz
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 237 } #Tarnow
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 238 } #Stanislawow
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 239 } #Przemysl
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 240 } #Tarnopol
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 241 } #Stryj
+		command = { trigger = { exists = RUS NOT = { exists = POL war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 242 } #Lwow
+		command = { trigger = { exists = RUS NOT = { exists = LIT war = { country = RUS country = FRA } } } type = addclaim where = RUS which = 261 } # Allenstein
+		# Otherwise, Poland get its lands
+		command = { trigger = { exists = POL NOT = { exists = RUS war = { country = POL country = FRA } } } type = secederegion which = POL value = "Poland" when = 1 }
+		# Or Poland gain  independance
+		command = { trigger = { NOT = { exists = POL exists = RUS } } type = setflag which = POL_indep_WWI }
+		command = { trigger = { flag = POL_indep_WWI } type = independence which = POL value = 1 when = 1 }
+		command = { trigger = { flag = POL_indep_WWI } type = secederegion which = POL value = "Poland" when = 1 }	
+		command = { trigger = { flag = POL_indep_WWI } type = trigger which = 2193500 } # The Republic of Poland
+		command = { trigger = { NOT = { exists = LIT exists = RUS } } type = independence which = LIT value = 1  when = 1 }	
+		command = { trigger = { exists = LIT } type = secedeprovince which = LIT value = 261 when = 1 } # Klaipeda		
+		
+		#Revert possible gains from peace with Russia if Russia is not at war with France
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Finland" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Baltic States" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Belarus" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secederegion which = RUS value = "Ukraine" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 223 when = 1 } #Lodz
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 227 when = 1 } #Czestochowa
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedeprovince which = RUS value = 258 when = 1 } #Wilno
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Warsaw" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Krakow" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Grodno" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Polotsk" when = 1 }
+		command = { trigger = { exists = RUS NOT = { war = { country = RUS country = FRA } } } type = secedearea which = RUS value = "Brest Litovsk" when = 1 }
+		# If Brest-Litovsk treaty occurred, create Latvia and Estonia and secede the other provinces to SOV
+		command = { trigger = { NOT = { exists = LAT exists = RUS } } type = independence which = LAT value = 1  when = 1 }
+		command = { trigger = { NOT = { exists = EST exists = RUS } } type = independence which = EST value = 1  when = 1 }
+		command = { trigger = { exists = ROM NOT = { exists = RUS war = { country = ROM country = FRA } } } type = secedearea which = ROM value = "Bessarabia" when = 1 }
+		command = { trigger = { exists = SOV } type = secederegion which = SOV value = "Baltic States" when = 1 }
+		command = { trigger = { exists = SOV } type = secederegion which = SOV value = "Belarus" when = 1 }
+		command = { trigger = { exists = SOV } type = secederegion which = SOV value = "Ukraine" when = 1 }	
+		#African colonies
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 846 when = 1 } 		
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 847 when = 1 } 				
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedeprovince which = ENG value = 933 when = 1 } #Buea
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedeprovince which = ENG value = 936 when = 1 } #Yola
+		command = { trigger = { NOT= { war = { country = SAF country = FRA } } } 
+					type = secederegion which = SAF value = "Southwest Africa" when = 1 }
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedearea which = ENG value = "Tanganyika" when = 1 }
+		command = { trigger = { NOT= { war = { country = BEL country = FRA } } } 
+					type = secedeprovince which = BEL value = 846 when = 1 } #Kigali
+		command = { trigger = { NOT= { war = { country = BEL country = FRA } } } 
+					type = secedeprovince which = BEL value = 847 when = 1 } #Usumbura
+		command = { trigger = { NOT= { war = { country = ENG country = FRA } } } 
+					type = secedearea which = ENG value = "Gold Coast" when = 1 }
+		command = { type = secedearea which = FRA value = "Slave Coast" when = 1 }
+		command = { type = secedearea which = FRA value = "Cameroonian Jungle" when = 1 }
+		command = { type = secedearea which = FRA value = "Central Africa Plains" when = 1 }	
+		# Asia - pacific 
+		#Qingdao to Jap, otherwise to China if possible, otherwise to FRA
+		command = { trigger = { alliance = { country = JAP country = FRA } }  
+					type = secedeprovince which = JAP value = 1328 when = 1 } # Qingdao			
+		command = { trigger = { NOT= { war = { country = UCH country = FRA } } }  
+					type = secedeprovince which = UCH value = 1328 when = 1 } # Qingdao
+		command = { trigger = { OR= { NOT= { exists = UCH } war = { country = UCH country = FRA } } }  
+					type = secedeprovince which = FRA value = 1328 when = 1 } # Qingdao
+		#Guinea + Solomon + Bismarck Archipelago to Australia if possible, otherwise to FRA	
+		command = { trigger = { exists = AST NOT= { war = { country = AST country = FRA } } } 
+					type = secederegion which = AST value = "New Guinea" when = 1 }
+		command = { trigger = { exists = AST NOT= { war = { country = AST country = FRA } } } 
+					type = secederegion which = AST value = "Bismarck Archipelago" when = 1 }
+		command = { trigger = { exists = AST NOT= { war = { country = AST country = FRA } } } 
+					type = secederegion which = AST value = "North Solomon Islands" when = 1 }
+		command = { trigger = { exists = NZL NOT= { war = { country = NZL country = FRA } } }
+					type = secedeprovince which = NZL value = 1731 when = 1 } #Apia - Samoa
+		command = { trigger = { OR= { NOT= { exists = AST } war = { country = AST country = FRA } } }  
+					type = secederegion which = FRA value = "New Guinea" when = 1 }
+		command = { trigger = { OR= { NOT= { exists = AST } war = { country = AST country = FRA } } }  
+					type = secederegion which = FRA value = "Bismarck Archipelago" when = 1 }
+		command = { trigger = { OR= { NOT= { exists = AST } war = { country = AST country = FRA } } }  
+					type = secederegion which = FRA value = "North Solomon Islands" when = 1 }
+		command = { trigger = { OR= { NOT= { exists = NZL } war = { country = NZL country = FRA } } }  
+					type = secedeprovince which = FRA value = 1731 when = 1 } #Apia - Samoa
+		#The other German Pacific islands: Japan gets them if in the Entente, otherwise GER keeps them
+		command = { trigger = { alliance = { country = JAP country = FRA } } 
+					type = secederegion which = JAP value = "Asian Pacific" when = 1 }
+		#revert gains from previous treaties with ENG
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Bechuanaland" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "North Rhodesia" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "South Rhodesia" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Gold Coast" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "North Nigeria" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "South Nigeria" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Kenya" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 844 when = 1 } #Uganda
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 845 when = 1 }
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 832 when = 1 } #Somaliland
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 838 when = 1 } #Kismayo
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 852 when = 1 } #Zanzibar
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 964 when = 1 } #Freetown, Sierra Leone
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 979 when = 1 } #Banjul, Gambia
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1053 when = 1 } #Aden
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1051 when = 1 } #El Muskalla
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 840 when = 1 } #Socotra
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Bougainville" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Guadalcanal" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Central Solomons" when = 1 }
+		#revert gains from previous treaties with FRA 
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Slave Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Ivory Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Guinean Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Cameroonian Jungle" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Central Africa Plains" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Madagascar" when = 1 }
+		command = { trigger = { event = 2191512} type = secederegion which = FRA value = "Morocco" when = 1 }	  
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 922 when = 1 } #Faya
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 833 when = 1 } #Djibouti
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 96 when = 1 } #Longwy
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 106 when = 1 } #Nancy
+		#revert gains from previous treaties with ITA
+		command = { trigger = { event = 2191548 } type = secederegion which = ITA value = "Libya" when = 1 }
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 815 when = 1 } #Eritrea
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 816 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 817 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 834 when = 1 } #Somalia
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 835 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 836 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 837 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 378 when = 1 } #Kalymnos
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 379 when = 1 } #Rodos		
+		#revert gains from previous treaties with BEL
+		command = { type = secedearea which = BEL value = Wallonia when  = 1 }
+		command = { type = secedearea which = BEL value = Flanders when  = 1 }
+		command = { type = secedearea which = BEL value = Shaba when = 1 }
+		command = { type = secedearea which = BEL value = "Kongolese Jungle" when = 1}
+		command = { type = secedeprovince which = BEL value = 894  when = 1 }
+		#revert gains from previous treaties with HOL
+		command = { type = secedearea which = HOL value = Netherlands when = 1 }
+		command = { type = secedeprovince which = HOL value = 1761 when = 1 } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1 } #Netherlands Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1 } #Paramaribo
+		command = { type = secederegion which = HOL value = Indonesia when = 1 }
+		#revert gains from previous treaties with SCH
+		command = { trigger = { NOT = { exists = SCH } } type = independence which = SCH value = 1 when = 1 }
+		command = { type = secedearea which = SCH value = Switzerland when = 1 }
+		#revert gains from SER, ALB, GRE, ROM
+		command = { trigger = { NOT = { exists = SER } } type = independence which = SER value = 1 when = 0}
+		command = { type = secedearea which = SER value = "East Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "Croatia" when = 1 }
+		command = { type = secedearea which = SER value = "Bosnia" when = 1 }
+		command = { trigger = { NOT = { exists = ALB } } type = independence which = ALB value = 1 when = 0}
+		command = { type = secedearea which = ALB value = "Albania" when = 1 }
+		command = { trigger = { NOT = { exists = GRE } } type = independence which = GRE value = 1 when = 1 }
+		command = { type = secedearea which = GRE value = "Thrace" when = 1 }
+		command = { type = secedearea which = GRE value = "Attica" when = 1 }
+		command = { type = secedearea which = GRE value = "Greek Island" when = 1 }		
+		command = { trigger = { NOT = { exists = ROM } } type = independence which = ROM value = 1 when = 0}
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+		# war reparations
+		command = { type = trade which = U08 where = FRA money = -2 when = 7200 value = 1 }
+		command = { type = trade which = U08 where = FRA supplies = -20 when = 7200 value = 1 }
+		# demobilization (only 36 units at 33% strenght, around 150 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 36 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 9 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 9 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 9 }	
+		command = { type = demobilize which = light_cruiser when = 0 where = 0 value = 9 }	
+		command = { type = demobilize which = destroyer when = 0 where = 0 value = 18 }	
+		command = { type = demobilize which = submarine when = 0 where = 0 value = 3 }
+		#Revert military occupation in Romania
+		command = { trigger = { owned = { province = 310 data = U08 } } type = secedeprovince which = ROM value = 310 when = 2 } #Costanza
+		command = { trigger = { owned = { province = 313 data = U08 } } type = secedeprovince which = ROM value = 313 when = 2 } #Sulina
+		command = { trigger = { owned = { province = 309 data = U08 } } type = secedeprovince which = ROM value = 309 when = 2 } #Braila
+		command = { trigger = { owned = { province = 314 data = U08 } } type = secedeprovince which = ROM value = 314 when = 2 } #Calarasi
+		command = { trigger = { owned = { province = 311 data = U08 } } type = secedeprovince which = ROM value = 311 when = 2 } #Ploesti
+		command = { trigger = { owned = { province = 316 data = U08 } } type = secedeprovince which = ROM value = 316 when = 2 } #Bucharest
+		command = { trigger = { owned = { province = 308 data = U08 } } type = secedeprovince which = ROM value = 308 when = 2 } #Giurgiu
+		command = { trigger = { owned = { province = 315 data = U08 } } type = secedeprovince which = ROM value = 315 when = 2 } #Craiova	
+		command = { trigger = { owned = { province = 312 data = U08 } } type = secedeprovince which = ROM value = 312 when = 2 } #Turnu Severin
+		command = { trigger = { owned = { province = 307 data = U08 } } type = secedeprovince which = ROM value = 307 when = 2 } #Dobrich
+		command = { type = removeclaim which = 307 where = U08 } #Dobrich			
+		command = { type = removeclaim which = 310 where = U08 } #Costanza
+		command = { type = removeclaim which = 313 where = U08 } #Sulina
+		command = { type = removeclaim which = 309 where = U08 } #Braila
+		command = { type = removeclaim which = 314 where = U08 } #Calarasi
+		command = { type = removeclaim which = 311 where = U08 } #Ploesti
+		command = { type = removeclaim which = 316 where = U08 } #Bucharest
+		command = { type = removeclaim which = 308 where = U08 } #Giurgiu
+		command = { type = removeclaim which = 315 where = U08 } #Craiova	
+		command = { type = removeclaim which = 312 where = U08 } #Turnu Severin
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+event = {
+	id = 2191523	# The Versailles Treaty : Soft conditions
+	country = U08
+
+	#triggered by U08 2191512
+   
+	name = "EVT1914_2191523_NAME"
+	desc = "EVT1914_2191523_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2191523_ACTIONA" # Germany lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 1 }
+		command = { type = access which = FRA }
+		command = { trigger = { alliance = { country = FRA country = ITA } } type = access which = ITA }
+		command = { trigger = { alliance = { country = FRA country = ENG } } type = access which = ENG }
+		command = { trigger = { puppet = { country = BEL country = U08 } } type = end_mastery which = BEL }
+		command = { trigger = { puppet = { country = HOL country = U08 } } type = end_mastery which = HOL }
+		# loose cores on alsace Lorraine (2 times, it's correct!)
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = removecore which = 104 }
+		command = { type = removecore which = 105 }
+		command = { type = removecore which = 107 }
+		command = { type = secedeprovince which = FRA value = 104 when = 1 }
+		command = { type = secedeprovince which = FRA value = 105 when = 1 }
+		command = { type = secedeprovince which = FRA value = 107 when = 1 }
+		command = { trigger = { NOT = { exists = HOL } } type = independence which = HOL value = 1 when = 1 }
+		command = { type = secedearea which = HOL value = "Netherlands" when = 1  } #Liege
+		command = { type = secedeprovince which = HOL value = 1761 when = 1  } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1  } #Netherland Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1  } #Paramaribo
+		command = { trigger = { NOT = { exists = BEL } } type = independence which = BEL value = 1 when = 1 }
+		command = { type = secedeprovince which = BEL value = 108 when = 1  } #Liege
+		command = { type = secedeprovince which = BEL value = 111 when = 1  } #Arlon
+		command = { type = secedeprovince which = BEL value = 112 when = 1  } #Mons
+		command = { type = secedeprovince which = BEL value = 113 when = 1  } #Namur
+		command = { type = secedeprovince which = BEL value = 114 when = 1  } #Bruges
+		command = { type = secedeprovince which = BEL value = 115 when = 1  } #Antwerpen
+		command = { type = secedeprovince which = BEL value = 116 when = 1  } #Brussels
+		command = { type = secedeprovince which = BEL value = 117 when = 1  } #Hasselt
+		command = { trigger = { event = 2001501 } type = secedeprovince which = BEL value = 110 when = 1 } # Eupen if Germany invades Belgium
+		command = { trigger = { event = 2001501 } type = addcore which = 110 where = BEL } # Eupen		
+		command = { trigger = { NOT = { exists = LUX } control = { province = 109 data = U08 } } 
+					type = independence which = LUX value = 1 when = 1 }
+		#revert gains from previous treaties with ENG
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Bechuanaland" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "North Rhodesia" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "South Rhodesia" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Gold Coast" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "North Nigeria" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "South Nigeria" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Kenya" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 844 when = 1 } #Uganda
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 845 when = 1 }
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 832 when = 1 } #Somaliland
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 838 when = 1 } #Kismayo
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 852 when = 1 } #Zanzibar
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 964 when = 1 } #Freetown, Sierra Leone
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 979 when = 1 } #Banjul, Gambia
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1053 when = 1 } #Aden
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 1051 when = 1 } #El Muskalla
+		command = { trigger = { event = 2191551 } type = secedeprovince which = ENG value = 840 when = 1 } #Socotra
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Bougainville" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Guadalcanal" when = 1 }
+		command = { trigger = { event = 2191551 } type = secedearea which = ENG value = "Central Solomons" when = 1 }
+		#revert gains from previous treaties with FRA 
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Slave Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Ivory Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Guinean Coast" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Cameroonian Jungle" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Central Africa Plains" when = 1 }
+		command = { trigger = { event = 2191512} type = secedearea which = FRA value = "Madagascar" when = 1 }
+		command = { trigger = { event = 2191512} type = secederegion which = FRA value = "Morocco" when = 1 }	  
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 922 when = 1 } #Faya
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 833 when = 1 } #Djibouti
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 96 when = 1 } #Longwy
+		command = { trigger = { event = 2191512} type = secedeprovince which = FRA value = 106 when = 1 } #Nancy
+		#revert gains from previous treaties with ITA
+		command = { trigger = { event = 2191548 } type = secederegion which = ITA value = "Libya" when = 1 }
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 815 when = 1 } #Eritrea
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 816 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 817 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 834 when = 1 } #Somalia
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 835 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 836 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 837 when = 1 } 
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 378 when = 1 } #Kalymnos
+		command = { trigger = { event = 2191548 } type = secedeprovince which = ITA value = 379 when = 1 } #Rodos
+		#revert gains from previous treaties with BEL
+		command = { type = secedearea which = BEL value = Wallonia when  = 1 }
+		command = { type = secedearea which = BEL value = Flanders when  = 1 }
+		command = { type = secedearea which = BEL value = Shaba when = 1 }
+		command = { type = secedearea which = BEL value = "Kongolese Jungle" when = 1}
+		command = { type = secedeprovince which = BEL value = 894  when = 1 }
+		#revert gains from previous treaties with HOL
+		command = { type = secedearea which = HOL value = Netherlands when = 1 }
+		command = { type = secedeprovince which = HOL value = 1761 when = 1 } #Saba Island
+		command = { type = secedeprovince which = HOL value = 1762 when = 1 } #Netherlands Antilles
+		command = { type = secedeprovince which = HOL value = 1999 when = 1 } #Paramaribo
+		command = { type = secederegion which = HOL value = Indonesia when = 1 }
+		#revert gains from previous treaties with SCH
+		command = { trigger = { NOT = { exists = SCH } } type = independence which = SCH value = 1 when = 1 }
+		command = { type = secedearea which = SCH value = Switzerland when = 1 }
+		#revert gains from SER, ALB, GRE, ROM
+		command = { trigger = { NOT = { exists = SER } } type = independence which = SER value = 1 when = 0}
+		command = { type = secedearea which = SER value = "East Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "Central Serbia" when = 1 }
+		command = { type = secedearea which = SER value = "Croatia" when = 1 }
+		command = { type = secedearea which = SER value = "Bosnia" when = 1 }
+		command = { trigger = { NOT = { exists = ALB } } type = independence which = ALB value = 1 when = 0}
+		command = { type = secedearea which = ALB value = "Albania" when = 1 }
+		command = { trigger = { NOT = { exists = GRE } } type = independence which = GRE value = 1 when = 1 }
+		command = { type = secedearea which = GRE value = "Thrace" when = 1 }
+		command = { type = secedearea which = GRE value = "Attica" when = 1 }
+		command = { type = secedearea which = GRE value = "Greek Island" when = 1 }		
+		command = { trigger = { NOT = { exists = ROM } } type = independence which = ROM value = 1 when = 0}
+		command = { type = secederegion which = ROM value = "Romania" when = 1 }
+		# war reparations
+		command = { type = trade which = U08 where = FRA money = -1 when = 7200 value = 1 }
+		command = { type = trade which = U08 where = FRA supplies = -10 when = 7200 value = 1 }
+		# demobilization (only 48 units at 33% strenght, around 200 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 48 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 12 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 12 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 12 }	
+		command = { type = demobilize which = light_cruiser when = 0 where = 0 value = 12 }	
+		command = { type = demobilize which = destroyer when = 0 where = 0 value = 24 }	
+		command = { type = demobilize which = submarine when = 0 where = 0 value = 6 }
+		#Revert military occupation in Romania
+		command = { trigger = { owned = { province = 310 data = U08 } } type = secedeprovince which = ROM value = 310 when = 2 } #Costanza
+		command = { trigger = { owned = { province = 313 data = U08 } } type = secedeprovince which = ROM value = 313 when = 2 } #Sulina
+		command = { trigger = { owned = { province = 309 data = U08 } } type = secedeprovince which = ROM value = 309 when = 2 } #Braila
+		command = { trigger = { owned = { province = 314 data = U08 } } type = secedeprovince which = ROM value = 314 when = 2 } #Calarasi
+		command = { trigger = { owned = { province = 311 data = U08 } } type = secedeprovince which = ROM value = 311 when = 2 } #Ploesti
+		command = { trigger = { owned = { province = 316 data = U08 } } type = secedeprovince which = ROM value = 316 when = 2 } #Bucharest
+		command = { trigger = { owned = { province = 308 data = U08 } } type = secedeprovince which = ROM value = 308 when = 2 } #Giurgiu
+		command = { trigger = { owned = { province = 315 data = U08 } } type = secedeprovince which = ROM value = 315 when = 2 } #Craiova	
+		command = { trigger = { owned = { province = 312 data = U08 } } type = secedeprovince which = ROM value = 312 when = 2 } #Turnu Severin
+		command = { trigger = { owned = { province = 307 data = U08 } } type = secedeprovince which = ROM value = 307 when = 2 } #Dobrich
+		command = { type = removeclaim which = 307 where = U08 } #Dobrich			
+		command = { type = removeclaim which = 310 where = U08 } #Costanza
+		command = { type = removeclaim which = 313 where = U08 } #Sulina
+		command = { type = removeclaim which = 309 where = U08 } #Braila
+		command = { type = removeclaim which = 314 where = U08 } #Calarasi
+		command = { type = removeclaim which = 311 where = U08 } #Ploesti
+		command = { type = removeclaim which = 316 where = U08 } #Bucharest
+		command = { type = removeclaim which = 308 where = U08 } #Giurgiu
+		command = { type = removeclaim which = 315 where = U08 } #Craiova	
+		command = { type = removeclaim which = 312 where = U08 } #Turnu Severin
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+###### Austria-Hungary related treaties : Historical Trianon and Saint Germain
+event = {
+	id = 2024501	# Treaty of Saint Germain en Laye
+	country = AUS
+
+	trigger = {
+		OR= { 
+			event = 2192513 # Military defeat
+			event = 2192506	# The Imperial Manifesto
+		}
+		exists = CZE
+		exists = HUN
+		exists = ROM
+		exists = SER
+		random = 25
+	}
+   
+	name = "EVT1914_2024501_NAME"
+	desc = "EVT1914_2024501_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2024501_ACTIONA" # Austria lives its Darkest Hour...
+		command = { type = leave_alliance when = 1 }
+		command = { trigger = { war = { country = AUS country = FRA } } type = peace which = FRA value = 1 }
+		command = { trigger = { war = { country = AUS country = RUS } } type = peace which = RUS value = 1 }
+		command = { trigger = { war = { country = AUS country = SOV } } type = peace which = SOV value = 1 }		
+		command = { trigger = { war = { country = AUS country = SER } } type = peace which = SER value = 1 }		
+		command = { trigger = { ai = no} type = dissent value = 1 }
+		command = { type = access which = FRA }
+		command = { trigger = { alliance = { country = FRA country = ITA } } type = access which = ITA }
+		command = { trigger = { alliance = { country = FRA country = ENG } } type = access which = ENG }		
+		command = { type = set_domestic which = democratic value = 8 } #democracy
+		command = { type = set_domestic which = political_left value = 7 } #social liberal	
+		command = { type = headofstate which = 115130 } #Karl Seitz
+		command = { type = headofgovernment which = 115123 } #Karl Renner
+		command = { type = foreignminister which = 115114 } #Viktor Adler
+		command = { type = armamentminister which = 115132 } #Otto Steinwender
+		command = { type = ministerofsecurity which = 115144 } #Walter Breisky	
+		# war reparations
+		command = { type = trade which = U09 where = FRA money = -0.5 when = 7200 value = 1 }
+		command = { trigger = { alliance = { country = ENG country = FRA } } type =  trade which = U09 where = ENG  money = -0.5 when = 7200 value = 1 }
+		command = { trigger = { alliance = { country = ITA country = FRA } } type =  trade which = U09 where = ITA  money = -0.5 when = 7200 value = 1 }
+		command = { trigger = { alliance = { country = USA country = FRA } } type =  trade which = U09 where = USA  money = -0.5 when = 7200 value = 1 }
+		#confirm lost regions
+		command = { trigger = { exists = CZE } type = secederegion which = CZE value = "Czechoslovakia" when = 1 }
+		command = { trigger = { exists = RUS } type = secederegion which = RUS value = "Poland" when = 1 }
+		command = { trigger = { exists = POL } type = secederegion which = POL value = "Poland" when = 1 }
+		command = { trigger = { exists = ITA } type = secederegion which = ITA value = "Italy" when = 1 }
+		command = { trigger = { exists = SER } type = secedearea which = SER value = "East Serbia" when = 1 }
+		command = { trigger = { exists = SER } type = secedearea which = SER value = "Central Serbia" when = 1 }
+		command = { trigger = { exists = SER } type = secedearea which = SER value = "Croatia" when = 1 }
+		command = { trigger = { exists = SER } type = secedearea which = SER value = "Bosnia" when = 1 }
+		command = { trigger = { exists = ALB } type = secedearea which = ALB value = "Albania" when = 1 }
+		command = { trigger = { exists = GRE } type = secedearea which = GRE value = "Thrace" when = 1 }
+		command = { trigger = { exists = GRE } type = secedearea which = GRE value = "Attica" when = 1 }
+		command = { trigger = { exists = GRE } type = secedearea which = GRE value = "Greek Island" when = 1 }			
+		command = { trigger = { exists = RUS } type = secedearea which = RUS value = "Odessa" when = 1 }	#Bessarabia back to RUS
+		command = { trigger = { exists = RUS } type = secedeprovince which = RUS value = 618 when = 1 } #Kamenets-Podolsky		
+		command = { trigger = { 
+						NOT = { exists = RUS } exists = SOV 
+						NOT = { event = 2191514 event = 2191520 event = 2191532 } #Germany not defeated
+						owned = { province = 617 data = U08 } #Kiev -> Germany own and controls Kiev -> Ukraine is under german control
+						control = { province = 617 data = U08 } #Kiev
+					} type = secedearea which = U08 value = "Odessa" when = 1 }	#Bessarabia to GER
+		command = { trigger = { 
+						NOT = { exists = RUS } exists = SOV 
+						NOT = { event = 2191514 event = 2191520 event = 2191532 } #Germany not defeated
+						owned = { province = 617 data = U08 } #Kiev -> Germany own and controls Kiev -> Ukraine is under german control
+						control = { province = 617 data = U08 } #Kiev
+					} type = secedeprovince which = U08 value = 618 when = 1 } #Kamenets-Podolsky				
+		command = { trigger = { 
+						NOT = { exists = RUS } exists = SOV 
+						OR = { 
+							event = 2191514 event = 2191520 event = 2191532 #Germany already surrendered
+							NOT = { control = { province = 617 data = U08 } } #Kiev -> Germany doesn't control Ukraine
+						}
+					} type = secedearea which = SOV value = "Odessa" when = 1 }	#Bessarabia to SOV
+		command = { trigger = { NOT = { exists = RUS } exists = SOV } type = secedeprovince which = SOV value = 618 when = 1 } #Kamenets-Podolsky		
+		
+		# demobilization
+		command = { type = strength which = naval when = 0 where = 0 org = 0 value = 0 } #remove all naval units
+		command = { type = strength which = land when = 0 where = 0 org = 0 value = 0 } #remove all land units
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+
+event = {
+	id = 2022501	# Treaty of Trianon
+	country = HUN
+
+	trigger = {
+		OR= { 
+			event = 2192513 # Military defeat
+			event = 2192506	# The Imperial Manifesto
+		}
+		random = 25
+	}
+   
+	name = "EVT1914_2022501_NAME"
+	desc = "EVT1914_2022501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "EVT1914_2022501_ACTIONA" # Hungary lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		command = { type = access which = FRA }
+		command = { trigger = { alliance = { country = FRA country = ITA } } type = access which = ITA }
+		command = { trigger = { alliance = { country = FRA country = ENG } } type = access which = ENG }		
+		# loose Romania      
+		command = { trigger = { exists = ROM } type = secederegion which = ROM value = "Romania" when = 1 }
+		command = { trigger = { NOT = { exists = ROM } } type = independence which = ROM value = 1 when = 1 }
+		# war reparations
+		command = { type =  trade which = HUN where = FRA  money = -0.5 when = 7200 value = 1 }
+		command = { trigger = { alliance = { country = ENG country = FRA } } type = trade which = HUN where = ENG  money = -0.5 when = 7200 value = 1 }
+		command = { trigger = { alliance = { country = ITA country = FRA } } type = trade which = HUN where = ITA  money = -0.5 when = 7200 value = 1 }
+		command = { trigger = { alliance = { country = USA country = FRA } } type = trade which = HUN where = USA  money = -0.5 when = 7200 value = 1 }
+		# demobilization
+		command = { type = strength which = land when = 0 where = 0 org = 0 value = 0 } #remove all land units
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+######## Brest Litovsk
+event = {
+	id = 2007529   # Treaty of Brest-Litvosk: initial conditions
+	country = SOV
+
+	#triggered by SOV 2007521-2007528
+	
+	name = "EVT1914_2007529_NAME"
+	desc = "EVT1914_2007529_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2007529_ACTIONA" # Accept this outrageous proposal
+		command = { trigger = { ai = no} type = dissent value = 1 }
+		#If Germany occupied territories owned by the Volunteers' Army, they are given back to Soviet Union
+		command = { trigger = { control = { province = 552 data = U08 } } type = secedeprovince which = SOV value = 552 when = 2 } #Gdov
+		command = { trigger = { control = { province = 566 data = U08 } } type = secedeprovince which = SOV value = 566 when = 2 } #Pskov
+		# Finland independance, if not already
+		command = { trigger = { NOT = { exists = FIN } } type = independence which = FIN value = 1 when = 1 }
+		command = { type = secederegion which = FIN value = "Finland" when = 2 }
+		#Germany gets Poland and Baltic States
+		command = { type = secedearea which = U08 value = "Poznan" when = 1 }
+		command = { type = secedearea which = U08 value = "Warsaw" when = 1 }
+		command = { type = secedeprovince which = U08 value = 233 when = 1 } #Sosnowiec
+		command = { type = secedeprovince which = U08 value = 234 when = 1 } #Radom
+		command = { type = secedeprovince which = U08 value = 243 when = 1 } #Lublin
+		command = { type = secedeprovince which = U08 value = 246 when = 1 } #Chelm
+		command = { type = secedeprovince which = U08 value = 250 when = 1 } #Lomza
+		command = { type = secedeprovince which = U08 value = 252 when = 1 } #Suwalki
+		command = { type = secedeprovince which = U08 value = 254 when = 1 } #Bialystock
+		command = { type = secedeprovince which = U08 value = 255 when = 1 } #Grodno
+		command = { type = secedeprovince which = U08 value = 258 when = 1 } #Wilno
+		command = { type = secederegion which = U08 value = "Baltic States" when = 1 }
+		# If Austria-Hun is still warring, it gets access to Black Sea
+		command = { trigger = { alliance = { country = U08 country = U09 }  NOT = { event = 2192513 } } type = secederegion which = U09 value = "Romania" when = 1 }
+		# If not, German empire gains access to Black Sea
+		#command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secederegion which = U08 value = "Romania"  when = 1 }
+		#command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 614 when = 2 } #Proskurov
+		#command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 618 when = 2 } #Kamenets-Podolsky
+		#Ottoman Empire gets Kars
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 386 when = 1 } #Kars		
+		#remove claims on Poland
+		command = { type = removeclaim which = 227 } #Czestochowa
+		command = { type = removeclaim which = 233 } #Sosnowiec
+		command = { type = removeclaim which = 223 } #Lodz
+		command = { type = removeclaim which = 231 } #Wlokawek
+		command = { type = removeclaim which = 230 } #Plock
+		command = { type = removeclaim which = 232 } #Warsaw
+		command = { type = removeclaim which = 234 } #Radom
+		command = { type = removeclaim which = 243 } #Lublin
+		command = { type = removeclaim which = 228 } #Siedlce
+		command = { type = removeclaim which = 229 } #Ostroleka
+		command = { type = removeclaim which = 246 } #Chelm
+		command = { type = removeclaim which = 250 } #Lomza
+		command = { type = removeclaim which = 254 } #Byalistok
+		command = { type = removeclaim which = 252 } #Swalki
+		command = { type = removeclaim which = 263 } #Alytus
+		#remove claims on Galicia
+		command = { type = removeclaim which = 235 } #Krakow
+		command = { type = removeclaim which = 236 } #Nowy Sacz
+		command = { type = removeclaim which = 237 } #Tarnow
+		command = { type = removeclaim which = 238 } #Stanislawow
+		command = { type = removeclaim which = 239 } #Przemysl
+		command = { type = removeclaim which = 240 } #Tarnopol
+		command = { type = removeclaim which = 241 } #Stryj
+		command = { type = removeclaim which = 242 } #Lwow
+		command = { type = removeclaim which = 300 } #Cernauti
+		#remove claims on Romania
+		command = { trigger = { NOT = { event = 2192513 } }type = removeclaim which = 306 } #Ismail
+		command = { trigger = { NOT = { event = 2192513 } }type = removeclaim which = 305 } #Cahul
+		command = { trigger = { NOT = { event = 2192513 } }type = removeclaim which = 304 } #Chisinau
+		command = { trigger = { NOT = { event = 2192513 } }type = removeclaim which = 303 } #Balti
+		command = { trigger = { NOT = { event = 2192513 } }type = removeclaim which = 302 } #Hotin
+		#remove claims on Istanbul
+		command = { type = removeclaim which = 409 } #Istanbul
+		command = { type = trigger which = 2007531 } #The Left Socialist-Revolutionaries leave the government		
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#trigger creation of buffer states
+		command = { type = event which = 2191589 where = U08 when = 2 } #Creation of the United Baltic Duchy
+		command = { type = event which = 2191590 where = U08 when = 4 } #The Council of Lithuania declares independence under a German King
+		command = { type = event which = 2191591 where = U08 when = 6 } #Create the Kingdom of Poland with a Regency Council
+		command = { type = event which = 2007541 where = SOV when = 15 } #The Revolt of the Czechoslovack Legion
+	}
+}
+
+event = {
+	id = 2007530 	# The Brest Litovsk Treaty : harsh conditions
+	country = SOV
+
+	#triggered by SOV 2007521-2007528
+	
+	name = "EVT1914_2007530_NAME"
+	desc = "EVT1914_2007530_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2007530_ACTIONA" # Soviet Russia lives its Darkest hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		#If Germany occupied territories owned by the Volunteers' Army, they are given back to Soviet Union
+		command = { trigger = { control = { province = 552 data = U08 } } type = secedeprovince which = SOV value = 552 when = 2 } #Gdov
+		command = { trigger = { control = { province = 566 data = U08 } } type = secedeprovince which = SOV value = 566 when = 2 } #Pskov		
+		# Finland independence, if not already
+		command = { trigger = { NOT = { exists = FIN } } type = independence which = FIN value = 1 when = 1 }
+		command = { type = secederegion which = FIN value = "Finland" when = 2 }
+		#Germany gets Poland, Baltic States, part of Belarus and Ukraine
+		command = { type = secederegion which = U08 value = "Poland" when = 1 }
+		command = { type = secederegion which = U08 value = "Baltic States" when = 2 }
+		command = { type = secedearea which = U08 value = "Mozyr" when = 1 } #Belarus
+		command = { type = secedeprovince which = U08 value = 596 when = 1 } #Slutsk
+		command = { type = secedeprovince which = U08 value = 599 when = 1 } #Minsk		
+		command = { type = secederegion which = U08 value = "Ukraine" when = 2 }	
+		# If Austria-Hun is still warring, it gets access to the Black Sea
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 618 } #Kamenets-Podolsky
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 619 } #Mogilev-Podolsky
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 620 } #Balta
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 621 } #Tiraspol
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 625 } #Ochakov
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 626 } #Odessa
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 event = 2023503 } } type = addclaim where = U09 which = 302 } #Hotin
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 event = 2023503 } } type = addclaim where = U09 which = 303 } #Balti
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 event = 2023503 } } type = addclaim where = U09 which = 304 } #Chisinau
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 event = 2023503 } } type = addclaim where = U09 which = 305 } #Cahul
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 event = 2023503 } } type = addclaim where = U09 which = 306 } #Ismail
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secedearea which = U09 value = "Odessa" when = 2 }
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secedeprovince which = U09 value = 618 when = 2 } #Kamenets-Podolsky
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secedeprovince which = U09 value = 302 when = 2 } #Hotin
+		command = { trigger = { 
+						alliance = { country = U08 country = U09 } 
+						NOT = { event = 2192513 } 
+						NOT = { event = 2023503 } 
+							} 
+				type = secedearea which = U09 value = "Bessarabia" when = 1 }
+		# If ROM is already defeated by Central Powers, Bessarabia is seceded to her
+		command = { trigger = {
+						alliance = { country = U08 country = U09 } 
+						NOT = { event = 2192513 } 
+						event = 2023503  
+								} 
+				type = secedeprovince which = ROM value = 306 when = 2 } #Ismail	
+		command = { trigger = {
+						alliance = { country = U08 country = U09 } 
+						NOT = { event = 2192513 } 
+						event = 2023503  
+								} 
+				type = secedeprovince which = ROM value = 304 when = 2 } #Chisinau
+		command = { trigger = {
+						alliance = { country = U08 country = U09 } 
+						NOT = { event = 2192513 } 
+						event = 2023503  
+								} 
+				type = secedeprovince which = ROM value = 303 when = 2 } #Balti
+		command = { trigger = {
+						alliance = { country = U08 country = U09 } 
+						NOT = { event = 2192513 } 
+						event = 2023503  
+								} 
+				type = secedeprovince which = ROM value = 305 when = 2 } #Cahul				
+		# If not, German empire gains access to Black Sea
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secederegion which = U08 value = "Romania" when = 1}
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedearea which = U08 value = "Odessa" when = 2}
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 614 when = 2 } #Proskurov
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 618 when = 2 } #Kamenets-Podolsky
+		# Ottoman Empire gets Kars and Armenia
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 386 when = 1 } #Kars	  
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 711 when = 1 } #Yerevan
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 714 when = 1 } #Nakhchivan	
+		# Transcaucasia
+		command = { trigger = { NOT = { exists = GEO } alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = independence which = GEO value = 1 when = 1  }
+		command = { type = secedeprovince which = GEO value = 707 when = 1  } #Tskhinvali		
+		command = { type = secedeprovince which = GEO value = 710 when = 1  } #Sukhumi		
+		command = { trigger = { NOT = { exists = AZB } alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = independence which = AZB value = 1 when = 1  }
+		command = { type = secedeprovince which = AZB value = 712 when = 1  } #Stepanakert
+		#remove claims on Poland
+		command = { type = removeclaim which = 227 } #Czestochowa
+		command = { type = removeclaim which = 233 } #Sosnowiec
+		command = { type = removeclaim which = 223 } #Lodz
+		command = { type = removeclaim which = 231 } #Wlokawek
+		command = { type = removeclaim which = 230 } #Plock
+		command = { type = removeclaim which = 232 } #Warsaw
+		command = { type = removeclaim which = 234 } #Radom
+		command = { type = removeclaim which = 243 } #Lublin
+		command = { type = removeclaim which = 228 } #Siedlce
+		command = { type = removeclaim which = 229 } #Ostroleka
+		command = { type = removeclaim which = 246 } #Chelm
+		command = { type = removeclaim which = 250 } #Lomza
+		command = { type = removeclaim which = 254 } #Byalistok
+		command = { type = removeclaim which = 252 } #Swalki
+		command = { type = removeclaim which = 263 } #Alytus
+		#remove claims on Galicia
+		command = { type = removeclaim which = 235 } #Krakow
+		command = { type = removeclaim which = 236 } #Nowy Sacz
+		command = { type = removeclaim which = 237 } #Tarnow
+		command = { type = removeclaim which = 238 } #Stanislawow
+		command = { type = removeclaim which = 239 } #Przemysl
+		command = { type = removeclaim which = 240 } #Tarnopol
+		command = { type = removeclaim which = 241 } #Stryj
+		command = { type = removeclaim which = 242 } #Lwow
+		command = { type = removeclaim which = 300 } #Cernauti
+		#remove claims on Romania
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 306 } #Ismail
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 305 } #Cahul
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 304 } #Chisinau
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 303 } #Balti
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 302 } #Hotin
+		#remove claims on Istanbul
+		command = { type = removeclaim which = 409 } #Istanbul
+		command = { type = trigger which = 2007531 } #The Left Socialist-Revolutionaries leave the government
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#trigger creation of buffer states
+		command = { type = event which = 2191589 where = U08 when = 2 } #Creation of the United Baltic Duchy
+		command = { type = event which = 2191590 where = U08 when = 4 } #The Council of Lithuania declares independence under a German King
+		command = { type = event which = 2191591 where = U08 when = 6 } #Create the Kingdom of Poland with a Regency Council
+		command = { type = event which = 2191592 where = U08 when = 8 } #The Belarusian National Council declares independence under German sovereignty
+		command = { type = event which = 2191593 where = U08 when = 10 } #Skoropadskyi creates the Hetmanate under German sovereignty
+		command = { type = event which = 2007541 where = SOV when = 15 } #The Revolt of the Czechoslovack Legion
+   }
+}
+######### Fictional treaty of Grenoble : italian defeat
+#### CP Italy defeated
+event = {
+	id = 2002553	# The Treaty of Grenoble
+	country = FRA
+
+	trigger = {
+		random = 25
+		event = 2006515 #Military defeat
+		OR = {		 # Italian defeat
+			event = 2192504 # Italy joins back the Central Powers
+			flag = ITA_against_FRA
+		}
+		NOT = { event = 2006514 }# The Grenoble Treaty (ITA) (Ita beaten by Central Powers)
+	}
+
+	name = "EVT1914_2002553_NAME"
+	desc = "EVT1914_2002553_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2002553_ACTIONA" # Impose conditions
+		command = { type = trigger which = 2006513 }
+		command = { type = dissent value = -8 }
+		command = { type = clrflag which = ITA_against_FRA }
+	}
+}
+event = {
+	id = 2006513	# The Grenoble Treaty (ITA)
+	country = ITA
+
+	#triggered by FRA 2002553
+   
+	name = "EVT1914_2006513_NAME"
+	desc = "EVT1914_2006513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2006513_ACTIONA" # Italy lives its Darkest hour...
+		command = { trigger = { ai = no} type = dissent value = 3 }
+		command = { type = access which = FRA }
+		command = { trigger = { alliance = { country = FRA country = ENG } } type = access which = ENG }
+		command = { trigger = { puppet = { country = LBY country = ITA } } type = end_mastery which = LBY }
+		# UK joined : they get Eastern colonies
+		command = { trigger = { OR = { event = 2001501 alliance = { country = FRA country = ENG } } } type = secederegion which = ENG value = "Ethiopia" when = 1 }
+		command = { trigger = { OR = { event = 2001501 alliance = { country = FRA country = ENG } } } type = secederegion which = ENG value = "Horn of Africa" when = 1 }
+		# UK did not join, FRA get them
+		command = { trigger = { NOT = { event = 2001501 } alliance = { country = FRA country = ENG } } type = secederegion which = FRA value = "Ethiopia" when = 1 }
+		command = { trigger = { NOT = { event = 2001501 } alliance = { country = FRA country = ENG } } type = secederegion which = FRA value = "Horn of Africa" when = 1 }
+		# FRA gets Libya
+		command = { type = secederegion which = FRA value = "Libya" when = 1 }
+		#GRE joined : they get Rhodos
+		command = { trigger = { NOT = { flag = entente_hostility } event = 2019522 } type = secedearea which = GRE value = "Greek Island" when = 1 }
+		# GRE did not but UK did : they get it
+		command = { trigger = { flag = entente_hostility  event = 2019522 OR = { event = 2001501 alliance = { country = FRA country = ENG } } } type = secedearea which = ENG value = "Greek Island" when = 1 }
+		#Neither joined, France gets it
+		command = { trigger = { flag = entente_hostility  event = 2019522 NOT = { event = 2001501 } alliance = { country = FRA country = ENG } } type = secedearea which = FRA value = "Greek Island" when = 1 }	  
+		# demobilization (only 36 units at 33% strenght, around 150 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 36 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on bigger ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 16 }		
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }	
+		# Remove puppet on Senussi
+		command = { type = end_mastery which = LBY  }		
+	}
+}
+#### Entente Italy defeated
+event = {
+	id = 2191548	# The Treaty of Grenoble
+	country = U08
+
+	trigger = {
+		random = 25
+		event = 2006515 #Military Defeat
+		OR = {		 # Italian defeat
+			event = 2006503 # Join the Entente
+			flag = ITA_against_U08
+		}
+		NOT = { event = 2006513 }# The Grenoble Treaty (ITA) (Ita beaten by Entente)
+	}
+   
+	name = "EVT1914_2191548_NAME"
+	desc = "EVT1914_2191548_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+
+   action_a = {
+	  ai_chance = 90
+      name = "EVT1914_2191548_ACTIONA" # Impose conditions
+      command = { type = trigger which = 2006514 }
+      command = { type = dissent value = -8 }
+      command = { type = clrflag which = ITA_against_U08 }
+   }
+}
+
+event = {
+	id = 2006514	# The Grenoble Treaty (ITA)
+	country = ITA
+
+	#triggered by U08 2191548
+   
+	name = "EVT1914_2006514_NAME"
+	desc = "EVT1914_2006514_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2006514_ACTIONA" # Italy lives its Darkest hour...
+		command = { trigger = { ai = no} type = dissent value = 3 }
+		command = { type = access which = U08 }
+		command = { trigger = { alliance = { country = U08 country = U09 } } type = access which = U09 }
+		command = { trigger = { puppet = { country = LBY country = ITA } } type = end_mastery which = LBY }			
+		# U08 gets Eastern colonies
+		command = { type = secederegion which = U08 value = "Ethiopia" when = 1 }
+		command = { type = secederegion which = U08 value = "Horn of Africa" when = 1 }
+		# OTT joined : they get Libya and Greek islands
+		command = { trigger = { alliance = { country = U08 country = OTT } } type = secederegion which = OTT value = "Libya" when = 1 }
+		command = { trigger = { alliance = { country = U08 country = OTT } } type = secedearea which = OTT value = "Greek Island" when = 1 }
+		# OTT did not, Libya goes to Senussi and Greek islands to U08
+		command = { trigger = { NOT = { alliance = { country = U08 country = OTT } war = { country = LBY country = U08 } } exists = LBY } type = secederegion which = LBY value = "Libya" when = 1 }
+		command = { trigger = { NOT = { alliance = { country = U08 country = OTT } } } type = secedearea which = U08 value = "Greek Island" when = 1 }
+		# Senussi not exists or at war with GER, Libya goes to U08
+		command = { trigger = { NOT = { alliance = { country = U08 country = OTT } } OR = { NOT = { exists = LBY} war = { country = LBY country = U08 } } } type = secederegion which = U08 value = "Libya" when = 1 }
+		# Udine and Belluno to U09
+		command = { trigger = { exists = U09 } type = secedeprovince which = U09 value = 394 when = 1 } #Belluno
+		command = { trigger = { exists = U09 } type = secedeprovince which = U09 value = 405 when = 1 } #Udine
+		# demobilization (only 36 units at 33% strenght, around 150 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 36 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on bigger ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 16 }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		# Remove puppet on Senussi
+		command = { type = end_mastery which = LBY  }
+	}
+}
+
+#########
+### U08 2191551 : The Balmoral Castle Treaty
+### ENG 2001550 : The Balmoral Castle Treaty : Harsh conditions
+### ENG 2001551 : The Balmoral Castle Treaty : Soft conditions
+#########
+
+event = {
+	id = 2191551	# The Balmoral Castle Treaty
+	country = U08
+
+	trigger = {
+		random = 25
+		event = 2001540 #ENG Military Defeat
+	}
+	
+	name = "EVT1914_2191551_NAME"
+	desc = "EVT1914_2191551_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2002534_ACTIONA" # Impose harsh conditions
+		command = { type = dissent value = -15 }
+		command = { type = addclaim which = 832 } #Somaliland
+		command = { type = addclaim which = 838 } #Kismayo
+		command = { type = addclaim which = 840 } #Socotra
+		command = { type = addclaim which = 839 } #Kenya
+		command = { type = addclaim which = 841 }
+		command = { type = addclaim which = 842 }
+		command = { type = addclaim which = 843 }
+		command = { type = addclaim which = 844 } #Uganda
+		command = { type = addclaim which = 845 }
+		command = { type = addclaim which = 852 } #Zanzibar
+		command = { type = addclaim which = 859 } #North Rhodesia		
+		command = { type = addclaim which = 860 }
+		command = { type = addclaim which = 861 }
+		command = { type = addclaim which = 862 }
+		command = { type = addclaim which = 863 }
+		command = { type = addclaim which = 864 }
+		command = { type = addclaim which = 865 }
+		command = { type = addclaim which = 866 } #South Rhodesia
+		command = { type = addclaim which = 867 }
+		command = { type = addclaim which = 868 }
+		command = { type = addclaim which = 869 } #Bechuanaland
+		command = { type = addclaim which = 870 }
+		command = { type = addclaim which = 871 }
+		command = { type = addclaim which = 964 } #Freetown
+		command = { type = addclaim which = 979 } #Gambia
+		command = { type = addclaim which = 952 } #Gold Coast
+		command = { type = addclaim which = 953 }
+		command = { type = addclaim which = 954 }
+		command = { type = addclaim which = 956 }
+		command = { type = addclaim which = 937 } #North Nigeria
+		command = { type = addclaim which = 938 }
+		command = { type = addclaim which = 939 }
+		command = { type = addclaim which = 940 }
+		command = { type = addclaim which = 941 }
+		command = { type = addclaim which = 929 } #South Nigeria
+		command = { type = addclaim which = 930 }
+		command = { type = addclaim which = 931 }
+		command = { type = addclaim which = 932 }
+		command = { type = addclaim which = 934 }
+		command = { type = addclaim which = 935 }
+		command = { type = addclaim which = 1051 } #Aden
+		command = { type = addclaim which = 1053 } #El Muskalla
+		command = { type = addclaim which = 1587 } #Bougainville
+		command = { type = addclaim which = 1588 } #Central Solomons
+		command = { type = addclaim which = 1589 }
+		command = { type = addclaim which = 1590 } #Guadalcanal
+		command = { type = addclaim which = 1591 }
+		command = { type = addclaim which = 1592 }
+		command = { type = addclaim which = 1593 }	
+		command = { type = trigger which = 2001561 }
+	}
+	action_c = {
+		ai_chance = 10
+		name = "EVT1914_2002534_ACTIONC" # Impose soft conditions
+		command = { type = dissent value = -5 }
+		command = { type = addclaim which = 852 } #Zanzibar
+		command = { type = addclaim which = 859 } #North Rhodesia		
+		command = { type = addclaim which = 860 }
+		command = { type = addclaim which = 861 }
+		command = { type = addclaim which = 862 }
+		command = { type = addclaim which = 863 }
+		command = { type = addclaim which = 864 }
+		command = { type = addclaim which = 865 }
+		command = { type = addclaim which = 866 } #South Rhodesia
+		command = { type = addclaim which = 867 }
+		command = { type = addclaim which = 868 }
+		command = { type = addclaim which = 869 } #Bechuanaland
+		command = { type = addclaim which = 870 }
+		command = { type = addclaim which = 871 }
+		command = { type = addclaim which = 979 } #Gambia
+		command = { type = addclaim which = 952 } #Gold Coast
+		command = { type = addclaim which = 953 }
+		command = { type = addclaim which = 954 }
+		command = { type = addclaim which = 956 }
+		command = { type = trigger which = 2001562 }
+	}
+}
+
+event = {
+	id = 2001561	# The Balmoral Castle Treaty : Harsh conditions
+	country = ENG
+
+	#triggered by U08 2191551
+	
+	name = "EVT1914_2001561_NAME"
+	desc = "EVT1914_2001561_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action_a = {
+		name = "EVT1914_2001561_ACTIONA" # UK lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		# African colonies
+		command = { type = secedearea which = U08 value = "Bechuanaland" when = 1 }
+		command = { type = secedearea which = U08 value = "North Rhodesia" when = 1 }
+		command = { type = secedearea which = U08 value = "South Rhodesia" when = 1 }
+		command = { type = secedearea which = U08 value = "Gold Coast" when = 1 }
+		command = { type = secedearea which = U08 value = "North Nigeria" when = 1 }
+		command = { type = secedearea which = U08 value = "South Nigeria" when = 1 }
+		command = { type = secedearea which = U08 value = "Kenya" when = 1 }
+		command = { type = secedearea which = U08 value = "Uganda" when = 1 }
+		command = { type = secedearea which = U08 value = "Somaliland" when = 1 }
+		command = { type = secedeprovince which = U08 value = 838 when = 1 } #Kismayo
+		command = { type = secedeprovince which = U08 value = 852 when = 1 } #Zanzibar
+		command = { type = secedeprovince which = U08 value = 964 when = 1 } #Freetown, Sierra Leone
+		command = { type = secedeprovince which = U08 value = 979 when = 1 } #Banjul, Gambia
+		command = { type = secedeprovince which = U08 value = 1053 when = 1 } #Aden
+		command = { type = secedeprovince which = U08 value = 1051 when = 1 } #El Muskalla
+		command = { type = secedeprovince which = U08 value = 840 when = 1 } #Socotra
+		command = { type = secedearea which = U08 value = "Bougainville" when = 1 }
+		command = { type = secedearea which = U08 value = "Guadalcanal" when = 1 }
+		command = { type = secedearea which = U08 value = "Central Solomons" when = 1 }
+		#Ottoman empire
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 387 when = 1 } #Famagusta
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 388 when = 1 } #Nicosia
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1004 when = 1 } #El Arish
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1005 when = 1 } #Sharm el Sheikh
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1006 when = 1 } #Al Qantarah
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1007 when = 1 } #Bur Tawfiq
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1041 when = 1 } #Kuwait
+		command = { trigger = { alliance = { country = OTT country = U08 } puppet = { country = U91 country = ENG } } type = end_mastery which = U91  } #Kuwait
+		command = { trigger = { alliance = { country = OTT country = U08 } puppet = { country = U53 country = ENG } } type = end_mastery which = U53  } #Trucial States
+		command = { trigger = { alliance = { country = OTT country = U08 } puppet = { country = OMN country = ENG } } type = end_mastery which = OMN  } #Oman
+		#Senussi
+		command = { trigger = { event = 2145536 NOT = { event = 2032006 ispuppet = LBY } } type = secedearea which = LBY value = "Sidi Barrani" when = 1 }
+		command = { trigger = { event = 2145536 NOT = { event = 2032006 ispuppet = LBY } } type = secedeprovince which = LBY value = 785 when = 1 } #Matruh
+		command = { trigger = { event = 2145536 NOT = { event = 2032006 ispuppet = LBY } } type = secedeprovince which = LBY value = 799 when = 1 } #Moghara
+		command = { trigger = { event = 2145536 NOT = { event = 2032006 ispuppet = LBY } } type = secedeprovince which = LBY value = 801 when = 1 } #El Farafra
+		command = { trigger = { event = 2145536 NOT = { event = 2032006 ispuppet = LBY } } type = secedeprovince which = LBY value = 802 when = 1 } #El Qasr
+		command = { trigger = { event = 2145536 NOT = { event = 2032006 ispuppet = LBY } } type = secedeprovince which = LBY value = 804 when = 1 } #Dunqula
+		#Ireland
+		command = { trigger = { exists = IRE war = { country = IRE country = ENG } NOT = { participant = { country = IRE value = 4 } }  } type = peace which = IRE value = 1 } #Ireland is recognized independent if at war
+		command = { trigger = { NOT = { exists = IRE } } type = independence which = IRE value = 1 when = 1 } #Ireland is given independence
+		command = { type = secedearea which = IRE value = "Eire" when = 1 }
+		# war reparations
+		command = { type = trade which = ENG where = U08 money = -3 when = 7200 value = 1 }
+		command = { type = trade which = ENG where = U08 supplies = -30 when = 7200 value = 1 }
+		# demobilization (only 36 units at 33% strenght, around 150 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 36 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on bigger ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 16 }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }		
+	}
+}
+
+event = {
+	id = 2001562	# The Balmoral Castle Treaty : Soft conditions
+	country = ENG
+
+	#triggered by U08 2191551
+	
+	name = "EVT1914_2001562_NAME"
+	desc = "EVT1914_2001562_DESC"
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action_a = {
+		name = "EVT1914_2001561_ACTIONA" # UK lives its Darkest Hour...
+		command = { trigger = { ai = no} type = dissent value = 1 }
+		# African colonies
+		command = { type = secedearea which = U08 value = "Bechuanaland" when = 1 }
+		command = { type = secedearea which = U08 value = "North Rhodesia" when = 1 }
+		command = { type = secedearea which = U08 value = "South Rhodesia" when = 1 }
+		command = { type = secedearea which = U08 value = "Gold Coast" when = 1 }
+		command = { type = secedeprovince which = U08 value = 979 when = 1 } #Banjul, Gambia
+		#Ottoman empire
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1004 when = 1 } #
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1005 when = 1 } #
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1006 when = 1 } #
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1007 when = 1 } #
+		command = { trigger = { alliance = { country = OTT country = U08 } } type = secedeprovince which = OTT value = 1041 when = 1 } #Kuwait
+		command = { trigger = { alliance = { country = OTT country = U08 } puppet = { country = U91 country = ENG } } type = end_mastery which = U91  } #Kuwait		
+		# war reparations
+		command = { type = trade which = ENG where = U08 money = -1.5 when = 7200 value = 1 }
+		command = { type = trade which = ENG where = U08 supplies = -15 when = 7200 value = 1 }
+		# demobilization (only 36 units at 33% strenght, around 150 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 36 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#limitations on bigger ships
+		command = { type = demobilize which = battleship when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = battlecruiser when = 0 where = 0 value = 8 }
+		command = { type = demobilize which = heavy_cruiser when = 0 where = 0 value = 16 }
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }				
+	}
+}
+
+#########
+### U08 2191555 : The Treaty of Alexander Palace
+### RUS 2104547 : The Treaty of Alexander Palace : Harsh conditions
+### RUS 2104548 : The Treaty of Alexander Palace : Soft conditions
+#########
+
+event = {
+	id = 2191555   # The Moscow Treaty
+	country = U08
+
+	trigger = {
+		random = 25
+		event = 2104546 #RUS Military Defeat
+	}
+	
+	name = "EVT1914_2191555_NAME"
+	desc = "EVT1914_2191555_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT1914_2002534_ACTIONA" # Impose harsh conditions
+		command = { trigger = { NOT = { exists = FIN } } type = independence which = FIN value = 1 }
+		command = { type = trigger which = 2104547 } #The Treaty of Alexander Palace : harsh conditions
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT1914_2002534_ACTIONC" # Impose soft conditions
+		command = { trigger = { NOT = { exists = FIN } } type = independence which = FIN value = 1 }
+		command = { type = trigger which = 2104548 } #The Treaty of Alexander Palace : soft conditions
+	}
+}
+
+event = {
+	id = 2104547	#The Treaty of Alexander Palace : harsh conditions
+	country = RUS
+
+	#triggered by U08 2191551
+	
+	name = "EVT1914_2104547_NAME"
+	desc = "EVT1914_2104547_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "EVT1914_2104547_ACTIONA" # Russia lives its Darkest hour...
+		command = { trigger = { ai = no} type = dissent value = 5 }
+		#Germany gets Poland, Baltic States, part of Belarus and Ukraine
+		command = { type = secederegion which = U08 value = "Poland" when = 1 }
+		command = { type = secederegion which = U08 value = "Baltic States" when = 2 }
+		command = { type = secedearea which = U08 value = "Mozyr" when = 1 } #Belarus
+		command = { type = secedeprovince which = U08 value = 596 when = 1 } #Slutsk
+		command = { type = secedeprovince which = U08 value = 599 when = 1 } #Minsk		
+		command = { type = secederegion which = U08 value = "Ukraine" when = 2 }		
+		# Finland independence, if not already
+		command = { trigger = { NOT = { exists = FIN } } type = independence which = FIN value = 1 when = 1 }
+		command = { type = secederegion which = FIN value = "Finland" when = 2 }
+		# If Austria-Hun is still warring, it gets access to the Black Sea
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 618 } #Kamenets-Podolsky
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 619 } #Mogilev-Podolsky
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 620 } #Balta
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 621 } #Tiraspol
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 625 } #Ochakov
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 626 } #Odessa
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 302 } #Hotin
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 303 } #Balti
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 304 } #Chisinau
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 305 } #Cahul
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 306 } #Ismail
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secederegion which = U09 value = "Romania" when = 1 }
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secedearea which = U09 value = "Odessa" when = 2 }
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secedeprovince which = U09 value = 618 when = 2 } #Kamenets-Podolsky
+		# If not, German empire gains access to Black Sea
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secederegion which = U08 value = "Romania" when = 1}
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedearea which = U08 value = "Odessa" when = 2}
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 614 when = 2 } #Proskurov
+		command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 618 when = 2 } #Kamenets-Podolsky
+		# Ottoman Empire gets Kars and Armenia
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 386 when = 1 } #Kars	  
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 711 when = 1 } #Yerevan
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 714 when = 1 } #Nakhchivan	
+		# Transcaucasia
+		command = { trigger = { NOT = { exists = GEO } alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = independence which = GEO value = 1 when = 1  }
+		command = { type = secedeprovince which = GEO value = 707 when = 1  } #Tskhinvali		
+		command = { type = secedeprovince which = GEO value = 710 when = 1  } #Sukhumi		
+		command = { trigger = { NOT = { exists = AZB } alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = independence which = AZB value = 1 when = 1  }
+		command = { type = secedeprovince which = AZB value = 712 when = 1  } #Stepanakert		
+		# demobilization (only 36 units at 33% strenght, around 150 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 36 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#remove claims on Poland
+		command = { type = removeclaim which = 227 } #Czestochowa
+		command = { type = removeclaim which = 233 } #Sosnowiec
+		command = { type = removeclaim which = 223 } #Lodz
+		command = { type = removeclaim which = 231 } #Wlokawek
+		command = { type = removeclaim which = 230 } #Plock
+		command = { type = removeclaim which = 232 } #Warsaw
+		command = { type = removeclaim which = 234 } #Radom
+		command = { type = removeclaim which = 243 } #Lublin
+		command = { type = removeclaim which = 228 } #Siedlce
+		command = { type = removeclaim which = 229 } #Ostroleka
+		command = { type = removeclaim which = 246 } #Chelm
+		command = { type = removeclaim which = 250 } #Lomza
+		command = { type = removeclaim which = 254 } #Byalistok
+		command = { type = removeclaim which = 252 } #Swalki
+		command = { type = removeclaim which = 263 } #Alytus
+		#remove claims on Galicia
+		command = { type = removeclaim which = 235 } #Krakow
+		command = { type = removeclaim which = 236 } #Nowy Sacz
+		command = { type = removeclaim which = 237 } #Tarnow
+		command = { type = removeclaim which = 238 } #Stanislawow
+		command = { type = removeclaim which = 239 } #Przemysl
+		command = { type = removeclaim which = 240 } #Tarnopol
+		command = { type = removeclaim which = 241 } #Stryj
+		command = { type = removeclaim which = 242 } #Lwow
+		command = { type = removeclaim which = 300 } #Cernauti
+		#remove claims on Romania
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 306 } #Ismail
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 305 } #Cahul
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 304 } #Chisinau
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 303 } #Balti
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = removeclaim which = 302 } #Hotin
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		#trigger creation of buffer states
+		command = { type = event which = 2191589 where = U08 when = 2 } #Creation of the United Baltic Duchy
+		command = { type = event which = 2191590 where = U08 when = 4 } #The Council of Lithuania declares independence under a German King
+		command = { type = event which = 2191591 where = U08 when = 6 } #Create the Kingdom of Poland with a Regency Council
+		command = { type = event which = 2191592 where = U08 when = 8 } #The Belarusian National Council declares independence under German sovereignty
+		command = { type = event which = 2191593 where = U08 when = 10 } #Skoropadskyi creates the Hetmanate under German sovereignty
+   }
+}
+event = {
+	id = 2104548	#The Treaty of Alexander Palace : soft conditions
+	country = RUS
+
+	#triggered by U08 2191551
+   
+	name = "EVT1914_2104548_NAME"
+	desc = "EVT1914_2104548_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "EVT1914_2104547_ACTIONA" # Russia lives its Darkest hour...
+		command = { trigger = { ai = no} type = dissent value = 1 }
+		#Germany gets Poland and Baltic States
+		command = { type = secederegion which = U08 value = "Poland" when = 2 }
+		command = { type = secederegion which = U08 value = "Baltic States" when = 1 }
+		# Finland independence, if not already
+		command = { trigger = { NOT = { exists = FIN } } type = independence which = FIN value = 1 when = 1 }
+		command = { type = secederegion which = FIN value = "Finland" when = 2 }
+		# If Austria-Hun is still warring, it gets access to the Black Sea
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 618 } #Kamenets-Podolsky
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 619 } #Mogilev-Podolsky
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 620 } #Balta
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 621 } #Tiraspol
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 625 } #Ochakov
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 626 } #Odessa
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 302 } #Hotin
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 303 } #Balti
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 304 } #Chisinau
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 305 } #Cahul
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = addclaim where = U09 which = 306 } #Ismail
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secederegion which = U09 value = "Romania" when = 1 }
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secedearea which = U09 value = "Odessa" when = 2 }
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } } type = secedeprovince which = U09 value = 618 when = 2 } #Kamenets-Podolsky
+		# If not, German empire gains access to Black Sea
+		#command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secederegion which = U08 value = "Romania" when = 1}
+		#command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedearea which = U08 value = "Odessa" when = 2}
+		#command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 614 when = 2 } #Proskurov
+		#command = { trigger = { OR = { event = 2192513 NOT = { alliance = { country = U08 country = U09 } } } } type = secedeprovince which = U08 value = 618 when = 2 } #Kamenets-Podolsky
+		# Ottoman Empire gets Kars and Armenia
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 386 when = 1 } #Kars	  
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 711 when = 1 } #Yerevan
+		command = { trigger = { alliance = { country = U08 country = OTT } NOT = { OR = { event = 2145511 event = 2145502 } } } type = secedeprovince which = OTT value = 714 when = 1 } #Nakhchivan		
+		# demobilization (only 48 units at 33% strenght, around 200 000 men)
+		command = { type = demobilize which = land when = 0 where = 0 value = 48 }
+		command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+		command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units
+		#remove claims on Poland
+		command = { type = removeclaim which = 227 } #Czestochowa
+		command = { type = removeclaim which = 233 } #Sosnowiec
+		command = { type = removeclaim which = 223 } #Lodz
+		command = { type = removeclaim which = 231 } #Wlokawek
+		command = { type = removeclaim which = 230 } #Plock
+		command = { type = removeclaim which = 232 } #Warsaw
+		command = { type = removeclaim which = 234 } #Radom
+		command = { type = removeclaim which = 243 } #Lublin
+		command = { type = removeclaim which = 228 } #Siedlce
+		command = { type = removeclaim which = 229 } #Ostroleka
+		command = { type = removeclaim which = 246 } #Chelm
+		command = { type = removeclaim which = 250 } #Lomza
+		command = { type = removeclaim which = 254 } #Byalistok
+		command = { type = removeclaim which = 252 } #Swalki
+		command = { type = removeclaim which = 263 } #Alytus
+		#remove claims on Galicia
+		command = { type = removeclaim which = 235 } #Krakow
+		command = { type = removeclaim which = 236 } #Nowy Sacz
+		command = { type = removeclaim which = 237 } #Tarnow
+		command = { type = removeclaim which = 238 } #Stanislawow
+		command = { type = removeclaim which = 239 } #Przemysl
+		command = { type = removeclaim which = 240 } #Tarnopol
+		command = { type = removeclaim which = 241 } #Stryj
+		command = { type = removeclaim which = 242 } #Lwow
+		command = { type = removeclaim which = 300 } #Cernauti
+		#remove claims on Romania
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } }type = removeclaim which = 306 } #Ismail
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } }type = removeclaim which = 305 } #Cahul
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } }type = removeclaim which = 304 } #Chisinau
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } }type = removeclaim which = 303 } #Balti
+		command = { trigger = { alliance = { country = U08 country = U09 } NOT = { event = 2192513 } }type = removeclaim which = 302 } #Hotin
+		command = { type = set_domestic which = defense_lobby value = 1 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		#trigger creation of buffer states
+		command = { type = event which = 2191589 where = U08 when = 2 } #Creation of the United Baltic Duchy
+		command = { type = event which = 2191590 where = U08 when = 4 } #The Council of Lithuania declares independence under a German King
+		command = { type = event which = 2191591 where = U08 when = 6 } #Create the Kingdom of Poland with a Regency Council
+	}
+}

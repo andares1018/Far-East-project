@@ -1,0 +1,2426 @@
+# The Shangdong Problem
+# By Limith
+#-Chinese Versailles Treaty----------------------
+# ALI 133011623 Versailles and Beiyang China
+# ALI 133011624 Versailles and Alternate China
+# ALI 133011625 Versailles and C. Powers China
+# AXI 133011626 Versailles and Beiyang China
+# AXI 133011627 Versailles and Alternate China
+# AXI 133011628 Versailles and T. Entente China
+#-May Fourth Movement----------------------------
+# UCH/CHI 133011601 May Fourth Movement
+# UCH/CHI 133011602 May Fourth Movement II
+# UCH/CHI 133011610 Shangdong Problem
+#-USA Intervention-------------------------------
+# USA 133011629 Chinese Concessions: USA Intervention?
+# JAP 133011630 The Shangdong Problem: USA Intervention
+# AXI 133011635 The China Problem: USA Intervention
+#-Intervention Rejected--------------------------
+# USA 133011631 Economic Sanctions against Japan
+# USA 133011639 Economic Sanctions against the Central Powers
+# JAP 133011632 The Shangdong Problem: Return Shangdong to China
+# AXI 133011636 The China Problem: Return Concessions to China
+# UCH/CHI 133011633 The Shangdong Problem: Force Return of Shangdong
+# UCH/CHI 133011637 The China Problem: Force Return of Concessions
+#-Shangdong Incident Peace-----------------------
+# JAP 133011634 The Shangdong Incident: Resolution
+# AXI 133011638 The China Problem: Resolution
+#-End of May Fourth Movement---------------------
+# UCH/CHI 133011611 Protests Die Down
+# UCH/CHI 133011612 Economy Recovers
+
+#############################
+# Chinese Versailles Treaty #
+#############################
+
+# Triple Entente Victory!
+
+# Default gives to Beiyang.
+# Versailles and Beiyang China.
+event = {
+	random = no
+	id = 133011623
+	tag = { FRA ENG RUS SOV JAP SER YUG }
+
+	trigger = {
+		exists = UCH
+		or = { # WWI Over.
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+		}
+		not = { flag = beiyang_axis }
+		or = {
+			flag = beiyang_allies
+			not = { 
+				flag = beiyang_axis
+				flag = alternate_allies
+			}
+			not = { exists = CHI }
+		}
+		or = {
+			and = {
+				country = FRA
+				participant = { country = FRA value = 1 }
+			}
+			and = {
+				country = ENG
+				participant = { country = ENG value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+			}
+			and = {
+				country = RUS
+				participant = { country = RUS value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+			}
+			and = {
+				country = SOV
+				participant = { country = SOV value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+			}
+			and = {
+				country = JAP
+				participant = { country = JAP value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+			}
+			and = {
+				country = SER
+				participant = { country = SER value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+				not = { participant = { country = JAP value = 1 } }
+			}
+			and = {
+				country = YUG
+				participant = { country = YUG value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+				not = { participant = { country = JAP value = 1 } }
+				not = { participant = { country = SER value = 1 } }
+			}
+		}
+	}
+
+	name = EVT1914_133011623_NAME
+	desc = EVT1914_133011623_DESC
+
+	picture = "aar_versailles"
+	style = 2
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = {
+			event = 133011015
+			participant = { country = JAP value = 1 }
+		}
+		ai_chance = 100
+		name = EVT1914_133011623_ACTIONA #"Award the concessions to Japan (Historic)"
+		command = { type = event which = 133011601 where = UCH when = 75 } # Trigger May Fourth Movement
+		#command = { type = relation which = UCH value = -50 }
+		#command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = JAP value = 100 }
+		command = { type = secedeprovince which = JAP value = 1331 when = 2}
+		command = { type = secedeprovince which = JAP value = 1328 when = 2}
+		command = { type = sleepevent which = 133011624 }
+		command = { type = sleepevent which = 133011625 }
+		command = { type = sleepevent which = 133011626 }
+		command = { type = sleepevent which = 133011627 }
+		command = { type = sleepevent which = 133011628 }
+	}
+
+	action = {
+		trigger = {
+			or = {
+				not = {
+					flag = 21demands
+				}
+				not = { participant = { country = JAP value = 1 } }
+			}
+		}
+		ai_chance = 0
+		name = EVT1914_133011623_ACTIONB #"Award the concessions to Beiyang."
+		command = { type = relation which = UCH value = 100 }
+		command = { type = relation which = CHI value = 100 }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { type = sleepevent which = 133011624 }
+		command = { type = sleepevent which = 133011625 }
+		command = { type = sleepevent which = 133011626 }
+		command = { type = sleepevent which = 133011627 }
+		command = { type = sleepevent which = 133011628 }
+	}
+}
+
+# Versailles and Alternate China.
+event = {
+	random = no
+	id = 133011624
+	tag = { FRA ENG RUS SOV JAP SER YUG }
+	
+	trigger = {
+		exists = CHI
+		or = { # WWI Over.
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+		}
+		not = { flag = alternate_axis }
+		or = {
+			and = {
+				not = { flag = beiyang_allies }
+				flag = alternate_allies
+			}
+			and = {
+				flag = beiyang_axis
+				not = { flag = alternate_axis }
+			}
+			not = { exists = UCH }
+		}
+		or = {
+			and = {
+				country = FRA
+				participant = { country = FRA value = 1 }
+			}
+			and = {
+				country = ENG
+				participant = { country = ENG value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+			}
+			and = {
+				country = RUS
+				participant = { country = RUS value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+			}
+			and = {
+				country = SOV
+				participant = { country = SOV value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+			}
+			and = {
+				country = JAP
+				participant = { country = JAP value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+			}
+			and = {
+				country = SER
+				participant = { country = SER value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+				not = { participant = { country = JAP value = 1 } }
+			}
+			and = {
+				country = YUG
+				participant = { country = YUG value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+				not = { participant = { country = JAP value = 1 } }
+				not = { participant = { country = SER value = 1 } }
+			}
+		}
+	}
+
+	name = EVT1914_133011624_NAME
+	desc = EVT1914_133011624_DESC
+
+	picture = "aar_versailles"
+	style = 2
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = {
+			event = 133011015
+			participant = { country = JAP value = 1 }
+		}
+		ai_chance = 100
+		name = EVT1914_133011623_ACTIONA #"Award the concessions to Japan (Historic)"
+		command = { type = event which = 133011601 where = CHI when = 75 } # Trigger May Fourth Movement
+		#command = { type = relation which = UCH value = -50 }
+		#command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = JAP value = 100 }
+		command = { type = secedeprovince which = JAP value = 1331 when = 2}
+		command = { type = secedeprovince which = JAP value = 1328 when = 2}
+		command = { type = sleepevent which = 133011623 }
+		command = { type = sleepevent which = 133011625 }
+		command = { type = sleepevent which = 133011626 }
+		command = { type = sleepevent which = 133011627 }
+		command = { type = sleepevent which = 133011628 }
+	}
+
+	action = {
+		trigger = {
+			or = {
+				not = {
+					flag = 21demands
+				}
+				not = { participant = { country = JAP value = 1 } }
+			}
+		}
+		ai_chance = 0
+		name = EVT1914_133011624_ACTIONB #"Award the concessions to Southern China."
+		command = { type = relation which = UCH value = 100 }
+		command = { type = relation which = CHI value = 100 }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { type = sleepevent which = 133011623 }
+		command = { type = sleepevent which = 133011625 }
+		command = { type = sleepevent which = 133011626 }
+		command = { type = sleepevent which = 133011627 }
+		command = { type = sleepevent which = 133011628 }
+	}
+}
+
+# Versailles and C. Powers China.
+event = {
+	random = no
+	id = 133011625
+	tag = { FRA ENG RUS SOV JAP SER YUG }
+
+	trigger = {
+		or = {
+			exists = MAN # MUST HAPPEN AFTER MANCHUKUO IS CREATED (see Manchu Restoration)
+			flag = puyi_dead # No restoration possible.
+		}
+		and = {
+			or = {
+				event = 2002534 #Versailes
+				event = 2191514 #Mil. defeat
+				event = 2191520 #Abdication + Armistice
+				event = 2191532 #Early defeat
+			}
+			event = 2192507# st. germain
+		}
+		flag = alternate_axis
+		flag = beiyang_axis
+
+		or = {
+			and = {
+				country = FRA
+				participant = { country = FRA value = 1 }
+			}
+			and = {
+				country = ENG
+				participant = { country = ENG value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+			}
+			and = {
+				country = RUS
+				participant = { country = RUS value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+			}
+			and = {
+				country = SOV
+				participant = { country = SOV value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+			}
+			and = {
+				country = JAP
+				participant = { country = JAP value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+			}
+			and = {
+				country = SER
+				participant = { country = SER value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+				not = { participant = { country = JAP value = 1 } }
+			}
+			and = {
+				country = YUG
+				participant = { country = YUG value = 1 }
+				not = { participant = { country = FRA value = 1 } }
+				not = { participant = { country = ENG value = 1 } }
+				not = { participant = { country = RUS value = 1 } }
+				not = { participant = { country = SOV value = 1 } }
+				not = { participant = { country = JAP value = 1 } }
+				not = { participant = { country = SER value = 1 } }
+			}
+		}
+	}
+
+	name = EVT1914_133011625_NAME
+	desc = EVT1914_133011625_DESC
+
+	picture = "aar_versailles"
+	style = 2
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = {
+			event = 133011015
+			not = { participant = { country = JAP value = 2 } }
+		}
+		ai_chance = 100
+		name = EVT1914_133011623_ACTIONA #"Award the concessions to Japan (Historic)"
+		command = { type = relation which = JAP value = 100 }
+		command = { type = secedeprovince which = JAP value = 1331 when = 2}
+		command = { type = secedeprovince which = JAP value = 1328 when = 2}
+		command = { type = sleepevent which = 133011624 }
+		command = { type = sleepevent which = 133011623 }
+		command = { type = sleepevent which = 133011626 }
+		command = { type = sleepevent which = 133011627 }
+		command = { type = sleepevent which = 133011628 }
+	}
+
+	action = {
+		trigger = {
+			not = {
+				flag = 21demands
+			}
+			not = {
+				country = JAP
+			}
+			exists = MAN # sanity check.
+			not = { participant = { country = JAP value = 2 } }
+		}
+		ai_chance = 0
+		name = EVT1914_133011625_ACTIONB #"Insist on independent Manchu control"
+		command = { type = relation which = JAP value = 50 }
+		command = { type = secedeprovince which = MAN value = 1331 when = 2}
+		command = { type = secedeprovince which = MAN value = 1328 when = 2}
+		command = { type = sleepevent which = 133011624 }
+		command = { type = sleepevent which = 133011623 }
+		command = { type = sleepevent which = 133011626 }
+		command = { type = sleepevent which = 133011627 }
+		command = { type = sleepevent which = 133011628 }
+	}
+
+	action = {
+		trigger = {
+			or = {
+				participant = { country = JAP value = 2 }
+				flag = puyi_dead
+			}
+		}
+		ai_chance = 0
+		name = EVT1914_133011625_ACTIONC #"Leave it as is."
+		command = { type = sleepevent which = 133011624 }
+		command = { type = sleepevent which = 133011623 }
+		command = { type = sleepevent which = 133011626 }
+		command = { type = sleepevent which = 133011627 }
+		command = { type = sleepevent which = 133011628 }
+	}
+}
+
+# Central Powers Victory!
+
+# Default gives to Beiyang.
+# Versailles and Beiyang China.
+event = {
+	random = no
+	id = 133011626
+	tag = { U08 U09 OTT BUL ITA }
+
+	trigger = {
+		exists = UCH
+		event = 2191512 #Reverse Versailes
+		or = {
+			event = 2191555 #Russia defeated
+			event = 2007529 #SOV defeated
+			event = 2007530 #SOV defeated
+		}
+		OR= { 
+			NOT= { participant = { country = ENG value = 1 } } # ENG never joined the war
+			event = 2001546 #ENG Germany accepted our proposal - white peace
+			event = 2001540 #ENG Military defeat
+		}
+		not = { flag = beiyang_allies }
+		or = {
+			flag = beiyang_axis
+			not = { 
+				flag = beiyang_allies
+				flag = alternate_axis
+			}
+			not = { exists = CHI }
+		}
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+			}
+			and = {
+				country = ITA
+				participant = { country = ITA value = 2 }
+				not = {
+					participant = { country = U08 value = 2 }
+					participant = { country = U09 value = 2 }
+				}
+			}
+			and = {
+				country = BUL
+				participant = { country = BUL value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+			}
+			and = {
+				country = OTT
+				participant = { country = OTT value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+				not = { participant = { country = BUL value = 2 } }
+			}
+		}
+	}
+
+	name = EVT1914_133011623_NAME
+	desc = EVT1914_133011626_DESC
+	picture = "aar_versailles"
+	style = 2
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			NOT = { participant = { country = POR value = 1 } } 
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONA2 #"Take Hong Kong, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = UCH value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = UCH value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			participant = { country = POR value = 1 }
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONA #"Take Macao and Hong Kong, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = UCH value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = UCH value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1372 when = 2 } #Macao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1372 when = 2 } #Macao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1372 when = 2 } #Macao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1372 } #Macao
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			OR = {
+				participant = { country = JAP value = 1 }
+				event = 2011506 #JAP Leaving the Entente 
+			}
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONA3 #"Take Port Arthur and Hong Kong, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = UCH value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = UCH value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1219 } #Port Arthur
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = { # Temporarily disabled until automatic leave_alliance issue with subsequent events is fixed.
+		trigger = {
+			or = {
+				ai = no
+				flag = beiyang_axis
+			}
+			ai = yes
+			ai = no
+		}
+		ai_chance = 20
+		name = EVT1914_133011626_ACTIONB #"We welcome a new ally, return the concessions as a sign of goodwill."
+		command = { type = relation which = UCH value = 100 }
+		command = { type = relation which = CHI value = 100 }
+		command = { type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { type = secedeprovince which = UCH value = 1372 when = 2}
+		command = { type = secedeprovince which = UCH value = 1371 when = 2}
+		command = { type = alliance which = UCH when = 1 }
+		command = { trigger = { not = { flag = beiyang_axis } } type = setflag which = beiyang_axis }
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = removeclaim which = 1331 }
+		command = { type = removeclaim which = 1328 }
+		command = { type = removeclaim which = 1372 }
+		command = { type = removeclaim which = 1371 }
+		command = { type = removecore which = 1328 }
+		command = { type = removecore which = 1331 }
+		command = { type = removecore which = 1372 }
+		command = { type = removecore which = 1371 }
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = {
+		trigger = {
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			participant = { country = POR value = 1 }
+			OR = {
+				participant = { country = JAP value = 1 }
+				event = 2011506 #JAP Leaving the Entente 
+			}
+			not = {
+				ispuppet = UCH
+			}
+			not = {
+				or = {
+					control = { province = 1219 data = U08 } #Port Arthur
+					control = { province = 1219 data = U09 } #Port Arthur
+					control = { province = 1219 data = OTT } #Port Arthur
+					control = { province = 1219 data = BUL } #Port Arthur
+					control = { province = 1219 data = ITA } #Port Arthur
+					and = {
+						control = { province = 1219 data = UCH } #Port Arthur
+						participant = { country = UCH value = 2 }
+					}
+				}
+			}
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONC #"Take Macao, Hong Kong, and Port Arthur, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = UCH value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = UCH value = 1328 when = 2 } #Qingdao
+		#command = { type = alliance which = UCH when = 1 } # TODO
+		command = { trigger = { not = { flag = beiyang_axis } } type = setflag which = beiyang_axis }
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U08 or = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } } type = secedeprovince which = U08 value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 or = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } } type = secedeprovince which = U09 value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1372 when = 2 } #Macao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT or = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } } type = secedeprovince which = OTT value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1372 when = 2 } #Macao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL or = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } } type = secedeprovince which = BUL value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1372 when = 2 } #Macao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA or = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } } type = secedeprovince which = ITA value = 1219 when = 2} #Port Arthur
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1372 } #Macao
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = addclaim which = 1219 } #Port Arthur
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { type = relation which = JAP value = -50 }
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			NOT = { participant = { country = POR value = 1 } }
+		}
+		name = EVT1914_133011626_ACTIOND2 #"Keep Shandong, give Hong Kong"
+		ai_chance = 10
+		command = { type = relation which = UCH value = -5 }
+		command = { type = relation which = CHI value = -5 }
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1328 when = 2 } #Qingdao
+		command = { type = secedeprovince which = UCH value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1331 } #Yantai
+		command = { type = addclaim which = 1328 } #Qingdao
+		command = { type = removeclaim which = 1371 } #Hong Kong
+		command = { type = removecore which = 1371 } #Hong Kong
+	}
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			participant = { country = POR value = 1 }
+		}
+		name = EVT1914_133011626_ACTIOND #Keep Shandong, give Macao and Hong Kong
+		ai_chance = 10
+		command = { type = relation which = UCH value = -5 }
+		command = { type = relation which = CHI value = -5 }
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1328 when = 2 } #Qingdao
+		command = { type = secedeprovince which = UCH value = 1372 when = 2 } #Macao
+		command = { type = secedeprovince which = UCH value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1331  } #Yantai
+		command = { type = addclaim which = 1328  } #Qingdao
+		command = { type = removeclaim which = 1372 } #Macao
+		command = { type = removeclaim which = 1371 } #Hong Kong
+		command = { type = removecore which = 1372 } #Macao
+		command = { type = removecore which = 1371 } #Hong Kong
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = { flag = beiyang_axis }
+				not = { relation = { which = UCH value = 0 } }
+			}
+		}
+		ai_chance = 10
+		name = EVT1914_133011626_ACTIONE #"What right do they have to make demands of us? Take it all!"
+		command = { type = relation which = UCH value = -15 }
+		command = { type = relation which = CHI value = -15 }
+		command = { type = event which = 133011601 where = UCH when = 75 } # Trigger May Fourth Movement
+		command = { trigger = { country = U08 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U08 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U09 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U09 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = ITA OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = ITA value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = OTT OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = OTT value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = BUL OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = BUL value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 participant = { country = POR value = 1 } } type = secedeprovince which = U08 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U08 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U08 value = 1371 when = 2 } #Honk Kong
+		command = { trigger = { country = U08 OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = U08 value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = U09 participant = { country = POR value = 1 } } type = secedeprovince which = U09 value = 1372 when = 2} #Macao
+		command = { trigger = { country = U09 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U09 value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = U09 OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = U09 value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = OTT participant = { country = POR value = 1 } } type = secedeprovince which = OTT value = 1372 when = 2} #Macao
+		command = { trigger = { country = OTT OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = OTT value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = OTT OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = OTT value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = BUL participant = { country = POR value = 1 } } type = secedeprovince which = BUL value = 1372 when = 2} #Macao
+		command = { trigger = { country = BUL OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = BUL value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = BUL OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = BUL value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = ITA participant = { country = POR value = 1 } } type = secedeprovince which = ITA value = 1372 when = 2} #Macao
+		command = { trigger = { country = ITA OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = ITA value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = ITA OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = ITA value = 1219 when = 2} #Port Arthur
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { trigger = { OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = addclaim which = 1331 } #Yantai
+		command = { type = addclaim which = 1328 } #Qingdao
+		command = { trigger = { participant = { country = POR value = 1 } } type = addclaim which = 1372 } #Macao
+		command = { trigger = { OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = addclaim which = 1371 } #Honk Kong
+		command = { trigger = { OR = { participant = { country = JAP value = 1 } event = 2011506 } } type = addclaim which = 1219 } #Port Arthur
+	}
+}
+
+# Versailles and Alternate China.
+event = {
+	random = no
+	id = 133011627
+	tag = { U08 U09 OTT BUL ITA }
+
+	trigger = {
+		exists = CHI
+		event = 2191512 #Reverse Versailes
+		or = {
+			event = 2191555 #Russia defeated
+			event = 2007529 #SOV defeated
+			event = 2007530 #SOV defeated
+		}
+		OR= { 
+			NOT= { participant = { country = ENG value = 1 } } # ENG never joined the war
+			event = 2001546 #ENG Germany accepted our proposal - white peace
+			event = 2001540 #ENG Military defeat
+		}
+		not = { flag = alternate_allies }
+		or = {
+			and = {
+				not = { flag = beiyang_axis }
+				flag = alternate_axis
+			}
+			and = {
+				flag = beiyang_allies
+				not = { flag = alternate_allies }
+			}
+			not = { exists = UCH }
+		}
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+			}
+			and = {
+				country = ITA
+				participant = { country = ITA value = 2 }
+				not = {
+					participant = { country = U08 value = 2 }
+					participant = { country = U09 value = 2 }
+				}
+			}
+			and = {
+				country = BUL
+				participant = { country = BUL value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+			}
+			and = {
+				country = OTT
+				participant = { country = OTT value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+				not = { participant = { country = BUL value = 2 } }
+			}
+		}
+	}
+
+	name = EVT1914_133011624_NAME
+	desc = EVT1914_133011627_DESC
+	picture = "aar_versailles"
+	style = 2
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			NOT = { participant = { country = POR value = 1 } } 
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONA2 #"Take Hong Kong, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = CHI value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = CHI value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			participant = { country = POR value = 1 }
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONA #"Take Macao and Hong Kong, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = CHI value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = CHI value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1372 when = 2 } #Macao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1372 when = 2 } #Macao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1372 when = 2 } #Macao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1372 } #Macao
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			OR = {
+				participant = { country = JAP value = 1 }
+				event = 2011506 #JAP Leaving the Entente 
+			}
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONA3 #"Take Port Arthur and Hong Kong, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = CHI value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = CHI value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1219 } #Port Arthur
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = {
+		trigger = { #Temporarily disabled.
+			or = {
+				ai = no
+				flag = alternate_axis
+			}
+			ai = yes
+			ai = no
+		}
+		ai_chance = 20
+		name = EVT1914_133011626_ACTIONB #"We welcome a new ally, return the concessions as a sign of goodwill."
+		command = { type = relation which = UCH value = 100 }
+		command = { type = relation which = CHI value = 100 }
+		command = { type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { type = secedeprovince which = CHI value = 1372 when = 2}
+		command = { type = secedeprovince which = CHI value = 1371 when = 2}
+		command = { type = alliance which = CHI when = 1 }
+		command = { trigger = { not = { flag = alternate_axis } } type = setflag which = alternate_axis }
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = removeclaim which = 1331 }
+		command = { type = removeclaim which = 1328 }
+		command = { type = removeclaim which = 1372 }
+		command = { type = removeclaim which = 1371 }
+		command = { type = removecore which = 1328 }
+		command = { type = removecore which = 1331 }
+		command = { type = removecore which = 1372 }
+		command = { type = removecore which = 1371 }
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = {
+		trigger = {
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			participant = { country = POR value = 1 }
+			OR = {
+				participant = { country = JAP value = 1 }
+				event = 2011506 #JAP Leaving the Entente 
+			}
+			not = {
+				ispuppet = CHI
+			}
+			not = {
+				or = {
+					control = { province = 1219 data = U08 } #Port Arthur
+					control = { province = 1219 data = U09 } #Port Arthur
+					control = { province = 1219 data = OTT } #Port Arthur
+					control = { province = 1219 data = BUL } #Port Arthur
+					control = { province = 1219 data = ITA } #Port Arthur
+					and = {
+						control = { province = 1219 data = CHI } #Port Arthur
+						participant = { country = CHI value = 2 }
+					}
+				}
+			}
+		}
+		ai_chance = 30
+		name = EVT1914_133011626_ACTIONC #"Take Macao, Hong Kong, and Port Arthur, give Shandong"
+		command = { type = relation which = UCH value = 25 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = secedeprovince which = UCH value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = UCH value = 1328 when = 2 } #Qingdao
+		#command = { type = alliance which = CHI when = 1 } # TODO
+		command = { trigger = { not = { flag = alternate_axis } } type = setflag which = alternate_axis }
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U08 or = { control = { province = 1219 data = CHI } control = { province = 1219 data = JAP } } } type = secedeprovince which = U08 value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = U09 or = { control = { province = 1219 data = CHI } control = { province = 1219 data = JAP } } } type = secedeprovince which = U09 value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1372 when = 2 } #Macao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = OTT or = { control = { province = 1219 data = CHI } control = { province = 1219 data = JAP } } } type = secedeprovince which = OTT value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1372 when = 2 } #Macao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = BUL or = { control = { province = 1219 data = CHI } control = { province = 1219 data = JAP } } } type = secedeprovince which = BUL value = 1219 when = 2 } #Port Arthur
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1372 when = 2 } #Macao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1371 when = 2 } #Hong Kong
+		command = { trigger = { country = ITA or = { control = { province = 1219 data = CHI } control = { province = 1219 data = JAP } } } type = secedeprovince which = ITA value = 1219 when = 2 } #Port Arthur
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1372 } #Macao
+		command = { type = addclaim which = 1371 } #Hong Kong
+		command = { type = addclaim which = 1219 } #Port Arthur
+		command = { type = removeclaim which = 1331 } #Yantai
+		command = { type = removeclaim which = 1328 } #Qingdao
+		command = { type = removecore which = 1331 } #Yantai
+		command = { type = removecore which = 1328 } #Qingdao
+		command = { type = relation which = JAP value = -50 }
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			NOT = { participant = { country = POR value = 1 } }
+		}
+		name = EVT1914_133011626_ACTIOND2 #"Keep Shandong, give Hong Kong"
+		ai_chance = 10
+		command = { type = relation which = UCH value = -5 }
+		command = { type = relation which = CHI value = -5 }
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1328 when = 2 } #Qingdao
+		command = { type = secedeprovince which = CHI value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1331 } #Yantai
+		command = { type = addclaim which = 1328 } #Qingdao
+		command = { type = removeclaim which = 1371 } #Hong Kong
+		command = { type = removecore which = 1371 } #Hong Kong
+	}
+	action = {
+		trigger = { 
+			OR = { participant = { country = ENG value = 1 } event = 2001540 }
+			participant = { country = POR value = 1 }
+		}
+		name = EVT1914_133011626_ACTIOND #"Keep Shandong, give Macao and Hong Kong."
+		ai_chance = 10
+		command = { type = relation which = UCH value = -5 }
+		command = { type = relation which = CHI value = -5 }
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1328 when = 2 } #Qingdao
+		command = { type = secedeprovince which = CHI value = 1372 when = 2 } #Macao
+		command = { type = secedeprovince which = CHI value = 1371 when = 2 } #Hong Kong
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { type = addclaim which = 1331 } #Yantai
+		command = { type = addclaim which = 1328 } #Qingdao
+		command = { type = removeclaim which = 1372 } #Macao
+		command = { type = removeclaim which = 1371 } #Hong Kong
+		command = { type = removecore which = 1372 } #Macao
+		command = { type = removecore which = 1371 } #Hong Kong
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = { flag = alternate_axis }
+				not = { relation = { which = CHI value = 0 } }
+			}
+		}
+		ai_chance = 10
+		name = EVT1914_133011626_ACTIONE #"What right do they have to make demands of us? Take it all!"
+		command = { type = relation which = UCH value = -15 }
+		command = { type = relation which = CHI value = -15 }
+		command = { type = event which = 133011601 where = CHI when = 75 } # Trigger May Fourth Movement
+		command = { trigger = { country = U08 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U08 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U08 } type = secedeprovince which = U08 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U09 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U09 value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = U09 } type = secedeprovince which = U09 value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = ITA OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = ITA value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = ITA } type = secedeprovince which = ITA value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = OTT OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = OTT value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = OTT } type = secedeprovince which = OTT value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = BUL OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = BUL value = 1331 when = 2 } #Yantai
+		command = { trigger = { country = BUL } type = secedeprovince which = BUL value = 1328 when = 2 } #Qingdao
+		command = { trigger = { country = U08 participant = { country = POR value = 1 } } type = secedeprovince which = U08 value = 1372 when = 2 } #Macao
+		command = { trigger = { country = U08 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U08 value = 1371 when = 2 } #Honk Kong
+		command = { trigger = { country = U08 OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = U08 value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = U09 participant = { country = POR value = 1 } } type = secedeprovince which = U09 value = 1372 when = 2} #Macao
+		command = { trigger = { country = U09 OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = U09 value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = U09 OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = U09 value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = OTT participant = { country = POR value = 1 } } type = secedeprovince which = OTT value = 1372 when = 2} #Macao
+		command = { trigger = { country = OTT OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = OTT value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = OTT OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = OTT value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = BUL participant = { country = POR value = 1 } } type = secedeprovince which = BUL value = 1372 when = 2} #Macao
+		command = { trigger = { country = BUL OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = BUL value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = BUL OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = BUL value = 1219 when = 2} #Port Arthur
+		command = { trigger = { country = ITA participant = { country = POR value = 1 } } type = secedeprovince which = ITA value = 1372 when = 2} #Macao
+		command = { trigger = { country = ITA OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = ITA value = 1371 when = 2} #Honk Kong
+		command = { trigger = { country = ITA OR = { control = { province = 1219 data = UCH } control = { province = 1219 data = JAP } } OR = { participant = { country = JAP value = 1 } event = 2011506 }	} type = secedeprovince which = ITA value = 1219 when = 2} #Port Arthur
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011628 } #Versailles and T. Entente China
+		command = { trigger = { OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = addclaim which = 1331 } #Yantai
+		command = { type = addclaim which = 1328 } #Qingdao
+		command = { trigger = { participant = { country = POR value = 1 } } type = addclaim which = 1372 } #Macao
+		command = { trigger = { OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = addclaim which = 1371 } #Honk Kong
+		command = { trigger = { OR = { participant = { country = JAP value = 1 } event = 2011506 } } type = addclaim which = 1219 } #Port Arthur
+	}
+}
+
+# Versailles and T. Entente China.
+event = {
+	random = no
+	id = 133011628
+	tag = { U08 U09 ITA BUL OTT }
+
+	trigger = {
+		or = {
+			exists = MAN # MUST HAPPEN AFTER QING IS CREATED (see Qing Restoration)
+			flag = puyi_dead # No restoration possible.
+		}
+		event = 2191512 #Reverse Versailes
+		or = {
+			event = 2191555 #Russia defeated
+			event = 2007529 #SOV defeated
+			event = 2007530 #SOV defeated
+		}
+		OR= { 
+			NOT= { participant = { country = ENG value = 1 } } # ENG never joined the war
+			event = 2001546 #ENG Germany accepted our proposal - white peace
+			event = 2001540 #ENG Military defeat
+		}
+		flag = alternate_allies
+		flag = beiyang_allies
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+			}
+			and = {
+				country = ITA
+				participant = { country = ITA value = 2 }
+				not = {
+					participant = { country = U08 value = 2 }
+					participant = { country = U09 value = 2 }
+				}
+			}
+			and = {
+				country = BUL
+				participant = { country = BUL value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+			}
+			and = {
+				country = OTT
+				participant = { country = OTT value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+				not = { participant = { country = BUL value = 2 } }
+			}
+		}
+	}
+
+	name = EVT1914_133011628_NAME
+	desc = EVT1914_133011628_DESC
+
+	picture = "aar_versailles"
+	style = 2
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = {
+			event = 133011015
+			participant = { country = JAP value = 2 }
+		}
+		ai_chance = 20
+		name = EVT1914_133011623_ACTIONA #"Award the concessions to Japan (Historic)"
+		command = { type = relation which = JAP value = 100 }
+		command = { trigger = { OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = JAP value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = JAP value = 1328 when = 2 } #Qingdao
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = {
+		trigger = {
+			exists = MAN # sanity check.
+			not = { participant = { country = JAP value = 2 } }
+		}
+		ai_chance = 50
+		name = EVT1914_133011628_ACTIONB #"Agree to the Qing's demands"
+		command = { trigger = { OR = { participant = { country = ENG value = 1 } event = 2001540 } } type = secedeprovince which = MAN value = 1331 when = 2 } #Yantai
+		command = { type = secedeprovince which = MAN value = 1328 when = 2 } #Qingdao
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+		command = { trigger = { division_exists = { type = 10100 id = 180 } } type = unlock_division which = 10100 value = 180 }
+	}
+
+	action = {
+		ai_chance = 10
+		name = EVT1914_133011625_ACTIONC #"Leave it as is."
+		command = { trigger = { exists = MAN not = { ispuppet = MAN } } type = relation which = MAN value = -20 }
+		command = { type = sleepevent which = 133011623 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011624 } #Versailles and Alternate China
+		command = { type = sleepevent which = 133011625 } #Versailles and C. Powers China
+		command = { type = sleepevent which = 133011626 } #Versailles and Beiyang China
+		command = { type = sleepevent which = 133011627 } #Versailles and Alternate China
+	}
+}
+
+###################################
+# May Fourth Movement Event Chain #
+###################################
+
+# May Fourth Movement
+event = {
+	id = 133011601
+	random = no
+	#country = UCH
+	
+	# Triggered
+	
+	name = EVT1914_133011601_NAME
+	desc = EVT1914_133011601_DESC
+	
+	picture = "ccip_versaillesprotest"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_UNFORTUNATE
+		command = { type = dissent value = 5 }
+		command = { trigger = { country = UCH } type = event which = 133011602 where = UCH when = 3 }
+		command = { trigger = { country = CHI } type = event which = 133011602 where = CHI when = 3 }
+	}
+}
+
+# May Fourth Movement Part 2
+event = {
+	id = 133011602
+	persistent = yes
+	one_action = yes
+	random = no
+	#country = UCH
+	
+	#Triggered
+
+	name = EVT1914_133011602_NAME
+	desc = EVT1914_133011601_DESC
+
+	picture = "ccip_may4riot"
+	style = 2
+	
+	action = {
+		trigger = {
+			not = { dissent = 60 }
+		}
+		name = ACTION_NAME_CURSES
+		command = { type = dissent value = 5 }
+		command = { type = industrial_modifier which = total value = -2 }
+		command = { trigger = { country = UCH } type = event which = 133011602 where = UCH when = 3 }
+		command = { trigger = { country = CHI } type = event which = 133011602 where = CHI when = 3 }
+		command = { trigger = { flag = may4_14 } type = setflag which = may4_15 }
+		command = { trigger = { flag = may4_13 } type = setflag which = may4_14 }
+		command = { trigger = { flag = may4_12 } type = setflag which = may4_13 }
+		command = { trigger = { flag = may4_11 } type = setflag which = may4_12 }
+		command = { trigger = { flag = may4_10 } type = setflag which = may4_11 }
+		command = { trigger = { flag = may4_9 } type = setflag which = may4_10 }
+		command = { trigger = { flag = may4_8 } type = setflag which = may4_9 }
+		command = { trigger = { flag = may4_7 } type = setflag which = may4_8 }
+		command = { trigger = { flag = may4_6 } type = setflag which = may4_7 }
+		command = { trigger = { flag = may4_5 } type = setflag which = may4_6 }
+		command = { trigger = { flag = may4_4 } type = setflag which = may4_5 }
+		command = { trigger = { flag = may4_3 } type = setflag which = may4_4 }
+		command = { trigger = { flag = may4_2 } type = setflag which = may4_3 }
+		command = { trigger = { flag = may4_1 } type = setflag which = may4_2 }
+		command = { trigger = { not = { flag = may4_1 } } type = setflag which = may4_1 }
+		command = { trigger = { ai = yes } type = supplies value = 500 } # Prevent death spirals for AI.
+	}
+	
+	action = {
+		trigger = {
+			dissent = 60
+		}
+		name = EVT1914_133011005_ACTIONA #"Something must be done!"
+		command = { trigger = { country = UCH } type = event which = 133011610 where = UCH when = 2 }
+		command = { trigger = { country = CHI } type = event which = 133011610 where = CHI when = 2 }
+	}
+}
+
+# May Fourth Movement Part 3/Shangdong Problem
+event = {
+	id = 133011610
+	random = no
+	#country = UCH
+	
+	#Triggered
+
+	name = EVT1914_133011610_NAME
+	desc = EVT1914_133011610_DESC
+
+	picture = "ccip_may4"
+	style = 2
+	
+	action = {
+		ai_chance = 100
+		name = EVT1914_133011610_ACTIONA #"Protest the Treaty of Versailles"
+		command = { type = dissent value = -40 }
+		command = { trigger = { ai = yes } type = supplies value = 5000 } # Tide AI over until IC regained from partisans.
+		command = { trigger = { participant = { country = UCH value = 1 } event = 2002534 country = UCH } type = leave_alliance when = 1 }
+		command = { trigger = { participant = { country = CHI value = 1 } event = 2002534 country = CHI } type = leave_alliance when = 1 }
+		command = { trigger = { participant = { country = CHI value = 2 } event = 2191512 country = CHI } type = leave_alliance when = 1 }
+		command = { trigger = { participant = { country = UCH value = 2 } event = 2191512 country = UCH } type = leave_alliance when = 1 }
+		command = { trigger = { participant = { country = JAP value = 1 } event = 2002534 } type = relation which = JAP value = -100 }
+		command = { trigger = { participant = { country = USA value = 1 } event = 2002534 } type = relation which = USA value = -100 }
+		command = { trigger = { participant = { country = ENG value = 1 } event = 2002534 } type = relation which = ENG value = -100 }
+		command = { trigger = { participant = { country = FRA value = 1 } event = 2002534 } type = relation which = FRA value = -100 }
+		command = { trigger = { participant = { country = RUS value = 1 } event = 2002534 } type = relation which = RUS value = -100 }
+		command = { trigger = { participant = { country = SOV value = 1 } event = 2002534 } type = relation which = SOV value = -100 }
+		command = { trigger = { participant = { country = SER value = 1 } event = 2002534 } type = relation which = SER value = -100 }
+		command = { trigger = { participant = { country = ROM value = 1 } event = 2002534 } type = relation which = ROM value = -100 }
+		command = { trigger = { participant = { country = YUG value = 1 } event = 2002534 } type = relation which = YUG value = -100 }
+		command = { trigger = { participant = { country = U08 value = 2 } event = 2191512 } type = relation which = U08 value = -100 }
+		command = { trigger = { participant = { country = U09 value = 2 } event = 2191512 } type = relation which = U09 value = -100 }
+		command = { trigger = { participant = { country = BUL value = 2 } event = 2191512 } type = relation which = BUL value = -100 }
+		command = { trigger = { participant = { country = ITA value = 2 } event = 2191512 } type = relation which = ITA value = -100 }
+		command = { trigger = { participant = { country = OTT value = 2 } event = 2191512 } type = relation which = OTT value = -100 }
+		command = { trigger = { country = UCH } type = event which = 133011611 where = UCH when = 30 }
+		command = { trigger = { country = CHI } type = event which = 133011611 where = CHI when = 30 }
+		command = { type = event which = 133011629 where = USA when = 5}
+	}
+	
+	action = { # Fake Choice.
+		ai_chance = 0
+		name = EVT1914_133011625_ACTIONC #"Leave it as it is"
+		command = { type = dissent value = 100 }
+		command = { trigger = { participant = { country = JAP value = 1 } event = 2002534 } type = relation which = JAP value = 100 }
+		command = { trigger = { participant = { country = USA value = 1 } event = 2002534 } type = relation which = USA value = 100 }
+		command = { trigger = { participant = { country = ENG value = 1 } event = 2002534 } type = relation which = ENG value = 100 }
+		command = { trigger = { participant = { country = FRA value = 1 } event = 2002534 } type = relation which = FRA value = 100 }
+		command = { trigger = { participant = { country = RUS value = 1 } event = 2002534 } type = relation which = RUS value = 100 }
+		command = { trigger = { participant = { country = SOV value = 1 } event = 2002534 } type = relation which = SOV value = 100 }
+		command = { trigger = { participant = { country = SER value = 1 } event = 2002534 } type = relation which = SER value = 100 }
+		command = { trigger = { participant = { country = ROM value = 1 } event = 2002534 } type = relation which = ROM value = 100 }
+		command = { trigger = { participant = { country = YUG value = 1 } event = 2002534 } type = relation which = YUG value = 100 }
+		command = { trigger = { participant = { country = U08 value = 2 } event = 2191512 } type = relation which = U08 value = 100 }
+		command = { trigger = { participant = { country = U09 value = 2 } event = 2191512 } type = relation which = U09 value = 100 }
+		command = { trigger = { participant = { country = BUL value = 2 } event = 2191512 } type = relation which = BUL value = 100 }
+		command = { trigger = { participant = { country = ITA value = 2 } event = 2191512 } type = relation which = ITA value = 100 }
+		command = { trigger = { participant = { country = OTT value = 2 } event = 2191512 } type = relation which = OTT value = 100 }
+	}
+}
+
+####################
+# USA Intervention #
+####################
+
+# Chinese Concessions: USA Intervention?
+event = {
+	id = 133011629
+	random = no
+	country = USA
+
+	#Triggered
+
+	name = EVT1914_133011629_NAME
+	desc = EVT1914_133011629_DESC
+
+	picture = "congress"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = {
+					or = {
+						and = {
+							event = 2002534
+							participant = { country = USA value = 1 }
+						}
+						and = {
+							event = 2191512
+							participant = { country = USA value = 2 }
+						}
+					}
+				}
+			}
+		}
+		name = ACTION_NAME_YES
+		ai_chance = 95
+		command = { trigger = { event = 2002534 } type = event which = 133011630 where = JAP when = 60 } # Negotiation time.
+		command = { trigger = { event = 2191512 participant = { country = U08 value = 2 } } type = event which = 133011635 where = U08 when = 60 }
+		command = { trigger = { event = 2191512 participant = { country = U09 value = 2 } not = { participant = { country = U08 value = 2 } } } type = event which = 133011635 where = U09 when = 60 }
+		command = { trigger = { event = 2191512 participant = { country = ITA value = 2 } not = { participant = { country = U09 value = 2 } participant = { country = U08 value = 2 } } } type = event which = 133011635 where = ITA when = 60 }
+		command = { trigger = { event = 2191512 participant = { country = BUL value = 2 } not = { participant = { country = ITA value = 2 } participant = { country = U09 value = 2 } participant = { country = U08 value = 2 } } } type = event which = 133011635 where = BUL when = 60 }
+		command = { trigger = { event = 2191512 participant = { country = OTT value = 2 } not = { participant = { country = BUL value = 2 } participant = { country = ITA value = 2 } participant = { country = U09 value = 2 } participant = { country = U08 value = 2 } } } type = event which = 133011635 where = OTT when = 60 }
+		command = { type = relation which = UCH value = 50 }
+		command = { type = relation which = CHI value = 50 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+
+	action = {
+		name = ACTION_NAME_NO
+		ai_chance = 5
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = setflag which = shangdong_noint }
+	}
+}
+
+# The Shangdong Problem: USA Intervention
+event = {
+	id = 133011630
+	random = no
+	country = JAP
+
+	# Triggered
+
+	name = EVT1914_133011629_NAME
+	desc = EVT1914_133011630_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 90
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { type = removeclaim which = 1331 }
+		command = { type = removeclaim which = 1328 }
+		command = { trigger = { country = CHI exists = JAP } type = trade which = CHI where = JAP money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = UCH exists = JAP } type = trade which = UCH where = JAP money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { type = sleepevent which = 133011636 }
+		command = { type = sleepevent which = 133011632 }
+		command = { type = sleepevent which = 133011633 }
+		command = { type = sleepevent which = 133011637 }
+	}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				atwar = no
+			}
+		}
+		name = ACTION_NAME_REFUSE
+		ai_chance = 10
+		command = { type = event which = 133011631 where = USA when = 5 }
+		command = { type = relation which = USA value = -15 }
+		command = { type = relation which = UCH value = -15 }
+		command = { type = relation which = CHI value = -15 }
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 133011636 }
+		command = { type = sleepevent which = 133011637 }
+	}
+}
+
+# The China Problem: USA Intervention
+event = {
+	id = 133011635
+	random = no
+	tag = { U08 U09 }
+
+	#Triggered
+
+	name = EVT1914_133011629_NAME
+	desc = EVT1914_133011630_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_ACCEPT
+		ai_chance = 70
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { trigger = { control = { province = 1371 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1371 when = 2 }
+		command = { trigger = { control = { province = 1372 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1372 when = 2 }
+		command = { trigger = { control = { province = 1219 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1219 when = 2 }
+		command = { trigger = { control = { province = 1371 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1371 when = 2 }
+		command = { trigger = { control = { province = 1372 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1372 when = 2 }
+		command = { trigger = { control = { province = 1219 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1219 when = 2 }
+		command = { type = removeclaim which = 1331 }
+		command = { type = removeclaim which = 1328 }
+		command = { type = removeclaim which = 1372 }
+		command = { type = removeclaim which = 1371 }
+		command = { type = removeclaim which = 1219 }
+		command = { trigger = { country = U08 or = { event = 133011624 event = 133011627 } } type = trade which = CHI where = U08 money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = U08 or = { event = 133011623 event = 133011626 } } type = trade which = UCH where = U08 money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = U09 or = { event = 133011624 event = 133011627 } } type = trade which = CHI where = U09 money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = U09 or = { event = 133011623 event = 133011626 } } type = trade which = UCH where = U09 money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = ITA or = { event = 133011624 event = 133011627 } } type = trade which = CHI where = ITA money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = ITA or = { event = 133011623 event = 133011626 } } type = trade which = UCH where = ITA money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = BUL or = { event = 133011624 event = 133011627 } } type = trade which = CHI where = BUL money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = BUL or = { event = 133011623 event = 133011626 } } type = trade which = UCH where = BUL money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = OTT or = { event = 133011624 event = 133011627 } } type = trade which = CHI where = OTT money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { trigger = { country = OTT or = { event = 133011623 event = 133011626 } } type = trade which = UCH where = OTT money = -1 energy = -10 metal = -1 rare_materials = -1 supplies = -5 when = 9000 value = 1 }
+		command = { type = sleepevent which = 133011636 }
+		command = { type = sleepevent which = 133011632 }
+		command = { type = sleepevent which = 133011633 }
+		command = { type = sleepevent which = 133011637 }
+		}
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				atwar = no
+			}
+		}
+		ai_chance = 30
+		name = ACTION_NAME_REFUSE
+		command = { type = event which = 133011639 where = USA when = 5 }
+		command = { type = relation which = USA value = -15 }
+		command = { type = relation which = UCH value = -15 }
+		command = { type = relation which = CHI value = -15 }
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 133011632 }
+		command = { type = sleepevent which = 133011633 }
+	}
+}
+
+#########################
+# Intervention Rejected #
+#########################
+
+# Economic Sanctions against Japan
+event = {
+	id = 133011631
+	country = USA
+	random = no
+	
+	#Triggered
+
+	name = EVT1914_133011631_NAME
+	desc = EVT1914_133011631_DESC
+
+	picture = "congress"
+	style = 2
+
+	action = {
+		name = EVT1914_133011631_ACTIONA #"Self Determination must be respected"
+		ai_chance = 90
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = JAP value = -15 }
+		command = { type = embargo which = USA where = JAP value = 3 }
+	}
+
+	action = {
+		name = ACTION_NAME_NO_NEED
+		ai_chance = 10
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = JAP value = 15 }
+	}
+}
+# Economic Sanctions against the Central Powers
+event = {
+	id = 133011639
+	country = USA
+	random = no
+	
+	#Triggered
+
+	name = EVT1914_133011639_NAME
+	desc = EVT1914_133011639_DESC
+
+	picture = "congress"
+	style = 2
+
+	action = {
+		name = EVT1914_133011631_ACTIONA #"Self Determination must be respected"
+		ai_chance = 90
+		command = { type = domestic which = interventionism value = 1 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = -15 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = embargo which = USA where = U08 value = 3 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = -15 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = embargo which = USA where = U09 value = 3 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = -15 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = embargo which = USA where = ITA value = 3 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = relation which = BUL value = -15 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = embargo which = USA where = BUL value = 3 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = relation which = OTT value = -15 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = embargo which = USA where = OTT value = 3 }
+	}
+
+	action = {
+		name = ACTION_NAME_NO_NEED
+		ai_chance = 10
+		command = { type = domestic which = interventionism value = -1 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = 15 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = 15 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = 15 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = relation which = BUL value = 15 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = relation which = OTT value = 15 }
+	}
+}
+
+# The Shangdong Problem: Return Shangdong to China
+event = {
+	id = 133011632
+	country = JAP
+	random = no
+
+	decision = {
+		or = {
+			event = 133011631
+			and = {
+				flag = shangdong_noint
+				event = 2002534
+			}
+		}
+		not = { ispuppet = JAP }
+	}
+
+	decision_trigger = {
+		not = { war = { country = CHI } }
+		not = { war = { country = UCH } }
+	}
+
+	trigger = {
+		or = {
+			event = 133011631
+			and = {
+				flag = shangdong_noint
+				event = 2002534
+			}
+		}
+		not = { ispuppet = JAP }
+		not = { war = { country = CHI } }
+		not = { war = { country = UCH } }
+		random = 15
+	}
+
+	name = EVT1914_133011632_NAME
+	desc = EVT1914_133011632_DESC
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1927 }
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_OK
+		ai_chance = 70
+		command = { type = relation which = USA value = 30 }
+		command = { type = relation which = CHI value = 30 }
+		command = { type = relation which = UCH value = 30 }
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { type = removeclaim which = 1331 }
+		command = { type = removeclaim which = 1328 }
+		command = { type = sleepevent which = 133011633 }
+		command = { type = embargo which = USA where = JAP value = 0 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 30
+		name = ACTION_NAME_NEVER
+		command = { }
+	}
+	
+}
+
+# The China Problem: Return Concessions to China
+event = {
+	id = 133011636
+	tag = { U08 U09 ITA BUL OTT }
+	random = no
+
+	decision = {
+		or = {
+			event = 133011639
+			and = {
+				flag = shangdong_noint
+				event = 2191512
+			}
+		}
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+			}
+			and = {
+				country = ITA
+				participant = { country = ITA value = 2 }
+				not = {
+					participant = { country = U08 value = 2 }
+					participant = { country = U09 value = 2 }
+				}
+			}
+			and = {
+				country = BUL
+				participant = { country = BUL value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+			}
+			and = {
+				country = OTT
+				participant = { country = OTT value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+				not = { participant = { country = BUL value = 2 } }
+			}
+		}
+		not = { 
+			or = {
+				and = {
+					country = U08
+					ispuppet = U08
+				}
+				and = {
+					country = U09
+					ispuppet = U09
+				}
+				and = {
+					country = ITA
+					ispuppet = ITA
+				}
+				and = {
+					country = BUL
+					ispuppet = BUL
+				}
+				and = {
+					country = OTT
+					ispuppet = OTT
+				}
+			}
+		}
+		not = { flag = EVT_133011636 }
+	}
+
+	decision_trigger = {
+		not = { war = { country = CHI } }
+		not = { war = { country = UCH } }
+	}
+
+	trigger = {
+		or = {
+			event = 133011639
+			and = {
+				flag = shangdong_noint
+				event = 2191512
+			}
+		}
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+			}
+			and = {
+				country = ITA
+				participant = { country = ITA value = 2 }
+				not = {
+					participant = { country = U08 value = 2 }
+					participant = { country = U09 value = 2 }
+				}
+			}
+			and = {
+				country = BUL
+				participant = { country = BUL value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+			}
+			and = {
+				country = OTT
+				participant = { country = OTT value = 2 }
+				not = { participant = { country = U08 value = 2 } }
+				not = { participant = { country = U09 value = 2 } }
+				not = { participant = { country = ITA value = 2 } }
+				not = { participant = { country = BUL value = 2 } }
+			}
+		}
+		not = { 
+			or = {
+				and = {
+					country = U08
+					ispuppet = U08
+				}
+				and = {
+					country = U09
+					ispuppet = U09
+				}
+				and = {
+					country = ITA
+					ispuppet = ITA
+				}
+				and = {
+					country = BUL
+					ispuppet = BUL
+				}
+				and = {
+					country = OTT
+					ispuppet = OTT
+				}
+			}
+		}
+		not = { war = { country = CHI } }
+		not = { war = { country = UCH } }
+		random = 10
+		not = { flag = EVT_133011636 }
+	}
+
+	name = EVT1914_133011632_NAME
+	desc = EVT1914_133011632_DESC
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1927 }
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_OK
+		ai_chance = 70
+		command = { type = relation which = USA value = 30 }
+		command = { type = relation which = CHI value = 30 }
+		command = { type = relation which = UCH value = 30 }
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { trigger = { control = { province = 1371 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1371 when = 2 }
+		command = { trigger = { control = { province = 1372 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1372 when = 2 }
+		command = { trigger = { control = { province = 1219 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1219 when = 2 }
+		command = { trigger = { control = { province = 1371 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1371 when = 2 }
+		command = { trigger = { control = { province = 1372 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1372 when = 2 }
+		command = { trigger = { control = { province = 1219 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1219 when = 2 }
+		command = { type = removeclaim which = 1331 }
+		command = { type = removeclaim which = 1328 }
+		command = { type = removeclaim which = 1372 }
+		command = { type = removeclaim which = 1371 }
+		command = { type = removeclaim which = 1219 }
+		command = { type = sleepevent which = 133011637 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = embargo which = USA where = U08 value = 0 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = embargo which = USA where = U09 value = 0 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = embargo which = USA where = ITA value = 0 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = embargo which = USA where = BUL value = 0 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = embargo which = USA where = OTT value = 0 }
+		command = { type = setflag which = EVT_133011636 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 30
+		name = ACTION_NAME_NEVER
+		command = { type = setflag which = EVT_133011636 }
+	}
+
+}
+
+# The Shangdong Problem: Force Return of Shangdong
+event = {
+	id = 133011633
+	tag = { CHI UCH }
+	random = no
+
+	decision = {
+		or = {
+			event = 133011631
+			and = {
+				flag = shangdong_noint
+				event = 2002534
+			}
+		}
+		or = {
+			and = {
+				or = { 
+					event = 133011623
+					event = 133011626
+				}
+				country = UCH
+			}
+			and = {
+				or = { 
+					event = 133011624
+					event = 133011627
+				}
+				country = CHI
+			}
+		}
+		not = { flag = EVT_133011633 }
+	}
+
+	decision_trigger = {
+		not = { war = { country = JAP } }
+	}
+
+	trigger = {
+		or = {
+			event = 133011631
+			and = {
+				flag = shangdong_noint
+				event = 2002534
+			}
+		}
+		not = { war = { country = JAP } }
+		or = {
+			and = {
+				or = { 
+					event = 133011623
+					event = 133011626
+				}
+				country = UCH
+			}
+			and = {
+				or = { 
+					event = 133011624
+					event = 133011627
+				}
+				country = CHI
+			}
+		}
+		random = 25
+		not = { flag = EVT_133011633 }
+	}
+
+	name = EVT1914_133011633_NAME
+	desc = EVT1914_133011633_DESC
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1927 }
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "ccip_versaillesprotest"
+	style = 2
+
+	action = {
+		name = EVT1914_133011633_ACTIONA #"Fund Partisans and hope for the best"
+		command = { type = dissent value = -5 }
+		command = { type = relation which = USA value = -5 }
+		command = { type = relation which = JAP value = -20 }
+		command = { type = event which = 133011634 where = JAP when = 25 }
+		command = { type = sleepevent which = 133011632 }
+		command = { type = setflag which = EVT_133011633 }
+		command = { type = setflag which = EVT_133011637 }
+	}
+	
+}
+
+# The China Problem: Force Return of Concessions
+event = {
+	id = 133011637
+	tag = { CHI UCH }
+	random = no
+
+	decision = {
+		or = {
+			event = 133011639
+			and = {
+				flag = shangdong_noint
+				event = 2191512
+			}
+		}
+		or = {
+			and = {
+				or = {
+					event = 133011623
+					event = 133011626
+				}
+				country = UCH
+			}
+			and = {
+				or = {
+					event = 133011624
+					event = 133011627
+				}
+				country = CHI
+			}
+		}
+		not = { flag = EVT_133011637 }
+	}
+
+	decision_trigger = {
+		not = { war = { country = U08 } participant = { country = U08 value = 2 } }
+		not = { war = { country = U09 } participant = { country = U09 value = 2 } }
+		not = { war = { country = ITA } participant = { country = ITA value = 2 } }
+		not = { war = { country = BUL } participant = { country = BUL value = 2 } }
+		not = { war = { country = OTT } participant = { country = OTT value = 2 } }
+	}
+
+	trigger = {
+		or = {
+			event = 133011639
+			and = {
+				flag = shangdong_noint
+				event = 2191512
+			}
+		}
+		not = { war = { country = U08 } participant = { country = U08 value = 2 } }
+		not = { war = { country = U09 } participant = { country = U09 value = 2 } }
+		not = { war = { country = ITA } participant = { country = ITA value = 2 } }
+		not = { war = { country = BUL } participant = { country = BUL value = 2 } }
+		not = { war = { country = OTT } participant = { country = OTT value = 2 } }
+		or = {
+			and = {
+				or = { 
+					event = 133011623
+					event = 133011626
+				}
+				country = UCH
+			}
+			and = {
+				or = { 
+					event = 133011624
+					event = 133011627
+				}
+				country = CHI
+			}
+		}
+		random = 25
+		not = { flag = EVT_133011637 }
+	}
+
+	name = EVT1914_133011633_NAME
+	desc = EVT1914_133011633_DESC
+
+	date = { day = 5 month = july year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1927 }
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "ccip_versaillesprotest"
+	style = 2
+
+	action = {
+		name = EVT1914_133011633_ACTIONA #"Fund Partisans and hope for the best"
+		command = { type = dissent value = -5 }
+		command = { type = relation which = USA value = -5 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = relation which = U08 value = -20 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = relation which = U09 value = -20 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = relation which = BUL value = -20 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = relation which = ITA value = -20 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = relation which = OTT value = -20 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = event which = 133011638 where = U08 when = 25 }
+		command = { trigger = { participant = { country = U09 value = 2 } not = { participant = { country = U08 value = 2 } } } type = event which = 133011638 where = U09 when = 25 }
+		command = { trigger = { participant = { country = ITA value = 2 } not = { participant = { country = U09 value = 2 } participant = { country = U08 value = 2 } } } type = event which = 133011638 where = ITA when = 25 }
+		command = { trigger = { participant = { country = BUL value = 2 } not = { participant = { country = ITA value = 2 } participant = { country = U09 value = 2 } participant = { country = U08 value = 2 } } } type = event which = 133011638 where = BUL when = 25 }
+		command = { trigger = { participant = { country = OTT value = 2 } not = { participant = { country = OTT value = 2 } participant = { country = ITA value = 2 } participant = { country = U09 value = 2 } participant = { country = U08 value = 2 } } } type = event which = 133011638 where = OTT when = 25 }
+		command = { type = sleepevent which = 133011636 }
+		command = { type = setflag which = EVT_133011633 }
+		command = { type = setflag which = EVT_133011637 }
+	}
+	
+}
+
+############################
+# Shangdong Incident Peace #
+############################
+
+# The Shangdong Incident: Resolution
+event = {
+	id = 133011634
+	random = no
+	one_action = yes
+
+	# Triggered
+	
+	name = EVT1914_133011610_NAME
+	desc = EVT1914_133011634_DESC
+
+	picture = "ccip_unrest"
+	style = 2
+
+	action = {
+		name = EVT1914_133011634_ACTIONA #"The rebels have succeeded."
+		ai_chance = 60
+		command = { type = end_trades which = UCH where = JAP } # End free resources
+		command = { type = end_trades which = CHI where = JAP }
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { type = dissent value = 10 }
+		command = { type = embargo which = USA where = JAP value = 0 }
+	}
+
+	action = {
+		trigger = {
+			event = 133011015
+		}
+		ai_chance = 30
+		name = EVT1914_133011634_ACTIONB #"We maintain control, but our industries have been destroyed"
+		command = { type = end_trades which = UCH where = JAP } # End free resources
+		command = { type = end_trades which = CHI where = JAP }
+		command = { type = dissent value = 5 }
+		command = { type = embargo which = USA where = JAP value = 0 }
+	}
+
+	action = {
+		ai_chance = 10
+		name = ACTION_NAME_VICTORY
+		command = { type = dissent value = -5 }
+		command = { type = embargo which = USA where = JAP value = 0 }
+	}
+}
+
+# The China Incident: Resolution
+event = {
+	id = 133011638
+	random = no
+	one_action = yes
+
+	# Triggered
+	
+	name = EVT1914_133011610_NAME
+	desc = EVT1914_133011634_DESC
+	
+	picture = "ccip_unrest"
+	style = 2
+
+	action = {
+		name = EVT1914_133011634_ACTIONA #"The rebels have succeeded."
+		ai_chance = 75
+		command = { trigger = { participant = { country = U08 value = 2 } } type = end_trades which = UCH where = U08 } # End free resources
+		command = { trigger = { participant = { country = U08 value = 2 } } type = end_trades which = CHI where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = end_trades which = UCH where = U09 } # End free resources
+		command = { trigger = { participant = { country = U09 value = 2 } } type = end_trades which = CHI where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = end_trades which = UCH where = ITA } # End free resources
+		command = { trigger = { participant = { country = ITA value = 2 } } type = end_trades which = CHI where = ITA }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = end_trades which = UCH where = BUL } # End free resources
+		command = { trigger = { participant = { country = BUL value = 2 } } type = end_trades which = CHI where = BUL }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = end_trades which = UCH where = OTT } # End free resources
+		command = { trigger = { participant = { country = OTT value = 2 } } type = end_trades which = CHI where = OTT }		
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1328 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1331 when = 2}
+		command = { trigger = { or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1328 when = 2}
+		command = { trigger = { control = { province = 1371 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1371 when = 2 }
+		command = { trigger = { control = { province = 1372 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1372 when = 2 }
+		command = { trigger = { control = { province = 1219 data = -3 } or = { event = 133011623 event = 133011626 } } type = secedeprovince which = UCH value = 1219 when = 2 }
+		command = { trigger = { control = { province = 1371 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1371 when = 2 }
+		command = { trigger = { control = { province = 1372 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1372 when = 2 }
+		command = { trigger = { control = { province = 1219 data = -3 } or = { event = 133011624 event = 133011627 } } type = secedeprovince which = CHI value = 1219 when = 2 }
+		command = { type = dissent value = 10 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = embargo which = USA where = U08 value = 0 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = embargo which = USA where = U09 value = 0 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = embargo which = USA where = ITA value = 0 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = embargo which = USA where = BUL value = 0 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = embargo which = USA where = OTT value = 0 }
+	}
+
+	action = {
+		trigger = {
+			event = 133011015
+		}
+		ai_chance = 20
+		name = EVT1914_133011634_ACTIONB #"We maintain control, but our industries have been destroyed"
+		command = { trigger = { participant = { country = U08 value = 2 } } type = end_trades which = CHI where = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = end_trades which = UCH where = U09 } # End free resources
+		command = { trigger = { participant = { country = U09 value = 2 } } type = end_trades which = CHI where = U09 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = end_trades which = UCH where = ITA } # End free resources
+		command = { trigger = { participant = { country = ITA value = 2 } } type = end_trades which = CHI where = ITA }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = end_trades which = UCH where = BUL } # End free resources
+		command = { trigger = { participant = { country = BUL value = 2 } } type = end_trades which = CHI where = BUL }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = end_trades which = UCH where = OTT } # End free resources
+		command = { trigger = { participant = { country = OTT value = 2 } } type = end_trades which = CHI where = OTT }		
+		command = { type = dissent value = 5 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = embargo which = USA where = U08 value = 0 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = embargo which = USA where = U09 value = 0 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = embargo which = USA where = ITA value = 0 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = embargo which = USA where = BUL value = 0 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = embargo which = USA where = OTT value = 0 }
+	}
+
+	action = {
+		ai_chance = 5
+		name = ACTION_NAME_VICTORY
+		command = { type = dissent value = -5 }
+		command = { trigger = { participant = { country = U08 value = 2 } } type = embargo which = USA where = U08 value = 0 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = embargo which = USA where = U09 value = 0 }
+		command = { trigger = { participant = { country = ITA value = 2 } } type = embargo which = USA where = ITA value = 0 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = embargo which = USA where = BUL value = 0 }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = embargo which = USA where = OTT value = 0 }
+	}
+}
+
+##############################
+# End of May Fourth Movement #
+##############################
+
+# Chinese Economic Recovery
+event = {
+	id = 133011611
+	random = no
+	#country = UCH
+	
+	#Triggered
+
+	name = EVT1914_133011611_NAME
+	desc = EVT1914_133011611_DESC
+
+	picture = "ccip_vict"
+	style = 2
+	
+	action = {
+		ai_chance = 100
+		name = ACTION_NAME_GOOD
+		command = { type = dissent value = -20 }
+		command = { trigger = { flag = may4_15 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_14 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_13 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_12 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_11 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_10 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_9 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_8 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_7 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_6 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_5 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_4 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_3 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_2 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_1 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { country = UCH } type = event which = 133011612 where = UCH when = 45 }
+		command = { trigger = { country = CHI } type = event which = 133011612 where = CHI when = 45 }
+	}
+	
+}
+
+# Chinese Economic Recovery
+event = {
+	id = 133011612
+	random = no
+	# country = UCH
+	
+	#Triggered
+	
+	name = EVT1914_133011612_NAME
+	desc = EVT1914_133011612_DESC
+
+	picture = "ccip_vict"
+	style = 2
+	
+	action = {
+		ai_chance = 100
+		name = ACTION_NAME_PERFECT
+		command = { type = dissent value = -20 }
+		command = { trigger = { flag = may4_15 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_14 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_13 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_12 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_11 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_10 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_9 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_8 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_7 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_6 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_5 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_4 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_3 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_2 } type = industrial_modifier which = total value = 1 }
+		command = { trigger = { flag = may4_1 } type = industrial_modifier which = total value = 1 }
+	}
+	
+}

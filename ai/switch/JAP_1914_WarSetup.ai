@@ -1,0 +1,209 @@
+# Japan 1914 AI File by Jaegerfeld
+# v0.48rc1 by spocky
+
+switch = no # [yes/no]
+max_front_ratio = 1.2 
+max_garrison_prop = 0.30
+min_garrison_prop = 0.20
+neutrality = 70  # 70.000 
+war = 0 
+reinforcement = 0.2000 
+upgrading = 0.2000 
+strat_redeploy_threshold = 50
+max_redeploying = 0.05
+exp_force_ratio = 0.00
+
+no_exp_forces_to = { U08 ITA U09 RUS USA ENG FRA BEL SER  }
+evac_islands = no
+use_offensive_supply = no
+
+combat = {
+		U08 = 100
+		#OTT = 100
+
+}
+target = {
+
+				# Phase 1
+		#Tsingtau
+		1328 = 100 # was 60
+
+		#German colonies
+		1667 = 100 # was 20	
+		1665 = 100 # was 20
+		1666 = 100 # was 20
+		1675 = 100 # was 20
+		1674 = 100
+		1676 = 100
+		1677 = 100
+		1670 = 100
+		1671 = 100
+		1669 = 100
+		1668 = 100
+		1681 = 100
+		1684 = 100 # was 200
+		1685 = 100 # was 200
+		1686 = 100 # was 200
+
+ } 
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 0.5
+	overseas_multiplier 	= 2.0
+	home_peace_cap 		= 10
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 10	# Beach level 1
+	capital			= 20	# Our capital
+	human_border	= 0		# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+	     	RUS = -1 
+			POR = -1
+			ENG = -1
+			FRA = -1
+			USA = -1
+	}
+	province_priorities = {
+
+
+	}
+	area_multiplier = {
+	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.0
+	panic_ratio_vs_human	= 2.0
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+
+	strength 		= 1.0
+	organisation 	= 1.0
+	soft_attack 	= 1.0
+	hard_attack 	= 1.0
+	ground_defense 	= 1.0
+	dig_in 			= 1.0 # Against defender
+
+	frozen_attack 	= 1.0
+	snow_attack 	= 1.0
+	blizzard_attack = 1.0
+	storm_attack 	= 1.0
+	muddy_attack 	= 1.0
+
+	
+	
+	occupied 	= 0.7
+	owned 		= 0.7
+
+	jungle_attack 	= 1.0
+	mountain_attack = 1.0
+	swamp_attack 	= 1.0
+	forest_attack 	= 1.0
+	hill_attack 	= 1.0
+	urban_attack 	= 1.0
+	river 		= 1.0
+
+      	enemy_handicap = {
+		
+	} 
+      	passivity = {
+		
+	} 
+
+	province_priorities = {
+		#Tsingtau
+		1328 = 2.0
+
+		#German colonies
+		1668 = 2.0
+		1669 = 2.0
+		1684 = 2.0
+		1681 = 2.0
+		1666 = 2.0
+		1675 = 2.0
+		1677 = 2.0
+		1665 = 2.0
+		1671 = 2.0
+		1670 = 2.0
+		1680 = 2.0
+		1667 = 2.0
+	}
+
+} 
+
+
+
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+
+	invasion			= yes
+ 	base				= 0.01	#Relative modifier. (lower = specific targets much more important.)# was 0.1
+	random				= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal				= 0.1	#increase to avoid coastal forts more.
+	beach				= 0.1	#higher, avoid worst beaches.
+	max_distance   		= 40.0  
+	max_staging_distance = 15	# How far should the staging area be from the target invasion point
+	distance			= 0.5	#higher = avoid long distance.   # was 0.1 06mar
+	pocket				= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island				= 0.1	#prioritise taking pure islands.
+	enemy				= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 		= 2.0	#higher = much more vary of troops nearby
+	air_base			= 1.5 
+   	naval_base 			= 0.1 
+   	air_support 		= 3.0 
+   	redirect 			= priority
+	ignore				= no
+	help_allies 	= no
+      	staging_province = {
+
+	}
+
+	target = {
+
+		# Phase 1
+		#Tsingtau
+		1328 = 60
+
+				#German colonies
+		1667 = 20
+		1665 = 20
+		1666 = 20
+		1675 = 20
+		1670 = 100
+		1669 = 100
+		1684 = 200
+		1685 = 200
+		1686 = 200
+		
+		147 = -1
+		152 = -1
+		153 = -1
+		158 = -1
+		226 = -1
+		181 = -1
+		184 = -1	
+
+	}
+}
+
+

@@ -1,0 +1,95 @@
+MAN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+235001;Head of State;Pu-Yi;1931;1964;1999;PA;Popular Figurehead;High;2829;X
+235002;Head of State;Pu-Yi;1931;1964;1999;FA;Popular Figurehead;High;2829;X
+235003;Head of Government;Zheng Xiaoxu;1931;1939;1939;PA;Silent Workhorse;High;M_Zheng Xiaoxu;X
+235004;Head of Government;Zhang Jinghui;1931;1960;1960;PA;Happy Amateur;High;2830;X
+235005;Head of Government;Ruan Zhenduo;1940;1964;1999;FA;Flamboyant Tough Guy;High;M_RuanZhenduo;X
+235006;Foreign Minister;Xie Jieshi;1931;1964;1999;PA;Apologetic Clerk;Medium;M_Xie Jieshi;X
+235007;Foreign Minister;Zhang Yanqing;1931;1964;1999;PA;Biased Intellectual;Medium;M_Zhang Yanqing;X
+235008;Foreign Minister;Zhang Jinghui;1931;1964;1999;PA;General Staffer;Medium;2830;X
+235009;Foreign Minister;Chuichi Ohashi;1931;1964;1999;FA;Iron Fisted Brute;Medium;M_Chuichi Ohashi;X
+235010;Foreign Minister;Cai Yunsheng;1931;1964;1999;PA;The Cloak N Dagger Schemer;Medium;M_Cai Yunsheng;X
+235011;Foreign Minister;Wei Huangzhang;1938;1964;1999;PA;Apologetic Clerk;Medium;M_Wei Huangzhang;X
+235012;Foreign Minister;Li Shaogeng;1938;1964;1999;PA;Apologetic Clerk;Medium;M_Li Shaogeng;X
+235013;Foreign Minister;Ruan Zhenduo;1936;1964;1999;FA;Biased Intellectual;Medium;M_RuanZhenduo;X
+235014;Minister of Security;Zang Shiyi;1931;1964;1999;PA;Back Stabber;Medium;M_Zang Shiyi;X
+235015;Minister of Security;Lu Ronghuan;1931;1964;1999;PA;Prince of Terror;Medium;M_Lu Ronghuan;X
+235016;Minister of Security;Sun Qichang;1931;1964;1999;PA;Prince of Terror;Medium;M_Sun Qichang;X
+235017;Minister of Security;Yu Zhishan;1931;1964;1999;FA;Efficient Sociopath;Medium;M_Yu Zhishan;X
+235018;Minister of Security;Yu Chencheng;1931;1964;1999;PA;Compassionate Gentleman;Medium;M_Yu_Chencheng;X
+235019;Minister of Security;Xing Shilian;1931;1964;1999;FA;Silent Lawyer;Medium;M_Hsin Shilien;X
+235020;Minister of Security;Tong Jixu;1931;1964;1999;FA;Secret Police Chief;Medium;M_Tong Jixu;X
+235021;Minister of Armament;Aisin-Gioro Xiqia;1931;1964;1999;PA;Military Entrepreneur;Medium;M_Xiqia;X
+235022;Minister of Armament;Sun Qichang;1931;1964;1999;PA;Resource Industrialist;Medium;M_Sun Qichang;X
+235023;Minister of Armament;Han Yunjie;1931;1964;1999;PA;Laissez-Faire Capitalist;Medium;M_Han Yunjie;X
+235024;Minister of Armament;Cai Yunsheng;1934;1964;1999;PA;Balanced Budget Economy;Medium;M_Cai Yunsheng;X
+235025;Minister of Armament;Ruan Zhenduo;1931;1964;1999;FA;Laissez-Faire Capitalist;Medium;M_RuanZhenduo;X
+235026;Minister of Armament;Yu Jingyuan;1934;1964;1999;FA;Corrupt Kleptocrat;Medium;M_Yu Jingyuan;X
+235027;Head of Military Intelligence;Kawashima Yoshiko;1936;1964;1999;FA;Dismal Enigma;High;M58006;X
+235028;Head of Military Intelligence;Tong Jixu;1931;1943;1943;PA;Political Specialist;Medium;M_Tong Jixu;X
+235029;Minister of Armament;Zhang Yanqing;1931;1964;1999;PA;Administrative Genius;Medium;M_Zhang Yanqing;X
+235030;Minister of Armament;Ding Jianxiu;1931;1964;1999;FA;Administrative Genius;Medium;M_Ding Jianxiu;X
+235031;Minister of Armament;Lu Ronghuan;1931;1964;1999;PA;Laissez-Faire Capitalist;Medium;M_Lu Ronghuan;X
+235032;Minister of Armament;Huang Fujun;1939;1964;1999;FA;Industrial Chemist;Medium;M_Huang Fujun;X
+235033;Minister of Security;Zheng Xiaoxu;1931;1939;1939;PA;Man of the People;Low;M_Zheng Xiaoxu;X
+235034;Minister of Security;Zhang Jinghui;1931;1964;1999;PA;Efficient Sociopath;Low;2830;X
+235035;Chief of Staff;Zang Shiyi;1936;1964;1999;PA;Commando Doctrine Staff;Low;M_Zang Shiyi;X
+235036;Head of Military Intelligence;Itagaki Seishiro;1933;1948;1949;FA;Logistics Specialist;Medium;L101070;X
+235037;Chief of Army;Sun Qichang;1936;1964;1999;PA;Guns and Butter Doctrine;Medium;M_Sun Qichang;X
+235038;Chief of Army;Zhang Haipeng;1936;1964;1999;FA;Elastic Defence Doctrine;High;M_ZhangHaipeng;X
+235039;Chief of Army;Yu Zhishan;1936;1964;1999;FA;Guns and Butter Doctrine;High;M_Yu Zhishan;X
+235040;Chief of Army;Zhang Jinghui;1931;1960;1960;PA;Decisive Battle Doctrine;Low;2830;X
+235041;Chief of Army;Muto Nobuyoshi;1931;1934;1934;FA;Elastic Defence Doctrine;Medium;M_Muto Nobuyoshi;X
+235042;Chief of Army;Hishikari Takashi;1933;1941;1943;FA;Guns and Butter Doctrine;Medium;658;X
+235043;Chief of Army;Minami Jiro;1934;1964;1999;FA;Elastic Defence Doctrine;Medium;L101117;X
+235044;Chief of Army;Ueda Kenkichi;1936;1964;1999;FA;Elastic Defence Doctrine;Medium;731;X
+235045;Chief of Army;Umezu Yoshijiro;1939;1964;1999;FA;Elastic Defence Doctrine;Medium;M5157;X
+235046;Chief of Army;Yamada Otozo;1944;1964;1999;FA;Decisive Battle Doctrine;Medium;L101200;X
+235047;Chief of Staff;Koiso Kuniaki;1931;1964;1999;FA;School of Mass Combat;Medium;M5043;X
+235048;Chief of Staff;Nishio Toshizo;1934;1964;1999;FA;School of Mass Combat;Medium;L101134;X
+235049;Chief of Staff;Itagaki Seishiro;1936;1964;1999;FA;School of Psychology;Medium;L101070;X
+235050;Chief of Staff;Tojo Hideki;1937;1964;1999;FA;School of Psychology;Medium;M5042;X
+235051;Chief of Staff;Isogai Rensuke;1938;1964;1999;FA;School of Defence;Very Low;L101067;X
+235052;Chief of Staff;Iimura Jo;1939;1964;1999;FA;School of Mass Combat;Very High;M5126;X
+235053;Chief of Staff;Kimura Heitaro;1940;1964;1999;FA;School of Fire Support;Very High;L101093;X
+235054;Chief of Staff;Yoshimoto Teiichi;1941;1964;1999;FA;School of Mass Combat;Very High;M_YoshimotoTeiichi;X
+235055;Chief of Staff;Kasahara Yukio;1942;1964;1999;FA;School of Defence;Very High;L101079;X
+235056;Chief of Staff;Hata Hikosaburo;1945;1964;1999;FA;School of Manoeuvre;Very High;M_Hata Hikosaburo;X
+235057;Head of Military Intelligence;Doihara Kenji;1936;1964;1999;FA;Logistics Specialist;High;M5193;X
+235058;Head of Military Intelligence;Ishiwara Kanji;1931;1950;1950;FA;Political Specialist;Very High;M_Ishiwara Kanji;X
+235059;Chief of Navy;Yin Tsuo-chien;1931;1964;1999;PA;Base Control Doctrine;Medium;M58062;X
+235060;Chief of Navy;Sergei Ramilcheff;1931;1964;1999;PA;Indirect Approach Doctrine;Medium;M58009;X
+235061;Chief of Army;Itagaki Seishiro;1939;1964;1999;FA;Elastic Defence Doctrine;Medium;L101070;X
+235062;Chief of Air Force;Noguchi Yujiro;1931;1964;1999;FA;Air Superiority Doctrine;Medium;M_Noguchi Yujiro;X
+235063;Chief of Air Force;Tanaka Osamu;1932;1964;1999;FA;Air Superiority Doctrine;Medium;unknownleader;X
+235064;Chief of Air Force;Cao Bingsen;1933;1964;1999;PA;Air Superiority Doctrine;Medium;L250039;X
+235065;Chief of Navy;Li Wenlong;1940;1964;1999;PA;Base Control Doctrine;Medium;unknownleader;X
+235066;Chief of Navy;Xian Yuan;1940;1964;1999;PA;Base Control Doctrine;Medium;unknownleader;X
+235067;Chief of Navy;Cao Bingsen;1940;1964;1999;PA;Base Control Doctrine;Medium;L250039;X
+235068;Head of Military Intelligence;Zang Shiyi;1936;1964;1999;PA;Logistics Specialist;Low;M_Zang Shiyi;X
+235069;Minister of Armament;Yuan Jinkai;1936;1964;1999;PA;Construction Magnate;Medium;M_Yuan Jinkai;X
+235070;Minister of Security;Yuan Jinkai;1936;1964;1999;PA;Prince of Terror;Medium;M_Yuan Jinkai;X
+235071;Foreign Minister;Sun Qichang;1936;1964;1999;PA;Apologetic Clerk;Medium;M_Sun Qichang;X
+235072;Minister of Security;Li Shaogeng;1936;1964;1999;PA;Crooked Kleptocrat;Medium;M_Li Shaogeng;X
+235073;Minister of Armament;Li Shaogeng;1936;1964;1999;PA;Steel Magnate;Medium;M_Li Shaogeng;X
+235074;Minister of Security;Ding Jianxiu;1936;1964;1999;FA;Crime Fighter;Low;M_Ding Jianxiu;X
+235075;Head of Military Intelligence;Ding Jianxiu;1936;1945;1945;PA;Political Specialist;Low;M_Ding Jianxiu;X
+235076;Minister of Armament;Yu Zhishan;1936;1964;1999;FA;Laissez-Faire Capitalist;High;M_Yu Zhishan;X
+235077;Head of Government;Cai Yunsheng;1936;1960;1960;PA;Corporate Suit;High;M_Cai Yunsheng;X
+235078;Minister of Armament;Hoshino Naoki;1932;1978;1978;FA;Resource Industrialist;High;M_Hoshino Naoki;X
+235079;Chief of Staff;Ishiwara Kanji;1932;1950;1950;FA;School of Fire Support;High;M_Ishiwara Kanji;X
+235080;Chief of Army;Ishiwara Kanji;1932;1950;1950;FA;Elastic Defence Doctrine;High;M_Ishiwara Kanji;X
+235081;Minister of Armament;Aikawa Yoshisuke;1931;1968;1968;FA;Resource Industrialist;High;M_Aikawa Yoshisuke;X
+235082;Minister of Armament;Takasaki Tatsunosuke;1931;1964;1964;FA;Steel Magnate;High;M_Takasaki Tatsunosuke;X
+235083;Head of Military Intelligence;Tojo Hideki;1934;1964;1964;FA;Dismal Enigma;High;M5042;X
+235084;Head of Military Intelligence;Fujie Keisuke;1936;1964;1964;FA;Political Specialist;High;L101023;X
+235085;Head of Military Intelligence;Tanaka Shizuichi;1936;1964;1964;FA;Logistics Specialist;High;L101175;X
+235086;Head of Military Intelligence;Shirokura Yoshie;1936;1964;1964;FA;Technical Specialist;High;M_Shirokura Yoshie;X
+235087;Head of Military Intelligence;Hara Mamoru;1940;1964;1964;FA;Industrial Specialist;High;M_Hara Mamoru;X
+235088;Head of Military Intelligence;Kato Tomarijiro;1942;1964;1964;FA;Logistics Specialist;High;M_Kato Tomarijiro;X
+235089;Head of Military Intelligence;Miura Saburo;1942;1964;1964;FA;Logistics Specialist;High;M_Miura Saburo;X
+235090;Head of Military Intelligence;Ohki Shigeru;1942;1964;1964;FA;Logistics Specialist;High;M_Ohki Shigeru;X
+235091;Minister of Armament;Mitsuda Nobuakira;1952;1972;1972;PA;Administrative Genius;High;M_Hwang Jong-ryul;X
+235092;Minister of Security;Chen Xiqing;1954;1985;1985;PA;Compassionate Gentleman;High;M_Chen Xiqing;X
+235093;Foreign Minister;Park Seok-yun;1950;1964;1964;PA;Apologetic Clerk;High;M_Park Seok-yun;X

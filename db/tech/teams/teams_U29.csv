@@ -1,0 +1,41 @@
+U29;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+960001;Caproni Bulgaria;100833;3;1928;1947;aeronautics;bomber_design;avionics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960002;Darzhavna Aeroplanna Rabotilnica;100834;3;1925;1940;aeronautics;fighter_design;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960003;Atanas Burov;100835;5;1910;1954;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960004;Voenno Uchilishte Sofia;100836;4;1915;1944;large_unit_tactics;centralized_execution;infantry_focus;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960005;Darzhavna Samoletna Fabrika;100837;3;1941;1954;aeronautics;bomber_design;aircraft_testing;fighter_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960006;Sava Ivanov;T805;2;1930;1944;small_taskforce_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960007;Balgarski Cherven Krast;100838;3;1885;1945;medicine;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960008;Zahari Zahariev;T807;4;1944;1973;bomber_tactics;combined_arms_focus;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960009;Stoyan Stoyanov;T808;4;1939;1956;fighter_tactics;decentralized_execution;piloting;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960010;Letishte Bozhurishte;100839;3;1912;1948;fighter_tactics;decentralized_execution;piloting;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960011;Darzhavna Voenna Fabrika;100840;3;1900;1956;mechanics;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960012;Morsko Uchilishte Varna;100841;3;1900;1953;naval_training;seamanship;naval_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+960013;SU St. Kliment Ohridski;100842;3;1900;1944;management;chemistry;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960014;Darzhavni Mini Pernik;100044;4;1900;1952;industrial_engineering;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960015;Darzhavni Zheleznitsi;100045;4;1904;1962;management;technical_efficiency;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960016;Flotski Arsenal Varna;100046;2;1907;1991;naval_engineering;mechanics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960017;Vladimir Vazov;100047;5;1906;1920;artillery;infantry_focus;small_unit_tactics;static_defense_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960018;VMZ Sopot;100048;4;1940;1991;chemistry;mechanics;munitions;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960019;VNVMU Nikola Vaptsarov;100850;4;1954;1991;naval_training;seamanship;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960020;NHK Burgas;100851;5;1963;1991;chemistry;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960021;Arsenal Kazanlak;100852;5;1956;1991;technical_efficiency;artillery;chemistry;munitions;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960022;MK Kremikovtzi;100853;6;1963;1991;technical_efficiency;chemistry;industrial_engineering;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960023;Balkankar;100854;6;1952;1991;vehicle_engineering;technical_efficiency;mechanics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960024;Balgarska Narodna Armiya;100855;6;1945;1991;large_unit_tactics;centralized_execution;infantry_focus;combined_arms_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960025;Darzhavna Sigurnost;100856;6;1946;1991;training;rt_user_2;small_unit_tactics;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960026;MK Pernik;100857;5;1953;1991;industrial_engineering;mechanics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960027;BDZ;100858;5;1963;1991;management;technical_efficiency;mechanics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960028;Atanas Semerdzhiev;100859;6;1962;1989;large_unit_tactics;centralized_execution;combined_arms_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960029;KMT Pravetz;100860;4;1979;1990;electronics;mathematics;chemistry;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960030;Elektronika;100861;4;1961;1991;electronics;mathematics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960031;Terem;100862;5;1965;1991;general_equipment;mechanics;technical_efficiency;artillery;vehicle_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960032;Avionams;100863;4;1947;1991;rt_user_1;aeronautics;fighter_design;bomber_design;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960033;Arcus;100864;5;1965;1991;general_equipment;munitions;artillery;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960034;Sofiyski Darzhaven Universitet;100865;5;1945;1991;management;medicine;mathematics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960035;Tehnicheski Universitet Sofia;100866;5;1953;1991;mechanics;industrial_engineering;electronics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960036;Brigada Spetsialni Sili;100867;4;1975;1991;training;small_unit_tactics;airborne_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960037;Beta;100868;5;1974;1991;munitions;mechanics;technical_efficiency;artillery;vehicle_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960038;Simeon Simeonov;100869;5;1951;1974;fighter_tactics;piloting;training;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960039;Aviobaza Graf Ignatievo;100870;6;1953;1991;fighter_tactics;piloting;training;bomber_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+960040;Dobri Dzhurov;100871;5;1956;1990;training;large_unit_tactics;combined_arms_focus;centralized_execution;general_equipment;management;;;;;;;;;;;;;;;;;;;;;;;;;;;

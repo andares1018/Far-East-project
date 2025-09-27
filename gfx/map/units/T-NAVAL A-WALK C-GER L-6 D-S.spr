@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "He115-W-S.bmp"
+	Origin = { x = 110 y = 95 }
+	Frames = 16
+	Speed = 4
+	Palette = "He115.bmp"
+}

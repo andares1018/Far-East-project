@@ -1,0 +1,153 @@
+## Italy has joined entente, no spying in the future
+event = {
+	id = 3001501
+	random = no
+	country = ENG	
+	
+	trigger = {
+		ai = yes
+		
+		flag = ITAEntente 
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		command = { type = ai which = "switch/ENG1914_ITAEntente.ai" }	
+	}
+}
+
+
+
+event = {
+	id = 3001502
+	random = no
+	country = ENG
+	persistent = yes		
+	
+	trigger = {
+		ai = yes
+		
+		NOT = { flag = ENG1914_Gallipolli }
+		war = { country = ENG country = U08}
+		war = { country = ENG country = OTT }
+		
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		command = { type = setflag which = ENG1914_Gallipolli }
+		command = { type = ai which = "switch/ENG1914_Gallipolli.ai" }
+	}
+}
+
+event = {
+	id = 3001503
+	random = no
+	country = ENG	
+	
+	trigger = {
+		ai = yes
+		war = { country = ENG country = LBY }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		command = { type = ai which = "switch/ENG1914_Senussi.ai" }
+	}
+}
+
+#restores pre-Senussi AI
+event = {
+	id = 3001506
+	random = no
+	country = ENG	
+	
+	trigger = {
+		ai = yes
+		event = 3001503
+		NOT= { war = { country = ENG country = LBY } }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 16
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		command = { type = ai which = "ENG_1914.ai" } #always load the default AI first, then apply possible switches
+		command = { trigger = { event = 3001501 } type = ai which = "switch/ENG1914_ITAEntente.ai" }
+		command = { trigger = { flag = ENG1914_Gallipolli } type = ai which = "switch/ENG1914_Gallipolli.ai" }
+	}
+}
+
+######################################################################################
+# Build some INF units with H-Arm and Arm brigades when required techs are available #
+######################################################################################
+event = {
+	id = 3001504
+	random = no
+	country = ENG
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = -0.1 where = 45 }
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = -0.1 where = 45 }
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = -0.1 where = 45 }
+	}
+}
+
+event = {
+	id = 3001505
+	random = no
+	country = ENG
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = heavy_armor when = 3 cost = -0.1 where = 45 }
+		command = { type = build_brigade value = heavy_armor when = 3 cost = -0.1 where = 45 }
+		command = { type = build_brigade value = heavy_armor when = 3 cost = -0.1 where = 45 }
+	}
+}
+######################################################################################

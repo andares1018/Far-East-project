@@ -1,0 +1,54 @@
+#Fight the Senussi and protect the Egyptian border
+
+garrison = {
+
+	# Borders with specific countries
+	country_priorities = {
+		LBY = 30
+	}
+	
+	province_priorities = {
+		#Libyan-Egyptian border
+		780 = 20 #As Sollum
+		782 = 20 #Bir Baylih
+		779 = 20 #Siwa
+	}
+	area_multiplier = {
+		780 = 1.5 #As Sollum
+	}
+}
+
+
+invasion = {
+	target = {
+		#Egyptian coast
+		789 = 100 #Alexandria
+		
+		#+same values from ENG_1914Gallipoli.ai
+		# german beaches except eastern prussia for testing
+		147 = -1
+		152 = -1
+		153 = -1
+		158 = -1
+		226 = -1
+		181 = -1
+		184 = -1
+
+		# Baltics
+		264 = -1
+		269 = -1
+		270 = -1
+		275 = -1
+				
+		# A-H coast
+		343 = -1
+		
+		#calais expcorps
+		49 = 20
+		# bruges
+		114 = 30
+		
+		384 = 500
+		1078 = 200
+	}
+} 

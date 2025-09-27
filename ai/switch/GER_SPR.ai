@@ -1,0 +1,69 @@
+# German Invasion of Spain AI 1936 AI File by Lothos
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	SPR = 300
+}
+befriend = {
+	ROM = 50
+	BUL = 40 
+	HUN = 80 
+	YUG = 50
+	SLO = 50
+	SPA = 20
+	ITA = 80 
+	SWE = 10
+	FIN = 20
+	JAP = 20
+	POR = 10
+	TUR = 30
+	DEN = 50
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+# German Spanis Invasion (Vichy Axis Controled) AI File by Lothos
+
+max_garrison_prop = 0.60
+min_garrison_prop = 0.50
+max_front_ratios = { }
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	# Borders with specific countries
+	province_priorities = {
+		55  = 20  #Paris
+		52  = 20  #Lille
+		116  = 20  #Brussels
+		145  = 20  #Prague
+		104  = 20  #Metz
+		43  = 20  #Cherborg
+		42  = 20  #Avranches
+		69  = 10  #La Rochele
+		147  = 20  #Wilhelmshafen
+		148  = 20  #Bremen
+		150  = 20  #Groningen
+	}
+	area_multiplier = {	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.1
+	min_attack_odds		= 0.8
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+
+      	enemy_handicap = { } 
+      	passivity = { } 
+} 

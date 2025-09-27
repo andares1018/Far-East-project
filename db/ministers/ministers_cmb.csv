@@ -1,0 +1,113 @@
+CMB;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+590001;Head of State;H.M. Sisowath Monivong;1927;1941;1941;PA;Benevolent Gentleman;High;M541001;X
+590002;Head of State;H.M. Norodom Sihanouk;1933;2012;2012;SD;Autocratic Charmer;High;M_Norodom Sihanouk;X
+590003;Head of State;H.M. Norodom Sihanouk;1933;2012;2012;SC;Autocratic Charmer;High;M_Norodom Sihanouk;X
+590004;Head of State;H.M. Norodom Sihanouk;1933;2012;2012;PA;Autocratic Charmer;High;M_Norodom Sihanouk;X
+590005;Head of State;Norodom Chantaraingsey;1933;1964;1999;PA;Pig-headed Isolationist;High;M_Norodom Chantaraingsey;X
+590006;Head of State;Son Ngoc Minh;1945;1973;1973;LE;Pig-headed Isolationist;High;M_Son Ngoc Minh;X
+590007;Head of State;Norodom Suramarit;1950;1961;1961;SC;Insignificant Layman;High;M_Norodom Suramarit;X
+590008;Head of State;Norodom Suramarit;1950;1961;1961;PA;Insignificant Layman;High;M_Norodom Suramarit;X
+590009;Head of Government;Son Ngoc Minh;1945;1973;1973;LE;Ambitious Union Boss;High;M_Son Ngoc Minh;X
+590010;Head of Government;Tou Samouth;1933;1963;1963;LE;Flamboyant Tough Guy;High;M_Tou Samouth;X
+590011;Head of Government;Norodom Sihanouk;1933;1970;2012;PA;Ambitious Union Boss;High;M_Norodom Sihanouk;X
+590012;Head of Government;Son Ngoc Thanh;1933;1977;1977;FA;Flamboyant Tough Guy;High;M_Son Ngoc Thanh;X
+590013;Head of Government;Sisowath Monireth;1933;1980;1980;SC;Backroom Backstabber;High;M_Sisowath Monireth;X
+590014;Head of Government;Sisowath Youtevong;1933;1948;1948;SD;Corporate Suit;High;M541005;X
+590015;Head of Government;Sisowath Watchayavong;1933;1973;1973;SC;Happy Amateur;High;M_Sisowath Watchayavong;X
+590016;Head of Government;Chhean Vam;1933;1964;2000;SL;Happy Amateur;High;unknownminister;X
+590017;Head of Government;Penn Nouth;1940;1986;1986;SC;Silent Workhorse;High;M_Penn Nouth;X
+590018;Head of Government;Yem Sambaur;1933;1989;1989;SD;Corporate Suit;High;M_Yem Sambaur;X
+590019;Head of Government;Ieu Koeus;1933;1951;1951;SD;Flamboyant Tough Guy;High;M_Ieu Koeus;X
+590020;Head of Government;Sisowath Monipong;1933;1957;1957;SC;Old Airmarshal;High;M_Sisowath Monipong;X
+590021;Head of Government;Oum Chheang Sun;1933;1960;1960;SC;Political Protege;High;M_Oum Chheang Sun;X
+590022;Head of Government;Huy Kanthoul;1933;1991;1991;SD;Political Protege;High;M_Huy Kanthoul;X
+590023;Head of Government;Chan Nak;1930;1955;1955;PA;Naive Optimist;High;M_Chan Nak;X
+590024;Head of Government;Leng Ngeth;1933;1980;1980;SC;Silent Workhorse;High;M_Leng Ngeth;X
+590025;Head of Government;Khim Tit;1933;1980;1980;PA;Old General;High;M_Khim Tit;X
+590026;Head of Government;San Yun;1933;1976;1976;SL;Silent Workhorse;High;M_San Yun;X
+590027;Head of Government;Sim Var;1933;1990;1990;PA;Backroom Backstabber;High;M_Sim Var;X
+590028;Head of Government;Pho Proeung;1933;1964;1964;SC;Ambitious Union Boss;High;M_Pho Proeung;X
+590029;Head of Government;Nhiek Tioulong;1933;1996;1996;PA;Flamboyant Tough Guy;High;M_Nhiek Tioulong;X
+590030;Head of Government;Chau Sen Cocsal;1933;2009;2009;SC;Happy Amateur;High;M_Chau Sen Cocsal;X
+590031;Head of Government;Norodom Kantol;1950;1980;1980;PA;Naive Optimist;High;M_Norodom Kantol;X
+590032;Head of Government;Lon Nol;1940;1985;1985;PA;Old General;High;M_Lon Nol;X
+590033;Head of Government;Dap Chhoun;1933;1964;1964;PA;Backroom Backstabber;High;M_Dap Chhoun;X
+590034;Foreign Minister;Son Ngoc Thanh;1933;1977;1977;FA;Iron Fisted Brute;High;M_Son Ngoc Thanh;X
+590035;Foreign Minister;Norodom Phurissara;1950;1980;1980;SD;Ideological Crusader;High;M_Norodom Phurissara;X
+590036;Foreign Minister;Penn Nouth;1936;1986;1986;SC;General Staffer;High;M_Penn Nouth;X
+590037;Foreign Minister;Truong Cang;1933;1964;1964;PA;Apologetic Clerk;High;M_Truong Cang;X
+590038;Foreign Minister;Son Sann;1933;2000;2000;ML;Biased Intellectual;High;M_Son Sann;X
+590039;Foreign Minister;Tep Phan;1933;1964;1999;PA;Iron Fisted Brute;High;M_Tep Phan;X
+590040;Foreign Minister;Nhiek Tioulong;1933;1996;1996;PA;General Staffer;High;M_Nhiek Tioulong;X
+590041;Foreign Minister;Norodom Kantol;1950;1980;1980;PA;Biased Intellectual;High;M_Norodom Kantol;X
+590042;Foreign Minister;Sarin Chhak;1960;1980;1980;SD;Apologetic Clerk;High;M_Sarin Chhak;X
+590043;Foreign Minister;Sisowath Monireth;1933;1980;1980;SC;Iron Fisted Brute;High;M_Sisowath Monireth;X
+590044;Foreign Minister;Sisowath Sirik Matak;1936;1980;1980;PA;General Staffer;High;M_Sisowath Sirik Matak;X
+590045;Foreign Minister;Sam Sary;1933;1961;1961;PA;Biased Intellectual;High;M_Sam Sary;X
+590046;Foreign Minister;Sim Var;1933;1990;1990;PA;Iron Fisted Brute;High;M_Sim Var;X
+590047;Foreign Minister;San Yun;1933;1976;1976;SD;Apologetic Clerk;High;M_San Yun;X
+590048;Foreign Minister;Keo Moni;1933;1960;1960;LE;General Staffer;High;M_Keo Moni;X
+590049;Foreign Minister;Keo Meas;1950;1980;1980;LWR;Iron Fisted Brute;High;M_Keo Meas;X
+590050;Minister of Armament;Penn Nouth;1936;1986;1986;SC;Laissez-Faire Capitalist;High;M_Penn Nouth;X
+590051;Minister of Armament;Nhiek Tioulong;1933;1996;1996;PA;Infantry Proponent;High;M_Nhiek Tioulong;X
+590052;Minister of Armament;Son Sann;1933;2000;2000;ML;Resource Industrialist;High;M_Son Sann;X
+590053;Minister of Armament;Au Chhoeun;1933;1975;1975;PA;Resource Industrialist;High;M_Au Chhoeun;X
+590054;Minister of Armament;Yem Sambaur;1933;1989;1989;SD;Military Entrepreneur;High;M_Yem Sambaur;X
+590055;Minister of Armament;Pho Proeung;1933;1964;1964;SC;Laissez-Faire Capitalist;High;M_Pho Proeung;X
+590056;Minister of Armament;Sam Sary;1933;1961;1961;FA;Military Entrepreneur;High;M_Sam Sary;X
+590057;Minister of Armament;Huot Sam Ath;1933;1960;1960;SC;Laissez-Faire Capitalist;High;M_Huot Sam Ath;X
+590058;Minister of Armament;San Yun;1933;1976;1976;SL;Theoretical Scientist;High;M_San Yun;X
+590059;Minister of Armament;Truong Cang;1933;1964;1964;SC;Industrial Chemist;High;M_Truong Cang;X
+590060;Minister of Armament;Touch Kim;1950;1975;1975;PA;Resource Industrialist;High;unknownminister;X
+590061;Minister of Armament;Laau Bounpa;1933;1987;1987;PA;Industrial Chemist;High;M_Laau Bounpa;X
+590062;Minister of Armament;Mau Say;1950;1980;1980;PA;Resource Industrialist;High;M_Mau Say;X
+590063;Minister of Armament;Prak Sarinn;1933;1960;1960;SC;Laissez-Faire Capitalist;High;M_Prak Sarinn;X
+590064;Minister of Armament;Sonn Voeunsai;1933;1987;1987;SD;Military Entrepreneur;High;M_Sonn Voeunsai;X
+590065;Minister of Armament;Ray Lomuth;1933;1980;1980;ML;Infantry Proponent;High;M_Ray Lomuth;X
+590066;Minister of Armament;Chan Samay;1933;1964;1964;LWR;Infantry Proponent;High;M_Chan Samay;X
+590067;Minister of Armament;Pach Chhoeun;1933;1972;1972;FA;Military Entrepreneur;High;M_Pach Chhoeun;X
+590068;Minister of Security;Au Chhoeun;1933;1975;1975;PA;Silent Lawyer;High;M_Au Chhoeun;X
+590069;Minister of Security;Chan Nak;1930;1955;1955;PA;Silent Lawyer;High;M_Chan Nak;X
+590070;Minister of Security;Chea Chinkoc;1933;1964;9999;SC;Compassionate Gentleman;High;M_Chea Chinkoc;X
+590071;Minister of Security;Khim Tit;1933;1980;1980;PA;Back Stabber;High;M_Khim Tit;X
+590072;Minister of Security;Kou Roun;1933;1970;1970;PA;Prince of Terror;High;M_Kou Roun;X
+590073;Minister of Security;Lon Nol;1940;1985;1985;PA;Secret Police Chief;High;M_Lon Nol;X
+590074;Minister of Security;Sum Hieng;1927;1964;1964;SC;Compassionate Gentleman;High;M_Sum Hieng;X
+590075;Minister of Security;Ouk Chhoum;1933;1960;1960;SC;Man of the People;High;M_Ouk Chhoum;X
+590076;Minister of Security;Oum Chheang Sun;1933;1960;1960;SC;Efficient Sociopath;High;M_Oum Chheang Sun;X
+590077;Minister of Security;Pho Proeung;1933;1964;1964;SC;Efficient Sociopath;High;M_Pho Proeung;X
+590078;Minister of Security;Prak Sarinn;1933;1960;1960;SC;Silent Lawyer;High;M_Prak Sarinn;X
+590079;Minister of Security;Sam Nhean;1933;1963;1963;SL;Compassionate Gentleman;High;M_Sam Nhean;X
+590080;Minister of Security;Tep Phan;1933;1964;1999;SC;Back Stabber;High;M_Tep Phan;X
+590081;Minister of Security;Ung Hong Sath;1950;1975;1975;SC;Back Stabber;High;M_Ung Hong Sath;X
+590083;Minister of Security;Tou Samouth;1933;1963;1963;LE;Prince of Terror;High;M_Tou Samouth;X
+590084;Minister of Security;Dap Chhoun;1933;1964;1964;PA;Prince of Terror;High;M_Dap Chhoun;X
+590085;Head of Military Intelligence;Chuop Samloth;1933;1964;1964;PA;Technical Specialist;High;M_Chuop Samloth;X
+590086;Head of Military Intelligence;Huot Sambath;1950;1980;1980;SD;Political Specialist;High;M_Huot Sambath;X
+590087;Head of Military Intelligence;Khim Tit;1933;1980;1980;PA;Dismal Enigma;High;M_Khim Tit;X
+590088;Head of Military Intelligence;Kou Roun;1933;1970;1970;PA;Political Specialist;High;M_Kou Roun;X
+590089;Head of Military Intelligence;Lon Nol;1940;1985;1985;PA;Political Specialist;High;M_Lon Nol;X
+590090;Head of Military Intelligence;Pho Proeung;1933;1964;1964;SD;Logistics Specialist;High;M_Pho Proeung;X
+590091;Head of Military Intelligence;Sam Nhean;1933;1963;1963;SL;Technical Specialist;High;M_Sam Nhean;X
+590092;Head of Military Intelligence;Sonn Voeunsai;1933;1987;1987;SD;Logistics Specialist;High;M_Sonn Voeunsai;X
+590093;Head of Military Intelligence;Tep Phan;1950;1975;1975;SC;Logistics Specialist;High;M_Tep Phan;X
+590094;Head of Military Intelligence;Sieu heng;1945;1976;1976;LE;Logistics Specialist;High;M_Sieu heng;X
+590095;Chief of Staff;Dap Chhoun;1933;1964;1964;PA;School of Mass Combat;High;M_Dap Chhoun;X
+590096;Chief of Staff;Kao Tak;1933;1956;1964;FA;School of Psychology;High;M_Kao Tak;X
+590097;Chief of Staff;Sonn Voeunsai;1933;1987;1987;SD;School of Psychology;High;M_Sonn Voeunsai;X
+590098;Chief of Staff;Sisowath Sirik Matak;1933;1980;1980;PA;School of Fire Support;High;M_Sisowath Sirik Matak;X
+590099;Chief of Staff;Sieu heng;1945;1976;1976;LE;School of Defence;High;M_Sieu heng;X
+590100;Chief of Staff;Lon Nol;1933;1985;1985;PA;School of Fire Support;High;M_Lon Nol;X
+590101;Chief of Army;Tep Phan;1933;1964;1999;SC;Decisive Battle Doctrine;High;M_Tep Phan;X
+590102;Chief of Army;Son Ngoc Minh;1945;1973;1973;LE;Guerilla Warfare Doctrine;High;M_Son Ngoc Minh;X
+590103;Chief of Army;Lon Nol;1940;1985;1985;PA;Decisive Battle Doctrine;High;M_Lon Nol;X
+590104;Chief of Army;Khim Tit;1933;1980;1980;PA;Static Defence Doctrine;High;M_Khim Tit;X
+590105;Chief of Army;Nhiek Tioulong;1933;1996;1996;PA;Elastic Defence Doctrine;High;M_Nhiek Tioulong;X
+590106;Chief of Army;Sisowath Monireth;1933;1980;1980;PA;Decisive Battle Doctrine;High;M_Sisowath Monireth;X
+590107;Chief of Army;Sonn Voeunsai;1933;1987;1987;SD;Decisive Battle Doctrine;High;M_Sonn Voeunsai;X
+590108;Chief of Army;Norodom Chantaraingsey;1933;1964;1999;PA;Guns and Butter Doctrine;High;M_Norodom Chantaraingsey;X
+590109;Chief of Navy;Pierre Coedes;1933;1964;1999;ML;Decisive Naval Battle Doctrine;High;unknownminister;X
+590110;Chief of Navy;Vong Sarendy;1955;1976;1976;PA;Indirect Approach Doctrine;High;M_Vong Sarendy;X
+590111;Chief of Air Force;Sisowath Monipong;1933;1957;1957;SC;Air Superiority Doctrine;High;M_Sisowath Monipong;X
+590112;Chief of Air Force;Ngo Hou;1933;1964;1999;SC;Army Aviation Doctrine;High;M_Ngo Hou;X

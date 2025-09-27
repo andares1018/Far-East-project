@@ -1,0 +1,50 @@
+#########################################################################
+# 	OTT AI Files 1914
+#   Jaegerfeld 2011
+#	
+#########################################################################
+event = {
+	id = 3145501
+	random = no 
+	country = OTT
+	persistent = yes
+	trigger = {
+					ai = yes
+
+					war = { country = OTT country = RUS }					
+					NOT = { flag = OTT_1914_startupDone }
+				}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 29 month = 5 year = 1914 }
+	offset = 1 # Check for trigger conditions day
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = { #
+			ai_chance = 20
+		
+			command = { type = setflag which = OTT_1914_Baku }
+			command = { type = setflag which = OTT_1914_startupDone }
+			command = { type = ai which = "switch/OTT_1914_Baku.ai" }		
+	}
+	action_b = 
+		{
+			ai_chance = 70
+			
+			command = { type = setflag which = OTT_1914_Egypt }
+			command = { type = ai which = "switch/OTT_1914_Egypt.ai" }	
+			command = { type = setflag which = OTT_1914_startupDone }			
+		}
+	action_c = 
+		{
+			ai_chance = 15
+			
+			command = { type = setflag which = OTT_1914_Persia }
+			command = { type = ai which = "switch/OTT_1914_Persia.ai" }			
+			command = { type = setflag which = OTT_1914_startupDone }
+			#command = { type = war which = PER }
+		}
+}
+

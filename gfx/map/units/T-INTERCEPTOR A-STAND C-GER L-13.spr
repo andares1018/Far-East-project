@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "BlitzB-W-SW.bmp"
+	Origin = { x = 110 y = 95 }
+	Frames = 16
+	Speed = 4
+	Palette = "BlitzB.bmp"
+}

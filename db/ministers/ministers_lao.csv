@@ -1,0 +1,103 @@
+LAO;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+685001;Head of State;H.M. Sisavang Vong;1904;1960;1960;SC;Pig-headed Isolationist;High;M540001;X
+685002;Head of State;H.M. Sisavang Vong;1904;1960;1960;PA;Pig-headed Isolationist;High;M540001;X
+685003;Head of State;Souvanna Phouma;1955;1985;1985;SL;Die-hard Reformer;High;M_Souvanna Phouma;X
+685004;Head of State;Souphanouvong;1933;1996;1996;LE;Ruthless Powermonger;High;M_Souphanouvong;X
+685005;Head of State;Phetsarath Ratanavongsa;1933;1960;1960;SL;Benevolent Gentleman;High;M540008;X
+685006;Head of State;H.M. Sisavang Vatthana;1959;1979;1979;SL;Autocratic Charmer;High;M540011;X
+685007;Head of State;H.M. Sisavang Vatthana;1959;1979;1979;SC;Autocratic Charmer;High;M540011;X
+685008;Head of State;H.M. Sisavang Vatthana;1959;1979;1979;PA;Autocratic Charmer;High;M540011;X
+685009;Head of State;H.M. Sisavang Vatthana;1959;1979;1979;SD;Autocratic Charmer;High;M540011;X
+685010;Head of Government;Phaya Khammao;1933;1966;1966;SL;Naive Optimist;High;M540003;X
+685011;Head of Government;Kindavong;1930;1952;1952;PA;Happy Amateur;High;M_Kindavong;X
+685012;Head of Government;Souvannarath;1933;1961;1961;SC;Old General;High;M540009;X
+685013;Head of Government;Boun Oum;1933;1981;1981;PA;Backroom Backstabber;High;M540010;X
+685014;Head of Government;Phoui Sananikone;1933;1984;1984;PA;Silent Workhorse;High;M_Phoui Sananikone;X
+685015;Head of Government;Souvanna Phouma;1933;1985;1985;ML;Corporate Suit;High;M_Souvanna Phouma;X
+685016;Head of Government;Katay Don-Sasorith;1933;1960;1960;SL;Political Protege;High;M_Katay Don-Sasorith;X
+685017;Head of Government;Kou Abhay;1920;1965;1965;PA;Naive Optimist;High;M_Kou Abhay;X
+685018;Head of Government;Somsanith Vongkotrattana;1933;1976;1976;SC;Political Protege;High;M_Somsanith Vongkotrattana;X
+685019;Head of Government;Quinim Pholsena;1936;1964;1964;SD;Happy Amateur;High;M_Quinim Pholsena;X
+685020;Head of Government;Sisavang Vatthana;1933;1979;1979;PA;Political Protege;High;M540011;X
+685021;Head of Government;Kaysone Phomvihan;1945;1993;1993;LE;Corporate Suit;High;M540020;X
+685022;Head of Government;Souphanouvong;1933;1996;1996;LWR;Ambitious Union Boss;High;M_Souphanouvong;X
+685023;Head of Government;Faydang Lobliayao;1933;1989;1989;LE;Old General;High;M_Faydang Lobliayao;X
+685024;Head of Government;Phoumi Nosavan;1945;1985;1985;PA;Old General;High;M_Phoumi Nosavan;X
+685025;Head of Government;Bong Souvannavong;1933;1979;1979;SD;Naive Optimist;High;M_Bong Souvannavong;X
+685026;Head of Government;Phetsarath Ratanavongsa;1933;1960;1960;SC;Corporate Suit;High;M540008;X
+685027;Foreign Minister;Souvannarath;1933;1961;1961;SC;General Staffer;High;M540009;X
+685028;Foreign Minister;Phaya Khammao;1933;1966;1966;SL;Biased Intellectual;High;M540003;X
+685029;Foreign Minister;Quinim Pholsena;1933;1964;1964;SD;General Staffer;High;M_Quinim Pholsena;X
+685030;Foreign Minister;Phoui Sananikone;1933;1984;1984;PA;Biased Intellectual;High;M_Phoui Sananikone;X
+685031;Foreign Minister;Sisavang Vatthana;1933;1979;1979;PA;Apologetic Clerk;High;M540011;X
+685032;Foreign Minister;Souvanna Phouma;1933;1985;1985;ML;Apologetic Clerk;High;M_Souvanna Phouma;X
+685033;Foreign Minister;Souphanouvong;1933;1996;1996;LWR;Ideological Crusader;High;M_Souphanouvong;X
+685034;Foreign Minister;Phoumi Vongvichit;1933;1995;1995;LE;The Cloak N Dagger Schemer;High;M_Phoumi Vongvichit;X
+685035;Foreign Minister;Nouhak Phoumsavanh;1933;2008;2008;LE;Great Compromiser;High;M_Nouhak Phoumsavanh;X
+685036;Foreign Minister;Nhouy Abhay;1933;1964;1964;ML;Great Compromiser;High;M_Nhouy Abhay;X
+685037;Foreign Minister;Khamphan Panya;1936;1995;1995;PA;Apologetic Clerk;High;M_Khamphan Panya;X
+685038;Foreign Minister;Boun Oum;1933;1981;1981;PA;Iron Fisted Brute;High;M540010;X
+685039;Foreign Minister;Phoun Sipaseuth;1940;1995;1995;LE;Great Compromiser;High;M_Phoun Sipaseuth;X
+685040;Foreign Minister;Pheng Phongsavanh;1933;1980;1980;SC;Apologetic Clerk;High;M_Pheng Phongsavanh;X
+685041;Foreign Minister;Phoumi Nosavan;1945;1986;1986;PA;Iron Fisted Brute;High;M_Phoumi Nosavan;X
+685042;Minister of Armament;Kindavong;1930;1952;1952;SC;Infantry Proponent;High;M_Kindavong;X
+685043;Minister of Armament;Leuam Insixiengmay;1945;2004;2004;PA;Resource Industrialist;High;M_Leuam Insixiengmay;X
+685044;Minister of Armament;Ngon Sananikone;1936;2000;2000;SC;Resource Industrialist;High;M_Ngon Sananikone;X
+685045;Minister of Armament;Katay Don-Sasorith;1933;1960;1960;SL;Military Entrepreneur;High;M_Katay Don-Sasorith;X
+685046;Minister of Armament;Outhong Souvannavong;1933;1996;1996;SC;Laissez-Faire Capitalist;High;M_Outhong Souvannavong;X
+685047;Minister of Armament;Levam Rajasombath;1955;1980;1980;PA;Laissez-Faire Capitalist;High;M_Levam Rajasombath;X
+685048;Minister of Armament;Somsanith Vongkotrattana;1933;1976;1976;SC;Laissez-Faire Capitalist;High;M_Somsanith Vongkotrattana;X
+685049;Minister of Armament;Khamkhing Souvanlasy;1960;1980;1980;SC;Keynesian Economy;High;M_Khamkhing Souvanlasy;X
+685050;Minister of Armament;Souphanouvong;1933;1996;1996;LWR;Planned Economy Proponent;High;M_Souphanouvong;X
+685051;Minister of Armament;Kou Souvannamethi;1933;2001;2001;LWR;Infantry Proponent;High;M_Kou Souvannamethi;X
+685052;Minister of Armament;Ouane Rattikone;1933;1979;1979;PA;Infantry Proponent;High;M_Ouane Rattikone;X
+685053;Minister of Armament;Sisouk Na Champassak;1950;1986;1986;SC;Corrupt Kleptocrat;High;M_Sisouk Na Champassak;X
+685054;Minister of Armament;Kou Voravong;1933;1955;1955;PA;Military Entrepreneur;High;M_Kou Voravong;X
+685055;Minister of Armament;Nouhak Phoumsavanh;1933;2008;2008;LE;Industrial Chemist;High;M_Nouhak Phoumsavanh;X
+685056;Minister of Security;Souvannarath;1933;1961;1961;SC;Back Stabber;High;M540009;X
+685057;Minister of Security;Somsanith Vongkotrattana;1933;1976;1976;ML;Silent Lawyer;High;M_Somsanith Vongkotrattana;X
+685058;Minister of Security;Outhong Souvannavong;1933;1996;1996;SC;Compassionate Gentleman;High;M_Outhong Souvannavong;X
+685059;Minister of Security;Kou Voravong;1933;1955;1955;PA;Prince of Terror;High;M_Kou Voravong;X
+685060;Minister of Security;Pheng Phongsavanh;1933;1980;1980;SC;Man of the People;High;M_Pheng Phongsavanh;X
+685061;Minister of Security;Nhouy Abhay;1933;1964;1964;ML;Compassionate Gentleman;High;M_Nhouy Abhay;X
+685062;Minister of Security;Levam Rajasombath;1955;1975;1975;PA;Silent Lawyer;High;M_Levam Rajasombath;X
+685063;Minister of Security;Phoui Sananikone;1933;1984;1984;PA;Compassionate Gentleman;High;M_Phoui Sananikone;X
+685064;Minister of Security;Quinim Pholsena;1933;1964;1964;SD;Silent Lawyer;High;M_Quinim Pholsena;X
+685065;Minister of Security;Phoumi Vongvichit;1933;1995;1995;LE;Man of the People;High;M_Phoumi Vongvichit;X
+685066;Minister of Security;Phoumi Nosavan;1945;1985;1985;PA;Prince of Terror;High;M_Phoumi Nosavan;X
+685067;Head of Military Intelligence;Souk Vongsak;1936;1984;1984;LWR;Technical Specialist;High;M_Souk Vongsak;X
+685068;Head of Military Intelligence;Katay Don-Sasorith;1933;1960;1960;SL;Political Specialist;High;M_Katay Don-Sasorith;X
+685069;Head of Military Intelligence;Phoui Sananikone;1933;1984;1984;PA;Industrial Specialist;High;M_Phoui Sananikone;X
+685070;Head of Military Intelligence;Somchine Nginn;1933;1981;1981;SC;Logistics Specialist;High;M_Somchine Nginn;X
+685071;Head of Military Intelligence;Outhong Souvannavong;1933;1996;1996;ML;Political Specialist;High;M_Outhong Souvannavong;X
+685072;Head of Military Intelligence;Sithon Kommadam;1933;1978;1978;LE;Dismal Enigma;High;M_Sithon Kommadam;X
+685073;Head of Military Intelligence;Phoumi Nosavan;1940;1986;1986;PA;Dismal Enigma;High;M_Phoumi Nosavan;X
+685074;Head of Military Intelligence;Siho Lamphouthacoul;1950;1967;1967;PA;Political Specialist;High;M_Siho Lamphouthacoul;X
+685075;Chief of Staff;Sing Rattanasamai;1933;1974;1974;SC;School of Psychology;High;M_Sing Rattanasamai;X
+685076;Chief of Staff;Sounthone Pathammavong;1933;1986;1986;SC;School of Psychology;High;M_Sounthone Pathammavong;X
+685077;Chief of Staff;Phoumi Nosavan;1940;1985;1985;PA;School of Manoeuvre;High;M_Phoumi Nosavan;X
+685078;Chief of Staff;Kong Le;1960;2015;2015;SL;School of Mass Combat;High;M_Kong Le;X
+685079;Chief of Staff;Singkapo Chounramany;1940;1980;1980;LE;School of Mass Combat;High;M_Singkapo Chounramany;X
+685080;Chief of Staff;Kou Voravong;1933;1955;1955;PA;School of Mass Combat;High;M_Kou Voravong;X
+685081;Chief of Staff;Oudone Sananikone;1940;1985;1985;PA;School of Fire Support;High;M_Oudone Sananikone;X
+685082;Chief of Staff;Ouane Rattikone;1933;1979;1979;PA;School of Defence;High;M_Ouane Rattikone;X
+685083;Chief of Army;Sing Rattanasamai;1933;1974;1974;ML;Elastic Defence Doctrine;High;M_Sing Rattanasamai;X
+685084;Chief of Army;Sounthone Pathammavong;1933;1986;1986;SC;Decisive Battle Doctrine;High;M_Sounthone Pathammavong;X
+685085;Chief of Army;Phoumi Nosavan;1945;1985;1985;PA;Static Defence Doctrine;High;M_Phoumi Nosavan;X
+685086;Chief of Army;Ouane Rattikone;1933;1979;1979;PA;Decisive Battle Doctrine;High;M_Ouane Rattikone;X
+685087;Chief of Army;Kouprasith Abhay;1933;1960;1960;SC;Elastic Defence Doctrine;High;M_Kouprasith Abhay;X
+685088;Chief of Army;Phetsarath Ratanavongsa;1933;1960;1960;SC;Guns and Butter Doctrine;High;M540008;X
+685089;Chief of Army;Kong Le;1960;2015;2015;SL;Elastic Defence Doctrine;High;M_Kong Le;X
+685090;Chief of Army;Souphanouvong;1933;1996;1996;LWR;Static Defence Doctrine;High;M_Souphanouvong;X
+685091;Chief of Army;Khamtai Siphandone;1953;2024;2024;LE;Decisive Battle Doctrine;High;M_Khamtai Siphandone;X
+685092;Chief of Army;Singkapo Chounramany;1940;1980;1980;LE;Guerilla Warfare Doctrine;High;M_Singkapo Chounramany;X
+685093;Chief of Army;Kaysone Phomvihan;1945;1993;1993;LE;Elastic Defence Doctrine;High;M540020;X
+685094;Chief of Army;Oudone Sananikone;1940;1985;1985;PA;Elastic Defence Doctrine;High;M_Oudone Sananikone;X
+685095;Chief of Army;Amkha Soukhavong;1950;2000;2000;ML;Elastic Defence Doctrine;High;M_Amkha Soukhavong;X
+685096;Chief of Navy;Soulignet Chounramany;1945;2018;2018;SC;Decisive Naval Battle Doctrine;High;M_Soulignet Chounramany;X
+685097;Chief of Navy;Sinthanavong Kindavong;1933;1980;1980;SL;Decisive Naval Battle Doctrine;High;M_Sinthanavong Kindavong;X
+685098;Chief of Navy;Mok Kouvongsavanh;1955;1975;1975;SC;Decisive Naval Battle Doctrine;High;unknownminister;X
+685099;Chief of Air Force;Sourith Don Sasorith;1933;1980;1980;SC;Army Aviation Doctrine;High;M_Sourith Don Sasorith;X
+685100;Chief of Air Force;Thao Ma;1951;1980;1980;SC;Air Superiority Doctrine;High;M_Thao Ma;X
+685101;Chief of Staff;Kham-Ouane Boupha;1960;2020;2020;LWR;Air Superiority Doctrine;High;M_Kham Ouane Boupha;X

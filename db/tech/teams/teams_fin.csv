@@ -1,0 +1,23 @@
+FIN;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+145001;Valtion Lentokonetehdas;100664;5;1928;1951;aeronautics;fighter_design;aircraft_testing;bomber_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145002;Crichton;100108;5;1900;1970;naval_engineering;technical_efficiency;industrial_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145003;Kymmene;T1302;5;1930;1970;chemistry;industrial_engineering;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145004;Tikkakoski;100109;5;1930;1970;general_equipment;training;artillery;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145005;Valmet;T1304;4;1946;1970;aeronautics;bomber_design;avionics;fighter_design;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145006;Carl Mannerheim;T1305;7;1908;1946;infantry_focus;individual_courage;small_unit_tactics;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145007;Richard Lorentz;T1306;4;1930;1970;decentralized_execution;fighter_tactics;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145008;Vilho Nenonen;100113;6;1918;1947;artillery;training;electronics;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145009;K. Lennart Oesch;T1308;5;1930;1970;combined_arms_focus;centralized_execution;small_unit_tactics;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145010;Väinö Valve;T1309;4;1919;1970;naval_training;seamanship;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145011;Artturi Virtanen;T1310;6;1920;1970;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145012;Rolf Herman Nevanlinna;100665;4;1930;1970;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145013;Aarne Lakomaa;100116;5;1944;1970;aeronautics;rocketry;mechanics;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145014;Jaeger Training School;100383;3;1900;1970;individual_courage;small_unit_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145015;Ilmailuvoimien Lentokonetehdas;100107;5;1921;1927;aeronautics;artillery;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145016;Finnish Army;100663;1;1890;1970;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145017;Suomen Gummitehdas Oy;100110;4;1898;1970;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145018;Fiskars;100111;4;1649;1970;industrial_engineering;mechanics;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145019;Åström;100112;6;1908;1970;chemistry;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145020;Merivoimien Tutkimuslaitos;100114;4;1917;1970;centralized_execution;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145021;Arne Somersalo;100115;4;1919;1946;centralized_execution;fighter_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+145022;Karl Fredrik Wilkama;100754;3;1918;1928;small_unit_tactics;infantry_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

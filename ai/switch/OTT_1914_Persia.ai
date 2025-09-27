@@ -1,0 +1,228 @@
+# OTT AI File 1914 by jaegerfeld
+# OTT focus on Persia
+###################################
+
+max_front_ratio = 1.5
+max_front_ratios = { 	
+	U02 = 5
+}
+
+combat = { 
+			ENG = 100
+			RUS = 100
+			PER = 100
+			U02 = 100
+	}
+
+# Special resistance against "influence" by the listed nations. Value range = [0 - 10]  
+resistance = {  
+	RUS = 5 
+	ENG = 4
+	FRA = 4
+	ITA = 5
+	USA = 2
+	
+}
+befriend = {
+	U08 = 100
+	U09 = 100
+}
+protect = { }
+target = {
+	# United Kingdom
+	388 = 150 # Cyprus
+
+	# Italy
+	379 = 50 # Rhodes
+	378 = 50 # Dodecanese
+
+	# RUS
+	702 = 10
+	708 = 10
+	713 = 30 # Baku
+	
+	#Persia
+	1082 = 100
+	1083 = 100
+	1085 = 100
+	1086 = 100
+	1090 = 100
+	
+} 
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+leader_ratio = {
+	land_field_marshal 	=0.02
+	land_general 		=0.031
+	land_lt_general 	=0.41
+
+	sea_grand_admiral 	=0.02
+	sea_admiral 		=0.061
+	sea_vice_admiral 	=0.401
+
+	air_marshal 		=0.02
+	air_general 		=0.091
+	air_lt_General 		=0.11
+}
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 0.5
+	home_peace_cap 		= 40
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 1.0
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 200	# Beach level 2
+	capital			= 40	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		
+		FRA = 2
+		ENG = 2
+		RUS = 3
+		SER = 1
+		BUL = 2
+		ROM = -1
+		GRE = 2
+	}
+	province_priorities = {
+
+	# United Kingdom
+	388 = 3 # Cyprus
+
+	# Italy
+	379 = 2 # Rhodes
+	378 = 2 # Dodecanese
+
+	# RUS
+	702 = 5
+	708 = 2
+	713 = 4 # Baku
+	
+	#Persia
+	1082 = 2
+	1083 = 2
+	1085 = 3
+	1086 = 2
+	1090 = 4
+		
+	}
+	area_multiplier = { }
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= op_defensive
+	distrib_vs_human 	= op_defensive
+
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+
+	strength 	= 1.0
+	organisation 	= 1.0
+	soft_attack 	= 1.0
+	hard_attack 	= 1.0
+	ground_defense 	= 1.0
+	dig_in 		= 1.0 # Against defender
+
+	frozen_attack 	= 1.0
+	snow_attack 	= 1.0
+	blizzard_attack = 1.0
+	storm_attack 	= 1.0
+	muddy_attack 	= 1.0
+
+	
+	
+	occupied 	= 0.7
+	owned 		= 0.7
+
+	jungle_attack 	= 1.0
+	mountain_attack = 1.0
+	swamp_attack 	= 1.0
+	forest_attack 	= 1.0
+	hill_attack 	= 1.0
+	urban_attack 	= 1.0
+	river 		= 1.0
+
+   	enemy_handicap = { } 
+	passivity = { } 
+		
+province_priorities = {
+
+	# United Kingdom
+	388 = 150 # Cyprus
+
+	# Italy
+	379 = 50 # Rhodes
+	378 = 50 # Dodecanese
+
+	# RUS
+	702 = 10
+	708 = 10
+	713 = 30 # Baku
+	
+	#Persia
+	1082 = 100
+	1083 = 100
+	1085 = 100
+	1086 = 100
+	1090 = 100	
+	}
+} 
+
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+
+	invasion	= yes
+	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 5.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.5	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 2.0	#higher = avoid long distance.
+	max_distance    = 2000.0
+	pocket		= 2.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 2.0	#prioritise taking pure islands.
+	enemy		= 1.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 0.5	#higher = much more vary of troops nearby
+	air_base	= 0.1
+      	naval_base 	= 0.1
+      	air_support 	= 2.0
+
+
+	ignore		= no
+	help_allies 	= no
+      	redirect 	= priority
+      	staging_province = {
+
+	}
+
+	target = {
+
+		379 = 100#Rhodos
+		378 = 100
+
+		388 = 100
+	}
+}
+
+
+

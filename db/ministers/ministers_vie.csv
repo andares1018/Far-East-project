@@ -1,0 +1,130 @@
+VIE;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+790001;Head of State;H.M. Bao Dai;1925;1997;1997;ML;Weary Stiffneck;High;M542001;X
+790002;Head of State;H.M. Bao Dai;1925;1997;1997;SC;Weary Stiffneck;High;M542001;X
+790003;Head of State;H.M. Bao Dai;1925;1997;1997;PA;Weary Stiffneck;High;M542001;X
+790004;Head of State;Ngo Dinh Diem;1930;1970;1970;PA;Autocratic Charmer;Medium;M542018;X
+790005;Head of State;Duong Van Minh;1955;2001;2001;PA;Resigned Generalissimo;Medium;6389;X
+790006;Head of State;Nguyen Khanh;1955;2013;2013;PA;Resigned Generalissimo;Medium;6390;X
+790007;Head of State;Phan Khac Suu;1955;1970;1970;ML;Weary Stiffneck;Medium;6392;X
+790008;Head of State;Nguyen Hai Than;1930;1960;1960;SC;Resigned Generalissimo;Medium;M_Nguyen Hai Than;X
+790009;Head of State;Vu Hong Khanh;1930;1993;1993;SC;Insignificant Layman;Medium;M_Vu Hong Khanh;X
+790010;Head of State;H.I.H. Cuong De;1925;1952;1952;PA;Popular Figurehead;Medium;6388;X
+790011;Head of Government;Tran Van Huong;1930;1982;1982;ML;Flamboyant Tough Guy;Medium;6405;X
+790012;Head of Government;Phan Huy Quat;1950;1980;1980;SL;Flamboyant Tough Guy;Medium;M_Phan Huy Quat;X
+790013;Head of Government;Cu Huy Can;1945;2005;2005;SD;Happy Amateur;Medium;M_Cu Huy Can;X
+790014;Head of Government;Ngo Dinh Nhu;1940;1975;1975;PA;Political Protege;Medium;M542033;X
+790015;Head of Government;Duong Duc Hien;1945;1964;1964;SD;Old Lawyer;Medium;M_Duong Duc Hien;X
+790016;Head of Government;Nguyen Tuong Tam;1930;1964;1964;SL;Ambitious Union Boss;Medium;M_Nhat Linh;X
+790017;Head of Government;Bui Quang Chieu;1920;1946;1946;ML;Backroom Backstabber;Medium;M_Bui Quang Chieu;X
+790018;Head of Government;Nguyen Phan Long;1925;1961;1961;ML;Corporate Suit;Medium;6401;X
+790019;Head of Government;Tran Van Huu;1930;1985;1985;ML;Flamboyant Tough Guy;Medium;6402;X
+790020;Head of Government;Vu Hong Khanh;1930;1993;1993;SC;Backroom Backstabber;Medium;M_Vu Hong Khanh;X
+790021;Head of Government;Le Van Hoach;1930;1978;1978;SC;Naive Optimist;Medium;6399;X
+790022;Head of Government;Tran Trong Kim;1920;1954;1954;PA;Naive Optimist;Medium;M_Tran Trong Kim;X
+790023;Head of Government;Ngo Dinh Canh;1950;1970;1970;PA;Local Tyrant;Medium;6418;X
+790024;Head of Government;Nguyen Van Xuan;1930;1989;1989;PA;Old General;Medium;6400;X
+790025;Head of Government;Nguyen Van Tam;1940;1990;1990;PA;Backroom Backstabber;Medium;M_Nguyen Van Tam;X
+790026;Head of Government;Nguyen Phuc Buu Loc;1940;1990;1990;PA;Political Protege;Medium;6403;X
+790027;Head of Government;Nguyen Ngoc Tho;1940;1976;1976;PA;Flamboyant Tough Guy;Medium;7984;X
+790028;Head of Government;Nguyen Khanh;1955;2013;2013;PA;Backroom Backstabber;Medium;6390;X
+790029;Head of Government;Tran Quang Vinh;1940;1977;1977;PA;Backroom Backstabber;Medium;6397;X
+790030;Head of Government;Ngo Dinh Diem;1930;1970;1970;PA;Flamboyant Tough Guy;High;M542018;X
+790031;Foreign Minister;Duong Duc Hien;1945;1964;1964;SD;Apologetic Clerk;Medium;M_Duong Duc Hien;X
+790032;Foreign Minister;Ha Thuc Ky;1950;2008;2008;SL;Apologetic Clerk;Medium;M_Ha Thuc Ky;X
+790033;Foreign Minister;Bui Diem;1950;2021;2021;SL;General Staffer;Medium;M_Bui Diem;X
+790034;Foreign Minister;Nguyen Tuong Tam;1930;1970;1999;SL;The Cloak N Dagger Schemer;Medium;M_Nhat Linh;X
+790035;Foreign Minister;Phan Huy Quat;1933;1980;1980;SL;Apologetic Clerk;Medium;M_Phan Huy Quat;X
+790036;Foreign Minister;Nguyen Phan Long;1925;1961;1961;ML;Biased Intellectual;Medium;6401;X
+790037;Foreign Minister;Tran Van Huu;1930;1985;1985;ML;Biased Intellectual;Medium;6402;X
+790038;Foreign Minister;Tran Van Do;1930;1990;1990;SC;Great Compromiser;Medium;7981;X
+790039;Foreign Minister;Vu Van Mau;1936;1998;1998;SC;Biased Intellectual;Medium;M_Vu Van Mau;X
+790040;Foreign Minister;Nguyen Quoc Dinh;1950;1976;1976;SC;The Cloak N Dagger Schemer;Medium;M_Nguyen Quoc Dinh;X
+790041;Foreign Minister;Chu Ba Phuong;1930;1964;1964;SC;Ideological Crusader;Medium;M_Chu Ba Phuong;X
+790042;Foreign Minister;Truong Vinh Tong;1928;1974;1974;PA;The Cloak N Dagger Schemer;Medium;M_Truong Vinh Tong;X
+790043;Foreign Minister;Tran Van Chuong;1925;1970;1986;SC;Great Compromiser;Medium;6408;X
+790044;Foreign Minister;Pham Dang Lam;1950;1976;1976;PA;Apologetic Clerk;Medium;6411;X
+790045;Foreign Minister;Ngo Dinh Luyen;1950;1990;1990;PA;Ideological Crusader;Medium;6409;X
+790046;Minister of Armament;Chu Ba Phuong;1930;1964;1964;SL;Resource Industrialist;Medium;M_Chu Ba Phuong;X
+790047;Minister of Armament;Tran Van Van;1930;1966;1966;SC;Steel Magnate;Medium;M_Tran Van Van;X
+790048;Minister of Armament;Phan Khac Suu;1955;1970;1970;ML;Resource Industrialist;Medium;6392;X
+790049;Minister of Armament;Hoang Trong Phu;1907;1947;1947;PA;Mixed Economy;Medium;M_Hoang Trong Phu;X
+790050;Minister of Armament;Vu Van Hien;1933;1961;1961;SC;Laissez-Faire Capitalist;Medium;M_Vu Van Hien;X
+790051;Minister of Armament;Duong Tan Tai;1926;1970;1970;SC;Laissez-Faire Capitalist;Medium;M_Duong Tan Tai;X
+790053;Minister of Armament;Nguyen Xuan Oanh;1955;2003;2003;SC;Administrative Genius;Medium;6404;X
+790054;Minister of Armament;Pham Quynh;1924;1946;1946;SC;Laissez-Faire Capitalist;Medium;6396;X
+790055;Minister of Armament;Tran Van Huong;1930;1982;1982;ML;Military Entrepreneur;Medium;6405;X
+790056;Minister of Armament;Vu Quoc Thuc;1950;1988;2021;PA;Keynesian Economy;Medium;M_Vu Quoc Thuc;X
+790057;Minister of Armament;Ha Ta Khanh;1930;1970;1996;SC;Laissez-Faire Capitalist;Medium;M_Ha Ta Khanh;X
+790058;Minister of Armament;Ngo Dinh Nhu;1930;1970;1999;PA;Keynesian Economy;Medium;M542033;X
+790059;Minister of Armament;Nguyen Ngoc Tho;1930;1976;1976;PA;Industrial Chemist;Medium;7984;X
+790060;Minister of Armament;Nguyen Giac Ngo;1930;1968;1968;FA;Infantry Proponent;Medium;M_Nguyen Giac Ngo;X
+790061;Minister of Security;Ho Huu Tuong;1930;1980;1980;SD;Efficient Sociopath;Medium;M_Ho Huu Tuong;X
+790062;Minister of Security;Hoang Dao;1930;1949;1949;SL;Media Magnate;Medium;M_Hoang Dao;X
+790064;Minister of Security;Nguyen Ton Hoan;1948;1970;2001;SL;Man of the People;Medium;6420;X
+790065;Minister of Security;Nguyen Van Vinh;1930;1937;1937;ML;Media Magnate;Medium;M_Nguyen Van Vinh;X
+790066;Minister of Security;Nguyen Phan Long;1925;1961;1961;ML;Back Stabber;Medium;6401;X
+790067;Minister of Security;Dinh Xuan Quang;1930;1971;1971;ML;Silent Lawyer;Medium;M_Dinh Xuan Quang;X
+790068;Minister of Security;Nguyen Van Thinh;1926;1948;1948;SC;Compassionate Gentleman;Medium;M_Nguyen Van Thinh;X
+790069;Minister of Security;Tran Van Huu;1930;1985;1985;SC;Prince of Terror;Medium;6402;X
+790070;Minister of Security;Lam Le Trinh;1945;2010;2010;SC;Silent Lawyer;Medium;M_Lam Le Trinh;X
+790071;Minister of Security;Tran Dinh Nam;1930;1974;1974;SC;Compassionate Gentleman;Medium;M_Tran Dinh Nam;X
+790072;Minister of Security;Pham Qhuyn;1924;1946;1946;SC;Man of the People;Medium;6396;X
+790073;Minister of Security;Nguyen Van Tam;1930;1960;1990;PA;Prince of Terror;Medium;M_Nguyen Van Tam;X
+790074;Minister of Security;Ngo Dinh Canh;1950;1970;1970;PA;Crooked Kleptocrat;Medium;6418;X
+790075;Minister of Security;Nguyen Ngoc Tho;1930;1976;1976;PA;Efficient Sociopath;Medium;7984;X
+790076;Minister of Security;Nguyen Van Vy;1940;1973;1981;PA;Compassionate Gentleman;Medium;6416;X
+790077;Minister of Security;Nguyen Phuc Buu Loc;1940;1990;1990;PA;Prince of Terror;Medium;6403;X
+790078;Minister of Security;Tran Van Chuong;1925;1970;1986;SC;Silent Lawyer;Medium;6408;X
+790079;Minister of Security;Nguyen Van Xuan;1930;1989;1989;PA;Silent Lawyer;Medium;6400;X
+790080;Minister of Security;Ngo Dinh Diem;1930;1970;1999;PA;Prince of Terror;Medium;M542018;X
+790081;Minister of Security;Bui Van Thinh;1945;1970;1999;PA;Silent Lawyer;Medium;M_Bui Van Thinh;X
+790082;Minister of Security;Nguyen Huu Chau;1940;1970;1970;PA;Back Stabber;Medium;M_Nguyen Huu Chau;X
+790083;Minister of Security;Bui Van Luong;1940;1970;1970;PA;Silent Lawyer;Medium;M_Bui Van Luong;X
+790084;Minister of Security;Ton That Dinh;1955;1970;2013;PA;Back Stabber;Medium;M_Ton That Dinh;X
+790085;Minister of Security;Lam Van Phat;1950;1998;1998;PA;Efficient Sociopath;Medium;M_Lam Van Phat;X
+790086;Minister of Security;Nguyen Luu Vien;1960;2017;2017;SC;Man of the People;Medium;M_Nguyen Luu Vien;X
+790087;Minister of Security;Hoang Nam Hung;1930;1970;1970;PA;Man of the People;Medium;7983;X
+790088;Head of Military Intelligence;Nguyen Tuong Tam;1930;1970;1999;SL;Political Specialist;Medium;M_Nhat Linh;X
+790089;Head of Military Intelligence;Nguyen Van Hinh;1930;1970;2004;ML;Logistics Specialist;Medium;6414;X
+790090;Head of Military Intelligence;Tran Dinh Nam;1930;1974;1974;SC;Industrial Specialist;Medium;M_Tran Dinh Nam;X
+790091;Head of Military Intelligence;Nhuong Tong;1928;1950;1950;SC;Technical Specialist;Medium;M_Nhuong Tong;X
+790092;Head of Military Intelligence;Tran Van Tuyen;1940;1976;1976;SL;Political Specialist;Medium;M_Tran Van Tuyen;X
+790093;Head of Military Intelligence;Mai Huu Xuan;1940;1980;1980;SC;Political Specialist;Medium;6428;X
+790094;Head of Military Intelligence;Linh Quang Vien;1940;2013;2013;SC;Logistics Specialist;Medium;6425;X
+790095;Head of Military Intelligence;Nguyen Ngoc Le;1940;1972;1972;PA;Logistics Specialist;Medium;M_Nguyen Ngoc Le;X
+790096;Head of Military Intelligence;Tran Chanh Thanh;1940;1975;1975;PA;Dismal Enigma;Medium;M_Tran Chanh Thanh;X
+790097;Head of Military Intelligence;Tran Kim Tuyen;1955;1995;1995;PA;Political Specialist;Medium;6427;X
+790098;Head of Military Intelligence;Nguyen Ngoc Loan;1955;1998;1998;PA;Political Specialist;Medium;M_Nguyen Ngoc Loan;X
+790099;Head of Military Intelligence;Pham Xuan Chieu;1930;2018;2018;PA;Technical Specialist;Medium;7348;X
+790100;Head of Military Intelligence;Nguyen Van Tam;1930;1960;1990;PA;Political Specialist;Medium;M_Nguyen Van Tam;X
+790101;Head of Military Intelligence;Truong Tu Anh;1936;1947;1947;FA;Political Specialist;Medium;M_Truong Tu Anh;X
+790102;Head of Military Intelligence;Tran Van Don;1940;1970;1997;PA;Logistics Specialist;Medium;6419;X
+790103;Chief of Staff;Le Van Ty;1925;1965;1965;PA;School of Mass Combat;Medium;6422;X
+790104;Chief of Staff;Nguyen Van Hinh;1930;1970;2004;PA;School of Fire Support;Medium;6414;X
+790105;Chief of Staff;Ho Hoc Lam;1920;1944;1944;SL;School of Psychology;Medium;M_Ho Hoc Lam;X
+790106;Chief of Staff;Bo Xuan Luat;1930;1994;1994;SC;School of Defence;Medium;M_Bo Xuan Luat;X
+790107;Chief of Staff;Nguyen Van Vy;1940;1973;1981;PA;School of Defence;Medium;6416;X
+790108;Chief of Staff;Tran Quang Vinh;1940;1977;1977;FA;School of Psychology;Medium;6397;X
+790109;Chief of Staff;Duong Van Minh;1955;2001;2001;PA;School of Fire Support;Medium;6389;X
+790110;Chief of Staff;Tran Thien Khiem;1930;1970;1999;PA;School of Psychology;Medium;6391;X
+790111;Chief of Staff;Tran Van Don;1940;1970;1997;PA;Commando Doctrine Staff;Medium;6419;X
+790112;Chief of Staff;Nguyen Khanh;1950;2013;2013;PA;School of Psychology;Medium;6390;X
+790113;Chief of Army;Le Van Ty;1925;1965;1965;PA;Decisive Battle Doctrine;Medium;6422;X
+790114;Chief of Army;Tran Trung Dung;1950;1997;1997;SC;Static Defence Doctrine;Medium;6417;X
+790115;Chief of Army;Bo Xuan Luat;1930;1994;1994;SC;Guns and Butter Doctrine;Medium;M_Bo Xuan Luat;X
+790116;Chief of Army;Nguyen Van Hinh;1930;1970;2004;PA;Elastic Defence Doctrine;Medium;6414;X
+790117;Chief of Army;Nguyen Van Vy;1940;1973;1981;PA;Guns and Butter Doctrine;Medium;6416;X
+790118;Chief of Army;Tran Van Don;1940;1970;1997;PA;Static Defence Doctrine;Medium;6419;X
+790119;Chief of Navy;Tran Van Don;1940;1970;1997;PA;Base Control Doctrine;Medium;6419;X
+790120;Chief of Navy;Le Quang My;1948;1990;1990;PA;Open Seas Doctrine;Medium;6433;X
+790121;Chief of Navy;Tran Van Chon;1955;1975;2019;SC;Decisive Naval Battle Doctrine;Medium;6434;X
+790122;Chief of Navy;Ho Tan Quyen;1952;1964;1964;PA;Decisive Naval Battle Doctrine;Medium;M542051;X
+790123;Chief of Navy;Chung Tan Cang;1950;2007;2007;PA;Base Control Doctrine;Medium;6435;X
+790124;Chief of Air Force;Nguyen Van Hinh;1930;1970;2004;PA;Vertical Envelopment Doctrine;Medium;6414;X
+790125;Chief of Air Force;Tran Van Ho;1950;1970;1999;PA;Air Superiority Doctrine;Medium;6429;X
+790126;Chief of Air Force;Nguyen Khanh;1950;2013;2013;PA;Army Aviation Doctrine;Medium;6390;X
+790127;Chief of Air Force;Nguyen Chanh Thi;1945;1970;2007;PA;Vertical Envelopment Doctrine;Medium;M_Nguyen Chanh Thi;X
+790128;Head of Government;Nguyen Ton Hoan;1948;1970;2001;SC;Political Protege;Medium;6420;X
+790129;Chief of Army;Vu Hong Khanh;1930;1993;1993;SC;Commando Doctrine Army;Medium;M_Vu Hong Khanh;X
+790130;Chief of Navy;Nguyen Van Hinh;1933;1970;2004;PA;Base Control Doctrine;Medium;6414;X

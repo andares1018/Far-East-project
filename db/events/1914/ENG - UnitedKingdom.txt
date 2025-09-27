@@ -1,0 +1,2054 @@
+###
+###  English events (ENG - 001)
+###
+### By Rhysaxiel
+###
+### 2001501  ENG  Declare War Against Germany (Belgium neutrality violated)
+### 2001502  ENG  Plans against Ottoman Empire
+### 2001503  ENG  The Dardanelles' objective
+### 2001504  ENG  Plans against Ottoman Empire, french participation
+### 2001505  ENG  A foot on Cape Helles
+### 2001506  ENG  Seizing Salonique ?
+### 2001507  ENG  Dard's failure
+### 2001508  ENG  Letters with Hussein bin Ali
+### 2001509  ENG  Promises for a great arab empire
+### 2001510  ENG  T.E. Lawrence
+### 2001511  ENG  Send assistance to Hedjaz
+### 2001512  ENG  Renewed assistance to Hedjaz
+### 2001513  ENG  Al-Arish is lost !
+### 2001514  ENG  Suez is lost !
+### 2001515  ENG  Alexandria is lost !
+### 2001516  ENG  Bur Sudir is lost !
+### 2001517  ENG  Khartoum is lost !
+### 2001518  ENG  Cairo is lost !
+### 2001519  ENG  The enemy lands in Dover !
+### 2001520  ENG  The enemy lands in Norwich !
+### 2001521  ENG  The enemy lands in Edimburgh !
+### 2001522  ENG  The enemy lands in Glasgow !
+### 2001523  ENG  The enemy lands in Manchester !
+### 2001524  ENG  The enemy lands in Cardiff !
+### 2001525  ENG  The enemy lands in Plymouth !
+### 2001526  ENG  The enemy lands in Dublin !
+### 2001527  ENG  The enemy lands in Portsmouth !
+### 2001528  ENG  London is lost !
+### 2001529  ENG  Russia opens secret negotiations
+### 2001530  ENG  Blockade against Germany
+### 2001531  ENG  Germans blockade !
+### 2001534  ENG  Germany's unrestricted warfare
+### 2001532  ENG  The sink of the Lusitania
+### 2001533  ENG  The sink of the Lusitania - the Germans got us
+### 2001535  ENG  The Zimmermann telegram - we got'em !
+### 2001536  ENG  Align Portugal
+### 2001537  POR  The British government invites us to participate in the war
+### 2001538  BRA  Brazil declares war against Germany
+### 2001539  ENG  The Easter Rising
+### 2001540  ENG  Military defeat
+### 2001541  U08  Armistice with the British Empire
+### 2001542  ENG  Offer peace to Germany
+### 2001543  U08  UK offers a white peace
+### 2001544  SER  UK offered a white peace to Germany
+### 2001545  MTN  UK offered a white peace to Germany
+### 2001546  ENG  Germany accepted our proposal
+### 2001547  U09  Serbia submits to us!
+### 2001548  U09  Montenegro submits to us!
+### 2001549  U50  UK offered a white peace to Germany
+### 2001550  OTT  Hedjaz submits to us!
+### 2001551  U91  UK offered a white peace to Germany
+### 2001552  OTT  Kuwait submits to us!
+### 2001553  CAN  Peace with Germany
+### 2001554  AST  Peace with Germany
+### 2001555  NZL  Peace with Germany
+### 2001556  BHU  Peace with Germany
+### 2001557  NEP  Peace with Germany
+### 2001558  OMN  Peace with Germany
+### 2001559  SAF  Peace with Germany
+### 2001560  U02  Peace with Germany
+### 2001563  U53  Peace with Germany
+### 2001564  ENG  Armistice with Germany
+### 2001565  U60  Peace with Germany
+### 2001566  ENG  The end of the German blockade
+### 2001573  ENG  Declare War Against Germany (Switzerland neutrality violated)
+### 2001574  ENG  Declare War Against Germany (only France)
+
+event = {
+	id = 2001501	# Declare War Against Germany (Belgium neutrality violated)
+	country = ENG
+
+	decision = { 
+		war = { country = BEL country = U08 }
+		war = { country = FRA country = U08 }
+		alliance = { country = FRA country = BEL }
+		NOT = { alliance = { country = ENG country = FRA } }
+		NOT = { alliance = { country = ENG country = U08 } }
+		NOT = { war = { country = ENG country = FRA } }
+		NOT = { event = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)
+		NOT = { event = 2001574 } #Declare War Against Germany (only France)
+	}
+	decision_trigger = { war = { country = BEL country = U08 } }
+	trigger = { 
+		war = { country = BEL country = U08 }
+		war = { country = FRA country = U08 }
+		alliance = { country = FRA country = BEL }
+		NOT = { alliance = { country = ENG country = FRA } }
+		NOT = { alliance = { country = ENG country = U08 } }
+		NOT = { war = { country = ENG country = FRA } }
+		NOT = { event = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)
+		NOT = { event = 2001574 } #Declare War Against Germany (only France)
+	}
+   
+	name = "EVT1914_2001501_NAME"
+	desc = "EVT1914_2001501_DESC" 
+	style = 2
+	picture = "English_declaration_war"
+	decision_picture = "decision_english_declaration_war"
+
+	date = { day = 4 month = august year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1914 }
+
+	action = {
+		ai_chance = 100
+		name = "EVT1914_2001501_ACTIONA" # War !
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = sleepevent which = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)		
+		command = { type = sleepevent which = 2001574 } #Declare War Against Germany (only France)
+		command = { trigger = { war = { country = FRA country = SCH } NOT = { ispuppet = SCH } } type = dissent value = 5 } #If FRA DoWed SCH, dissent
+	}	
+	action = {
+		ai_chance = 0
+		name = ACTION_NAME_NEUTRAL
+		command = { type = sleepevent which = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)		
+		command = { type = sleepevent which = 2001574 } #Declare War Against Germany (only France)
+		command = { trigger = { 
+						OR = {
+							NOT = { war = { country = FRA country = SCH } } 
+							AND = { 
+								ispuppet = SCH
+								war = { country = FRA country = SCH }
+							}
+						}
+					} type = dissent value = 3 } #Dissent only if Swiss neutrality was not violated by FRA (ENG should have helped poor Belgium)
+	}
+}
+#### Dardanelles
+event = {
+	id = 2001502	# Plans against Ottoman Empire
+	country = ENG
+
+	decision = {
+		war = { country = ENG country = OTT }
+	}
+	decision_trigger = { manpower = 50 }
+	trigger = {
+		random = 10
+		war = { country = ENG country = OTT }
+	}
+   
+	name = "EVT1914_2001502_NAME"
+	desc = "EVT1914_2001502_DESC" 
+	style = 2
+	picture = "varyag"
+	decision_picture = "decision_english_declaration_war"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "EVT1914_2001502_ACTIONA" # Plan the Dardanelles' operations
+		ai_chance = 100
+		command = { type = trigger which = 2002510 } # FRA "Plans against OTT"
+		command = { type = trigger which = 2001503 } # ENG "Dard's objective"
+		command = { type = manpowerpool value = -50 }
+		command = { type = supplies value = -500 }
+		command = { type = add_division which = "1. Transport flotilla" value = transport when = 0 where = none  }
+		command = { type = add_division which = "2. Transport flotilla" value = transport when = 0 where = none  }
+		command = { type = add_division which = "3. Transport flotilla" value = transport when = 0 where = none  }
+	}
+	action_b = {
+		name = "EVT1914_2001502_ACTIONB" # Reject the plan
+		ai_chance = 0
+		command = {  }
+	}
+}
+event = {
+	id = 2001503	# The Dardanelles' objective
+	random = no
+	country = ENG
+	save_date = yes
+
+	#triggered by ENG 2001502
+   
+	name = "EVT1914_2001503_NAME"
+	desc = "EVT1914_2001503_DESC" 
+	style = 2
+	picture = "varyag"
+
+	action_a = {
+		name = "EVT1914_2001503_ACTIONA" # Ok !
+		command = {   }
+	}
+}
+event = {
+	id = 2001504	# Plans against Ottoman Empire, french participation
+	random = no
+	country = ENG
+
+	#triggered by FRA 2002510
+   
+	name = "EVT1914_2001504_NAME"
+	desc = "EVT1914_2001504_DESC" 
+	style = 2
+	picture = "varyag"
+
+	action_a = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = add_division which = "French division" value = infantry when = 1 where = none }
+	}
+}
+event = {
+	id = 2001505	# A foot on Cape Helles
+	country = ENG
+
+	trigger = {
+		event = 2001503 #The Dardanelles' objective
+		control = { province = 384 data = -3 } #Gelibolu/Gallipoli
+		war = { country = ENG country = OTT }
+	}
+
+	name = "EVT1914_2001505_NAME"
+	desc = "EVT1914_2001505_DESC" 
+	style = 2
+	picture = "varyag"
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "ACTION_NAME_GREAT" # Perfect !
+		command = { type = dissent value = -1 }
+		command = { type = sleepevent which = 2001506  } # Seizing Salonique
+		command = { type = sleepevent which = 2001507  } # Dard's failure
+	}
+}
+event = {
+	id = 2001506	# Seizing Salonique ?
+	country = ENG
+
+	decision = { 
+		event = 2001503	# Dard's launched
+		control = { province = 384 data = OTT } # not controlling Cape Helles
+		war = { country = ENG country = OTT }
+		NOT = {	
+			event = 2145502	#OTT must be alive
+			alliance = { country = FRA country = GRE }
+			war = { country = ENG country = GRE }
+		}
+	}
+	decision_trigger = { 
+		control = { province = 365 data = GRE } #Thessaloniki
+	}
+	trigger = { 
+   		random = 5
+		event = 2001503	# Dard's launched
+		control = { province = 384 data = OTT } # not controlling Cape Helles
+		control = { province = 365 data = GRE } #Thessaloniki
+		war = { country = ENG country = OTT }
+		NOT = {	
+			event = 2145502	#OTT must be alive
+			alliance = { country = FRA country = GRE }
+			war = { country = ENG country = GRE }
+		} 	
+	}
+   
+	name = "EVT1914_2001506_NAME"
+	desc = "EVT1914_2001506_DESC" 
+	style = 2
+	picture = "varyag"
+	decision_picture = "decision_english_declaration_war"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "ACTION_NAME_GREAT" # Secure an rear area
+		command = { type = trigger which = 2019512  } # GRE "The Entente seizes Salonique"
+		command = { type = dissent value = -2 }
+		command = { type = relation which = GRE value = -20 }
+	}
+	action_b = { trigger = { ai = yes }
+		name = "EVT1914_2001505_ACTIONB" # Do not interfere with Greece internal affairs
+		command = { type = dissent value = -2 }
+		command = { type = relation which = GRE value = 5 }
+	}
+}
+event = {
+	id = 2001507	# Dard's failure
+	country = ENG
+
+	trigger = { 	
+		event = { id = 2001503 days = 150 } #5 months after # Dard's launched
+		war = { country = ENG country = OTT }
+		control = { province = 384 data = OTT }
+		NOT = { 
+			event = 2001505 # a foot on Cape Helles
+			event = 2145502 # the Fall of Constantinople
+		}
+	}
+	
+	name = "EVT1914_2001507_NAME"
+	desc = "EVT1914_2001507_DESC" 
+	style = 2
+	picture = "varyag"
+	
+	date = { day = 0 month = december year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "ACTION_NAME_DAMN" # Ok !
+		command = {  type = dissent value = 3 }
+	}
+}
+##### Hijaz revolt chain
+event = {
+	id = 2001508    # Letters with Hussein bin Ali
+	country = ENG
+
+	decision = { 
+		war = { country = OTT country = ENG  } 
+		exists = U50 #Hejaz
+		NOT = { war = { country = U50 country = ENG  }  } 
+	}
+
+	decision_trigger = { 
+		control = { province = 1004 data = ENG } #El Arish, if not controlled, Brit's are too far to help Hejaz
+	} 
+
+	trigger = { 
+		war = { country = OTT country = ENG  } 
+		control = { province = 1004 data = ENG } #El Arish, if not controlled, Brit's are too far to help Hejaz
+		random = 20 
+		exists = U50 #Hejaz
+		NOT = { war = { country = U50 country = ENG  }  } 
+	}
+  
+	name = "EVT1914_2001508_NAME"
+	desc = "EVT1914_2001508_DESC"
+	style = 2
+	picture = "Ottoman_declaration_war"
+	decision_picture = "decision_ottoman_declaration_war"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2001508_ACTIONA" # A first contact with Arabs
+		command = { type = trigger which = 2233500 } #Hedjaz
+	}
+}
+event = {
+	id = 2001509    # Promises for a great arab empire
+	country = ENG
+
+	decision = { 
+		event = 2001508 
+		war = { country = OTT country = ENG  } 
+		exists = U50 
+		NOT = { war = { country = U50 country = ENG  }  } 		
+	}
+
+	decision_trigger = { 
+		control = { province = 1004 data = ENG } #El Arish, if not controlled, Brit's are too far to help Hejaz
+	}
+
+	trigger = { 
+		event = 2001508 
+		war = { country = OTT country = ENG  } 
+		control = { province = 1004 data = ENG } 
+		random = 20 	
+		exists = U50 
+		NOT = { war = { country = U50 country = ENG  }  } 
+	}
+  
+	name = "EVT1914_2001509_NAME"
+	desc = "EVT1914_2001509_DESC"
+	style = 2
+	picture = "Ottoman_declaration_war"
+	decision_picture = "decision_ottoman_declaration_war"
+
+	date = { day = 0 month = june year = 1916 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2001509_ACTIONA" # Sharif of Meccah will join our cause
+		command = { type = trigger which = 2233501 } #Hedjaz
+	}
+}
+event = {
+	id = 2001510    # T.E. Lawrence
+	country = ENG
+
+	decision = { 
+		war = { country = OTT country = ENG } 
+		war = { country = OTT country = U50 } 
+		NOT = { war = { country = U50 country = ENG  }  } 		
+	}
+
+	decision_trigger = { 
+		control = { province = 1004 data = ENG } #El Arish, if not controlled, Brit's are too far to help Hejaz
+	} 
+
+	trigger = { 
+		war = { country = OTT country = ENG  } 
+		war = { country = OTT country = U50 } 
+		control = { province = 1004 data = ENG } 
+		random = 20 
+		NOT = { war = { country = U50 country = ENG  }  } 
+	}
+  
+	name = "EVT1914_2001510_NAME"
+	desc = "EVT1914_2001510_DESC"
+	style = 2
+	picture = "Ottoman_declaration_war"
+	decision_picture = "decision_ottoman_declaration_war"
+	
+	date = { day = 0 month = january year = 1917 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2001510_ACTIONA" # Send this rookie
+		command = { type = trigger which = 2233503 } #Hedjaz
+	}
+}
+event = {
+	id = 2001511    # Send assistance to Hedjaz
+	country = ENG
+
+	decision = { 
+		war = { country = OTT country = ENG } 
+		war = { country = OTT country = U50 } 
+		NOT = { war = { country = U50 country = ENG  }  } 		
+	}
+
+	decision_trigger = { 
+		control = { province = 1004 data = ENG } #El Arish
+		NOT = { control = { province = 1025 data = OTT } } #Ma'an (Aqabah)
+		supplies = 5000
+	} 
+
+	trigger = { 
+		war = { country = OTT country = ENG  } 
+		war = { country = OTT country = U50 }		
+		NOT = { war = { country = U50 country = ENG  }  } 		
+		control = { province = 1004 data = ENG } #El Arish
+		NOT = { control = { province = 1025 data = OTT } } #Ma'an (Aqabah)
+		random = 10 
+	}
+
+	name = "EVT1914_2001511_NAME"
+	desc = "EVT1914_2001511_DESC"
+	style = 2
+	picture = "Ottoman_declaration_war"
+	decision_picture = "decision_ottoman_declaration_war"
+	
+	date = { day = 0 month = january year = 1917 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2001511_ACTIONA" # Send supplies !
+		command = { trigger = { ai = no} type = supplies value = -5000 }
+		command = { type = trigger which = 2233504 } #Hedjaz
+	}
+}
+event = {
+	id = 2001512    # Renewed assistance to Hedjaz
+	country = ENG
+
+	decision = { 
+		event = 2001512 
+		war = { country = OTT country = ENG } 
+		war = { country = OTT country = U50 }
+		NOT = { war = { country = U50 country = ENG  }  } 			
+	}
+
+	decision_trigger = { 
+		control = { province = 1004 data = ENG } #El Arish
+		NOT = { control = { province = 1025 data = OTT } } #Ma'an (Aqabah)
+		supplies = 8000
+	} 
+
+	trigger = { 
+		event = 2001511 
+		war = { country = OTT country = ENG  } 
+		war = { country = OTT country = U50 } 
+		NOT = { war = { country = U50 country = ENG  }  } 			
+		control = { province = 1004 data = ENG } #El Arish
+		NOT = { control = { province = 1025 data = OTT } }  #Ma'an (Aqabah)
+		random = 10 
+	}
+
+	name = "EVT1914_2001512_NAME"
+	desc = "EVT1914_2001512_DESC"
+	style = 2
+	picture = "Ottoman_declaration_war"
+	decision_picture = "decision_ottoman_declaration_war"
+
+	date = { day = 0 month = february year = 1918 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		name = "EVT1914_2001512_ACTIONA" # Send more supplies !
+		command = { trigger = { ai = no} type = supplies value = -8000 }
+		command = { type = trigger which = 2233505 } #Hedjaz
+	}
+}
+#######################################################
+### TERRITORIAL LOSSES
+#######################################################
+### Egypt
+event = {
+	id = 2001513   # Al-Arish is lost !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 1004 data = -3 } } 
+		NOT = { control = { province = 1004 data = REB } } 
+	}
+	
+	name = "EVT1914_2001513_NAME"
+	desc = "EVT1914_2001513_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2001514   # Suez is lost !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 900 data = -3 } } 
+		NOT = { control = { province = 900 data = REB } } 
+	}
+	
+	name = "EVT1914_2001514_NAME"
+	desc = "EVT1914_2001514_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001515   # Alexandria is lost !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 789 data = -3 } } 
+		NOT = { control = { province = 789 data = REB } } 
+	}
+	
+	name = "EVT1914_2001515_NAME"
+	desc = "EVT1914_2001515_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2001516   # Bur Sudir is lost !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 813 data = -3 } } 
+		NOT = { control = { province = 813 data = REB } } 
+	}
+	
+	name = "EVT1914_2001516_NAME"
+	desc = "EVT1914_2001516_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 1 }
+	}
+}
+event = {
+	id = 2001517   # Khartoum is lost !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 810 data = -3 } } 
+		NOT = { control = { province = 810 data = REB } } 
+	}
+	
+	name = "EVT1914_2001517_NAME"
+	desc = "EVT1914_2001517_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+event = {
+	id = 2001518   # Cairo is lost !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 787 data = -3 } } 
+		NOT = { control = { province = 787 data = REB } } 
+	}
+	
+	name = "EVT1914_2001518_NAME"
+	desc = "EVT1914_2001518_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 2 }
+	}
+}
+### Landings on main islands (you gonna suffer !!)
+event = {
+	id = 2001519   # The enemy lands in Dover !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 28 data = -3 } } 
+		NOT = { control = { province = 28 data = REB } } 
+	}
+	
+	name = "EVT1914_2001519_NAME"
+	desc = "EVT1914_2001519_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001520   # The enemy lands in Norwich !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 25 data = -3 } } 
+		NOT = { control = { province = 25 data = REB } } 
+	}
+	
+	name = "EVT1914_2001520_NAME"
+	desc = "EVT1914_2001520_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001521   # The enemy lands in Edimburgh !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 12 data = -3 } } 
+		NOT = { control = { province = 12 data = REB } } 
+	}
+	
+	name = "EVT1914_2001521_NAME"
+	desc = "EVT1914_2001521_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001522   # The enemy lands in Glasgow !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 11 data = -3 } } 
+		NOT = { control = { province = 11 data = REB } } 
+	}
+	
+	name = "EVT1914_2001522_NAME"
+	desc = "EVT1914_2001522_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001523   # The enemy lands in Manchester !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 17 data = -3 } } 
+		NOT = { control = { province = 17 data = REB } } 
+	}
+	
+	name = "EVT1914_2001523_NAME"
+	desc = "EVT1914_2001523_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001524   # The enemy lands in Cardiff !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 22 data = -3 } } 
+		NOT = { control = { province = 22 data = REB } } 
+	}
+	
+	name = "EVT1914_2001524_NAME"
+	desc = "EVT1914_2001524_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001525   # The enemy lands in Plymouth !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 23 data = -3 } } 
+		NOT = { control = { province = 23 data = REB } } 
+	}
+	
+	name = "EVT1914_2001525_NAME"
+	desc = "EVT1914_2001525_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001526   # The enemy lands in Dublin !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 34 data = -3 } } 
+		NOT = { control = { province = 34 data = REB } } 
+	}
+	
+	name = "EVT1914_2001526_NAME"
+	desc = "EVT1914_2001526_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001527   # The enemy lands in Portsmouth !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 27 data = -3 } } 
+		NOT = { control = { province = 27 data = REB } } 
+	}
+	
+	name = "EVT1914_2001527_NAME"
+	desc = "EVT1914_2001527_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 4 }
+	}
+}
+event = {
+	id = 2001528   # London is lost !
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { control = { province = 29 data = -3 } } 
+		NOT = { control = { province = 29 data = REB } } 
+	}
+	
+	name = "EVT1914_2001528_NAME"
+	desc = "EVT1914_2001528_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn !
+		command = { type = dissent value = 10 }
+	}
+}
+#### If serbia accepts ultimatum : second path to WWI
+event = {
+	id = 2001529   # Russia opens secret negotiations
+	country = ENG
+
+	#trigger by  RUS 2104536
+   
+	name = "EVT1914_2001529_NAME"
+	desc = "EVT1914_2001529_DESC" 
+	style = 2
+	picture = "news_paper"
+
+	action_a = {
+		name = "EVT1914_2001529_ACTIONA" # Support their project
+		ai_chance = 15
+		command = { type = relation which = RUS value = 25 }
+		command = { type = trigger which = 2104537 }
+	}
+	action_b = {
+		name = "EVT1914_2001529_ACTIONB" # Refuse it
+		ai_chance = 85
+		command = { type = relation which = RUS value = -15 }
+		command = { type = trigger which = 2104538 }
+	}
+}
+##### Blockade management
+event = {
+	id = 2001530   # Blockade against Germany
+	country = ENG
+
+	decision = { 
+		war = { country = U08 country = ENG } 
+	}
+	decision_trigger = { 
+		garrison = { country = ENG province = 2692 type = naval size = 6 }
+		garrison = { country = ENG province = 2693 type = naval size = 6 }
+		garrison = { country = ENG province = 2696 type = naval size = 6 }
+	}
+	trigger = { 
+		war = { country = U08 country = ENG } 
+		random = 30 
+	}
+   
+	name = "EVT1914_2001530_NAME"
+	desc = "EVT1914_2001530_DESC" 
+	style = 2
+	picture = "naval_blockade"
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2001530_ACTIONA" # Setup
+		command = { type = belligerence value = 8 }
+		command = { type = gain_tech which = 8600 }
+		command = { type = trigger which = 2191541 }
+	}
+}
+event = {
+	id = 2001531   # Germans blockade !
+	country = ENG
+
+	#Triggered by U08 2191542
+   
+	name = "EVT1914_2001531_NAME"
+	desc = "EVT1914_2001531_DESC" 
+	style = 2
+	picture = "naval_blockade"
+	
+	action = {
+		name = "EVT1914_2001531_ACTIONA" # Curses
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2001534   # Germany's unrestricted warfare
+	country = ENG
+
+	#Triggered by U08 2191543
+   
+	name = "EVT1914_2001534_NAME"
+	desc = "EVT1914_2001534_DESC" 
+	style = 2
+	picture = "naval_blockade"
+	
+	action = {
+		name = "EVT1914_2001534_ACTIONA" # Curses
+		command = { type = dissent value = 3 }
+		command = { type = stockpile which = all when = war value = -20 }
+		command = { type = embargo which = SWE where = ENG value = 1 }
+		command = { type = embargo which = NOR where = ENG value = 1 }
+		command = { type = embargo which = SPA where = ENG value = 1 }
+		command = { type = embargo which = POR where = ENG value = 1 }
+		command = { type = embargo which = USA where = ENG value = 1 }
+		command = { type = embargo which = CAN where = ENG value = 1 }
+		command = { type = embargo which = MEX where = ENG value = 1 }
+		command = { type = embargo which = BRA where = ENG value = 1 }
+		command = { type = embargo which = ARG where = ENG value = 1 }
+		command = { type = embargo which = CHL where = ENG value = 1 }
+	}
+}
+event = {
+	id = 2001532   # The sink of the Lusitania
+	country = ENG
+
+	# Triggered by U08 2191544
+   
+	name = "EVT1914_2001532_NAME"
+	desc = "EVT1914_2001532_DESC" 
+	style = 2
+	picture = "naval_blockade" 
+
+	action = {
+		name = "EVT1914_2001532_ACTIONA" # Perfect.
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2001533   # The sink of the Lusitania - the Germans got us
+	country = ENG
+
+	# Triggered by U08 2191544
+   
+	name = "EVT1914_2001533_NAME"
+	desc = "EVT1914_2001533_DESC" 
+	style = 2
+	picture = "naval_blockade"
+
+	action = {
+		name = "EVT1914_2001533_ACTIONA" # Bad, bad, really bad
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 2001535  # The Zimmermann telegram - we got'em !
+	country = ENG
+
+	# Triggered by U08 2191545
+   
+	name = "EVT1914_2001535_NAME"
+	desc = "EVT1914_2001535_DESC" 
+	style = 2
+	picture = "zimmermann_telegram"   
+	
+	action = {
+		name = "EVT1914_2001535_ACTIONA" # Haha !
+		command = { }
+	}
+}
+##################
+# Align Portugal
+##################
+event = {
+   id = 2001536 #Align Portugal
+   country = ENG
+
+	decision = {
+		exists = POR
+		war = { country = U08 country = ENG } 
+		NOT = {
+			war = { country = POR country = ENG } 
+			alliance = { country = POR country = ENG } 
+			alliance = { country = POR country = U08 } 
+		}
+	}
+	decision_trigger = { 
+		relation = { which = POR value = 100 }
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies
+	}
+	trigger = { 
+		exists = POR
+		war = { country = U08 country = ENG }
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies
+		random = 30
+		NOT = {
+			war = { country = POR country = ENG } 
+			alliance = { country = POR country = ENG } 
+			alliance = { country = POR country = U08 } 
+		}		
+	}
+   
+	name = "EVT1914_2001536_NAME"
+	desc = "EVT1914_2001536_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	
+	date = { day = 0 month = january year = 1916 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+	name = "EVT1914_2001536_ACTIONA"
+	command = { type = trigger which = 2001537 }
+	}
+}
+event = {
+	id = 2001537
+	country = POR
+	
+	name = "EVT1914_2001537_NAME"
+	desc = "EVT1914_2001536_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "EVT1914_2001537_ACTIONA"
+		command = { type = alliance which = ENG when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+	}
+	action = {
+		name = "EVT1914_2001537_ACTIONB"
+		command = { type = relation which = ENG value = -50 }
+	}
+}
+#################################
+# Brazil declares war against Germany
+#################################
+event = {
+   id = 2001538
+   country = BRA
+
+	decision = {
+		exists = BRA
+		war = { country = U08 country = ENG } 
+		NOT = {
+			war = { country = BRA country = ENG } 
+			alliance = { country = BRA country = ENG } 
+			alliance = { country = BRA country = U08 } 
+		}		
+		event = 2191543 # Germany's unrestricted warfare
+	}
+	decision_trigger = {
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies
+	}
+	trigger = { 
+		exists = BRA
+		war = { country = U08 country = ENG } 
+		NOT = {
+			war = { country = BRA country = ENG } 
+			alliance = { country = BRA country = ENG } 
+			alliance = { country = BRA country = U08 } 
+		}
+		event = 2191543 # Germany's unrestricted warfare
+		control = { province = 55 data = -3 } #Paris is controlled by France or one of its allies
+		random = 10 
+	}
+   
+	name = "EVT1914_2001538_NAME"
+	desc = "EVT1914_2001538_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	
+	date = { day = 0 month = january year = 1917 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2001538_ACTIONA"
+		command = { type = alliance which = ENG when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		#command = { type = war which = U08 }
+	}
+}
+
+### Irish troubles
+
+event = {
+	id = 2001539   # The Easter Rising
+	country = ENG
+	
+	trigger = { 
+		atwar = yes 
+		NOT = { exists = IRE }
+	}
+	
+	name = "EVT1914_2001539_NAME"
+	desc = "EVT1914_2001539_DESC" 
+	style = 2
+	picture = "foreign_volunteers"
+	
+	date = { day = 23 month = april year = 1916 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1918 }
+	
+	action = {
+		name = "EVT1914_2001539_ACTIONA" # Damn !
+		command = { type = dissent value = 3 }
+		command = { type = revolt which = 34 } #Dublin
+		command = { type = province_revoltrisk which = 30 value = 5 } #Waterford
+		command = { type = province_revoltrisk which = 31 value = 5 } #Cork
+		command = { type = province_revoltrisk which = 32 value = 5 } #Galway
+		command = { type = province_revoltrisk which = 33 value = 5 } #Letterkenny
+		command = { type = province_revoltrisk which = 34 value = 25 } #Dublin
+	}
+}
+
+
+event = {
+   id = 2001540   # Military defeat
+   country = ENG
+
+	trigger = { 
+		war = { country = U08 country = ENG }
+		random = 25
+		control = { province = 11 data = -2 } #Glasgow is controlled by Enemy
+		control = { province = 18 data = -2 } #Sheffield is controlled by Enemy
+		control = { province = 29 data = -2 } #London is controlled by Enemy
+		OR = {
+			lost_national = { value = 80 }	
+			AND = {
+				dissent = 10
+				lost_national = { value = 65 }	
+			}
+			AND = {
+				dissent = 20
+				lost_national = { value = 50 }	
+			}
+			AND = {
+				dissent = 30
+				lost_national = { value = 40 }	
+			}
+		}
+	}
+   
+	name = "EVT1914_2001540_NAME"
+	desc = "EVT1914_2001540_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = december year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = november year = 1925 }
+	
+	action = {
+		name = "EVT1914_2001540_ACTIONA" # We have been defeated
+		command = { trigger = { 
+					participant = { country = ENG value = 1 } #part of the Entente
+					alliance = { country = ENG country = RUS }
+					NOT = { 
+						alliance = { country = ENG country = FRA } } } 					
+				type = alliance_leader which = RUS where = 0 } #UK becomes leader of the alliance
+		command = { trigger = { 
+					participant = { country = ENG value = 1 } #part of the Entente
+					alliance = { country = ENG country = USA } 
+					NOT = { 
+						alliance = { country = ENG country = FRA }
+						alliance = { country = ENG country = RUS } } } 
+				type = alliance_leader which = USA where = 0 } #USA becomes leader of the alliance
+		command = { trigger = { 
+					participant = { country = ENG value = 1 } #part of the Entente
+					alliance = { country = ENG country = ITA } 
+					NOT = { 
+						alliance = { country = ENG country = FRA }
+						alliance = { country = ENG country = RUS } 
+						alliance = { country = ENG country = USA } } } 
+				type = alliance_leader which = ITA where = 0 } #ITA becomes leader of the alliance
+		command = { trigger = { 
+					participant = { country = ENG value = 1 } #part of the Entente
+					alliance = { country = ENG country = ROM } 
+					NOT = { 
+						alliance = { country = ENG country = FRA }
+						alliance = { country = ENG country = RUS } 
+						alliance = { country = ENG country = USA } 
+						alliance = { country = ENG country = ITA } } } 
+				type = alliance_leader which = ROM where = 0 } #ROM becomes leader of the alliance	
+		command = { trigger = { 
+					participant = { country = ENG value = 1 } #part of the Entente
+					alliance = { country = ENG country = GRE } 
+					NOT = { 
+						alliance = { country = ENG country = FRA }
+						alliance = { country = ENG country = RUS } 
+						alliance = { country = ENG country = USA } 
+						alliance = { country = ENG country = ITA } 
+						alliance = { country = ENG country = ROM } } } 
+				type = alliance_leader which = GRE where = 0 } #GRE becomes leader of the alliance
+		command = { type = dissent value = 5 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+		command = { type = trigger which = 2001541 }
+		command = { trigger = { puppet = { country = CAN country = ENG} } type = peace which = CAN value = 1 } 
+		command = { trigger = { puppet = { country = AST country = ENG} } type = peace which = AST value = 1 } 
+		command = { trigger = { puppet = { country = NZL country = ENG} } type = peace which = NZL value = 1 } 
+		command = { trigger = { puppet = { country = BHU country = ENG} } type = peace which = BHU value = 1 } 
+		command = { trigger = { puppet = { country = NEP country = ENG} } type = peace which = NEP value = 1 } 
+		command = { trigger = { puppet = { country = OMN country = ENG} } type = peace which = OMN value = 1 } 
+		command = { trigger = { puppet = { country = SAF country = ENG} } type = peace which = SAF value = 1 } 
+		command = { trigger = { puppet = { country = U02 country = ENG} } type = peace which = U02 value = 1 } 			
+		command = { type = event which = 2001566 where = ENG when = 1 } #The end of the German Blockade
+		command = { type = event which = 2191558 where = U08 when = 1 } #The end of the British Blockade
+	}
+}
+	
+event = {
+	id = 2001541
+	country = U08	
+	
+	name = "EVT1914_2001541_NAME"
+	desc = "EVT1914_2001541_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 } 
+		command = { trigger = { puppet = { country = CAN country = ENG} } type = trigger which = 2001553 } 
+		command = { trigger = { puppet = { country = AST country = ENG} } type = trigger which = 2001554 } 
+		command = { trigger = { puppet = { country = NZL country = ENG} } type = trigger which = 2001555 } 
+		command = { trigger = { puppet = { country = BHU country = ENG} } type = trigger which = 2001556 } 
+		command = { trigger = { puppet = { country = NEP country = ENG} } type = trigger which = 2001557 } 
+		command = { trigger = { puppet = { country = OMN country = ENG} } type = trigger which = 2001558 } 
+		command = { trigger = { puppet = { country = SAF country = ENG} } type = trigger which = 2001559 } 
+		command = { trigger = { puppet = { country = U02 country = ENG} } type = trigger which = 2001560 }  
+		command = { trigger = { puppet = { country = U53 country = ENG} } type = trigger which = 2001563 }  
+		command = { trigger = { puppet = { country = U60 country = ENG} } type = trigger which = 2001565 }  
+	}
+}
+	
+event = {
+	id = 2001542 
+	country = ENG
+	
+	decision = { 
+		war = { country = ENG country = U08 }
+		participant = { country = ENG value = 1 } #part of the Entente
+		NOT = { alliance = { country = FRA country = ENG } }
+		NOT = { alliance = { country = RUS country = ENG } }
+		NOT = { war = { country = SOV country = U08 } }
+	}
+	
+	decision_trigger = { 
+		NOT = { alliance = { country = FRA country = ENG } }
+		NOT = { alliance = { country = RUS country = ENG } }
+		NOT = { war = { country = SOV country = U08 } }
+		NOT = { lost_national = { country = ENG value = 5 } }
+		NOT = { lost_national = { country = U08 value = 5 } }
+	}
+	trigger = { 
+		war = { country = ENG country = U08 }
+		participant = { country = ENG value = 1 } #part of the Entente
+		NOT = { alliance = { country = FRA country = ENG } }
+		NOT = { alliance = { country = RUS country = ENG } }
+		NOT = { war = { country = SOV country = U08 } }
+		NOT = { lost_national = { country = ENG value = 5 } }
+		NOT = { lost_national = { country = U08 value = 5 } }
+	}
+	
+	name = "EVT1914_2001542_NAME"
+	desc = "EVT1914_2001542_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	date = { day = 24 month = april year = 1914 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2001542_ACTIONA" 
+		command = { type = trigger which = 2001543 } 
+	}	
+}
+event = {
+	id = 2001543   
+	country = U08
+
+	
+	name = "EVT1914_2001543_NAME"
+	desc = "EVT1914_2001543_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = dissent value = -10 } 
+		command = { trigger = { alliance = { country = ENG country = SER } exists = U09 } type = trigger which = 2001544 } #Serbia leaves alliance
+		command = { trigger = { alliance = { country = ENG country = MTN } exists = U09 } type = trigger which = 2001545 } #Montenegro leaves alliance
+		command = { trigger = { alliance = { country = ENG country = U50 }  war = { country = OTT country = U50 } } type = trigger which = 2001549 } #Hedjaz leaves alliance
+		command = { trigger = { alliance = { country = ENG country = U91 }  war = { country = OTT country = U91 } } type = trigger which = 2001551 } #Kuwait leaves alliance
+		command = { type = trigger which = 2001546 } 
+	}
+	action = {
+		ai_chance = 0
+		name = "ACTION_NAME_REFUSE" 
+		command = { type = dissent value = 5 } 
+	}	
+}
+event = {
+	id = 2001544   
+	country = SER
+
+	
+	name = "EVT1914_2001544_NAME"
+	desc = "EVT1914_2001544_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+		
+	action = {
+		ai_chance = 10
+		name = "EVT1914_2001544_ACTIONA"
+		command = { type = trigger which = 2001547 } #Serbia submits to us!
+	}
+	action = {
+		ai_chance = 90
+		name = "EVT1914_2001544_ACTIONB" 
+		command = { type = leave_alliance when = 0 }
+	}
+}
+event = {
+	id = 2001545   
+	country = MTN
+
+	
+	name = "EVT1914_2001544_NAME"
+	desc = "EVT1914_2001544_NAME" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		ai_chance = 80
+		name = "EVT1914_2001545_ACTIONA"
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+		command = { type = peace which = U09 value = 1 }		
+		command = { type = trigger which = 2001548 } #Montenegro submits to us!
+	}
+	action = {
+		ai_chance = 20
+		name = "EVT1914_2001544_ACTIONB" 
+		command = { type = leave_alliance when = 0 }
+	}
+}
+event = {
+	id = 2001546   
+	country = ENG
+	
+	name = "EVT1914_2001546_NAME"
+	desc = "EVT1914_2001546_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "EVT1914_2001546_ACTIONA" 
+		command = { type = dissent value = -10 } 
+		command = { type = peace which = U08 value = 0 }
+		command = { type = peace which = U09 value = 0 }
+		command = { type = event which = 2001566 where = ENG when = 1 } #The end of the German Blockade
+		command = { type = event which = 2191558 where = U08 when = 1 } #The end of the British Blockade
+		command = { trigger = { NOT = { exists = HOL } } type = independence which = HOL value = 1 when = 1 }
+		command = { trigger = { NOT = { exists = BEL } } type = independence which = BEL value = 1 when = 1 }		
+		command = { type = setflag which = German_EndWWI }
+		command = { trigger = { alliance = { country = U08 country = OTT } } type = secedeprovince which = OTT value = 387 when = 1 } # Famagusta, Cyprus
+		command = { trigger = { alliance = { country = U08 country = OTT } } type = secedeprovince which = OTT value = 388 when = 1 } # Nicosia, Cyprus
+	}
+}
+event = {
+	id = 2001547   
+	country = U09
+
+	
+	name = "EVT1914_2001547_NAME"
+	desc = "EVT1914_2001547_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -5 } 
+		command = { type = inherit which = SER when = 3}
+		command = { type = sleepevent which = 2192535 } #The Annexation of Serbia
+	}
+}
+event = {
+	id = 2001548   
+	country = U09
+
+	
+	name = "EVT1914_2001548_NAME"
+	desc = "EVT1914_2001548_DESC"
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -2 } 
+		command = { type = make_puppet which = MTN }
+	}
+}
+event = {
+	id = 2001549   
+	country = U50
+
+	
+	name = "EVT1914_2001544_NAME"
+	desc = "EVT1914_2001544_DESC"
+	style = 2
+	picture = "diplomatic_campaign"
+		
+	action = {
+		ai_chance = 10
+		name = "EVT1914_2001549_ACTIONA"
+		command = { type = trigger which = 2001550 } #Hedjaz submits to us!
+		command = { type = wakeminister which = 1065013 }
+		command = { type = wakeminister which = 1065014 }
+		command = { type = wakeminister which = 1065015 }
+		command = { type = wakeminister which = 1065016 }
+		command = { type = wakeminister which = 1065017 }
+		command = { type = wakeminister which = 1065018 }
+		command = { type = wakeminister which = 1065019 }
+		command = { type = wakeminister which = 1065020 }
+	}
+	action = {
+		ai_chance = 90
+		name = "EVT1914_2001544_ACTIONB" 
+		command = { type = leave_alliance when = 0 }
+	}
+}
+
+event = {
+	id = 2001550   
+	country = OTT
+
+	
+	name = "EVT1914_2001550_NAME"
+	desc = "EVT1914_2001550_DESC"
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -5 } 
+		command = { type = make_puppet which = U50 }
+	}
+}
+
+event = {
+	id = 2001551   
+	country = U91
+
+	
+	name = "EVT1914_2001544_NAME"
+	desc = "EVT1914_2001544_DESC"
+	style = 2
+	picture = "diplomatic_campaign"
+		
+	action = {
+		ai_chance = 50
+		name = "EVT1914_2001551_ACTIONA"
+		command = { type = trigger which = 2001550 } #Kuwait submits to us!
+	}
+	action = {
+		ai_chance = 50
+		name = "EVT1914_2001544_ACTIONB" 
+		command = { type = leave_alliance when = 0 }
+	}
+}
+
+event = {
+	id = 2001552   
+	country = OTT
+
+
+	name = "EVT1914_2001552_NAME"
+	desc = "EVT1914_2001552_DESC"
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -2 } 
+		command = { type = make_puppet which = U91 }
+	}
+}
+
+event = {
+	id = 2001553   
+	country = CAN
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001554   
+	country = AST
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC"  
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001555   
+	country = NZL
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001556   
+	country = BHU
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001557  
+	country = NEP
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC"  
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001558   
+	country = OMN
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC"  
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001559  
+	country = SAF
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001560  
+	country = U02 #British Raj
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001563  
+	country = U53 #Trucial State
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+event = {
+	id = 2001565  
+	country = U60 #Newfoundland
+	
+	name = "EVT1914_2001553_NAME"
+	desc = "EVT1914_2001553_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 3 }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U08 value = 1 }
+	}
+}
+
+### Armistice with Germany
+event = {
+	id = 2001564
+	country = ENG	
+	
+	name = "EVT1914_2104544_NAME"
+	desc = "EVT1914_2104544_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = dissent value = -3 } 
+	}
+}
+
+#########################################################################
+#  Oman Independence
+#########################################################################	
+event = {
+	id = 2008102   
+	country = OMN
+	
+	date = { day = 0 month = january year = 1910 }
+	offset = 30
+	deathdate = { day = 0 month = january year = 1936 }	
+	
+	trigger = {
+		NOT = { ispuppet = yes }
+		}
+		
+	name = "EVT_127_ACTA"
+	desc = "AI_indep_desc"  
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = wakeminister which = 400039 }
+		command = { type = wakeminister which = 400040 }
+		command = { type = wakeminister which = 400041 }
+		command = { type = sleepminister which = 400030 }
+		command = { type = sleepminister which = 400035 }
+		command = { type = sleepminister which = 400036 }
+		command = { type = sleepminister which = 400037	}
+		}
+}	
+#########################################################################
+#  Yemen Independence
+#########################################################################	
+event = {
+	id = 2018102   
+	country = YEM
+	
+	date = { day = 0 month = january year = 1910 }
+	offset = 30
+	deathdate = { day = 0 month = january year = 1936 }	
+	
+	trigger = {
+		NOT = { ispuppet = yes }
+		}
+		
+	name = "EVT_127_ACTA"
+	desc = "AI_indep_desc"  
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = sleepminister which = 445026 }
+		}
+}	
+#########################################################################
+#  Oman Independence
+#########################################################################	
+event = {
+	id = 2018103   
+	country = U51
+	
+	date = { day = 0 month = january year = 1910 }
+	offset = 30
+	deathdate = { day = 0 month = january year = 1936 }	
+	
+	trigger = {
+		puppet = { country = ENG }
+		}
+		
+	name = "EVT_127_ACTA"
+	desc = "AI_indep_desc"  
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = wakeminister which = 1070010 }
+		command = { type = wakeminister which = 1070011 }
+		command = { type = wakeminister which = 1070012	}
+		command = { type = sleepminister which = 1070008 }
+		command = { type = sleepminister which = 1070006 }
+		}
+}	
+#########################################################################
+#  Qatar UK Puppet
+#########################################################################	
+event = {
+	id = 2018104   
+	country = U91
+	
+	date = { day = 0 month = january year = 1910 }
+	offset = 30
+	deathdate = { day = 0 month = january year = 1936 }	
+	
+	trigger = {
+		NOT = { ispuppet = yes }
+		}
+		
+	name = "EVT_127_ACTA"
+	desc = "AI_indep_desc"  
+	style = 2
+	picture = "diplomatic_campaign"
+	
+	action = {
+		name = "ACTION_NAME_GREAT" 
+		command = { type = wakeminister which = 1270022  }
+		command = { type = wakeminister which = 1270027  }
+		command = { type = wakeminister which = 1270028  } 
+		command = { type = wakeminister which = 1270032  }
+		command = { type = wakeminister which = 1270037  }
+		command = { type = wakeminister which = 1270038  } 
+		command = { type = wakeminister which = 1270042  }
+		command = { type = wakeminister which = 1270047  }
+		command = { type = wakeminister which = 1270048  } 
+		command = { type = wakeminister which = 1270052  }
+		command = { type = wakeminister which = 1270057  }
+		command = { type = wakeminister which = 1270058	 }
+		command = { type = sleepminister which = 1270061 }
+		command = { type = sleepminister which = 1270062 }
+		command = { type = sleepminister which = 1270063 }
+		command = { type = sleepminister which = 1270064 }
+		command = { type = sleepminister which = 1270065 }
+		command = { type = sleepminister which = 1270066 }
+		command = { type = sleepminister which = 1270067 }
+		command = { type = sleepminister which = 1270068 }
+		}
+}
+
+event = {
+	id = 2001566  #The end of the German Blockade
+	country = ENG
+
+	trigger = {
+		event = 2001534 #Germany's unrestricted warfare
+		NOT = { war = { country = ENG country = U08 } }
+	}
+	
+	name = "EVT1914_2001566_NAME"
+	desc = "EVT1914_2001566_DESC" 
+	style = 2
+	picture = "naval_blockade"   
+
+	date = { day = 0 month = january year = 1914 }
+	offset = 31
+	deathdate = { day = 29 month = december year = 1999 }	
+	
+	action = {
+		name = "ACTION_NAME_GOOD" # Good
+		command = { type = stockpile which = all when = war value = 20 }
+		command = { type = embargo which = SWE where = ENG value = 0 } #removes all embargoes on UK
+		command = { type = embargo which = NOR where = ENG value = 0 }
+		command = { type = embargo which = SPA where = ENG value = 0 }
+		command = { type = embargo which = POR where = ENG value = 0 }
+		command = { type = embargo which = USA where = ENG value = 0 }
+		command = { type = embargo which = CAN where = ENG value = 0 }
+		command = { type = embargo which = MEX where = ENG value = 0 }
+		command = { type = embargo which = BRA where = ENG value = 0 }
+		command = { type = embargo which = ARG where = ENG value = 0 }
+		command = { type = embargo which = CHL where = ENG value = 0 }
+	}
+}
+
+event = {
+	id = 2001573	# Declare War Against Germany (Switzerland neutrality violated)
+	country = ENG
+
+	decision = { 
+		war = { country = SCH country = U08 }
+		war = { country = FRA country = U08 }
+		alliance = { country = FRA country = SCH }
+		NOT = { alliance = { country = ENG country = FRA } }
+		NOT = { alliance = { country = ENG country = U08 } }
+		NOT = { war = { country = ENG country = FRA } }
+		NOT = { event = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		NOT = { event = 2001574 } #Declare War Against Germany (only France)
+	}
+	decision_trigger = { war = { country = SCH country = U08 } }
+	trigger = { 
+		war = { country = SCH country = U08 }
+		war = { country = FRA country = U08 }
+		alliance = { country = FRA country = SCH }
+		NOT = { alliance = { country = ENG country = FRA } }
+		NOT = { alliance = { country = ENG country = U08 } }
+		NOT = { war = { country = ENG country = FRA } }
+		NOT = { event = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		NOT = { event = 2001574 } #Declare War Against Germany (only France)
+	}
+   
+	name = "EVT1914_2001501_NAME"
+	desc = "EVT1914_2001573_DESC" 
+	style = 2
+	picture = "English_declaration_war"
+	decision_picture = "decision_english_declaration_war"
+
+	date = { day = 4 month = august year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1914 }
+
+	action = {
+		ai_chance = 80
+		name = "EVT1914_2001501_ACTIONA" # War !
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = sleepevent which = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		command = { type = sleepevent which = 2001574 } #Declare War Against Germany (only France)
+	}
+	action = {
+		ai_chance = 20
+		name = ACTION_NAME_NEUTRAL
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		command = { type = sleepevent which = 2001574 } #Declare War Against Germany (only France)		
+	}
+}
+
+event = {
+	id = 2001574	# Declare War Against Germany (only France)
+	country = ENG
+
+	decision = {
+		war = { country = FRA country = U08 }
+		NOT = { war = { country = BEL country = U08 } }
+		NOT = { war = { country = SCH country = U08 } }
+		NOT = { alliance = { country = ENG country = FRA } }
+		NOT = { alliance = { country = ENG country = U08 } }
+		NOT = { war = { country = ENG country = FRA } }
+		NOT = { event = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		NOT = { event = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)
+
+	}
+	decision_trigger = { war = { country = FRA country = U08 }
+}
+	trigger = { 
+		war = { country = FRA country = U08 }
+		NOT = { war = { country = BEL country = U08 } }
+		NOT = { war = { country = SCH country = U08 } }
+		NOT = { alliance = { country = ENG country = FRA } }
+		NOT = { alliance = { country = ENG country = U08 } }
+		NOT = { war = { country = ENG country = FRA } }
+		NOT = { event = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		NOT = { event = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)
+	}
+   
+	name = "EVT1914_2001501_NAME"
+	desc = "EVT1914_2001574_DESC" 
+	style = 2
+	picture = "English_declaration_war"
+	decision_picture = "decision_english_declaration_war"
+
+	date = { day = 4 month = august year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1914 }
+
+	action = {
+		ai_chance = 50
+		name = "EVT1914_2001501_ACTIONA" # War !
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = sleepevent which = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		command = { type = sleepevent which = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)
+		command = { trigger = { war = { country = FRA country = SCH } NOT = { ispuppet = SCH } } type = dissent value = 10 } #Big dissent if FRA attacked SCH, violating its neutrality
+		command = { trigger = { 
+						OR = {
+							NOT = { war = { country = FRA country = SCH } } 
+							AND = { 
+								ispuppet = SCH
+								war = { country = FRA country = SCH }
+							}
+						}
+					} type = dissent value = 5 } #Less dissent if Swiss neutrality was not violated by FRA, but still dissent (people don't want war)
+	}
+	action = {
+		ai_chance = 50
+		name = ACTION_NAME_NEUTRAL
+		command = { type = sleepevent which = 2001501 } #Declare War Against Germany (Belgium neutrality violated)
+		command = { type = sleepevent which = 2001573 } #Declare War Against Germany (Switzerland neutrality violated)
+		command = { trigger = { war = { country = FRA country = SCH } NOT = { ispuppet = SCH } } type = dissent value = -5 } #People approve, since FRA DoWed poor Switzerland
+		command = { trigger = { 
+						OR = {
+							NOT = { war = { country = FRA country = SCH } } 
+							AND = { 
+								ispuppet = SCH
+								war = { country = FRA country = SCH }
+							}
+						}
+					} type = dissent value = -3 } #Less dissent reduction if Swiss neutrality was not violated by FRA
+	}
+}

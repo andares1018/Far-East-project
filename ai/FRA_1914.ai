@@ -1,0 +1,516 @@
+# France 1914 AI File by Jaegerfeld
+# 0.49vrc2 by Spocky
+
+switch = no # [yes/no]
+
+upgrading = 0.0 # 0.10
+reinforcement = 0.0 # 0.10
+
+strat_redeploy_threshold = 30
+max_front_ratio = 1.2
+max_front_ratios = { 	
+	U08 = 2.0
+	U09 = 2.0
+	OTT = 2.0
+}
+max_garrison_prop = 0.50
+min_garrison_prop = 0.25
+neutrality = 20.000 
+war = 50
+target = { 
+}
+
+max_redeploying = 0.05
+exp_force_ratio = 0.2 #0.0 # 0.50
+exp_force_ratios = { } 
+no_exp_forces_to = { }
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier = 0.1
+	home_peace_cap 		= 70
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0.0
+	revolt_risk_mult	= 0.1
+
+	# PRIORITIES:
+	beach			= 5	# Beach level 2
+	capital			= 5	# Our capital
+	human_border	= 10	# Ignored for allied human players
+	war_target		= 5	# The next country targeted for attack by this AI
+	reserves 		= 5	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 0	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		U08 = 2
+	}
+	ignore = {	}
+	province_priorities = {	}		
+}
+
+front = {
+
+	recklessness 		= 1 # 0-3
+	distrib_vs_ai 		= defensive
+	distrib_vs_human 	= even
+
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.3
+	withdraw_odds		= 0.6
+ 
+	enemy_handicap = { } 
+	
+    passivity = { }
+	
+	province_priorities = {
+	
+	# against Germany
+	104 = 200	
+	107 = 200
+	105 = 200
+	110 = 100
+
+	# Prevent too little elsewhere
+	96 = 55
+	160 = 70
+	95 = 70
+	100 = 70
+	
+	
+	# Against Ottomans
+	1006 = 20
+	1007 = 20
+	791 = 30
+
+	# against AEIOU
+	
+	# belgian/german border
+		108 = 75	
+		111 = 75
+		113 = 75
+		115 = 75
+		117 = 75
+	}
+}
+
+leader_ratio = {
+	land_field_marshal 	=0.02
+	land_general 		=0.031
+	land_lt_general 	=0.41
+
+	sea_grand_admiral 	=0.02
+	sea_admiral 		=0.061
+	sea_vice_admiral 	=0.401
+
+	air_marshal 		=0.02
+	air_general 		=0.091
+	air_lt_General 		=0.11
+}
+
+###################################
+# Diplomacy
+###################################
+combat = { }
+
+claim_acceptance = -69
+
+liberate = { BEL HOL LUX DEN NOR SPR POR SCH ITA ENG ROM BUL GRE FIN U23 }
+
+befriend = {
+	USA = 50
+	BEL = 70
+	HOL = 70
+	PER = 20
+	POR = 20
+	UCH = 20
+	BUL = 5
+}
+protect = {
+	ENG = 150
+	CAN = 150
+	AST = 150
+	NZL = 150
+	BEL = 150
+	HOL = 150
+	PER = 10
+	POR = 10
+
+}
+
+trade = {
+	cancel_deal_threshold = 2
+
+	energy 		= -1
+	rare_materials 	= -1
+	metal 		= -1
+	oil 		= -1
+	supplies 	= -1
+	money 		= -1
+
+	favored = {
+		ENG = 100
+		CAN = 100
+		AST = 100
+		NZL = 100
+		USA = 100
+		BEL = 90
+		HOL = 90
+		SPR = 30
+		PER = 100
+		POR = 10
+	}
+	embargo = { }
+}
+tech_sharing = {
+	favored = {
+		ENG = 100
+		CAN = 100
+		AST = 100
+		NZL = 100
+		USA = 100
+		BEL = 90
+		HOL = 90
+		SPR = 30
+		PER = 100
+		POR = 10
+	}
+	embargo = { }
+	not = { }
+
+}
+
+
+###################################
+# Spying
+###################################
+spyprefs =
+{
+	percentage_on_spies 		= 0.2
+	percentage_foreign_mission 	= 0.8
+
+	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
+	spyprefsdata = 
+	{
+		NumberOfSpies			= 20
+		min_number_of_spies		= 3
+		steal_blueprint			= 10
+		minister_assassination	= 5
+		smear_campaign			= 10
+		coup					= 3
+		sabotage_industry		= 10
+		nuclear_sabotage		= 5
+		found_partisans			= 10
+		massmedia				= 10
+		disrupt_techteam		= 10
+		country					= FRA
+	}
+	spyprefsdata = {
+		country_priorities	= 10
+		steal_blueprint 	= 5
+		minister_assassination          = 0
+		smear_campaign 		= 5
+		coup 				= 0
+		sabotage_industry 	= 0
+		nuclear_sabotage 	= 0
+		found_partisans		= 0
+		massmedia 			= 0
+		disrupt_techteam 	= 0
+		country 			= U08
+	}
+	spyprefsdata = {
+		country_priorities	= 3
+		steal_blueprint 	= 1
+		minister_assassination          = 0
+		smear_campaign 		= 3
+		coup 				= 0
+		sabotage_industry 	= 0
+		nuclear_sabotage 	= 0
+		found_partisans		= 1
+		massmedia 			= 0
+		disrupt_techteam 	= 0
+		country 			= U09
+	}
+
+}
+
+###################################
+# Construction and Tech Research
+###################################
+#Default values
+construction = { 
+	max_factor = 0.0 
+
+	AA_batteries = no
+	max_AA_level = 4
+	AA_provs = { 
+		52  # Lille
+		57  # Nantes
+		55  # Paris
+		67 # Bordeaux
+		77 # Toulouse
+		86 # Toulon
+		38  # Rouen
+	} 
+	coastal_fort = no
+	max_coastal_level = 3
+	coastal_fort_provs = { } 
+
+	radar_station = no 
+	max_radar = 5 
+	radar_provs = { } 
+
+	air_base = no
+	max_air_base = 4
+	air_base_provs = {
+		133  # Chaumont 
+		1016 # Damascus
+		99   # Compiegne
+	} 
+
+	naval_base = no 
+	max_naval_base = 5 
+	naval_base_provs = { } 
+
+	land_fort = no
+	max_land_level = 3
+	fort_borders = { U08 } 
+
+	ic_at_war = no 
+	force_ic_until = 1913
+	ic_end_year = 1913
+	IC_provs = {
+		52  # Lille
+		57  # Nantes
+		55  # Paris
+		67 # Bordeaux
+		77 # Toulouse
+		86 # Marseille
+		38  # Rouen
+	} 
+}
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 		= 680 
+	max_batch_war 			= 320 
+	max_batch_home_front	= 180
+	extra_convoys_war		= 0.0500 
+	extra_convoys_peace		= 0.0500 
+
+
+	#### Divisions etc...
+	infantry 		= 65
+	cavalry 		= 10
+	motorized 		= 0
+	mechanized 		= 0
+	light_armor 	= 0
+	armor 			= 0
+	paratrooper 	= 0
+	marine 			= 0
+	bergsjaeger 	= 5
+	garrison		= 0
+    hq 				= 5
+	militia 		= 6
+#				91 %
+	interceptor 	= 2
+	multi_role 		= 0
+	cas 			= 0
+	strategic_bomber = 2
+	tactical_bomber = 2
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				6 %
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier	= 0
+	destroyer 		= 0
+	light_cruiser 	= 0
+	heavy_cruiser 	= 0
+	battlecruiser 	= 0
+	submarine 		= 0
+	nuclear_submarine = 0
+	transports 		= 3
+#				3 %
+
+	#### Brigades
+	artillery 			= 35
+	super_heavy_artillery = 5	
+	sp_artillery 		= 0
+	cavalry_brigade		= 10 
+	sp_anti_air			= 0
+	medium_armor		= 0
+	tank_destroyer 		= 0
+	light_armor_brigade = 10
+	heavy_armor 		= 10
+	super_heavy_armor 	= 10
+	armored_car 		= 10
+	anti_air 			= 0
+	police 				= 0
+	engineer 			= 6
+
+	cag 	= 100
+	escort	= 100
+
+	naval_asw				= 20
+	naval_anti_air_s		= 20
+	naval_radar_s			= 20
+	naval_fire_controll_s	= 20
+	naval_improved_hull_s	= 10
+	naval_torpedoes_s		= 10
+	naval_anti_air_l		= 0
+	naval_radar_l			= 0
+	naval_fire_controll_l	= 0
+	naval_improved_hull_l	= 0
+	floatplane				= 10		
+}
+
+technology = { 
+	endgoal 	= { } 
+	preference	={
+		# armoured car, necessary for tank research
+		2870
+		# infantry 1914, important initial research
+		1040}
+	ignore 		= { }
+ 
+	armor 			= 2
+	infantry 		= 4
+	industry 		= 3
+	aircraft 		= 1
+	naval 			= 1
+	land_doctrines 	= 3
+	secret_weapons 	= 2
+	air_doctrines 	= 1
+	naval_doctrines = 1
+}
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 0.1	#higher = avoid long distance.
+	pocket		= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+	naval_base 	= 0.1 
+	air_support	= 3.0 
+	redirect 	= priority
+	ignore		= no
+      
+	target = { } 
+} 
+admiral = { 
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	ignore = {
+		# Baltic Sea
+		"Bothnian Bay"
+		"Northern Baltic"
+		"Southern Baltic"
+
+		# North Sea
+		"Kattegat"
+
+		# Caribbean
+		"Yucatan Strait"
+		"Central Carribean"
+		"Windward Islands"
+		"West Gulf of Mexico"
+		"East Gulf of Mexico"
+		"Florida Strait"
+
+		# Mediterranean
+		"Adriatic Sea"
+		"Black Sea"
+
+		# Pacific
+		"Luzon Strait"
+		"Philipine Trench"
+
+		"Taiwan Strait"
+		"Sea of Japan"
+		"North Bismarck Sea"
+		"South Bismarck Sea"
+		"Marianas"
+		"Marshalls Sea"
+		"Western Solomons"
+		"Eastern Solomons"
+		"East Coral Sea"
+		"Coast of Japan"
+		"Solomon Sea"
+
+		"Aleutians"
+		"Carolines"
+		"Central Philippine Sea"
+		"Coast of Kamchatka"
+		"East Bering Sea"
+		"East Mariana Basin"
+		"East Sea of Okhotsk"
+		"Gulf of Alaska"
+		"Hawaiian Rise"
+		"Mariana Trench"
+		"Mid-Pacific Mountains"
+		"North Northeast Pacific Basin"
+		"Northwest Pacific Basin"
+		"Ryukyus"
+		"South Sea of Okhotsk"
+
+		"West Bering Sea"
+
+		"West Coast of Mexico"
+		"West Coast of the United States"
+		"West Sea of Okhotsk"
+		"Yellow Sea"
+		"Fiji Basin"
+		"Gilberts"
+		"Line Islands"
+		"North East Pacific Ocean"
+		"South East Pacific Ocean"
+
+		"North Southeast Pacific Ocean"
+		"South Southeast Pacific Ocean"
+		"Southeast Pacific Basin"
+		"Southwest Pacific Basin"
+		"West Coast of Central America"
+		"West Coast of Chile"
+		"West Coast of Peru"
+		"Coast of New Guinea"
+	}
+	#Which provinces to use as bases..
+	base = {
+		37 # Brest
+		86 # Toulon
+		728 # Oran
+	}
+	target = { } 
+	core = {
+     	2698 
+     	2699 
+     	2701  
+     	2702  
+     	2703  
+		2188 
+	} 
+}

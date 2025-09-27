@@ -1,0 +1,60 @@
+####################################
+# Poland AI events 
+####################################
+
+################
+# Shift Production
+#############################################
+event = {
+	id = 3013009
+	random = no 
+	country = POL
+	
+	trigger = {
+		ai = yes
+		OR = {
+			atwar = yes
+			atwar = GER
+			atwar = SOV
+			year = 1937
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 1 month = january year = 1933 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Gear_Up.ai" }
+	}
+}
+################
+# Shift Upgrading
+#############################################
+event = {
+	id = 3013010
+	random = no 
+	country = POL
+	
+	trigger = {
+		ai = yes
+		OR = {
+			atwar = yes
+			year = 1938
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 1 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/POL_Upg_War.ai" }
+	}
+}

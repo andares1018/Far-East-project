@@ -1,0 +1,103 @@
+###
+### Albanese events (ALB - 058)
+###
+### By Rhysaxiel
+###
+###	2058500	Help Serbia ?
+### 2058501	Greece proclaimed the annexation of Northern Epirus
+### 2058502	Wilhelm of Wied restored as King Vidit I
+### 2058503	Ahmet Bej Zogolli is the new King Zog I
+### 2058504	Prince Kyril of Bulgaria is the new King Kiril I
+
+event = {
+   id = 2058500	# Let Serbian troops retreat?
+   country = ALB
+
+   # triggered by SER 2084503
+   
+   name = "EVT1914_2058500_NAME"
+   desc = "EVT1914_2058500_DESC" 
+   style = 2
+   picture = "foreign_volunteers"
+
+   action_a = {
+      name = "EVT1914_2058500_ACTIONA" # Yes
+	  ai_chance = 50
+      command = { type = trigger which = 2084504 } # SER
+      command = { trigger = { war = { country = FRA country = U09 } } type = trigger which = 2002518 } # FRA
+   }
+   action_b = {
+      name = "EVT1914_2058500_ACTIONB" # No, resist!
+	  ai_chance = 50
+	  command = { type = dissent value = -5 }
+      #command = { type = war which = SER }
+	  #command = { trigger = { NOT = { war = { country = ALB country = U09 } } } type = alliance where = 1 when = 1 }
+   }
+}
+event = {
+	id = 2058501	# Greece proclaimed the annexation of Northern Epirus
+	country = ALB
+
+	name = "EVT1914_2058501_NAME"
+	desc = "EVT1914_2058501_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action = {
+		name = "ACTION_NAME_DAMN" # Damn
+		command = { type = secedeprovince which = GRE value = 360 } #Korce
+	}
+}
+
+event = {
+	id = 2058502	#Wilhelm of Wied restored as King Vidit I
+	country = ALB
+
+	name = "EVT1914_2058502_NAME"
+	desc = "EVT1914_2058502_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 } #Paternal Autocracy
+		command = { type = headofstate which = 285159 } #Vidit I
+	}
+}
+
+event = {
+	id = 2058503	#Ahmet Bej Zogolli is the new King Zog I
+	country = ALB
+
+	name = "EVT1914_2058503_NAME"
+	desc = "EVT1914_2058503_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 } #Paternal Autocracy
+		command = { type = wakeminister which = 285001 } #Zog I
+		command = { type = headofstate which = 285001 } #Zog I
+	}
+}
+
+event = {
+	id = 2058504	#Prince Kyril of Bulgaria is the new King Kiril I
+	country = ALB
+
+	name = "EVT1914_2058504_NAME"
+	desc = "EVT1914_2058504_DESC" 
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action = {
+		name = "ACTION_NAME_GREAT" # Great
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 } #Paternal Autocracy
+		command = { type = headofstate which = 285162 } #Kiril I
+		command = { type = headofgovernment which = 285249 } #Hasan Basri Bej Dukagjini
+	}
+}

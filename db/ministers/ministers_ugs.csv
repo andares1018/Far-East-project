@@ -1,0 +1,32 @@
+UGS;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+1340001;Head of State;Boris Durov;1914;1977;1999;ML;Benevolent Gentleman;Medium;9094;X
+1340002;Head of State;Evgeniy Miller;1914;1939;1999;PA;Ruthless Powermonger;Medium;9096;X
+1340003;Head of Government;Nikolay Chaikovsky;1914;1926;1999;SD;Silent Workhorse;Medium;9555;X
+1340004;Foreign Minister;Evgeniy Miller;1914;1939;1999;PA;Great Compromiser;Medium;9096;X
+1340005;Foreign Minister;Nikolay Chaikovsky;1914;1926;1999;SD;Apologetic Clerk;Medium;9555;X
+1340006;Minister of Armament;Nikolay Mefodiev;1914;1927;1999;ML;Construction Magnate;Medium;unknownminister;X
+1340007;Minister of Armament;Yakov Dedysenko;1914;1936;1999;ML;Oil Baron;Medium;9104;X
+1340008;Minister of Armament;Pyotr Zubov;1914;1942;1999;ML;Laissez-Faire Capitalist;Medium;9099;X
+1340009;Minister of Armament;Sergey Maslov;1914;1965;1999;SD;Infantry Proponent;Medium;unknownminister;X
+1340010;Minister of Armament;Boris Durov;1914;1977;1999;ML;Tank Proponent;Medium;9094;X
+1340011;Minister of Armament;Evgeniy Miller;1914;1939;1999;ML;Military Entrepreneur;Medium;9096;X
+1340012;Minister of Security;Boris Durov;1914;1977;1999;ML;Prince of Terror;Medium;9094;X
+1340013;Minister of Security;Pyotr Zubov;1914;1942;1999;ML;Crime Fighter;Medium;9099;X
+1340014;Minister of Security;Vladimir Ignatev;1914;1945;1999;ML;Silent Lawyer;Medium;9101;X
+1340015;Minister of Security;Ivan Bagrinovsky;1914;1945;1999;ML;Back Stabber;Medium;unknownminister;X
+1340016;Minister of Security;Emmanuil Tizengauzen;1914;1945;1999;ML;Efficient Sociopath;Medium;9556;X
+1340017;Head of Military Intelligence;Boris Durov;1914;1977;1999;ML;Industrial Specialist;Medium;9094;X
+1340018;Head of Military Intelligence;Evgeniy Miller;1914;1939;1999;PA;Political Specialist;Medium;9096;X
+1340019;Chief of Staff;Georgiy Chaplin;1914;1950;1999;ML;School of Fire Support;Medium;9097;X
+1340020;Chief of Staff;Leonid Ivanov;1914;1940;1999;ML;School of Manoeuvre;Medium;9098;X
+1340021;Chief of Staff;Boris Durov;1914;1977;1999;ML;School of Defence;Medium;9094;X
+1340022;Chief of Staff;Vladimir Marushevsky;1914;1952;1999;ML;School of Psychology;Medium;9102;X
+1340023;Chief of Staff;Evgeniy Miller;1914;1939;1999;PA;School of Mass Combat;Medium;9096;X
+1340024;Chief of Army;Georgiy Chaplin;1914;1950;1999;ML;Guns and Butter Doctrine;Medium;9097;X
+1340025;Chief of Army;Leonid Ivanov;1914;1940;1999;ML;Armoured Spearhead Doctrine;Medium;9098;X
+1340026;Chief of Army;Boris Durov;1914;1977;1999;ML;Decisive Battle Doctrine;Medium;9094;X
+1340027;Chief of Army;Vladimir Marushevsky;1914;1952;1999;ML;Static Defence Doctrine;Medium;9102;X
+1340028;Chief of Army;Evgeniy Miller;1914;1939;1999;ML;Elastic Defence Doctrine;Medium;9096;X
+1340029;Chief of Navy;Nikolay Vikorst;1914;1944;1999;ML;Base Control Doctrine;Medium;unknownminister;X
+1340030;Chief of Navy;Leonid Ivanov;1914;1940;1999;ML;Open Seas Doctrine;Medium;9098;X

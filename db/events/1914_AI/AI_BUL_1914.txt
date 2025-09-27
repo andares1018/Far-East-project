@@ -1,0 +1,98 @@
+
+########################################################## 
+###############################################
+## Bulgarian AI Files
+## Jaegerfeld 2011
+
+## Bulgaria enters the war aside the central powers
+
+
+event = {
+	id = 3020501
+	random = no
+	country = BUL
+	persistent = yes		
+	
+	trigger = {
+		ai = yes		
+		NOT = { flag = BUL_1914StartupDone }
+		war = { country = BUL country = RUS }
+		NOT = { war = { country = BUL country = U08 } }	
+		NOT = { war = { country = BUL country = U09 } }			
+		
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+	{
+		command = { type = setflag which = BUL_1914StartupDone }
+		command = { type = ai which = "switch/BUL_1914Startup.ai" }
+	}
+}
+
+event = {	# Send more troops to the active front leader to deal with SER/ROM/GRE
+	id = 3020502
+	random = no
+	country = BUL
+	persistent = yes		
+	
+	trigger = {
+		ai = yes		
+		NOT = { local_flag = BUL_HighExpForcesRatio}
+		OR = {
+			war = { country = BUL country = SER }
+			war = { country = BUL country = ROM }
+			war = { country = BUL country = GRE }
+		}	
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+	{
+		command = { type = local_setflag which = BUL_HighExpForcesRatio }
+		command = { type = ai which = "switch/Minor_EXP_Feeder_6.ai" } # 60% EF ratio
+	}
+}
+
+event = {	# Keep most troops at home when not at war with SER/ROM/GRE
+	id = 3020503
+	random = no
+	country = BUL
+	persistent = yes		
+	
+	trigger = {
+		ai = yes		
+		local_flag = BUL_HighExpForcesRatio
+		NOT = {
+			war = { country = BUL country = SER }
+			war = { country = BUL country = ROM }
+			war = { country = BUL country = GRE }
+		}	
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+	{
+		command = { type = local_clrflag which = BUL_HighExpForcesRatio }
+		command = { type = ai which = "switch/Minor_EXP_Feeder_1.ai" } # 10% EF ratio
+	}
+}
+

@@ -1,0 +1,44 @@
+U57;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+1100001;Head of State;Venustiano Carranza;1913;1930;1999;ML;Popular Figurehead;Medium;8359;X
+1100002;Head of Government;Venustiano Carranza;1913;1930;1999;ML;Political Protege;Medium;8359;X
+1100003;Foreign Minister;Francisco Escudero;1913;1928;1999;SL;Iron Fisted Brute;Medium;2851;X
+1100004;Foreign Minister;Isidro Fabela Alfaro;1913;1930;1999;ML;Ideological Crusader;Medium;7225;X
+1100005;Foreign Minister;Jesús Acuña;1916;1930;1999;ML;Apologetic Clerk;Medium;7230;X
+1100006;Foreign Minister;Cándido Aguilar;1916;1930;1999;ML;General Staffer;Medium;923;X
+1100007;Foreign Minister;Alfonso Siller;1916;1930;1999;ML;The Cloak N Dagger Schemer;Medium;unknownminister;X
+1100008;Foreign Minister;Ernesto Garza Pérez;1917;1930;1999;ML;Great Compromiser;Medium;unknownminister;X
+1100009;Foreign Minister;Salvador Diego Fernández;1919;1930;1999;ML;Great Compromiser;Medium;unknownminister;X
+1100010;Foreign Minister;Hilario Medina;1919;1930;1999;ML;Apologetic Clerk;Medium;6647;X
+1100011;Foreign Minister;Juan Sánchez Azcona;1920;1930;1999;ML;Biased Intellectual;Medium;7259;X
+1100012;Minister of Armament;Francisco Escudero;1913;1928;1999;SL;Administrative Genius;Medium;2851;X
+1100013;Minister of Armament;Pastor Rouaix;1914;1930;1999;ML;laissez-faire capitalist;Medium;8323;X
+1100014;Minister of Armament;Alberto José Pani;1917;1930;1999;SD;Corrupt Kleptocrat;Medium;903;X
+1100015;Minister of Armament;Plutarco Elías Calles;1919;1930;1999;SD;Military Entrepreneur;Medium;8326;X
+1100016;Minister of Security;Rafael Zubarán Capmany;1913;1930;1999;SD;Compassionate Gentleman;Medium;8333;X
+1100017;Minister of Security;Adolfo de la Huerta;1915;1930;1999;SL;Crime Fighter;Medium;901;X
+1100018;Minister of Security;Manuel Aguirre Berlanga;1917;1930;1999;ML;Efficient Sociopath;Medium;7271;X
+1100019;Chief of Staff;Eduardo Hay;1914;1930;1999;ML;School of Manoeuvre;Medium;937;X
+1100020;Chief of Staff;Jacinto Blas Treviño;1914;1930;1999;SL;School of Defence;Medium;7227;X
+1100021;Chief of Staff;Ignacio L. Pesqueira;1914;1930;1999;ML;School of Psychology;Medium;7223;X
+1100022;Chief of Staff;Álvaro Obregón;1916;1928;1999;SD;School of Mass Combat;Medium;8366;X
+1100023;Chief of Staff;Jesús Agustín Castro;1917;1930;1999;ML;School of Fire Support;Medium;7231;X
+1100024;Chief of Staff;Juan José Ríos;1918;1930;1999;ML;School of Manoeuvre;Medium;7257;X
+1100025;Chief of Staff;Francisco L. Urquizo;1920;1930;1999;ML;School of Defence;Medium;unknownminister;X
+1100026;Chief of Army;Eduardo Hay;1914;1930;1999;ML;Armoured Spearhead Doctrine;Medium;937;X
+1100027;Chief of Army;Jacinto Blas Treviño;1914;1930;1999;SL;Decisive Battle Doctrine;Medium;7227;X
+1100028;Chief of Army;Ignacio L. Pesqueira;1914;1930;1999;ML;Static Defence Doctrine;Medium;7223;X
+1100029;Chief of Army;Álvaro Obregón;1916;1928;1999;SD;elastic defence doctrine;Medium;8366;X
+1100030;Chief of Army;Jesús Agustín Castro;1917;1930;1999;ML;Guns and Butter Doctrine;Medium;7231;X
+1100031;Chief of Army;Juan José Ríos;1918;1930;1999;ML;Armoured Spearhead Doctrine;Medium;7257;X
+1100032;Chief of Army;Francisco L. Urquizo;1920;1930;1999;ML;Decisive Battle Doctrine;Medium;unknownminister;X
+1100033;Chief of Navy;Eduardo Hay;1914;1930;1999;ML;Open Seas Doctrine;Medium;937;X
+1100034;Chief of Navy;Jacinto Blas Treviño;1914;1930;1999;SL;Decisive Naval Battle Doctrine;Medium;7227;X
+1100035;Chief of Navy;Ignacio L. Pesqueira;1914;1930;1999;ML;Power Projection Doctrine;Medium;7223;X
+1100036;Chief of Navy;Álvaro Obregón;1916;1928;1999;SD;Indirect Approach Doctrine;Medium;8366;X
+1100037;Chief of Navy;Jesús Agustín Castro;1917;1930;1999;ML;Base Control Doctrine;Medium;7231;X
+1100038;Chief of Navy;Juan José Ríos;1918;1930;1999;ML;Open Seas Doctrine;Medium;7257;X
+1100039;Chief of Navy;Francisco L. Urquizo;1920;1930;1999;ML;Decisive Naval Battle Doctrine;Medium;unknownminister;X
+1100040;Chief of Air Force;Alberto Salinas Carranza;1914;1930;1999;ML;Army Aviation Doctrine;Medium;904;X
+1100041;Head of Military Intelligence;Eduardo Hay;1913;1930;1999;ML;Naval Intelligence Specialist;Medium;937;X
+1100042;Head of Military Intelligence;Álvaro Obregón;1913;1930;1999;SD;Technical Specialist;Medium;8366;X
+1100043;Head of Military Intelligence;Jacinto Blas Treviño;1913;1928;1999;SL;Logistics Specialist;Medium;7227;X

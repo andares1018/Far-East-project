@@ -1,0 +1,15 @@
+# German the Poland Invasion AI File by Lothos
+
+max_front_ratios = {
+   FRA = 0.8  
+}
+ 
+target = { 
+	232 = 50 # Warsaw 
+}
+
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+}

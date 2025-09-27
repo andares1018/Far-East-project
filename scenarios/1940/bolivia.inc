@@ -1,0 +1,164 @@
+ 
+ ############################## 
+ # Country definition for BOL # 
+ ############################## 
+
+ ##################### 
+ # Country main data # 
+ ##################### 
+  
+ country = 
+ {  tag                    = BOL
+	ai_settings = { flags = { MOB1 = yes MOB2 = yes MOB3 = yes MOB4 = yes MOB5 = yes } } 
+	manpower               = 23 
+	# Resource Reserves 
+	energy                 = 1000
+	metal                  = 1000
+	rare_materials         = 500
+	oil                    = 500 
+	supplies               = 500 
+	money                  = 100 
+	capital                = 2020 
+      
+   policy = 
+   {  date              = {  year = 0 month = january day = 0  } 
+     democratic        = 4 
+     political_left    = 3 
+     free_market       = 8 
+     freedom           = 7 
+     professional_army = 5 
+     defense_lobby     = 8 
+     interventionism   = 5 
+    } 
+   nationalprovinces      = {  2002 2019 2020 2021 2024 2046 2063 2064  } 
+   ownedprovinces         = {  2019 2020 2021 2063 2064  } 
+   controlledprovinces    = {  2019 2020 2021 2063 2064  } 
+   
+	# ROTW Minor Tech '40
+	# Group D 1940 techs 
+	# ###################### 
+	# GW fighter 
+	techapps               = {  
+	# Interceptor  
+	4500 4510 4520 4530 4540 4550 4010
+	# Armoured Car  
+	2860 2870 2880 2020
+	# Field Artillery 
+	2290 2300 2310
+	# Tank 
+	7600 7610
+	# Infantry Division  
+	1010  1020 1030 1040 1050 1060 1070 1080 1090
+	# Supply 
+	1910 1920 1930 1940 1950 1960 1970
+	# Cavalry Division  
+	13060 13070 13080 1310 1320 1330 1340 1350 1360
+	# Mountain Division 
+	1160  1170 1180 1190 1200 1210 1220 1230 1240
+	# Medicine
+	5600 5610 5620
+	# Engineers
+	1830 1840 1850 
+	# Static Anti-Air Artillery 
+	2800 2450 21180 21190
+	# Anti-Air Artillery Brigade 
+	2810 2820 2510
+	# Agriculture  
+	5700 5710 5010
+	# Manufacturing
+	5810
+	# Construction Engineering 
+	5800 5080 
+	# Great War Land Doctrines (entente)
+	6500 6510 6530 6580 6600 6610 6680 6620 6630 6640 6650 6660 6670 6540 6910
+	# Air Doctrines - ww2 techs
+	27480 27490 27500 27510 27520 27530 27540 27550 27570 27580 27590 27600 9030 9020 27560 27460 27470 9010
+	}
+	
+inventions = { 3000027 }
+   diplomacy = 
+   {  relation = {  tag = ARG value = 50  } 
+     relation = {  tag = BRA value = 10  } 
+     relation = {  tag = CHL value = -50  } 
+     relation = {  tag = COL value = 1  } 
+     relation = {  tag = ECU value = -20  } 
+     relation = {  tag = GER value = 15  } 
+     relation = {  tag = PAR value = -50  } 
+     relation = {  tag = PRU value = 30  } 
+     relation = {  tag = URU value = 10  } 
+     relation = {  tag = USA value = 85  } 
+     relation = {  tag = VEN value = -15  } 
+    } 
+   SpyInfo                = {  country = "BOL" NumberOfSpies = 3  } 
+   headofstate            = {  type = 9 id = 205025  } 
+   headofgovernment       = {  type = 9 id = 205042  } 
+   foreignminister        = {  type = 9 id = 205056  } 
+   armamentminister       = {  type = 9 id = 205082  } 
+   ministerofsecurity     = {  type = 9 id = 205109  } 
+   ministerofintelligence = {  type = 9 id = 205129  } 
+   chiefofstaff           = {  type = 9 id = 205143  } 
+   chiefofarmy            = {  type = 9 id = 205154  } 
+   chiefofnavy            = {  type = 9 id = 205166  } 
+   chiefofair             = {  type = 9 id = 205180  } 
+   dormant_leaders        = {  205005 205020  }
+   dormant_ministers      = {  205001 205011 205013 205016 205002 205028 205034 205030 205049 205050 205054 205003 205072 205005 205104 205006 205125
+                               205008 205150 205009 205172 205010 205012 205017
+                            }
+   # People's Army 
+   landunit = 
+   {  id       = {  type = 17000 id = 40  } 
+     name     = "Ejercito de Bolivia" 
+     location = 2020 
+     Division = 
+     {  id       = {  type = 17000 id = 4000  } 
+       name     = "1. Brigada de Infantería 'Bolivar'" 
+       strength = 30 
+       type     = infantry 
+       model    = 6
+       extra    = artillery 
+	   brigade_model = 4
+      } 
+     Division = 
+     {  id       = {  type = 17000 id = 4001  } 
+       name     = "2. Brigada de Infantería" 
+       strength = 30 
+       type     = infantry 
+       model    = 6
+      } 
+     Division = 
+     {  id       = {  type = 17000 id = 4002  } 
+       name     = "3. Brigada de Infantería" 
+       strength = 30 
+       type     = infantry 
+       model    = 6
+      } 
+     Division = 
+     {  id       = {  type = 17000 id = 4003  } 
+       name     = "1. Brigada de Caballería 'Chaco'" 
+       strength = 20 
+       type     = cavalry 
+       model    = 7
+      } 
+     Division = 
+     {  id       = {  type = 17000 id = 4004  } 
+       name     = "2. Brigada de Caballería" 
+       strength = 20 
+       type     = cavalry 
+       model    = 7
+      } 	  
+    }
+   airunit = 
+   {  id       = {  type = 12000 id = 4005  } 
+     name     = "Aviación del Ejército" 
+     location = 2020 
+     base     = 2020 
+     Division = 
+     {  id       = {  type = 12000 id = 4006  } 
+       name     = "Grupo Aérea Nro. 1" 
+       strength = 20 
+       type     = interceptor 
+       model    = 6
+      } 
+    } 	
+  } 
+ 

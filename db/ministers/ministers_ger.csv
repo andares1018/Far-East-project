@@ -1,0 +1,273 @@
+GER;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+1;Head of State;Adolf Hitler;1933;1964;1999;NS;Paranoid Megalomaniac;High;2634;X
+2;Head of Government;Rudolf Hess;1933;1964;1999;NS;Silent Workhorse;High;2635;X
+3;Foreign Minister;Konstantin von Neurath;1933;1964;1999;FA;Respectable Compromiser;High;2636;X
+4;Minister of Armament;Werner von Blomberg;1933;1964;1999;NS;Infantry Proponent;High;L607;X
+5;Minister of Security;Wilhelm Frick;1933;1964;1999;NS;Ruthless Organizer;High;M5;X
+6;Head of Military Intelligence;Wilhelm Canaris;1933;1946;1999;FA;Brilliant Spymaster;Medium;2639;X
+7;Chief of Staff;Ludwig Beck;1933;1945;1999;PA;School of Manoeuvre;High;2640;X
+8;Chief of Army;Werner von Fritsch;1933;1940;1999;PA;Armoured Spearhead Doctrine;High;L611;X
+9;Chief of Navy;Erich Raeder;1933;1964;1999;NS;Decisive Naval Battle Doctrine;High;L409;X
+10;Chief of Air Force;Hermann Göring;1933;1964;1999;NS;The Iron Knight;Very High;L440;X
+11;Head of State;Hermann Göring;1933;1964;1999;NS;Barking Buffoon;Very High;L440;X
+12;Head of State;Joseph Goebbels;1942;1946;1999;NS;Powerhungry Demagogue;Very High;3587;X
+13;Head of State;Karl Dönitz;1945;1964;1999;NS;Resigned Generalissimo;High;M32;X
+14;Head of State;Oskar von Hindenburg;1933;1964;1999;FA;Insignificant Layman;High;3580;X
+15;Head of State;Ludwig Beck;1939;1945;1999;FA;Resigned Generalissimo;High;2640;X
+16;Head of State;Hjalmar Schacht;1945;1964;1999;FA;Pig-headed Isolationist;High;2644;X
+17;Head of State;Wilhelm II;1933;1964;1999;PA;Weary Stiffneck;High;3581;X
+18;Head of State;Wilhelm III;1942;1964;1999;PA;Benevolent Gentleman;High;3582;X
+19;Head of State;Theodor Heuss;1946;1964;1999;SL;Die-hard Reformer;High;M38;X
+20;Head of State;Ludwig Renn;1933;1964;1999;ST;Insignificant Layman;High;3577;X
+21;Head of Government;Hermann Göring;1938;1964;1999;NS;Old Airmarshal;High;L440;X
+22;Head of Government;Adolf Hitler;1933;1964;1999;NS;Flamboyant Tough Guy;High;2634;X
+23;Head of Government;Martin Bormann;1941;1964;1999;NS;The Brown Eminence;High;3583;X
+24;Head of Government;Albert Speer;1945;1964;1999;NS;Corporate Suit;High;2645;X
+25;Head of Government;Otto Meissner;1933;1964;1999;PA;Naive Optimist;High;3584;X
+27;Head of Government;Albert Dufour von Féronce;1938;1964;1999;PA;Flamboyant Tough Guy;High;M46;X
+28;Head of Government;Franz von Papen;1939;1964;1999;PA;Happy Amateur;High;3585;X
+29;Head of Government;Carl Friedrich Goerdeler;1941;1946;1999;PA;Happy Amateur;High;M12;X
+30;Head of Government;Johann Schwerin von Krosigk;1944;1964;1999;PA;Silent Workhorse;High;M49;X
+31;Head of Government;Konrad Adenauer;1946;1964;1999;SC;Silent Workhorse;High;M50;X
+32;Head of Government;Ernst Thälmann;1933;1964;1999;ST;Backroom Backstabber;High;3578;X
+33;Head of Government;Ernst Toller;1939;1964;1999;ST;Ambitious Union Boss;High;M25;X
+34;Head of Government;Walter Ulbricht;1946;1964;1999;ST;Backroom Backstabber;High;M53;X
+35;Foreign Minister;Joachim von Ribbentrop;1937;1964;1999;NS;Salesman of Deception;High;3586;X
+36;Foreign Minister;Joseph Goebbels;1942;1946;1999;NS;The Cloak N Dagger Schemer;Very High;3587;X
+37;Foreign Minister;Alfred Rosenberg;1943;1964;1999;NS;Ideological Crusader;Very High;M57;X
+38;Foreign Minister;Arthur Seyss-Inquart;1945;1964;1999;NS;Iron Fisted Brute;Very High;M58;X
+39;Foreign Minister;Johann Schwerin von Krosigk;1945;1964;1999;NS;Apologetic Clerk;Very High;M49;X
+40;Foreign Minister;Ludwig Kastl;1933;1964;1999;PA;Biased Intellectual;High;M60;X
+41;Foreign Minister;Konstantin von Neurath;1939;1964;1999;PA;Respectable Compromiser;High;2636;X
+42;Foreign Minister;Otto Meissner;1942;1964;1999;PA;The Cloak N Dagger Schemer;Low;3584;X
+43;Foreign Minister;Johann Schwerin von Krosigk;1945;1964;1999;PA;Apologetic Clerk;High;M49;X
+44;Foreign Minister;Thomas Mann;1933;1964;1999;PA;General Staffer;Medium;M64;X
+45;Foreign Minister;Albert Dufour von Féronce;1938;1964;1999;PA;Great Compromiser;Medium;M46;X
+46;Foreign Minister;Wilhelm Waetzoldt;1938;1964;1999;PA;Apologetic Clerk;Medium;M66;X
+47;Foreign Minister;Franz von Papen;1933;1964;1999;PA;Great Compromiser;Very High;3585;X
+48;Foreign Minister;Friedrich-Werner von der Schulenberg;1942;1964;1999;PA;Ideological Crusader;Medium;M68;X
+49;Foreign Minister;Ulrich von Hassell;1943;1964;1999;PA;The Cloak N Dagger Schemer;Medium;M13;X
+50;Foreign Minister;Carl Melchior;1945;1964;1999;PA;Ideological Crusader;Medium;M70;X
+51;Foreign Minister;Theodor Heuss;1946;1964;1999;SL;Apologetic Clerk;Very High;M38;X
+52;Foreign Minister;Konrad Adenauer;1947;1964;1999;SC;Great Compromiser;Very High;M50;X
+53;Foreign Minister;Walter Ulbricht;1933;1964;1999;ST;The Cloak N Dagger Schemer;High;M53;X
+55;Minister of Armament;Rudolf Hess;1933;1964;1999;NS;Strategic Air Proponent;High;2635;X
+56;Minister of Armament;Hjalmar Schacht;1933;1964;1999;FA;Administrative Genius;Medium;2644;X
+57;Minister of Armament;Friedrich Flick;1938;1964;1999;NS;Laissez-Faire Capitalist;Medium;M78;X
+58;Minister of Armament;Hermann Göring;1936;1964;1999;NS;Air to Ground Proponent;Very High;L440;X
+59;Minister of Armament;Walter Funk;1939;1964;1999;NS;Oil Baron;Very High;M80;X
+60;Minister of Armament;Walther Darré;1939;1964;1999;NS;Military Entrepreneur;Very High;7382;X
+61;Minister of Armament;Kurt Daluege;1940;1964;1999;NS;Infantry Proponent;Very High;M82;X
+62;Minister of Armament;Max Amann;1941;1964;1999;NS;Battle Fleet Proponent;Very High;M83;X
+63;Minister of Armament;Franz-Xaver Schwarz;1933;1943;1954;NS;Resource Industrialist;Very High;M84;X
+64;Minister of Armament;Johann Schwerin von Krosigk;1933;1964;1999;NS;Resource Industrialist;Very High;M49;X
+65;Minister of Armament;Albert Speer;1942;1964;1999;NS;Genius Organizer;Medium;2645;X
+66;Minister of Armament;Oswald Pohl;1943;1964;1999;NS;Military Entrepreneur;High;M87;X
+67;Minister of Armament;Robert Ley;1933;1964;1999;NS;Corrupt Kleptocrat;High;M88;X
+68;Minister of Armament;Karl Otto Saur;1945;1964;1999;NS;Planned Economy Proponent;High;M89;X
+69;Minister of Armament;Fritz Thyssen;1933;1940;1952;FA;Steel Magnate;Medium;M90;X
+70;Minister of Armament;Fritz Todt;1938;1964;1999;FA;Organization 'Todt';High;M91;X
+71;Minister of Armament;Hjalmar Schacht;1939;1964;1999;PA;Administrative Genius;High;2644;X
+72;Minister of Armament;Hans-Georg von Friedeburg;1942;1964;1999;NS;Submarine Proponent;Very High;M93;X
+74;Minister of Armament;Julius Curtius;1933;1964;1999;PA;Resource Industrialist;Medium;M95;X
+75;Minister of Armament;Paul Lejeune-Jung;1938;1945;1999;PA;Mixed Economy;Medium;M96;X
+76;Minister of Armament;Alfried Krupp;1939;1964;1999;FA;Steel Magnate;Medium;M97;X
+77;Minister of Armament;Georg Thomas;1940;1964;1999;PA;Reformer;Low;M98;X
+78;Minister of Armament;Carl Friedrich Goerdeler;1940;1946;1999;PA;Military Entrepreneur;High;M12;X
+80;Minister of Armament;Johannes Popitz;1941;1946;1999;PA;Resource Industrialist;Very High;M101;X
+81;Minister of Armament;Claus Schenk Graf von Stauffenberg;1944;1945;1999;PA;Infantry Proponent;High;M102;X
+82;Minister of Armament;Fritz Schäffer;1946;1964;1999;SC;Resource Industrialist;Very High;M103;X
+83;Minister of Armament;Ludwig Erhard;1947;1964;1999;SC;Mixed Economy;Very High;M104;X
+84;Minister of Armament;Albert Kuntz;1933;1964;1999;ST;Resource Industrialist;High;M105;X
+85;Minister of Armament;Willie Munzenberg;1942;1964;1999;ST;Administrative Genius;High;M24;X
+86;Minister of Security;Heinrich Himmler;1938;1946;1999;NS;SS Reichsfuhrer;Very High;M108;X
+87;Minister of Security;Viktor Lutze;1939;1964;1999;NS;Compassionate Gentleman;Very High;M109;X
+88;Minister of Security;Joseph Goebbels;1942;1946;1999;NS;Master of Propaganda;Very High;3587;X
+89;Minister of Security;Heinrich Müller;1943;1964;1999;NS;Secret Police Chief;Very Low;M26;X
+90;Minister of Security;Arthur Seyss-Inquart;1943;1964;1999;NS;Silent Lawyer;Very High;M58;X
+91;Minister of Security;Karl Hanke;1944;1964;1999;NS;Back Stabber;Very Low;M113;X
+92;Minister of Security;Otto Georg Thierack;1942;1964;1999;NS;Crime Fighter;Very High;M114;X
+93;Minister of Security;Franz von Papen;1946;1964;1999;PA;Compassionate Gentleman;Very High;3585;X
+94;Minister of Security;Ernst Trendelenburg;1933;1964;1999;PA;Compassionate Gentleman;Medium;M116;X
+95;Minister of Security;Alfred Hugenberg;1933;1964;1999;PA;Compassionate Gentleman;Medium;M117;X
+96;Minister of Security;Heinrich Müller;1939;1964;1999;PA;Efficient Sociopath;Very Low;M26;X
+97;Minister of Security;Arthur Nebe;1941;1946;1999;FA;Crime Fighter;Low;M119;X
+98;Minister of Security;Arthur Axmann;1945;1964;1999;FA;Man of the People;Low;M120;X
+99;Minister of Security;Albrecht Graf von Bernstorff;1933;1964;1999;PA;Back Stabber;Medium;M121;X
+100;Minister of Security;Karl Sack;1933;1946;1999;PA;Silent Lawyer;Medium;M122;X
+101;Minister of Security;Wilhelm von Gayl;1938;1964;1999;PA;Prince of Terror;High;M15;X
+102;Minister of Security;Walter Schellenberg;1939;1964;1999;PA;Efficient Sociopath;Low;M124;X
+103;Minister of Security;Josef Wirmer;1942;1945;1999;PA;Man of the People;Medium;M125;X
+104;Minister of Security;Fritz-Dietlof von der Schulenburg;1941;1945;1999;PA;Compassionate Gentleman;Very High;M126;X
+105;Minister of Security;Henning von Tresckow;1944;1945;1999;PA;Crime Fighter;Low;M127;X
+106;Minister of Security;Franz von Papen;1945;1964;1999;PA;Compassionate Gentleman;Very High;3585;X
+107;Minister of Security;Karl Arnold;1946;1964;1999;SC;Crime Fighter;High;M129;X
+108;Minister of Security;Gustav Heinemann;1947;1964;1999;SC;Man of the People;High;M130;X
+109;Minister of Security;Ernst Toller;1933;1964;1999;ST;Man of the People;Low;M25;X
+110;Minister of Security;Ludwig Renn;1939;1964;1999;ST;Efficient Sociopath;Very High;3577;X
+111;Minister of Security;Julius Leber;1941;1946;1999;ST;Compassionate Gentleman;High;M133;X
+112;Minister of Security;Walter Ulbricht;1944;1964;1999;ST;Prince of Terror;High;M53;X
+113;Head of Military Intelligence;Hans-Georg von Friedeburg;1942;1964;1999;NS;Naval Intelligence Specialist;Medium;M93;X
+114;Head of Military Intelligence;Wilhelm Frick;1944;1964;1999;NS;Technical Specialist;High;M5;X
+115;Head of Military Intelligence;Ernst Kaltenbrunner;1944;1964;1999;NS;Logistics Specialist;High;M138;X
+116;Head of Military Intelligence;Martin Bormann;1944;1964;1999;NS;Political Specialist;High;3583;X
+117;Head of Military Intelligence;Hjalmar Schacht;1945;1964;1999;NS;Industrial Specialist;Medium;2644;X
+118;Head of Military Intelligence;Oskar von Hindenburg;1933;1964;1999;PA;Political Specialist;Medium;3580;X
+119;Head of Military Intelligence;Walter Schellenberg;1940;1964;1999;FA;Dismal Enigma;Low;M124;X
+120;Head of Military Intelligence;Baldur von Schirach;1944;1964;1999;FA;Logistics Specialist;Low;M143;X
+121;Head of Military Intelligence;Carl von Schubert;1933;1964;1999;PA;Logistics Specialist;High;M144;X
+122;Head of Military Intelligence;Otto Strasser;1938;1964;1999;PA;Political Specialist;High;M145;X
+123;Head of Military Intelligence;Hans Oster;1939;1946;1999;PA;Industrial Specialist;High;M146;X
+124;Head of Military Intelligence;Georg Hansen;1940;1945;1999;PA;Technical Specialist;Medium;M147;X
+125;Head of Military Intelligence;Wilhelm Canaris;1944;1946;1999;PA;Brilliant Spymaster;High;2639;X
+126;Head of Military Intelligence;Hans Ehard;1946;1964;1999;SC;Political Specialist;High;M149;X
+127;Head of Military Intelligence;Reinhard Gehlen;1947;1964;1999;SC;Dismal Enigma;High;M150;X
+128;Head of Military Intelligence;Ernst Thälmann;1933;1964;1999;ST;Industrial Specialist;High;3578;X
+129;Head of Military Intelligence;Erich Weinert;1938;1964;1999;ST;Logistics Specialist;High;M152;X
+130;Head of Military Intelligence;Heinrich Müller;1943;1964;1999;ST;Political Specialist;Very High;M26;X
+131;Chief of Staff;Franz Halder;1938;1943;1999;FA;School of Fire Support;Medium;L114;X
+132;Chief of Staff;Alfred Jodl;1939;1964;1999;NS;School of Psychology;High;M156;X
+133;Chief of Staff;Heinz Guderian;1944;1964;1999;PA;School of Mass Combat;Medium;L94;X
+134;Chief of Staff;Hans Krebs;1945;1964;1999;NS;School of Defence;Medium;L170;X
+135;Chief of Staff;Fritz Bayerlein;1933;1964;1999;PA;School of Psychology;High;3747;X
+136;Chief of Staff;Erich Hoepner;1937;1945;1999;FA;School of Fire Support;Medium;M18;X
+137;Chief of Staff;Erwin von Witzleben;1941;1945;1999;PA;School of Fire Support;High;M17;X
+138;Chief of Staff;Kurt Zeitzler;1942;1964;1999;FA;School of Defence;Medium;L369;X
+139;Chief of Staff;Erwin Rommel;1943;1945;1999;PA;School of Manoeuvre;High;M165;X
+140;Chief of Staff;Wilhelm Groener;1914;1964;1999;PA;School of Defence;Medium;M166;X
+141;Chief of Staff;Adolf Heusinger;1942;1964;1999;PA;School of Mass Combat;Low;9712;X
+142;Chief of Staff;Julius Ringel;1944;1964;1999;PA;School of Manoeuvre;Medium;L227;X
+143;Chief of Staff;Hans Speidel;1946;1964;1999;SC;School of Mass Combat;High;M170;X
+144;Chief of Staff;Ernst Wollweber;1933;1964;1999;ST;School of Mass Combat;Very High;M27;X
+145;Chief of Staff;Erich Weinert;1944;1964;1999;ST;School of Psychology;High;M152;X
+146;Chief of Army;Walther von Brauchitsch;1938;1964;1999;FA;Armoured Spearhead Doctrine;High;L282;X
+147;Chief of Army;Kurt von Hammerstein-Equord;1939;1964;1999;FA;Guns and Butter Doctrine;High;L817;X
+148;Chief of Army;Wilhelm Keitel;1940;1964;1999;NS;Armoured Spearhead Doctrine;Very High;M176;X
+149;Chief of Army;Adolf Hitler;1942;1964;1999;NS;Decisive Battle Doctrine;Very High;2634;X
+150;Chief of Army;Ferdinand Schörner;1945;1964;1999;NS;Elastic Defence Doctrine;Very High;L249;X
+151;Chief of Army;Erich Ludendorff;1933;1964;1999;PA;Elastic Defence Doctrine;High;M179;X
+152;Chief of Army;Werner von Blomberg;1937;1964;1999;NS;Guns and Butter Doctrine;High;L607;X
+153;Chief of Army;Fedor von Bock;1939;1964;1999;FA;Decisive Battle Doctrine;High;M182;X
+154;Chief of Army;Erich Hoepner;1942;1945;1999;FA;Armoured Spearhead Doctrine;High;M18;X
+155;Chief of Army;Erwin von Witzleben;1943;1945;1999;PA;Static Defence Doctrine;High;M17;X
+156;Chief of Army;Walter von Lüttwitz;1933;1964;1999;PA;Decisive Battle Doctrine;Low;M185;X
+157;Chief of Army;Julius Ringel;1942;1964;1999;PA;Guns and Butter Doctrine;Medium;L227;X
+158;Chief of Army;Theodor Blank;1946;1964;1999;SC;Armoured Spearhead Doctrine;High;M188;X
+159;Chief of Army;Hans Speidel;1947;1964;1999;SC;Decisive Battle Doctrine;High;M170;X
+160;Chief of Army;Hans Kahle;1933;1964;1999;ST;Decisive Battle Doctrine;Very High;3579;X
+161;Chief of Navy;Karl Dönitz;1939;1964;1999;NS;Indirect Approach Doctrine;Very High;M32;X
+162;Chief of Navy;Hans-Georg von Friedeburg;1944;1964;1999;NS;Open Seas Doctrine;Medium;M93;X
+163;Chief of Navy;Kurt Freiwald;1945;1964;1999;NS;Base Control Doctrine;Medium;L391;X
+164;Chief of Navy;Alfred Saalwächter;1933;1964;1999;FA;Open Seas Doctrine;High;M195;X
+166;Chief of Navy;Conrad Albrecht;1939;1964;1999;PA;Open Seas Doctrine;Medium;L373;X
+167;Chief of Navy;Gustav Kieseritzky;1940;1964;1999;PA;Base Control Doctrine;Medium;M199;X
+168;Chief of Navy;Erich Bey;1946;1964;1999;SC;Open Seas Doctrine;High;M200;X
+169;Chief of Navy;Fritz Scheelen;1933;1964;1999;ST;Base Control Doctrine;Very High;M29;X
+170;Chief of Air Force;Hugo Sperrle;1939;1964;1999;NS;Carpet Bombing Doctrine;High;L470;X
+171;Chief of Air Force;Robert Ritter von Greim;1944;1964;1999;NS;Air Superiority Doctrine;Medium;L475;X
+172;Chief of Air Force;Karl Koller;1933;1964;1999;FA;Army Aviation Doctrine;Medium;M205;X
+173;Chief of Air Force;Eberhard Milch;1942;1964;1999;FA;Air Superiority Doctrine;Medium;L456;X
+174;Chief of Air Force;Albert Kesselring;1944;1964;1999;FA;Vertical Envelopment Doctrine;High;M207;X
+175;Chief of Air Force;Carl Friedrich von Siemens;1933;1964;1999;PA;Air Superiority Doctrine;High;M208;X
+176;Chief of Air Force;Ernst Udet;1940;1964;1999;PA;Army Aviation Doctrine;High;M20;X
+178;Foreign Minister;Helmut Herzfeld;1933;1964;1999;ST;Ideological Crusader;High;M23;X
+179;Head of Government;Franz Xaver Ritter von Epp;1933;1964;1999;NS;Old General;Very High;M214;X
+180;Head of Government;Hans Heinrich Lammers;1937;1964;1999;NS;Political Protege;Very High;M216;X
+181;Head of Government;Friedrich Wilhelm Kritzinger;1945;1964;1999;NS;Naive Optimist;Very High;M217;X
+182;Minister of Armament;Franz Xaver Ritter von Epp;1933;1964;1999;NS;Infantry Proponent;Very High;M214;X
+183;Minister of Armament;Franz Seldte;1933;1964;1999;NS;Military Entrepreneur;Very High;M220;X
+184;Minister of Armament;Konstantin Hierl;1933;1964;1999;NS;Resource Industrialist;Very High;M221;X
+185;Minister of Armament;Franz Xaver Dorsch;1944;1964;1999;FA;Construction Magnate;Very High;M222;X
+186;Minister of Security;Franz Gürtner;1933;1964;1999;FA;Silent Lawyer;Medium;M223;X
+187;Minister of Security;Kurt Daluege;1933;1964;1999;NS;Secret Police Chief;Very High;M82;X
+188;Minister of Security;Walter Buch;1937;1964;1999;NS;Man of the People;High;M226;X
+189;Minister of Security;Hans Frank;1941;1964;1999;FA;Compassionate Gentleman;Medium;M227;X
+190;Minister of Security;Roland Freisler;1942;1964;1999;NS;Crime Fighter;Very High;M228;X
+191;Chief of Staff;Erich von Manstein;1942;1964;1999;PA;School of Manoeuvre;Medium;L324;X
+192;Chief of Staff;Ernst Busch;1945;1964;1999;NS;School of Fire Support;High;L33;X
+193;Chief of Army;Günther von Kluge;1942;1964;1999;PA;Decisive Battle Doctrine;Medium;L311;X
+194;Chief of Army;Paul Hausser;1944;1964;1999;NS;Armoured Spearhead Doctrine;Very High;L503;X
+195;Chief of Navy;Wilhelm Marschall;1941;1964;1999;NS;Open Seas Doctrine;High;L407;X
+196;Chief of Navy;Walter Warzecha;1942;1964;1999;PA;Indirect Approach Doctrine;Medium;L891;X
+197;Chief of Air Force;Otto Dessloch;1939;1964;1999;NS;Army Aviation Doctrine;High;L434;X
+198;Chief of Air Force;Ulrich Grauert;1933;1964;1999;FA;Air Superiority Doctrine;High;L439;X
+199;Chief of Air Force;Hans-Jürgen Stumpff;1944;1964;1999;NS;Army Aviation Doctrine;Very High;L471;X
+200;Chief of Staff;Walther von Reichenau;1941;1942;1943;NS;School of Fire Support;Very High;L334;X
+201;Head of Military Intelligence;Ernst Wollweber;1933;1964;1999;ST;Industrial Specialist;Very High;M27;X
+202;Minister of Armament;Karl Dönitz;1944;1964;1999;NS;Submarine Proponent;Very High;M32;X
+203;Minister of Armament;Lutz von Schwerin-Krosigk;1945;1964;1999;NS;Resource Industrialist;High;M241;X
+204;Minister of Security;Paul Giesler;1945;1964;1999;NS;Efficient Sociopath;Very High;M242;X
+205;Minister of Security;Werner Naumann;1945;1964;1999;NS;Compassionate Gentleman;Very High;M243;X
+206;Minister of Security;Reinhard Heydrich;1931;1943;1999;NS;Secret Police Chief;Very High;M244;X
+207;Minister of Armament;Alfred Hugenberg;1933;1964;1999;PA;Resource Industrialist;High;M117;X
+208;Minister of Security;Helmuth von Moltke;1939;1964;1999;SC;Compassionate Gentleman;High;M246;X
+209;Head of Military Intelligence;Hans Gisevius;1939;1946;1999;SC;Dismal Enigma;Medium;M247;X
+210;Minister of Security;Hans von Dohnanyi;1933;1946;1999;SL;Silent Lawyer;Medium;M248;X
+211;Head of Military Intelligence;Hans von Dohnanyi;1933;1946;1999;SL;Political Specialist;Medium;M248;X
+212;Minister of Security;Rudolf Diels;1933;1964;1999;PA;Crime Fighter;Medium;M250;X
+213;Minister of Armament;Gustav Krupp;1933;1964;1999;FA;Tank Proponent;High;M251;X
+214;Minister of Armament;Fritz Sauckel;1942;1964;1999;NS;Infantry Proponent;High;M252;X
+215;Chief of Air Force;Hans Ulrich Rudel;1949;1964;1999;FA;Air Superiority Doctrine;Medium;L464;X
+216;Minister of Security;Franz Alfred Six;1943;1964;1999;FA;Prince of Terror;High;5906;X
+218;Head of State;Friedrich Ebert;1914;1930;1999;SD;Die-hard Reformer;High;3435;X
+219;Head of Government;Philipp Scheidemann;1914;1930;1999;SD;Flamboyant Tough Guy;High;3444;X
+220;Chief of Army;Hans von Seeckt;1914;1930;1999;SC;Decisive Battle Doctrine;Medium;3395;X
+221;Chief of Navy;Reinhard Scheer;1914;1930;1999;PA;Decisive Naval Battle Doctrine;High;1275;X
+222;Chief of Air Force;Ernst von Hoeppner;1914;1930;1999;PA;Air Superiority Doctrine;Medium;1325;X
+223;Foreign Minister;Philipp Scheidemann;1914;1930;1999;SD;Great Compromiser;High;3444;X
+224;Minister of Armament;Bernhard Dernburg;1914;1930;1999;ML;Administrative Genius;High;3453;X
+225;Minister of Security;Eduard David;1914;1930;1999;SL;Compassionate Gentleman;High;5911;X
+226;Head of Military Intelligence;Walter Nicolai;1914;1930;1999;PA;Dismal Enigma;Medium;3448;X
+227;Minister of Armament;Karl Krauch;1939;1964;1999;PA;Industrial Chemist;High;5912;X
+228;Chief of Staff;Oskar Munzel;1948;1964;1999;PA;School of Fire Support;Very High;6015;X
+229;Head of Military Intelligence;Karl Friedrich Otto Wolff;1946;1964;1999;NS;Dismal Enigma;High;6016;X
+230;Chief of Staff;Karl Friedrich Otto Wolff;1946;1964;1999;NS;School of Defence;High;6016;X
+231;Minister of Security;Otto Ernst Remer;1947;1964;1999;NS;Prince of Terror;High;6017;X
+232;Chief of Navy;Erich Topp;1947;1964;1999;PA;Indirect Approach Doctrine;High;603;X
+233;Chief of Air Force;Adolf Galland;1942;1964;1999;PA;Air Superiority Doctrine;High;L437;X
+234;Minister of Armament;Adolf Galland;1943;1964;1999;PA;Air Superiority Proponent;High;L437;X
+235;Chief of Staff;Günther Blumentritt;1943;1964;1999;PA;School of Psychology;High;L21;X
+236;Chief of Army;Günther Blumentritt;1945;1964;1999;PA;Elastic Defence Doctrine;High;L21;X
+237;Chief of Staff;Ernst Busse;1940;1964;1999;PA;School of Mass Combat;High;L34;X
+241;Chief of Staff;Franz Beyer;1945;1964;1999;SC;School of Psychology;Very High;L982;X
+242;Chief of Staff;Walther Buhle;1942;1964;1999;PA;School of Fire Support;High;L594;X
+243;Chief of Army;Walther Buhle;1945;1964;1999;PA;Elastic Defence Doctrine;High;L594;X
+244;Minister of Security;Dietrich von Choltitz;1943;1964;1999;FA;Compassionate Gentleman;High;L286;X
+245;Chief of Staff;Dietrich von Choltitz;1942;1964;1999;FA;School of Defence;High;L286;X
+246;Head of Military Intelligence;Wilhelm Burgdorf;1945;1964;1999;NS;Political Specialist;High;L32;X
+247;Chief of Staff;Wilhelm Burgdorf;1944;1964;1999;NS;School of Mass Combat;High;L32;X
+248;Chief of Army;Wilhelm Burgdorf;1946;1964;1999;NS;Decisive Battle Doctrine;High;L32;X
+249;Chief of Army;Franz Beyer;1946;1964;1999;SC;Armoured Spearhead Doctrine;Very High;L982;X
+250;Chief of Staff;Karl Allmendinger;1941;1964;1999;PA;School of Fire Support;High;L2;X
+251;Head of Military Intelligence;Walther Darré;1933;1964;1999;NS;Industrial Specialist;High;7382;X
+252;Head of Military Intelligence;Karl Ernst Haushofer;1930;1964;1999;FA;Industrial Specialist;High;7383;X
+253;Minister of Security;Walther Darré;1938;1964;1999;NS;Efficient Sociopath;High;7382;X
+254;Chief of Staff;Friedrich-Wilhelm Hauck;1946;1964;1999;PA;School of Fire Support;Medium;L126;X
+255;Chief of Air Force;Eugen Meindl;1942;1964;1999;PA;Vertical Envelopment Doctrine;High;L198;X
+256;Head of Military Intelligence;Albert Praun;1940;1964;1999;FA;Logistics Specialist;High;L220;X
+257;Chief of Staff;Maximilian von Weichs;1939;1964;1999;FA;School of Fire Support;High;L351;X
+258;Chief of Army;Maximilian von Weichs;1942;1964;1999;FA;Decisive Battle Doctrine;High;L351;X
+259;Chief of Air Force;Bruno Sassen;1950;1964;1999;FA;Vertical Envelopment Doctrine;High;7445;X
+260;Chief of Air Force;Bruno Bräuer;1941;1964;1999;PA;Vertical Envelopment Doctrine;High;L29;X
+261;Chief of Staff;Walter Warlimont;1945;1964;1999;FA;School of Fire Support;High;L357;X
+262;Chief of Army;Walter Warlimont;1946;1964;1999;FA;Elastic Defence Doctrine;High;L357;X
+263;Minister of Armament;Walter Warlimont;1948;1964;1999;FA;Military Entrepreneur;High;L357;X
+264;Foreign Minister;Hermann Esser;1940;1964;1999;NS;Ideological Crusader;High;7769;X
+265;Minister of Armament;Hermann Esser;1942;1964;1999;NS;Laissez-Faire Capitalist;High;7769;X
+266;Head of Government;Hermann Esser;1930;1964;1999;NS;Corporate Suit;High;7769;X
+267;Foreign Minister;Dietrich von Choltitz;1948;1964;1999;FA;General Staffer;High;L286;X
+268;Head of State;Paul von Hindenburg;1925;1964;1999;PA;Resigned Generalissimo;High;3400;X
+269;Head of Government;Kurt von Schleicher;1933;1934;1999;PA;Political Protege;Low;5783;X
+270;Chief of Staff;Ernst Röhm;1933;1934;1999;NS;School of Mass Combat;Low;5781;X
+271;Foreign Minister;Heinrich Brüning;1933;1934;1999;SC;Great Compromiser;Low;5782;X
+272;Minister of Armament;Gregor Strasser;1933;1934;1999;FA;Infantry Proponent;Low;5784;X
+273;Chief of Army;Erwin Rommel;1943;1945;1999;PA;Doctrine of Autonomy;High;M165;X
+274;Head of Military Intelligence;Reinhard Heydrich;1931;1943;1999;NS;The Hangman;Very High;M244;X
+275;Head of Government;Joseph Goebbels;1941;1946;1999;NS;Backroom Backstabber;Very High;3587;X
+276;Head of State;Heinrich Himmler;1941;1946;1999;NS;Stern Imperialist;Very High;M108;X
+277;Head of Government;Heinrich Himmler;1941;1946;1999;NS;Old General;Very High;M108;X
+278;Head of State;Albert Speer;1945;1964;1999;NS;Die-hard Reformer;High;2645;X
+279;Head of Military Intelligence;Konrad Patzig;1932;1964;1964;FA;Naval Intelligence Specialist;High;2462;X
+280;Chief of Staff;Gerd Von Rundstedt;1938;1954;1954;FA;School of Manoeuvre;High;L335;X
+281;Chief of Air Force;Walter Wever;1933;1937;1999;FA;Carpet Bombing Doctrine;High;L483;X

@@ -1,0 +1,1951 @@
+###
+###  Mexican events (MEX - 038)
+###
+### By Rhysaxiel
+###
+### 2038500	 MEX  The Zimmermann telegram
+### 2038501	 MEX  US DoW Germany
+### 2038502	 MEX  US occupation of Veracruz
+### 2038503	 MEX  US asks for full transit
+### 2038504	 U57  The Zimmermann telegram
+### 2038505	 U57  US DoW Germany
+### 2038506	 U57  US asks for full transit
+###
+#####################
+### 2038601  U57 U58 U59  Huerta has been defeated
+### 2038602  U57 U58 U59  Huerta has been defeated
+### 2038603  MEX  Huerta is victorious!
+### 2038604  U57  Convention of Aguascalientes
+### 2038605  U58  Convention of Aguascalientes
+### 2038606  U59  Convention of Aguascalientes
+### 2038607  U57  Villistas submit to us
+### 2038608  U57  Zapatistas submit to us
+### 2038609  U57  Constitucionalistas win the Mexican Revolution
+### 2038610  MEX  Carranza leads Mexico!
+### 2038611  U58  Villistas win the Mexican Revolution
+### 2038612  MEX  Villa leads Mexico!
+### 2038613  U59  Zapatistas win the Mexican Revolution
+### 2038614  MEX  Zapata leads Mexico!
+### 2038615  U58  Villistas and Zapatistas win the Mexican Revolution
+### 2038616  U59  Zapatistas and Villistas win the Mexican Revolution
+### 2038617  U57  General Pablo González Garza suggests a plan for assassination of Zapata
+### 2038618  U59  The tragedy! Zapata has been assassinated!
+### 2038619  U57  Zapatistas submit to us
+### 2038620  MEX  Plan of Agua Prieta
+### 2038621  U58  The end of the Mexican Revolution?
+### 2038622  U59  The end of the Mexican Revolution?
+###
+
+
+event = {
+	id = 2038500  # The Zimmermann telegram
+	country = MEX
+	
+	# Triggered by U08
+	
+	name = "EVT1914_2038500_NAME"
+	desc = "EVT1914_2038500_DESC" 
+	style = 2
+	picture = "zimmermann_telegram"   
+	
+	action = {
+		name = "EVT1914_2038500_ACTIONA" # Acknowledged
+		command = { }
+	}
+}
+event = {
+	id = 2038501	# US DoW Germany
+	country = MEX
+
+	decision = { event = 2038500 } # The Zimmermann telegram
+	decision_trigger = { war = { country = USA country = U08 } }
+	trigger = { 
+		event = 2038500 # MEX The Zimmermann telegram
+		war = { country = USA country = U08 } 
+		OR = { # AI won't attack if the telegram is discovered, it will if US launched an invasion earlier
+			event = 2049525  # Full scale invasion of Mexico
+			NOT = { event = 2049503 } # USA The Zimmerman Telegram
+		} 
+		random = 4 
+	} 
+	
+	name = "EVT1914_2038501_NAME"
+	desc = "EVT1914_2038501_DESC" 
+	style = 2
+	picture = "zimmermann_telegram"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2038501_ACTIONA" # War !
+		command = { type = alliance which = U08 when = 1 }
+	}
+}
+event = {
+	id = 2038502	# US occupation of Veracruz
+	country = MEX
+
+	decision = { control = { province = 1968 data = USA } } # USA still occupy Veracruz
+	decision_trigger = { atwar = no }
+	trigger = { 
+		control = { province = 1968 data = USA } # USA still occupy Veracruz
+		atwar = no 
+		# AI attacks with low probability after november or if RevMexico is out
+		OR = { 
+			year = 1915 
+			AND = { year = 1914 month = 10 } 
+			NOT = { exists = U57 exists = U58 exists = U59 } 
+		} 
+		random = 5
+	} 
+	
+	name = "EVT1914_2038502_NAME"
+	desc = "EVT1914_2038502_DESC" 
+	style = 2
+	picture = "veracruz_occupation"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2038502_ACTIONA" # War !
+		command = { type = war which = USA }
+	}
+}
+event = {
+	id = 2038503	# US asks for full transit
+	country = MEX
+
+	#triggered
+	
+	name = "EVT1914_2038503_NAME"
+	desc = "EVT1914_2038503_DESC" 
+	style = 2
+	picture = "veracruz_occupation"
+	
+	action = {
+		ai_chance = 90
+		name = "EVT1914_2038503_ACTIONA" # Decline
+		command = { type = trigger which = 2049524 }
+	}
+	action = {
+		ai_chance = 10
+		name = "EVT1914_2038503_ACTIONB" # Accept
+		command = { type = dissent value = 8 }
+		command = { type = access which = USA }
+	}
+}
+
+event = {
+	id = 2038504  # The Zimmermann telegram
+	country = U57
+	
+	# Triggered by U08
+	
+	name = "EVT1914_2038500_NAME"
+	desc = "EVT1914_2038500_DESC" 
+	style = 2
+	picture = "zimmermann_telegram"   
+	
+	action = {
+		name = "EVT1914_2038500_ACTIONA" # Acknowledged
+		command = { }
+	}
+}
+event = {
+	id = 2038505	# US DoW Germany
+	country = U57
+
+	decision = { 
+		event = 2038504 # U57 The Zimmermann telegram
+	} 
+	decision_trigger = { 
+		war = { country = USA country = U08 } 
+	}
+	trigger = { 
+		event = 2038504 # U57 The Zimmermann telegram
+		war = { country = USA country = U08 } 
+		OR = { # AI won't attack if the telegram is discovered, it will if US launched an invasion earlier
+			event = 2049537  # Full scale invasion of Mexico U57
+			NOT = { event = 2049503 } # USA The Zimmerman Telegram
+		} 
+		random = 4 
+	} 
+	
+	name = "EVT1914_2038501_NAME"
+	desc = "EVT1914_2038501_DESC" 
+	style = 2
+	picture = "zimmermann_telegram"
+	
+	date = { day = 4 month = august year = 1914 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2038501_ACTIONA" # War !
+		command = { type = alliance which = U08 when = 1 }
+	}
+}
+
+event = {
+	id = 2038506	# US asks for full transit
+	country = U57
+
+	#triggered
+	
+	name = "EVT1914_2038503_NAME"
+	desc = "EVT1914_2038503_DESC" 
+	style = 2
+	picture = "veracruz_occupation"
+	
+	action = {
+		ai_chance = 90
+		name = "EVT1914_2038503_ACTIONA" # Decline
+		command = { type = trigger which = 2049536 }
+	}
+	action = {
+		ai_chance = 10
+		name = "EVT1914_2038503_ACTIONB" # Accept
+		command = { type = dissent value = 8 }
+		command = { type = access which = USA }
+	}
+}
+
+#########################################################################
+
+event = {
+	id = 2038601
+	tag = { U59 U58 U57 }
+	persistent = yes
+
+	trigger = {
+		atwar = no
+		exists = U57 #Constitucionalistas
+		exists = U58 #Villistas
+		exists = U59 #Zapatistas
+		NOT = { 
+			exists = MEX #Federal Mexico (Huerta)
+			event = 2038602 #Huerta has been defeated!
+			event = 2038603 #Huerta is victorious!
+			event = 2038604 #Convention of Aguascalientes
+			local_flag = MEX_Conv
+		}
+	}
+   
+	name = "EVT1914_2038601_NAME"
+	desc = "EVT1914_2038601_DESC"
+	picture = "provisionalgovernment"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = leave_alliance when = 1 }
+		command = { type = dissent value = -5 }
+		command = { trigger = { NOT = { flag = MEX_Convention } } type = event which = 2038604 where = U57 when = 30 } #Convention of Aguascalientes
+		command = { trigger = { NOT = { flag = MEX_Convention } } type = setflag which = MEX_Convention }
+		command = { type = sleepevent which = 2038602 } #Huerta has been defeated!
+		command = { type = sleepevent which = 2038603 } #Huerta is victorious!
+		command = { type = local_setflag which = MEX_Conv }
+	}
+}
+
+event = {
+	id = 2038602
+	tag = { U59 U58 U57 }
+	persistent = yes
+
+	trigger = {
+		atwar = no
+		OR = { #at least one of them exists
+			exists = U57 #Constitucionalistas
+			exists = U58 #Villistas
+			exists = U59 #Zapatistas
+		} 
+		OR = { #at least one of them doesn't exists
+			NOT = { exists = U57 } #Constitucionalistas
+			NOT = { exists = U58 } #Villistas
+			NOT = { exists = U59 } #Zapatistas
+		}
+		NOT = { 
+			exists = MEX #Federal Mexico (Huerta)
+			event = 2038601 #Huerta has been defeated!
+			event = 2038603 #Huerta is victorious!
+			event = 2038604 #Convention of Aguascalientes
+			local_flag = MEX_End
+		}
+	}
+   
+	name = "EVT1914_2038601_NAME"
+	desc = "EVT1914_2038601_DESC"
+	picture = "provisionalgovernment"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = leave_alliance when = 1 }
+		command = { type = dissent value = -5 }
+		command = { trigger = { exists = U57 exists = U58 NOT = { exists = U59 war = { country = U57 country = U58 } } } 
+					type = event which = 2038621 where = U58 when = 2 } #U58 The end of the Mexican Revolution?
+		command = { trigger = { exists = U57 exists = U59 NOT = { exists = U58 war = { country = U57 country = U59 } } }
+					type = event which = 2038622 where = U59 when = 2 } #U59 The end of the Mexican Revolution?
+		command = { type = local_setflag which = MEX_End }
+		command = { type = sleepevent which = 2038601 } #Huerta has been defeated!
+		command = { type = sleepevent which = 2038603 } #Huerta is victorious!	
+		### TO-DO later (if only U59 and one between U57 and U58 exists, event for U57/U58 where they can submit to Carranza or declare war on him)
+	}
+}
+
+event = {
+	id = 2038603
+	country = MEX
+
+	trigger = {
+		atwar = no
+		headofstate = 170106 #Victoriano Huerta
+		NOT = { 
+			exists = U57 #Constitucionalistas
+			exists = U58 #Villistas
+			exists = U59 #Zapatistas
+			event = 2038601 #Huerta has been defeated!
+			event = 2038602 #Huerta has been defeated!
+			event = 2038604 #Convention of Aguascalientes			
+		}
+	}
+   
+	name = "EVT1914_2038603_NAME"
+	desc = "EVT1914_2038603_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -5 }
+		command = { type = revolt which = 1981 }   #Tijuana - last revolts in Baja California
+		command = { type = revolt which = 1966 }   #Merida - last revolts in Yucatan
+		command = { type = local_setflag which = MEX_Conv }
+		command = { type = sleepevent which = 2038601 } #Huerta has been defeated!
+		command = { type = sleepevent which = 2038602 } #Huerta has been defeated!	
+	}
+}
+
+event = {
+	id = 2038604
+	country = U57 #Constitucionalistas
+	
+	name = "EVT1914_2038604_NAME"
+	desc = "EVT1914_2038604_DESC"
+	picture = "convention_of_aguascalientes"
+	style = 2
+   
+	action = {
+		name = "EVT1914_2038604_ACTIONA"
+		command = { type = dissent value = 2 }
+		command = { type = event which = 2038605 where = U58 when = 1 } #Villistas answer first
+		command = { type = event which = 2038606 where = U59 when = 2 } #Zapatistas will answer after Villistas
+		command = { type = clrflag which = MEX_Convention }
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { type = sleepevent which = 2038601 }
+		command = { trigger = { ai = yes } type = ai which = "switch/U57_Convention.ai" }
+	}
+}
+
+event = {
+	id = 2038605
+	country = U58 #Villistas
+	
+	name = "EVT1914_2038604_NAME"
+	desc = "EVT1914_2038604_DESC"
+	picture = "convention_of_aguascalientes"
+	style = 2
+   
+	action = {
+		trigger = {
+			exists = U57
+			exists = U59
+			NOT = { war = { country = U58 country = U59 } }
+			NOT = { alliance = { country = U58 country = U59 } }
+			NOT = { alliance = { country = U58 country = U57 } }
+			NOT = { alliance = { country = U59 country = U57 } }
+		}
+		ai_chance = 90
+		name = "EVT1914_2038605_ACTIONA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = war which = U57 }
+		command = { type = dissent value = -5 }
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { type = setflag which = U58_alliance_U59 }
+		command = { trigger = { ai = yes } type = ai which = "switch/U58_Convention.ai" }
+	}   
+	action = {
+		trigger = {
+			exists = U57
+			exists = U59
+			NOT = { war = { country = U58 country = U59 } }
+			NOT = { alliance = { country = U58 country = U59 } }
+			NOT = { alliance = { country = U58 country = U57 } }
+			NOT = { alliance = { country = U59 country = U57 } }
+		}
+		ai_chance = 5
+		name = "EVT1914_2038605_ACTIONB"
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = war which = U57 }
+		command = { type = war which = U59 }		
+		command = { type = dissent value = -2 }
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { trigger = { ai = yes } type = ai which = "switch/U58_Convention_B.ai" }
+	}
+	action = {
+		trigger = {
+			exists = U57
+			NOT = { exists = U59 }
+			NOT = { war = { country = U58 country = U57 } }
+			NOT = { alliance = { country = U58 country = U57 } }
+		}
+		ai_chance = 90
+		name = "EVT1914_2038605_ACTIONC"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = war which = U57 }
+		command = { type = dissent value = -5 }		
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { trigger = { ai = yes } type = ai which = "switch/U58_Convention.ai" }
+	}   
+	action = {
+		trigger = {
+			exists = U57
+			NOT = { war = { country = U57 country = U58 } }
+			ai = yes
+		}
+		ai_chance = 5
+		name = "EVT1914_2038605_ACTIOND"
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { type = trigger which = 2038607 } #U57 Villistas submit to us
+	}
+}
+
+event = {
+	id = 2038606
+	country = U59 #Zapatistas
+	
+	name = "EVT1914_2038604_NAME"
+	desc = "EVT1914_2038604_DESC"
+	picture = "convention_of_aguascalientes"
+	style = 2
+   
+	action = {
+		trigger = {
+			exists = U57
+			exists = U58
+			NOT = { war = { country = U57 country = U59 } }
+			war = { country = U57 country = U58 } #Villistas declared war only on Constitutionalistas
+			NOT = { alliance = { country = U58 country = U59 } }
+			NOT = { alliance = { country = U57 country = U59 } }
+			flag = U58_alliance_U59
+		}
+		ai_chance = 90
+		name = "EVT1914_2038606_ACTIONA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = alliance which = U58 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { type = clrflag which = U58_alliance_U59 }
+		command = { trigger = { ai = yes } type = ai which = "switch/U59_Convention.ai" }
+	}   
+	action = {
+		trigger = {
+			exists = U57
+			exists = U58
+			NOT = { alliance = { country = U58 country = U59 } }
+			NOT = { alliance = { country = U57 country = U59 } }
+		}
+		ai_chance = 5
+		name = "EVT1914_2038606_ACTIONB"
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = war which = U57 }
+		command = { type = war which = U58 }		
+		command = { type = dissent value = -2 }
+		command = { trigger = { flag = U58_alliance_U59 } type = clrflag which = U58_alliance_U59 }
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { trigger = { ai = yes } type = ai which = "switch/U59_Convention_B.ai" }
+	}   
+	action = {
+		trigger = {
+			exists = U57
+			NOT = { exists = U58 }
+			NOT = { war = { country = U59 country = U57 } }
+			NOT = { alliance = { country = U59 country = U57 } }
+		}
+		ai_chance = 90
+		name = "EVT1914_2038605_ACTIONC"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = war which = U57 }
+		command = { type = dissent value = -5 }		
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { trigger = { ai = yes } type = ai which = "switch/U59_Convention.ai" }
+	}  	
+	action = {
+		trigger = {
+			exists = U57
+			NOT = { war = { country = U57 country = U59 } }
+			ai = yes
+		}
+		ai_chance = 5
+		name = "EVT1914_2038605_ACTIOND"
+		command = { type = local_clrflag which = MEX_Conv }
+		command = { type = trigger which = 2038608 } #U57 Villistas submit to us
+	}
+}
+
+event = {
+	id = 2038607
+	country = U57 #Constitucionalistas
+	
+	name = "EVT1914_2038607_NAME"
+	desc = "EVT1914_2038607_DESC"
+	picture = "Peace_conference"
+	style = 2
+   
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = inherit which = U58 when = 3 }
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 2038608
+	country = U57 #Constitucionalistas
+	
+	name = "EVT1914_2038608_NAME"
+	desc = "EVT1914_2038608_DESC"
+	picture = "Peace_conference"
+	style = 2
+   
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = inherit which = U59 when = 3 }
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 2038609
+	country = U57
+
+	trigger = {
+		atwar = no
+		NOT = { 
+			exists = MEX #Federal Mexico
+			exists = U58 #Villistas
+			exists = U59 #Zapatistas	
+		}
+		control = { province = 1974 data = U57 } #Mexico City
+	}
+   
+	name = "EVT1914_2038609_NAME"
+	desc = "EVT1914_2038609_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -5 }
+		command = { type = country which = MEX } #changes TAG to MEX
+		command = { type = trigger which = 2038610 } #MEX Carranza leads Mexico!
+	}
+}
+
+event = {
+	id = 2038610
+	country = MEX
+
+	name = "EVT1914_2038610_NAME"
+	desc = "EVT1914_2038610_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		#Constitucionalistas leaders and tech teams
+		command = { type = wakeminister which = 170200 } # Venustiano Carranza
+		command = { type = wakeminister which = 170201 } # Adolfo de la Huerta
+		command = { type = wakeminister which = 170202 } # Álvaro Obregón
+		command = { type = wakeminister which = 170203 } # Plutarco Elías Calles
+		command = { type = wakeminister which = 170204 } # Venustiano Carranza
+		command = { type = wakeminister which = 170205 } # Adolfo de la Huerta
+		command = { type = wakeminister which = 170206 } # Álvaro Obregón
+		command = { type = wakeminister which = 170207 } # Plutarco Elías Calles
+		command = { type = wakeminister which = 170208 } # Francisco Escudero
+		command = { type = wakeminister which = 170209 } # Isidro Fabela Alfaro
+		command = { type = wakeminister which = 170210 } # Jesús Acuña
+		command = { type = wakeminister which = 170211 } # Cándido Aguilar
+		command = { type = wakeminister which = 170212 } # Alfonso Siller
+		command = { type = wakeminister which = 170213 } # Ernesto Garza Pérez
+		command = { type = wakeminister which = 170214 } # Salvador Diego Fernández
+		command = { type = wakeminister which = 170215 } # Hilario Medina
+		command = { type = wakeminister which = 170216 } # Juan Sánchez Azcona
+		command = { type = wakeminister which = 170217 } # Miguel Covarrubias Acosta
+		command = { type = wakeminister which = 170218 } # Cutberto Hidalgo
+		command = { type = wakeminister which = 170219 } # Alberto José Pani
+		command = { type = wakeminister which = 170220 } # Aarón Sáenz
+		command = { type = wakeminister which = 170221 } # Francisco Escudero
+		command = { type = wakeminister which = 170222 } # Pastor Rouaix
+		command = { type = wakeminister which = 170223 } # Alberto José Pani
+		command = { type = wakeminister which = 170224 } # Plutarco Elías Calles
+		command = { type = wakeminister which = 170225 } # Jacinto Blas Treviño
+		command = { type = wakeminister which = 170226 } # Rafael Zubarán Capmany
+		command = { type = wakeminister which = 170227 } # Miguel Alessio Robles
+		command = { type = wakeminister which = 170228 } # Manuel Pérez Treviño
+		command = { type = wakeminister which = 170229 } # Luis Napoleón Morones
+		command = { type = wakeminister which = 170230 } # Rafael Zubarán Capmany
+		command = { type = wakeminister which = 170231 } # Adolfo de la Huerta
+		command = { type = wakeminister which = 170232 } # Manuel Aguirre Berlanga
+		command = { type = wakeminister which = 170233 } # Gilberto Valenzuela
+		command = { type = wakeminister which = 170234 } #  José Inocente Lugo
+		command = { type = wakeminister which = 170235 } # Plutarco Elías Calles
+		command = { type = wakeminister which = 170236 } # Enrique Colunga
+		command = { type = wakeminister which = 170237 } # Romeo Ortega
+		command = { type = wakeminister which = 170239 } # Eduardo Hay
+		command = { type = wakeminister which = 170240 } # Jacinto Blas Treviño
+		command = { type = wakeminister which = 170241 } # Ignacio L. Pesqueira
+		command = { type = wakeminister which = 170242 } # Álvaro Obregón
+		command = { type = wakeminister which = 170243 } # Jesús Agustín Castro
+		command = { type = wakeminister which = 170244 } # Juan José Ríos
+		command = { type = wakeminister which = 170245 } # Francisco L. Urquizo
+		command = { type = wakeminister which = 170246 } # Plutarco Elías Calles
+		command = { type = wakeminister which = 170247 } # Benjamín Hill
+		command = { type = wakeminister which = 170248 } # Enrique Estrada Reynoso
+		command = { type = wakeminister which = 170249 } # Francisco Roque Serrano
+		command = { type = wakeminister which = 170250 } # Joaquín Amaro Domínguez
+		command = { type = wakeminister which = 170252 } # Eduardo Hay
+		command = { type = wakeminister which = 170253 } # Jacinto Blas Treviño
+		command = { type = wakeminister which = 170254 } # Ignacio L. Pesqueira
+		command = { type = wakeminister which = 170255 } # Álvaro Obregón
+		command = { type = wakeminister which = 170256 } # Jesús Agustín Castro
+		command = { type = wakeminister which = 170257 } # Juan José Ríos
+		command = { type = wakeminister which = 170258 } # Francisco L. Urquizo
+		command = { type = wakeminister which = 170259 } # Plutarco Elías Calles
+		command = { type = wakeminister which = 170260 } # Benjamín Hill
+		command = { type = wakeminister which = 170261 } # Enrique Estrada Reynoso
+		command = { type = wakeminister which = 170262 } # Francisco Roque Serrano
+		command = { type = wakeminister which = 170263 } # Joaquín Amaro Domínguez
+		command = { type = wakeminister which = 170265 } # Eduardo Hay
+		command = { type = wakeminister which = 170266 } # Jacinto Blas Treviño
+		command = { type = wakeminister which = 170267 } # Ignacio L. Pesqueira
+		command = { type = wakeminister which = 170268 } # Álvaro Obregón
+		command = { type = wakeminister which = 170269 } # Jesús Agustín Castro
+		command = { type = wakeminister which = 170270 } # Juan José Ríos
+		command = { type = wakeminister which = 170271 } # Francisco L. Urquizo
+		command = { type = wakeminister which = 170272 } # Plutarco Elías Calles
+		command = { type = wakeminister which = 170273 } # Benjamín Hill
+		command = { type = wakeminister which = 170274 } # Enrique Estrada Reynoso
+		command = { type = wakeminister which = 170275 } # Francisco Roque Serrano
+		command = { type = wakeminister which = 170276 } # Joaquín Amaro Domínguez
+		command = { type = wakeminister which = 170277 } # Alberto Salinas Carranza	
+		command = { type = set_domestic which = democratic value = 9 } #market liberal
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = set_domestic which = free_market value = 9 }
+		command = { type = set_domestic which = defense_lobby value = 4 }
+		command = { type = set_domestic which = interventionism value = 3 }		
+		
+		command = { type = headofstate which = 170200 } #Venustiano Carranza
+		command = { type = headofgovernment which = 170204 } #Venustiano Carranza
+		command = { type = foreignminister which = 170211 } #Candido Aguilar
+		command = { type = armamentminister which = 170164 } #Francisco Escudero
+		command = { type = ministerofsecurity which = 170232 } #Manuel Aguirre Berlanga
+		command = { type = ministerofintelligence which = 170278 } #Eduardo Hay
+		command = { type = chiefofstaff which = 170241 } #Ignacio L. Pesqueira
+		command = { type = chiefofarmy which = 170254 } #Ignacio L. Pesqueira
+		command = { type = chiefofnavy which = 170267 } #Ignacio L. Pesqueira
+		command = { type = chiefofair which = 170277 } #Alberto Salinas Carranza
+		
+
+		
+		command = { type = waketeam which = 170025 } #Alberto Salinas Carranza
+		command = { type = waketeam which = 170017 } #Alvaro Obregon
+		command = { type = wakeleader which = 170330 } #Acosta
+		command = { type = wakeleader which = 170331 } #Aguilar
+		command = { type = wakeleader which = 170332 } #Aguirre
+		command = { type = wakeleader which = 170333 } #Aguirre Escobar
+		command = { type = wakeleader which = 170334 } #Aguirre Santiago
+		command = { type = wakeleader which = 170335 } #Albañez
+		command = { type = wakeleader which = 170336 } #Alemán González
+		command = { type = wakeleader which = 170337 } #Alessio Robles
+		command = { type = wakeleader which = 170338 } #Alvarado
+		command = { type = wakeleader which = 170339 } #Álvarez
+		command = { type = wakeleader which = 170340 } #Álvarez Rábago;
+		command = { type = wakeleader which = 170341 } #Amaro Domínguez
+		command = { type = wakeleader which = 170342 } #Arévalo Vera
+		command = { type = wakeleader which = 170343 } #Arrieta León
+		command = { type = wakeleader which = 170344 } #Arrieta León, E.
+		command = { type = wakeleader which = 170345 } #Azuara 
+		command = { type = wakeleader which = 170346 } #Baca Calderón
+		command = { type = wakeleader which = 170347 } #Beltrán
+		command = { type = wakeleader which = 170348 } #Blanco Fuentes
+		command = { type = wakeleader which = 170349 } #Caballero
+		command = { type = wakeleader which = 170350 } #Cabral
+		command = { type = wakeleader which = 170351 } #Calderon
+		command = { type = wakeleader which = 170352 } #Calles
+		command = { type = wakeleader which = 170353 } #Camacho
+		command = { type = wakeleader which = 170354 } #Cárdenas Zepeda
+		command = { type = wakeleader which = 170355 } #Carranza, J.
+		command = { type = wakeleader which = 170356 } #Carranza, V.
+		command = { type = wakeleader which = 170357 } #Carrasco
+		command = { type = wakeleader which = 170358 } #Castrejón
+		command = { type = wakeleader which = 170359 } #Castro
+		command = { type = wakeleader which = 170360 } #Coss
+		command = { type = wakeleader which = 170361 } #Cossio Robelo
+		command = { type = wakeleader which = 170362 } #Cruz
+		command = { type = wakeleader which = 170363 } #Dávila Aguirre
+		command = { type = wakeleader which = 170364 } #Díaz de León
+		command = { type = wakeleader which = 170365 } #Diéguez
+		command = { type = wakeleader which = 170366 } #Domínguez Suárez
+		command = { type = wakeleader which = 170367 } #Durazo
+		command = { type = wakeleader which = 170368 } #Estrada
+		command = { type = wakeleader which = 170369 } #Flores
+		command = { type = wakeleader which = 170370 } #García Alvarado
+		command = { type = wakeleader which = 170371 } #García Robles
+		command = { type = wakeleader which = 170372 } #García, G.
+		command = { type = wakeleader which = 170373 } #García, M.
+		command = { type = wakeleader which = 170374 } #Garfias Espinosa
+		command = { type = wakeleader which = 170375 } #González
+		command = { type = wakeleader which = 170376 } #González Garza
+		command = { type = wakeleader which = 170377 } #González Peña
+		command = { type = wakeleader which = 170378 } #Greene Ramírez
+		command = { type = wakeleader which = 170379 } #Guajardo
+		command = { type = wakeleader which = 170380 } #Hay
+		command = { type = wakeleader which = 170381 } #Herrera
+		command = { type = wakeleader which = 170382 } #Herrera Cano
+		command = { type = wakeleader which = 170383 } #Herrero Hernández
+		command = { type = wakeleader which = 170384 } #Hill
+		command = { type = wakeleader which = 170385 } #Huerta, A. de la
+		command = { type = wakeleader which = 170386 } #Kloss
+		command = { type = wakeleader which = 170387 } #Lárraga Orta
+		command = { type = wakeleader which = 170388 } #Leyva
+		command = { type = wakeleader which = 170389 } #Maciel
+		command = { type = wakeleader which = 170390 } #MacKinney
+		command = { type = wakeleader which = 170391 } #Maycotte
+		command = { type = wakeleader which = 170392 } #Montes Alanis
+		command = { type = wakeleader which = 170393 } #Múgica Velázquez
+		command = { type = wakeleader which = 170394 } #Murguía López de Lara
+		command = { type = wakeleader which = 170395 } #Natera García
+		command = { type = wakeleader which = 170396 } #Obregón
+		command = { type = wakeleader which = 170397 } #Pesqueira
+		command = { type = wakeleader which = 170398 } #Piña
+		command = { type = wakeleader which = 170399 } #Ríos
+		command = { type = wakeleader which = 170400 } #Treviño
+		command = { type = wakeleader which = 170401 } #Vidal
+		command = { type = wakeleader which = 170402 } #Villarreal González
+		command = { type = wakeleader which = 170403 } #Malpica
+		command = { type = wakeleader which = 170404 } #Carranza, A.S.
+		command = { type = wakeleader which = 170405 } #Salinas Carmiña
+		command = { type = wakeleader which = 170406 } #Cardenas
+		command = { type = wakeleader which = 170407 } #Cota
+		
+		#Huertistas ministers leaders and tech teams
+		command = { type = sleepminister which = 170106 } #Victoriano Huerta
+		command = { type = sleepminister which = 170107 } #Félix Díaz
+		command = { type = sleepminister which = 170108 } #Victoriano Huerta
+		command = { type = sleepminister which = 170109 } #Félix Díaz
+		command = { type = sleepminister which = 170110 } #Francisco León de la Barra
+		command = { type = sleepminister which = 170111 } #Carlos Pereyra
+		command = { type = sleepminister which = 170112 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170113 } #Federico Gamboa
+		command = { type = sleepminister which = 170114 } #Antonio de la Peña y Reyes
+		command = { type = sleepminister which = 170115 } #Querido Moheno
+		command = { type = sleepminister which = 170116 } #José López Portillo y Rojas
+		command = { type = sleepminister which = 170117 } #Roberto Esteva Ruiz
+		command = { type = sleepminister which = 170118 } #Francisco S. Carbajal
+		command = { type = sleepminister which = 170119 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170120 } #Querido Moheno
+		command = { type = sleepminister which = 170121 } #Ignacio Alcocer
+		command = { type = sleepminister which = 170122 } #Salomé Botello
+		command = { type = sleepminister which = 170123 } #Alberto García Granados
+		command = { type = sleepminister which = 170124 } #Aureliano Urrutia
+		command = { type = sleepminister which = 170125 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170126 } #Ignacio Alcocer
+		command = { type = sleepminister which = 170127 } #Pascual Orozco
+		command = { type = sleepminister which = 170128 } #Manuel Mondragón
+		command = { type = sleepminister which = 170129 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170130 } #José Refugio Velasco
+		command = { type = sleepminister which = 170131 } #Pascual Orozco
+		command = { type = sleepminister which = 170132 } #Manuel Mondragón
+		command = { type = sleepminister which = 170133 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170134 } #José Refugio Velasco
+		command = { type = sleepminister which = 170135 } #Manuel Mondragón
+		command = { type = sleepminister which = 170136 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170137 } #José Refugio Velasco
+		command = { type = sleepminister which = 170138 } #Miguel Lebrija
+		command = { type = sleepminister which = 170139 } #Juan Guillermo Villasana
+		command = { type = sleepminister which = 170140 } #Pascual Orozco
+		command = { type = sleepminister which = 170141 } #Manuel Mondragón
+		command = { type = sleepminister which = 170142 } #Aureliano Blanquet
+		command = { type = sleepleader which = 170062 } #Aguilar
+		command = { type = sleepleader which = 170063 } #Altamirano
+		command = { type = sleepleader which = 170064 } #Argumedo
+		command = { type = sleepleader which = 170066 } #Beltrán Castañares
+		command = { type = sleepleader which = 170067 } #Blanquet
+		command = { type = sleepleader which = 170068 } #Bravo
+		command = { type = sleepleader which = 170069 } #Cartón
+		command = { type = sleepleader which = 170070 } #Cejudo
+		command = { type = sleepleader which = 170071 } #Carmen Curiel
+		command = { type = sleepleader which = 170072 } #Casso López
+		command = { type = sleepleader which = 170073 } #Chacón
+		command = { type = sleepleader which = 170074 } #Dávila
+		command = { type = sleepleader which = 170075 } #Delgadillo
+		command = { type = sleepleader which = 70076  } #De Moure;
+		command = { type = sleepleader which = 170077 } #Eguía Lis
+		command = { type = sleepleader which = 170078 } #Escandón y Barrón
+		command = { type = sleepleader which = 170079 } #Gallardo
+		command = { type = sleepleader which = 170080 } #Gil
+		command = { type = sleepleader which = 170081 } #Gorostieta y Velarde
+		command = { type = sleepleader which = 170082 } #Harrotian
+		command = { type = sleepleader which = 170083 } #Huerta
+		command = { type = sleepleader which = 170084 } #Jiménez Castro
+		command = { type = sleepleader which = 70085  } #Lucas
+		command = { type = sleepleader which = 170086 } #Lojero
+		command = { type = sleepleader which = 170087 } #Maas Águila
+		command = { type = sleepleader which = 170088 } #Maas Flores
+		command = { type = sleepleader which = 70089  } #Martínez;
+		command = { type = sleepleader which = 170090 } #Maldonado
+		command = { type = sleepleader which = 170091 } #Medina Barrón
+		command = { type = sleepleader which = 170092 } #Mercado
+		command = { type = sleepleader which = 170093 } #Mier
+		command = { type = sleepleader which = 170094 } #Mondragón
+		command = { type = sleepleader which = 170095 } #Morelos
+		command = { type = sleepleader which = 170096 } #Mass
+		command = { type = sleepleader which = 170097 } #Monter
+		command = { type = sleepleader which = 170098 } #Navarro
+		command = { type = sleepleader which = 170099 } #Ocón
+		command = { type = sleepleader which = 170100 } #Ojeda
+		command = { type = sleepleader which = 170101 } #Olea
+		command = { type = sleepleader which = 170102 } #Orozco
+		command = { type = sleepleader which = 170103 } #Orpinel
+		command = { type = sleepleader which = 170104 } #Poloney
+		command = { type = sleepleader which = 170105 } #Rasgado
+		command = { type = sleepleader which = 170106 } #Reyes
+		command = { type = sleepleader which = 170107 } #Robles
+		command = { type = sleepleader which = 170108 } #Rojas
+		command = { type = sleepleader which = 170109 } #Rubio Navarrete
+		command = { type = sleepleader which = 170110 } #Ruiz
+		command = { type = sleepleader which = 170111 } #Salazar
+		command = { type = sleepleader which = 170112 } #Soberanes
+		command = { type = sleepleader which = 170113 } #Téllez
+		command = { type = sleepleader which = 170114 } #Toro
+		command = { type = sleepleader which = 170115 } #Trucy Aubert
+		command = { type = sleepleader which = 170116 } #Velasco
+		command = { type = sleepleader which = 170117 } #Yarza
+		command = { type = sleepleader which = 170118 } #Zozaya
+		#command = { type = sleepleader which = 170119 } #Azueta
+		#command = { type = sleepleader which = 170120 } #Villasana
+		command = { type = sleepteam which = 170020 } #Victoriano Huerta
+		#Villistas and Zapatista (tech teams and ministers + specific leaders)
+		command = { type = sleepminister which = 170150 } #Francisco Lagos Cházaro
+		command = { type = sleepminister which = 170151 } #Eulalio Gutiérrez Ortiz
+		command = { type = sleepminister which = 170152 } #Francisco 'Pancho' Villa
+		command = { type = sleepminister which = 170153 } #Emiliano Zapata
+		command = { type = sleepminister which = 170154 } #Francisco Lagos Cházaro
+		command = { type = sleepminister which = 170155 } #Eulalio Gutiérrez Ortiz
+		command = { type = sleepminister which = 170156 } #Francisco 'Pancho' Villa
+		command = { type = sleepminister which = 170157 } #Emiliano Zapata
+		command = { type = sleepminister which = 170158 } #José Ortiz Rodriguez
+		command = { type = sleepminister which = 170159 } #Miguel Díaz Lombardo
+		command = { type = sleepminister which = 170160 } #Ignacio Borrego
+		command = { type = sleepminister which = 170161 } #Francisco Lagos Cházaro
+		command = { type = sleepminister which = 170162 } #Alberto B. Piña
+		command = { type = sleepminister which = 170163 } #Julio Ramírez Wiella
+		command = { type = sleepminister which = 170164 } #Francisco Escudero
+		command = { type = sleepminister which = 170165 } #Valentín Gama y Cruz
+		command = { type = sleepminister which = 170166 } #Luis Zubiría y Campa
+		command = { type = sleepminister which = 170167 } #Adolfo Francisco Salinas
+		command = { type = sleepminister which = 170168 } #Santiago González Cordero
+		command = { type = sleepminister which = 170169 } #Lucio Blanco
+		command = { type = sleepminister which = 170170 } #Francisco Lagos Chazaro
+		command = { type = sleepminister which = 170171 } #José Quevedo
+		command = { type = sleepminister which = 170172 } #José Isabel Robles
+		command = { type = sleepminister which = 170173 } #Francisco 'Pancho' Villa
+		command = { type = sleepminister which = 170174 } #Francisco Pacheco
+		command = { type = sleepminister which = 170175 } #Alfredo Serratos Amador
+		command = { type = sleepminister which = 170176 } #Emiliano Zapata
+		command = { type = sleepminister which = 170177 } #Francisco Pacheco
+		command = { type = sleepminister which = 170178 } #Alfredo Serratos Amador
+		command = { type = sleepminister which = 170179 } #José Isabel Robles
+		command = { type = sleepminister which = 170180 } #Francisco Pacheco
+		command = { type = sleepminister which = 170181 } #Alfredo Serratos Amador
+		command = { type = sleepminister which = 170182 } #Pedro Caloca Larios
+		command = { type = sleepminister which = 170183 } #Emiliano Zapata
+		command = { type = sleepminister which = 170184 } #José Isabel Robles		
+		command = { type = sleepleader which = 170262 } #Villa F.
+		command = { type = sleepleader which = 170317 } #Zapata Emiliano
+		command = { type = sleepteam which = 170021 } #Emiliano Zapata
+		command = { type = sleepteam which = 170022 } #Pancho Villa
+	}
+}
+
+event = {
+	id = 2038611
+	country = U58
+
+	trigger = {
+		atwar = no
+		NOT = { 
+			exists = MEX #Federal Mexico
+			exists = U57 #Constitucionalistas
+			exists = U59 #Zapatistas	
+		}
+		control = { province = 1974 data = U58 } #Mexico City
+	}
+   
+	name = "EVT1914_2038611_NAME"
+	desc = "EVT1914_2038611_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -5 }
+		command = { type = country which = MEX } #changes TAG to MEX
+		command = { type = trigger which = 2038612 } #MEX Villa leads Mexico!
+	}
+}
+
+event = {
+	id = 2038612
+	country = MEX
+
+	name = "EVT1914_2038612_NAME"
+	desc = "EVT1914_2038612_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = wakeminister which = 170150 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170151 } #Eulalio Gutiérrez Ortiz
+		command = { type = wakeminister which = 170152 } #Francisco 'Pancho' Villa
+		command = { type = wakeminister which = 170154 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170155 } #Eulalio Gutiérrez Ortiz
+		command = { type = wakeminister which = 170156 } #Francisco 'Pancho' Villa
+		command = { type = wakeminister which = 170158 } #José Ortiz Rodriguez
+		command = { type = wakeminister which = 170159 } #Miguel Díaz Lombardo
+		command = { type = wakeminister which = 170160 } #Ignacio Borrego
+		command = { type = wakeminister which = 170161 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170162 } #Alberto B. Piña
+		command = { type = wakeminister which = 170163 } #Julio Ramírez Wiella
+		command = { type = wakeminister which = 170164 } #Francisco Escudero
+		command = { type = wakeminister which = 170165 } #Valentín Gama y Cruz
+		command = { type = wakeminister which = 170166 } #Luis Zubiría y Campa
+		command = { type = wakeminister which = 170167 } #Adolfo Francisco Salinas
+		command = { type = wakeminister which = 170168 } #Santiago González Cordero
+		command = { type = wakeminister which = 170169 } #José Lucio Blanco Fuentes
+		command = { type = wakeminister which = 170170 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170171 } #José Quevedo
+		command = { type = wakeminister which = 170172 } #José Isabel Robles
+		command = { type = wakeminister which = 170173 } #Francisco 'Pancho' Villa
+		command = { type = wakeminister which = 170174 } #Francisco Pacheco
+		command = { type = wakeminister which = 170175 } #Alfredo Serratos Amador
+		command = { type = wakeminister which = 170177 } #Francisco Pacheco
+		command = { type = wakeminister which = 170178 } #Alfredo Serratos Amador
+		command = { type = wakeminister which = 170179 } #José Isabel Robles
+		command = { type = wakeminister which = 170180 } #Francisco Pacheco
+		command = { type = wakeminister which = 170181 } #Alfredo Serratos Amador
+		command = { type = wakeminister which = 170182 } #Pedro Caloca Larios
+		command = { type = wakeminister which = 170184 } #José Isabel Robles
+		
+		command = { type = set_domestic which = democratic value = 8 } #social liberal
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = set_domestic which = freedom value = 9 }
+		command = { type = set_domestic which = free_market value = 6 }
+		command = { type = set_domestic which = defense_lobby value = 3 }
+		command = { type = set_domestic which = interventionism value = 2 }		
+		
+		command = { type = headofstate which = 170150 } #Francisco Lagos Cházaro
+		command = { type = headofgovernment which = 170156 } #Francisco 'Pancho' Villa
+		command = { type = foreignminister which = 170160 } #Ignacio Borrego
+		command = { type = armamentminister which = 170165 } #Valentín Gama y Cruz
+		command = { type = ministerofsecurity which = 170170 } #Francisco Lagos Cházaro
+		command = { type = ministerofintelligence which = 170184 } #José Isabel Robles
+		command = { type = chiefofstaff which = 170173 } #Francisco 'Pancho' Villa
+		command = { type = chiefofarmy which = 170177 } #Francisco Pacheco
+		command = { type = chiefofnavy which = 170180 } #Francisco Pacheco
+		command = { type = chiefofair which = 170182 } #Pedro Caloca Larios
+		
+		command = { type = waketeam which = 170022 } #Pancho Villa
+		command = { type = wakeleader which = 170150 } #Aguirre Benavides
+		command = { type = wakeleader which = 170151 } #Álvarez Borboa
+		command = { type = wakeleader which = 170152 } #Ángeles
+		command = { type = wakeleader which = 170153 } #Arroyo
+		command = { type = wakeleader which = 170154 } #Ávila
+		command = { type = wakeleader which = 170155 } #Baca
+		command = { type = wakeleader which = 170156 } #Barraza
+		command = { type = wakeleader which = 170157 } #Bañuelos
+		command = { type = wakeleader which = 170158 } #Beltrán
+		command = { type = wakeleader which = 170159 } #Buelna
+		command = { type = wakeleader which = 170160 } #Calzada
+		command = { type = wakeleader which = 170161 } #Caloca Larios, P.
+		command = { type = wakeleader which = 170162 } #Caloca
+		command = { type = wakeleader which = 170163 } #Caloca Larios, M.
+		command = { type = wakeleader which = 170164 } #Cantú
+		command = { type = wakeleader which = 170165 } #Carranza Sainz
+		command = { type = wakeleader which = 170166 } #Carrera Torres, A.
+		command = { type = wakeleader which = 170167 } #Carrera Torres, F.
+		command = { type = wakeleader which = 170168 } #Casas
+		command = { type = wakeleader which = 170169 } #Casso López
+		command = { type = wakeleader which = 170170 } #Castro
+		command = { type = wakeleader which = 170171 } #Cedillo, C.
+		command = { type = wakeleader which = 170172 } #Cedillo, M.
+		command = { type = wakeleader which = 170173 } #Cedillo, S.
+		command = { type = wakeleader which = 170174 } #Ceniceros
+		command = { type = wakeleader which = 170175 } #Cervantes, C.
+		command = { type = wakeleader which = 170176 } #Cervantes, F.
+		command = { type = wakeleader which = 170177 } #Chao
+		command = { type = wakeleader which = 170178 } #Contreras
+		command = { type = wakeleader which = 170179 } #Corral, A.
+		command = { type = wakeleader which = 170180 } #Corral, J.
+		command = { type = wakeleader which = 170181 } #Delgado
+		command = { type = wakeleader which = 170182 } #Dozal
+		command = { type = wakeleader which = 170183 } #Echeverría
+		command = { type = wakeleader which = 170184 } #Escárcega
+		command = { type = wakeleader which = 170185 } #Espada
+		command = { type = wakeleader which = 170186 } #Fernández
+		command = { type = wakeleader which = 170187 } #Fierro
+		command = { type = wakeleader which = 170188 } #Fraire
+		command = { type = wakeleader which = 170189 } #Fuentes
+		command = { type = wakeleader which = 170190 } #García Chávez
+		command = { type = wakeleader which = 170191 } #Garay, A.
+		command = { type = wakeleader which = 170192 } #Garay, N.
+		command = { type = wakeleader which = 170193 } #González
+		command = { type = wakeleader which = 170194 } #González Garza
+		command = { type = wakeleader which = 170195 } #Granados
+		command = { type = wakeleader which = 170196 } #Gutiérrez Ortiz, E.
+		command = { type = wakeleader which = 170197 } #Gutiérrez Ortiz, L.
+		command = { type = wakeleader which = 170198 } #Gutiérrez
+		command = { type = wakeleader which = 170199 } #Hernández, P.
+		command = { type = wakeleader which = 170200 } #Hernández, R.
+		command = { type = wakeleader which = 170201 } #Herrera Cano
+		command = { type = wakeleader which = 170202 } #Herrera
+		command = { type = wakeleader which = 170203 } #Hernández
+		command = { type = wakeleader which = 170204 } #Licon
+		command = { type = wakeleader which = 170205 } #López, E.
+		command = { type = wakeleader which = 170206 } #López, M.
+		command = { type = wakeleader which = 170207 } #López Aguirre, P.
+		command = { type = wakeleader which = 170208 } #López Aguirre, M.
+		command = { type = wakeleader which = 170209 } #Luján
+		command = { type = wakeleader which = 170210 } #Montalvo
+		command = { type = wakeleader which = 170211 } #Mendoza
+		command = { type = wakeleader which = 170212 } #Méndez
+		command = { type = wakeleader which = 170213 } #Meléndez
+		command = { type = wakeleader which = 170214 } #Madinabeitia
+		command = { type = wakeleader which = 170215 } #Medina, Julián
+		command = { type = wakeleader which = 170216 } #Medina, Juan
+		command = { type = wakeleader which = 170217 } #Maytorena
+		command = { type = wakeleader which = 170218 } #Matus
+		command = { type = wakeleader which = 170219 } #Martín del Campo
+		command = { type = wakeleader which = 170220 } #Márquez
+		command = { type = wakeleader which = 170221 } #Marín Loya
+		command = { type = wakeleader which = 170222 } #Mapula
+		command = { type = wakeleader which = 170223 } #Madero
+		command = { type = wakeleader which = 170224 } #Ortiz, E.
+		command = { type = wakeleader which = 170225 } #Ornelas Galindo
+		command = { type = wakeleader which = 170226 } #Ortega, M.
+		command = { type = wakeleader which = 170227 } #Ortega, P.
+		command = { type = wakeleader which = 170228 } #Ortega Ramírez
+		command = { type = wakeleader which = 170229 } #Ortiz, J.
+		command = { type = wakeleader which = 170230 } #Ortiz, T.
+		command = { type = wakeleader which = 170231 } #Ortiz Rojas
+		command = { type = wakeleader which = 170232 } #Páez
+		command = { type = wakeleader which = 170233 } #Pereyra
+		command = { type = wakeleader which = 170234 } #Pérez
+		command = { type = wakeleader which = 170235 } #Priego
+		command = { type = wakeleader which = 170236 } #Prieto
+		command = { type = wakeleader which = 170237 } #Quevedo Moreno
+		command = { type = wakeleader which = 170238 } #Quevedo
+		command = { type = wakeleader which = 170239 } #Quiñones
+		command = { type = wakeleader which = 170240 } #Reyes
+		command = { type = wakeleader which = 170241 } #Ríos
+		command = { type = wakeleader which = 170242 } #Robles
+		command = { type = wakeleader which = 170243 } #Rodríguez, J.
+		command = { type = wakeleader which = 170244 } #Rodríguez Carrasco
+		command = { type = wakeleader which = 170245 } #Rodríguez, T.
+		command = { type = wakeleader which = 170246 } #Rosa
+		command = { type = wakeleader which = 170247 } #Ruiz
+		command = { type = wakeleader which = 170248 } #Saavedra
+		command = { type = wakeleader which = 170249 } #Sánchez
+		command = { type = wakeleader which = 170250 } #Sarabia
+		command = { type = wakeleader which = 170251 } #Serratos
+		command = { type = wakeleader which = 170252 } #Servín
+		command = { type = wakeleader which = 170253 } #Silva
+		command = { type = wakeleader which = 170254 } #Solís
+		command = { type = wakeleader which = 170255 } #Soto
+		command = { type = wakeleader which = 170256 } #Silva
+		command = { type = wakeleader which = 170257 } #Urbina
+		command = { type = wakeleader which = 170258 } #Valdivieso
+		command = { type = wakeleader which = 170259 } #Vargas, C.
+		command = { type = wakeleader which = 170260 } #Vargas, J.
+		command = { type = wakeleader which = 170261 } #Velásquez
+		command = { type = wakeleader which = 170262 } #Villa, F.
+		command = { type = wakeleader which = 170263 } #Villa, H.
+		command = { type = wakeleader which = 170264 } #Zamora
+		command = { type = wakeleader which = 170265 } #Barlow
+		command = { type = wakeleader which = 170266 } #Parsons		
+		
+		#Huertistas ministers leaders and tech teams
+		command = { type = sleepminister which = 170106 } #Victoriano Huerta
+		command = { type = sleepminister which = 170107 } #Félix Díaz
+		command = { type = sleepminister which = 170108 } #Victoriano Huerta
+		command = { type = sleepminister which = 170109 } #Félix Díaz
+		command = { type = sleepminister which = 170110 } #Francisco León de la Barra
+		command = { type = sleepminister which = 170111 } #Carlos Pereyra
+		command = { type = sleepminister which = 170112 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170113 } #Federico Gamboa
+		command = { type = sleepminister which = 170114 } #Antonio de la Peña y Reyes
+		command = { type = sleepminister which = 170115 } #Querido Moheno
+		command = { type = sleepminister which = 170116 } #José López Portillo y Rojas
+		command = { type = sleepminister which = 170117 } #Roberto Esteva Ruiz
+		command = { type = sleepminister which = 170118 } #Francisco S. Carbajal
+		command = { type = sleepminister which = 170119 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170120 } #Querido Moheno
+		command = { type = sleepminister which = 170121 } #Ignacio Alcocer
+		command = { type = sleepminister which = 170122 } #Salomé Botello
+		command = { type = sleepminister which = 170123 } #Alberto García Granados
+		command = { type = sleepminister which = 170124 } #Aureliano Urrutia
+		command = { type = sleepminister which = 170125 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170126 } #Ignacio Alcocer
+		command = { type = sleepminister which = 170127 } #Pascual Orozco
+		command = { type = sleepminister which = 170128 } #Manuel Mondragón
+		command = { type = sleepminister which = 170129 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170130 } #José Refugio Velasco
+		command = { type = sleepminister which = 170131 } #Pascual Orozco
+		command = { type = sleepminister which = 170132 } #Manuel Mondragón
+		command = { type = sleepminister which = 170133 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170134 } #José Refugio Velasco
+		command = { type = sleepminister which = 170135 } #Manuel Mondragón
+		command = { type = sleepminister which = 170136 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170137 } #José Refugio Velasco
+		command = { type = sleepminister which = 170138 } #Miguel Lebrija
+		command = { type = sleepminister which = 170139 } #Juan Guillermo Villasana
+		command = { type = sleepminister which = 170140 } #Pascual Orozco
+		command = { type = sleepminister which = 170141 } #Manuel Mondragón
+		command = { type = sleepminister which = 170142 } #Aureliano Blanquet
+		command = { type = sleepleader which = 170062 } #Aguilar;
+		command = { type = sleepleader which = 170063 } #Altamirano
+		command = { type = sleepleader which = 170064 } #Argumedo
+		command = { type = sleepleader which = 170066 } #Beltrán Castañares
+		command = { type = sleepleader which = 170067 } #Blanquet
+		command = { type = sleepleader which = 170068 } #Bravo
+		command = { type = sleepleader which = 170069 } #Cartón
+		command = { type = sleepleader which = 170070 } #Cejudo
+		command = { type = sleepleader which = 170071 } #Carmen Curiel
+		command = { type = sleepleader which = 170072 } #Casso López
+		command = { type = sleepleader which = 170073 } #Chacón
+		command = { type = sleepleader which = 170074 } #Dávila
+		command = { type = sleepleader which = 170075 } #Delgadillo
+		command = { type = sleepleader which = 70076  } #De Moure;
+		command = { type = sleepleader which = 170077 } #Eguía Lis
+		command = { type = sleepleader which = 170078 } #Escandón y Barrón
+		command = { type = sleepleader which = 170079 } #Gallardo
+		command = { type = sleepleader which = 170080 } #Gil
+		command = { type = sleepleader which = 170081 } #Gorostieta y Velarde
+		command = { type = sleepleader which = 170082 } #Harrotian
+		command = { type = sleepleader which = 170083 } #Huerta
+		command = { type = sleepleader which = 170084 } #Jiménez Castro
+		command = { type = sleepleader which = 70085  } #Lucas;
+		command = { type = sleepleader which = 170086 } #Lojero
+		command = { type = sleepleader which = 170087 } #Maas Águila
+		command = { type = sleepleader which = 170088 } #Maas Flores
+		command = { type = sleepleader which = 70089  } #Martínez;
+		command = { type = sleepleader which = 170090 } #Maldonado
+		command = { type = sleepleader which = 170091 } #Medina Barrón
+		command = { type = sleepleader which = 170092 } #Mercado
+		command = { type = sleepleader which = 170093 } #Mier
+		command = { type = sleepleader which = 170094 } #Mondragón
+		command = { type = sleepleader which = 170095 } #Morelos
+		command = { type = sleepleader which = 170096 } #Mass
+		command = { type = sleepleader which = 170097 } #Monter
+		command = { type = sleepleader which = 170098 } #Navarro
+		command = { type = sleepleader which = 170099 } #Ocón
+		command = { type = sleepleader which = 170100 } #Ojeda
+		command = { type = sleepleader which = 170101 } #Olea
+		command = { type = sleepleader which = 170102 } #Orozco
+		command = { type = sleepleader which = 170103 } #Orpinel
+		command = { type = sleepleader which = 170104 } #Poloney
+		command = { type = sleepleader which = 170105 } #Rasgado
+		command = { type = sleepleader which = 170106 } #Reyes
+		command = { type = sleepleader which = 170107 } #Robles
+		command = { type = sleepleader which = 170108 } #Rojas
+		command = { type = sleepleader which = 170109 } #Rubio Navarrete
+		command = { type = sleepleader which = 170110 } #Ruiz
+		command = { type = sleepleader which = 170111 } #Salazar
+		command = { type = sleepleader which = 170112 } #Soberanes
+		command = { type = sleepleader which = 170113 } #Téllez
+		command = { type = sleepleader which = 170114 } #Toro
+		command = { type = sleepleader which = 170115 } #Trucy Aubert
+		command = { type = sleepleader which = 170116 } #Velasco
+		command = { type = sleepleader which = 170117 } #Yarza
+		command = { type = sleepleader which = 170118 } #Zozaya
+		command = { type = sleepleader which = 170119 } #Azueta
+		command = { type = sleepleader which = 170120 } #Villasana
+		command = { type = sleepteam which = 170020 } #Victoriano Huerta
+		#Constitucionalistas (tech teams and ministers + specific leaders)
+		command = { type = sleepminister which = 170200 } #Venustiano Carranza
+		command = { type = sleepminister which = 170201 } #Adolfo de la Huerta
+		command = { type = sleepminister which = 170202 } #Álvaro Obregón;1920
+		command = { type = sleepminister which = 170203 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170204 } #Venustiano Carranza
+		command = { type = sleepminister which = 170205 } #Adolfo de la Huerta
+		command = { type = sleepminister which = 170206 } #Álvaro Obregón
+		command = { type = sleepminister which = 170207 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170208 } #Francisco Escudero
+		command = { type = sleepminister which = 170209 } #Isidro Fabela Alfaro
+		command = { type = sleepminister which = 170210 } #Jesús Acuña
+		command = { type = sleepminister which = 170211 } #Cándido Aguilar
+		command = { type = sleepminister which = 170212 } #Alfonso Siller
+		command = { type = sleepminister which = 170213 } #Ernesto Garza Pérez
+		command = { type = sleepminister which = 170214 } #Salvador Diego Fernández
+		command = { type = sleepminister which = 170215 } #Hilario Medina
+		command = { type = sleepminister which = 170216 } #Juan Sánchez Azcona
+		command = { type = sleepminister which = 170217 } #Miguel Covarrubias Acosta
+		command = { type = sleepminister which = 170218 } #Cutberto Hidalgo
+		command = { type = sleepminister which = 170219 } #Alberto José Pani
+		command = { type = sleepminister which = 170220 } #Aarón Sáenz
+		command = { type = sleepminister which = 170221 } #Francisco Escudero
+		command = { type = sleepminister which = 170222 } #Pastor Rouaix
+		command = { type = sleepminister which = 170223 } #Alberto José Pani
+		command = { type = sleepminister which = 170224 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170225 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170226 } #Rafael Zubarán Capmany
+		command = { type = sleepminister which = 170227 } #Miguel Alessio Robles
+		command = { type = sleepminister which = 170228 } #Manuel Pérez Treviño
+		command = { type = sleepminister which = 170229 } #Luis Napoleón Morones
+		command = { type = sleepminister which = 170230 } #Rafael Zubarán Capmany
+		command = { type = sleepminister which = 170231 } #Adolfo de la Huerta
+		command = { type = sleepminister which = 170232 } #Manuel Aguirre Berlanga
+		command = { type = sleepminister which = 170233 } #Gilberto Valenzuela
+		command = { type = sleepminister which = 170234 } # José Inocente Lugo
+		command = { type = sleepminister which = 170235 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170236 } #Enrique Colunga
+		command = { type = sleepminister which = 170237 } #Romeo Ortega
+		command = { type = sleepminister which = 170238 } #Felipe Ángeles Ramirez
+		command = { type = sleepminister which = 170239 } #Eduardo Hay
+		command = { type = sleepminister which = 170240 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170241 } #Ignacio L. Pesqueira
+		command = { type = sleepminister which = 170242 } #Álvaro Obregón
+		command = { type = sleepminister which = 170243 } #Jesús Agustín Castro
+		command = { type = sleepminister which = 170244 } #Juan José Ríos
+		command = { type = sleepminister which = 170245 } #Francisco L. Urquizo
+		command = { type = sleepminister which = 170246 } #Plutarco Elias Calles
+		command = { type = sleepminister which = 170247 } #Benjamín Hill
+		command = { type = sleepminister which = 170248 } #Enrique Estrada
+		command = { type = sleepminister which = 170249 } #Francisco Roque Serrano
+		command = { type = sleepminister which = 170250 } #Joaquín Amaro Domínguez
+		command = { type = sleepminister which = 170251 } #Felipe Ángeles Ramirez
+		command = { type = sleepminister which = 170252 } #Eduardo Hay
+		command = { type = sleepminister which = 170253 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170254 } #Ignacio L. Pesqueira
+		command = { type = sleepminister which = 170255 } #Álvaro Obregón
+		command = { type = sleepminister which = 170256 } #Jesús Agustín Castro
+		command = { type = sleepminister which = 170257 } #Juan José Ríos
+		command = { type = sleepminister which = 170258 } #Francisco L. Urquizo
+		command = { type = sleepminister which = 170259 } #Plutarco Elias Calles
+		command = { type = sleepminister which = 170260 } #Benjamín Hill
+		command = { type = sleepminister which = 170261 } #Enrique Estrada
+		command = { type = sleepminister which = 170262 } #Francisco Roque Serrano
+		command = { type = sleepminister which = 170263 } #Joaquín Amaro Domínguez
+		command = { type = sleepminister which = 170264 } #Felipe Ángeles Ramirez
+		command = { type = sleepminister which = 170265 } #Eduardo Hay
+		command = { type = sleepminister which = 170266 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170267 } #Ignacio L. Pesqueira
+		command = { type = sleepminister which = 170268 } #Álvaro Obregón
+		command = { type = sleepminister which = 170269 } #Jesús Agustín Castro
+		command = { type = sleepminister which = 170270 } #Juan José Ríos
+		command = { type = sleepminister which = 170271 } #Francisco L. Urquizo
+		command = { type = sleepminister which = 170272 } #Plutarco Elias Calles
+		command = { type = sleepminister which = 170273 } #Benjamín Hill
+		command = { type = sleepminister which = 170274 } #Enrique Estrada
+		command = { type = sleepminister which = 170275 } #Francisco Roque Serrano
+		command = { type = sleepminister which = 170276 } #Joaquín Amaro Domínguez
+		command = { type = sleepminister which = 170277 } #Alberto Salinas Carranza
+		command = { type = sleepleader which = 170396 } #Obregón
+		command = { type = sleepleader which = 170403 } #Carranza, A.S.
+		command = { type = sleepteam which = 170017 } #Alvaro Obregon
+		command = { type = sleepteam which = 170006 } #Alberto Salinas Carranza
+		#Zapatista (tech teams + specific ministers and leaders)
+		command = { type = sleepminister which = 170157 } #Emiliano Zapata
+		command = { type = sleepleader which = 170317 } #Zapata Emiliano
+		command = { type = sleepteam which = 170021 } #Emiliano Zapata
+	}
+}
+
+event = {
+	id = 2038613
+	country = U59
+
+	trigger = {
+		atwar = no
+		NOT = { 
+			exists = MEX #Federal Mexico
+			exists = U57 #Constitucionalistas
+			exists = U58 #Villistas	
+		}
+		control = { province = 1974 data = U59 } #Mexico City
+	}
+   
+	name = "EVT1914_2038613_NAME"
+	desc = "EVT1914_2038613_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -5 }
+		command = { type = country which = MEX } #changes TAG to MEX
+		command = { type = trigger which = 2038614 } #MEX Zapata leads Mexico!
+	}
+}
+
+event = {
+	id = 2038614
+	country = MEX
+
+	name = "EVT1914_2038614_NAME"
+	desc = "EVT1914_2038614_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = wakeminister which = 170150 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170151 } #Eulalio Gutiérrez Ortiz
+		command = { type = wakeminister which = 170153 } #Emiliano Zapata
+		command = { type = wakeminister which = 170154 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170155 } #Eulalio Gutiérrez Ortiz
+		command = { type = wakeminister which = 170157 } #Emiliano Zapata
+		command = { type = wakeminister which = 170158 } #José Ortiz Rodriguez
+		command = { type = wakeminister which = 170159 } #Miguel Díaz Lombardo
+		command = { type = wakeminister which = 170160 } #Ignacio Borrego
+		command = { type = wakeminister which = 170161 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170162 } #Alberto B. Piña
+		command = { type = wakeminister which = 170163 } #Julio Ramírez Wiella
+		command = { type = wakeminister which = 170164 } #Francisco Escudero
+		command = { type = wakeminister which = 170165 } #Valentín Gama y Cruz
+		command = { type = wakeminister which = 170166 } #Luis Zubiría y Campa
+		command = { type = wakeminister which = 170167 } #Adolfo Francisco Salinas
+		command = { type = wakeminister which = 170168 } #Santiago González Cordero
+		command = { type = wakeminister which = 170169 } #José Lucio Blanco Fuentes
+		command = { type = wakeminister which = 170170 } #Francisco Lagos Cházaro
+		command = { type = wakeminister which = 170171 } #José Quevedo
+		command = { type = wakeminister which = 170172 } #José Isabel Robles
+		command = { type = wakeminister which = 170174 } #Francisco Pacheco
+		command = { type = wakeminister which = 170175 } #Alfredo Serratos Amador
+		command = { type = wakeminister which = 170176 } #Emiliano Zapata
+		command = { type = wakeminister which = 170177 } #Francisco Pacheco
+		command = { type = wakeminister which = 170178 } #Alfredo Serratos Amador
+		command = { type = wakeminister which = 170179 } #José Isabel Robles
+		command = { type = wakeminister which = 170180 } #Francisco Pacheco
+		command = { type = wakeminister which = 170181 } #Alfredo Serratos Amador
+		command = { type = wakeminister which = 170182 } #Pedro Caloca Larios
+		command = { type = wakeminister which = 170183 } #Emiliano Zapata
+		command = { type = wakeminister which = 170184 } #José Isabel Robles
+		
+		command = { type = set_domestic which = democratic value = 9 } #social democrat
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = set_domestic which = freedom value = 9 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = defense_lobby value = 2 }
+		command = { type = set_domestic which = interventionism value = 2 }		
+		
+		command = { type = headofstate which = 170151 } #Eulalio Gutierrez
+		command = { type = headofgovernment which = 170157 } #Emiliano Zapata
+		command = { type = foreignminister which = 170160 } #Ignacio Borrego
+		command = { type = armamentminister which = 170165 } #Valentín Gama y Cruz
+		command = { type = ministerofsecurity which = 170169 } #Lucio Blanco
+		command = { type = ministerofintelligence which = 170183 } #Emiliano Zapata
+		command = { type = chiefofstaff which = 170175 } #Alfredo Serratos Amador
+		command = { type = chiefofarmy which = 170176 } #Emiliano Zapata
+		command = { type = chiefofnavy which = 170181 } #Alfredo Serratos Amador
+		command = { type = chiefofair which = 170182 } #Pedro Caloca Larios
+		
+		command = { type = waketeam which = 170021 } #Emiliano Zapata
+		command = { type = wakeleader which = 170270 } #Galindo S.
+		command = { type = wakeleader which = 170271 } #Saavedra Brito
+		command = { type = wakeleader which = 170272 } #Galán S.
+		command = { type = wakeleader which = 170273 } #Sanchez Flores M.
+		command = { type = wakeleader which = 170274 } #Serna C.
+		command = { type = wakeleader which = 170275 } #Silva M.
+		command = { type = wakeleader which = 170276 } #Vazquez Herrera L.
+		command = { type = wakeleader which = 170277 } #Ortiz Vazquez G.
+		command = { type = wakeleader which = 170278 } #Vergara C.S.
+		command = { type = wakeleader which = 170279 } #Rangel M.
+		command = { type = wakeleader which = 170280 } #Mendoza Palma F.
+		command = { type = wakeleader which = 170281 } #Rodriguez M.
+		command = { type = wakeleader which = 170282 } #Rodríguez J.
+		command = { type = wakeleader which = 170283 } #Robles Avila A.
+		command = { type = wakeleader which = 170284 } #Salgado J. H. 
+		command = { type = wakeleader which = 170285 } #Reyes Nava V.
+		command = { type = wakeleader which = 170286 } #Reyes Nava M.
+		command = { type = wakeleader which = 170287 } #Castillo H.
+		command = { type = wakeleader which = 170288 } #Díaz Encarnación
+		command = { type = wakeleader which = 170289 } #Reynoso Díaz L.
+		command = { type = wakeleader which = 170290 } #Ocampo C.
+		command = { type = wakeleader which = 170291 } #Ortega Mendoza Z.
+		command = { type = wakeleader which = 170292 } #V. Pacheco F.
+		command = { type = wakeleader which = 170293 } #Pantaleón García E.
+		command = { type = wakeleader which = 170294 } #Palma J.
+		command = { type = wakeleader which = 170295 } #Pazuengo M.
+		command = { type = wakeleader which = 170296 } #Pliego F.
+		command = { type = wakeleader which = 170297 } #Navarro García J.
+		command = { type = wakeleader which = 170298 } #Caamaño J.
+		command = { type = wakeleader which = 170299 } #Flores D.
+		command = { type = wakeleader which = 170300 } #Farfán Campos C.
+		command = { type = wakeleader which = 170301 } #Cherizola T.
+		command = { type = wakeleader which = 170302 } #Chávez Carrera C.
+		command = { type = wakeleader which = 170303 } #Carnalla Sanchéz C.
+		command = { type = wakeleader which = 170304 } #Cásares A.
+		command = { type = wakeleader which = 170305 } #Casas Medina P.
+		command = { type = wakeleader which = 170306 } #Castrejón A.
+		command = { type = wakeleader which = 170307 } #Cazales P.
+		command = { type = wakeleader which = 170308 } #Barrios Á.
+		command = { type = wakeleader which = 170309 } #Bastida Flores I.
+		command = { type = wakeleader which = 170310 } #Ayaquica Rangel F.
+		command = { type = wakeleader which = 170311 } #Magaña Cerda O.
+		command = { type = wakeleader which = 170312 } #Martínez Carona M.
+		command = { type = wakeleader which = 170313 } #Mejía M.
+		command = { type = wakeleader which = 170314 } #Mariaca G.
+		command = { type = wakeleader which = 170315 } #Palafox M.
+		command = { type = wakeleader which = 170316 } #Burgos S.
+		command = { type = wakeleader which = 170317 } #Zapata Emiliano
+		command = { type = wakeleader which = 170318 } #Robles Morales S.M.
+		command = { type = wakeleader which = 170319 } #Sanchez T.
+		command = { type = wakeleader which = 170320 } #Diaz Soto y Gama A.
+		command = { type = wakeleader which = 170321 } #Neri Jiménez
+		command = { type = wakeleader which = 170322 } #Montaño
+		command = { type = wakeleader which = 170323 } #de la O
+		command = { type = wakeleader which = 170324 } #Palafox M.
+		command = { type = wakeleader which = 170325 } #Salazar
+		command = { type = wakeleader which = 170326 } #Zapata Eufemio
+		
+		#Huertistas ministers leaders and tech teams
+		command = { type = sleepminister which = 170106 } #Victoriano Huerta
+		command = { type = sleepminister which = 170107 } #Félix Díaz
+		command = { type = sleepminister which = 170108 } #Victoriano Huerta
+		command = { type = sleepminister which = 170109 } #Félix Díaz
+		command = { type = sleepminister which = 170110 } #Francisco León de la Barra
+		command = { type = sleepminister which = 170111 } #Carlos Pereyra
+		command = { type = sleepminister which = 170112 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170113 } #Federico Gamboa
+		command = { type = sleepminister which = 170114 } #Antonio de la Peña y Reyes
+		command = { type = sleepminister which = 170115 } #Querido Moheno
+		command = { type = sleepminister which = 170116 } #José López Portillo y Rojas
+		command = { type = sleepminister which = 170117 } #Roberto Esteva Ruiz
+		command = { type = sleepminister which = 170118 } #Francisco S. Carbajal
+		command = { type = sleepminister which = 170119 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170120 } #Querido Moheno
+		command = { type = sleepminister which = 170121 } #Ignacio Alcocer
+		command = { type = sleepminister which = 170122 } #Salomé Botello
+		command = { type = sleepminister which = 170123 } #Alberto García Granados
+		command = { type = sleepminister which = 170124 } #Aureliano Urrutia
+		command = { type = sleepminister which = 170125 } #Manuel Garza Aldape
+		command = { type = sleepminister which = 170126 } #Ignacio Alcocer
+		command = { type = sleepminister which = 170127 } #Pascual Orozco
+		command = { type = sleepminister which = 170128 } #Manuel Mondragón
+		command = { type = sleepminister which = 170129 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170130 } #José Refugio Velasco
+		command = { type = sleepminister which = 170131 } #Pascual Orozco
+		command = { type = sleepminister which = 170132 } #Manuel Mondragón
+		command = { type = sleepminister which = 170133 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170134 } #José Refugio Velasco
+		command = { type = sleepminister which = 170135 } #Manuel Mondragón
+		command = { type = sleepminister which = 170136 } #Aureliano Blanquet
+		command = { type = sleepminister which = 170137 } #José Refugio Velasco
+		command = { type = sleepminister which = 170138 } #Miguel Lebrija
+		command = { type = sleepminister which = 170139 } #Juan Guillermo Villasana
+		command = { type = sleepminister which = 170140 } #Pascual Orozco
+		command = { type = sleepminister which = 170141 } #Manuel Mondragón
+		command = { type = sleepminister which = 170142 } #Aureliano Blanquet
+		command = { type = sleepleader which = 170062 } #Aguilar;
+		command = { type = sleepleader which = 170063 } #Altamirano
+		command = { type = sleepleader which = 170064 } #Argumedo
+		command = { type = sleepleader which = 170066 } #Beltrán Castañares
+		command = { type = sleepleader which = 170067 } #Blanquet
+		command = { type = sleepleader which = 170068 } #Bravo
+		command = { type = sleepleader which = 170069 } #Cartón
+		command = { type = sleepleader which = 170070 } #Cejudo
+		command = { type = sleepleader which = 170071 } #Carmen Curiel
+		command = { type = sleepleader which = 170072 } #Casso López
+		command = { type = sleepleader which = 170073 } #Chacón
+		command = { type = sleepleader which = 170074 } #Dávila
+		command = { type = sleepleader which = 170075 } #Delgadillo
+		command = { type = sleepleader which = 70076  } #De Moure;
+		command = { type = sleepleader which = 170077 } #Eguía Lis
+		command = { type = sleepleader which = 170078 } #Escandón y Barrón
+		command = { type = sleepleader which = 170079 } #Gallardo
+		command = { type = sleepleader which = 170080 } #Gil
+		command = { type = sleepleader which = 170081 } #Gorostieta y Velarde
+		command = { type = sleepleader which = 170082 } #Harrotian
+		command = { type = sleepleader which = 170083 } #Huerta
+		command = { type = sleepleader which = 170084 } #Jiménez Castro
+		command = { type = sleepleader which = 70085  } #Lucas;
+		command = { type = sleepleader which = 170086 } #Lojero
+		command = { type = sleepleader which = 170087 } #Maas Águila
+		command = { type = sleepleader which = 170088 } #Maas Flores
+		command = { type = sleepleader which = 70089  } #Martínez;
+		command = { type = sleepleader which = 170090 } #Maldonado
+		command = { type = sleepleader which = 170091 } #Medina Barrón
+		command = { type = sleepleader which = 170092 } #Mercado
+		command = { type = sleepleader which = 170093 } #Mier
+		command = { type = sleepleader which = 170094 } #Mondragón
+		command = { type = sleepleader which = 170095 } #Morelos
+		command = { type = sleepleader which = 170096 } #Mass
+		command = { type = sleepleader which = 170097 } #Monter
+		command = { type = sleepleader which = 170098 } #Navarro
+		command = { type = sleepleader which = 170099 } #Ocón
+		command = { type = sleepleader which = 170100 } #Ojeda
+		command = { type = sleepleader which = 170101 } #Olea
+		command = { type = sleepleader which = 170102 } #Orozco
+		command = { type = sleepleader which = 170103 } #Orpinel
+		command = { type = sleepleader which = 170104 } #Poloney
+		command = { type = sleepleader which = 170105 } #Rasgado
+		command = { type = sleepleader which = 170106 } #Reyes
+		command = { type = sleepleader which = 170107 } #Robles
+		command = { type = sleepleader which = 170108 } #Rojas
+		command = { type = sleepleader which = 170109 } #Rubio Navarrete
+		command = { type = sleepleader which = 170110 } #Ruiz
+		command = { type = sleepleader which = 170111 } #Salazar
+		command = { type = sleepleader which = 170112 } #Soberanes
+		command = { type = sleepleader which = 170113 } #Téllez
+		command = { type = sleepleader which = 170114 } #Toro
+		command = { type = sleepleader which = 170115 } #Trucy Aubert
+		command = { type = sleepleader which = 170116 } #Velasco
+		command = { type = sleepleader which = 170117 } #Yarza
+		command = { type = sleepleader which = 170118 } #Zozaya
+		command = { type = sleepleader which = 170119 } #Azueta
+		command = { type = sleepleader which = 170120 } #Villasana
+		command = { type = sleepteam which = 170020 } #Victoriano Huerta
+		#Constitucionalistas (tech teams and ministers + specific leaders)
+		command = { type = sleepminister which = 170200 } #Venustiano Carranza
+		command = { type = sleepminister which = 170201 } #Adolfo de la Huerta
+		command = { type = sleepminister which = 170202 } #Álvaro Obregón;1920
+		command = { type = sleepminister which = 170203 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170204 } #Venustiano Carranza
+		command = { type = sleepminister which = 170205 } #Adolfo de la Huerta
+		command = { type = sleepminister which = 170206 } #Álvaro Obregón
+		command = { type = sleepminister which = 170207 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170208 } #Francisco Escudero
+		command = { type = sleepminister which = 170209 } #Isidro Fabela Alfaro
+		command = { type = sleepminister which = 170210 } #Jesús Acuña
+		command = { type = sleepminister which = 170211 } #Cándido Aguilar
+		command = { type = sleepminister which = 170212 } #Alfonso Siller
+		command = { type = sleepminister which = 170213 } #Ernesto Garza Pérez
+		command = { type = sleepminister which = 170214 } #Salvador Diego Fernández
+		command = { type = sleepminister which = 170215 } #Hilario Medina
+		command = { type = sleepminister which = 170216 } #Juan Sánchez Azcona
+		command = { type = sleepminister which = 170217 } #Miguel Covarrubias Acosta
+		command = { type = sleepminister which = 170218 } #Cutberto Hidalgo
+		command = { type = sleepminister which = 170219 } #Alberto José Pani
+		command = { type = sleepminister which = 170220 } #Aarón Sáenz
+		command = { type = sleepminister which = 170221 } #Francisco Escudero
+		command = { type = sleepminister which = 170222 } #Pastor Rouaix
+		command = { type = sleepminister which = 170223 } #Alberto José Pani
+		command = { type = sleepminister which = 170224 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170225 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170226 } #Rafael Zubarán Capmany
+		command = { type = sleepminister which = 170227 } #Miguel Alessio Robles
+		command = { type = sleepminister which = 170228 } #Manuel Pérez Treviño
+		command = { type = sleepminister which = 170229 } #Luis Napoleón Morones
+		command = { type = sleepminister which = 170230 } #Rafael Zubarán Capmany
+		command = { type = sleepminister which = 170231 } #Adolfo de la Huerta
+		command = { type = sleepminister which = 170232 } #Manuel Aguirre Berlanga
+		command = { type = sleepminister which = 170233 } #Gilberto Valenzuela
+		command = { type = sleepminister which = 170234 } # José Inocente Lugo
+		command = { type = sleepminister which = 170235 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170236 } #Enrique Colunga
+		command = { type = sleepminister which = 170237 } #Romeo Ortega
+		command = { type = sleepminister which = 170238 } #Felipe Ángeles Ramirez
+		command = { type = sleepminister which = 170239 } #Eduardo Hay
+		command = { type = sleepminister which = 170240 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170241 } #Ignacio L. Pesqueira
+		command = { type = sleepminister which = 170242 } #Álvaro Obregón
+		command = { type = sleepminister which = 170243 } #Jesús Agustín Castro
+		command = { type = sleepminister which = 170244 } #Juan José Ríos
+		command = { type = sleepminister which = 170245 } #Francisco L. Urquizo
+		command = { type = sleepminister which = 170246 } #Plutarco Elias Calles
+		command = { type = sleepminister which = 170247 } #Benjamín Hill
+		command = { type = sleepminister which = 170248 } #Enrique Estrada
+		command = { type = sleepminister which = 170249 } #Francisco Roque Serrano
+		command = { type = sleepminister which = 170250 } #Joaquín Amaro Domínguez
+		command = { type = sleepminister which = 170251 } #Felipe Ángeles Ramirez
+		command = { type = sleepminister which = 170252 } #Eduardo Hay
+		command = { type = sleepminister which = 170253 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170254 } #Ignacio L. Pesqueira
+		command = { type = sleepminister which = 170255 } #Álvaro Obregón
+		command = { type = sleepminister which = 170256 } #Jesús Agustín Castro
+		command = { type = sleepminister which = 170257 } #Juan José Ríos
+		command = { type = sleepminister which = 170258 } #Francisco L. Urquizo
+		command = { type = sleepminister which = 170259 } #Plutarco Elias Calles
+		command = { type = sleepminister which = 170260 } #Benjamín Hill
+		command = { type = sleepminister which = 170261 } #Enrique Estrada
+		command = { type = sleepminister which = 170262 } #Francisco Roque Serrano
+		command = { type = sleepminister which = 170263 } #Joaquín Amaro Domínguez
+		command = { type = sleepminister which = 170264 } #Felipe Ángeles Ramirez
+		command = { type = sleepminister which = 170265 } #Eduardo Hay
+		command = { type = sleepminister which = 170266 } #Jacinto Blas Treviño
+		command = { type = sleepminister which = 170267 } #Ignacio L. Pesqueira
+		command = { type = sleepminister which = 170268 } #Álvaro Obregón
+		command = { type = sleepminister which = 170269 } #Jesús Agustín Castro
+		command = { type = sleepminister which = 170270 } #Juan José Ríos
+		command = { type = sleepminister which = 170271 } #Francisco L. Urquizo
+		command = { type = sleepminister which = 170272 } #Plutarco Elias Calles
+		command = { type = sleepminister which = 170273 } #Benjamín Hill
+		command = { type = sleepminister which = 170274 } #Enrique Estrada
+		command = { type = sleepminister which = 170275 } #Francisco Roque Serrano
+		command = { type = sleepminister which = 170276 } #Joaquín Amaro Domínguez
+		command = { type = sleepminister which = 170277 } #Alberto Salinas Carranza
+		command = { type = sleepleader which = 170396 } #Obregón
+		command = { type = sleepleader which = 170403 } #Carranza, A.S.
+		command = { type = sleepteam which = 170017 } #Alvaro Obregon		
+		command = { type = sleepteam which = 170006 } #Alberto Salinas Carranza
+		#Villistas (tech teams + specific ministers and leaders)
+		command = { type = sleepminister which = 170152 } #Francisco 'Pancho' Villa
+		command = { type = sleepleader which = 170262 } #Villa, F.
+		command = { type = sleepteam which = 170022 } #Pancho Villa	
+		
+	}
+}
+event = {
+	id = 2038615
+	country = U58
+
+	trigger = {
+		atwar = no
+		NOT = { 
+			exists = MEX #Federal Mexico
+			exists = U59 #Zapatistas	
+		}
+		exists = U57 #Constitucionalistas
+		alliance = { country = U58 country = U59 }
+		control = { province = 1974 data = U58 } #Mexico City
+	}
+   
+	name = "EVT1914_2038615_NAME"
+	desc = "EVT1914_2038615_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		trigger = { ai = U59 }
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = inherit which = U59 value = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = country which = MEX } #changes TAG to MEX
+		command = { type = trigger which = 2038612 }   #Villa leads Mexico!
+	}	
+	action = {
+		trigger = { NOT = { ai = U59 } }
+		name = "ACTION_NAME_WAR"
+		command = { type = leave_alliance when = 1 }
+		command = { type = dissent value = 5 }
+		command = { type = war which = U59 }
+	}
+}
+
+event = {
+	id = 2038616
+	country = U59
+
+	trigger = {
+		atwar = no
+		NOT = { 
+			exists = MEX #Federal Mexico
+			exists = U57 #Constitucionalistas
+		}
+		exists = U58 #Villistas	
+		alliance = { country = U58 country = U59 }
+		control = { province = 1974 data = U59 } #Mexico City
+	}
+   
+	name = "EVT1914_2038616_NAME"
+	desc = "EVT1914_2038616_DESC"
+	picture = "Rheinland"
+	style = 2
+   
+	date = { day = 0 month = january year = 1914 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1920 }
+	
+	action = {
+		trigger = { ai = U58 }
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = inherit which = U58 value = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = country which = MEX } #changes TAG to MEX
+		command = { type = trigger which = 2038614 }   #Villa leads Mexico!
+	}	
+	action = {
+		trigger = { NOT = { ai = U58 } }
+		name = "ACTION_NAME_WAR"
+		command = { type = leave_alliance when = 1 }
+		command = { type = dissent value = 5 }
+		command = { type = war which = U58 }
+	}
+}
+
+event = {
+	id = 2038617
+	country = U57
+
+	trigger = {
+		exists = U59 #Zapatistas
+		war = { country = U59 country = U57 }
+	}
+
+	name = "EVT1914_2038617_NAME"
+	desc = "EVT1914_2038617_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+
+	date = { day = 0 month = november year = 1918 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1919 }
+	
+	action = {
+		name = "EVT1914_2038617_ACTIONA"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { trigger = { ai = no } type = supplies value = -50 }
+		command = { trigger = { ai = no } type = money value = -10 }
+		command = { type = event which = 2038618 where = U59 when = 30 } #Fire event "The tragedy! Zapata has been assassinated!" after 30 days
+	}
+	action = {
+		name = "EVT1914_2038617_ACTIONB"
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 2038618 } # sleep the assassination event
+	}
+}
+
+event = {
+	id = 2038618
+	country = U59
+   
+	name = "EVT1914_2038618_NAME"
+	desc = "EVT1914_2038618_DESC"
+	picture = "zapata_assassination"
+	style = 2
+   
+	action = {
+		ai_chance = 80
+		name = "EVT1914_2038618_ACTIONA"
+		command = { type = sleepminister which = 1110001 } #Emiliano Zapata
+		command = { type = sleepleader which = 1110050 } #Emiliano Zapata
+		command = { type = sleepteam which = 1114500 } #Emiliano Zapata
+		command = { type = headofstate which = 1110025 } #Gildardo Magaña Cerda
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = professional_army value = -1  }
+		command = { type = relation which = U58 value = -150 }
+		command = { type = relation which = MEX value = -150 }
+		command = { type = max_organization which = land value = -15 }
+		command = { type = morale which = land value = -15 }
+		command = { type = manpowerpool value = -10 when = 1 }
+	}
+	action = {
+		name = "EVT1914_2038618_ACTIONB"
+		ai_chance = 10
+		command = { type = sleepminister which = 1110001 } #Emiliano Zapata
+		command = { type = sleepleader which = 1110050 } #Emiliano Zapata
+		command = { type = sleepteam which = 1114500 } #Emiliano Zapata
+		command = { type = headofstate which = 1110027 } #Jesús Capistrán
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = professional_army value = -1 }
+		command = { type = relation which = U58 value = -150 }
+		command = { type = relation which = MEX value = -150 }
+		command = { type = max_organization which = land value = -15 }
+		command = { type = morale which = land value = -15 }
+		command = { type = manpowerpool value = -10 when = 1 }
+	}
+	action = {
+		trigger = { ai = yes }
+		ai_chance = 10
+		name = "EVT1914_2038618_ACTIONC"
+		command = { type = trigger which = 2038619 }
+	}
+}
+
+event = {
+	id = 2038619
+	country = U57
+   
+	name = "EVT1914_2038619_NAME"
+	desc = "EVT1914_2038619_DESC"
+	picture = "diplomatic_campaign"
+	style = 2
+   
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = dissent value = -5 }
+		command = { type = inherit which = U59 when = 3 }
+	}
+}
+
+event = {
+	id = 2038620
+	country = MEX
+	one_action = yes
+
+	trigger = {
+		atwar = no
+		event = 2038610 #Carranza leads Mexico!
+		headofstate = 170154 #Venustiano Carranza
+		NOT = { 
+			exists = U57 #Constitucionalistas
+			exists = U58 #Villistas
+			exists = U59 #Zapatistas
+		}
+	}
+   
+	name = "EVT1914_2038620_NAME"
+	desc = "EVT1914_2038620_DESC"
+	picture = "plan_of_agua_prieta"
+	style = 2
+   
+	date = { day = 0 month = january year = 1919 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2038620_ACTIONA"
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = set_domestic which = democratic value = 8 } #social liberal
+		command = { type = set_domestic which = political_left value = 7 }	
+		
+		command = { type = headofstate which = 170202 } #Álvaro Obregón
+		command = { type = headofgovernment which = 170206 } #Álvaro Obregón
+		command = { type = foreignminister which = 170218 } #Cutberto Hidalgo
+		command = { type = armamentminister which = 170226 } #Rafael Zubarán Capmany
+		command = { type = ministerofsecurity which = 170235 } #Plutarco Elías Calles
+		command = { type = ministerofintelligence which = 170280 } #Jacinto Blas Treviño
+		command = { type = chiefofstaff which = 170247 } #Benjamín Hill
+		command = { type = chiefofarmy which = 170260 } #Benjamín Hill
+		command = { type = chiefofnavy which = 170273 } #Benjamín Hill
+		
+		command = { type = sleepminister which = 170200 } #Venustiano Carranza
+		command = { type = sleepleader which = 170356 } #Venustiano Carranza
+		command = { type = sleepleader which = 170394 } #Francisco Murguía López de Lara
+		command = { type = sleepminister which = 170232 } #Manuel Aguirre Berlanga
+		command = { type = sleepminister which = 170245 } #Francisco Luis Urquizo Benavides
+		command = { type = sleepleader which = 170031 } #Francisco Luis Urquizo Benavides
+		
+	}	
+	action = {
+		ai_chance = 5
+		name = "EVT1914_2038620_ACTIONB"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = freedom value = -2 }
+		
+		command = { type = headofstate which = 170281 } #Ignacio Bonillas Frajio
+		command = { type = headofgovernment which = 170282 } #Ignacio Bonillas Frajio
+		command = { type = ministerofsecurity which = 170232 } #Manuel Aguirre Berlanga
+		command = { type = chiefofstaff which = 170245 } #Francisco L. Urquizo
+		command = { type = chiefofarmy which = 170258 } #Francisco L. Urquizo
+		command = { type = chiefofnavy which = 170271 } #Francisco L. Urquizo
+
+		command = { type = sleepminister which = 170202 } #Álvaro Obregón
+		command = { type = sleepleader which = 170396 } #Álvaro Obregón
+		command = { type = sleepminister which = 170205 } #Adolfo de la Huerta
+		command = { type = sleepleader which = 170385 } #Adolfo de la Huerta
+		command = { type = sleepleader which = 170383 } #Rodolfo Herrero
+		command = { type = sleepminister which = 170207 } #Plutarco Elías Calles
+		command = { type = sleepleader which = 170352 } #Plutarco Elías Calles
+		command = { type = sleepminister which = 170247 } #Benjamín Hill
+		command = { type = sleepleader which = 170384 } #Benjamín Hill
+		command = { type = sleepleader which = 170369 } #Ángel Flores
+		command = { type = sleepleader which = 170398 } #Miguel Piña
+		command = { type = sleepleader which = 170362 } #Juan or Roberto Cruz
+		command = { type = sleepminister which = 170249 } #Francisco R. Serrano
+		command = { type = sleepleader which = 170212 } #Fructuoso Méndez
+	}
+}
+
+event = {
+	id = 2038621
+	country = U58 #Villistas
+	
+	name = "EVT1914_2038621_NAME"
+	desc = "EVT1914_2038621_DESC"
+	picture = "Peace_conference"
+	style = 2
+   
+	action = {
+		ai_chance = 80
+		name = "EVT1914_2038621_ACTIONA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = war which = U57 }
+		command = { type = dissent value = -5 }
+		command = { type = clrflag which = MEX_Convention }
+	}     
+	action = {
+		trigger = { ai = yes }
+		ai_chance = 20
+		name = "EVT1914_2038621_ACTIONB"
+		command = { type = trigger which = 2038607 } #U57 Villistas submit to us
+	}
+}
+
+event = {
+	id = 2038622
+	country = U59 #Zapatistas
+	
+	name = "EVT1914_2038621_NAME"
+	desc = "EVT1914_2038621_DESC"
+	picture = "Peace_conference"
+	style = 2
+   
+	action = {
+		ai_chance = 80
+		name = "EVT1914_2038621_ACTIONA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = war which = U57 }
+		command = { type = dissent value = -5 }		
+		command = { type = clrflag which = MEX_Convention }
+	}  	
+	action = {
+		trigger = { ai = yes }
+		ai_chance = 20
+		name = "EVT1914_2038621_ACTIONB"
+		command = { type = trigger which = 2038608 } #U57 Villistas submit to us
+	}
+}

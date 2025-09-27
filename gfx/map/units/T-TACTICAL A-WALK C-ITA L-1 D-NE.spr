@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "Breg-W-NE.bmp"
+	Origin = { x = 110 y = 100 }
+	Frames = 16
+	Speed = 5
+	Palette = "Breg.bmp"
+}

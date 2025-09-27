@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "SPAD13-W-S.bmp"
+	Origin = { x = 95 y = 80 }
+	Frames = 16
+	Speed = 5
+	Palette = "SPAD.bmp"
+}

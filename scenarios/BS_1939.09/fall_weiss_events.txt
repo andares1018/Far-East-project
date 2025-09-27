@@ -1,0 +1,375 @@
+### 900001 POL Polish Strategic Victory
+### 900002 POL Polish Marginal Victory;
+### 900003 GER German Strategic Victory
+### 900004 GER German Marginal Victory
+### 900005 GER Annexation of Free City of Danzig
+### 900006 GER Defense of the Polish Post Office in Danzig
+### 900007 GER Battle of Westerplatte
+### 900008 SOV Stalin proposes early attack
+### 900009 SOV Partition Poland with the Germans
+### 900010 POL We have conquered Berlin!
+### 900011 GER Berlin is lost!
+
+#########################################################################
+#  Polish Strategic Victory
+#########################################################################
+event = {
+	id = 900001
+	random = no
+	country = POL
+
+	trigger = {
+		vp = { country = POL value = 50 }
+	}
+
+	name = "FW_EVT_900001_NAME"
+	desc = "FW_EVT_900001_DESC"
+	picture = "polish_strategic_victory"
+	style = 0
+
+	date = { day = 28 month = october year = 1939 }
+
+	action_a = {
+		name = "FW_EVT_900001_ACTIONA" #End Game
+		command = { type = endgame value = 6 }
+	}
+}
+#########################################################################
+#  Polish Marginal Victory
+#########################################################################
+event = {
+	id = 900002
+	random = no
+	country = POL
+
+	trigger = {
+		vp = { country = POL value = 1 }
+		NOT = { vp = { country = POL value = 50 } }
+	}
+
+	name = "FW_EVT_900002_NAME"
+	desc = "FW_EVT_900002_DESC"
+	picture = "polish_marginal_victory"
+	style = 0
+
+	date = { day = 28 month = october year = 1939 }
+
+	action_a = {
+		name = "FW_EVT_900001_ACTIONA" #End Game
+		command = { type = endgame value = 5 }
+	}
+}
+#########################################################################
+#  German Strategic Victory
+#########################################################################
+event = {
+	id = 900003
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = { vp = { country = POL value = 1 } }
+		NOT = { losses = { country = GER type = manpower value = 75000 data = 0 } }
+	}
+
+	name = "FW_EVT_900003_NAME"
+	desc = "FW_EVT_900003_DESC"
+	picture = "german_strategic_victory"
+	style = 0
+
+	date = { day = 0 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = october year = 1939 }
+
+	action_a = {
+		name = "FW_EVT_900001_ACTIONA" #End Game
+		command = { type = endgame value = 4 }
+	}
+}
+#########################################################################
+#  German Marginal Victory
+#########################################################################
+event = {
+	id = 900004
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = { vp = { country = POL value = 1 } }
+		losses = { country = GER type = manpower value = 75000 data = 0 }
+	}
+
+	name = "FW_EVT_900004_NAME"
+	desc = "FW_EVT_900004_DESC"
+	picture = "german_marginal_victory3"
+	style = 0
+
+	date = { day = 28 month = october year = 1939 }
+
+	action_a = {
+		name = "FW_EVT_900001_ACTIONA" #End Game
+		command = { type = endgame value = 3 }
+	}
+}
+
+event = {
+ 	id = 900005
+ 	random = no
+ 	country = GER
+ 
+ 	trigger = {
+		exists = GER
+	}
+ 
+ 	name = "FW_EVT_900005_NAME"
+ 	desc = "FW_EVT_900005_DESC"
+	picture = "german_strategic_defeat2"
+ 	style = 0
+ 
+	date = { day = 1 month = may year = 1939 }
+	offset = 1 
+	deathdate = { day = 17 month = september year = 1939 }
+ 
+ 	action_a = {
+ 		name = ACTION_NAME_OK
+ 		command = { type = inherit which = U06 }
+ 	}
+}
+
+event = {
+ 	id = 900006
+ 	random = no
+ 	country = GER
+ 
+ 	trigger = {
+		control = { province = 181 data = GER }
+	}
+ 
+ 	name = "FW_EVT_900006_NAME"
+ 	desc = "FW_EVT_900006_DESC"
+	picture = "german_strategic_defeat2"
+ 	style = 0
+	
+	date = { day = 1 month = may year = 1939 }
+	offset = 1 
+	deathdate = { day = 17 month = september year = 1939 }
+ 
+ 	action_a = {
+ 		name = "FW_EVT_900006_ACTIONA"
+		command = { type = revolt which = 181 }
+ 	}
+}
+
+event = {
+ 	id = 900007
+ 	random = no
+ 	country = GER
+ 
+ 	trigger = {
+		control = { province = 181 data = GER }
+	}
+ 
+ 	name = "FW_EVT_900007_NAME"
+ 	desc = "FW_EVT_900007_DESC"
+	picture = "german_strategic_defeat2"
+ 	style = 0
+	
+	date = { day = 1 month = may year = 1939 }
+	offset = 1 
+	deathdate = { day = 17 month = september year = 1939 }
+ 
+ 	action_a = {
+		name = ACTION_NAME_FIGHT
+		command = { }
+ 	}
+}
+
+#########################################################################
+#  Stalin proposes early attack
+#########################################################################
+
+event = {
+	id = 900008
+	random = no
+	country = SOV
+
+	trigger = {
+		random = 5
+		NOT = { war = { country = POL country = SOV } }
+	}
+
+	name = "FW_EVT_900008_NAME"
+	desc = "FW_EVT_900008_DESC"
+	picture = "stalin_proposes"
+	style = 0
+
+	date = { day = 0 month = september year = 1939 }
+	offset = 3 # Check for trigger conditions every three days
+	deathdate = { day = 16 month = september year = 1939 }
+
+	action_a = {
+		name = "FW_EVT_900008_ACTIONA" #No to dangerous
+		command = {  }
+	}
+	action_b = {
+		name = "FW_EVT_900008_ACTIONB" #Yes do it
+		command = { type = war which = POL }
+		command = { type = vp value = -5 }
+		command = { type = sleepevent which = 2 }
+	}
+}
+
+#########################################################################
+#  Partition Poland with the Germans
+#########################################################################
+
+
+event = {
+	id = 900009
+	random = no
+	country = SOV
+
+
+	name = "FW_EVT_900009_NAME"
+	desc = "FW_EVT_900009_DESC"
+	picture = "partition_poland"
+	style = 0
+
+	date = { day = 16 month = september year = 1939 }
+
+	action_a = {
+		name = "FW_EVT_900009_ACTIONA" #Ok
+		command = { type = war which = POL }
+		command = { type = sleepevent which = 1 }
+		command = { type = unlock_division which = 10846 value = 1 }
+		command = { type = unlock_division which = 10846 value = 2 }
+		command = { type = unlock_division which = 10846 value = 3 }
+		command = { type = unlock_division which = 10846 value = 4 }
+		command = { type = unlock_division which = 10846 value = 5 }
+		command = { type = unlock_division which = 10846 value = 6 }
+		command = { type = unlock_division which = 10846 value = 7 }
+		command = { type = unlock_division which = 10846 value = 8 }
+		command = { type = unlock_division which = 10846 value = 9 }
+		command = { type = unlock_division which = 10846 value = 10 }
+		command = { type = unlock_division which = 10846 value = 11 }
+		command = { type = unlock_division which = 10846 value = 12 }
+		command = { type = unlock_division which = 10846 value = 13 }
+		command = { type = unlock_division which = 10846 value = 14 }
+		command = { type = unlock_division which = 10846 value = 15 }
+		command = { type = unlock_division which = 10846 value = 16 }
+		command = { type = unlock_division which = 10846 value = 17 }
+		command = { type = unlock_division which = 10846 value = 18 }
+		command = { type = unlock_division which = 10846 value = 19 }
+		command = { type = unlock_division which = 10846 value = 20 }
+		command = { type = unlock_division which = 10846 value = 21 }
+		command = { type = unlock_division which = 10846 value = 22 }
+		command = { type = unlock_division which = 10846 value = 23 }
+		command = { type = unlock_division which = 10846 value = 24 }
+		command = { type = unlock_division which = 10846 value = 25 }
+		command = { type = unlock_division which = 10846 value = 26 }
+		command = { type = unlock_division which = 10846 value = 27 }
+		command = { type = unlock_division which = 10846 value = 28 }
+		command = { type = unlock_division which = 10846 value = 29 }
+		command = { type = unlock_division which = 10846 value = 30 }
+		command = { type = unlock_division which = 10846 value = 31 }
+		command = { type = unlock_division which = 10846 value = 32 }
+		command = { type = unlock_division which = 10846 value = 33 }
+		command = { type = unlock_division which = 10846 value = 34 }
+		command = { type = unlock_division which = 10846 value = 35 }
+		command = { type = unlock_division which = 10846 value = 36 }
+		command = { type = unlock_division which = 10846 value = 37 }
+		command = { type = unlock_division which = 10846 value = 38 }
+		command = { type = unlock_division which = 10846 value = 39 }
+		command = { type = unlock_division which = 10846 value = 40 }
+		command = { type = unlock_division which = 10846 value = 41 }
+		command = { type = unlock_division which = 10846 value = 42 }
+		command = { type = unlock_division which = 10846 value = 43 }
+		command = { type = unlock_division which = 10846 value = 44 }
+		command = { type = unlock_division which = 10846 value = 45 }
+		command = { type = unlock_division which = 10846 value = 46 }
+		command = { type = unlock_division which = 10846 value = 47 }
+		command = { type = unlock_division which = 10846 value = 48 }
+		command = { type = unlock_division which = 10846 value = 49 }
+		command = { type = unlock_division which = 10846 value = 50 }
+		command = { type = unlock_division which = 10846 value = 51 }
+		command = { type = unlock_division which = 10846 value = 52 }
+		command = { type = unlock_division which = 10846 value = 53 }
+		command = { type = unlock_division which = 10846 value = 54 }
+		command = { type = unlock_division which = 10846 value = 55 }
+		command = { type = unlock_division which = 10846 value = 56 }
+		command = { type = unlock_division which = 10846 value = 57 }
+		command = { type = unlock_division which = 10846 value = 58 }
+		command = { type = unlock_division which = 10846 value = 59 }
+		command = { type = unlock_division which = 10846 value = 60 }
+		command = { type = unlock_division which = 10846 value = 61 }
+		command = { type = unlock_division which = 10846 value = 62 }
+		command = { type = unlock_division which = 10846 value = 63 }
+		command = { type = unlock_division which = 10846 value = 64 }
+		command = { type = unlock_division which = 10846 value = 65 }
+		command = { type = unlock_division which = 10846 value = 66 }
+		command = { type = unlock_division which = 10846 value = 67 }
+		command = { type = unlock_division which = 10846 value = 68 }
+		command = { type = unlock_division which = 10846 value = 69 }
+		command = { type = unlock_division which = 10846 value = 70 }
+		command = { type = unlock_division which = 10846 value = 71 }
+		command = { type = unlock_division which = 10846 value = 72 }
+		command = { type = unlock_division which = 10846 value = 73 }
+		command = { type = unlock_division which = 10846 value = 74 }
+		command = { type = unlock_division which = 10846 value = 75 }
+		command = { type = unlock_division which = 10846 value = 76 }
+		command = { type = unlock_division which = 10846 value = 77 }
+		command = { type = unlock_division which = 10846 value = 78 }
+		command = { type = unlock_division which = 10846 value = 79 }
+		command = { type = unlock_division which = 10846 value = 80 }
+		command = { type = unlock_division which = 10846 value = 81 }
+		command = { type = unlock_division which = 10846 value = 82 }
+		command = { type = unlock_division which = 10846 value = 83 }
+		command = { type = unlock_division which = 10846 value = 84 }
+	}
+}
+
+#########################################################################
+#  We have conquered Berlin!
+#########################################################################
+event = {
+	id = 900010
+	random = no
+	country = POL
+
+	trigger = {
+		control = { province = 163 data = -1 }
+	}
+
+	name = "FW_EVT_900010_NAME"
+	desc = "FW_EVT_900010_DESC"
+	picture = "berlin_in_ruins"
+	style = 0
+
+	date = { day = 1 month = october year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = october year = 1939 }
+
+	action_a = {
+		name = "FW_EVT_900010_ACTIONA" #Yes we did it!
+		command = { type = vp value = 25 }
+		command = { type = trigger which = 9 }
+	}
+}
+#########################################################################
+#  Berlin is lost!
+#########################################################################
+event = {
+	id = 900011
+	random = no
+	country = GER
+
+	name = "FW_EVT_900011_NAME"
+	desc = "FW_EVT_900011_DESC"
+	picture = "surrender"
+	style = 0
+
+	action_a = {
+		name = "FW_EVT_900011_ACTIONA" #Oh! No
+		command = { type = vp value = -25 }
+	}
+}

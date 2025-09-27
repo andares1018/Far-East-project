@@ -1,0 +1,73 @@
+## STRING NAME (do not change!);English;French;Italian;Spanish;German;Polish;Portuguese;Russian;Extra1;Extra2;X
+## ========================;========================;========================;========================;========================;========================;========================;========================;========================;;========================;X
+##;;;;;;;;;;;X
+##;MAJOR NOTE ABOUT THIS FILE:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;This file is loaded after all other text files and can be used to replace previously defined strings.;;;;;;;;;;X
+##;On every successful replacement a note will be logged in savedebug.txt (extra debug logs must be enabled from settings.cfg for that), instead of an error which is trigered for replacements made by other text files.;;;;;;;;;;X
+##;Redefined engine strings must match exactly the format used by original text or the game could behave abnormally.;;;;;;;;;;X
+##;Run the game with extra debug logs set to level 2 in settings.cfg to ensure that there are no issues with redefined texts (any erors will be reported in savedebug.txt file in your main game folder).;;;;;;;;;;X
+##;This file is the best place for all strings of user mods.;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;EDITING TIPS:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;Open this document in Excel, version 5 or later.;;;;;;;;;;X
+##;To convert the semicolon-separated list to a normal Excel table, first click on the 'A' above to select the entire 'A' column.;;;;;;;;;;X
+##;Select 'Data' -> 'Text to Columns' -> 'Delimited' -> 'Next';;;;;;;;;;X
+##;Check 'Semicolon' (ONLY!) -> 'Finish';;;;;;;;;;X
+##;Select column 'A' through 'K' (click + drag on letters above columns);;;;;;;;;;X
+##;Right-click anywhere on the sheet (inside the selection) and select 'Column width' and set it so that only THREE columns are visible ('45' with 1024 x 768 screen resolution);;;;;;;;;;X
+##;Right-click anywhere on the sheet again (still inside the selection) and select 'Format Cells' -> 'Alignment' -> check 'Wrap Text' + select 'Vertical: Top' -> 'OK';;;;;;;;;;X
+##;Place the cursor in cell C2 and select 'Window' -> 'Freeze Panes' (allows you to scroll horizontally to see any language in the rightmost column while still having the string names/comments and the English original text in the left and middle column;;;;;;;;;;X
+##;CAREFULLY read the instructions in cells B26 - B68;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;NOTES TO TRANSLATORS:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;1) '%s' is for indicating where another string is inserted by the engine, and MAY NEVER BE REMOVED! If there are more than one '%s' in a string, they may NOT CHANGE PLACES.;;;;;;;;;;X
+##;2) '%d' is for indicating where integer value is inserted by the engine, and MAY NEVER BE REMOVED! If there are more than one '%d' in a string, they may not change places.;;;;;;;;;;X
+##;3) '%.0f' is for indicating where non-integer value is inserted by the engine, and MAY NEVER BE REMOVED! 0 can be replaced by another number and defines displayed digits after the decimal point. Add '+' in front of '.' (example: '%+.2f') to display the sign of the number.;;;;;;;;;;X
+##;4) '%c' is for indicating where a single character is inserted by the engine, and MAY NEVER BE REMOVED! ;;;;;;;;;;X
+##;5) '\%%' can be used to display a single '%' character in texts. Use that with caution and avoid if possible as it could cause issues if used improperly.;;;;;;;;;;X
+##;6) '%t' is for indicating where the player's 'title' is inserted, however only in game message boxes.;;;;;;;;;;X
+##;7) The characters '#' (hashmark), semicolon, '%' (percentage sign), '¶' (paragraph sign), quotation marks and '\' (backslash) MAY NOT BE USED (except when used as control codes as this will otherwise create serious problems!!! Quotation marks may not even be used in comments -- use a 'citation mark' (single) instead if necessary!);;;;;;;;;;X
+##;8) A dollar sign, '$' will always automatically be replaced by the 'ducats' icon.;;;;;;;;;;X
+##;9) Any row with a '#' in the first column (column 'A') will be ignored. However, you cannot use any paragraph characters in these rows!!!;;;;;;;;;;X
+##;10) To insert a carriage return, insert a '\n' (backslash + n);;;;;;;;;;X
+##;11) No formatting can be done in this file. To change the color of a text, insert the following codes in front of the word:;;;;;;;;;;X
+##;TEXT COLORS (Red,Green,Blue values):;;;;;;;;;;X
+##;§A;0,64,0;;;;;;;;;X
+##;§B;0,0,192;;;;;;;;;X
+##;§C;128,0,0;;;;;;;;;X
+##;§D;255,255,0;;;;;;;;;X
+##;§E;255,0,255;;;;;;;;;X
+##;§F;255,128,0;;;;;;;;;X
+##;§G;0,100,0;;;;;;;;;X
+##;§H;128,128,128;;;;;;;;;X
+##;§I;0,0,255;;;;;;;;;X
+##;§J;0,192,0;;;;;;;;;X
+##;§M;100,255,100;;;;;;;;;X
+##;§N;255,100,100;;;;;;;;;X
+##;§R;240,0,0;;;;;;;;;X
+##;§W;255,255,255;;;;;;;;;X
+##;§Y;208,232,248;;;;;;;;;X
+##;§Z;0,0,0;;;;;;;;;X
+##;§§;restores old color;;;;;;;;;X
+##;Note that the color change will be applied to all words after the code, until the end of the line that the word is printed on. If several words should have a color change, put the code in front of each of them to be on the safe side. If only one word should have a color change, make sure to reset the color after the word.;;;;;;;;;;X
+##;12) Unless otherwise specifically stated, length of words and texts does not really matter THAT much (message boxes, rollover help boxes and buttons WILL stretch to fit the text string). However you will notice once the translation is inserted that space IS limited in quite a few areas so be brief, and try not to use words that are considerably longer than the English original.;;;;;;;;;;X
+##;13) ALL CELLS in column 'L' in this document MUST contain a character!;;;;;;;;;;X
+##;14) The LAST CELL in the 'A' column MUST contain the string '#EOF';;;;;;;;;;X
+##;15) If you want to begin a string with a ' (citation mark), you will need to type it twice (Excel will read the first one as a commentary which is not exported into the actual text database file);;;;;;;;;;X
+##;16) Test any special punctuation symbols and characters for proper displaying by the game first, before using those in other texts.;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;WHEN DONE:;;;;;;;;;;X
+##;Save as 'Semicolon Separated (.csv)' format, and make sure file name is not changed.;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;NOTE:;;;;;;;;;;X
+##;If Excel complains about an 'Error in formula' when the cell content begins with a '+' or '-' sign, type a ' (citation mark) in front of the plus or minus.;;;;;;;;;;X
+##;;;;;;;;;;;X
+## ========================;========================;========================;========================;========================;========================;========================;========================;========================;;========================;X
+## LANGUAGE;English;French;Italian;Spanish;German;Polish;Portuguese;Russian;Extra1;Extra2;X
+## ========================;========================;========================;========================;========================;========================;========================;========================;========================;;========================;X
+#EOF;;;;;;;;;;;X

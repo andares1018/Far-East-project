@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "HaP-W-S.bmp"
+	Origin = { x = 100 y = 100 }
+	Frames = 16
+	Speed = 5
+	Palette = "HaP.bmp"
+}

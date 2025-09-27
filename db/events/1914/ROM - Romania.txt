@@ -1,0 +1,184 @@
+###
+### Romanian events (ROM - 023)
+###
+### By Rhysaxiel
+###
+### 2023500 : Hungary is invaded !
+### 2023501	: Galicia is invaded !
+### 2023502 : Armistice ! 
+### 2023503 : Treaty of Bucarest
+event = {
+	id = 2023500	# Hungary is invaded
+	country = ROM
+
+	#triggered by FRA 2002504
+   
+	name = "EVT1914_2023500_NAME"
+	desc = "EVT1914_2023500_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action_a = {
+		name = "EVT1914_2023500_ACTIONA" # It's time to join the winning side !
+		ai_chance= 95
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = trigger which = 2002505 }
+	}
+	action_b = {
+		name = "EVT1914_2023500_ACTIONB" # Stay neutral
+		ai_chance = 5
+		command = { type = relation which = FRA value = -10 }
+	}
+}
+event = {
+	id = 2023501	# Galicia is invaded !
+	country = ROM
+
+	# triggered by FRA 2002506
+   
+	name = "EVT1914_2023501_NAME"
+	desc = "EVT1914_2023501_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	action = {
+		name = "EVT1914_2023501_ACTIONA" # It's time to join the winning side !
+		command = { type = alliance which = FRA when = 1 }
+		command = { trigger = { NOT = { policy = { type = professional_army value = 8 } } } type = trigger which = 1350007 } #Mobilize?
+		command = { type = trigger which = 2002505 }
+	}
+}
+#Defeat
+event = {
+	id = 2023502	# Armistice !
+	country = ROM
+	
+	trigger = {
+		war = { country = ROM  country = U09 }
+		OR = {
+			#If Russia left (or became SOV) Romania surrenders easily
+			AND = {
+				lost_national = { country = ROM value = 10 }
+				OR = { 
+					NOT = { war = { country = RUS country = U09 } } # Russia has left
+					event = 2104530 #RUS revolution
+				}
+			}
+			#Romania lost most of its provinces
+			lost_national = { country = ROM value = 80 }
+			#Romania lost its VP
+			NOT = { 
+				control = { province = 311 data = ROM } #Ploesti
+				control = { province = 316 data = ROM }	#Bucharest
+			}
+		}
+	}
+	
+	name = "EVT1914_2023502_NAME"
+	desc = "EVT1914_2023502_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+	name = "EVT1914_2023502_ACTIONA" # We are defeated
+	command = { trigger = { ai = no} type = dissent value = 5 }
+		command = { trigger = { 
+					participant = { country = ROM value = 1 } #part of the Entente		
+					alliance = { country = ROM country = ITA } 
+					NOT = { 
+						alliance = { country = ROM country = FRA }
+						alliance = { country = ROM country = ENG }
+						alliance = { country = ROM country = RUS } 
+						alliance = { country = ROM country = USA } } } 
+				type = alliance_leader which = ITA where = 0 } #ITA becomes leader of the alliance	
+		command = { trigger = { 
+					participant = { country = ROM value = 1 } #part of the Entente		
+					alliance = { country = ROM country = GRE } 
+					NOT = { 
+						alliance = { country = ROM country = FRA }
+						alliance = { country = ROM country = ENG }
+						alliance = { country = ROM country = RUS } 
+						alliance = { country = ROM country = USA } 
+						alliance = { country = ROM country = ITA } } } 
+				type = alliance_leader which = GRE where = 0 } #GRE becomes leader of the alliance	
+	command = { type = leave_alliance when = 1 }
+	command = { type = peace which = U08 value = 1 }
+	command = { type = peace which = U09 value = 1 }
+	command = { type = secedearea which = U09 value = "Transylvania" }
+	command = { type = secedeprovince which = U09 value = 300 } #Cernauti
+	command = { type = secedeprovince which = U09 value = 301 } #Suceava
+	# demobilization (only 10 units at 33% strenght, around 40 000 men as per Treaty of Bucharest)
+	command = { type = demobilize which = land when = 0 where = 0 value = 10 }
+	command = { type = strength which = land when = 0 where = 0 value = 0.33 }
+	command = { type = strength which = air when = 0 where = 0 org = 0 value = 0 } #remove all air units	
+	}
+}
+# Historical Treaty of Bucarest
+event = {
+	id = 2023503	# Treaty of Bucarest
+	country = ROM
+
+	trigger = { 
+		event = 2023502 #armistice
+		random = 25
+	}
+   
+	name = "EVT1914_2023503_NAME"
+	desc = "EVT1914_2023503_DESC" 
+	style = 2
+	picture = "news_paper"
+	
+	date = { day = 28 month = june year = 1914 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "EVT1914_2023503_ACTIONA" # Romania lives its darkest hour...
+		#Secede Southern Dobruja to BUL if BUL is part of Central Powers
+		command = { trigger =  { participant = { country = BUL value = 2 } } type = secedeprovince which = BUL value = 307 when = 1 } #Dobrich
+		command = { trigger =  { participant = { country = BUL value = 2 } } type = secedeprovince which = BUL value = 310 when = 1 } #Costanza
+		command = { trigger =  { participant = { country = BUL value = 2 } } type = secedeprovince which = BUL value = 313 when = 1 } #Sulina	
+		command = { trigger =  { participant = { country = BUL value = 2 } } type =	addcore which = 310	where = BUL } #Costanza
+		command = { trigger =  { participant = { country = BUL value = 2 } } type =	addclaim which = 313 where = BUL } #Sulina		
+		#Otherwise province becomes military occupied by GER
+	#	command = { trigger =  { NOT = { participant = { country = BUL value = 2 } } } type = secedeprovince which = U08 value = 307 } #Dobrich
+	#	command = { trigger =  { NOT = { participant = { country = BUL value = 2 } } } type = addclaim which = 307 where = U08 } #Dobrich		
+		#Wallachia and Northern Dobruja get military occupied by GER
+	#	command = { type = secedeprovince which = U08 value = 310 } #Costanza
+	#	command = { type = secedeprovince which = U08 value = 313 } #Sulina
+	#	command = { type = secedeprovince which = U08 value = 309 } #Braila
+	#	command = { type = secedeprovince which = U08 value = 314 } #Calarasi
+	#	command = { type = secedeprovince which = U08 value = 311 } #Ploesti
+	#	command = { type = secedeprovince which = U08 value = 316 } #Bucharest
+	#	command = { type = secedeprovince which = U08 value = 308 } #Giurgiu
+	#	command = { type = secedeprovince which = U08 value = 315 } #Craiova	
+	#	command = { type = secedeprovince which = U08 value = 312 } #Turnu Severin
+	#	command = { type = addclaim which = 310 where = U08 } #Costanza
+	#	command = { type = addclaim which = 313 where = U08 } #Sulina
+	#	command = { type = addclaim which = 309 where = U08 } #Braila
+	#	command = { type = addclaim which = 314 where = U08 } #Calarasi
+	#	command = { type = addclaim which = 311 where = U08 } #Ploesti
+	#	command = { type = addclaim which = 316 where = U08 } #Bucharest
+	#	command = { type = addclaim which = 308 where = U08 } #Giurgiu
+	#	command = { type = addclaim which = 315 where = U08 } #Craiova	
+	#	command = { type = addclaim which = 312 where = U08 } #Turnu Severin
+		#Central Powers get military access through ROM
+		command = { trigger = { participant = { country = U08 value = 2 } } type = access which = U08 }
+		command = { trigger = { participant = { country = U09 value = 2 } } type = access which = U09 }
+		command = { trigger = { participant = { country = BUL value = 2 } } type = access which = BUL }
+		command = { trigger = { participant = { country = OTT value = 2 } } type = access which = OTT }
+		#Besserabia secede to ROM now in case Treaty of Bucharest triggered after Peace of Brest-Litovsk (harsh)	
+		command = { trigger = { event = 2007530 owned = { province = 306 data = U09 } } type = secedeprovince which = ROM value = 306 when = 2 } #Ismail
+		command = { trigger = { event = 2007530 owned = { province = 304 data = U09 } } type = secedeprovince which = ROM value = 304 when = 2 } #Chisinau	
+		command = { trigger = { event = 2007530 owned = { province = 303 data = U09 } } type = secedeprovince which = ROM value = 303 when = 2 } #Balti
+		command = { trigger = { event = 2007530 owned = { province = 305 data = U09 } } type = secedeprovince which = ROM value = 305 when = 2 } #Cahul	
+		#Marghiloman becomes Head of Government		
+		command = { trigger = { NOT = { year = 1918 } } type = wakeminister which = 110152 }
+		command = { type = headofgovernment which = 110152 } # Alexandru Marghiloman 1918 SC
+	}
+}

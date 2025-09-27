@@ -1,0 +1,12 @@
+garrison = {
+	# Borders with specific countries
+	country_priorities = {
+		DEN = -1
+		U09 = -1	
+		HOL = -1
+		SCH = -1
+		BEL = -1
+		FRA = 50
+		RUS = 10
+		}
+}

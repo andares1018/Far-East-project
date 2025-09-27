@@ -1,0 +1,13 @@
+# England sends fleet into the Channel
+
+admiral = { 
+	ignore = {
+		"Southeast Northsea"
+		"kattegat"
+		"Bothnian Bay"
+		"northern baltic"
+		"southern baltic"
+		"East North Sea"
+		"Norwegian Sea"
+	}
+}

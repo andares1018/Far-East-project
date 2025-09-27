@@ -1,0 +1,396 @@
+# Anhui Politics Events (Includes Pre-Anhui) #TODO: Incomplete
+# By Limith
+#-General Political Instability------------
+# UCH 133011900 Political Instability in the Beiyang Administration
+#-Head of Government Changes---------------
+# UCH 133011901 Head of Government Changes (Historical) # http://en.wikipedia.org/wiki/List_of_premiers_of_the_Republic_of_China
+# UCH 133011907 Head of Government Changes (Ahistorical)
+#-Head of State Changes--------------------
+# UCH 133011902 Head of State Changes (Historical) # http://en.wikipedia.org/wiki/List_of_Presidents_of_the_Republic_of_China
+# UCH 133011908 Head of State Changes (Ahistorical)
+#-Assasinations----------------------------
+# UCH 133011903 Minister Assasinations (Historical)
+#-Graft/Exile/Etc--------------------------
+# UCH 133011904 Minister Investigated for Corruption
+# UCH 133011905 Minister Exiled by Ruling Coalition
+# UCH 133011906 Minister Forgiven by Ruling Coalition
+#-Other------------------------------------
+# UCH 133011909 Sudden Cabinet Change (FM)
+# UCH 133011910 Sudden Cabinet Change (AM)
+# UCH 133011911 Sudden Cabinet Change (SM)
+# UCH 133011912 Sudden Cabinet Change (IM)
+# UCH 133011913 Sudden Cabinet Change (CoS)
+# UCH 133011914 Sudden Cabinet Change (CoA)
+
+# TODO: Sleep ALL on Zhili Takeover
+#################################
+# General Political Instability #
+#################################
+
+# Political Instability in the Beiyang Administration
+event = {
+	id = 133011900
+	random = no
+	country = UCH
+	
+	#Triggered
+	
+	name = EVT1914_133011900_NAME
+	desc = EVT1914_133011900_DESC
+
+	style = 2
+	picture = "ccip_npw"
+
+	action = {
+		name = ACTION_NAME_UNFORTUNATE
+		command = { }
+	}
+}
+
+##############################
+# Head of Government Changes #
+##############################
+
+# Head of Government Changes (Historical)
+event = {
+	id = 133011901
+	random = no
+	country = UCH
+	persistent = yes
+	
+	trigger = {
+		or = {
+			and = {
+				and = {
+					month = may
+					year = 1914
+				}
+				not = {
+					and = {
+						year = 1916
+						month = april
+					}
+				}
+				not = { local_flag = 901_1 }
+				not = { headofgovernment = 1325114 }
+			}
+			and = {
+				and = {
+					month = november
+					year = 1917
+				}
+				not = {
+					and = {
+						year = 1917
+						month = december
+					}
+				}
+				not = { local_flag = 901_2 }
+				not = { headofgovernment = 1325311 }
+			}
+			and = {
+				and = {
+					month = december
+					year = 1917
+				}
+				not = {
+					and = {
+						year = 1918
+						month = march
+					}
+				}
+				not = { local_flag = 901_3 }
+				not = { headofgovernment = 1325218 }
+			}
+			and = {
+				and = {
+					month = march
+					year = 1918
+				}
+				not = {
+					and = {
+						year = 1918
+						month = april
+					}
+				}
+				not = { local_flag = 901_4 }
+				not = { headofgovernment = 1325225 }
+			}
+			and = {
+				and = {
+					month = april
+					year = 1918
+				}
+				not = {
+					and = {
+						year = 1918
+						month = november
+					}
+				}
+				not = { local_flag = 901_5 }
+				not = { headofgovernment = 1325120 }
+			}
+			and = {
+				and = {
+					month = november
+					year = 1918
+				}
+				not = {
+					and = {
+						year = 1919
+						month = july
+					}
+				}
+				not = { local_flag = 901_6 }
+				not = { headofgovernment = 1325225 }
+			}
+			and = {
+				and = {
+					month = october
+					year = 1919
+				}
+				not = {
+					and = {
+						year = 1920
+						month = june
+					}
+				}
+				not = { local_flag = 901_8 }
+				not = { headofgovernment = 1325230 }
+			}
+			and = {
+				and = {
+					month = august
+					year = 1920
+				}
+				not = {
+					and = {
+						year = 1921
+						month = december
+					}
+				}
+				not = { local_flag = 901_10 }
+				not = { headofgovernment = 1325230 }
+			}
+		}
+	}
+
+	name = EVT1914_133011901_NAME
+	desc = EVT1914_133011901_DESC
+
+	style = 2
+	picture = "ccip_npw"
+	
+	date = { day = 0 month = 0 year = 1914 }
+	offset = 10
+	deathdate = { day = 0 month = 0 year = 1927 }
+	
+	action = {
+		trigger = {
+			and = {
+				month = may
+				year = 1914
+			}
+			not = {
+				and = {
+					year = 1916
+					month = april
+				}
+			}
+			not = { local_flag = 901_1 }
+			not = { headofgovernment = 1325114 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325114 } # Xu Shichang
+		command = { type = headofgovernment which = 1325114 } # Xu Shichang
+		command = { type = local_setflag which = 901_1 }
+	}
+
+	action = {
+		trigger = {
+			and = {
+				month = november
+				year = 1917
+			}
+			not = {
+				and = {
+					year = 1917
+					month = december
+				}
+			}
+			not = { local_flag = 901_2 }
+			not = { headofgovernment = 1325311 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325311 } # Wang Daxie
+		command = { type = headofgovernment which = 1325311 } # Wang Daxie
+		command = { type = local_setflag which = 901_2 }
+	}
+
+	action = {
+		trigger = {
+			and = {
+				month = december
+				year = 1917
+			}
+			not = {
+				and = {
+					year = 1918
+					month = march
+				}
+			}
+			not = { local_flag = 901_3 }
+			not = { headofgovernment = 1325218 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325218 } # Wang Shizhen
+		command = { type = headofgovernment which = 1325218 } # Wang Shizhen
+		command = { type = local_setflag which = 901_3 }
+	}
+
+	action = {
+		trigger = {
+			and = {
+				month = march
+				year = 1918
+			}
+			not = {
+				and = {
+					year = 1918
+					month = april
+				}
+			}
+			not = { local_flag = 901_4 }
+			not = { headofgovernment = 1325225 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325225 } # Qian Nengxun
+		command = { type = headofgovernment which = 1325225 } # Qian Nengxun
+		command = { type = local_setflag which = 901_4 }
+	}
+
+	action = {
+		trigger = {
+			and = {
+				month = april
+				year = 1918
+			}
+			not = {
+				and = {
+					year = 1918
+					month = november
+				}
+			}
+			not = { local_flag = 901_5 }
+			not = { headofgovernment = 1325120 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325120 } # Duan Qirui
+		command = { type = headofgovernment which = 1325120 } # Duan Qirui
+		command = { type = local_setflag which = 901_5 }
+	}
+
+	action = {
+		trigger = {
+			and = {
+				month = november
+				year = 1918
+			}
+			not = {
+				and = {
+					year = 1919
+					month = july
+				}
+			}
+			not = { local_flag = 901_6 }
+			not = { headofgovernment = 1325225 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325225 } # Qian Nengxun
+		command = { type = headofgovernment which = 1325225 } # Qian Nengxun
+		command = { type = local_setflag which = 901_6 }
+	}
+
+	# TODO: Gong Xinzhan skipped cause not in minister file.
+
+	action = {
+		trigger = {
+			and = {
+				month = october
+				year = 1919
+			}
+			not = {
+				and = {
+					year = 1920
+					month = june
+				}
+			}
+			not = { local_flag = 901_8 }
+			not = { headofgovernment = 1325230 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325230 } # Jin Yunpeng
+		command = { type = headofgovernment which = 1325230 } # Jin Yunpeng
+		command = { type = local_setflag which = 901_8 }
+	}
+
+	# TODO: Sa Zhenbing skipped cause not in minister file.
+
+	action = {
+		trigger = {
+			and = {
+				month = august
+				year = 1920
+			}
+			not = {
+				and = {
+					year = 1921
+					month = december
+				}
+			}
+			not = { local_flag = 901_10 }
+			not = { headofgovernment = 1325230 }
+		}
+		name = EVT1914_133011901_ACCEPT
+		command = { type = wakeminister which = 1325230 } # Jin Yunpeng
+		command = { type = headofgovernment which = 1325230 } # Jin Yunpeng
+		command = { type = local_setflag which = 901_10 }
+	}
+
+	action = {
+		trigger = {
+			ai = no
+		}
+		name = EVT1914_133011901_DECLINE
+		command = { type = dissent value = 3 }
+	}
+
+}
+
+#########################
+# Head of State Changes #
+#########################
+
+# Head of State Changes (Historical)
+event = {
+	id = 133011902
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011902_NAME
+	desc = EVT1914_133011901_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	action = {
+		name = EVT1914_133011902_ACTIONA #"Feng Guozhang has been ousted from power!"
+		command = { type = wakeminister which = 1325224 }
+		command = { type = headofstate which = 1325224 }
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 133011302 }
+	}
+}
+	

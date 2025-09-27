@@ -1,0 +1,7 @@
+Sprite = {
+	Bitmap = "T-CAS A-FIRE C-GER L-3 D-SW.bmp"
+	Origin = { x = 65 y = 75 }
+	Frames = 16
+	Speed = 3
+	Palette = "STUKA.bmp"
+}

@@ -1,0 +1,25 @@
+# Soviet Finland AI File by Lothos
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	province_priorities = {
+     	553  = 150  #Leningrad 
+		617  = 50  #Kiev
+		627  = 50  #Dnepropetrovsk
+		663  = 50  #Stalingrad
+		636  = 50  #Kharkov
+		587  = 50  #Bryansk
+		1191  = 50  #Vladivostock
+		535  = 50  #Murmansk
+     	531 = 20 # Viipuri 
+     	525 = 50 # Helsinki 
+		566   = 20  # Pskov
+		597   = 20
+	}
+	area_multiplier = {
+		535  = 1.2  #Murmansk
+     	553  = 3.0  #Leningrad 
+	}
+}

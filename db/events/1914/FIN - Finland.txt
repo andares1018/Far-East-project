@@ -1,0 +1,805 @@
+###  2007537  SOV  Finland's declaration of independence
+###  2030009  FIN  Finland's hard times
+###  2007538  SOV  The recognition of Finland's independence
+###  2030010  FIN  Soviet Russia declared war upon us!
+###  2191586  U08  Finland wants to join the Central Powers
+###  2191587  U08  Finland asks for support
+###  2030011  FIN  Finland joins the Central Powers
+###  2030012  FIN  Germany sends men and materials
+###  2030013  FIN  Announce Regency
+###  2030014  FIN  Germany won the Great War
+###  2030015  FIN  Germany lost the Great War
+###  2030016  FIN  Finnish Civil War
+###  2103001  U20  The Finnish Socialist Workers' Republic
+###  2007539  SOV  Support the revolutionaries in Finland?
+###  2103002  U20  Soviet Russa supports us!
+###  2030017  FIN  Victory in the Finnish Civil War
+###  2103003  U20  Victory in the Finnish Civil War
+###  2103004  U20  Join Soviet Russia?
+###  2007540  SOV  Finland joins Soviet Russia
+###  2030018  FIN  Ask Germany for support?
+###  2191588  U08  Finland asks for support
+###  2030019  FIN  Germany sends men and materials
+###  2030020  FIN  Alliance with the German Empire?
+###  2030021  FIN  First Presidential Elections
+
+event = {
+	id = 2007537  # Finland's declaration of independence
+	country = SOV
+
+	trigger = {
+		NOT = { exists = FIN }
+		war = { country = SOV country = U08 }
+		region = { region = "Finland" country = -1 data = 1 value = 1 } #at least 1 province in Finland region is controlled by SOV
+	}
+	
+	name = "EVT1914_2007537_NAME" #Finland's declaration of independence
+	desc = "EVT1914_2007537_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 3 }
+		command = { type = independence which = FIN value = 1 when = 1 }
+		command = { type = secederegion which = FIN value = "Finland" when = 1 }
+		command = { type = trigger which = 2030009 } #FIN Finland's hard times
+	}
+}
+
+event = {
+	id = 2030009   # Finland's hard times
+	country = FIN
+	
+	name = "EVT1914_2030009_NAME" # Finland's hard times
+	desc = "EVT1914_2030009_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+	
+	action_a = {
+		name = "ACTION_NAME_OK"
+		command = { type = set_domestic which = democratic value = 8 } 
+		command = { type = set_domestic which = political_left value = 3 } #Social Conservative
+		command = { type = headofstate which = 145137 } #Pehr Evind Svinhufvud
+		command = { type = headofgovernment which = 145142 } #Pehr Evind Svinhufvud
+		command = { type = foreignminister which = 145149 } #Otto Stenroth
+		command = { type = armamentminister which = 145164 } #Heikki Gabriel Renvall;
+		command = { type = ministerofsecurity which = 145184 } #Arthur Castrén
+		command = { type = ministerofintelligence which = 145194 } #Eino Suolahti
+		command = { type = chiefofstaff which =  145200 } #Paul Martin Wetzer
+		command = { type = chiefofarmy which = 145210 } #Carl Gustaf Emil Mannerheim
+		command = { type = chiefofnavy which = 145216 } #Johannes Indrenius
+		command = { type = chiefofair which = 145219 } #Sture Landergren
+		command = { type = dissent value = 10 }	#troubling times, much opposition	
+		command = { type = event which = 2007538 where = SOV when = 3 } #SOV The recognition of Finland's independence
+		#Whiter Army was able to conscript a few divisions relatively quickly (ex-Imperial Army and Jaeger officers + Civil Guards reserve)
+		command = { type = manpowerpool value = 2 } #Jaeger soldiers
+		command = { type = build_division which = infantry when = 2 cost = 2.5 where = 60 }
+		command = { type = build_division which = infantry when = 2 cost = 2.5 where = 60 }
+		#remove rebels from region
+		command = { type = remove_units which = land where = REB when = 2 value = "Finland" } #removes all Rebel units from Finland region
+	}
+}
+
+event = {
+	id = 2007538   #The recognition of Finland's independence
+	country = SOV
+
+	name = "EVT1914_2007538_NAME" #The recognition of Finland's independence
+	desc = "EVT1914_2007538_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+	
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		ai_chance = 97
+		command = { type = belligerence value = -10 }
+		command = { type = relation which = FIN value = 50 }
+		command = { type = relation which = SWE value = 30 }
+		command = { type = relation which = NOR value = 30 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = FRA value = 10 }
+	}	
+	action = {
+		name = "ACTION_NAME_WAR"
+		ai_chance = 3
+		command = { type = war which = FIN }
+		command = { type = trigger which = 2030010 } #FIN Soviet Russia declared war upon us!
+	}
+}
+
+event = {
+	id = 2030010  # Soviet Russia declared war upon us!
+	country = FIN
+	
+	name = "EVT1914_2030010_NAME" #Soviet Russia declared war upon us!
+	desc = "EVT1914_2030010_DESC"
+	style = 2
+	picture = "russian_soldiers"
+	
+	action = {
+		trigger = {
+			ai = no #only human player allowed the ahistorical path to avoid problems with AI-FIN at war with Entente
+			exists = U08
+			participant = { country = U08 value = 2 }
+			control = { province = 163 data = U08 } #Berlin controlled by U08
+			NOT = {
+				event = 2191514 #U08 Military defeat
+				event = 2191520 #U08 Armistice
+				event = 2191532 #U08 The Fall of Berlin (1914 only)
+				lost_national = { country = U08 value = 30 } #Germany lost more than 30% of its core province
+				war = { country = U08 country = FIN  }
+			}
+		}
+		ai_chance = 50
+		name = "EVT1914_2030010_ACTIONA" #Ask Germany to join the Central Powers
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = U08 value = 20 }
+		command = { type = trigger which = 2191586 } #U08 Finland wants to join the Central Powers
+	}	
+	action = {
+		trigger = { 
+			exists = U08
+			NOT = { war = { country = U08 country = FIN } }
+			NOT = { event = 2030018 } #FIN  Ask Germany for support?
+		}
+		name = "EVT1914_2030010_ACTIONB" #Ask Germany for support
+		ai_chance = 50
+		command = { type = relation which = U08 value = 10 }
+		command = { type = trigger which = 2191587 } #U08 Finland asks for support
+	}	
+	action = {
+		ai_chance = 0
+		name = "ACTINUTILE"
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 2191586   # Finland wants to join the Central Powers
+	country = U08
+	
+	name = "EVT1914_2191586_NAME" #Finland wants to join the Central Powers
+	desc = "EVT1914_2191586_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+	
+	action_a = {
+		ai_chance = 100
+		name = "ACTION_NAME_OK"
+		command = { type = belligerence value = 3 }
+		command = { type = relation which = FIN value = 50 }
+		command = { type = alliance which = FIN }
+		command = { type = trigger which = 2030011 }
+	}	
+	action_a = {
+		name = "ACTION_NAME_REFUSE"
+		ai_chance = 0
+		command = { type = relation which = FIN value = -30 }
+	}
+}
+
+event = {
+	id = 2191587   # Finland asks for support
+	country = U08
+	
+	name = "EVT1914_2191587_NAME" #Finland asks for support
+	desc = "EVT1914_2191587_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+	
+	action_a = {
+		ai_chance = 97
+		name = "ACTION_NAME_OK"
+		command = { type = manpowerpool value = -13 } #Baltic Sea Division
+		command = { type = relation which = FIN value = 30 }
+		command = { type = trigger which = 2030012 }
+	}
+	action_a = {
+		ai_chance = 3
+		name = "ACTION_NAME_REFUSE"
+		command = { type = dissent value = 1 }		
+		command = { type = relation which = FIN value = -20 }
+	}
+}
+
+event = {
+	id = 2030011 # Finland joins the Central Powers
+	country = FIN
+	
+	name = "EVT1914_2030011_NAME" #Finland joins the Central Powers
+	desc = "EVT1914_2030011_DESC"
+	style = 2
+	picture = "baltic_sea_division"
+	
+	action_a = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -3 }		
+		command = { type = alliance which = U08 }
+		command = { type = sleepevent which = 2030018 } #FIN  Ask Germany for support?		
+	}
+}
+
+event = {
+	id = 2030012  # FIN  Germany sends men and materials
+	country = FIN
+	
+	name = "EVT1914_2030012_NAME" #Germany sends men and materials
+	desc = "EVT1914_2030012_DESC"
+	style = 2
+	picture = "baltic_sea_division"
+	
+	action_a = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -1 }
+		command = { type = wakeleader which = 145133 } #von der Goltz R.
+		command = { type = add_corps which = "Ostsee-Division" value = land when = 145133 where = 524 } #Hano (Turku province)
+		command = { type = add_division which = "Ostsee-Division" value = infantry when = 4 where = cavalry_brigade }
+		command = { type = sleepevent which = 2030018 } #FIN  Ask Germany for support?		
+	}
+}
+
+event = {
+	id = 2030013  # FIN  Announce Regency
+	country = FIN
+	
+	trigger = {
+		OR = {
+			event = 2007504 #SOV The Brest Litovsk Treaty : soft conditions
+			event = 2007505 #SOV The Brest Litovsk Treaty : harsh conditions
+			event = 2030017 #FIN Victory in the Finnish Civil War
+		}
+		NOT = { war = { country = FIN country = SOV } }
+		NOT = { war = { country = FIN country = U08 } }
+	}
+	
+	name = "EVT1914_2030013_NAME" #Announce Regency
+	desc = "EVT1914_2030013_DESC"
+	style = 2
+	picture = "frederick_charles"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action_a = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = relation which = U08 value = 25 }
+		command = { type = set_domestic which = democratic value = 7 } 
+		command = { type = set_domestic which = political_left value = 1 } #Paternal Autocracy
+		command = { type = headofstate which = 145138 } #Carl Gustaf Emil Mannerheim 
+		command = { type = headofgovernment which = 145143 } #Juho Kusti Paasikivi
+	}
+}
+
+event = {
+	id = 2030014  # Germany won the Great War
+	country = FIN
+	
+	trigger = {
+		NOT = { ispuppet = FIN }
+		event = 2030013 #FIN  Announce Regency
+		NOT = {
+			event = 2191514 #U08 Military defeat
+			event = 2191520 #U08 Armistice
+			event = 2191532 #U08 The Fall of Berlin (1914 only)
+		}
+		NOT = { war = { country = FIN country = SOV } }
+		NOT = { war = { country = U08 country = FIN } }
+		NOT = { war = { country = U08 country = FRA } }
+		NOT = { war = { country = U08 country = ENG } }
+		NOT = { war = { country = U08 country = RUS } }
+		NOT = { war = { country = U08 country = SOV } }
+		NOT = { war = { country = U08 country = ITA } }
+		NOT = { war = { country = U08 country = USA } }
+		NOT = { war = { country = U08 country = JAP } }
+	}
+	
+	name = "EVT1914_2030014_NAME" #Germany won the Great War
+	desc = "EVT1914_2030014_DESC"
+	style = 2
+	picture = "frederick_charles"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action_a = {
+		name = "EVT1914_2030014_ACTIONA" #Long live the Kingdom of Finland
+		command = { }
+		command = { type = set_domestic which = democratic value = 7 } 
+		command = { type = set_domestic which = political_left value = 1 } #Paternal Autocracy
+		command = { type = headofstate which = 145140 } #Frederik Kaarle I
+		command = { type = headofgovernment which = 145143 } #Juho Kusti Paasikivi
+		command = { type = relation which = U08 value = 50 }
+		command = { trigger = { 
+						NOT = { alliance = { country = FIN country = GER } } 
+						NOT = { lost_national = { country = U08 value = 30 } } #Germany not have lost more than 30% of its core province
+						control = { province = 163 data = U08 } #Berlin must be controlled by U08						
+					} type = event which = 2030020 where = FIN when = 3 } #FIN Alliance with the German Empire?
+	}
+}
+
+event = {
+	id = 2030015  # Germany lost the Great War
+	country = FIN
+	
+	trigger = {
+		NOT = { ispuppet = FIN }
+		event = 2030013 #FIN  Announce Regency
+		event = 2002534 #FRA The Versailles Treaty
+	}
+	
+	name = "EVT1914_2030015_NAME" #Germany lost the Great War
+	desc = "EVT1914_2030015_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+
+	date = { day = 0 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action_a = {
+		name = "EVT1914_2030015_ACTIONA" #Long live the Republic of Finland
+		command = { }
+		command = { type = set_domestic which = democratic value = 8 } 
+		command = { type = set_domestic which = political_left value = 3 } #Social Conservative
+		command = { type = headofstate which = 145138 } #Carl Gustaf Emil Mannerheim 
+		command = { type = headofgovernment which = 145144 } #Lauri Ingman
+		command = { trigger = { exists = U08 } type = relation which = U08 value = -20 }
+		command = { trigger = { NOT = { government = communist } } type = event which = 2030021 where = FIN when = 180 } #First Presidential Elections in 6 months
+	}
+}
+
+event = {
+	id = 2030016   # Finnish Civil War
+	country = FIN
+
+	trigger = {
+		exists = SOV
+		NOT = { war = { country = SOV country = FIN } }
+	}
+	
+	name = "EVT1914_2030016_NAME" #Finnish Civil War
+	desc = "EVT1914_2030016_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 10 }
+		command = { type = independence which = U20 value = 1 when = 1 } #Finnish Democratic Republic
+		command = { type = secedeprovince which = U20 value = 512 when = 1 } #Pori 
+		command = { type = secedeprovince which = U20 value = 524 when = 1 } #Turku 
+		command = { type = secedeprovince which = U20 value = 525 when = 1 } #Helsinki
+		command = { type = secedeprovince which = U20 value = 527 when = 1 } #Tampere
+		command = { type = secedeprovince which = U20 value = 529 when = 1 } #Kouvola 
+		command = { type = secedeprovince which = U20 value = 531 when = 1 } #Viipuri 
+		command = { type = secedeprovince which = U20 value = 530 when = 1 } #Terijoki 
+		command = { type = trigger which = 2103001 } #U20  The Finnish Socialist Workers' Republic
+		command = { type = add_corps which = "Hjalmarsonin osasto" value = land when = 145134 where = 528 } #Mikkeli (leader Heiskanen J. H.)
+		command = { type = add_division which = "Hjalmarsonin osasto" value = infantry when = 3 where = artillery }
+		command = { type = add_corps which = "Linderin ryhmä" value = land where = 521 } #Vaasa
+		command = { type = add_division which = "Linderin ryhmä" value = infantry when = 3 where = artillery }
+		command = { type = add_corps which = "Länsiarmeijan_reservi" value = land when = 145123 where = 522 } #Koupio (leader Martin Wetzer)
+		command = { type = add_division which = "Länsiarmeijan_reservi" value = infantry when = 3 }			
+	}
+}
+
+event = {
+	id = 2103001   # The Finnish Socialist Workers' Republic
+	country = U20
+	
+	name = "EVT1914_2103001_NAME" #The Finnish Socialist Workers' Republic
+	desc = "EVT1914_2103001_DESC"
+	style = 2
+	picture = "spread_revolution"
+	
+	action_a = {
+		name = "ACTION_NAME_OK"
+		command = { type = name where = U20 which = U20_1918 } #Finnish Socialist Workers' Republic
+		command = { type = set_domestic which = democratic value = 2 } 
+		command = { type = set_domestic which = political_left value = 8 } #Leninist
+		command = { type = headofstate which = 915038 } #Valfrid Perttilä
+		command = { type = headofgovernment which = 915039 } #Kullervo Manner
+		command = { type = foreignminister which = 915040 } #Yrjö Sirola
+		command = { type = armamentminister which = 915041 } #Oskari Tokoi
+		command = { type = ministerofsecurity which = 915043 } #Jalo Kohonen
+		command = { type = ministerofintelligence which = 915046 } #Eero Haapalainen
+		command = { type = chiefofstaff which =  915047 } #Ali Aaltonen
+		command = { type = chiefofarmy which = 915049 } #Eero Haapalainen
+		command = { type = chiefofnavy which = 915052 } #Eero Haapalainen
+		command = { type = chiefofair which = 915053 } #Eero Haapalainen
+		command = { type = secedeprovince which = FIN value = 511 when = 1 } #Enontekio
+		command = { type = secedeprovince which = FIN value = 513 when = 1 } #Inari
+		command = { type = secedeprovince which = FIN value = 517 when = 1 } #Petsamo
+		command = { type = secedeprovince which = FIN value = 516 when = 1 } #Tornio
+		command = { type = secedeprovince which = FIN value = 515 when = 1 } #Rovaniemi
+		command = { type = secedeprovince which = FIN value = 514 when = 1 } #Kemijarvi
+		command = { type = secedeprovince which = FIN value = 519 when = 1 } #Salla
+		command = { type = secedeprovince which = FIN value = 518 when = 1 } #Soumussalmi
+		command = { type = secedeprovince which = FIN value = 520 when = 1 } #Oulu
+		command = { type = secedeprovince which = FIN value = 523 when = 1 } #Kajaani
+		command = { type = secedeprovince which = FIN value = 521 when = 1 } #Vaasa
+		command = { type = secedeprovince which = FIN value = 522 when = 1 } #Koupio
+		command = { type = secedeprovince which = FIN value = 533 when = 1 } #Joensu
+		command = { type = secedeprovince which = FIN value = 528 when = 1 } #Mikkeli
+		command = { type = secedeprovince which = FIN value = 532 when = 1 } #Sortvala
+		command = { type = addcore which = 517 } #Petsamo
+		command = { type = addcore which = 519 } #Salla
+		command = { type = addcore which = 530 } #Terijoki
+		command = { type = addcore which = 531 } #Viipuri
+		command = { type = addcore which = 532 } #Sortvala
+		command = { type = add_corps which = "Helsingin punakaarti" value = land when = 915048 where = 525 } #Helsinki (leader Johansson F. E.)
+		command = { type = add_division which = "Helsingin punakaarti" value = infantry when = 3 }
+		command = { type = add_corps which = "Tampereen punakaarti" value = land when = 915051 where = 527 } #Tampere (leader Salmela H.)
+		command = { type = add_division which = "Tampereen punakaarti" value = militia when = 1 }
+		command = { type = add_corps which = "Lahden punakaarti" value = land where = 529 } #Kouvola
+		command = { type = add_division which = "Lahden punakaarti" value = militia when = 1 }
+		command = { type = war which = FIN }
+	}
+}
+
+event = {
+	id = 2007539   # SOV  Support the revolutionaries in Finland?
+	country = SOV
+	
+	decision = {
+		event = 2030016 #Finnish Civil War
+		exists = U20
+		exists = FIN
+		war = { country = U20 country = FIN }
+		NOT = { war = { country = SOV country = FIN } }
+		NOT = { war = { country = SOV country = U20 } }
+	}
+	
+	decision_trigger = {
+		war = { country = U20 country = FIN }
+		supplies = 500
+	}
+	
+	trigger = {
+		event = 2030016 #Finnish Civil War
+		exists = U20
+		exists = FIN
+		war = { country = U20 country = FIN }
+		NOT = { war = { country = SOV country = FIN } }
+		NOT = { war = { country = SOV country = U20 } }
+		#supplies = 500
+	}
+	
+	name = "EVT1914_2007539_NAME" #Support the revolutionaries in Finland?
+	desc = "EVT1914_2007539_DESC"
+	style = 2
+	picture = "spread_revolution"
+	decision_picture = "decision_spread_revolution"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action_a = {
+		ai_chance = 97
+		name = "ACTION_NAME_OK"
+		command = { trigger = { ai = no } type = supplies value = -500 }
+		command = { type = manpowerpool value = -7 } #Russian soldiers in Finland
+		command = { type = relation which = U20 value = 50 }
+		command = { type = trigger which = 2103002 } #U20  Soviet Russa supports us!
+	}
+	action_a = {
+		ai_chance = 3
+		name = "ACTION_NAME_REFUSE"
+		command = { type = dissent value = 1 }		
+		command = { type = relation which = U20 value = -20 }
+	}
+}
+
+event = {
+	id = 2103002   # U20  Soviet Russa supports us!
+	country = U20
+	
+	name = "EVT1914_2103002_NAME" #Soviet Russa supports us!
+	desc = "EVT1914_2103002_DESC"
+	style = 2
+	picture = "finnish_red_guards"
+	
+	action_a = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 7 } #Russian soldiers in Finland
+		command = { type = wakeleader which = 915053 } #Svechnikov M. S.
+		command = { type = wakeminister which = 915048 } #Mikhail Stepanovich Svechnikov CoS
+		command = { type = wakeminister which = 915051 } #Mikhail Stepanovich Svechnikov CoA
+		command = { type = waketeam which = 915011 } #Mikhail Stepanovich Svechnikov
+	}
+}
+
+event = {
+	id = 2030017   # Victory in the Finnish Civil War
+	country = FIN
+
+	trigger = {
+		event = 2030016 #FIN Finnish Civil War
+		NOT = { exists = U20 }
+		control = { province = 525 data = -3 } #Helsinki controlled by FIN or ally
+	}
+	
+	name = "EVT1914_2030017_NAME" #Victory in the Finnish Civil War
+	desc = "EVT1914_2030017_DESC"
+	style = 2
+	picture = "finnish_civil_war_victory"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = -10 }
+		command = { type = capital which = 525 } #Helsinki
+		command = { trigger = { exists = SOV } type = relation which = SOV value = -20 }
+		command = { trigger = { OR = { event = 2030012 event = 2030019 } } type = sleepleader which = 145133 } #von der Goltz R.
+		command = { trigger = { OR = { event = 2030012 event = 2030019 } } type = remove_division which = "Ostsee-Division" value = FIN }	
+	}
+}
+
+event = {
+	id = 2103003   # Victory in the Finnish Civil War
+	country = U20
+
+	trigger = {
+		event = 2030016 #FIN Finnish Civil War
+		NOT = { exists = FIN }
+		control = { province = 525 data = -3 } #Helsinki controlled by FIN or ally
+	}
+	
+	name = "EVT1914_2030017_NAME" #Victory in the Finnish Civil War
+	desc = "EVT1914_2103003_DESC"
+	style = 2
+	picture = "finnish_civil_war_victory"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = -10 }
+		command = { type = capital which = 525 } #Helsinki
+		command = { trigger = { event = 2103002 } type = sleepleader which = 915053 } #Svechnikov M. S.
+		command = { trigger = { event = 2103002 } type = sleepminister which = 915048 } #Mikhail Stepanovich Svechnikov CoS
+		command = { trigger = { event = 2103002 } type = sleepminister which = 915051 } #Mikhail Stepanovich Svechnikov CoA
+		command = { trigger = { event = 2103002 } type = sleepteam which = 915011 } #Mikhail Stepanovich Svechnikov
+		command = { trigger = { exists = SOV NOT = { war = { country = SOV country = U20 } } } type = event which = 2103004 where = U20 when = 1 } #U20 Join Soviet Russia?
+	}
+}
+
+event = {
+	id = 2103004  #Join Soviet Russia?
+	country = U20
+	
+	trigger = {
+		event = 2103003  #U20 Victory in the Finnish Civil War
+		exists = SOV
+		control = { province = 525 data = -3 } #Helsinki controlled by FIN or ally
+		OR = {
+			control = { province = 553 data = SOV } #Leningrad controlled by SOV
+			control = { province = 572 data = SOV } #Moscow controlled by SOV
+		}
+		OR = {
+			NOT = { ispuppet = U20 }
+			puppet = { country = U20 country = SOV }
+		}
+	}
+	
+	name = "EVT1914_2103004_NAME" #Join Soviet Russia?
+	desc = "EVT1914_2103004_DESC"
+	style = 2
+	picture = "spread_revolution"
+	
+	date = { day = 0 month = june year = 1915 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1925 }
+	
+	action = {
+		ai_chance = 50
+		name = "ACTIONNAME2201A"
+		command = { type = trigger which = 2007540 }
+		command = { trigger = { ai = no } type = secederegion which = SOV value = "Finland" when = 1 }
+	}
+	action = {
+		ai_chance = 50
+		name = "ACTION_NAME_NO"
+		command = { type = relation which = SOV value = -50 }
+	}
+}
+
+event = {
+	id = 2007540 #Finland joins Soviet Russia
+	country = SOV
+	
+	name = "EVT1914_2007540_NAME" #Finland joins Soviet Russia
+	desc = "EVT1914_2007540_DESC"
+	style = 2
+	picture = "spread_revolution"
+	
+	action = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -1 }
+		command = { type = inherit which = U20 value = 1 when = 3 }
+	}
+}
+
+event = {
+	id = 2030018  # Ask Germany for support?
+	country = FIN
+
+	decision = {
+		event = 2030016 #Finnish Civil War
+		exists = U20
+		exists = FIN
+		war = { country = U20 country = FIN }
+		NOT = { war = { country = GER country = FIN } }
+		NOT = { war = { country = GER country = U20 } }
+	}
+	
+	decision_trigger = {
+		war = { country = U20 country = FIN }
+	}
+	
+	trigger = {
+		event = 2030016 #Finnish Civil War
+		exists = U20
+		exists = FIN
+		war = { country = U20 country = FIN }
+		NOT = { war = { country = GER country = FIN } }
+		NOT = { war = { country = GER country = U20 } }
+	}
+	
+	name = "EVT1914_2030018_NAME" #Ask Germany for support?
+	desc = "EVT1914_2030018_DESC"
+	style = 2
+	picture = "finnish_senate_1917"
+	decision_picture = "decision_asienkorps"
+
+	date = { day = 0 month = june year = 1915 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1925 }	
+	
+	action = {
+		ai_chance = 100
+		name = "EVT1914_2030018_ACTIONA" #Ask the Germans
+		command = { type = relation which = U08 value = 10 }
+		command = { type = trigger which = 2191588 } #U08 Finland asks for support
+	}	
+	action = {
+		ai_chance = 0
+		name = "ACTINUTILE"
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 2191588   # Finland asks for support
+	country = U08
+	
+	name = "EVT1914_2191587_NAME" #Finland asks for support
+	desc = "EVT1914_2191587_DESC"
+	style = 2
+	picture = "baltic_sea_division"
+	
+	action_a = {
+		ai_chance = 97
+		name = "ACTION_NAME_OK"
+		command = { type = relation which = FIN value = 30 }
+		command = { type = trigger which = 2030019 }
+	}
+	action_a = {
+		ai_chance = 3
+		name = "ACTION_NAME_REFUSE"
+		command = { type = dissent value = 1 }		
+		command = { type = relation which = FIN value = -20 }
+	}
+}
+
+event = {
+	id = 2030019  # FIN  Germany sends men and materials
+	country = FIN
+	
+	name = "EVT1914_2030012_NAME" #Germany sends men and materials
+	desc = "EVT1914_2030012_DESC"
+	style = 2
+	picture = "baltic_sea_division"
+	
+	action_a = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = dissent value = -1 }
+		command = { type = wakeleader which = 145133 } #von der Goltz R.	
+		command = { type = add_corps which = "Ostsee-Division" value = land when = 145133 where = 524 } #Hano (Turku province)
+		command = { type = add_division which = "Ostsee-Division" value = infantry when = 4 where = cavalry_brigade }
+	}
+}
+
+event = {
+	id = 2030020  # Alliance with the German Empire?
+	country = FIN
+	
+	name = "EVT1914_2030020_NAME" #Alliance with the German Empire?
+	desc = "EVT1914_2030020_DESC"
+	style = 2
+	picture = "finnish_white_guards"
+	
+	action = {
+		trigger = { 
+			participant = { country = U08 value = 2 }
+			NOT = {
+				event = 2191514 #U08 Military defeat
+				event = 2191520 #U08 Armistice
+				event = 2191532 #U08 The Fall of Berlin (1914 only)
+				lost_national = { country = U08 value = 30 } #Germany lost more than 30% of its core province
+				control = { province = 163 data = U08 } #Berlin not controlled by U08
+			}
+		}
+		ai_chance = 100
+		name = "EVT1914_2030010_ACTIONA" #Ask Germany to join the Central Powers
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = U08 value = 20 }
+		command = { type = trigger which = 2191586 } #U08 Finland wants to join the Central Powers
+	}	
+	action = {
+		ai_chance = 0
+		name = "ACTINUTILE"
+		command = { type = dissent value = 3 }
+	}
+}
+
+
+event = {
+	id = 2030021  # First Presidential Elections
+	country = FIN
+	
+	trigger = {
+		NOT = { ispuppet = FIN }
+		NOT = { headofstate = 145140 } #Frederik Kaarle I
+		NOT = { government = communist }
+	}
+	
+	name = "EVT1914_2030021_NAME" #First Presidential Elections
+	desc = "EVT1914_2030021_DESC"
+	style = 2
+	picture = "finnish_civil_war_victory"
+	
+	action = {
+		ai_chance = 70
+		name = "EVT1914_2030021_ACTIONA" #Ståhlberg will lead Finland
+		command = { }
+		command = { type = set_domestic which = democratic value = 8 } 
+		command = { type = set_domestic which = political_left value = 5 } #Market Liberal
+		command = { type = headofstate which = 145141 } #Kaarlo Juho Ståhlberg
+		command = { type = headofgovernment which = 145146 } #Juho Vennola 
+		command = { type = foreignminister which = 145151 } #Rudolf Holsti
+		command = { type = armamentminister which = 145167 } #Eero Erkko
+		command = { type = ministerofsecurity which = 145187 } #Heikki Ritavuori
+	}	
+	action = {
+		ai_chance = 30
+		name = "EVT1914_2030021_ACTIONB" #Mannerheim will lead Finland
+		command = { }
+		command = { type = set_domestic which = democratic value = 8 } 
+		command = { type = set_domestic which = political_left value = 3 } #Social Conservative
+		command = { type = headofstate which = 145138 } #Carl Gustaf Emil Mannerheim 
+		command = { type = headofgovernment which = 145142 } #Pehr Evind Svinhufvud
+		command = { type = foreignminister which = 145154 } #Leo Ehrnrooth
+		command = { type = armamentminister which = 145168 } #Leo Ehrnrooth
+		command = { type = ministerofsecurity which = 145185 } #Antti Tulenheimo
+	}
+}

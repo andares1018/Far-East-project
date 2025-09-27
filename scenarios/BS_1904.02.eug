@@ -1,0 +1,241 @@
+#################################
+# Designed by Falconette #
+#################################
+name = "1904_SCENARIO"
+panel = "scenarios/data/scenario_1904.bmp"
+
+header = {
+	startyear = 1904
+	endyear = 1905
+
+	free = no
+
+	combat = yes	#this is a battlescenario
+
+	RUS = {
+		desc = "RUS_1904_DESC"
+		picture = "scenarios\data\propaganda_RUS_1904.bmp"
+	}
+
+	JAP = {
+		desc = "JAP_1904_DESC"
+		bottom = yes
+		picture = "scenarios\data\propaganda_JAP_1904.bmp"
+	}
+
+}
+
+globaldata = {
+	rules = {
+		diplomacy = no
+		production = no
+		technology = no
+	}
+	
+	startdate = {
+		year = 1904
+		month = february
+		day = 6
+	}
+	
+	enddate = {
+		year = 1905
+		month = december
+		day = 29
+	}
+		
+	dormant_leaders = yes
+
+	allies = {
+		id = { type = 15000 id = 1 }
+		participant = { JAP }
+	}
+	
+	axis = 	{
+		id = { type = 15000 id = 2 }
+		participant = { RUS }
+	}
+
+	war = {
+		id = { type = 9430 id = 1 }
+		date = {
+			year = 1904
+			month = february
+			day = 8
+			hour = 1
+		}
+		enddate = {
+			year = 1905
+			month = september
+			day = 1
+			hour = 1
+		}
+		attackers = {
+			id = { type = 9430 id = 2 }
+			participant = { JAP }
+		}
+		defenders = {
+			id = { type = 9430 id = 3 }
+			participant = { RUS }
+		}
+	}
+}
+
+map = {
+	no = all
+
+	yes = 1543
+	yes = 1544
+	yes = 1545
+	yes = 1547
+	yes = 1549
+	yes = 1551
+	yes = 1552
+	yes = 1550
+	yes = 1548
+	yes = 1546
+	yes = 1557
+	yes = 1556
+	yes = 1558
+	yes = 1553
+	yes = 1555
+	yes = 1559
+	yes = 1554
+	yes = 1231
+	yes = 1560
+	yes = 1561
+	yes = 1562
+	yes = 1563
+	yes = 1564
+	yes = 1361
+	yes = 1362
+	yes = 1363
+	yes = 1364
+	yes = 1230
+	yes = 1232
+	yes = 1229
+	yes = 1228
+	yes = 1233
+	yes = 1223
+	yes = 1222
+	yes = 1221
+	yes = 1225
+	yes = 1224
+	yes = 1227
+	yes = 1226
+	yes = 1541
+	yes = 1542
+	yes = 1216
+	yes = 1236
+	yes = 1210
+	yes = 1209
+	yes = 1206
+	yes = 1200
+	yes = 1198
+	yes = 1213
+	yes = 1208
+	yes = 1214
+	yes = 1215
+	yes = 1217
+	yes = 1216
+	yes = 1220
+	yes = 1219
+	yes = 1211
+	yes = 1207
+	yes = 1199
+	yes = 1212
+	yes = 1205
+	yes = 1204
+	yes = 1202
+	yes = 1197
+	yes = 1201
+	yes = 1203
+	yes = 1213
+	yes = 1210
+	yes = 1218
+	yes = 1191
+	yes = 1196
+	yes = 1193
+	yes = 1192
+	yes = 1195
+	yes = 1194
+	yes = 1190
+	yes = 1185
+	yes = 1187
+	yes = 1188
+	yes = 1189
+	yes = 1171
+	yes = 1174
+	yes = 1175
+	yes = 1186
+	yes = 1181
+	yes = 1183
+	yes = 1184
+	yes = 1178
+	yes = 1176
+	yes = 1170
+	yes = 1163
+	yes = 1161
+	yes = 1168
+	yes = 1169
+	yes = 1167
+	yes = 1162
+	yes = 1170
+	yes = 1166
+	yes = 1235
+	yes = 1237
+
+	# Sea zones
+	yes = 2409
+	yes = 2407
+	yes = 2406
+	yes = 2408
+	yes = 2504
+	yes = 2503
+	yes = 2509
+	yes = 2520
+	yes = 2506
+	yes = 2505
+	yes = 2508
+	yes = 2507
+	yes = 2500
+	yes = 2499
+	yes = 2502
+	yes = 2501
+	yes = 2491
+	yes = 2492
+	yes = 2477
+	yes = 2420
+	yes = 2488
+	yes = 2489
+	yes = 2490
+	yes = 2511
+	yes = 2515
+	yes = 2514
+	yes = 2513
+	yes = 2512
+	yes = 2497
+	yes = 2516
+	yes = 2517
+	yes = 2518
+	yes = 2495
+	yes = 2496
+	yes = 2493
+	yes = 2498
+	yes = 2494
+	yes = 2510
+	yes = 2521
+	yes = 2687
+	yes = 2523
+}
+
+# VP things
+include = "scenarios/BS_1904.02/vp.inc"
+
+include = "scenarios/BS_1904.02/rus.inc"
+include = "scenarios/BS_1904.02/jap.inc"
+include = "scenarios/BS_1904.02/kor.inc"
+
+event = "scenarios/BS_1904.02/rjw_events.txt"
+
+#END

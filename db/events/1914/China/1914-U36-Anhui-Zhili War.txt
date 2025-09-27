@@ -1,0 +1,1495 @@
+# Anhui-Zhili War # TODO: Reverse Merge U36 ministers into UCH
+# By Limith
+#-Runup-------------------------
+# U36 133011302 Anhui Clique Breaks Coalition Promises
+# U36 133011303 Mobilizing Against the Anhui Clique
+# UCH 133011304 Rumors of Revolt
+# U36 133011305 Gather Support for a Coup Against the Anhui Clique
+# UCH 133011306 Zhili Clique Discontent
+# UCH 133011307 Beginning of the Fengtian Clique
+# MAN 133011308 Beginning of the Fengtian Clique
+# U36 133011309 Reaching out to the Fengtian Clique
+# U67 133011310 Rough Draft of the National Salvation Allied Army
+# U36 133011311 Reaching out to the Southern Government
+# U36 133011312 Anhui Arrests Zhili Diplomats
+# U36 133011313 Reaching out to Neutral Warlords
+# U36 133011314 The Paoting-Fu Telegram
+# UCH 133011315 The Paoting-Fu Telegram
+# UCH 133011316 Evidence of Imminent Rebellion
+# U36 133011317 Oust Anhui Control over the Central Army
+# UCH 133011318 Xu Shuzheng Ousted
+#-War---------------------------
+# UCH 133011319 The Zhili-Anhui War
+# U36 133011320 The Zhili-Anhui War
+# U67 133011321 The Zhili-Anhui War
+# JAP 133011322 Japanese Intervention in the Anhui-Zhili War
+# U08 133011323 German Intervention in the Anhui-Zhili War
+# UCH/U36 133011324 Foreign Intervention in the Anhui-Zhili War
+# U36 133011325 Wu Peifu's Daring Proposal
+# UCH 133011326 Western Anhui Front Collapses
+# UCH 133011327 Wu Peifu Captured
+# U67 133011328 Fengtian Entry into the War
+# UCH 133011329 Fengtian Entry into the War
+#-Peace-------------------------
+# UCH 133011330 Beijing is Lost!
+# U36 133011331 Anhui Clique Destroyed
+# UCH 133011334 Anhui Clique Destroyed - Helper
+# U67 133011332 Fengtian Clique Surrenders
+# UCH 133011333 Zhili Clique Destroyed
+# U36 133011335 Zhili Clique Destroyed - Helper
+#-Other------------------------- # Post 1.03
+# UCH Dealing with the German Restoration Attempt
+# UCH Dealing with the Japanese Restoration Attempt
+
+#########
+# Runup #
+#########
+
+# Anhui Clique Breaks Coalition Promises
+event = {
+	id = 133011302
+	random = no
+	country = U36
+
+	# Triggered
+
+	name = EVT1914_133011302_NAME
+	desc = EVT1914_133011302_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = relation which = UCH value = -25 }
+	}
+}
+
+# Mobilizing Against the Anhui Clique
+event = {
+	id = 133011303
+	random = no
+	country = U36
+
+	decision = {
+		event = 133011302
+	}
+
+	decision_trigger = {
+		supplies = 450
+	}
+
+	trigger = {
+		or = {
+			and = {
+				year = 1916
+				random = 5
+			}
+			and = {
+				year = 1917
+				random = 5
+			}
+			and = {
+				year = 1918
+				random = 5
+			}
+			and = {
+				year = 1919
+				random = 5
+			}
+			year = 1920
+			random = 2
+		}
+		
+		event = 133011302
+	}
+
+	name = EVT1914_133011303_NAME
+	desc = EVT1914_133011303_DESC
+
+	decision_picture = "decision_ccip_beiyangarmy"
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = relation which = UCH value = -25 }
+		command = { type = wartime_ic_mod value = 10 }
+		command = { type = peacetime_ic_mod value = 5 }
+		command = { trigger = { ai = no } type = supplies value = -450 }
+	}
+}
+
+# Rumors of Revolt
+event = {
+	id = 133011304
+	random = no
+	country = UCH
+
+	trigger = {
+		random = 40
+		event = 133011302
+	}
+
+	name = EVT1914_133011304_NAME
+	desc = EVT1914_133011304_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 30
+	deathdate = { day = 0 month = january year = 1924 }
+
+
+	action = {
+		name = ACTION_NAME_CURSES
+		command = { }
+	}
+}
+
+# Gather Support for a Coup Against the Anhui Clique
+event = {
+	id = 133011305
+	random = no
+	country = U36
+
+	decision = {
+		event = 133011304
+	}
+
+	decision_trigger = {
+		ai = no
+	}
+
+	trigger = {
+		or = {
+			and = {
+				year = 1916
+				random = 5
+			}
+			and = {
+				year = 1917
+				random = 5
+			}
+			and = {
+				year = 1918
+				random = 5
+			}
+			and = {
+				year = 1919
+				random = 5
+			}
+			year = 1920
+			random = 2
+		}
+		event = 133011304
+	}
+
+	name = EVT1914_133011305_NAME
+	desc = EVT1914_133011305_DESC
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "ccip_npw"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { }
+	}
+}
+
+# Zhili Clique Discontent
+event = {
+	id = 133011306
+	random = no
+	country = UCH
+
+	trigger = {
+		random = 20
+		event = 133011305
+	}
+
+	name = EVT1914_133011306_NAME
+	desc = EVT1914_133011306_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = EVT1914_133011306_ACTIONA # "Seek reconciliation"
+		ai_chance = 25
+		command = { type = relation which = U36 value = 15 }
+		command = { type = local_setflag which = 133011306A }
+		command = { type = dissent value = 5 }
+	}
+
+	action = {
+		name = EVT1914_133011306_ACTIONB # "Find other coalition members"
+		ai_chance = 25
+		command = { type = relation which = U36 value = -35 }
+		command = { type = local_setflag which = 133011306B }
+		command = { type = dissent value = 5 }
+	}
+
+	action = {
+		name = EVT1914_133011306_ACTIONC # "Seek a military solution"
+		ai_chance = 50
+		command = { type = relation which = U36 value = -15 }
+		command = { type = dissent value = 5 }
+	}
+
+}
+
+# Beginning of the Fengtian Clique
+event = {
+	id = 133011307
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011307_NAME
+	desc = EVT1914_133011307_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_CURSES
+		command = { type = independence which = MAN value = 1 when = 0 }
+		command = { type = make_puppet which = MAN }
+		command = { type = trigger which = 133011308 }
+		command = { type = remove_division which = "1 Dongbei Lujun" value = UCH }
+		command = { type = remove_division which = "2 Dongbei Lujun" value = UCH }
+		command = { type = remove_division which = "3 Dongbei Lujun" value = UCH }
+		# TODO: Remove Fengtian TT and Leaders
+	}
+
+}
+
+# Beginning of the Fengtian Clique (1918)
+event = {
+	id = 133011308
+	random = no
+	country = MAN
+
+	# Triggered
+
+	name = EVT1914_133011307_NAME
+	desc = EVT1914_133011307_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = country which = U67 }
+		command = { type = non_aggression which = UCH where = U67 }
+		command = { type = non_aggression which = U36 where = U67 }
+		command = { type = non_aggression which = UCH where = U67 }
+		command = { type = non_aggression which = CXB where = U67 }
+		command = { type = non_aggression which = SIK where = U67 }
+		command = { type = non_aggression which = CYN where = U67 }
+		command = { type = non_aggression which = CGX where = U67 }
+		command = { type = secedearea which = U67 value = "Heilongjiang" when = 2 }
+		command = { type = secedearea which = U67 value = "Jilin" when = 2 }
+		command = { type = secedeprovince which = U67 value = 1235 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1237 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1216 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1218 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1214 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1217 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1215 when = 2 }
+		command = { type = secedeprovince which = U67 value = 1220 when = 2 }
+		command = { type = addcore which = 1235 }
+		command = { type = addcore which = 1237 }
+		command = { type = addcore which = 1216 }
+		command = { type = addcore which = 1218 }
+		command = { type = addcore which = 1214 }
+		command = { type = addcore which = 1217 }
+		command = { type = addcore which = 1215 }
+		command = { type = addcore which = 1220 }
+		command = { type = addcore which = 1206 }
+		command = { type = addcore which = 1205 }
+		command = { type = addcore which = 1204 }
+		command = { type = addcore which = 1203 }
+		command = { type = addcore which = 1202 }
+		command = { type = addcore which = 1201 }
+		command = { type = addcore which = 1200 }
+		command = { type = addcore which = 1199 }
+		command = { type = addcore which = 1198 }
+		command = { type = addcore which = 1197 }
+		command = { type = addcore which = 1207 }
+		command = { type = addcore which = 1208 }
+		command = { type = addcore which = 1209 }
+		command = { type = addcore which = 1210 }
+		command = { type = addcore which = 1211 }
+		command = { type = addcore which = 1212 }
+		command = { type = addcore which = 1213 }
+			command = { type = add_corps which = "Dongbei Difangjun" value = land where = 1199 }
+		command = { type = add_division which = "1 Dongbei Lujun" value = infantry when = 2 }
+		command = { type = add_division which = "2 Dongbei Lujun" value = infantry when = 2 }
+		command = { type = add_division which = "3 Dongbei Lujun" value = infantry when = 2 }
+		command = { type = capital which = 1199 }
+	}
+
+}
+
+# Reaching out to the Fengtian Clique
+event = {
+	id = 133011309
+	random = no
+	country = U36
+
+	decision = {
+		exists = U67
+		event = 133011306
+	}
+
+	decision_trigger = {
+		ai = no
+	}
+
+	trigger = {
+		exists = U67
+		or = {
+			and = {
+				year = 1918
+				random = 5
+			}
+			and = {
+				year = 1919
+				random = 5
+			}
+			and = {
+				year = 1920
+				random = 10
+			}
+			year = 1921
+			random = 2
+		}
+		event = 133011306
+	}
+
+	name = EVT1914_133011309_NAME
+	desc = EVT1914_133011309_DESC
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "diplomatic_campaign"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = relation which = U67 value = 25 }
+		command = { type = relation which = UCH value = -20 }
+		command = { type = event which = 133011310 where = U67 when = 7 }
+	}
+
+}
+
+# Rough Draft of the National Salvation Allied Army
+event = {
+	id = 133011310
+	random = no
+	country = U67
+
+	# Triggered
+
+	name = EVT1914_133011310_NAME
+	desc = EVT1914_133011310_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_SIGN
+		ai_chance = 95
+		command = { type = relation which = U36 value = 100 }
+		command = { type = relation which = UCH value = -200 }
+	}
+
+	action = {
+		name = ACTION_NAME_DONT_SIGN
+		ai_chance = 5
+		command = { type = relation which = U36 value = -250 }
+		command = { type = relation which = UCH value = 250 }
+	}
+
+}
+
+# Reaching out to the Southern Government
+event = {
+	id = 133011311
+	random = no
+	country = U36
+
+	decision = {
+		exists = CHI
+		event = 133011306
+	}
+
+	decision_trigger = {
+		ai = no
+	}
+
+	trigger = {
+		exists = CHI
+		or = {
+			and = {
+				year = 1918
+				random = 3
+			}
+			and = {
+				year = 1919
+				random = 5
+			}
+			and = {
+				year = 1920
+				random = 5
+			}
+			and = {
+				year = 1920
+				random = 10
+			}
+			and = {
+				year = 1921
+				random = 20
+			}
+			year = 1921
+			random = 2
+		}
+		event = 133011306
+	}
+
+	name = EVT1914_133011311_NAME
+	desc = EVT1914_133011311_DESC
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "diplomatic_campaign"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = event which = 133011312 where = U36 when = 7 }
+		command = { type = relation which = UCH value = -20 }
+	}
+
+}
+
+# Anhui Arrests Zhili Diplomats
+event = {
+	id = 133011312
+	random = no
+	country = U36
+
+	# Triggered
+
+	name = EVT1914_133011312_NAME
+	desc = EVT1914_133011312_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_CURSES
+		command = { type = relation which = UCH value = -5 }
+	}
+
+}
+
+# Reaching out to Neutral Warlords
+event = {
+	id = 133011313
+	random = no
+	country = U36
+
+	decision = {
+		event = 133011306
+		event = 133011310
+	}
+
+	decision_trigger = {
+		ai = no
+	}
+
+	trigger = {
+		or = {
+			and = {
+				year = 1919
+				random = 5
+			}
+			and = {
+				year = 1920
+				random = 10
+			}
+			and = {
+				year = 1921
+				random = 20
+			}
+			year = 1920
+			random = 2
+		}
+		event = 133011306
+		event = 133011310
+	}
+
+	name = EVT1914_133011313_NAME
+	desc = EVT1914_133011313_DESC
+
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "diplomatic_campaign"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = event which = 133011314 where = U36 when = 10 }
+		command = { type = event which = 133011315 where = UCH when = 14}
+		command = { type = relation which = UCH value = -20 }
+	}
+
+}
+
+# The Paoting-Fu Telegram
+event = {
+	id = 133011314
+	random = no
+	country = U36
+
+	# Triggered
+
+	name = EVT1914_133011314_NAME
+	desc = EVT1914_133011314_DESC
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_PERFECT
+		command = { type = addcore which = 1356 }
+		command = { type = addcore which = 1333 }
+		command = { type = addcore which = 1261 }
+		command = { type = addcore which = 1303 }
+		command = { type = addcore which = 1339 }
+		command = { type = addcore which = 1334 }
+		command = { type = addcore which = 1336 }
+		command = { type = addcore which = 1340 }
+		command = { type = addcore which = 1341 }
+		command = { type = addcore which = 1319 }
+		command = { type = addcore which = 1322 }
+		command = { type = addcore which = 1324 }
+		command = { type = addcore which = 1325 }
+		command = { type = addcore which = 1326 }
+		command = { type = addcore which = 1316 }
+		command = { type = addcore which = 1317 }
+		command = { type = addcore which = 1344 }
+		command = { type = addcore which = 1342 }
+		command = { type = addcore which = 1337 }
+		command = { type = addcore which = 1338 }
+		command = { type = addcore which = 1345 }
+		command = { type = addcore which = 1346 }
+		command = { type = addcore which = 1347 }
+		command = { type = addcore which = 1348 }
+		command = { type = addcore which = 1357 }
+		command = { type = addcore which = 1358 }
+		command = { type = addcore which = 1359 }
+		command = { type = addcore which = 1360 }
+		command = { type = addcore which = 1354 }
+		command = { type = addcore which = 1353 }
+		command = { type = addcore which = 1318 }
+		command = { type = addcore which = 1355 }
+		command = { type = addcore which = 1309 }
+		command = { type = addcore which = 1311 }
+		command = { type = addcore which = 1312 }
+		command = { type = addcore which = 1310 }
+		command = { type = addcore which = 1304 }
+		command = { type = addcore which = 1302 }
+		command = { type = addcore which = 1296 }
+		command = { type = addcore which = 1297 }
+		command = { type = addcore which = 1298 }
+		command = { type = addcore which = 1305 }
+		command = { type = addcore which = 1306 }
+		command = { type = addcore which = 1313 }
+		command = { type = addcore which = 1307 }
+		command = { type = addcore which = 1308 }
+		command = { type = addcore which = 1349 }
+		command = { type = addcore which = 1335 }
+		command = { type = addcore which = 1314 }
+		command = { type = addcore which = 1315 }
+		command = { type = addcore which = 1267 }
+		command = { type = addcore which = 1320 }
+		command = { type = addcore which = 1299 }
+		command = { type = addcore which = 1343 }
+		command = { type = addcore which = 1300 }
+		command = { type = addcore which = 1301 }
+		command = { type = addcore which = 1350 }
+		command = { type = addcore which = 1351 }
+		command = { type = addcore which = 1352 }
+		command = { type = addcore which = 1321 }
+		command = { type = addcore which = 1323 }
+		command = { type = addcore which = 1259 }
+		command = { type = addcore which = 1260 }
+		command = { type = addcore which = 1255 }
+		command = { type = addcore which = 1241 }
+		command = { type = addcore which = 1247 }
+		command = { type = addcore which = 1246 }
+		command = { type = addcore which = 1251 }
+		command = { type = addcore which = 1242 }
+		command = { type = addcore which = 1254 }
+		command = { type = addcore which = 1332 }
+		command = { type = addcore which = 1252 }
+		command = { type = addcore which = 1253 }
+		command = { type = addcore which = 1248 }
+		command = { type = addcore which = 1249 }
+		command = { type = addcore which = 1250 }
+		command = { type = addcore which = 1327 }
+		command = { type = addcore which = 1243 }
+		command = { type = addcore which = 1244 }
+		command = { type = addcore which = 1245 }
+		command = { type = addcore which = 1329 }
+		command = { type = addcore which = 1330 }
+		command = { type = addcore which = 1202 }
+		command = { type = addcore which = 1204 }
+		command = { type = addcore which = 1212 }
+		command = { type = addcore which = 1205 }
+		command = { type = addcore which = 1199 }
+		command = { type = addcore which = 1203 }
+		command = { type = addcore which = 1200 }
+		command = { type = addcore which = 1206 }
+		command = { type = addcore which = 1213 }
+		command = { type = addcore which = 1237 }
+		command = { type = addcore which = 1207 }
+		command = { type = addcore which = 1220 }
+		command = { type = addcore which = 1218 }
+		command = { type = addcore which = 1236 }
+		command = { type = addcore which = 1201 }
+		command = { type = addcore which = 1208 }
+		command = { type = addcore which = 1209 }
+		command = { type = addcore which = 1210 }
+		command = { type = addcore which = 1211 }
+		command = { type = addcore which = 1214 }
+		command = { type = addcore which = 1215 }
+		command = { type = addcore which = 1216 }
+		command = { type = addcore which = 1235 }
+		command = { type = addcore which = 1217 }
+		command = { type = addcore which = 1197 }
+		command = { type = addcore which = 1198 }
+		command = { type = addcore which = 1263 }
+		command = { type = addcore which = 1256 }
+		command = { type = addcore which = 1238 }
+		command = { type = addcore which = 1240 }
+		command = { type = addcore which = 1239 }
+		command = { type = addcore which = 1258 }
+		command = { type = addcore which = 1257 }
+		command = { type = addcore which = 1328 } # Shangdong
+		command = { type = addcore which = 1331 }
+	}
+
+}
+
+# The Paoting-Fu Telegram
+event = {
+	id = 133011315
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011314_NAME
+	desc = EVT1914_133011314_DESC
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 5 }
+	}
+
+}
+
+# Evidence of Imminent Rebellion
+event = {
+	id = 133011316
+	random = no
+	country = UCH
+
+	trigger = {
+		or = {
+			and = {
+				random = 25
+				not = { local_flag = 133011306A }
+			}
+			random = 12
+		}
+		and = {
+			event = 133011314
+			event = 133011312
+			event = 133011310
+			event = 133011318
+		}
+	}
+
+	name = EVT1914_133011316_NAME
+	desc = EVT1914_133011316_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = trigger which = 133011319 }
+		
+	}
+
+}
+
+# Oust Anhui Control over the Central Army
+event = {
+	id = 133011317
+	random = no
+	country = U36
+
+	decision = {
+		and = {
+			event = 133011314
+			event = 133011312
+			event = 133011310
+		}
+	}
+
+	decision_trigger = {
+		ai = no
+	}
+
+	trigger = {
+		random = 75
+		and = {
+			event = 133011314
+			event = 133011312
+			event = 133011310
+		}
+	}
+
+	name = EVT1914_133011317_NAME
+	desc = EVT1914_133011317_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	date = { day = 0 month = 5 year = 1916 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = relation which = UCH value = -20 }
+		command = { type = trigger which = 133011318 }
+	}
+
+}
+
+# Xu Shuzheng Ousted
+event = {
+	id = 133011318
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011318_NAME
+	desc = EVT1914_133011317_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = relation which = U36 value = -20 }
+	}
+
+}
+
+#######
+# War #
+#######
+
+# The Zhili-Anhui War
+event = {
+	id = 133011319
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011319_NAME
+	desc = EVT1914_133011319_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_WAR
+		command = { type = trigger which = 133011320 }
+		command = { type = trigger which = 133011321 }
+		command = { trigger = {
+			and = {
+				or = {
+					event = 2002534 #Versailes
+					event = 2191514 #Mil. defeat
+					event = 2191520 #Abdication + Armistice
+					event = 2191532 #Early defeat
+				}
+				event = 2192507# st. germain
+			}
+		} type = event which = 133011322 where = JAP when = 7 }
+		command = { trigger = {
+			and = {
+				event = 2191512 #Reverse Versailes
+			or = {
+				event = 2191555 #Russia defeated
+				event = 2007529 #SOV defeated
+				event = 2007530 #SOV defeated
+			}
+			}
+		} type = event which = 133011323 where = U08 when = 7 }
+		command = { type = non_aggression which = CHI where = UCH }
+		command = { type = non_aggression which = JAP where = UCH }
+		command = { type = end_mastery which = U36 }
+		command = { type = end_mastery which = U67 }
+		command = { type = end_non_aggression which = U36 where = UCH }
+		command = { type = leave_alliance when = 0 } # Ensure Limited War
+		command = { type = war which = U36 }
+		command = { type = peace which = U67 value = 1 }
+		command = { trigger = { ai = no } type = demobilize which = land when = 0 where = 1 value = 7 }
+		command = { trigger = { ai = yes } type = demobilize which = land when = 0 where = 1 value = 8 }
+		command = { type = belligerence which = UCH value = -20 }
+		command = { trigger = { not = { local_flag = 133011306B} } type = revolt which = -2 }
+		command = { trigger = { not = { local_flag = 133011306B} } type = revolt which = -2 }
+		command = { type = revolt which = -2 }
+		command = { type = sleepevent which = 133011302 }
+		command = { type = sleepevent which = 133011303 }
+		command = { type = sleepevent which = 133011304 }
+		command = { type = sleepevent which = 133011305 }
+		command = { type = sleepevent which = 133011306 }
+		command = { type = sleepevent which = 133011307 }
+		command = { type = sleepevent which = 133011308 }
+		command = { type = sleepevent which = 133011309 }
+		command = { type = sleepevent which = 133011310 }
+		command = { type = sleepevent which = 133011311 }
+		command = { type = sleepevent which = 133011312 }
+		command = { type = sleepevent which = 133011313 }
+		command = { type = sleepevent which = 133011314 }
+		command = { type = sleepevent which = 133011315 }
+		command = { type = sleepevent which = 133011316 }
+		command = { type = sleepevent which = 133011317 }
+		command = { type = sleepevent which = 133011318 }
+		command = { type = sleepminister which = 1325215 }
+		command = { type = sleepminister which = 1325319 }
+		command = { type = sleepminister which = 1325327 }
+		command = { type = sleepminister which = 1325301 }
+		command = { type = sleepminister which = 1325317 }
+		command = { type = sleepminister which = 1325323 }
+		command = { type = sleepminister which = 1325329 }
+		command = { type = sleepminister which = 1325330 }
+		command = { type = sleepminister which = 1325331 }
+		command = { type = sleepminister which = 1325332 }
+		command = { type = sleepminister which = 1325333 }
+		command = { type = sleepminister which = 1325321 }
+		command = { type = sleepminister which = 1325324 }
+		command = { type = sleepminister which = 1325305 }
+		command = { type = sleepminister which = 1325335 }
+	}
+
+}
+
+# The Zhili-Anhui War
+event = {
+	id = 133011320
+	random = no
+	country = U36
+
+	# Triggered
+
+	name = EVT1914_133011319_NAME
+	desc = EVT1914_133011319_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = EVT1914_133011201_ACTIONA # "Down with the central government!"
+		command = { type = leave_alliance when = 1 }
+		command = { type = war which = UCH }
+		#command = { type = belligerence value = -25}
+		command = { trigger = { ai = no } type = demobilize which = land when = 0 where = 1 value = 5 }
+		command = { trigger = { ai = yes } type = demobilize which = land when = 0 where = 1 value = 0 }
+		command = { trigger = { ai = yes } type = add_corps which = "1st Traitor Suppression Army" value = land where = 1241 }
+		command = { trigger = { ai = yes } type = add_division which = "Frontal Division" value = infantry when = 3 }
+		command = { trigger = { ai = yes } type = add_division which = "Hind Division" value = infantry when = 2 }
+		command = { trigger = { ai = yes } type = add_division which = "Left Division" value = infantry when = 2 }
+		command = { trigger = { ai = yes } type = add_corps which = "2nd Traitor Suppression Army" value = land where = 1243 }
+		command = { trigger = { ai = yes } type = add_division which = "Right Division" value = infantry when = 2 }
+		command = { trigger = { ai = yes } type = add_corps which = "3rd Traitor Suppression Army" value = land where = 1245 }
+		command = { trigger = { ai = yes } type = add_division which = "Middle Division" value = infantry when = 2 }
+		command = { trigger = { ai = yes } type = add_corps which = "4th Traitor Suppression Army" value = land where = 1236 }
+		command = { trigger = { ai = yes } type = add_division which = "New Division" value = infantry when = 2 }
+		command = { trigger = { ai = yes } type = add_corps which = "5th Traitor Suppression Army" value = land where = 1246 }
+		command = { trigger = { ai = yes } type = add_division which = "Sichuan Lujun" value = infantry when = 2 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = non_aggression which = JAP where = U36 }
+		command = { type = event which = 133011325 where = U36 when = 7 }
+		command = { trigger = { ai = yes } type = ai which = "switch/U36_1914ZhiliWar.ai" }
+	}
+
+}
+
+# The Zhili-Anhui War
+event = {
+	id = 133011321
+	random = no
+	country = U67
+
+	# Triggered
+
+	name = EVT1914_133011319_NAME
+	desc = EVT1914_133011319_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_NEUTRAL
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = U36 value = 1 }
+		command = { type = peace which = UCH value = 1 }
+		command = { trigger = { ai = yes } type = ai which = "switch/U67_1914ZhiliWar.ai" }
+		command = { type = end_access which = UCH }
+		command = { type = non_aggression which = U67 where = U36 }
+		command = { type = non_aggression which = U67 where = CHI }
+		command = { type = non_aggression which = U67 where = UCH }
+	}
+
+}
+
+# Japanese Intervention in the Anhui-Zhili War
+event = {
+	id = 133011322
+	random = no
+	country = JAP
+
+	# Triggered
+
+	name = EVT1914_133011319_NAME
+	desc = EVT1914_133011322_DESC
+
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	style = 2
+
+	action = {
+		trigger = {
+			supplies = 1000
+		}
+		name = EVT1914_133011200_NAME # "The Zhili Clique"
+		ai_chance = 25
+		command = { type = event which = 133011324 where = U36 when = 2 }
+		command = { type = relation which = U36 value = 30 }
+		command = { type = supplies value = -1000 }
+	}
+
+	action = {
+		trigger = {
+			supplies = 1000
+		}
+		name = EVT1914_133011018_NAME # "The Anhui Clique"
+		ai_chance = 75
+		command = { type = event which = 133011324 where = UCH when = 2 }
+		command = { type = relation which = UCH value = 30 }
+		command = { type = supplies value = -1000 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 25
+		name = ACTION_NAME_NEUTRAL
+		command = { }
+	}
+}
+
+# German Intervention in the Anhui-Zhili War
+event = {
+	id = 133011323
+	random = no
+	country = U08
+
+	# Triggered
+
+	name = EVT1914_133011319_NAME
+	desc = EVT1914_133011322_DESC
+
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	style = 2
+
+	action = {
+		trigger = {
+			supplies = 1000
+		}
+		name = EVT1914_133011200_NAME # "The Zhili Clique"
+		ai_chance = 25
+		command = { type = event which = 133011324 where = U36 when = 2 }
+		command = { type = relation which = U36 value = 30 }
+		command = { type = supplies value = -1000 }
+	}
+
+	action = {
+		trigger = {
+			supplies = 1000
+		}
+		name = EVT1914_133011018_NAME # "The Anhui Clique"
+		ai_chance = 75
+		command = { type = event which = 133011324 where = UCH when = 2 }
+		command = { type = relation which = UCH value = 30 }
+		command = { type = supplies value = -1000 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 25
+		name = ACTION_NAME_NEUTRAL
+		command = { }
+	}
+}
+
+# UCH/U36 Foreign Intervention in the Anhui-Zhili War
+event = {
+	id = 133011324
+	random = no
+	tag = { UCH U36 }
+	persistent = yes
+
+	# Triggered
+
+	name = EVT1914_133011511_NAME
+	desc = EVT1914_133011511_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_GREAT
+		command = { type = supplies value = 1000 }
+	}
+}
+
+# Wu Peifu's Daring Proposal
+event = {
+	id = 133011325
+	random = no
+	country = U36
+	one_action = yes
+
+	# Triggered
+
+	name = EVT1914_133011325_NAME
+	desc = EVT1914_133011325_DESC
+
+	picture = "WW1_Offensive"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_SUCCESS
+		command = { type = trigger which = 133011326 }
+		command = { type = morale which = land value = 50 }
+		command = { type = event which = 133011328 where = U67 when = 7 }
+	}
+
+	action = {
+		name = ACTION_NAME_FAILURE
+		command = { type = trigger which = 133011327 }
+		command = { type = morale which = land value = -50 }
+		command = { type = event which = 133011328 where = U67 when = 7 }
+		command = { type = sleepminister which = 995122 }
+		# TODO: Sleep Wu Peifu
+	}
+}
+
+# Western Anhui Front Collapses
+event = {
+	id = 133011326
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011326_NAME
+	desc = EVT1914_133011326_DESC
+
+	picture = "ccip_cw"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_CURSES
+		command = { type = dissent value = 5 } 
+		command = { type = morale which = land value = -50 }
+		# TODO: Sleep Western Leaders
+	}
+
+}
+
+# Wu Peifu Captured
+event = {
+	id = 133011327
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011327_NAME
+	desc = EVT1914_133011327_DESC
+
+	picture = "ccip_cw"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { type = dissent value = -5 } 
+		command = { type = morale which = land value = 50 }
+	}
+
+}
+
+# U67 Fengtian Entry into the War
+event = {
+	id = 133011328
+	random = no
+	country = U67
+
+	# Triggered
+
+	name = EVT1914_133011328_NAME
+	desc = EVT1914_133011328_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		trigger = {
+			or = {
+				ai = no
+				not = { event = 133011327 }
+			}
+		}
+		name = ACTION_NAME_WAR
+		ai_chance = 90
+		command = { type = trigger which = 133011329 }
+		command = { type = alliance which = U36 when = 1 }
+	}
+
+	action = {
+		name = ACTION_NAME_NEUTRAL
+		ai_chance = 10
+		command = { type = relation which = UCH value = 100 }
+	}
+}
+
+# UCH Fengtian Entry into the War
+event = {
+	id = 133011329
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011328_NAME
+	desc = EVT1914_133011329_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 5 } #TODO: Remove Fengtian Ministers
+	}
+
+}
+
+#########
+# Peace #
+#########
+
+# UCH Beijing is Lost!
+event = {
+	id = 133011330
+	random = no
+	country = UCH
+
+	trigger = {
+		not = { control = { province = 1247 data = -3 } }
+		event = 133011319
+	}
+
+	name = EVT1914_133011330_NAME
+	desc = EVT1914_133011330_DESC
+
+	picture = "ccip_cw"
+	style = 2
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = dissent value = 20 }
+		command = { type = morale which = land value = -25 }
+	}
+}
+
+# U36 Anhui Clique Destroyed
+event = {
+	id = 133011331
+	random = no
+	country = U36
+
+	trigger = {
+		or = {
+			and = {
+				event = 133011326
+				event = 133011330
+			}
+			and = {
+				or = {
+					event = 133011326
+					event = 133011330
+				}
+				not = {
+					event = 133011327
+				}
+				lost_national = { country = UCH value = 10 }
+			}
+			and = {
+				event = 133011327
+				lost_national = { country = UCH value = 35 }
+			}
+		}
+		event = 133011319
+		random = 25
+	}
+
+	name = EVT1914_133011331_NAME
+	desc = ACTION_NAME_VICTORY
+
+	picture = "ccip_cw"
+	style = 2
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { type = inherit which = UCH value = 1 }
+		command = { trigger = { exists = UCH } type = trigger which = 133011334 }
+		command = { trigger = { or = { event = 133011332 not = { event = 133011329 } } } type = alliance which = U67 when = 1 }
+		command = { trigger = { event = 133011326 } type = morale which = land value = -50 }
+		command = { trigger = { event = 133011327 } type = morale which = land value = 50 }
+		command = { type = wartime_ic_mod value = -10 }
+		command = { type = peacetime_ic_mod value = -5 }
+		command = { type = sleepevent which = 133011330 }
+		command = { type = sleepevent which = 133011332 }
+		command = { type = sleepevent which = 133011333 }
+		command = { type = sleepevent which = 133011319 }
+		command = { type = sleepevent which = 133011320 }
+		command = { type = sleepevent which = 133011321 }
+		command = { type = sleepevent which = 133011322 }
+		command = { type = sleepevent which = 133011323 }
+		command = { type = sleepevent which = 133011324 }
+		command = { type = sleepevent which = 133011325 }
+		command = { type = sleepevent which = 133011326 }
+		command = { type = sleepevent which = 133011327 }
+		command = { type = sleepevent which = 133011328 }
+		command = { type = sleepevent which = 133011329 }
+	}
+}
+
+# Inherit Helper
+event = {
+	id = 133011334
+	random = no
+	country = UCH
+
+	#Triggered
+
+	name = EVT1914_133011331_NAME
+	desc = EVT1914_133011334_DESC
+
+	picture = "ccip_cw"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = secederegion value = "China" which = U36 when = 1 }
+	}
+}
+
+# U67 Fengtian Clique Surrenders
+event = {
+	id = 133011332
+	random = no
+	country = U67
+
+	trigger = {
+		lost_national = { country = U67 value = 15 }
+		or = {
+			control = { province = 1237 data = UCH }
+			control = { province = 1235 data = UCH }
+			control = { province = 1216 data = UCH }
+			control = { province = 1209 data = UCH }
+		}
+		war = { country = U67 country = UCH }
+		event = 133011319
+		event = 133011329
+		not = { event = 133011331 }
+		random = 35
+	}
+
+	name = EVT1914_133011332_NAME
+	desc = EVT1914_133011334_DESC
+
+	picture = "ccip_cw"
+	style = 2
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1924 }
+
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = UCH value = 1 }
+	}
+}
+
+# UCH Zhili Clique Destroyed
+event = {
+	id = 133011333
+	random = no
+	country = UCH
+
+	trigger = {
+		or = {
+			not = {
+				exists = U36
+			}
+			and = {
+				lost_national = { country = U36 value = 40 }
+				control = { province = 1247 data = -3 } # To prevent rebels
+				control = { province = 1241 data = -3 }
+				control = { province = 1245 data = -3 }
+				control = { province = 1242 data = -3 }
+			}
+		}
+		event = 133011319
+		random = 35
+	}
+
+	name = EVT1914_133011333_NAME
+	desc = ACTION_NAME_VICTORY
+
+	picture = "ccip_cw"
+	style = 2
+
+	date = { day = 0 month = january year = 1917 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1924 }
+
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { type = inherit which = U36 value = 0 }
+		command = { trigger = { exists = U36 } type = trigger which = 133011335 }
+		command = { trigger = { not = { event = 133011332 } event = 133011329 } type = peace which = U67 value = 0 }
+		command = { type = make_puppet which = U67 }
+		command = { type = secedearea which = U67 value = "Heilongjiang" when = 1 } # Prevent province transfer from U67 to UCH.
+		command = { type = secedearea which = U67 value = "Jilin" when = 1 }
+		command = { type = secedeprovince which = U67 value = 1235 when = 1 }
+		command = { type = secedeprovince which = U67 value = 1237 when = 1 }
+		command = { type = secedeprovince which = U67 value = 1216 when = 1 }
+		command = { type = secedeprovince which = U67 value = 1218 when = 1 }
+		command = { type = secedeprovince which = U67 value = 1214 when = 1 }
+		command = { type = secedeprovince which = U67 value = 1217 when = 1 }
+		command = { type = secedeprovince which = U67 value = 1215 when = 1 }
+		command = { type = secedeprovince which = U67 value = 1220 when = 1 }
+		command = { trigger = { event = 133011326 } type = morale which = land value = 50 }
+		command = { trigger = { event = 133011327 } type = morale which = land value = -50 }
+		command = { trigger = { event = 133011330 } type = morale which = land value = 25 }
+		command = { type = sleepevent which = 133011330 }
+		command = { type = sleepevent which = 133011331 }
+		command = { type = sleepevent which = 133011332 }
+		command = { type = sleepevent which = 133011319 }
+		command = { type = sleepevent which = 133011320 }
+		command = { type = sleepevent which = 133011321 }
+		command = { type = sleepevent which = 133011322 }
+		command = { type = sleepevent which = 133011323 }
+		command = { type = sleepevent which = 133011324 }
+		command = { type = sleepevent which = 133011325 }
+		command = { type = sleepevent which = 133011326 }
+		command = { type = sleepevent which = 133011327 }
+		command = { type = sleepevent which = 133011328 }
+		command = { type = sleepevent which = 133011329 }
+	}
+}
+
+# Inherit Helper
+event = {
+	id = 133011335
+	random = no
+	country = U36
+
+	#Triggered
+
+	name = EVT1914_133011333_NAME
+	desc = EVT1914_133011334_DESC
+
+	picture = "ccip_cw"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = secederegion value = "China" which = UCH when = 1 }
+	}
+}

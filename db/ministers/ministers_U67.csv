@@ -1,0 +1,49 @@
+U67;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
+1150000;Head of State;Zhang Zuolin;1914;1964;1964;PA;Resigned Generalissimo;High;7282;X
+1150001;Chief of Army;Zhang Zuolin;1914;1929;1950;PA;Elastic Defence Doctrine;High;7282;X
+1150002;Head of Government;Zhang Zuolin;1914;1929;1950;PA;Old General;High;7282;X
+1150003;Foreign Minister;Wang Yongjiang;1914;1928;1928;PA;Biased Intellectual;Very High;3532;X
+1150004;Minister of Armament;Wang Yongjiang;1914;1928;1928;PA;Administrative Genius;High;3532;X
+1150005;Minister of Security;Zhang Zongchang;1914;1930;1933;PA;Prince of Terror;Very High;7283;X
+1150006;Head of Military Intelligence;Guo Songling;1914;1926;1926;PA;Logistics Specialist;Very High;7284;X
+1150007;Chief of Staff;Zhang Zuolin;1914;1929;1950;PA;School of Defence;Undying;7282;X
+1150008;Chief of Army;Zhang Jinghui;1914;1932;1960;PA;Decisive Battle Doctrine;Low;7285;X
+1150009;Chief of Navy;Under Army Command;1914;1964;1964;PA;Decisive Naval Battle Doctrine;Very High;unknownminister;X
+1150010;Chief of Air Force;Zhang Xueliang;1914;1964;2001;PA;Army Aviation Doctrine;Very High;7286;X
+1150011;Head of State;Zhang Xueliang;1929;1964;2001;PA;Stern Imperialist;Very High;M_Young Marshal;X
+1150012;Head of Government;Zhang Xueliang;1922;1964;2001;PA;Flamboyant Tough Guy;Very High;M_Young Marshal;X
+1150013;Chief of Staff;Zhang Xueliang;1922;1964;2001;PA;School of Psychology;Very High;7286;X
+1150014;Foreign Minister;Wang Yintai;1920;1932;1962;FA;Ideological Crusader;High;M_Wang Yintai;X
+1150015;Minister of Armament;Sun Qichang;1917;1932;1955;FA;Resource Industrialist;Medium;M_Sun Qichang;X
+1150016;Minister of Armament;Yuan Jinkai;1917;1932;1948;FA;Construction Magnate;Medium;M_Yuan Jinkai;X
+1150017;Minister of Security;Yuan Jinkai;1917;1932;1948;FA;Prince of Terror;Medium;M_Yuan Jinkai;X
+1150018;Chief of Army;Zhang Zuoxiang;1917;1950;1950;PA;Decisive Battle Doctrine;Medium;M_Zhang Zuoxiang;X
+1150019;Chief of Army;Wan Fulin;1925;1952;1952;PA;Static Defence Doctrine;High;M_WanFulin;X
+1150020;Head of Military Intelligence;Zang Shiyi;1917;1932;1957;FA;Logistics Specialist;Low;M_Zang Shiyi;X
+1150021;Chief of Staff;Zang Shiyi;1917;1932;1957;FA;Commando Doctrine Staff;Low;M_Zang Shiyi;X
+1150022;Chief of Staff;Wu Junsheng;1921;1929;1929;PA;School of Mass Combat;High;7287;X
+1150023;Chief of Staff;Ma Zhanshan;1920;1951;1951;PA;School of Manoeuvre;High;M_Ma Zhanshan;X
+1150024;Chief of Army;Ma Zhanshan;1920;1951;1951;PA;Elastic Defence Doctrine;High;M_Ma Zhanshan;X
+1150025;Minister of Security;Tang Juwu;1926;1940;1940;PA;Man of the People;High;M_Tang Juwu;X
+1150026;Head of Military Intelligence;Mo Dehui;1925;1968;1968;SC;Logistics Specialist;High;M_Mo Dehui;X
+1150027;Minister of Armament;Li Shaogeng;1925;1932;1945;SC;Resource Industrialist;Medium;M_Li Shaogeng;X
+1150028;Foreign Minister;Li Shaogeng;1925;1932;1945;SC;Apologetic Clerk;High;M_Li Shaogeng;X
+1150029;Minister of Armament;Lu Ronghuan;1922;1932;1955;SC;Steel Magnate;Medium;M_Lu Ronghuan;X
+1150030;Minister of Armament;Ruan Zhenduo;1925;1932;1974;PA;Laissez-Faire Capitalist;High;M_RuanZhenduo;X
+1150031;Head of State;Yang Yuting;1928;1930;1950;PA;Ruthless Powermonger;Low;M_Yang Yuting;X
+1150032;Head of Government;Yang Yuting;1917;1930;1950;PA;Flamboyant Tough Guy;Low;M_Yang Yuting;X
+1150034;Minister of Security;Yang Yuting;1917;1930;1999;PA;Prince of Terror;Low;M_Yang Yuting;X
+1150035;Chief of Staff;Yang Yuting;1917;1930;1930;PA;School of Psychology;Low;M_Yang Yuting;X
+1150036;Chief of Army;Yang Yuting;1917;1930;1930;PA;Static Defence Doctrine;Low;M_Yang Yuting;X
+1150037;Chief of Air Force;Yang Yuting;1917;1930;1930;PA;Army Aviation Doctrine;Low;M_Yang Yuting;X
+1150038;Chief of Army;Zhang Haipeng;1917;1932;1950;PA;Elastic Defence Doctrine;High;M_ZhangHaipeng;X
+1150039;Chief of Army;Yu Zhishan;1925;1932;1952;PA;Guns and Butter Doctrine;High;M_Yu Zhishan;X
+1150040;Minister of Armament;Tang Yulin;1924;1938;1938;PA;Corrupt Kleptocrat;Medium;M_Tang Yulin;X
+1150041;Minister of Security;Tang Yulin;1924;1938;1938;PA;Crooked Kleptocrat;Medium;M_Tang Yulin;X
+1150042;Head of Government;Tang Yulin;1924;1938;1938;PA;Local Tyrant;Medium;M_Tang Yulin;X
+1150043;Chief of Air Force;Gao Zhihang;1933;1938;1938;SC;Vertical Envelopment Doctrine;High;9449;X
+1150044;Chief of Navy;Shen Honglie;1914;1969;1969;PA;Decisive Naval Battle Doctrine;High;M_Shen Honglie;X
+1150045;Head of Government;Pan Fu;1926;1937;1937;SC;Happy Amateur;Very High;M_Pan Fu;X
+1150046;Minister of Armament;Pan Fu;1926;1937;1937;SC;Laissez-Faire Capitalist;Very High;M_Pan Fu;X
+1150047;Minister of Security;Shen Ruilin;1926;1945;1945;SC;Silent Lawyer;Very High;M_Shen Ruilin;X

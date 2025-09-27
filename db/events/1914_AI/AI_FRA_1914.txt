@@ -1,0 +1,126 @@
+
+########################################################## FRANCE AI 1914
+###############################################
+## France is at war with Central Powers
+## Austria-Hungary is allied with germany, italy is neutral
+################################################
+# Revision by Arturius:
+#
+# One Front, one ai-file. Several ai-files for several warplans for the same front cannot be represented by AI resp. have no effect when it comes to war. That's why AI-files reduced down to one.
+
+
+event = {
+	id = 3002501
+	random = no
+	country = FRA
+	persistent = yes		
+	
+	trigger = {
+		ai = yes
+		
+		NOT = { flag = FRA1914StartupDone }
+		war = { country = FRA country = U08 }
+		war = { country = RUS country = U08 }
+		NOT = { war = { country = U09 country = U08 } }		
+		NOT = { alliance = { country = U08  country = ITA } } 	
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+		{
+			ai_chance = 90
+			command = { type = setflag which = FRA1914StartupDone }
+			command = { type = setflag which = FRA1914_XVII }
+		}
+			
+	action_b = {
+			ai_chance = 10
+			command = { type = setflag which = FRA1914StartupDone }
+			command = { type = setflag which = FRA1914_XXI }			
+			command = { type = war which = SCH }	#Plan XXI – reversed Rupprecht : offensive, with violation of Swiss neutrality if necessary				
+			}
+}
+
+## Italy has joined entente, no spying in the future
+event = {
+	id = 3002502
+	random = no
+	country = FRA	
+	
+	trigger = {
+		ai = yes
+		flag = ITAEntente 
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = 
+		{
+			ai_chance = 100
+			command = { type = ai which = "switch/FRA1914_ITAEntente.ai" }	
+
+		}
+}
+
+######################################################################################
+# Build some INF units with H-Arm and Arm brigades when required techs are available #
+######################################################################################
+event = {
+	id = 3002503
+	random = no
+	country = FRA
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = 0.1 where = 90 }
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = 0.1 where = 90 }
+		command = { type = build_brigade value = super_heavy_armor when = 3 cost = 0.1 where = 90 }
+	}
+}
+
+event = {
+	id = 3002504
+	random = no
+	country = FRA
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		technology = 2620 #Mid-Great War Tank 
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 0 month = january year = 1916 }
+	offset = 91
+	deathdate = { day = 29 month = december year = 1920 }
+
+	action = {
+		command = { type = build_brigade value = heavy_armor when = 3 cost = 0.1 where = 90 }
+		command = { type = build_brigade value = heavy_armor when = 3 cost = 0.1 where = 90 }
+		command = { type = build_brigade value = heavy_armor when = 3 cost = 0.1 where = 90 }
+	}
+}
+######################################################################################

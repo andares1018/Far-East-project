@@ -1,0 +1,582 @@
+# Russian 1914 AI File by Jaegerfeld
+
+switch = no # [yes/no]
+max_front_ratio = 1.2 
+max_front_ratios = { 	
+	U08 = 5.0
+	U09 = 2.0
+	OTT = 2.0
+}
+max_garrison_prop = 0.40
+min_garrison_prop = 0.30
+neutrality = 120.000 
+war = 0
+reinforcement = 0.0000
+upgrading = 0.0000 
+strat_redeploy_threshold = 20
+max_redeploying = 0.05
+exp_force_ratio = 0.10
+exp_force_ratios = { } 
+no_exp_forces_to = { }
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier = 0.5
+	home_peace_cap 		= 250
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0.0
+	revolt_risk_mult	= 0.1
+
+	# PRIORITIES:
+	beach			= 5	# Beach level 2
+	capital			= 5	# Our capital
+	human_border	= 5	# Ignored for allied human players
+	war_target		= 5	# The next country targeted for attack by this AI
+	reserves 		= 5	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 0	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		NOR = -1
+		SWE = -1
+		U08 = 15 
+		U09 = 8
+		#ROM = -1
+		OTT = 1
+		PER = -1
+		AFG = -1
+		U02 = -1
+		SIK = -1
+		MON = -1
+		UCH = -1
+		JAP = -1
+	}
+	
+	province_priorities = {
+		553 = 5 # Leningrad
+	}
+	ignore = {	}
+	area_multiplier = {	}
+}
+
+leader_ratio = {
+	land_field_marshal 	=0.02
+	land_general 		=0.031
+	land_lt_general 	=0.41
+
+	sea_grand_admiral 	=0.02
+	sea_admiral 		=0.061
+	sea_vice_admiral 	=0.401
+
+	air_marshal 		=0.02
+	air_general 		=0.091
+	air_lt_General 		=0.11
+}
+
+front = { 
+	recklessness 		= 1 # 0-3
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= even
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.0
+	panic_ratio_vs_human= 2.0
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+
+	strength 		= 1.0
+	organisation 	= 1.0
+	soft_attack 	= 1.0
+	hard_attack 	= 1.0
+	ground_defense 	= 1.0
+	dig_in 			= 1.0 # Against defender
+
+	frozen_attack 	= 1.0
+	snow_attack 	= 1.0
+	blizzard_attack = 1.0
+	storm_attack 	= 1.0
+	muddy_attack 	= 1.0
+
+	
+	
+	occupied 	= 0.7
+	owned 		= 0.7
+
+	jungle_attack 	= 1.0
+	mountain_attack = 1.0
+	swamp_attack 	= 1.0
+	forest_attack 	= 1.0
+	hill_attack 	= 1.0
+	urban_attack 	= 1.0
+	river 			= 1.0
+
+	enemy_handicap = { } 
+	
+	passivity = { }
+	
+	province_priorities = {
+		#187  = 6.0 # Leningrad
+		#238  = 6.0 # Kiev
+		#235  = 6.0 # Dnepropetrovsk
+		#163  = 6.0 # Stalingrad
+		#248  = 6.0 # Kharkov
+		#277  = 6.0 # Bryansk
+		#1372 = 6.0 # Vladivostock
+		#535  = 6.0 # Murmansk
+		#253  = 6.0 # Sevastopool
+		#258  = 6.0 # Rostov
+		#219  = 6.0 # Smolensk
+		#175  = 9.0 # Moscow
+		#243  = 6.0 # Kursk
+	}
+} 
+
+###################################
+# Diplomacy
+###################################
+combat = { }
+
+claim_acceptance = -69
+
+# Special resistance against "influence" by the listed nations. Value range = [0 - 10]  
+resistance = {  
+	U08 = 2 
+	U09 = 2
+}
+
+demand_claims = {
+}
+
+befriend = {
+	ENG = 30
+	ROM = 50
+	SER = 50 
+	FRA = 50 
+}
+protect = {
+	SER = 50 
+}
+target = { 
+} 
+
+trade = {
+	cancel_deal_threshold = 2
+
+	energy 		= -1
+	rare_materials 	= -1
+	metal 		= -1
+	oil 		= -1
+	supplies 	= -1
+	money 		= -1
+
+	favored = {
+		FRA = 50
+		ENG = 50
+		SER = 50
+		ROM = 50
+	}
+	embargo = { }
+}
+tech_sharing = {
+	favored = {
+		FRA = 50
+		ENG = 50
+		SER = 50
+	}
+
+	embargo = { }
+
+	not = { }
+
+	prioritized = {	}
+}
+###################################
+# Spying
+###################################
+spyprefs =
+{
+	percentage_on_spies 		= 0.2
+	percentage_foreign_mission 	= 0.8
+
+	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
+	spyprefsdata = 
+	{
+		NumberOfSpies			= 20
+		min_number_of_spies		= 3
+		steal_blueprint			= 10
+		minister_assassination	= 5
+		smear_campaign			= 10
+		coup					= 3
+		sabotage_industry		= 10
+		nuclear_sabotage		= 5
+		found_partisans			= 10
+		massmedia				= 10
+		disrupt_techteam		= 10
+		country					= RUS
+	}
+	spyprefsdata = {
+		country_priorities	= 10
+		steal_blueprint 	= 5
+		minister_assassination	= 0
+		smear_campaign 		= 5
+		coup 				= 0
+		sabotage_industry 	= 2
+		nuclear_sabotage 	= 0
+		found_partisans		= 1
+		massmedia 			= 0
+		disrupt_techteam 	= 0
+		country 			= U08
+	}
+	spyprefsdata = {
+		country_priorities	= 2
+		steal_blueprint 	= 5
+		minister_assassination	= 0
+		smear_campaign 		= 4
+		coup 				= 0
+		sabotage_industry 	= 1
+		nuclear_sabotage 	= 0
+		found_partisans		= 1
+		massmedia 			= 0
+		disrupt_techteam 	= 0
+		country 			= U09
+	}
+	spyprefsdata = {
+		country_priorities	= 4
+		steal_blueprint 	= 0
+		minister_assassination	= 0
+		smear_campaign 		= 3
+		coup 				= 0
+		sabotage_industry 	= 0
+		nuclear_sabotage 	= 0
+		found_partisans		= 0
+		massmedia 			= 0
+		disrupt_techteam 	= 0
+		country 			= OTT
+	}
+}
+###################################
+# Construction and Tech Research
+###################################
+#Default values
+construction = { 
+	max_factor = 0.05
+
+	AA_batteries = no
+	max_AA_level = 3
+	AA_provs = {
+		553 # Leningrad
+		572 # Moscow
+		617 # Kiev
+		627 # Dnepropetrovsk
+		663 # Stalingrad
+		636 # Kharkov
+		587 # Bryansk
+		1130 # Chelyabinsk
+		1191 # Vladivostock
+	} 
+
+	coastal_fort = no
+	max_coastal_level = 3
+	coastal_fort_provs = {
+		553 # Leningrad
+	} 
+
+	radar_station = no 
+	max_radar = 5 
+	radar_provs = { } 
+
+	air_base = no
+	max_air_base = 2
+	air_base_provs = { }
+
+	naval_base = no 
+	max_naval_base = 5 
+	naval_base_provs = { } 
+
+	land_fort = no
+	max_land_level = 2
+	fort_borders = { } 
+
+	ic_at_war = no 
+	force_ic_until = 1913
+	ic_end_year = 1913
+	IC_provs = {
+		663 # Stalingrad
+		683 # Gorki
+		572 # Moscow
+		677 # Danilov
+		678 # Yaroslavl
+		553 # Leningrad
+		690 # Osa
+		699 # Molotov
+     	1164 # Irkutsk 
+		1143 # Tomsk
+		1152 # Barnaul
+		1129 # Novosibirsk
+     	498 # Semipalatinsk 
+		1138 # Omsk
+		1158 # Krasnoyarsk
+		1147 # Achinsk
+		598 # Berezniki
+		1132 # Ufa
+		1114 # Gurjev
+		621 # Serov
+		1137 # Sverdlovsk
+		1136 # NicnijTagil
+		1130 # Ghelyabinsk
+		1151 # Kurgan
+		1133 # Orsk
+		1536 # Petropavlovsk
+		1135 # Tyumen
+		669 # Saratov
+		668 # Syzran
+		666 # Novouzensk
+		639 # Naberezhnye Chelny
+	} 
+}
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 		= 680 
+	max_batch_war 			= 320 
+	max_batch_home_front	= 180
+	extra_convoys_war		= 0.0500 
+	extra_convoys_peace		= 0.0500 
+
+
+	#### Divisions etc...
+	infantry 	= 55
+	cavalry 	= 10
+	motorized 	= 0
+	mechanized 	= 0
+	light_armor = 0
+	armor 		= 0
+	paratrooper = 0
+	marine 		= 0
+	bergsjaeger = 6
+	garrison	= 2
+    hq 			= 5
+	militia 	= 0
+#				78 %
+	interceptor 	= 2
+	multi_role 		= 0
+	cas 			= 0
+	strategic_bomber = 2
+	tactical_bomber = 2
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				6 %
+	battleship 		= 5
+	carrier 		= 0
+	escort_carrier	= 0
+	destroyer 		= 3
+	light_cruiser 	= 3
+	heavy_cruiser 	= 1
+	battlecruiser 	= 0
+	submarine 		= 2
+	nuclear_submarine = 0
+	transports 		= 2
+#				16 %
+
+	#### Brigades
+	artillery 			= 30
+	sp_artillery 		= 0
+	cavalry_brigade		= 10 
+	sp_anti_air			= 0
+	medium_armor		= 0
+	tank_destroyer 		= 0
+	light_armor_brigade = 2
+	heavy_armor 		= 2
+	super_heavy_armor 	= 2
+	armored_car 		= 5
+	anti_air 			= 0
+	police 				= 0
+	engineer 			= 5 
+
+	cag		= 100
+	escort	= 100
+	
+	naval_asw				= 20
+	naval_anti_air_s		= 20
+	naval_radar_s			= 20
+	naval_fire_controll_s	= 20
+	naval_improved_hull_s	= 10
+	naval_torpedoes_s		= 10
+	naval_anti_air_l		= 0
+	naval_radar_l			= 0
+	naval_fire_controll_l	= 0
+	naval_improved_hull_l	= 0
+	floatplane				= 10
+}
+
+technology = { 
+	endgoal 	= { } 
+	preference 	= {
+		# Manufacturing
+		5810 5820 5050 5830 5060 5070 5130 5110 5120 5840 5850 5860
+
+		# Construction Engineering
+		5800 5080 5090 5100 5900 5910
+		 
+		5140 5150 5160 5170 5180
+		
+		# Computers
+		5310 54010 54020 54030 5320 5330 5340
+
+		# Computers
+		5316 5326 5327 5350 5360 5370 5380 5390 5400 53060 53116
+		
+		# Regular Infantry
+		1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 1110 1120 1130 1140 1150 13000 13010 13020
+
+		# Agriculture
+		5700 5710 5010 5020 5030 5040 5720 53000 53010
+
+		# Inf support
+		1910 1920 1930 1940 1950 1960 1970 1980 1990 199100 199110 199120 199130 199140 199150 199160 199170 199180
+
+		# Land Doctrines Sovjet Branch.
+		6310 6320 6330 6340 6350 6360 6370 14060
+
+		# Naval Doctrines
+		8120 8210 8310 81380 8160 8330 8200
+
+	} 
+	ignore 		= {	}
+ 
+	armor 		= 2
+	infantry 	= 4
+	industry 	= 3
+	aircraft 	= 2
+	naval 		= 1
+	land_doctrines 	= 3
+	secret_weapons 	= 1
+	air_doctrines 	= 1
+	naval_doctrines = 1
+}  
+
+
+###################################
+# Air bombardment and defense
+###################################
+# Air AI File For Ground Bombings as priority
+# bomber is now obsolete and NOT USED AT ALL replace and use Air Marshal instead
+
+air_marshal = {
+	min_mission_strength_org	= 0.8
+	icxdayscostfactor 			= 10.0		# How to value true industrial cost when calculating expect causalties
+	manpowercostfactor			= 100.0		# How to value manpower cost when calculating expect causalties
+	destructionriskthreashold 	= 0.2		# when to fear a divisiopn might be destroyed
+
+	# desirability is a multiplier used when calcualting the mission desirability
+	airsuperioritydesirability 		= 30.0
+	groundattackdesirability 		= 40.0
+	inderdictiondesirability 		= 20.0
+	logisticalstrikedesirability 	= 2.0
+	runwaycrateringdesirability 	= 10.0
+	strategicstrikedesirability 	= 10.0
+	installationstrikedesirability 	= 5.0
+	navalstrikedesirability 		= 15.0
+	portstrikedesirability 			= 9.0
+	convoyraiddesirability			= 9.0
+
+	# tolerance is the required kill:loss ration expected to do 
+	#    mission, 2.0 accept twice the losses of your enemy, 0.5 accept half
+	airsuperioritylosstolerance 	= 1.0
+	groundattacklosstolerance 		= 1.0
+	interdictionlosstolerance 		= 2.0
+	logisticalstrikelosstolerance 	= 0.5
+	runwaycrateringlosstolerance 	= 1.5
+	strategicstriketolerance 		= 4.5
+	installationstriketolerance 	= 1.5
+	navalstriketolerance 			= 1.0
+	portstriketolerance 			= 1.0
+	convoyraidtolerance				= 1.0
+
+	# efficency is a tweakable param to adjust according to how 
+	#    much actual damage comes from doing this mission (not to be confused with desirability)
+	logisticalstrikeefficency 	= 0.01
+	runwaycrateringefficency 	= 0.01
+	strategicstrikeefficency 	= 0.01
+	installationstrikeefficency = 0.01
+
+	taskforcetype = { name = "Air Superiority" desiredratio = 0.400 rangeweight = 10.000 airkillpowerweight = 2000.000 hardkillpowerweight = 0.000 softkillpowerweight = 0.000 navalkillpowerweight = 0.000 strategickillpowerweight = 0.000 transportcapacityweight = -1000000.000 airvulnurabilityweight = -1.000 surfacevulnurabilityweight = 0.000 idle = yes reorganize = yes air_superiority = yes } 
+	taskforcetype = { name = "Soft Bombing" desiredratio = 0.250 rangeweight = 10.000 airkillpowerweight = 0.000 hardkillpowerweight = 0.000 softkillpowerweight = 2000.000 navalkillpowerweight = 0.000 strategickillpowerweight = 0.000 transportcapacityweight = -1000000.000 airvulnurabilityweight = 0.000 surfacevulnurabilityweight = -1.000 idle = yes reorganize = yes interdiction = yes ground_attack = yes } 
+	taskforcetype = { name = "Hard Bombing" desiredratio = 0.100 rangeweight = 10.000 airkillpowerweight = 0.000 hardkillpowerweight = 2000.000 softkillpowerweight = 0.000 navalkillpowerweight = 0.000 strategickillpowerweight = 0.000 transportcapacityweight = -1000000.000 airvulnurabilityweight = 0.000 surfacevulnurabilityweight = -1.000 idle = yes reorganize = yes interdiction = yes ground_attack = yes } 
+	taskforcetype = { name = "Strategic Bombing" desiredratio = 0.100 rangeweight = 10.000 airkillpowerweight = 0.000 hardkillpowerweight = 0.000 softkillpowerweight = 0.000 navalkillpowerweight = 0.000 strategickillpowerweight = 2000.000 transportcapacityweight = -1000000.000 airvulnurabilityweight = -0.500 surfacevulnurabilityweight = -0.500 idle = yes reorganize = yes logistical_strike = yes runway_cratering = yes strategic_bombardment = yes installation_strike = yes } 
+	taskforcetype = { name = "Naval Bombing" desiredratio = 0.050 rangeweight = 10.000 airkillpowerweight = 0.000 hardkillpowerweight = 0.000 softkillpowerweight = 0.000 navalkillpowerweight = 2000.000 strategickillpowerweight = 0.000 transportcapacityweight = -1000000.000 airvulnurabilityweight = 0.000 surfacevulnurabilityweight = -1.000 idle = yes reorganize = yes naval_strike = yes port_strike = yes convoy_air_raiding = yes } 
+	taskforcetype = { name = "Airlift" desiredratio = 0.100 rangeweight = 10.000 airkillpowerweight = 0.000 hardkillpowerweight = -2000.000 softkillpowerweight = -2000.000 navalkillpowerweight = 0.000 strategickillpowerweight = -2000.000 transportcapacityweight = 1000000.000 airvulnurabilityweight = -1.000 surfacevulnurabilityweight = 0.000 idle = yes reorganize = yes airborne_assault = yes air_supply = yes } 
+}
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 0.1	#higher = avoid long distance.
+	pocket		= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+	naval_base 	= 0.1 
+	air_support = 3.0 
+	redirect 	= priority
+	ignore		= no
+      
+	target = {	} 
+} 
+admiral = { 
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	#Which provinces to use as bases..
+	base = {
+		553	# Leningrad
+		641	# Sevastopool
+		535	# Murmansk
+		542	# Archangel
+		1191# Vladivostok
+		708	# Kutaisi
+	}
+	target = {
+		2382 = 200
+		2385 = 200
+		2386 = 150
+		2601 = 150
+		2482 = 200
+		2483 = 200
+		2467 = 200
+		2466 = 150
+		2215 = 50
+		2216 = 50
+		2217 = 25
+		2218 = 25
+	} 
+	core = {
+		2468
+		2484
+		2384
+		2381
+		2383
+		2191
+	} 
+}

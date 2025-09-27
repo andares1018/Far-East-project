@@ -1,0 +1,872 @@
+# Constitutional Protection War
+# By Limith
+#-CPW Setup Events-----------------------------
+# CHI 133011500 Formation of the Chinese Revolutionary Party.
+# UCH 133011504 Hunan Clique joins the Guangzhou Government!
+# CHI 133011523 Hunan Clique joins the Guangzhou Government!
+# UCH 133011502 Declare war on the Guangzhou Government
+# U36 133011503 Opposition to the Constitutional Protection War
+# UCH 133011505 Revolts in Shanghai
+# REB 133911001 AI_EVENT
+#-CPW Peace Events-----------------------------
+# U36 133011506 Seek a Political Solution
+# CHI 133011507 Seek a Political Solution
+# UCH 133011508 Zhili Demands for Peace
+#-Foreign intervention in CPW------------------
+# ALI 133011509 Intervention in China
+# AXI 133011510 Intervention in China
+# CHI/UCH 133011511 Foreign Help Arrives
+
+# Formation of the Chinese Revolutionary Party
+event = {
+	id = 133011500
+	random = no
+	country = CHI
+
+	# Triggered
+
+	name = EVT1914_133011500_NAME
+	desc = EVT1914_133011500_DESC
+
+	picture = "ccip_npw"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 6 }
+		command = { type = set_domestic which = defense_lobby value = 9 }
+		command = { type = set_domestic which = interventionism value = 9 }
+		command = { trigger = { exists = CYN not = { ispuppet = CYN } } type = alliance which = CYN when = 1 }
+		command = { trigger = { exists = CGX not = { ispuppet = CGX } } type = alliance which = CGX when = 1 }
+		command = { trigger = { event = 133011401 } type = headofstate which = 55300 } # Sun Zhongshan
+		command = { trigger = { event = 133011401 } type = headofgovernment which = 55301 } # Sun Zhongshan
+		command = { trigger = { event = 133011406 } type = headofstate which = 55200 } # Tang Jiyao
+		command = { trigger = { event = 133011406 } type = headofgovernment which = 55219 } # Tang Jiyao
+		command = { type = foreignminister which = 55325 } # Wu Tingfang
+		command = { type = armamentminister which = 55302 } # Tang Shaoyi
+		command = { type = ministerofsecurity which = 55303 } # Hu Hanmin
+		command = { type = ministerofintelligence which = 55304 } # Hu Hanmin
+		command = { type = chiefofstaff which = 55305 } # Li Liejun
+		command = { type = chiefofarmy which = 55310 } # Cheng Jiaoming
+	}
+}
+
+# Hunan Clique joins the Guangzhou Government!
+event = {
+	id = 133011504
+	random = no
+	country = UCH
+
+	# Triggered
+
+	name = EVT1914_133011504_NAME
+	desc = EVT1914_133011504_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = secedearea which = CHI value = "Sichuan" when = 1 }
+		command = { type = secedearea which = CHI value = "Hunan" when = 1 }
+		command = { type = secedearea which = CHI value = "Hubei" when = 1 }
+		command = { type = secedearea which = CHI value = "Guizhou" when = 1 }
+		command = { type = event which = 133011028 where = UCH when = 0 }
+		command = { type = event which = 133011029 where = UCH when = 0 }
+		command = { type = event which = 133011024 where = UCH when = 0 }
+		command = { type = event which = 133011038 where = UCH when = 0 }
+		command = { type = event which = 133011502 where = UCH when = 7 }
+		command = { type = event which = 133011523 where = CHI when = 2 }
+		command = { type = trigger which = 133911001 }
+	}
+}
+
+# Hunan Clique joins the Guangzhou Government!
+event = {
+	id = 133011523
+	random = no
+	country = CHI
+
+	#Triggered
+
+	name = EVT1914_133011504_NAME
+	desc = EVT1914_133011523_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { type = add_corps which = "Hubei Huai-jun" value = land where = 1317 }
+		command = { type = add_division which = "Hubei Lujun" value = infantry when = 1 }
+		command = { type = add_corps which = "Guizhou Difangjun" value = land where = 1305 }
+		command = { type = add_division which = "Guizhou Lujun" value = infantry when = 2 }
+		command = { type = add_corps which = "Chongqing Mingzhongjituan" value = land where = 1299 }
+		command = { type = add_division which = "Congqing Mingbin" value = militia when = 0 }
+		command = { type = add_division which = "Sichuan Lujun" value = infantry when = 1 }
+		command = { type = add_corps which = "Hunan Difangjun" value = land where = 1308 }
+		command = { type = add_division which = "Hunan Lujun" value = infantry when = 2 }
+	}
+}
+
+# Declare war on the Guangzhou Government
+event = {
+	id = 133011502
+	country = UCH
+	random = no
+
+	# Triggered
+
+	name = EVT1914_133011502_NAME
+	desc = EVT1914_133011502_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_WAR
+		command = { type = end_non_aggression which = CHI where = UCH }
+		command = { type = end_non_aggression which = UCH where = CHI }
+		command = { type = war which = CHI }
+		command = { type = trigger which = 133011503 }
+		command = { type = event which = 133011505 where = UCH when = 3 }
+	}
+}
+
+# Opposition to the Constitutional Protection War
+event = {
+	id = 133011503
+	country = U36 # Zhili Clique
+	random = no
+	one_action = yes
+
+	# Triggered
+
+	name = EVT1914_133011503_NAME
+	desc = EVT1914_133011503_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		trigger = {
+			year = 1918
+		}
+		name = EVT1914_133011503_ACTIONA
+		ai_chance = 10
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = event which = 133011506 where = U36 when = 60 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = non_aggression which = CGX where = U36 }
+		command = { type = non_aggression which = CYN where = U36 }
+		command = { type = belligerence which = U36	value = -30 }
+	}
+
+	action = {
+		name = EVT1914_133011503_ACTIONA
+		ai_chance = 0
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = event which = 133011506 where = U36 when = 120 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = non_aggression which = CGX where = U36 }
+		command = { type = non_aggression which = CYN where = U36 }
+		command = { type = belligerence which = U36	value = -30 }
+	}
+
+	action = {
+		trigger = {
+			year = 1917
+		}
+		name = EVT1914_133011503_ACTIONA
+		ai_chance = 10
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = event which = 133011506 where = U36 when = 85 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = non_aggression which = CGX where = U36 }
+		command = { type = non_aggression which = CYN where = U36 }
+		command = { type = belligerence which = U36	value = -30 }
+	}
+
+	action = {
+		trigger = {
+			year = 1917
+		}
+		name = EVT1914_133011503_ACTIONA
+		ai_chance = 10
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = event which = 133011506 where = U36 when = 75 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = non_aggression which = CGX where = U36 }
+		command = { type = non_aggression which = CYN where = U36 }
+		command = { type = belligerence which = U36	value = -30 }
+	}
+
+	action = {
+		trigger = {
+			year = 1918
+		}
+		name = EVT1914_133011503_ACTIONA
+		ai_chance = 10
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = event which = 133011506 where = U36 when = 65 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = non_aggression which = CGX where = U36 }
+		command = { type = non_aggression which = CYN where = U36 }
+		command = { type = belligerence which = U36	value = -30 }
+	}
+
+	action = {
+		trigger = {
+			year = 1919
+		}
+		name = EVT1914_133011503_ACTIONA
+		ai_chance = 10
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = event which = 133011506 where = U36 when = 55 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = non_aggression which = CGX where = U36 }
+		command = { type = non_aggression which = CYN where = U36 }
+		command = { type = belligerence which = U36	value = -30 }
+	}
+}
+
+# Revolts in Shanghai
+event = {
+	id = 133011505
+	country = UCH
+	random = no
+
+	# Triggered
+
+	name = EVT1914_133011505_NAME
+	desc = EVT1914_133011505_DESC
+
+	picture = "ccip_unrest"
+	style = 2
+
+	action = {
+		name = ACTION_NAME_DAMN
+		command = { type = remove_division which = "Shanghai Mingbin" value = UCH }
+		command = { type = revolt which = 1338 when = 0 }
+		command = { type = revolt which = 1338 when = 0 }
+		command = { type = revolt which = 1338 when = 0 }
+	}
+}
+
+# AI_EVENT
+event = {
+	id = 133911001
+	country = REB
+	random = no
+
+	#Triggered
+
+	name = AI_EVENT
+
+	action = {
+		command = { type = secedearea which = CYN value = "Yunnan" when = 1 }
+		command = { type = secedeprovince which = CYN value = 1290 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1294 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1293 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1292 when = 1 }
+		command = { type = secedeprovince which = CYN value = 1291 when = 1 }
+		command = { type = secedearea which = CGX value = "Guangxi" when = 1 }
+		command = { type = secedearea which = CHI value = "Guangdong" when = 1 }
+		command = { type = secedearea which = CHI value = "Sichuan" when = 1 }
+		command = { type = secedearea which = CHI value = "Hunan" when = 1 }
+		command = { type = secedearea which = CHI value = "Hubei" when = 1 }
+		command = { type = secedearea which = CHI value = "Guizhou" when = 1 }
+		command = { type = secedeprovince which = U36 value = 1236 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1246 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1243 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1241 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1242 when = 2 }
+		command = { type = secedeprovince which = U36 value = 1245 when = 2 }
+		command = { trigger = { exists = U67 } type = secedearea which = U67 value = "Heilongjiang" when = 1 }
+		command = { trigger = { exists = U67 } type = secedearea which = U67 value = "Jilin" when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1235 when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1237 when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1216 when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1218 when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1214 when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1217 when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1215 when = 1 }
+		command = { trigger = { exists = U67 } type = secedeprovince which = U67 value = 1220 when = 1 }
+		command = { type = secederegion value = "China" which = UCH when = 1 }
+	}
+}
+
+####################
+# CPW Peace Events #
+####################
+
+# Seek a Political Solution
+event = {
+	id = 133011506
+	random = no
+	country = U36
+
+	#Triggered
+
+	name = EVT1914_133011506_NAME
+	desc = EVT1914_133011506_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		name = EVT1914_133011506_ACTIONA
+		command = { type = event which = 133011507 where = CHI when = 2 }
+		command = { trigger = { war = { country = CHI } } type = peace which = CHI value = 1 }
+		command = { type = non_aggression which = CHI where = U36 }
+		command = { type = sleepevent which = 133011509 }
+		command = { type = sleepevent which = 133011510 }
+		command = { type = sleepevent which = 133011511 }
+	}
+}
+
+# Seek a Political Solution
+event = {
+	id = 133011507
+	random = no
+	country = CHI
+	one_action = yes
+
+	#Triggered
+
+	name = EVT1914_133011507_NAME
+	desc = EVT1914_133011507_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		trigger = {
+			area = { area = "Sichuan" country = -3 data = 1 value = 90 }
+			area = { area = "Guizhou" country = -3 data = 1 value = 90 }
+			area = { area = "Hunan" country = -3 data = 1 value = 90 }
+			area = { area = "Hubei" country = -3 data = 1 value = 90 }
+			area = { area = "Yunnan" country = -3 data = 1 value = 90 }
+			area = { area = "Xikang" country = -3 data = 1 value = 60 }
+			area = { area = "Guangxi" country = -3 data = 1 value = 90 }
+			area = { area = "Guangdong" country = -3 data = 1 value = 70 }
+			not = {
+				or = {
+					area = { area = "Fujian" country = -3 data = 1 value = 70 }
+					area = { area = "Shaanxi" country = -3 data = 1 value = 70 }
+					area = { area = "Henan" country = -3 data = 1 value = 70 }
+					area = { area = "Anhui" country = -3 data = 1 value = 70 }
+					area = { area = "Gansu" country = -3 data = 1 value = 50 }
+					area = { area = "Jiangxi" country = -3 data = 1 value = 70 }
+				}
+			}
+		}
+		ai_chance = 100
+		name = EVT1914_133011507_ACTIONA
+		command = { type = trigger which = 133011508 }
+		command = { type = peace which = UCH }
+	}
+
+	action = {
+		trigger = {
+			not = {
+				or = {
+					area = { area = "Sichuan" country = UCH data = 1 value = 70 }
+					area = { area = "Guizhou" country = UCH data = 1 value = 70 }
+					and = {
+						area = { area = "Hunan" country = UCH data = 1 value = 70 }
+						area = { area = "Hubei" country = UCH data = 1 value = 70 }
+					}
+					area = { area = "Yunnan" country = UCH data = 1 value = 15 }
+					area = { area = "Xikang" country = UCH data = 1 value = 15 }
+					area = { area = "Guangxi" country = UCH data = 1 value = 15 }
+					area = { area = "Guangdong" country = UCH data = 1 value = 40 }
+				}
+			}
+		}
+		ai_chance = 0
+		name = EVT1914_133011507_ACTIONB
+		command = { type = trigger which = 133011508 }
+		command = { type = peace which = UCH }
+		command = { type = secedearea which = UCH value = "Hunan" when = 1 }
+		command = { type = secedearea which = UCH value = "Hubei" when = 1 } 
+	}
+
+	action = {
+		trigger = {
+			or = {
+				area = { area = "Sichuan" country = UCH data = 1 value = 70 }
+				area = { area = "Guizhou" country = UCH data = 1 value = 70 }
+				and = {
+					area = { area = "Hunan" country = UCH data = 1 value = 70 }
+					area = { area = "Hubei" country = UCH data = 1 value = 70 }
+				}
+				area = { area = "Yunnan" country = UCH data = 1 value = 15 }
+				area = { area = "Xikang" country = UCH data = 1 value = 15 }
+				area = { area = "Guangxi" country = UCH data = 1 value = 15 }
+				area = { area = "Guangdong" country = UCH data = 1 value = 40 }
+			}
+		}
+		ai_chance = 100
+		name = EVT1914_133011507_ACTIONC
+		command = { type = trigger which = 133011508 }
+		command = { type = peace which = UCH }
+		command = { type = secedearea which = UCH value = "Hunan" when = 1 }
+		command = { type = secedearea which = UCH value = "Hubei" when = 1 }
+		command = { type = secedearea which = UCH value = "Guizhou" when = 1 }
+		command = { type = secedearea which = UCH value = "Sichuan" when = 1 } 
+	}
+
+	action = {
+		trigger = {
+			area = { area = "Sichuan" country = -3 data = 1 value = 90 }
+			area = { area = "Guizhou" country = -3 data = 1 value = 90 }
+			area = { area = "Hunan" country = -3 data = 1 value = 90 }
+			area = { area = "Hubei" country = -3 data = 1 value = 90 }
+			area = { area = "Yunnan" country = -3 data = 1 value = 90 }
+			area = { area = "Xikang" country = -3 data = 1 value = 60 }
+			area = { area = "Guangxi" country = -3 data = 1 value = 90 }
+			area = { area = "Guangdong" country = -3 data = 1 value = 70 }
+			or = {
+				area = { area = "Fujian" country = -3 data = 1 value = 70 }
+				area = { area = "Shaanxi" country = -3 data = 1 value = 70 }
+				area = { area = "Henan" country = -3 data = 1 value = 70 }
+				area = { area = "Anhui" country = -3 data = 1 value = 70 }
+				area = { area = "Gansu" country = -3 data = 1 value = 50 }
+				area = { area = "Jiangxi" country = -3 data = 1 value = 70 }
+			}
+		}
+		ai_chance = 100
+		name = EVT1914_133011507_ACTIOND
+		command = { type = trigger which = 133011508 }
+		command = { type = peace which = UCH value = 0 }
+		command = { type = peace which = U36 value = 0 }
+		command = { type = setflag which = 133011508_secede }
+	}
+}
+
+# Zhili Demands for Peace
+event = {
+	id = 133011508
+	random = no
+	country = UCH
+	one_action = yes
+
+	#Triggered
+
+	name = EVT1914_133011508_NAME
+	desc = EVT1914_133011508_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		trigger = {
+			year = 1918
+		}
+		ai_chance = 10
+		name = EVT1914_133011402_ACTIONA # "There is no other choice"
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangsu" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangxi" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Fujian" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Zhejiang" when = 1 }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CYN value = 0 }
+		command = { type = peace which = CGX value = 0 }
+		command = { type = non_aggression which = CGX where = UCH }
+		command = { type = non_aggression which = CYN where = UCH }
+		command = { type = non_aggression which = CHI where = UCH }
+		command = { type = event which = 133011501 where = CGX when = 7 }
+		command = { type = belligerence which = UCH	value = -30 }
+		command = { type = event which = 133011902 where = UCH when = 60 }
+		command = { type = event which = 133011307 where = UCH when = 7 }
+	}
+
+	action = {
+		ai_chance = 10
+		name = EVT1914_133011402_ACTIONA
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangsu" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangxi" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Fujian" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Zhejiang" when = 1 }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CYN value = 0 }
+		command = { type = peace which = CGX value = 0 }
+		command = { type = non_aggression which = CGX where = UCH }
+		command = { type = non_aggression which = CYN where = UCH }
+		command = { type = non_aggression which = CHI where = UCH }
+		command = { type = event which = 133011501 where = CGX when = 7 }
+		command = { type = belligerence which = UCH	value = -30 }
+		command = { type = event which = 133011902 where = UCH when = 120 }
+		command = { type = event which = 133011307 where = UCH when = 7 }
+	}
+
+	action = {
+		trigger = {
+			year = 1918
+		}
+		ai_chance = 10
+		name = EVT1914_133011402_ACTIONA
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangsu" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangxi" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Fujian" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Zhejiang" when = 1 }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CYN value = 0 }
+		command = { type = peace which = CGX value = 0 }
+		command = { type = non_aggression which = CGX where = UCH }
+		command = { type = non_aggression which = CYN where = UCH }
+		command = { type = non_aggression which = CHI where = UCH }
+		command = { type = event which = 133011501 where = CGX when = 7 }
+		command = { type = belligerence which = UCH	value = -30 }
+		command = { type = event which = 133011902 where = UCH when = 45 }
+		command = { type = event which = 133011307 where = UCH when = 7 }
+	}
+
+	action = {
+		trigger = {
+			year = 1917
+		}
+		ai_chance = 10
+		name = EVT1914_133011402_ACTIONA
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangsu" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Jiangxi" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Fujian" when = 1 }
+		command = { trigger = { flag = 133011508_secede } type = secedearea which = CHI value = "Zhejiang" when = 1 }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = peace which = CYN value = 0 }
+		command = { type = peace which = CGX value = 0 }
+		command = { type = non_aggression which = CGX where = UCH }
+		command = { type = non_aggression which = CYN where = UCH }
+		command = { type = non_aggression which = CHI where = UCH }
+		command = { type = event which = 133011501 where = CGX when = 7 }
+		command = { type = belligerence which = UCH	value = -30 }
+		command = { type = event which = 133011902 where = UCH when = 90 }
+		command = { type = event which = 133011307 where = UCH when = 7 }
+	}
+}
+
+###############################
+# Foreign intervention in CPW #
+###############################
+
+# Intervention in China
+
+event = {
+	id = 133011509
+	random = no
+	persistent = yes
+	tag = { FRA ENG SOV RUS JAP }
+
+	decision = {
+		not = { ispuppet = CHI }
+		not = { ispuppet = UCH }
+		event = 133011502
+		or = {
+			and = {
+				country = FRA
+				participant = { country = FRA value = 1 }
+				war = { country = FRA country = U08 }
+				control = { province = 55 data = -3 } # Paris
+			}
+			and = {
+				country = ENG
+				participant = { country = ENG value = 1 }
+				war = { country = ENG country = U08 }
+				control = { province = 29 data = -3 } # London
+			}
+			and = {
+				country = SOV
+				participant = { country = SOV value = 1 }
+				war = { country = SOV country = U08 }
+				control = { province = 572 data = -3 } # Moscow
+			}
+			and = {
+				country = RUS
+				participant = { country = RUS value = 1 }
+				war = { country = RUS country = U08 }
+				control = { province = 553 data = -3 } # Leningrad
+			}
+			and = {
+				country = JAP
+				participant = { country = JAP value = 1 }
+				war = { country = JAP country = U08 }
+				control = { province = 1552 data = -3 } # Tokyo
+			}
+		}
+		not = { local_flag = 133011509 }
+	}
+	
+	decision_trigger = {
+		war = { country = CHI country = UCH }
+		supplies = 500
+	}
+
+	trigger = {
+		not = { local_flag = 133011509 }
+		not = { ispuppet = CHI }
+		not = { ispuppet = UCH }
+		event = 133011502
+		or = {
+			and = {
+				country = FRA
+				participant = { country = FRA value = 1 }
+				war = { country = FRA country = U08 }
+				control = { province = 55 data = -3 } # Paris
+			}
+			and = {
+				country = ENG
+				participant = { country = ENG value = 1 }
+				war = { country = ENG country = U08 }
+				control = { province = 29 data = -3 } # London
+			}
+			and = {
+				country = SOV
+				participant = { country = SOV value = 1 }
+				war = { country = SOV country = U08 }
+				control = { province = 572 data = -3 } # Moscow
+			}
+			and = {
+				country = RUS
+				participant = { country = RUS value = 1 }
+				war = { country = RUS country = U08 }
+				control = { province = 553 data = -3 } # Leningrad
+			}
+			and = {
+				country = JAP
+				participant = { country = JAP value = 1 }
+				war = { country = JAP country = U08 }
+				control = { province = 1552 data = -3 } # Tokyo
+			}
+		}
+		war = { country = CHI country = UCH }
+	}
+	
+	name = EVT1914_133011509_NAME
+	desc = EVT1914_133011509_DESC
+	
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	style = 2
+	
+	date = { day = 5 month = 1 year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = {
+			supplies = 500
+			or = {
+				ai = no
+				and = {
+					flag = beiyang_allies
+					not = { country = JAP }
+				}
+			}
+		}
+		ai_chance = 40
+		name = EVT1914_133011509_ACTIONA # "Support Beiyang"
+		command = { type = event which = 133011511 where = UCH when = 7 }
+		command = { type = supplies value = -500 }
+		command = { type = relation which = UCH value = 30 }
+		command = { type = relation which = CHI value = -30 }
+		command = { type = local_setflag which = 133011509 }
+	}
+
+	action = {
+		trigger = {
+			supplies = 500
+			or = {
+				ai = no
+				flag = alternate_allies
+			}
+		}
+		ai_chance = 40
+		name = EVT1914_133011509_ACTIONB # "Support Southern China"
+		command = { type = event which = 133011511 where = CHI when = 7 }
+		command = { type = supplies value = -500 }
+		command = { type = relation which = UCH value = -30 }
+		command = { type = relation which = CHI value = 30 }
+		command = { type = local_setflag which = 133011509 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 150
+		name = ACTION_NAME_NEUTRAL
+		command = { type = local_setflag which = 133011509 }
+	}
+
+}
+
+# Intervention in China
+
+event = {
+	id = 133011510
+	random = no
+	tag = { U08 U09 }
+	
+	decision = {
+		not = { ispuppet = CHI }
+		not = { ispuppet = UCH }
+		not = { local_flag = 133011510 }
+		event = 133011502
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+				or = {
+					war = { country = FRA country = U08 }
+					war = { country = ENG country = U08 }
+					war = { country = RUS country = U08 }
+					war = { country = SOV country = U08 }
+				}
+				control = { province = 163 data = -3 } # Berlin
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				or = {
+					war = { country = FRA country = U09 }
+					war = { country = ENG country = U09 }
+					war = { country = RUS country = U09 }
+					war = { country = SOV country = U09 }
+				}
+				control = { province = 195 data = -3 } # Vienna
+			}
+		}
+	}
+	
+	decision_trigger = {
+		war = { country = CHI country = UCH }
+		supplies = 500
+	}
+	
+	trigger = {
+		not = { ispuppet = CHI }
+		not = { ispuppet = UCH }
+		not = { local_flag = 133011510 }
+		event = 133011502
+		or = {
+			and = {
+				country = U08
+				participant = { country = U08 value = 2 }
+				or = {
+					war = { country = FRA country = U08 }
+					war = { country = ENG country = U08 }
+					war = { country = RUS country = U08 }
+					war = { country = SOV country = U08 }
+				}
+				control = { province = 163 data = -3 } # Berlin
+			}
+			and = {
+				country = U09
+				participant = { country = U09 value = 2 }
+				or = {
+					war = { country = FRA country = U09 }
+					war = { country = ENG country = U09 }
+					war = { country = RUS country = U09 }
+					war = { country = SOV country = U09 }
+				}
+				control = { province = 195 data = -3 } # Vienna
+			}
+		}
+		war = { country = CHI country = UCH }
+	}
+	
+	name = EVT1914_133011509_NAME
+	desc = EVT1914_133011509_DESC
+	
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+	style = 2
+	
+	date = { day = 5 month = 1 year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action = {
+		trigger = {
+			supplies = 500
+			or = {
+				ai = no
+				flag = beiyang_axis
+			}
+		}
+		ai_chance = 40
+		name = EVT1914_133011509_ACTIONA # "Support Beiyang"
+		command = { type = event which = 133011511 where = UCH when = 7 }
+		command = { type = supplies value = -500 }
+		command = { type = relation which = UCH value = 30 }
+		command = { type = relation which = CHI value = -30 }
+		command = { type = local_setflag which = 133011510 }
+	}
+
+	action = {
+		trigger = {
+			supplies = 500
+			or = {
+				ai = no
+				flag = alternate_axis
+			}
+		}
+		ai_chance = 40
+		name = EVT1914_133011509_ACTIONB # "Support Southern China"
+		command = { type = event which = 133011511 where = CHI when = 7 }
+		command = { type = supplies value = -500 }
+		command = { type = relation which = UCH value = -30 }
+		command = { type = relation which = CHI value = 30 }
+		command = { type = local_setflag which = 133011510 }
+	}
+
+	action = {
+		trigger = {
+			ai = yes
+		}
+		ai_chance = 150
+		name = ACTION_NAME_NEUTRAL
+		command = { type = local_setflag which = 133011510 }
+	}
+
+}
+
+# Foreign Help Arrives
+event = {
+	id = 133011511
+	random = no
+	persistent = yes
+	tag = { CHI UCH }
+
+	#Triggered
+
+	name = EVT1914_133011511_NAME
+	desc = EVT1914_133011511_DESC
+
+	picture = "diplomatic_campaign"
+	style = 2
+
+	action = {
+		trigger = {
+			not = { event = 133011506 }
+		}
+		name = ACTION_NAME_GREAT
+		command = { type = supplies value = 500 }
+	}
+}

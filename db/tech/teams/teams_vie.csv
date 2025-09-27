@@ -1,0 +1,14 @@
+VIE;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+790001;Hanoi Aerospace Company;T11403;2;1930;1970;aeronautics;aircraft_testing;bomber_design;fighter_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+790002;Hanoi Arsenal;T9800;3;1900;1970;mechanics;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+790003;Hanoi University of Technology;T14302;3;1900;1970;management;chemistry;mechanics;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+790004;Vietnam Maritime University;T14403;4;1900;1970;naval_training;management;mechanics;naval_engineering;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+790005;Vietnam Military Academy;T10401;3;1900;1970;centralized_execution;decentralized_execution;small_unit_tactics;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+790006;Vietnam Railway Department;100583;2;1914;1975;mechanics;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+790007;Ba Son Shipyard;100584;2;1914;1975;technical_efficiency;naval_engineering;naval_artillery;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+790008;Air Vietnam;100585;2;1951;1975;aeronautics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+790009;Imperial Academy of Hue;100586;1;1914;1945;training;centralized_execution;individual_courage;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+790010;Do Cao Tri;100587;3;1955;1970;small_unit_tactics;combined_arms_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+790011;Pasteur Institute;100588;2;1914;1975;chemistry;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+790012;Nguyen Van Hinh;100589;2;1936;1975;decentralized_execution;piloting;fighter_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+790013;Nha Trang Naval Academy;100590;2;1945;1975;small_taskforce_tactics;naval_engineering;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

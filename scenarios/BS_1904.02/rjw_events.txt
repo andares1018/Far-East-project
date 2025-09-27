@@ -1,0 +1,934 @@
+#########################################################################
+#  Victory Events
+#########################################################################
+
+# Japan
+event = {
+	id = 4000001
+	random = no
+	country = JAP
+
+	trigger = {
+		vp = 21
+	}
+
+	name = "4000001name"
+	desc = "4000001desc"
+	picture = "peace_conference"
+	style = 2
+
+	date = { hour = 12 day = 1 month = september year = 1905 }
+	
+	action_a = {
+		name = "ACTION_NAME_VICTORY" #End Game
+		command = { type = endgame value = 6 }
+	}
+}
+event = {
+	id = 4000002
+	random = no
+	country = JAP
+
+	name = "4000002name"
+	desc = "4000002desc"
+	picture = "peace_conference"
+	style = 2
+
+	trigger = {
+		vp = 11
+		NOT = { vp = 21 }
+	}
+	
+	date = { hour = 12 day = 1 month = september year = 1905 }
+	
+	action_a = {
+		name = "ACTION_NAME_VICTORY" #End Game
+		command = { type = endgame value = 5 }
+	}
+}
+event = {
+	id = 4000003
+	random = no
+	country = JAP
+
+	name = "4000003name"
+	desc = "4000003desc"
+	picture = "peace_conference"
+	style = 2
+
+	trigger = {
+		NOT = { vp = 1 }
+		control = { province = 1199 data = RUS}
+	}
+	
+	date = { hour = 12 day = 1 month = september year = 1905 }
+
+	action_a = {
+		name = "ACTION_NAME_SUCCESS" #End Game
+		command = { type = endgame value = 4 }
+	}
+}
+event = {
+	id = 4000004
+	random = no
+	country = RUS
+
+	name = "4000004name"
+	desc = "4000004desc"
+	picture = "peace_conference"
+	style = 2
+
+	trigger = {
+		vp = 15
+	}
+	
+	date = { hour = 12 day = 1 month = september year = 1905 }
+	
+	action_a = {
+		name = "ACTION_NAME_DEFEAT" #End Game
+		command = { type = endgame value = 3 }
+	}
+}
+
+
+###################################################################################
+# 4000005 RUS War!
+# 4000006 RUS Attack on Port Arthur
+# 4000007 RUS Russian mobilization
+# 4000008 RUS Kuropatkin takes the command
+# 4000009 RUS 4th Siberian Corps arrives
+# 4000010 RUS 10th Army Corps arrives
+# 4000011 RUS Tragical death of admiral Makarov
+# 4000012 RUS Blockade of Port Arthur
+# 4000013 JAP Blocade of Port Arthur
+# 4000014 RUS Port Arthur is released
+# 4000015 JAP Port Arthur is released
+# 4000016 RUS Yalu river is lost!
+# 4000017 RUS Mukden is lost!
+# 4000018 RUS Vladivostok is lost!
+# 4000019 RUS Port Arthur is lost!
+# 4000020 RUS 17th Army Corps arrives
+# 4000021 RUS 5th Siberian Corps arrives
+# 4000022 RUS 1st Army Corps arrives
+# 4000023 RUS 6th Siberian Corps arrives
+# 4000024 RUS 8th Army Corps arrives
+# 4000025 RUS Rozhestvensky arrives
+# 4000026 RUS The revolutionary conspiracy
+# 4000027 RUS The bloody Sunday
+# 4000028 RUS The revolt on battleship Potemkin
+# 4000029 RUS The Russian revolution
+# 4000030 JAP The help from Egnland
+# 4000031 JAP Busan is lost!
+# 4000032 JAP Seoul is lost!
+# 4000033 JAP The Japanese reinforcements
+# 4000034 JAP The Japanese reinforcements
+# 4000035 JAP The Japanese reinforcements
+# 4000036 RUS The Russian submarines
+# 4000037 JAP We take over Korea
+
+event = {
+	id = 4000005
+	random = no
+	country = RUS
+	
+	name = "4000005name"
+	desc = "4000005desc"
+	picture = "varyag"
+	style = 2
+
+	date = { day = 5 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 8 month = february year = 1904 }
+	
+	action_a = {
+		name = "4000005actiona"
+		command = { type = remove_division which = 30036 value = 30 } # Varyag
+		command = { type = remove_division which = 30036 value = 31 } # Koreets
+	}
+}
+event = {
+	id = 4000006
+	random = no
+	country = RUS
+	
+	name = "4000006name"
+	desc = "4000006desc"
+	picture = "varyag"
+	style = 2
+
+	date = { day = 7 month = february year = 1904 }
+	
+	action_a = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = damage_division which = 30036 value = 11 where = 70 } # Tsesarevich
+		command = { type = damage_division which = 30036 value = 12 where = 70 } # Retvizan
+		command = { type = damage_division which = 30036 value = 13 where = 70 } # Pallada
+		command = { type = damage_division which = 30036 value = 14 where = 50 } # Diana
+		command = { type = damage_division which = 30036 value = 15 where = 50 } # Askold
+		command = { type = disorg_division which = 30036 value = 11 where = 90 } # Tsesarevich
+		command = { type = disorg_division which = 30036 value = 12 where = 90 } # Retvizan
+		command = { type = disorg_division which = 30036 value = 13 where = 90 } # Pallada
+		command = { type = disorg_division which = 30036 value = 14 where = 90 } # Diana
+		command = { type = disorg_division which = 30036 value = 15 where = 90 } # Askold
+	}
+}
+event = {
+	id = 4000007
+	random = no
+	country = RUS
+	
+	name = "4000007name"
+	desc = "4000007desc"
+	picture = "nicolausIIfled"
+	style = 2
+
+	date = { day = 14 month = february year = 1904 }
+	
+	action_a = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps which = "3-y Sibirskiy Arm. Korpus" value = land when = 515524 where = 1219 } #Port Arthur
+		command = { type = add_division which = "4-ya Sibirskaya str. diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "7-ya Sibirskaya str. diviziya" value = infantry when = 1 }
+		command = { type = add_corps which = "2-y Sibirskiy Arm. Korpus" value = land when = 516886 where = 1211 } #Hunjiang 
+		command = { type = add_division which = "3-ya Sibirskaya str. diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "6-ya Sibirskaya str. diviziya" value = infantry when = 1 }
+		command = { type = add_corps which = "Vostochnyi Otryad" value = land when = 516067 where = 1212 } #Yanji 
+		command = { type = add_division which = "Zabaikalskaya kazachya diviziya" value = cavalry when = 1 }
+	}
+}
+event = {
+	id = 4000008
+	random = no
+	country = RUS
+	
+	name = "4000008name"
+	desc = "4000008desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 7 month = march year = 1904 }
+	
+	action_a = {
+		name = "4000008actiona"
+		command = { type = add_corps which = "Manchzhurskaya armiya" value = land when = 515883 where = 1203 } #Qiqihaer  
+		command = { type = add_division which = "Manchzhurskaya armiya" value = hq when = 0 }
+		command = { type = add_division which = "1-ya Sibirskaya pekh. diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "Sibirskaya kazachya diviziya" value = cavalry when = 1 }
+		command = { type = add_division which = "Orenburgskaya kazachya diviziya" value = cavalry when = 1 }
+		command = { type = morale which = land value = -5 }
+	}
+}
+event = {
+	id = 4000009
+	random = no
+	country = RUS
+	
+	name = "4000009name"
+	desc = "4000009desc"
+	picture = "russian_soldiers"
+	style = 2
+
+	date = { day = 19 month = march year = 1904 }
+	
+	action_a = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps which = "4-y Sibirskiy Arm. Korpus" value = land when = 516884 where = 1162 } #Irkutsk   
+		command = { type = add_division which = "2-ya Sibirskaya pekh. diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "3-ya Sibirskaya pekh. diviziya" value = infantry when = 1 }
+	}
+}
+event = {
+	id = 4000010
+	random = no
+	country = RUS
+	
+	name = "4000010name"
+	desc = "4000009desc"
+	picture = "russian_soldiers"
+	style = 2
+
+	date = { day = 14 month = may year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { trigger = { control = { province = 1162 data = RUS } } type = add_corps which = "10-y Armeyskiy Korpus" value = land when = 516533 where = 1162 } #Irkutsk   
+		command = { type = add_division which = "9-ya 'Shipkinskaya' pekh. diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "31-ya 'Plevenskaya' pekh. diviziya" value = infantry when = 1 }
+	}
+}
+
+event = {
+	id = 4000011
+	random = no
+	country = RUS
+	one_action = yes
+	
+	name = "4000011name"
+	desc = "4000011desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 12 month = april year = 1904 }
+
+	action = {
+		name = "ACTION_NAME_DAMN"
+		ai_chance = 50
+		command = { type = sleepleader which = 515977 } # Makarov
+		command = { type = remove_division which = 30036 value = 6 } # Petropavlovsk
+		command = { type = max_organization which = naval value = -15 }
+		command = { type = morale which = naval value = -10 }
+		command = { type = dissent value = 5 }
+	}	
+	action = {
+		name = "4000011actiona"
+		ai_chance = 50
+		command = { type = morale which = naval value = 10 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 4000012
+	random = no
+	country = RUS
+	
+	trigger = {
+		war = { country = JAP country = RUS }
+		control = { province = 1217 data = JAP } #Anshan
+		control = { province = 1220 data = JAP } #Dandong
+	}
+	
+	name = "4000012name"
+	desc = "4000012desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = energypool value = -100 }
+		command = { type = metalpool value = -100 }
+		command = { type = rarematerialspool value = -50 }
+		command = { type = oilpool value = -50 }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 4000013 }
+	}	
+}
+
+event = {
+	id = 4000013
+	random = no
+	country = JAP
+	
+	name = "4000013name"
+	desc = "4000013desc"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = morale which = land value = 5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = max_organization which = land value = 1 }
+		command = { type = max_organization which = naval value = 1 }
+		command = { type = dissent value = -5 }
+	}	
+}
+
+event = {
+	id = 4000014
+	random = no
+	country = RUS
+	
+	trigger = {
+		event = 4000012 #Blockade of Port Arthur
+		war = { country = JAP country = RUS }
+		control = { province = 1217 data = RUS } #Anshan
+		control = { province = 1220 data = RUS } #Dandong
+	}
+	
+	name = "4000014name"
+	desc = "4000014desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = morale which = land value = 5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 4000015 }
+	}	
+}
+
+event = {
+	id = 4000015
+	random = no
+	country = JAP
+	
+	name = "4000015name"
+	desc = "4000015desc"
+	picture = "news_paper"
+	style = 2
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = morale which = land value = -5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = max_organization which = land value = -1 }
+		command = { type = max_organization which = naval value = -1 }
+	}	
+}
+
+event = {
+	id = 4000016
+	random = no
+	country = RUS
+	
+	trigger = {
+		war = { country = JAP country = RUS }
+		control = { province = 1211 data = JAP } #Hunjiang
+		control = { province = 1215 data = JAP } #Fushun
+	}
+	
+	name = "4000016name"
+	desc = "4000016desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 5 }
+	}	
+}
+
+event = {
+	id = 4000017
+	random = no
+	country = RUS
+	
+	trigger = {
+		war = { country = JAP country = RUS }
+		control = { province = 1214 data = JAP } #Mukden 
+	}
+	
+	name = "4000017name"
+	desc = "4000017desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 10 }
+	}	
+}
+
+event = {
+	id = 4000018
+	random = no
+	country = RUS
+	
+	trigger = {
+		war = { country = JAP country = RUS }
+		control = { province = 1191 data = JAP } #Vladivostok  
+	}
+	
+	name = "4000018name"
+	desc = "4000018desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 15 }
+		command = { type = morale which = land value = -5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = energypool value = -100 }
+		command = { type = metalpool value = -100 }
+		command = { type = rarematerialspool value = -50 }
+		command = { type = oilpool value = -50 }
+	}	
+}
+
+event = {
+	id = 4000019
+	random = no
+	country = RUS
+	
+	trigger = {
+		war = { country = JAP country = RUS }
+		control = { province = 1219 data = JAP } #Port Arthur  
+	}
+	
+	name = "4000019name"
+	desc = "4000019desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 15 }
+		command = { type = morale which = land value = -5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = energypool value = -200 }
+		command = { type = metalpool value = -200 }
+		command = { type = rarematerialspool value = -100 }
+		command = { type = oilpool value = -100 }
+	}	
+}
+
+event = {
+	id = 4000020
+	random = no
+	country = RUS
+	
+	name = "4000020name"
+	desc = "4000009desc"
+	picture = "russian_soldiers"
+	style = 2
+
+	date = { day = 4 month = june year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { trigger = { control = { province = 1162 data = RUS } } type = add_corps which = "17-y Armeyskiy Korpus" value = land when = 515301 where = 1162 } #Irkutsk   
+		command = { type = add_division which = "3-ya pekhotnaya diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "35-ya pekhotnaya diviziya" value = infantry when = 1 }
+	}
+}
+event = {
+	id = 4000021
+	random = no
+	country = RUS
+	
+	name = "4000021name"
+	desc = "4000009desc"
+	picture = "russian_soldiers"
+	style = 2
+
+	date = { day = 24 month = july year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { trigger = { control = { province = 1162 data = RUS } } type = add_corps which = "5-y Sibirskiy Arm. Korpus" value = land when = 515419 where = 1162 } #Irkutsk   
+		command = { type = add_division which = "54-ya pekhotnaya diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "71-ya pekhotnaya diviziya" value = infantry when = 1 }
+	}
+}
+
+event = {
+	id = 4000022
+	random = no
+	country = RUS
+	
+	name = "4000022name"
+	desc = "4000009desc"
+	picture = "russian_soldiers"
+	style = 2
+
+	date = { day = 19 month = august year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { trigger = { control = { province = 1214 data = RUS } } type = add_corps which = "1-y Armeyskiy Korpus" value = land when = 516050 where = 1214 } #Mukden   
+		command = { type = add_division which = "22-ya pekhotnaya diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "37-ya pekhotnaya diviziya" value = infantry when = 1 }
+	}
+}
+
+event = {
+	id = 4000023
+	random = no
+	country = RUS
+	
+	name = "4000023name"
+	desc = "4000009desc"
+	picture = "russian_soldiers"
+	style = 2
+
+	date = { day = 9 month = september year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { trigger = { control = { province = 1162 data = RUS } } type = add_corps which = "6-y Sibirskiy Arm. Korpus" value = land when = 516546 where = 1162 } #Irkutsk   
+		command = { type = add_division which = "55-ya pekhotnaya diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "72-ya pekhotnaya diviziya" value = infantry when = 1 }
+	}
+}
+
+event = {
+	id = 4000024
+	random = no
+	country = RUS
+	
+	name = "4000024name"
+	desc = "4000009desc"
+	picture = "russian_soldiers"
+	style = 2
+
+	date = { day = 26 month = october year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { trigger = { control = { province = 1162 data = RUS } } type = add_corps which = "8-y Armeyskiy Korpus" value = land when = 516943 where = 1162 } #Irkutsk   
+		command = { type = add_division which = "14-ya pekhotnaya diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "15-ya pekhotnaya diviziya" value = infantry when = 1 }
+		command = { type = add_division which = "4-ya kazachya diviziya" value = cavalry when = 1 }
+	}
+}
+
+event = {
+	id = 4000025
+	random = no
+	country = RUS
+	
+	name = "4000025name"
+	desc = "4000025desc"
+	picture = "varyag"
+	style = 2
+
+	date = { day = 9 month = may year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps which = "2-ya Tikhookeanskaya eskadra" value = naval when = 516381 where = 2521 }    
+		command = { type = add_division which = "Knyaz Suvorov" value = battleship when = 1 }
+		command = { type = add_division which = "Imperator Alexandr III" value = battleship when = 1 }
+		command = { type = add_division which = "Borodino" value = battleship when = 1 }
+		command = { type = add_division which = "Orel" value = battleship when = 1 }
+		command = { type = add_division which = "Oslyabya" value = battleship when = 1 } 
+		command = { type = add_division which = "Sisoy Veliky" value = battleship when = 0 } 
+		command = { type = add_division which = "Navarin" value = battleship when = 0 }
+		command = { type = add_division which = "Admiral Nakhimov" value = heavy_cruiser when = 0 }
+		command = { type = add_division which = "Dmitry Donskoy" value = heavy_cruiser when = 0 }
+		command = { type = add_division which = "Oleg" value = light_cruiser when = 1 }
+		command = { type = add_division which = "Avrora" value = light_cruiser when = 1 }
+		command = { type = add_division which = "Svetlana" value = light_cruiser when = 1 }
+		command = { type = add_division which = "Zhemchug" value = light_cruiser when = 0 }
+		command = { type = add_division which = "Izumrud" value = light_cruiser when = 0 }
+		command = { type = add_division which = "Almaz" value = light_cruiser when = 0 }
+		command = { type = add_division which = "Buiny - Blestyaschy" value = destroyer when = 1 }
+		command = { type = add_division which = "Bezuprechny - Gromky" value = destroyer when = 1 }
+		command = { type = add_corps which = "3-ya Tikhookeanskaya eskadra" value = naval when = 516111 where = 2521 }
+		command = { type = add_division which = "Imperator Nikolay I" value = battleship when = 1 }
+		command = { type = add_division which = "Admiral Ushakov" value = battleship when = 0 }
+		command = { type = add_division which = "Admiral Senyavin" value = battleship when = 0 }
+		command = { type = add_division which = "General-Admiral Apraxin" value = battleship when = 0 }
+		command = { type = add_division which = "Vladimir Monomakh" value = heavy_cruiser when = 0 }
+		command = { type = add_division which = "Rus'" value = escort_carrier when = 0 }
+		command = { type = add_division which = "Grozny - Rezvy" value = destroyer when = 0 }  
+	}
+}
+
+event = {
+	id = 4000026
+	random = no
+	country = RUS
+	
+	name = "4000026name"
+	desc = "4000026desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 29 month = september year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 5 }  
+	}
+}
+
+event = {
+	id = 4000027
+	random = no
+	country = RUS
+	
+	trigger = { dissent = 15 }
+
+	name = "4000027name"
+	desc = "4000027desc"
+	picture = "strikesruspetro1"
+	style = 2
+	
+	date = { day = 21 month = january year = 1905 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "4000027actiona" #Shoot them down
+		ai_chance = 99
+		command = { type = dissent value = 15 }  
+	}
+
+action = {
+		name = "4000027actionb" #negotiate
+		ai_chance = 1
+		command = { type = dissent value = -5 }
+		command = { type = industrial_modifier which = total value = -10 }
+		command = { type = industrial_modifier which = supplies value = -10 }
+		command = { type = domestic which = democratic value = 1 }
+}
+}
+
+event = {
+	id = 4000028
+	random = no
+	country = RUS
+	
+	name = "4000028name"
+	desc = "4000028desc"
+	picture = "potemkin"
+	style = 2
+	
+	trigger = { dissent = 15 }
+
+	date = { day = 13 month = june year = 1905 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = morale which = naval value = -5 }
+		command = { type = dissent value = 10 }  
+	}
+}
+
+
+event = {
+	id = 4000029
+	random = no
+	country = RUS
+	
+	name = "4000029name"
+	desc = "4000029desc"
+	picture = "strikesruspetro1"
+	style = 2
+	
+	trigger = { 
+		event = 4000027 #RUS The bloody Sunday
+		event = 4000028 #RUS The revolt on battleship Potemkin
+	}
+
+	date = { day = 0 month = august year = 1905 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 30 }  
+	}
+}
+
+event = {
+	id = 4000030
+	random = no
+	country = JAP
+	
+	trigger = {
+		war = { country = JAP country = RUS }		 
+	}
+	
+	name = "4000030name"
+	desc = "4000030desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 25 month = may year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = dissent value = -2 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = money value = 50 }
+	}	
+}
+
+event = {
+	id = 4000031
+	random = no
+	country = JAP
+	
+	trigger = {
+		war = { country = JAP country = RUS }
+		control = { province = 1232 data = RUS } #Busan  
+	}
+	
+	name = "4000031name"
+	desc = "4000031desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = energypool value = -100 }
+		command = { type = metalpool value = -150 }
+		command = { type = rarematerialspool value = -50 }
+		command = { type = oilpool value = -100 }
+	}	
+}
+
+event = {
+	id = 4000032
+	random = no
+	country = JAP
+	
+	trigger = {
+		war = { country = JAP country = RUS }
+		control = { province = 1228 data = RUS } #Seoul  
+	}
+	
+	name = "4000032name"
+	desc = "4000032desc"
+	picture = "news_paper"
+	style = 2
+
+	date = { day = 6 month = february year = 1904 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1905 }
+	
+	action = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = energypool value = -200 }
+		command = { type = metalpool value = -200 }
+		command = { type = rarematerialspool value = -50 }
+		command = { type = oilpool value = -200 }
+	}	
+}
+
+event = {
+	id = 4000033
+	random = no
+	country = JAP
+	
+	name = "4000033name"
+	desc = "4000033desc"
+	picture = "ccip_fcseige"
+	style = 2
+
+	date = { day = 29 month = june year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps which = "7. Hoheishidan" value = land where = 1558 } #Kyoto 
+		command = { type = add_division which = "7. Hoheishidan" value = infantry when = 1 }
+		command = { type = manpowerpool value = -12 }
+	}
+}
+
+event = {
+	id = 4000034
+	random = no
+	country = JAP
+	
+	name = "4000033name"
+	desc = "4000033desc"
+	picture = "ccip_fcseige"
+	style = 2
+
+	date = { day = 29 month = august year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps which = "8. Hoheishidan" value = land where = 1558 } #Kyoto 
+		command = { type = add_division which = "8. Hoheishidan" value = infantry when = 0 }
+		command = { type = manpowerpool value = -12 }
+	}
+}
+
+
+event = {
+	id = 4000035
+	random = no
+	country = JAP
+	
+	name = "4000033name"
+	desc = "4000033desc"
+	picture = "ccip_fcseige"
+	style = 2
+
+	date = { day = 29 month = december year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_GOOD"
+		command = { type = add_corps which = "13. Hoheishidan" value = land where = 1558 } #Kyoto 
+		command = { type = add_division which = "13. Hoheishidan" value = infantry when = 0 }
+		command = { type = manpowerpool value = -12 }
+	}
+}
+
+event = {
+	id = 4000036
+	random = no
+	country = RUS
+	
+	name = "4000036name"
+	desc = "4000036desc"
+	picture = "varyag"
+	style = 2
+
+	date = { day = 14 month = december year = 1904 }
+	
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = add_corps which = "Tikhookeanskaya pododnaya flotiliya" value = naval when = 515341 where = 1191 }    
+		command = { type = add_division which = "Delfin - Kasatka" value = submarine when = 0 }
+	}
+}
+
+event = {
+	id = 400037
+	random = no
+	country = JAP
+
+	trigger = { exists = KOR }
+
+	name = "4000037name" 
+	desc = "4000037desc"
+
+	picture = "peace_conference"
+	style = 2
+
+	date = { day = 10 month = february year = 1904 }
+
+	action_a = { name = "4000037actiona" #Banzai!
+	command = { type = inherit which = KOR }
+	command = { type = dissent value = 5 }
+	}
+}

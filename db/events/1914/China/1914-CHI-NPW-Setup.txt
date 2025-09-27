@@ -1,0 +1,866 @@
+# National Protection War - Setup
+# By Limith
+#-Rebel Formation-------------------------------
+# UCH 133011009 Insurrection!
+# CYN 133011010 Nationalist Party Reformed. CYN -> CHI
+# UCH 133011011 Rise of Warlords and VP.
+# CYN 133011013 Rejecting the New Empire - The National Protection War (1915) UYN -> CHI.
+# CHI 133011014 Rejecting the New Empire - The National Protection War (1916) - CGX Joins CHI
+#-Imperial China Formation----------------------
+# UCH 133011017 Form the Great Chinese Empire. UCH -> U74. (Forced) - Early War
+# UCH 133011012 Form the Great Chinese Empire. UCH -> U74. - Historical
+# UCH 133011021 Form the Great Chinese Empire. UCH -> U74. (Forced) - Late War
+# U74 133011020 Ascension Rites
+#-Misc------------------------------------------
+# U74 133001063 Sichaun Divided Loyalties
+# CHI 133011400 Cai E Returns
+
+###################
+# Rebel Formation #
+###################
+
+# Insurrection!
+event = {
+	id = 133011009
+	random = no
+	country = UCH
+
+	#Triggered
+	
+	name = EVT1914_133011009_NAME
+	desc = EVT1914_133011009_DESC
+	
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = EVT1914_133011005_ACTIONA #"Something must be done!"
+		command = { trigger = { not = { exists = CGX } } type = independence which = CGX value = 1 when = 0 }
+		command = { trigger = { not = { exists = CYN } } type = independence which = CYN value = 1 when = 0 }
+		command = { trigger = { not = { exists = CXB } } type = independence which = CXB value = 1 when = 0 }
+		command = { trigger = { not = { exists = SIK } } type = independence which = SIK value = 1 when = 0 }
+		command = { trigger = { not = { war = { country = CGX } } } type = war which = CGX }
+		command = { trigger = { not = { war = { country = CYN } } } type = war which = CYN }
+		command = { trigger = { not = { war = { country = CXB } } } type = war which = CXB }
+		command = { trigger = { not = { war = { country = SIK } } } type = war which = SIK }
+		#command = { type = belligerence value = -60 }
+		command = { type = secedearea which = CYN value = "Yunnan" when = 2 }
+		command = { trigger = { not = { control = { province = 1290 data = TIB } } } type = secedeprovince which = CYN value = 1290 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1294 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1293 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1292 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1291 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1299 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1298 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1297 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1296 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1302 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1304 when = 2 }
+		command = { type = secedeprovince which = CYN value = 1300 when = 2 }
+		command = { type = secedearea which = CGX value = "Guangxi" when = 2 }
+		command = { type = secedeprovince which = CGX value = 1374 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1367 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1373 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1365 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1368 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1369 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1370 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1375 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1303 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1305 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1306 when = 2 }
+		command = { type = secedeprovince which = CGX value = 1307 when = 2 }
+		command = { type = secedearea which = SIK value = "Xinjiang" when = 2 }
+		command = { type = secedearea which = CXB value = "Suiyuan_Ningxia" when = 2 }
+		command = { type = secedeprovince which = CXB value = 1283 when = 2 }
+		command = { type = secedeprovince which = CXB value = 1284 when = 2 }
+		command = { type = secedeprovince which = CXB value = 1266 when = 2 }
+		command = { type = secedeprovince which = CXB value = 1265 when = 2 }
+		command = { type = secedeprovince which = CXB value = 1264 when = 2 }
+		command = { type = secedeprovince which = CXB value = 1262 when = 2 }
+		command = { trigger = { not = { control = { province = 1285 data = TIB } } } type = secedeprovince which = CXB value = 1285 when = 2 }
+	}
+
+}
+
+# Nationalist Party Reformed
+event = {
+	id = 133011010
+	random = no
+	country = CYN
+	
+	trigger = {
+		event = 133011004
+		not = {
+			ispuppet = CGX
+			ispuppet = CYN
+			ispuppet = CXB
+		}
+		not = {
+			flag = nat_reformed
+		}
+	}
+
+	name = EVT1914_133011010_NAME
+	desc = EVT1914_133011010_DESC
+
+	picture = "ccip_gmd"
+	style = 2
+	
+	date = { day = 0 month = november year = 1913 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1990 }
+	
+	action = {
+		name = EVT_2052011_NAME #"For the defense of democracy"
+		command = { type = country which = CHI }
+		command = { type = inherit which = CGX value = 1}
+		command = { trigger = { division_exists = { type = 22003 id = 10191 } division_exists = { type = 22001 id = 10191 } } type = remove_division which = 22001 value = 10191 }
+		command = { trigger = { division_exists = { type = 22003 id = 10192 } division_exists = { type = 22001 id = 10192 } } type = remove_division which = 22001 value = 10192 }
+		command = { trigger = { division_exists = { type = 22003 id = 10193 } division_exists = { type = 22001 id = 10193 } } type = remove_division which = 22001 value = 10193 }
+		command = { trigger = { division_exists = { type = 22003 id = 10201 } division_exists = { type = 22001 id = 10201 } } type = remove_division which = 22001 value = 10201 }
+		command = { trigger = { division_exists = { type = 22003 id = 10202 } division_exists = { type = 22001 id = 10202 } } type = remove_division which = 22001 value = 10202 }
+		command = { trigger = { division_exists = { type = 22003 id = 10203 } division_exists = { type = 22001 id = 10203 } } type = remove_division which = 22001 value = 10203 }
+		command = { trigger = { division_exists = { type = 22003 id = 10204 } division_exists = { type = 22001 id = 10204 } } type = remove_division which = 22001 value = 10204 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22001 id = 10191 } } division_exists = { type = 22003 id = 10191 } }
+			and = { not = { division_exists = { type = 22001 id = 10192 } } division_exists = { type = 22003 id = 10192 } }
+			and = { not = { division_exists = { type = 22001 id = 10193 } } division_exists = { type = 22003 id = 10193 } }
+		} } type = add_corps which = "Guangxi Difangjun" value = land where = 1378 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10191 } } division_exists = { type = 22003 id = 10191 } } type = activate_division which = 22003 value = 10191 where = 1378 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10192 } } division_exists = { type = 22003 id = 10192 } } type = activate_division which = 22003 value = 10192 where = 1378 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10193 } } division_exists = { type = 22003 id = 10193 } } type = activate_division which = 22003 value = 10193 where = 1378 when = 1 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22001 id = 10201 } } division_exists = { type = 22003 id = 10201 } }
+			and = { not = { division_exists = { type = 22001 id = 10202 } } division_exists = { type = 22003 id = 10202 } }
+			and = { not = { division_exists = { type = 22001 id = 10203 } } division_exists = { type = 22003 id = 10203 } }
+			and = { not = { division_exists = { type = 22001 id = 10204 } } division_exists = { type = 22003 id = 10204 } }
+		} } type = add_corps which = "Guangdong Difangjun" value = land where = 1369 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10201 } } division_exists = { type = 22003 id = 10201 } } type = activate_division which = 22003 value = 10201 where = 1369 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10202 } } division_exists = { type = 22003 id = 10202 } } type = activate_division which = 22003 value = 10202 where = 1369 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10203 } } division_exists = { type = 22003 id = 10203 } } type = activate_division which = 22003 value = 10203 where = 1369 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10204 } } division_exists = { type = 22003 id = 10204 } } type = activate_division which = 22003 value = 10204 where = 1369 when = 1 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22003 id = 10191 } } not = { division_exists = { type = 22001 id = 10191 } } }
+			and = { not = { division_exists = { type = 22003 id = 10192 } } not = { division_exists = { type = 22001 id = 10192 } } }
+			and = { not = { division_exists = { type = 22003 id = 10193 } } not = { division_exists = { type = 22001 id = 10193 } } }
+		} } type = add_corps which = "Guangxi Difangjun" value = land where = 1378 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10191 } } not = { division_exists = { type = 22001 id = 10191 } } } type = add_division which = "1 GX Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10192 } } not = { division_exists = { type = 22001 id = 10192 } } } type = add_division which = "2 GX Division" value = militia when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10193 } } not = { division_exists = { type = 22001 id = 10193 } } } type = add_division which = "3 GX Division" value = militia when = 0 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22003 id = 10201 } } not = { division_exists = { type = 22001 id = 10201 } } }
+			and = { not = { division_exists = { type = 22003 id = 10202 } } not = { division_exists = { type = 22001 id = 10202 } } }
+			and = { not = { division_exists = { type = 22003 id = 10203 } } not = { division_exists = { type = 22001 id = 10203 } } }
+			and = { not = { division_exists = { type = 22003 id = 10204 } } not = { division_exists = { type = 22001 id = 10204 } } }
+		} } type = add_corps which = "Guangdong Difangjun" value = land where = 1369 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10201 } } not = { division_exists = { type = 22001 id = 10201 } } } type = add_division which = "1 GD Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10202 } } not = { division_exists = { type = 22001 id = 10202 } } } type = add_division which = "2 GD Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10203 } } not = { division_exists = { type = 22001 id = 10203 } } } type = add_division which = "3 GD Division" value = infantry when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10204 } } not = { division_exists = { type = 22001 id = 10204 } } } type = add_division which = "4 GD Division" value = infantry when = 1 }
+		command = { type = secedearea which = CHI value = "Guangxi" when = 2 }
+		command = { type = secedeprovince which = CHI value = 1378 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1383 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1382 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1381 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1380 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1377 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1376 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1379 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1374 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1367 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1373 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1365 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1368 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1369 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1370 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1375 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1303 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1305 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1306 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1307 when = 2 }
+		command = { trigger = { division_exists = { type = 22001 id = 10001 } } type = remove_division which = 22001 value = 10001 }
+		command = { trigger = { division_exists = { type = 22001 id = 10002 } } type = remove_division which = 22001 value = 10002 }
+		command = { trigger = { division_exists = { type = 22001 id = 10003 } } type = remove_division which = 22001 value = 10003 }
+		command = { trigger = { division_exists = { type = 22001 id = 10004 } } type = remove_division which = 22001 value = 10004 }
+		command = { trigger = { division_exists = { type = 22001 id = 10005 } } type = remove_division which = 22001 value = 10005 }
+		command = { trigger = { division_exists = { type = 22001 id = 10006 } } type = remove_division which = 22001 value = 10006 }
+		command = { trigger = { division_exists = { type = 22001 id = 10011 } } type = remove_division which = 22001 value = 10011 }
+		command = { trigger = { division_exists = { type = 22001 id = 10021 } } type = remove_division which = 22001 value = 10021 }
+		command = { trigger = { division_exists = { type = 22001 id = 10031 } } type = remove_division which = 22001 value = 10031 }
+		command = { trigger = { division_exists = { type = 22001 id = 10041 } } type = remove_division which = 22001 value = 10041 }
+		command = { trigger = { division_exists = { type = 22001 id = 10051 } } type = remove_division which = 22001 value = 10051 }
+		command = { trigger = { division_exists = { type = 22001 id = 10052 } } type = remove_division which = 22001 value = 10052 }
+		command = { trigger = { division_exists = { type = 22001 id = 10053 } } type = remove_division which = 22001 value = 10053 }
+		command = { trigger = { division_exists = { type = 22001 id = 10054 } } type = remove_division which = 22001 value = 10054 }
+		command = { trigger = { division_exists = { type = 22001 id = 10055 } } type = remove_division which = 22001 value = 10055 }
+		command = { trigger = { division_exists = { type = 22001 id = 10056 } } type = remove_division which = 22001 value = 10056 }
+		command = { trigger = { division_exists = { type = 22001 id = 10061 } } type = remove_division which = 22001 value = 10061 }
+		command = { trigger = { division_exists = { type = 22001 id = 10071 } } type = remove_division which = 22001 value = 10071 }
+		command = { trigger = { division_exists = { type = 22001 id = 10081 } } type = remove_division which = 22001 value = 10081 }
+		command = { trigger = { division_exists = { type = 22001 id = 10091 } } type = remove_division which = 22001 value = 10091 }
+		command = { trigger = { division_exists = { type = 22001 id = 10092 } } type = remove_division which = 22001 value = 10092 }
+		command = { trigger = { division_exists = { type = 22001 id = 10101 } } type = remove_division which = 22001 value = 10101 }
+		command = { trigger = { division_exists = { type = 22001 id = 10111 } } type = remove_division which = 22001 value = 10111 }
+		command = { trigger = { division_exists = { type = 22001 id = 10121 } } type = remove_division which = 22001 value = 10121 }
+		command = { trigger = { division_exists = { type = 22001 id = 10122 } } type = remove_division which = 22001 value = 10122 }
+		command = { trigger = { division_exists = { type = 22001 id = 10123 } } type = remove_division which = 22001 value = 10123 }
+		command = { trigger = { division_exists = { type = 22001 id = 10131 } } type = remove_division which = 22001 value = 10131 }
+		command = { trigger = { division_exists = { type = 22001 id = 10141 } } type = remove_division which = 22001 value = 10141 }
+		command = { trigger = { division_exists = { type = 22001 id = 10151 } } type = remove_division which = 22001 value = 10151 }
+		command = { trigger = { division_exists = { type = 22001 id = 10161 } } type = remove_division which = 22001 value = 10161 }
+		command = { trigger = { division_exists = { type = 22001 id = 10171 } } type = remove_division which = 22001 value = 10171 }
+		command = { trigger = { division_exists = { type = 22001 id = 10172 } } type = remove_division which = 22001 value = 10172 }
+		command = { trigger = { division_exists = { type = 22001 id = 10173 } } type = remove_division which = 22001 value = 10173 }
+		command = { trigger = { division_exists = { type = 22001 id = 10181 } } type = remove_division which = 22001 value = 10181 }
+		command = { trigger = { division_exists = { type = 22001 id = 10182 } } type = remove_division which = 22001 value = 10182 }
+		command = { trigger = { division_exists = { type = 22001 id = 10183 } } type = remove_division which = 22001 value = 10183 }
+		command = { trigger = { division_exists = { type = 22001 id = 10211 } } type = remove_division which = 22001 value = 10211 }
+		command = { trigger = { division_exists = { type = 22001 id = 10212 } } type = remove_division which = 22001 value = 10212 }
+		command = { trigger = { division_exists = { type = 22001 id = 10213 } } type = remove_division which = 22001 value = 10213 }
+		command = { trigger = { division_exists = { type = 22001 id = 10221 } } type = remove_division which = 22001 value = 10221 }
+		command = { trigger = { division_exists = { type = 22001 id = 10222 } } type = remove_division which = 22001 value = 10222 }
+		command = { trigger = { division_exists = { type = 22001 id = 10223 } } type = remove_division which = 22001 value = 10223 }
+		command = { trigger = { division_exists = { type = 22001 id = 10231 } } type = remove_division which = 22001 value = 10231 }
+		command = { trigger = { division_exists = { type = 22001 id = 10232 } } type = remove_division which = 22001 value = 10232 }
+		command = { type = alliance which = CXB when = 1 }
+		command = { trigger = { exists = CHC } type = alliance which = CHC when = 1 } # First United Front
+		command = { trigger = { not = { ispuppet = SIK } } type = alliance which = SIK when = 1 }
+		command = { type = war which = UCH }
+		#command = { type = belligerence value = -30 } # Free DoW.
+		#command = { type = dissent value = -20 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011023 when = 0 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011025 when = 0 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011026 when = 0 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011027 when = 0 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011033 when = 0 }
+		command = { trigger = { exists = UCH } type = event where = UCH which = 133011034 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011023 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011025 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011026 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011027 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011033 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011034 when = 0 }
+		command = { type = flag_ext where = CHI which = "_REP" }
+		command = { type = trigger which = 133011017 }
+		command = { type = event where = CHI which = 133011400 when = 4 }
+		command = { type = belligerence value = -30 }
+	}
+}
+
+# Rise of Warlords and VP.
+event = {
+	id = 133011011
+	random = no
+	persistent = yes
+	
+	# Triggered
+
+	name = EVT1914_133011011_NAME
+	desc = EVT1914_133011011_DESC
+
+	style = 2
+	picture = "ccip_cw"
+	
+	action = {
+		name = ACTION_NAME_OK
+		command = { type = province_keypoints which = 1239 value = 1 }
+		command = { type = province_keypoints which = 1272 value = 1 }
+		command = { type = province_keypoints which = 1264 value = 1 }
+		command = { type = province_keypoints which = 1293 value = 1 }
+		command = { type = province_keypoints which = 1339 value = 1 }
+		command = { type = province_keypoints which = 1238 value = 1 }
+		command = { type = province_keypoints which = 1389 value = 1 }
+		command = { type = province_keypoints which = 1365 value = 1 }
+		command = { type = province_keypoints which = 1251 value = 1 }
+		command = { type = province_keypoints which = 1282 value = 1 }
+		command = { type = province_keypoints which = 1226 value = 1 }
+		command = { type = province_keypoints which = 1282 value = 1 }
+		command = { type = province_keypoints which = 1283 value = 1 }
+		command = { type = province_keypoints which = 1262 value = 1 }
+		command = { type = province_keypoints which = 1264 value = 1 }
+		command = { type = province_keypoints which = 1255 value = 1 }
+		command = { type = province_keypoints which = 1259 value = 1 }
+		command = { type = province_keypoints which = 1292 value = 1 }
+		command = { type = province_keypoints which = 1293 value = 1 }
+		command = { type = province_keypoints which = 1390 value = 1 }
+		command = { type = province_keypoints which = 1386 value = 1 }
+		command = { type = province_keypoints which = 1388 value = 1 }
+		command = { type = province_keypoints which = 1303 value = 1 }
+		command = { type = province_keypoints which = 1369 value = 1 }
+		command = { type = province_keypoints which = 1373 value = 1 }
+		command = { type = province_keypoints which = 1365 value = 1 }
+		command = { type = province_keypoints which = 1375 value = 1 }
+		command = { type = province_keypoints which = 1352 value = 1 }
+		command = { type = province_keypoints which = 1358 value = 1 }
+		command = { type = province_keypoints which = 1315 value = 1 }
+		command = { type = province_keypoints which = 1307 value = 1 }
+		command = { type = province_keypoints which = 1323 value = 1 }
+		command = { type = province_keypoints which = 1251 value = 1 }
+		command = { type = province_keypoints which = 1247 value = 1 }
+		command = { type = province_keypoints which = 1245 value = 1 }
+		command = { type = province_keypoints which = 1199 value = 1 }
+		command = { type = province_keypoints which = 1203 value = 1 }
+		command = { type = province_keypoints which = 1202 value = 1 } # Jiamisu
+		command = { type = province_keypoints which = 1209 value = 1 } # Wulanhaote
+		command = { type = province_keypoints which = 1317 value = 1 } # Wuhan
+		command = { type = province_keypoints which = 1308 value = 1 } # Changsha
+		command = { type = province_keypoints which = 1378 value = 1 } # Guiling
+		command = { type = province_keypoints which = 1330 value = 1 } # Jinan
+		command = { type = province_keypoints which = 1328 value = 1 } # Qingdao
+		command = { type = province_keypoints which = 1389 value = 1 } # Baoshan
+		command = { type = province_keypoints which = 1322 value = 1 } # Luoyang
+		command = { type = province_keypoints which = 1242 value = 1 } # Shijiazhuang
+		command = { type = province_keypoints which = 1252 value = 1 } # Taiyuan
+		command = { type = province_keypoints which = 1217 value = 1 } # Anshan
+		command = { type = province_keypoints which = 1220 value = 1 } # Dandong
+		command = { type = province_keypoints which = 1360 value = 1 } # Xiamen
+		command = { type = province_keypoints which = 1305 value = 1 } # Guiyang
+		command = { type = province_keypoints which = 1340 value = 1 } # Hefei
+		command = { type = province_keypoints which = 1266 value = 1 } # Yumen
+		command = { type = province_keypoints which = 1273 value = 1 } # Altai
+		command = { type = province_keypoints which = 1281 value = 1 } # Urumuqi
+		command = { type = province_keypoints which = 1294 value = 1 } # Chamdo
+		command = { type = province_keypoints which = 1379 value = 1 } # Nanning
+		command = { type = province_keypoints which = 1383 value = 1 } # Wuzhou
+		command = { type = province_keypoints which = 1367 value = 1 } # Naoming
+	}
+}
+
+# Rejecting the New Empire - The National Protection War (1915)
+event = {
+	id =	133011013
+	random = no
+	country = CYN
+	
+	#Triggered
+
+	name = EVT1914_133011013_NAME
+	desc = EVT1914_133011013_DESC
+
+	picture = "ccip_npw"
+	style = 2
+	
+	action = {
+		name = EVT_2052011_NAME #"For the defense of democracy"
+		command = { type = relation which = U74 value = -25 }
+		command = { type = country which = CHI }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10171 } } } type = add_division which = "1 YQ Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10172 } } } type = add_division which = "2 YQ Division" value = infantry when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10173 } } } type = add_division which = "3 YQ Division" value = infantry when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10181 } } } type = add_division which = "4 YQ Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10182 } } } type = add_division which = "5 YQ Division" value = infantry when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10183 } } } type = add_division which = "6 YQ Division" value = infantry when = 1 }
+		command = { trigger = { exists = CHC } type = relation which = CHC value = 35 }
+		command = { trigger = { exists = CHC } type = non_aggression which = CHC where = CHI }
+		command = { trigger = { exists = CGX } type = non_aggression which = CGX where = CHI }
+		command = { trigger = { exists = CXB } type = non_aggression which = CXB where = CHI }
+		command = { trigger = { exists = SIK } type = non_aggression which = SIK where = CHI }
+		command = { trigger = { exists = CGX } type = relation which = CGX value = 35 }
+		command = { trigger = { exists = CXB } type = relation which = CXB value = 35 }
+		command = { trigger = { exists = SIK } type = relation which = SIK value = 35 }
+		command = { type = flag_ext where = CHI which = "_REP" }
+		command = { type = name where = CHI which = CHI_NPA }
+		command = { type = war which = U74 }
+		#command = { type = dissent value = -20 }
+		#command = { type = belligerence value = -40 }
+		command = { trigger = { not = { event = 133011019 } exists = CGX } type = event which = 133011014 where = CHI when = 60 }
+		command = { type = secedearea which = CHI value = "Yunnan" when = 2 }
+		command = { trigger = { not = { control = { province = 1290 data = TIB } } } type = secedeprovince which = CHI value = 1290 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1294 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1293 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1292 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1291 when = 2 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011026 when = 1 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011027 when = 1 }
+		command = { type = event where = CHI which = 133011400 when = 4 }
+	}
+	
+}
+
+# Rejecting the New Empire - The National Protection War (1916)
+event = {
+	id =	133011014
+	random = no
+	country = CHI
+	
+	#Triggered
+
+	name = EVT1914_133011013_NAME
+	desc = EVT1914_133011014_DESC
+	
+	picture = "ccip_npw"
+	style = 2
+	
+	
+	action = {
+		trigger = {
+			exists = CGX
+		}
+		name = EVT_2052011_NAME #"For the defense of democracy"
+		command = { type = inherit which = CGX value = 1 }
+		command = { trigger = { division_exists = { type = 22003 id = 10191 } division_exists = { type = 22001 id = 10191 } } type = remove_division which = 22001 value = 10191 }
+		command = { trigger = { division_exists = { type = 22003 id = 10192 } division_exists = { type = 22001 id = 10192 } } type = remove_division which = 22001 value = 10192 }
+		command = { trigger = { division_exists = { type = 22003 id = 10193 } division_exists = { type = 22001 id = 10193 } } type = remove_division which = 22001 value = 10193 }
+		command = { trigger = { division_exists = { type = 22003 id = 10201 } division_exists = { type = 22001 id = 10201 } } type = remove_division which = 22001 value = 10201 }
+		command = { trigger = { division_exists = { type = 22003 id = 10202 } division_exists = { type = 22001 id = 10202 } } type = remove_division which = 22001 value = 10202 }
+		command = { trigger = { division_exists = { type = 22003 id = 10203 } division_exists = { type = 22001 id = 10203 } } type = remove_division which = 22001 value = 10203 }
+		command = { trigger = { division_exists = { type = 22003 id = 10204 } division_exists = { type = 22001 id = 10204 } } type = remove_division which = 22001 value = 10204 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22001 id = 10191 } } division_exists = { type = 22003 id = 10191 } }
+			and = { not = { division_exists = { type = 22001 id = 10192 } } division_exists = { type = 22003 id = 10192 } }
+			and = { not = { division_exists = { type = 22001 id = 10193 } } division_exists = { type = 22003 id = 10193 } }
+		} } type = add_corps which = "Guangxi Difangjun" value = land where = 1378 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10191 } } division_exists = { type = 22003 id = 10191 } } type = activate_division which = 22003 value = 10191 where = 1378 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10192 } } division_exists = { type = 22003 id = 10192 } } type = activate_division which = 22003 value = 10192 where = 1378 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10193 } } division_exists = { type = 22003 id = 10193 } } type = activate_division which = 22003 value = 10193 where = 1378 when = 1 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22001 id = 10201 } } division_exists = { type = 22003 id = 10201 } }
+			and = { not = { division_exists = { type = 22001 id = 10202 } } division_exists = { type = 22003 id = 10202 } }
+			and = { not = { division_exists = { type = 22001 id = 10203 } } division_exists = { type = 22003 id = 10203 } }
+			and = { not = { division_exists = { type = 22001 id = 10204 } } division_exists = { type = 22003 id = 10204 } }
+		} } type = add_corps which = "Guangdong Difangjun" value = land where = 1369 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10201 } } division_exists = { type = 22003 id = 10201 } } type = activate_division which = 22003 value = 10201 where = 1369 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10202 } } division_exists = { type = 22003 id = 10202 } } type = activate_division which = 22003 value = 10202 where = 1369 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10203 } } division_exists = { type = 22003 id = 10203 } } type = activate_division which = 22003 value = 10203 where = 1369 when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22001 id = 10204 } } division_exists = { type = 22003 id = 10204 } } type = activate_division which = 22003 value = 10204 where = 1369 when = 1 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22003 id = 10191 } } not = { division_exists = { type = 22001 id = 10191 } } }
+			and = { not = { division_exists = { type = 22003 id = 10192 } } not = { division_exists = { type = 22001 id = 10192 } } }
+			and = { not = { division_exists = { type = 22003 id = 10193 } } not = { division_exists = { type = 22001 id = 10193 } } }
+		} } type = add_corps which = "Guangxi Difangjun" value = land where = 1378 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10191 } } not = { division_exists = { type = 22001 id = 10191 } } } type = add_division which = "1 GX Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10192 } } not = { division_exists = { type = 22001 id = 10192 } } } type = add_division which = "2 GX Division" value = militia when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10193 } } not = { division_exists = { type = 22001 id = 10193 } } } type = add_division which = "3 GX Division" value = militia when = 0 }
+		command = { trigger = { or = { 
+			and = { not = { division_exists = { type = 22003 id = 10201 } } not = { division_exists = { type = 22001 id = 10201 } } }
+			and = { not = { division_exists = { type = 22003 id = 10202 } } not = { division_exists = { type = 22001 id = 10202 } } }
+			and = { not = { division_exists = { type = 22003 id = 10203 } } not = { division_exists = { type = 22001 id = 10203 } } }
+			and = { not = { division_exists = { type = 22003 id = 10204 } } not = { division_exists = { type = 22001 id = 10204 } } }
+		} } type = add_corps which = "Guangdong Difangjun" value = land where = 1369 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10201 } } not = { division_exists = { type = 22001 id = 10201 } } } type = add_division which = "1 GD Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10202 } } not = { division_exists = { type = 22001 id = 10202 } } } type = add_division which = "2 GD Division" value = infantry when = 2 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10203 } } not = { division_exists = { type = 22001 id = 10203 } } } type = add_division which = "3 GD Division" value = infantry when = 1 }
+		command = { trigger = { not = { division_exists = { type = 22003 id = 10204 } } not = { division_exists = { type = 22001 id = 10204 } } } type = add_division which = "4 GD Division" value = infantry when = 1 }
+		command = { type = secedearea which = CHI value = "Guangxi" when = 2 }
+		command = { type = secedeprovince which = CHI value = 1378 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1383 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1382 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1381 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1380 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1377 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1376 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1379 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1374 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1367 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1373 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1365 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1368 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1369 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1370 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1375 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1303 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1305 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1306 when = 2 }
+		command = { type = secedeprovince which = CHI value = 1307 when = 2 }
+		command = { trigger = { division_exists = { type = 22001 id = 10001 } } type = remove_division which = 22001 value = 10001 }
+		command = { trigger = { division_exists = { type = 22001 id = 10002 } } type = remove_division which = 22001 value = 10002 }
+		command = { trigger = { division_exists = { type = 22001 id = 10003 } } type = remove_division which = 22001 value = 10003 }
+		command = { trigger = { division_exists = { type = 22001 id = 10004 } } type = remove_division which = 22001 value = 10004 }
+		command = { trigger = { division_exists = { type = 22001 id = 10005 } } type = remove_division which = 22001 value = 10005 }
+		command = { trigger = { division_exists = { type = 22001 id = 10006 } } type = remove_division which = 22001 value = 10006 }
+		command = { trigger = { division_exists = { type = 22001 id = 10011 } } type = remove_division which = 22001 value = 10011 }
+		command = { trigger = { division_exists = { type = 22001 id = 10021 } } type = remove_division which = 22001 value = 10021 }
+		command = { trigger = { division_exists = { type = 22001 id = 10031 } } type = remove_division which = 22001 value = 10031 }
+		command = { trigger = { division_exists = { type = 22001 id = 10041 } } type = remove_division which = 22001 value = 10041 }
+		command = { trigger = { division_exists = { type = 22001 id = 10051 } } type = remove_division which = 22001 value = 10051 }
+		command = { trigger = { division_exists = { type = 22001 id = 10052 } } type = remove_division which = 22001 value = 10052 }
+		command = { trigger = { division_exists = { type = 22001 id = 10053 } } type = remove_division which = 22001 value = 10053 }
+		command = { trigger = { division_exists = { type = 22001 id = 10054 } } type = remove_division which = 22001 value = 10054 }
+		command = { trigger = { division_exists = { type = 22001 id = 10055 } } type = remove_division which = 22001 value = 10055 }
+		command = { trigger = { division_exists = { type = 22001 id = 10056 } } type = remove_division which = 22001 value = 10056 }
+		command = { trigger = { division_exists = { type = 22001 id = 10061 } } type = remove_division which = 22001 value = 10061 }
+		command = { trigger = { division_exists = { type = 22001 id = 10071 } } type = remove_division which = 22001 value = 10071 }
+		command = { trigger = { division_exists = { type = 22001 id = 10081 } } type = remove_division which = 22001 value = 10081 }
+		command = { trigger = { division_exists = { type = 22001 id = 10091 } } type = remove_division which = 22001 value = 10091 }
+		command = { trigger = { division_exists = { type = 22001 id = 10092 } } type = remove_division which = 22001 value = 10092 }
+		command = { trigger = { division_exists = { type = 22001 id = 10101 } } type = remove_division which = 22001 value = 10101 }
+		command = { trigger = { division_exists = { type = 22001 id = 10111 } } type = remove_division which = 22001 value = 10111 }
+		command = { trigger = { division_exists = { type = 22001 id = 10121 } } type = remove_division which = 22001 value = 10121 }
+		command = { trigger = { division_exists = { type = 22001 id = 10122 } } type = remove_division which = 22001 value = 10122 }
+		command = { trigger = { division_exists = { type = 22001 id = 10123 } } type = remove_division which = 22001 value = 10123 }
+		command = { trigger = { division_exists = { type = 22001 id = 10131 } } type = remove_division which = 22001 value = 10131 }
+		command = { trigger = { division_exists = { type = 22001 id = 10141 } } type = remove_division which = 22001 value = 10141 }
+		command = { trigger = { division_exists = { type = 22001 id = 10151 } } type = remove_division which = 22001 value = 10151 }
+		command = { trigger = { division_exists = { type = 22001 id = 10161 } } type = remove_division which = 22001 value = 10161 }
+		command = { trigger = { division_exists = { type = 22001 id = 10171 } } type = remove_division which = 22001 value = 10171 }
+		command = { trigger = { division_exists = { type = 22001 id = 10172 } } type = remove_division which = 22001 value = 10172 }
+		command = { trigger = { division_exists = { type = 22001 id = 10173 } } type = remove_division which = 22001 value = 10173 }
+		command = { trigger = { division_exists = { type = 22001 id = 10181 } } type = remove_division which = 22001 value = 10181 }
+		command = { trigger = { division_exists = { type = 22001 id = 10182 } } type = remove_division which = 22001 value = 10182 }
+		command = { trigger = { division_exists = { type = 22001 id = 10183 } } type = remove_division which = 22001 value = 10183 }
+		command = { trigger = { division_exists = { type = 22001 id = 10211 } } type = remove_division which = 22001 value = 10211 }
+		command = { trigger = { division_exists = { type = 22001 id = 10212 } } type = remove_division which = 22001 value = 10212 }
+		command = { trigger = { division_exists = { type = 22001 id = 10213 } } type = remove_division which = 22001 value = 10213 }
+		command = { trigger = { division_exists = { type = 22001 id = 10221 } } type = remove_division which = 22001 value = 10221 }
+		command = { trigger = { division_exists = { type = 22001 id = 10222 } } type = remove_division which = 22001 value = 10222 }
+		command = { trigger = { division_exists = { type = 22001 id = 10223 } } type = remove_division which = 22001 value = 10223 }
+		command = { trigger = { division_exists = { type = 22001 id = 10231 } } type = remove_division which = 22001 value = 10231 }
+		command = { trigger = { division_exists = { type = 22001 id = 10232 } } type = remove_division which = 22001 value = 10232 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011023 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011025 when = 0 }
+		command = { trigger = { exists = U74 } type = event where = U74 which = 133011028 when = 0 }
+		command = { type = belligerence value = -30 }
+	}
+
+}
+
+
+############################
+# Imperial China Formation #
+############################
+
+# Form the Great Chinese Empire (Forced) - Early War
+event = {
+	id = 133011017
+	random = no
+	country = UCH
+	
+	#Triggered
+
+	name = EVT1914_133011017_NAME
+	desc = EVT1914_133011017_DESC
+
+	picture = "ccip_yuan"
+	style = 2
+	
+	action = {
+		name = EVT1914_133011017_ACTIONA #"It is time to reform the government"
+		command = { type = country which = U74 }
+		command = { type = headofstate which = 1185100} #Hongxian
+		command = { type = headofgovernment which = 1185112 } #Liang Shiyi
+		command = { type = trigger which = 133011020 }
+		command = { type = trigger which = 133011011 }
+		command = { trigger = { exists = CHI } type = event which = 133011011 where = CHI when = 0}
+		command = { trigger = { exists = CYN } type = event which = 133011011 where = CYN when = 0}
+		command = { trigger = { exists = CGX } type = event which = 133011011 where = CGX when = 0}
+		command = { trigger = { exists = CHC } type = event which = 133011011 where = CHC when = 0}
+		command = { trigger = { exists = SIK } type = event which = 133011011 where = SIK when = 0}
+		command = { trigger = { exists = CSX } type = event which = 133011011 where = CSX when = 0}
+		command = { trigger = { exists = CXB } type = event which = 133011011 where = CXB when = 0}
+		command = { type = sleepevent which = 133011012 }
+		command = { type = sleepevent which = 133011021 }
+	}
+	
+}
+
+# Form the Great Chinese Empire - Historical
+event = {
+	id = 133011012
+	random = no
+	country = UCH
+	
+	decision = {
+		headofstate = 1325100
+		not = { event = 133011021 }
+		not = { event = 133011010 }
+	}
+	
+	decision_trigger = {
+		or = {
+			event = 133011016 # Twenty-One Demands
+		}
+	}
+	
+	trigger = {
+		headofstate = 1325100
+		or = {
+			event = 133011016
+		}
+		random = 50
+		not = { event = 133011021 }
+		not = { event = 133011010 }
+	}
+
+	
+	name = EVT1914_133011012_NAME
+	desc = EVT1914_133011012_DESC
+
+	picture = "ccip_yuan"
+	decision_picture = "decision_ccip_yuan"
+	style = 2
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1915 }
+	
+	action = {
+		name = EVT1914_133011012_ACTIONA #"For a stronger China! Long live Emperor Hongxian!"
+		command = { type = country which = U74 }
+		command = { type = dissent value = 15 }
+		command = { type = headofstate which = 1185100} #Hongxian
+		command = { type = headofgovernment which = 1185112 } #Liang Shiyi
+		command = { trigger = { not = { exists = CYN } } type = independence which = CYN value = 0}
+		command = { type = trigger which = 133011020 }
+		command = { type = trigger which = 133011011 }
+		command = { trigger = { exists = CHI } type = event which = 133011011 where = CHI when = 0}
+		command = { trigger = { exists = CYN } type = event which = 133011011 where = CYN when = 0}
+		command = { trigger = { exists = CGX } type = event which = 133011011 where = CGX when = 0}
+		command = { trigger = { exists = CHC } type = event which = 133011011 where = CHC when = 0}
+		command = { trigger = { exists = SIK } type = event which = 133011011 where = SIK when = 0}
+		command = { trigger = { exists = CSX } type = event which = 133011011 where = CSX when = 0}
+		command = { trigger = { exists = CXB } type = event which = 133011011 where = CXB when = 0}
+		command = { type = sleepevent which = 133011017 }
+		command = { type = sleepevent which = 133011021 }
+		command = { type = sleepevent which = 133011010 }
+		command = { type = sleepevent which = 133011002 }
+	}
+	
+}
+
+# Form the Great Chinese Empire (Forced) - Late War
+event = {
+	id = 133011021
+	random = no
+	country = UCH
+	
+	trigger = {
+		headofstate = 1325100
+		not = { event = 133011012 }
+		not = { event = 133011010 }
+		or = {
+			and = {
+				year = 1916
+				dissent = 10
+			}
+			dissent = 40
+		}
+	}
+
+	name = EVT1914_133011017_NAME
+	desc = EVT1914_133011017_DESC
+
+	picture = "ccip_yuan"
+	style = 2
+	
+	date = { day = 0 month = january year = 1915 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1916 }
+	
+	action = {
+		name = EVT1914_133011017_ACTIONA #"It is time to reform the government"
+		command = { type = country which = U74 }
+		command = { type = headofstate which = 1185100} #Hongxian
+		command = { type = headofgovernment which = 1185112 } #Liang Shiyi
+		command = { trigger = { not = { exists = CYN } } type = independence which = CYN value = 0}
+		command = { type = trigger which = 133011020 }
+		command = { type = trigger which = 133011011 }
+		command = { trigger = { exists = CHI } type = event which = 133011011 where = CHI when = 0}
+		command = { trigger = { exists = CYN } type = event which = 133011011 where = CYN when = 0}
+		command = { trigger = { exists = CGX } type = event which = 133011011 where = CGX when = 0}
+		command = { trigger = { exists = CHC } type = event which = 133011011 where = CHC when = 0}
+		command = { trigger = { exists = SIK } type = event which = 133011011 where = SIK when = 0}
+		command = { trigger = { exists = CSX } type = event which = 133011011 where = CSX when = 0}
+		command = { trigger = { exists = CXB } type = event which = 133011011 where = CXB when = 0}
+		command = { type = sleepevent which = 133011012 }
+		command = { type = sleepevent which = 133011017 }
+		command = { type = sleepevent which = 133011010 }
+		command = { type = sleepevent which = 133011002 }
+	}
+	
+}
+
+# Ascension Rites
+event = {
+	id = 133011020
+	random = no
+	country = U74
+	
+	#Triggered
+
+	name = EVT1914_133011020_NAME
+	desc = EVT1914_133011020_DESC
+
+	picture = "ccip_yuan"
+	style = 2
+	
+	action = {
+		name = EVT1914_133011020_ACTIONA #"Who else dares defy Imperial Mandate?"
+		command = { type = dissent value = 15 }
+		command = { trigger = { not = { exists = CGX } not = { exists = CHI } } type = independence which = CGX value = 0 }
+		command = { type = leave_alliance when = 0 }
+		command = { type = end_mastery which = CYN }
+		command = { type = end_mastery which = CGX }
+		command = { type = end_mastery which = CXB }
+		command = { type = end_mastery which = SIK }
+		command = { type = addclaim which = 1356 }
+		command = { type = addclaim which = 1333 }
+		command = { type = addclaim which = 1261 }
+		command = { type = addclaim which = 1303 }
+		command = { type = addclaim which = 1339 }
+		command = { type = addclaim which = 1334 }
+		command = { type = addclaim which = 1336 }
+		command = { type = addclaim which = 1340 }
+		command = { type = addclaim which = 1341 }
+		command = { type = addclaim which = 1319 }
+		command = { type = addclaim which = 1322 }
+		command = { type = addclaim which = 1324 }
+		command = { type = addclaim which = 1325 }
+		command = { type = addclaim which = 1326 }
+		command = { type = addclaim which = 1316 }
+		command = { type = addclaim which = 1317 }
+		command = { type = addclaim which = 1344 }
+		command = { type = addclaim which = 1342 }
+		command = { type = addclaim which = 1337 }
+		command = { type = addclaim which = 1338 }
+		command = { type = addclaim which = 1345 }
+		command = { type = addclaim which = 1346 }
+		command = { type = addclaim which = 1347 }
+		command = { type = addclaim which = 1348 }
+		command = { type = addclaim which = 1357 }
+		command = { type = addclaim which = 1358 }
+		command = { type = addclaim which = 1359 }
+		command = { type = addclaim which = 1360 }
+		command = { type = addclaim which = 1354 }
+		command = { type = addclaim which = 1353 }
+		command = { type = addclaim which = 1318 }
+		command = { type = addclaim which = 1355 }
+		command = { type = addclaim which = 1309 }
+		command = { type = addclaim which = 1311 }
+		command = { type = addclaim which = 1312 }
+		command = { type = addclaim which = 1310 }
+		command = { type = addclaim which = 1304 }
+		command = { type = addclaim which = 1302 }
+		command = { type = addclaim which = 1296 }
+		command = { type = addclaim which = 1297 }
+		command = { type = addclaim which = 1298 }
+		command = { type = addclaim which = 1305 }
+		command = { type = addclaim which = 1306 }
+		command = { type = addclaim which = 1313 }
+		command = { type = addclaim which = 1307 }
+		command = { type = addclaim which = 1308 }
+		command = { type = addclaim which = 1349 }
+		command = { type = addclaim which = 1335 }
+		command = { type = addclaim which = 1314 }
+		command = { type = addclaim which = 1315 }
+		command = { type = addclaim which = 1267 }
+		command = { type = addclaim which = 1320 }
+		command = { type = addclaim which = 1299 }
+		command = { type = addclaim which = 1343 }
+		command = { type = addclaim which = 1300 }
+		command = { type = addclaim which = 1301 }
+		command = { type = addclaim which = 1350 }
+		command = { type = addclaim which = 1351 }
+		command = { type = addclaim which = 1352 }
+		command = { type = addclaim which = 1321 }
+		command = { type = addclaim which = 1323 }
+		command = { type = addclaim which = 1259 }
+		command = { type = addclaim which = 1260 }
+		command = { type = addclaim which = 1255 }
+		command = { type = addclaim which = 1241 }
+		command = { type = addclaim which = 1247 }
+		command = { type = addclaim which = 1246 }
+		command = { type = addclaim which = 1251 }
+		command = { type = addclaim which = 1242 }
+		command = { type = addclaim which = 1254 }
+		command = { type = addclaim which = 1332 }
+		command = { type = addclaim which = 1252 }
+		command = { type = addclaim which = 1253 }
+		command = { type = addclaim which = 1248 }
+		command = { type = addclaim which = 1249 }
+		command = { type = addclaim which = 1250 }
+		command = { type = addclaim which = 1327 }
+		command = { type = addclaim which = 1243 }
+		command = { type = addclaim which = 1244 }
+		command = { type = addclaim which = 1245 }
+		command = { type = addclaim which = 1329 }
+		command = { type = addclaim which = 1330 }
+		command = { type = addclaim which = 1202 }
+		command = { type = addclaim which = 1204 }
+		command = { type = addclaim which = 1212 }
+		command = { type = addclaim which = 1205 }
+		command = { type = addclaim which = 1199 }
+		command = { type = addclaim which = 1203 }
+		command = { type = addclaim which = 1200 }
+		command = { type = addclaim which = 1206 }
+		command = { type = addclaim which = 1213 }
+		command = { type = addclaim which = 1237 }
+		command = { type = addclaim which = 1207 }
+		command = { type = addclaim which = 1220 }
+		command = { type = addclaim which = 1218 }
+		command = { type = addclaim which = 1236 }
+		command = { type = addclaim which = 1201 }
+		command = { type = addclaim which = 1208 }
+		command = { type = addclaim which = 1209 }
+		command = { type = addclaim which = 1210 }
+		command = { type = addclaim which = 1211 }
+		command = { type = addclaim which = 1214 }
+		command = { type = addclaim which = 1215 }
+		command = { type = addclaim which = 1216 }
+		command = { type = addclaim which = 1235 }
+		command = { type = addclaim which = 1217 }
+		command = { type = addclaim which = 1197 }
+		command = { type = addclaim which = 1198 }
+		command = { type = addclaim which = 1263 }
+		command = { type = addclaim which = 1256 }
+		command = { type = addclaim which = 1238 }
+		command = { type = addclaim which = 1240 }
+		command = { type = addclaim which = 1239 }
+		command = { type = addclaim which = 1258 }
+		command = { type = addclaim which = 1257 }
+		command = { trigger = { not = { or = { event = 133011004 event = 133011018 } } exists = CYN } type = event which = 133011013 where = CYN when = 5 }
+		command = { type = event which = 133001063 where = U74 when = 2 }
+	}
+	
+}
+
+########
+# Misc #
+########
+
+# Sichaun Divided Loyalties
+event = {
+	id = 133001063 
+	random = no
+	country = U74
+	
+	# Triggered
+
+	name = EVT1914_133011063_NAME
+	desc = EVT1914_133011063_DESC
+
+	picture = "ccip_beiyangarmy"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { trigger = { division_exists = { type = 22000 id = 10071 } } type = unlock_division which = 22000 value = 10071 }
+		command = { trigger = { not = { division_exists = { type = 22000 id = 10071 } } } type = add_corps which = "Sichuan Difangjun" value = land where = 1297 }
+		command = { trigger = { not = { division_exists = { type = 22000 id = 10071 } } } type = add_division which = "Sichuan Lujun" value = infantry when = 2 }
+		command = { trigger = { division_exists = { type = 22000 id = 10081 } } type = remove_division which = 22000 value = 10081 }
+	}
+}
+
+# Cai E Returns
+event = {
+	id = 133011400
+	random = no
+	country = CHI
+	
+	# Triggered
+	
+	name = EVT1914_133011400_NAME
+	desc = DPERSONALITY_CAI_E
+	
+	picture = "ccip_caie"
+	style = 2
+	
+	action = {
+		name = ACTION_NAME_EXCELLENT
+		command = { type = wakeminister which = 55216 }
+		command = { type = wakeminister which = 55212 }
+		command = { type = wakeminister which = 55210 }
+		command = { type = headofstate which = 55210 }
+		command = { type = foreignminister which = 55212 }
+	}
+}
