@@ -137,7 +137,7 @@
 # 1400000087 CHI - Presidential Election - 3rd Presidential Election #
 # 1400000088 CHI - Presidential Election - 3rd Presidential Election (Chiang Dictatorship) #
 # 1400000089 CHI - Extraordinary National Congress (1938)
-# 1400000090 
+# 1400000090 CHI - Resigns of Head of State - Chiang Kai-shek #
 # 1400000091 
 # 1400000092 
 # 1400000093 
@@ -223,7 +223,7 @@
 # 1400001261 CHI - Burma Road Plan 
 # 1400001262 U02 - Completion of Burma Road 
 # 1400001263 CHI - Completion of Burma Road 
-# 1400001264 U02 - Burma Road Is closed
+# 1400001264 ENG - Burma Road Is closed
 # 1400001265 CHI - Burma Road Is closed 
 # 1400001266 U02 - Burma Road is re-opened 
 # 1400001267 CHI - Burma Road is re-opened 
@@ -348,12 +348,12 @@
 # 1400002043 JAP - Directing Industrial Policy #
 # 1400002044 JAP - Implementation of Economic Plan #
 # 1400002045 JAP - Wartime Policy and Economic Planning #
-# 1400002046 JAP - Direction of the Wartime Economy #
-# 1400002047 JAP - The Great Drought (1939) 
-# 1400002048 JAP - Japanification of Foreign Subsidiaries #
+# 1400002046 JAP - The Great Drought (1939) 
+# 1400002047 JAP - The Nationalisation of Heavy Industry - Post-war and Kodoha path #
+# 1400002048 JAP - Fate of Zaibatsu - Post-war and Kodoha path #
 # 1400002049 JAP - Direction of Fiscal policy (Takahashi Policy) 
-# 1400002050 JAP - The Nationalisation of Heavy Industry - Post-war and Kodoha path #
-# 1400002051 JAP - Fate of Zaibatsu - Post-war and Kodoha path #
+# 1400002050 JAP - Japanification of Foreign Subsidiaries #
+# 1400002051 JAP - Dissolution of the Zaibatsu Groups #
 # 1400002052 JAP - 
 # 1400002053 JAP - 
 # 1400002054 JAP - 
@@ -450,14 +450,14 @@
 # 1400004505 JAP - Japan's New constitution - Peace Constitution (Occupation of Japan) 
 # 1400004506 JAP - White purge (Occupation of Japan) 
 # 1400004507 JAP - War Crimes Tribunal (Occupation of Japan) 
-# 1400004508 JAP - Collapse of Economic sphere #
+# 1400004508 JAP - Collapse of Economic Sphere #
 # 1400004509 JAP - Economic Reconstruction policy #
 # 1400004510 JAP - End of Purge of Public Officials (Occupation of Japan) 
 # 1400004511 JAP - General Election (non-Occupation of Japan) 
 # 1400004512 JAP - New Cabinet Government (Occupation of Japan) - Yoshida 
 # 1400004513 JAP - Appointment of Prime Minister (non-Occupation of Japan) - National Unity Government
-# 1400004514 JAP - Reverse Course #
-# 1400004515 JAP - Corporate Reform #
+# 1400004514 JAP - Corporate Reform #
+# 1400004515 JAP - Reverse Course #
 # 1400004516 
 # 1400004517 
 # 1400004518 
@@ -515,14 +515,14 @@
 # 1400006003 KOR - People's Republic Proclaimed - CHC or SOV
 # 1400006004 USA - Occupation of Korea 
 # 1400006005 SOV - Occupation of Korea 
-# 1400006006 USA - Establishment of Korean government # - Korean Republic
-# 1400006007 SOV - Establishment of Korean government # - North Korea
+# 1400006006 USA - Establish of Korean government # - Korean Republic
+# 1400006007 SOV - Establish of Korean government # - North Korea
 # 1400006008 KOR - Republic Proclaimed - South Korea or Korean Republic
-# 1400006009 
+# 1400006009 KOR - Composition of the Government
 # 1400006010 PRK - Proclamation of Socialist government - People's Republic or DPRK
 # 1400006011 KOR - Division of Korea 
 # 1400006012 PRK - Division of Korea 
-# 1400006013 KOR - Establishment of Interim government 
+# 1400006013 KOR - Establish of Interim government 
 # 1400006014 USA - Protests in Korea #
 # 1400006015 USA - Support for the Korean Coalition movement #
 # 1400006016 USA - Demand for Reform of Occupation policy #
@@ -530,7 +530,7 @@
 # 1400006018 USA - Joint Korean-American Conference #
 # 1400006019 USA - Instability in Korea #
 # 1400006020 USA - Direction of Korea's policy #
-# 1400006021 USA - Establishment of Interim Government # - Governing Commission, Interim government
+# 1400006021 USA - Establish of Interim Government # - Governing Commission, Interim government
 # 1400006022 USA - Composition of the Korean Advisory Council # - Alternative path(Governing Commission)
 # 1400006023 USA - Expansion of the Korean Governing Commission #
 # 1400006024 USA - Conflicts between Korean factions #
@@ -539,9 +539,9 @@
 # 1400006027 KOR - General Election #
 # 1400006028 KOR - Formation of the Constituent National Assembly #
 # 1400006029 KOR - Presidential Election #
-# 1400006030 KOR - Composition of the Government
-# 1400006031 USA CHI CHC SOV - Transfer of Administrative in Korea #
-# 1400006032 KOR - Transfer of Administrative Authority #
+# 1400006030 USA CHI CHC SOV - Transfer of Administrative in Korea #
+# 1400006031 KOR - Transfer of Administrative Authority #
+# 1400006032 
 # 1400006033 
 # 1400006034 
 # 1400006035 
@@ -687,6 +687,21 @@
 # 1400007529 MEN - Integration of local governments 
 # 1400007530 MEN - Securing Outer Mongolia - What if?
 # 1400007531 JAP - End of the Adventure in Manchuria
+# 1400007532 JAP - North China's collaborators #
+# 1400007533 UCS - Establish of collaboration government #
+# 1400007534 JAP - Collaboration with Wang Jingwei #
+# 1400007535 U87 - Establish of collaboration government #
+# 1400007536 U87 - Constituent National Assembly #
+# 1400007537 U87 - Constitutional Discussion #
+# 1400007538 U87 - Fate of remnants of KMT #
+# 1400007539 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 
 ### 1400008001 - 1400008500 : India and Burma
 # 

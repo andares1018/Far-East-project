@@ -126,7 +126,7 @@ event = {
 		name = EVT_20_ACTA
 		command = { type = war which = CHI }
 		command = { type = war which = CSX }
-		command = { trigger = { exists = UCS puppet = { country = UCS country = JAP } } type = inherit when = 3 which = UCS value = 1 }
+		#command = { trigger = { exists = UCS puppet = { country = UCS country = JAP } } type = inherit when = 3 which = UCS value = 1 }
 		command = { type = relation which = USA value = -5 }
 		command = { type = relation which = SOV value = -5 }
 		command = { type = relation which = CSX value = -50 }

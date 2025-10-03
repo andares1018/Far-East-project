@@ -26,6 +26,7 @@ event = {
 	action = {
 		name = ACTION_NAME_FIGHT
 		command = { type = trigger which = 1330110079 } # JAP Shanghai Incident
+		command = { type = songs which = battle_of_shanghai_speech.txt }
 	}
 }
 

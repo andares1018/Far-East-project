@@ -2967,6 +2967,7 @@ event = {
 	action = {
 		name = "evt_4700a"
 		command = { type = war which = SOV }
+		command = { type = songs which = GER_war_on_SOV.txt }
 	}
 }
 ############################################

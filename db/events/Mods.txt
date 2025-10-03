@@ -2750,7 +2750,7 @@ event = {
 	deathdate = { day = 1 month = 4 year = 1938 }
 	
 	name = "Extraordinary National Congress" 
-	desc = ""
+	desc = "EVT_1400000089_DESC"
 	style = 2
 	picture = "ccip_gmd"
 	action = {
@@ -3600,7 +3600,7 @@ event = {
 	random = no
 	country = JAP
 	name = "East Hebei Incident"
-	desc = ""
+	desc = "EVT_1400001251_DESC"
 	style = 2
 	picture = "East_Hebei"
 
@@ -3643,7 +3643,7 @@ event = {
 	country = CHI 
 
 	name = "East Hebei Incident"
-	desc = ""
+	desc = "EVT_1400001252_DESC"
 	style = 2
 	picture = "East_Hebei"
 
@@ -3888,6 +3888,7 @@ event = {
 
 	trigger = {
 		random = 30
+		NOT = { event = 1400000083 }
 		NOT = { headofgovernment = 55109 } #Wang jingwei
 		war = { country = CHI country = JAP }
 		NOT = {
@@ -3912,19 +3913,19 @@ event = {
 
 	action_a = {
 		name = "ACTION_NAME_DAMN"
-	command = { type = sleepminister which = 55336 }
+	command = { type = sleepminister which = 55336 } #Wang Jingwei
 	command = { type = sleepminister which = 55335 }
 	command = { type = sleepminister which = 55110 }
 	command = { type = sleepminister which = 55109 }
-	command = { type = sleepminister which = 55337 }
+	command = { type = sleepminister which = 55337 } #Chen Gongbo
 	command = { type = sleepminister which = 55111 }
-	command = { type = sleepminister which = 55112 }
-	command = { type = sleepminister which = 55338 }
-	command = { type = sleepminister which = 55115 }
-	command = { type = sleepminister which = 55114 }
-	command = { type = sleepminister which = 55113 }
-	command = { type = sleepminister which = 55116 }
 	command = { type = sleepminister which = 55180 }
+	command = { type = sleepminister which = 55112 } #Zhou Fohai
+	command = { type = sleepminister which = 55338 }
+	command = { type = sleepminister which = 55115 } #Ren Yuandao
+	command = { type = sleepminister which = 55114 }
+	command = { type = sleepminister which = 55113 } #Bao Wenyue
+	command = { type = sleepminister which = 55116 }
 	}
 }
 
@@ -3934,7 +3935,7 @@ event = {
 	country = U66
 
 	name = "Relocation of the Central government"
-	desc = ""
+	desc = "EVT_1400001259_DESC"
 	style = 2
 	picture = "wuhan_1938"
 
@@ -3953,7 +3954,7 @@ event = {
 	country = CHI
 
 	name = "Relocation of the Central government"
-	desc = ""
+	desc = "EVT_1400001260_DESC"
 	style = 2 
 	picture = "wuhan_1938"
 
@@ -3990,7 +3991,7 @@ event = {
 	}
 
 	name = "Burma Road Plan"
-	desc = ""
+	desc = "EVT_1400001261_DESC"
 	style = 2
 	picture = "Burma_Road_map"
 	decision_picture = "decision_lend_lease_CHI"
@@ -4013,7 +4014,7 @@ event = {
 	country = U02
 
 	name = "Completion of Burma Road"
-	desc = ""
+	desc = "EVT_1400001262_DESC"
 	style = 2
 	picture = "americansupplies"
 
@@ -4032,7 +4033,7 @@ event = {
 	country = CHI
 
 	name = "Completion of Burma Road"
-	desc = ""
+	desc = "EVT_1400001263_DESC"
 	style = 2
 	picture = "Burma_Road"
 
@@ -4198,7 +4199,7 @@ event = {
 	}
 
 	name = "Chinese Air Force Support"
-	desc = ""
+	desc = "EVT_1400001268_DESC"
 	style = 2
 	picture = "foreign_volunteers"
 	decision_picture = "decision_foreign_volunteers"
@@ -4231,7 +4232,7 @@ event = {
 	country = CHI
 
 	name = "Flying Tigers"
-	desc = ""
+	desc = "EVT_1400001269_DESC"
 	style = 2
 	picture = "Flying_Tigers"
 
@@ -4252,7 +4253,7 @@ event = {
 	random = no
 	country = CHI
 	name = "Soviet's Support Cease"
-	desc = ""
+	desc = "EVT_1400001270_DESC"
 	style = 2
 	picture = "soviet_replacement"
 
@@ -4301,7 +4302,7 @@ event = {
 	country = CHI
 	name = "Aftermath of the War of Resistance"
 	save_date = yes
-	desc = ""
+	desc = "EVT_1400001271_DESC"
 	style = 2
 	picture = "ccip_shm"
 
@@ -4338,7 +4339,7 @@ event = {
 	random = no
 	country = MEN
 	name = "Suiyuan Campaign"
-	desc = ""
+	desc = "EVT_1400001272_DESC"
 	style = 2
 	picture = "mongol_pilgrims"
 
@@ -4370,7 +4371,7 @@ event = {
 	country = CSX
 
 	name = "Battle of Bailingmiao"
-	desc = ""
+	desc = "EVT_1400001273_DESC"
 	style = 2
 	picture = "Inner_Mongolia"
 
@@ -4387,7 +4388,7 @@ event = {
 	country = CHI
 
 	name = "Suiyuan Campaign"
-	desc = ""
+	desc = "EVT_1400001273_DESC"
 	style = 2
 	picture = "Inner_Mongolia"
 
@@ -4399,7 +4400,7 @@ event = {
 }
 
 
-### Communist China - Thanks for Nukacolaman, vanguard7615, King_Elessar, Vanish
+### Communist China - Thanks for Nukacolaman, vanguard7615, King_Elessar, Vanish, Sun
 
  event = {
 	id = 1400001501
@@ -4453,13 +4454,13 @@ event = {
 	deathdate = { day = 29 month = december year = 1999 }
 
 	name = "Reorganize into the Eighth Route Army"
-	desc = ""
+	desc = "EVT_1400001502_DESC"
 	picture = "chinese_communist_partisans"
 
 	action = {
 		ai_chance = 100
 		name = "ACTION_NAME_GREAT"
-		command = { trigger = { ai = no }type = supplies value = -1000 }
+		command = { trigger = { ai = no } type = supplies value = -1000 }
 		command = { type = add_division value = infantry when = 7 }
 		command = { type = add_division value = infantry when = 7 }
 		command = { type = add_division value = infantry when = 7 }
@@ -4474,7 +4475,7 @@ event = {
 	random = no
 	country = CHC
 	name = "EVT1914_133011901_NAME"
-	desc = ""
+	desc = "EVT_1400001503_DESC"
 	style = 2
 	picture = "yanan_shaanxi"
 
@@ -4500,7 +4501,7 @@ event = {
 	random = no
 	country = CHC
 	name = "Advisor leaves"
-	desc = ""
+	desc = "EVT_1400001504_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -4529,7 +4530,7 @@ event = {
 	id = 1400001505
 	random = no
 	country = CHC
-	name = "Central Politburo Conference"
+	name = "Central Politburo Conference" #Central Politburo Conference (中国共产党第六届中央委员会第六次全体会议)
 	desc = ""
 	style = 2
 	picture = "ccip_craf"
@@ -4626,7 +4627,7 @@ event = {
 	country = CHC
 
 	name = "6th Plenum of the 6th Central Committee"
-	desc = ""
+	desc = "EVT_1400001509_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -4683,7 +4684,7 @@ event = {
 	country = CHC
 
 	name = "Fate of the Changjiang Bureau"
-	desc = ""
+	desc = "EVT_1400001511_DESC"
 	style = 2
 	picture = "ccip_craf"
 
@@ -4871,7 +4872,7 @@ event = {
 	country = CHC
 
 	name = "Rectification Movement"
-	desc = ""
+	desc = "EVT_1400001516_DESC"
 	style = 2
   	picture = "Rectification Movement"
 	trigger = {
@@ -4932,7 +4933,7 @@ event = {
 	country = CHC
 
 	name = "Party Renovation completed"
-	desc = ""
+	desc = "EVT_1400001518_DESC"
 	style = 2
 	picture = "ccip_craf"
 
@@ -4949,7 +4950,7 @@ event = {
 	country = CHC
 
 	name = "Government Reorganization"
-	desc = ""
+	desc = "EVT_1400001519_DESC"
 	style = 2
 	picture = "ccip_craf"
 
@@ -4983,7 +4984,7 @@ event = {
 	deathdate = { day = 26 month = june year = 1945 }
 	
 	name = "7th National Congress" 
-	desc = ""
+	desc = "EVT_1400001520_DESC"
 	style = 2
 	picture = "ccip_craf"
 	action = {
@@ -5088,7 +5089,7 @@ event = {
 	}
 
 	name = "Infiltration in North China"
-	desc = ""
+	desc = "EVT_1400001901_DESC"
 	decision_desc = ""
 	style = 2
 	picture = "chinese_communist_partisans"
@@ -6616,7 +6617,7 @@ event = {
 	}
 
 	name = "Infiltration into Manchuria"
-	desc = ""
+	desc = "EVT_1400001930_DESC"
 	style = 2
 	picture = "Chinese Dug-in"
 	decision_picture = "decision_Eighth_Route"
@@ -6690,7 +6691,7 @@ event = {
 	}
 
 	name = "Infiltration into Central China"
-	desc = ""
+	desc = "EVT_1400001932_DESC"
 	style = 2
 	picture = "Chinese Dug-in"
 	decision_picture = "decision_Eighth_Route"
@@ -6957,7 +6958,7 @@ event = {
 	deathdate = { day = 29 month = 0 year = 1937 }
 	offset = 5
 
-	name = "Restore of Active-Duty Officers Law" #Military Ministers to be Active-Duty Officers Law(軍部大臣現役武官制)
+	name = "Restore of Active-Duty Officers Law" #Military Ministers to be Active-Duty Officers Law (軍部大臣現役武官制)
 	desc = "EVT_1400002008_DESC"
 	picture = "diplomatic_campaign"
 
@@ -8103,7 +8104,7 @@ event = {
 }
 
 event = {
-	id = 1400002047
+	id = 1400002046
 	random = no
 	country = JAP
 	style = 2
@@ -10704,7 +10705,7 @@ event = {
 		command = { trigger = { flag = KOR_Moderate } type = set_domestic which = freedom  value = 7 }
 		command = { trigger = { NOT = { flag = KOR_Moderate } } type = set_domestic which = freedom  value = 5 }
 		command = { trigger = { NOT = { flag = KOR_Moderate flag = KOR_Coalition } } type = headofstate which = 265001 } #Syngman Rhee #OTL, Governing Commission plan
-		command = { trigger = { NOT = { event = 1400006030 } NOT = { flag = KOR_Moderate } flag = USA_Korean_autonomy } type = headofgovernment which = 265035 } #Kim Gu #Governing Commission plan - with KPG
+		command = { trigger = { NOT = { event = 1400006009 } NOT = { flag = KOR_Moderate } flag = USA_Korean_autonomy } type = headofgovernment which = 265035 } #Kim Gu #Governing Commission plan - with KPG
 		command = { trigger = { NOT = { flag = KOR_Moderate } flag = USA_Korean_autonomy } type = foreignminister which = 265065 } #Cho So-ang
 		command = { trigger = { NOT = { flag = KOR_Moderate } } type = armamentminister which = 265102 } #Kim Do-yeon
 		command = { trigger = { NOT = { flag = KOR_Moderate } flag = USA_Korean_autonomy } type = ministerofsecurity which = 265149 } #Jang Taek-sang
@@ -10720,9 +10721,9 @@ event = {
 		command = { trigger = { NOT = { flag = KOR_Moderate flag = USA_Korean_autonomy } } type = chiefofair which = 265272 } #Kim Jeong-ryeol
 		command = { trigger = { flag = KOR_Moderate flag = KOR_Coalition } type = headofstate which = 265007 } #Yeo Un-hyeong #Coalition Committee
 		command = { trigger = { flag = KOR_Moderate NOT = { flag = KOR_Coalition } } type = headofstate which = 265010 } #Kim Gyu-sik #Moderate Administration 
-		command = { trigger = { NOT = { event = 1400006030 } flag = KOR_Moderate flag = KOR_Coalition } type = headofgovernment which = 265029 } #Kim Gyu-sik(Coalition Committee)
-		command = { trigger = { NOT = { event = 1400006030 } flag = KOR_Moderate NOT = { flag = KOR_Coalition } minister = 265343 owned = { province = 1221 data = KOR } } type = headofgovernment which = 265343 } #Cho Man-sik
-		command = { trigger = { NOT = { event = 1400006030 } flag = KOR_Moderate NOT = { flag = KOR_Coalition } OR = { NOT = { minister = 265343 } NOT = { owned = { province = 1221 data = KOR } } } } type = headofgovernment which = 265031 } #Ahn Jae-hong
+		command = { trigger = { NOT = { event = 1400006009 } flag = KOR_Moderate flag = KOR_Coalition } type = headofgovernment which = 265029 } #Kim Gyu-sik(Coalition Committee)
+		command = { trigger = { NOT = { event = 1400006009 } flag = KOR_Moderate NOT = { flag = KOR_Coalition } minister = 265343 owned = { province = 1221 data = KOR } } type = headofgovernment which = 265343 } #Cho Man-sik
+		command = { trigger = { NOT = { event = 1400006009 } flag = KOR_Moderate NOT = { flag = KOR_Coalition } OR = { NOT = { minister = 265343 } NOT = { owned = { province = 1221 data = KOR } } } } type = headofgovernment which = 265031 } #Ahn Jae-hong
 		command = { trigger = { flag = KOR_Moderate flag = KOR_Coalition } type = foreignminister which = 265322 } #Hwang Jin-nam
 		command = { trigger = { flag = KOR_Moderate NOT = { flag = KOR_Coalition } owned = { province = 1221 data = KOR } } type = foreignminister which = 265298 } 
 		command = { trigger = { flag = KOR_Moderate NOT = { flag = KOR_Coalition } NOT = { owned = { province = 1221 data = KOR } } } type = foreignminister which = 265056 } #Jeong Il-hyeong
@@ -10926,7 +10927,7 @@ event = {
 } 
 
 event = {
-	id = 1400006030
+	id = 1400006009
 	random = no
 	country = KOR
 	persistent = yes
@@ -12275,6 +12276,182 @@ event = {
 		command = { type = dissent value = 5 }
     }
 }
+
+event = {
+	id = 1400007532
+	random = no
+	country = JAP
+
+	decision = {
+		
+		NOT = {
+		event = 2012004
+		event = 2011017
+		}
+			OR = {
+			and = {
+			war = { country = JAP country = CHI }
+			}
+			and = {
+			puppet = { country = U64 country = JAP }
+			}
+		}
+	}
+			
+	decision_trigger = { 
+		control = { province = 1247 data = -1 }
+		control = { province = 1241 data = -1 }
+	}
+	
+	trigger = {
+		control = { province = 1247 data = -1 }
+		control = { province = 1241 data = -1 }
+		NOT = {
+		event = 2012004
+		event = 2011017
+		}
+			OR = {
+			and = {
+			war = { country = JAP country = CHI }
+			}
+			and = {
+			puppet = { country = U64 country = JAP }
+			}
+		}
+	}
+
+	name = "North China's collaborators"
+	desc = ""
+	style = 2
+	picture = "Japan_Occupation"
+
+	date = { day = 0 month = january year = 1931 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		ai_chance = 100
+		name = "We need to solidify our influence here" 
+		command = { type = trigger which = 1400007533 }
+		command = { type = secedeprovince which = UCS value = 1245 when = 2 } 
+		command = { type = secedeprovince which = UCS value = 1241 when = 2 } 
+		command = { type = secedeprovince which = UCS value = 1247 when = 2 } 
+		command = { trigger = { puppet = { country = U64 country = JAP } } type = inherit which = U64 } 
+		command = { trigger = { NOT = { exists = UCS } } type = independence which = UCS value = 1 when = 0 }
+		command = { trigger = { NOT = { exists = UCS } } type = make_puppet which = UCS } 
+		
+	}
+}
+
+event = {
+	id = 1400007533
+	random = no
+	country = UCS
+
+	name = "Establish of collaboration government"
+	desc = ""
+	style = 2
+	picture = "Japan_Occupation"
+
+	action = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = headofstate which = 1330000 }
+		command = { type = headofgovernment which = 1330001 }
+		command = { type = foreignminister which = 1330003 } 
+		command = { type = armamentminister which = 1330019 } 
+		command = { type = ministerofsecurity which = 1330004 } 
+		command = { type = ministerofintelligence which = 1330005 }
+		command = { type = chiefofstaff which = 1330006 }
+		command = { type = chiefofarmy which = 1330007 }
+		command = { type = chiefofair which = 1330018 }
+		command = { type = chiefofnavy which = 1330013 }
+	}
+}
+
+event = {
+	id = 1400007534
+	random = no
+	country = JAP
+
+	decision = {
+		event = 1400001258
+		war = { country = JAP country = CHI }
+		NOT = {
+		event = 2012004
+		event = 2011017
+		exists = U87
+		}
+			OR = {
+			
+			}
+	}
+			
+	decision_trigger = { 
+		event = 1400001258
+		control = { province = 1338 data = -1 }
+		control = { province = 1337 data = -1 }
+	}
+	
+	trigger = {
+		war = { country = JAP country = CHI }
+		event = 1400001258
+		control = { province = 1338 data = -1 }
+		control = { province = 1337 data = -1 }
+		NOT = {
+		event = 2012004
+		event = 2011017
+		exists = U87
+		}
+			OR = {
+			
+			}
+	}
+
+	name = "Collaboration with Wang Jingwei"
+	desc = ""
+	style = 2
+	picture = "ccip_wjw"
+
+	date = { day = 0 month = january year = 1931 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1964 }
+
+	action = {
+		ai_chance = 100
+		name = "Let's use him to create new government" 
+		command = { type = trigger which = 1400007535 }
+		command = { type = independence which = U87 value = 1 when = 0 }
+		command = { type = make_puppet which = U87 }
+		command = { type = secedeprovince which = U87 value = 1337 when = 2 } 
+		command = { type = secedeprovince which = U87 value = 1338 when = 2 } 
+	}
+}
+
+event = {
+	id = 1400007535
+	random = no
+	country = U87
+
+	name = "Establish of collaboration government"
+	desc = ""
+	style = 2
+	picture = "ccip_wjw"
+
+	action = {
+		name = "ACTION_NAME_OK"
+		command = { type = headofstate which = 1250001 }
+		command = { type = headofgovernment which = 1250002 }
+		command = { type = foreignminister which = 1250007 } 
+		command = { type = armamentminister which = 1250036 } 
+		command = { type = ministerofsecurity which = 1250014 } 
+		command = { type = ministerofintelligence which = 1250017 }
+		command = { type = chiefofstaff which = 1250024 }
+		command = { type = chiefofarmy which = 1250027 }
+		command = { type = chiefofair which = 1250033 }
+		command = { type = chiefofnavy which = 1250031 }
+	}
+}
+
 
 
 

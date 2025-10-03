@@ -8,7 +8,7 @@ header =
                }
   ENG        = { picture = "scenarios\data\propaganda_ENG_1940.bmp" }
   FRA        = { }
-  ITA        = { }
+  ITA        = { picture = "scenarios\data\propaganda_ITA_facist.bmp" }
   GER        = { picture = "scenarios\data\propaganda_GER_1940.bmp" }
   SOV        = { picture = "scenarios\data\propaganda_SOV_1936.bmp" }
   JAP        = { picture = "scenarios\data\propaganda_JAP_1940.bmp" }

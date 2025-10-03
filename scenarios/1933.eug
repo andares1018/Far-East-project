@@ -8,7 +8,7 @@ header =
          UPE      }
   ENG        = { }
   FRA        = { }
-  ITA        = { }
+  ITA        = { picture = "scenarios\data\propaganda_ITA_facist.bmp" }
   GER        = { picture = "scenarios\data\propaganda_GER_1933.bmp" flag_ext = _weimar }
   SOV        = { picture = "scenarios\data\propaganda_SOV_1936.bmp" }
   POL        = { }

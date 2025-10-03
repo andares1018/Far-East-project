@@ -7,7 +7,7 @@ header =
 		 NZL OMN PAN PAR POR PRU ROM SLO SOV SWE SAF SAL SAU SCH SER SIA SIK SPA TAN TIB TUR URU USA VEN YEM U01 U02 U03 
                }
   ENG        = { picture = "scenarios\data\propaganda_ENG_1942.bmp" }
-  ITA        = { }
+  ITA        = { picture = "scenarios\data\propaganda_ITA_facist.bmp" }
   GER        = { picture = "scenarios\data\propaganda_GER_1942.bmp" }
   SOV        = { picture = "scenarios\data\propaganda_SOV_1942.bmp" }
   JAP        = { picture = "scenarios\data\propaganda_jap_1942.bmp" }

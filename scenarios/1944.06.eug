@@ -10,7 +10,7 @@ header =
   GER        = { }
   SOV        = { picture = "scenarios\data\propaganda_SOV_1941.bmp" }
   JAP        = { }
-  CHI        = { }
+  CHI        = { picture = "scenarios\data\propaganda_CHI_1941.bmp" }
   RSI        = { }
   CAN        = { }
   USA        = { }
