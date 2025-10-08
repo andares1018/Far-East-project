@@ -8158,10 +8158,6 @@ event = {
 	desc = ""	
 	picture = "ekonomija"
 
-    date = { day = 0 month = january year = 1933 }
-    offset = 7
-    deathdate = { day = 29 month = december year = 1999 }
-
 	action = {
 	ai_chance = 100
 	name = ""
@@ -8182,10 +8178,6 @@ event = {
 	name = "Direction of the Wartime Economy"	
 	desc = ""	
 	picture = "ekonomija"
-
-    date = { day = 0 month = january year = 1933 }
-    offset = 7
-    deathdate = { day = 29 month = december year = 1999 }
 
 	action = {
 	ai_chance = 75
