@@ -345,9 +345,9 @@
 # 1400002040 JAP - Reorganising the National Economy - Post-war and Kodoha path #
 # 1400002041 JAP - General Election (1937) 
 # 1400002042 JAP - General Election (Wartime) - Yokusankai or New Party path 
-# 1400002043 JAP - Directing Industrial Policy #
-# 1400002044 JAP - Implementation of Economic Plan #
-# 1400002045 JAP - Wartime Policy and Economic Planning #
+# 1400002043 JAP - Directing Industrial Policy 
+# 1400002044 JAP - Implementation of Economic Plan 
+# 1400002045 JAP - Wartime Policy and Economic Planning 
 # 1400002046 JAP - The Great Drought (1939) 
 # 1400002047 JAP - The Nationalisation of Heavy Industry - Post-war and Kodoha path #
 # 1400002048 JAP - Fate of Zaibatsu - Post-war and Kodoha path #
@@ -687,10 +687,10 @@
 # 1400007529 MEN - Integration of local governments 
 # 1400007530 MEN - Securing Outer Mongolia - What if?
 # 1400007531 JAP - End of the Adventure in Manchuria
-# 1400007532 JAP - North China's collaborators #
-# 1400007533 UCS - Establish of collaboration government #
-# 1400007534 JAP - Collaboration with Wang Jingwei #
-# 1400007535 U87 - Establish of collaboration government #
+# 1400007532 JAP - North China's collaborators 
+# 1400007533 UCS - Establish of collaboration government 
+# 1400007534 JAP - Collaboration with Wang Jingwei 
+# 1400007535 U87 - Establish of collaboration government 
 # 1400007536 U87 - Constituent National Assembly #
 # 1400007537 U87 - Constitutional Discussion #
 # 1400007538 U87 - Fate of remnants of KMT #

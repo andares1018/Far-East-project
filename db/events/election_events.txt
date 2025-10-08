@@ -8400,7 +8400,7 @@ event = {
 		name = "ELECT_UK_1A"
 		command = { type = dissent value = -3 }
 		command = { type = set_domestic which = democratic value = 8 }
-		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
 		command = { type = headofstate which = 10001 } #George V
 		command = { type = headofgovernment which = 10002 } #Stanley Baldwin
 		command = { type = foreignminister which = 10003 } #Anthony Eden

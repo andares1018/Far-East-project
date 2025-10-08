@@ -174,6 +174,9 @@ event = {
 
 	trigger = {
 		  NOT = { ispuppet = CHI }
+		  exists = CHC 
+		  exists = JAP 
+		  exists = MAN 
 	}
 	date = { day = 20 month = November year = 1936 }
 	offset = 1
@@ -3045,7 +3048,7 @@ event = {
 	action_a = {
 		name = "ACTION_NAME_EXCELLENT"
 		command = { type = event which = 1400001014 where = CHC when = 7 } #War against Chiang?
-		command = { type = alliance which = U63  when = 1 }
+		command = { type = alliance which = U63 when = 1 }
 		command = { type = end_puppet }
 		command = { type = peace which = CHC value = 1 }
 		command = { type = peace which = U63  value = 1 }
@@ -8104,6 +8107,105 @@ event = {
 }
 
 event = {
+	id = 1400002043
+	random = no
+	country = JAP
+	style = 2
+
+	trigger = {
+	event = 1400002015
+	NOT = {
+		
+		}
+	}
+
+	name = "Directing Industrial Policy"	
+	desc = ""
+	picture = "ekonomija"
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 10
+    deathdate = { day = 29 month = december year = 1963 }
+
+		action = {
+		ai_chance = 25
+		name = "We need economic plan"
+		command = { type = money value = -100 }
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = event which = 1400002044 where = JAP when = 30 }
+	}
+		action = {
+		ai_chance = 75
+		name = "Policies for the wartime economy should be pursued"
+		trigger = { 
+		atwar = yes
+		}
+		command = { type = money value = -100 }
+		command = { type = dissent value =-1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = event which = 1400002045 where = JAP when = 30 }
+	}
+}
+
+event = {
+	id = 1400002044
+	random = no
+	country = JAP
+	style = 2
+
+	name = "Implementation of Economic Plan"	
+	desc = ""	
+	picture = "ekonomija"
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+	ai_chance = 100
+	name = ""
+	command = { type = money value = -250 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = local_setflag which = JAP_ECO_plan }
+	command = { type = construct which = ic where = 1550 value = 1 } 
+	command = { type = construct which = ic where = 1553 value = 1 }
+	}
+}
+
+event = {
+	id = 1400002045
+	random = no
+	country = JAP
+	style = 2
+
+	name = "Direction of the Wartime Economy"	
+	desc = ""	
+	picture = "ekonomija"
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+	ai_chance = 75
+	name = "Control for the Wartime system comes first"
+	command = { type = money value = -100 }
+	command = { type = domestic which = free_market value = -1 }
+	command = { type = dissent value = -1.5 }
+	command = { type = industrial_modifier which = total value = 2.5 }	
+	}
+	action = {
+	ai_chance = 25
+	name = "We need autonomous control"
+	command = { type = wartime_ic_mod value = 2.5 }
+	command = { type = money value = 100 }
+	command = { type = dissent value = -1 }
+	command = { type = domestic which = free_market value = 1 }
+	}
+}
+
+event = {
 	id = 1400002046
 	random = no
 	country = JAP
@@ -8116,12 +8218,13 @@ event = {
 	date = { day = 1 month = june year = 1939 }
 
 	action = {
-	name = "This is a dangerous problem"
+	name = "This is dangerous problem"
 	command = { type = dissent value = 5 }
 	command = { type = money value = -100 }
 	command = { type = supplies value = -1000 }
 	}
 }
+
 
 
 event = {
@@ -8358,6 +8461,7 @@ event = {
 	action = {
 		name = "relationship has now come to an end"
 		command = { type = relation which = USA value = -100 }
+		command = { type = dissent value = 2.5 }
 	}
 }
 
