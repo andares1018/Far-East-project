@@ -12395,13 +12395,13 @@ event = {
 	}
 			
 	decision_trigger = { 
-		control = { province = 1247 data = -1 }
-		control = { province = 1241 data = -1 }
+		control = { province = 1247 data = -3 }
+		control = { province = 1241 data = -3 }
 	}
 	
 	trigger = {
-		control = { province = 1247 data = -1 }
-		control = { province = 1241 data = -1 }
+		control = { province = 1247 data = -3 }
+		control = { province = 1241 data = -3 }
 		NOT = {
 		event = 2012004
 		event = 2011017
