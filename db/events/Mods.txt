@@ -12368,8 +12368,8 @@ event = {
     action_a = {
         name = "ACTION_NAME_DAMN"
         command = { type = clrflag which = JAP_ECO_MANCHURIA }
-		command = { type = money value = -100 }
-		command = { type = dissent value = 5 }
+		command = { type = money value = -500 }
+		command = { type = dissent value = 10 }
     }
 }
 
@@ -12484,15 +12484,15 @@ event = {
 			
 	decision_trigger = { 
 		event = 1400001258
-		control = { province = 1338 data = -1 }
-		control = { province = 1337 data = -1 }
+		control = { province = 1338 data = -3 }
+		control = { province = 1337 data = -3 }
 	}
 	
 	trigger = {
 		war = { country = JAP country = CHI }
 		event = 1400001258
-		control = { province = 1338 data = -1 }
-		control = { province = 1337 data = -1 }
+		control = { province = 1338 data = -3 }
+		control = { province = 1337 data = -3 }
 		NOT = {
 		event = 2012004
 		event = 2011017

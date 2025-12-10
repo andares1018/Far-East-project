@@ -552,7 +552,7 @@ garrison = {
 
 	# Borders with specific countries
 	country_priorities = {
-		#SOV = -1
+		SOV = 10
 		MON = -1
 		TIB = -1
 		NEP = -1
@@ -574,6 +574,11 @@ garrison = {
         U02 = -1
         U03 = -1
         BHU = -1
+		U63 = 10
+		U64 = 10
+		U65 = 10
+		U66 = 10
+		U67 = 10
 	}
 	province_priorities = {	1241 = 50 1328 = 50 1333 = 50 1334 = 50 1338 = 50 1358 = 50 1367 = 50 1369 = 50 1331 = -1 }
 	area_multiplier = {	}

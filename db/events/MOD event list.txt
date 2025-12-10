@@ -693,7 +693,7 @@
 # 1400007535 U87 - Establish of collaboration government 
 # 1400007536 U87 - Constituent National Assembly #
 # 1400007537 U87 - Constitutional Discussion #
-# 1400007538 U87 - Fate of remnants of KMT #
+# 1400007538 U87 - Fate of the KMT remnants #
 # 1400007539 
 # 
 # 

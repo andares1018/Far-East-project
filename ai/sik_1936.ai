@@ -482,7 +482,7 @@ garrison = {
 
 	# Borders with specific countries
 	country_priorities = {
-		SOV = -1
+		SOV = 10
 		MON = -1
 		TIB = -1
 		NEP = -1
@@ -494,10 +494,11 @@ garrison = {
 		CHC = 100
 		MAN = 70
 		CSX = 10
-		CXB = 10
+		CXB = 100
 		CYN = 10
 		CGX = 10
-		CHI = 10
+		CHI = 100
+		UPS = 100
 	}
 	province_priorities = {	}
 	area_multiplier = { }
