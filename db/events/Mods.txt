@@ -12432,6 +12432,9 @@ event = {
 		command = { type = secedeprovince which = UCS value = 1245 when = 2 } 
 		command = { type = secedeprovince which = UCS value = 1241 when = 2 } 
 		command = { type = secedeprovince which = UCS value = 1247 when = 2 } 
+		command = { trigger = { exists = MAN } type = secedeprovince which = MAN value = 1236 when = 2 } 
+		command = { trigger = { exists = MAN } type = secedeprovince which = MAN value = 1235 when = 2 } 
+		command = { trigger = { exists = MAN } type = secedeprovince which = MAN value = 1216 when = 2 } 
 		command = { trigger = { puppet = { country = U64 country = JAP } } type = inherit which = U64 } 
 		command = { trigger = { NOT = { exists = UCS } } type = independence which = UCS value = 1 when = 0 }
 		command = { trigger = { NOT = { exists = UCS } } type = make_puppet which = UCS } 
@@ -12470,27 +12473,55 @@ event = {
 	country = JAP
 
 	decision = {
-		event = 1400001258
-		war = { country = JAP country = CHI }
+			OR = {
+			and = { event = 1400001258
+			war = { country = JAP country = CHI }
+			}
+			and = {
+			NOT = { exists = CHI }
+			OR = { 
+			event = 1400001258
+			NOT = { event = 1400001258 }
+					}
+				}
+			}
 		NOT = {
 		event = 2012004
 		event = 2011017
 		exists = U87
 		}
-			OR = {
-			
-			}
 	}
 			
 	decision_trigger = { 
-		event = 1400001258
+			OR = {
+			and = { event = 1400001258
+			war = { country = JAP country = CHI }
+			}
+			and = {
+			NOT = { exists = CHI }
+			OR = { 
+			event = 1400001258
+			NOT = { event = 1400001258 }
+					}
+				}
+			}
 		control = { province = 1338 data = -3 }
 		control = { province = 1337 data = -3 }
 	}
 	
 	trigger = {
-		war = { country = JAP country = CHI }
-		event = 1400001258
+			OR = {
+			and = { event = 1400001258
+			war = { country = JAP country = CHI }
+			}
+			and = {
+			NOT = { exists = CHI }
+			OR = { 
+			event = 1400001258
+			NOT = { event = 1400001258 }
+					}
+				}
+			}
 		control = { province = 1338 data = -3 }
 		control = { province = 1337 data = -3 }
 		NOT = {
@@ -12498,9 +12529,6 @@ event = {
 		event = 2011017
 		exists = U87
 		}
-			OR = {
-			
-			}
 	}
 
 	name = "Collaboration with Wang Jingwei"
