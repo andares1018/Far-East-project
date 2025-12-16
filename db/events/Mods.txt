@@ -3947,6 +3947,7 @@ event = {
 		command = { trigger = { control = { province = 1297 data = U66 }  } type = capital which = 1297 }
 		command = { trigger = { NOT = { control = { province = 1297 data = U66 } } } type = capital which = 1298 }
 		command = { type = secedeprovince which = CHI value = 1299 when = 1 }
+		command = { type = secedeprovince which = CHI value = 1301 when = 1 }
 		command = { type = trigger which = 1400001260 }
 	}
 }
@@ -11148,6 +11149,47 @@ event = {
 		command = { type = secedeprovince which = TIB value = 1289 when = 2 } 
 		command = { type = secedeprovince which = TIB value = 1290 when = 2 } 
 		command = { type = secedeprovince which = TIB value = 1295 when = 2 } 
+	}
+}
+
+event = {
+	id = 1400007003 
+	random = no
+	country = U02
+	
+	date = { day = 23 month = february year = 1944 }
+	offset = 1
+	deathdate = { day = 25 month = february year = 1944 }
+	
+	name = "Application of McMahon Line" 
+	desc = ""
+	style = 2
+	picture = "tibet"
+	action = {
+		name = "ACTION_NAME_OK"
+		ai_chance = 100
+		command = { type = money value = -10 }
+		command = { type = trigger which = 1400007004 }
+		command = { type = set_relation which = CHI value = -25 }
+		command = { type = set_relation which = CHC value = -25 }
+	}
+}
+
+event = {
+	id = 1400007004
+	random = no
+	country = TIB
+
+	name = "Application of McMahon Line"
+	desc = ""
+	style = 2
+	picture = "tibet"
+
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = secedeprovince which = U02 value = 1455 when = 2 } 
+		command = { type = secedeprovince which = U02 value = 1458 when = 2 } 
 	}
 }
 

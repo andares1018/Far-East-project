@@ -623,8 +623,8 @@
 ### 1400007001 - 1400007100 : Tibet
 # 1400007001 CHI - Tibet's Autonomous Demands 
 # 1400007002 TIB - Autonomy of Tibet 
-# 1400007003 
-# 1400007004 
+# 1400007003 U02 - Application of McMahon Line (1944) 
+# 1400007004 TIB - Application of McMahon Line (1944) 
 # 1400007005 
 
 ### 1400007101 - 1400007250 : Mongolia
