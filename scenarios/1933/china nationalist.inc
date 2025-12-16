@@ -363,7 +363,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 107 }
     name     = "New 1st Corps"
-    location = 1337
+    location = 1264
     division = {
       id             = { type = 22000 id = 108 }
       name           = "50th Division"
@@ -472,7 +472,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 119 }
     name     = "18th Corps"
-    location = 1337
+    location = 1348
     division = {
       id             = { type = 22000 id = 120 }
       name           = "11th Division"
@@ -508,7 +508,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 123 }
     name     = "5th Corps"
-    location = 1337
+    location = 1305
     division = {
       id             = { type = 22000 id = 124 }
       name           = "45th Division"
@@ -533,7 +533,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 127 }
     name     = "2nd Corps"
-    location = 1337
+    location = 1360
     division = {
       id             = { type = 22000 id = 128 }
       name           = "76th Division"
@@ -558,7 +558,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 130 }
     name     = "13th Corps"
-    location = 1337
+    location = 1312
     division = {
       id             = { type = 22000 id = 131 }
       name           = "54th Division"
@@ -584,7 +584,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 133 }
     name     = "26th Corps"
-    location = 1337
+    location = 1314
     division = {
       id             = { type = 22000 id = 134 }
       name           = "41st Division"
@@ -609,7 +609,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 136 }
     name     = "8th Corps"
-    location = 1337
+    location = 1353
     division = {
       id             = { type = 22000 id = 137 }
       name           = "1st Honor Division"
@@ -630,7 +630,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 139 }
     name     = "53rd Corps"
-    location = 1337
+    location = 1247
     division = {
       id             = { type = 22000 id = 140 }
       name           = "2nd Honor Division"
@@ -752,7 +752,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 153 }
     name     = "20th Corps"
-    location = 1337
+    location = 1297
     division = {
       id             = { type = 22000 id = 154 }
       name           = "133rd Division"
@@ -772,7 +772,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 156 }
     name     = "28th Corps"
-    location = 1337
+    location = 1307
     division = {
       id             = { type = 22000 id = 157 }
       name           = "52nd Division"
@@ -803,7 +803,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 160 }
     name     = "46th Corps"
-    location = 1337
+    location = 1307
     division = {
       id             = { type = 22000 id = 161 }
       name           = "175th Division"
@@ -829,7 +829,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 164 }
     name     = "52nd Corps"
-    location = 1337
+    location = 1258
     division = {
       id             = { type = 22000 id = 165 }
       name           = "195th Division"
@@ -841,7 +841,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 166 }
     name     = "62nd Corps"
-    location = 1337
+    location = 1369
     division = {
       id             = { type = 22000 id = 167 }
       name           = "95th Division"
@@ -867,7 +867,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 170 }
     name     = "64th Corps"
-    location = 1337
+    location = 1369
     division = {
       id             = { type = 22000 id = 171 }
       name           = "156th Division"
@@ -969,7 +969,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 184 }
     name     = "10th Corps"
-    location = 1337
+    location = 1317
     division = {
       id             = { type = 22000 id = 185 }
       name           = "190th Division"
@@ -988,7 +988,7 @@ country = {
   landunit = {
     id       = { type = 22000 id = 187 }
     name     = "35th Corps"
-    location = 1337
+    location = 1238
     division = {
       id             = { type = 22000 id = 188 }
       name           = "New 32nd Division"
@@ -1223,8 +1223,8 @@ country = {
   airunit = { 
     id       = { type = 22000 id = 196 }
     name     = "RoC Airforce"
-    location = 1358
-    base     = 1358
+    location = 1337
+    base     = 1337
     division = {
       id             = { type = 22000 id = 197 }
       name           = "1st 2nd 9th 10th Squadrons"

@@ -26,10 +26,10 @@
    defense_lobby     	= 2 
    interventionism  	= 1 
     } 
- nationalprovinces   = {  1294 1286 1287 1288 1289 1295 1290 1278 1285 } 
-   ownedprovinces         = { 1286 1287 1288 1289 1290 1294 1295  } 
-   controlledprovinces    = { 1286 1287 1288 1289 1290 1294 1295  } 
- claimedprovinces = { 1455 1458 1283 1284 1292 1293 1262}
+ nationalprovinces   = {  1294 1286 1287 1288 1289 1295 1290 1278 1285 1455 1458  } 
+   ownedprovinces         = { 1286 1287 1288 1289 1290 1294 1295 1455 1458  } 
+   controlledprovinces    = { 1286 1287 1288 1289 1290 1294 1295 1455 1458  } 
+ claimedprovinces = { 1283 1284 1292 1293 1262 }
 # Tibet
    techapps = { 
 	
@@ -89,7 +89,7 @@ inventions = { 3000027 }
    # GW Cavalry 
    landunit = 
    {  location = 1295 
-     name     = "Xi'zang Jüntuan 1" 
+     name     = "Xi'zang J ntuan 1" 
      id       = {  type = 10700 id = 1  } 
      Division = 
      {  id    = {  type = 10700 id = 2  } 
@@ -101,14 +101,14 @@ inventions = { 3000027 }
       } 
      Division = 
      {  id   = {  type = 10700 id = 3  } 
-       name = "10 Xi'zang Lü" 
+       name = "10 Xi'zang L " 
        type = militia 
 	   strength = 20
 	   model    = 3
       } 
      Division = 
      {  id   = {  type = 10700 id = 4  } 
-       name = "17 Xi'zang Lü" 
+       name = "17 Xi'zang L " 
        type = militia 
 	   strength = 20
 	   model    = 3
