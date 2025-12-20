@@ -813,7 +813,7 @@ CATEGORY_MARKET_LIBERAL;Classical liberal;Libйral;Liberoscambista;Ultraliberal;M
 CATEGORY_SOCIAL_LIBERAL;Social liberal;Social-libйral;Social-liberale;Social liberal;Sozialliberal;Liberalizm socjalny;;Социал-либералы;;;X
 CATEGORY_SOCIAL_DEMOCRAT;Social Democrat;Social-dйmocrate;Socialdemocratico;Socialdemуcrata;Sozialdemokrat;Socjaldemokracja;;Социал-демократы;;;X
 CATEGORY_LEFT_WING_RADICAL;Left-Wing Radical;Marxiste;Radicale di sinistra;Izquierda radical;Linksradikal;Radykalna lewica;;Левые радикалы;;;X
-CATEGORY_LENINIST;Marxism-Leninism;Lйninien;Leninista;Leninista;Leninist;Leninizm;;Ленинисты;;;X
+CATEGORY_LENINIST;Leninist;Lйninien;Leninista;Leninista;Leninist;Leninizm;;Ленинисты;;;X
 CATEGORY_STALINIST;Stalinist;Stalinien;Stalinista;Estalinista;Stalinist;Stalinizm;;Сталинисты;;;X
 ##;;;;;;;;;;;X
 BATTLE_ATTACKMOD;Attack effectiveness %.f percent.\n;Efficacitй en attaque: %.f pour cent.\n;Efficacia dell'attacco %.f per cento.\n;Eficacia ataque: %.f por ciento.\n;Angriffseffizienz %.f Prozent.\n;Efektywnoњж ataku %.f procent.\n;;Эффективность атаки: %.f процентов.\n;;;X

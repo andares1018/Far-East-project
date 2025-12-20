@@ -1,10 +1,10 @@
 FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-5001;Head of State;Albert Lebrun;1932;1964;1999;SL;Barking Buffoon;High;3871;X
+5001;Head of State;Albert Lebrun;1932;1964;1999;ML;Barking Buffoon;High;3871;X
 5002;Head of Government;Albert Sarraut;1933;1964;1999;SL;Happy Amateur;High;5900;X
 5003;Foreign Minister;Pierre-Étienne Flandin;1933;1964;1999;SL;Ideological Crusader;Low;M2003;X
 5004;Minister of Armament;Vincent Auriol;1933;1964;1999;SL;Supporter of Devaluation;High;5901;X
-5005;Minister of Security;Marx Dormoy;1933;1942;1999;SL;Opposer of the far right;Medium;M2005;X
+5005;Minister of Security;Marx Dormoy;1933;1942;1999;SL;Opposer of the Far Right;Medium;M2005;X
 5006;Head of Military Intelligence;Joseph Paganon;1933;1964;1999;SL;Political Specialist;Medium;M2006;X
 5007;Chief of Staff;Maurice Gamelin;1935;1964;1999;SL;Fortifications Supporter;Very High;5902;X
 5008;Chief of Army;Maurice Gamelin;1935;1964;1999;SL;Static Defense Supporter;Very High;5902;X
@@ -33,7 +33,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5031;Foreign Minister;Joseph Paul Boncour;1932;1964;1999;SD;Ideological Crusader;Medium;M2049;X
 5032;Foreign Minister;Pierre Comert;1941;1964;1999;SD;The Cloak N Dagger Schemer;Medium;M2050;X
 5033;Foreign Minister;Léon Blum;1947;1964;1999;SD;Apologetic Clerk;Very High;M2033;X
-5034;Foreign Minister;Yvon Delbos;1933;1964;1999;SL;Supporter of friendly relations;Medium;M2048;X
+5034;Foreign Minister;Yvon Delbos;1933;1964;1999;SL;Supporter of Friendly Relations;Medium;M2048;X
 5035;Foreign Minister;Georges Bonnet;1938;1964;1999;SL;Iron Fisted Brute;Medium;M2053;X
 5036;Foreign Minister;Edouard Daladier;1939;1964;1999;SD;Great Compromiser;High;2563;X
 5037;Foreign Minister;Paul Reynaud;1940;1964;1999;SL;Ideological Crusader;Undying;M2038;X
@@ -48,39 +48,39 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5046;Foreign Minister;Laurent Casenove;1932;1964;1999;ST;Great Compromiser;Medium;M2064;X
 5047;Foreign Minister;Jacques Duclos;1947;1964;1999;ST;Ideological Crusader;Very High;M2012;X
 5048;Foreign Minister;Maurice Bourges-Maunoury;1938;1964;1999;PA;General Staffer;High;M2066;X
-5049;Minister of Armament;Edouard Daladier;1932;1964;1999;SD;laissez-faire capitalist;Low;2563;X
+5049;Minister of Armament;Edouard Daladier;1932;1964;1999;SD;Laissez-Faire Capitalist;Low;2563;X
 5050;Minister of Armament;Louis Barthou;1934;1935;1999;SD;Military Entrepreneur;Medium;M2069;X
 5051;Minister of Armament;Leon Jouhaux;1941;1964;1999;SD;Strategic Air Proponent;Medium;M2070;X
-5052;Minister of Armament;Guy Mollet;1946;1964;1999;SD;Keynesian economy;Medium;M2071;X
+5052;Minister of Armament;Guy Mollet;1946;1964;1999;SD;Keynesian Economy;Medium;M2071;X
 5053;Minister of Armament;André Le Troquer;1947;1964;1999;SD;Resource Industrialist;Medium;M2072;X
 5054;Minister of Armament;Raoul Dautry;1932;1964;1999;SL;Theoretical Scientist;High;M2073;X
-5055;Minister of Armament;Louis Loucheur;1924;1964;1999;SL;Construction magnate;Medium;M2074;X
-5056;Minister of Armament;Albert Sarraut;1928;1964;1999;SL;Balanced budget economy;Low;5900;X
+5055;Minister of Armament;Louis Loucheur;1924;1964;1999;SL;Construction Magnate;Medium;M2074;X
+5056;Minister of Armament;Albert Sarraut;1928;1964;1999;SL;Balanced Budget Economy;Low;5900;X
 5057;Minister of Armament;Marcel Hoden;1939;1964;1999;SL;Air Superiority Proponent;Medium;M2076;X
 5058;Minister of Armament;Charles de Gaulle;1940;1964;1999;SC;Tank Proponent;High;2562;X
-5059;Minister of Armament;Georges Bonnet;1933;1964;1999;SL;Opposer to military spending;Medium;M2053;X
+5059;Minister of Armament;Georges Bonnet;1933;1964;1999;SL;Opposer to Military Spending;Medium;M2053;X
 5060;Minister of Armament;Jean Fabry;1933;1964;1999;SC;Resource Industrialist;Medium;M2079;X
 5061;Minister of Armament;Joseph Louis Avenol;1937;1964;1999;SC;Battle Fleet Proponent;Medium;M2080;X
 5062;Minister of Armament;Marie Émile Fayolle;1914;1928;1999;SC;Reformer;Medium;M2081;X
-5063;Minister of Armament;Edouard Herriot;1939;1964;1999;ML;laissez-faire capitalist;Medium;M2042;X
+5063;Minister of Armament;Edouard Herriot;1939;1964;1999;ML;Laissez-Faire Capitalist;Medium;M2042;X
 5064;Minister of Armament;Paul Marchandeau;1941;1964;1999;SC;Administrative Genius;Medium;M2083;X
 5065;Minister of Armament;André Marie;1941;1964;1999;ML;Air Superiority Proponent;Medium;M2041;X
 5066;Minister of Armament;Antoine Henri Queuille;1942;1964;1999;SC;Air to Ground Proponent;High;M2043;X
 5067;Minister of Armament;Louis Armand;1944;1964;1999;SC;Tank Proponent;Medium;M2086;X
 5068;Minister of Armament;Jules Romains;1947;1964;1999;SC;Submarine Proponent;Medium;M2087;X
 5069;Minister of Armament;Robert Schumann;1940;1964;1999;ML;Administrative Genius;Medium;M2088;X
-5070;Minister of Armament;Edmond Michelet;1944;1964;1999;SC;laissez-faire capitalist;Medium;M2089;X
+5070;Minister of Armament;Edmond Michelet;1944;1964;1999;SC;Laissez-Faire Capitalist;Medium;M2089;X
 5071;Minister of Armament;René Pleven;1945;1964;1999;ML;Resource Industrialist;High;M2090;X
 5072;Minister of Armament;George Lévy;1933;1964;1999;ST;Administrative Genius;Medium;M2014;X
 5073;Minister of Armament;Laurent Casenove;1938;1964;1999;ST;Theoretical Scientist;Medium;M2064;X
-5074;Minister of Armament;Jean Jerome;1940;1964;1999;ST;laissez-faire capitalist;Medium;M2093;X
+5074;Minister of Armament;Jean Jerome;1940;1964;1999;ST;Laissez-Faire Capitalist;Medium;M2093;X
 5075;Minister of Armament;Benoit Frachon;1942;1964;1999;ST;Battle Fleet Proponent;Medium;M2094;X
 5076;Minister of Armament;Auguste Lecoeur;1944;1964;1999;ST;Military Entrepreneur;Medium;M2095;X
 5077;Minister of Armament;Daniel Renoult;1947;1964;1999;ST;Theoretical Scientist;Medium;M2096;X
 5078;Minister of Armament;Jacques de Guillebon;1938;1964;1999;PA;Resource Industrialist;Medium;M2097;X
 5079;Minister of Security;Pierre Auguste Chardigny;1933;1964;1999;SD;Prince of Terror;Low;M2098;X
 5080;Minister of Security;Julien Luchaire;1937;1964;1999;SD;Efficient Sociopath;Medium;M2099;X
-5081;Minister of Security;Adrien Tixier;1932;1964;1999;SD;Health and safety;Very High;M2100;X
+5081;Minister of Security;Adrien Tixier;1932;1964;1999;SD;Health and Safety;Very High;M2100;X
 5082;Minister of Security;Henri Bonnet;1938;1964;1999;SD;Back Stabber;Medium;M2101;X
 5083;Minister of Security;Paul Ramadier;1941;1964;1999;SD;Crime Fighter;High;M2035;X
 5084;Minister of Security;Albert Lebrun;1946;1964;1999;SD;Silent Lawyer;Medium;3871;X
@@ -173,7 +173,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5171;Head of Government;René Mayer;1953;1964;1999;SL;Naive Optimist;High;M2221;X
 5172;Head of Government;Joseph Laniel;1953;1964;1999;SC;Flamboyant Tough Guy;High;M2222;X
 5173;Foreign Minister;Robert Schumann;1948;1964;1999;ML;Biased Intellectual;High;M2088;X
-5174;Minister of Armament;Pierre-Henri Teitgen;1947;1964;1999;ML;laissez-faire capitalist;Medium;M2224;X
+5174;Minister of Armament;Pierre-Henri Teitgen;1947;1964;1999;ML;Laissez-Faire Capitalist;Medium;M2224;X
 5175;Minister of Armament;René Mayer;1948;1964;1999;SL;Tank Proponent;Medium;M2221;X
 5176;Minister of Armament;Paul Ramadier;1948;1964;1999;SL;Resource Industrialist;Medium;M2035;X
 5177;Minister of Armament;Jules Moch;1950;1964;1999;SD;Battle Fleet Proponent;Medium;M2104;X
@@ -189,7 +189,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5187;Head of State;Vincent Auriol;1947;1964;1999;SC;Autocratic Charmer;Medium;5901;X
 5189;Head of Government;François Darlan;1933;1943;1967;PA;Old Admiral;High;M57002;X
 5190;Foreign Minister;Paul Baudouin;1924;1964;1999;PA;Iron Fisted Brute;Medium;M57003;X
-5191;Minister of Armament;Marius Berliet;1933;1964;1999;PA;laissez-faire capitalist;Medium;M57004;X
+5191;Minister of Armament;Marius Berliet;1933;1964;1999;PA;Laissez-Faire Capitalist;Medium;M57004;X
 5192;Minister of Security;Joseph Barthélemy;1924;1964;1999;PA;Silent Lawyer;Medium;M57005;X
 5193;Head of Military Intelligence;Rene Bousquet;1924;1964;1999;PA;Technical Specialist;Medium;M57006;X
 5194;Chief of Staff;Charles Huntziger;1924;1964;1999;PA;School of Defence;Medium;M57007;X
@@ -204,7 +204,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5204;Foreign Minister;Arne Leroy;1943;1964;1999;PA;Great Compromiser;Medium;M57018;X
 5205;Minister of Armament;Tulio Franco Franco;1941;1964;1999;PA;Resource Industrialist;Medium;M57019;X
 5206;Minister of Armament;Lucien Lacaze;1941;1964;1999;PA;Military Entrepreneur;Medium;M57020;X
-5207;Minister of Armament;Robert Haas;1942;1964;1999;PA;laissez-faire capitalist;Medium;M57021;X
+5207;Minister of Armament;Robert Haas;1942;1964;1999;PA;Laissez-Faire Capitalist;Medium;M57021;X
 5208;Minister of Armament;Stephane Auphan;1942;1964;1999;PA;Air to Sea Proponent;Medium;M57022;X
 5209;Minister of Armament;Paul Painleve;1943;1964;1999;PA;Administrative Genius;Medium;M57023;X
 5210;Minister of Armament;Paul Mantoux;1943;1964;1999;PA;Theoretical Scientist;Medium;M57024;X
@@ -234,9 +234,9 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5234;Chief of Army;Ferdinand Foch;1914;1929;1999;FA;Guns and Butter Doctrine;Very High;2569;X
 5235;Chief of Army;Joseph Joffre;1914;1920;1999;ML;Decisive Battle Doctrine;Very High;2570;X
 5236;Chief of Army;Maurice Sarrail;1914;1929;1999;LWR;Decisive Battle Doctrine;Low;2571;X
-5237;Chief of Army;Philippe Pétain;1916;1936;1999;PA;static defence doctrine;Very High;2572;X
+5237;Chief of Army;Philippe Pétain;1916;1936;1999;PA;Static Defence Doctrine;Very High;2572;X
 5238;Chief of Army;Robert Nivelle;1916;1936;1999;ML;Decisive Battle Doctrine;Very High;2573;X
-5239;Chief of Army;Philippe Pétain;1917;1936;1999;ML;static defence doctrine;Medium;2572;X
+5239;Chief of Army;Philippe Pétain;1917;1936;1999;ML;Static Defence Doctrine;Medium;2572;X
 5240;Chief of Army;Ferdinand Foch;1918;1929;1999;ML;Guns and Butter Doctrine;Very High;2569;X
 5241;Chief of Navy;Joseph Barnouin;1914;1936;1999;FA;Decisive Naval Battle Doctrine;High;M57040;X
 5242;Chief of Navy;Jules Habert;1914;1936;1999;ML;Open Seas Doctrine;High;M57039;X
@@ -251,22 +251,22 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5251;Chief of Staff;Maurice Sarrail;1914;1929;1999;LWR;School of Fire Support;Low;2571;X
 5252;Chief of Staff;Noël de Castelnau;1914;1936;1999;ML;School of Psychology;Very High;2576;X
 5253;Chief of Staff;Jean Graziani;1915;1936;1999;ML;School of Fire Support;Very High;3781;X
-5254;Chief of Staff;Philippe Pétain;1916;1936;1999;PA;school of defence;Very High;2572;X
-5255;Chief of Staff;Pierre Duport;1916;1936;1999;ML;school of manoeuvre;Very High;2577;X
+5254;Chief of Staff;Philippe Pétain;1916;1936;1999;PA;School of Defence;Very High;2572;X
+5255;Chief of Staff;Pierre Duport;1916;1936;1999;ML;School of Manoeuvre;Very High;2577;X
 5256;Chief of Staff;Ferdinand Foch;1917;1929;1999;ML;Counterattack Genius;Very High;2569;X
 5257;Chief of Staff;François Anthoine;1917;1936;1999;ML;School of Mass Combat;Very High;2578;X
-5258;Chief of Staff;Philippe Pétain;1917;1936;1999;ML;school of defence;Medium;2572;X
+5258;Chief of Staff;Philippe Pétain;1917;1936;1999;ML;School of Defence;Medium;2572;X
 5259;Chief of Staff;Henri Alby;1918;1936;1999;ML;School of Fire Support;Very High;7390;X
-5260;Chief of Staff;Edmond Buat;1920;1923;1999;ML;school of manoeuvre;Very High;2579;X
+5260;Chief of Staff;Edmond Buat;1920;1923;1999;ML;School of Manoeuvre;Very High;2579;X
 5261;Chief of Staff;Marie-Eugene Debeney;1924;1936;1999;ML;School of Mass Combat;Very High;2580;X
 5262;Foreign Minister;Charles Jonnart;1914;1936;1999;SL;Ideological Crusader;Very High;2581;X
-5263;Foreign Minister;Gabriel Hanotaux;1914;1936;1999;ML;iron fisted brute;High;2582;X
+5263;Foreign Minister;Gabriel Hanotaux;1914;1936;1999;ML;Iron Fisted Brute;High;2582;X
 5264;Foreign Minister;Gaston Doumergue;1913;1936;1999;SD;Great Compromiser;High;2583;X
 5265;Foreign Minister;Jean Cruppi;1914;1936;1999;LWR;Great Compromiser;Very High;2584;X
 5266;Foreign Minister;Justin de Selves;1914;1936;1999;LWR;Apologetic Clerk;Very High;2585;X
 5267;Foreign Minister;Léon Bourgeois;1895;1925;1999;SL;Biased Intellectual;High;2586;X
 5268;Foreign Minister;Louis Franchet d'Esperey;1914;1936;1999;FA;General Staffer;High;2587;X
-5269;Foreign Minister;Louis-Oscar Frossard;1914;1936;1999;ST;iron fisted brute;Very High;M57041;X
+5269;Foreign Minister;Louis-Oscar Frossard;1914;1936;1999;ST;Iron Fisted Brute;Very High;M57041;X
 5270;Foreign Minister;Raymond Poincaré;1914;1936;1999;SL;Ideological Crusader;Very High;2588;X
 5271;Foreign Minister;René Viviani;1914;1936;1999;SD;Great Compromiser;Very High;2589;X
 5272;Foreign Minister;Stéphen Pichon;1914;1936;1999;SL;Ideological Crusader;Very High;2590;X
@@ -275,7 +275,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5275;Foreign Minister;Philippe Pétain;1916;1936;1999;PA;General Staffer;High;2572;X
 5276;Foreign Minister;Alexandre Ribot;1917;1936;1999;ML;Biased Intellectual;Very High;2593;X
 5277;Foreign Minister;Louis Barthou;1917;1935;1999;SL;Ideological Crusader;Very High;2594;X
-5278;Foreign Minister;Alexandre Millerand;1917;1936;1999;SD;iron fisted brute;Very High;2595;X
+5278;Foreign Minister;Alexandre Millerand;1917;1936;1999;SD;Iron Fisted Brute;Very High;2595;X
 5279;Foreign Minister;Georges Leygues;1920;1936;1999;SD;Great Compromiser;Very High;2596;X
 5280;Foreign Minister;Edmond Lefebvre du Prey;1924;1936;1999;SL;Apologetic Clerk;Very High;2597;X
 5281;Foreign Minister;Édouard Herriot;1924;1936;1999;SL;Great Compromiser;Very High;2598;X
@@ -321,7 +321,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5321;Minister of Armament;Joseph Caillaux;1914;1936;1999;LWR;Resource Industrialist;High;2601;X
 5322;Minister of Armament;Joseph Noulens;1914;1936;1999;SD;Resource Industrialist;Very High;3782;X
 5323;Minister of Armament;Louis-Lucien Klotz;1914;1936;1999;LWR;Corrupt Kleptocrat;Very High;2616;X
-5324;Minister of Armament;Marcel Cachin;1914;1936;1999;ST;Planned economy proponent;Very High;2602;X
+5324;Minister of Armament;Marcel Cachin;1914;1936;1999;ST;Planned Economy Proponent;Very High;2602;X
 5325;Minister of Armament;Paul Peytral;1914;1936;1999;SL;Laissez-Faire Capitalist;Very High;2617;X
 5326;Minister of Armament;Raymond Poincaré;1914;1936;1999;ML;Laissez-Faire Capitalist;Very High;2588;X
 5327;Minister of Armament;René Renoult;1914;1936;1999;SD;Resource Industrialist;Very High;2618;X
@@ -337,7 +337,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5337;Minister of Security;Charles Mangin;1914;1936;1999;PA;Efficient Sociopath;High;2625;X
 5338;Minister of Security;Ernest Monis;1914;1936;1999;LWR;Silent Lawyer;Very High;2599;X
 5339;Minister of Security;Eugène Étienne;1914;1936;1999;LWR;Silent Lawyer;Very High;2626;X
-5340;Minister of Armament;Georges Clemenceau;1914;1936;1999;SL;military entrepreneur;Very High;2600;X
+5340;Minister of Armament;Georges Clemenceau;1914;1936;1999;SL;Military Entrepreneur;Very High;2600;X
 5341;Minister of Security;Jean Jaurès;1914;1915;1999;SD;Man of the People;Medium;2627;X
 5342;Minister of Security;Louis Barthou;1914;1935;1999;SL;Silent Lawyer;Very High;2594;X
 5343;Minister of Security;Louis Malvy;1914;1936;1999;LWR;Silent Lawyer;Very High;2621;X
@@ -352,33 +352,33 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5352;Minister of Security;Camille Chautemps;1924;1936;1999;SL;Man of the People;Very High;2630;X
 5353;Minister of Security;Justin de Selves;1924;1936;1999;SL;Crime Fighter;Very High;2585;X
 5354;Head of Military Intelligence;Charles Joseph Dupont;1913;1936;1999;SL;Technical Specialist;High;2631;X
-5355;Minister of Security;Xavier Vallat;1937;1964;1999;NS;Back Stabber;Low;6082;x
-5356;Chief of Staff;Xavier Vallat;1941;1964;1999;NS;School of Defence;Low;6082;x
-5357;Foreign Minister;Jean Fontenoy;1939;1964;1999;FA;Ideological Crusader;Medium;6109;x
-5358;Foreign Minister;Charles Maurras;1930;1964;1999;FA;Biased Intellectual;Very High;6110;x
-5359;Minister of Security;Jean Fontenoy;1942;1964;1999;FA;Man of the People;Medium;6109;x 
-5360;Minister of Security;Jean-Marie Le Pen;1956;1964;1999;FA;Prince of Terror;High;6111;x
-5361;Minister of Security;René Binet;1945;1964;1999;FA;Prince of Terror;Medium;6112;x
-5362;Chief of Staff;René Binet;1946;1964;1999;FA;School of Psychology;Medium;6112;x
-5363;Chief of Staff;Eugène Deloncle;1933;1964;1999;FA;School of Fire Support;Medium;6113;x
-5364;Foreign Minister;Eugène Deloncle;1939;1964;1999;FA;General Staffer;Medium;6113;x
-5365;Minister of Armament;Renault Louis;1940;1964;1999;PA;Steel magnate;Medium;8531;x
-5366;Foreign Minister;Robert Brasillach;1940;1964;1999;NS;Biased Intellectual;High;6015;x
-5367;Foreign Minister;Lucien Rebatet;1942;1964;1999;NS;The Cloak N Dagger Schemer;Medium;5785;x
-5368;Foreign Minister;Maurice Pujo;1930;1964;1999;FA;The Cloak N Dagger Schemer;Medium;6017;x
-5369;Minister of Security;Thierry Maulnier;1940;1964;1999;FA;Prince of Terror;Medium;6018;x
-5370;Chief of Army;André Bayle;1950;1964;1999;SC;Elastic Defence Doctrine;High;6019;x
-5371;Chief of Army;André Bayle;1950;1964;1999;PA;Elastic Defence Doctrine;High;6019;x
-5372;Minister of Armament;Alexandre Millerand;1914;1936;1999;SD;resource industrialist;Very High;2595;X
+5355;Minister of Security;Xavier Vallat;1937;1964;1999;NS;Back Stabber;Low;6082;X
+5356;Chief of Staff;Xavier Vallat;1941;1964;1999;NS;School of Defence;Low;6082;X
+5357;Foreign Minister;Jean Fontenoy;1939;1964;1999;FA;Ideological Crusader;Medium;6109;X
+5358;Foreign Minister;Charles Maurras;1930;1964;1999;FA;Biased Intellectual;Very High;6110;X
+5359;Minister of Security;Jean Fontenoy;1942;1964;1999;FA;Man of the People;Medium;6109;X
+5360;Minister of Security;Jean-Marie Le Pen;1956;1964;1999;FA;Prince of Terror;High;6111;X
+5361;Minister of Security;René Binet;1945;1964;1999;FA;Prince of Terror;Medium;6112;X
+5362;Chief of Staff;René Binet;1946;1964;1999;FA;School of Psychology;Medium;6112;X
+5363;Chief of Staff;Eugène Deloncle;1933;1964;1999;FA;School of Fire Support;Medium;6113;X
+5364;Foreign Minister;Eugène Deloncle;1939;1964;1999;FA;General Staffer;Medium;6113;X
+5365;Minister of Armament;Renault Louis;1940;1964;1999;PA;Steel Magnate;Medium;8531;X
+5366;Foreign Minister;Robert Brasillach;1940;1964;1999;NS;Biased Intellectual;High;6015;X
+5367;Foreign Minister;Lucien Rebatet;1942;1964;1999;NS;The Cloak N Dagger Schemer;Medium;5785;X
+5368;Foreign Minister;Maurice Pujo;1930;1964;1999;FA;The Cloak N Dagger Schemer;Medium;6017;X
+5369;Minister of Security;Thierry Maulnier;1940;1964;1999;FA;Prince of Terror;Medium;6018;X
+5370;Chief of Army;André Bayle;1950;1964;1999;SC;Elastic Defence Doctrine;High;6019;X
+5371;Chief of Army;André Bayle;1950;1964;1999;PA;Elastic Defence Doctrine;High;6019;X
+5372;Minister of Armament;Alexandre Millerand;1914;1936;1999;SD;Resource Industrialist;Very High;2595;X
 5373;Chief of Navy;Louis Pivet;1914;1920;1999;SL;Open Seas Doctrine;High;8018;X
 5374;Chief of Air Force;Auguste Edouard Hirschauer;1914;1936;1999;SL;Air Superiority Doctrine;High;8019;X
-5375;Chief of Navy;Jean-Marie Charles Abrial;1924;1964;1999;FA;Decisive Naval Battle Doctrine;Medium;7765;x
-5376;Chief of Navy;Jean Decoux;1938;1964;1999;NS;Indirect Approach Doctrine;High;7766;x
-5377;Chief of Navy;Charles Platon;1940;1964;1999;FA;Decisive Naval Battle Doctrine;Medium;7767;x
-5378;Minister of Security;Jean Decoux;1941;1964;1999;NS;Crime Fighter;Medium;7766;x
+5375;Chief of Navy;Jean-Marie Charles Abrial;1924;1964;1999;FA;Decisive Naval Battle Doctrine;Medium;7765;X
+5376;Chief of Navy;Jean Decoux;1938;1964;1999;NS;Indirect Approach Doctrine;High;7766;X
+5377;Chief of Navy;Charles Platon;1940;1964;1999;FA;Decisive Naval Battle Doctrine;Medium;7767;X
+5378;Minister of Security;Jean Decoux;1941;1964;1999;NS;Crime Fighter;Medium;7766;X
 5379;Minister of Armament;Pierre-Étienne Flandin;1931;1936;1999;SL;Resource Industrialist;Very High;M2003;X
 5380;Head of State;Jean Hennessy;1924;1936;1999;SD;Benevolent Gentleman;High;M57042;X
-5381;Head of Government;Eugène Deloncle;1924;1964;1999;FA;Flamboyant Tough Guy;Medium;6113;x
+5381;Head of Government;Eugène Deloncle;1924;1964;1999;FA;Flamboyant Tough Guy;Medium;6113;X
 5382;Minister of Armament;Louis Germain-Martin;1914;1964;1999;SD;Resource Industrialist;Medium;M2079;X
 5383;Head of State;Jean III;1926;1940;1999;SC;Autocratic Charmer;Very High;M57043;X
 5384;Chief of Army;Edmond Buat;1914;1924;1999;ML;Decisive Battle Doctrine;Very High;2579;X
@@ -392,7 +392,7 @@ FRA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 5015;Head of State;Jean de Bourbon;1940;1964;1999;PA;Benevolent Gentleman;High;M2032;X
 5392;Chief of Army;Louis Franchet d'Espèrey;1924;1936;1999;PA;Elastic Defence Doctrine;Very High;2587;X
 5393;Minister of Armament;Marcel Deat;1938;1964;1999;FA;Laissez-Faire Capitalist;High;M2183;X
-5394;Head of Government;Charles Maurras;1930;1952;1999;FA;Happy Amateur;Very High;6110;x
+5394;Head of Government;Charles Maurras;1930;1952;1999;FA;Happy Amateur;Very High;6110;X
 5395;Head of Military Intelligence;Marie-Louis Koëltz;1931;1935;1947;SL;Logistics Specialist;Medium;9289;X
 5396;Head of Military Intelligence;Maurice-Henri Gauche;1933;1940;1947;SL;Logistics Specialist;Medium;9290;X
 5397;Chief of Navy;Georges Durand-Viel;1931;1937;1938;ML;Open Seas Doctrine;Very High;9708;X

@@ -6894,7 +6894,7 @@ event = {
 		ai_chance = 20
 		command = { type = dissent value = 2 }
 		command = { type = domestic which = freedom value = 1 }
-		command = { type = local_setflag which = Kodoha_support when = 1 value = 3 } #trap card 
+		command = { type = local_setflag which = Kodoha_support when = 1 value = 34 } #trap card 
 	}
 }
 
@@ -7915,6 +7915,10 @@ event = {
 		name = "Has extremism really disappeared?"
 		command = { type = dissent value = -2.5 }
 		command = { type = event which = 2500036 where = JAP when = 7 }
+		command = { type = sleepteam which = 50053 }
+		command = { type = sleepteam which = 50054 }
+		command = { type = sleepteam which = 50055 }
+		command = { type = sleepteam which = 50056 }
 	}
 }
 
@@ -10667,6 +10671,7 @@ event = {
 		command = { type = add_division value = infantry when = 11 where = -77 } 
 		command = { type = add_division value = infantry when = 11 where = -77 } 
 		command = { type = add_division value = infantry when = 11 where = -77 } 
+		command = { type = waketeam which = 265024 }
 		}
 	}
 
@@ -11123,9 +11128,11 @@ event = {
 	action = {
 		ai_chance = 20
 		name = "War it shall be"
-		command = { type = belligerence value = 2 }
+		command = { type = belligerence value = 10 }
 		command = { type = end_non_aggression where = CHI which = TIB }
 		command = { type = war which = TIB }
+		command = { trigger = { exists = U02 } type = set_relation which = U02 value = -50 }
+		command = { trigger = { exists = IND } type = set_relation which = IND value = -50 }
 	}
 }
 
@@ -11149,13 +11156,33 @@ event = {
 		command = { type = secedeprovince which = TIB value = 1289 when = 2 } 
 		command = { type = secedeprovince which = TIB value = 1290 when = 2 } 
 		command = { type = secedeprovince which = TIB value = 1295 when = 2 } 
+		command = { trigger = { NOT = { owned = { province = 1455 data = TIB } } } type = secedeprovince which = TIB value = 1455 when = 2 } 
+		command = { trigger = { NOT = { owned = { province = 1458 data = TIB } } } type = secedeprovince which = TIB value = 1458 when = 2 } 
 	}
 }
 
 event = {
 	id = 1400007003 
 	random = no
-	country = U02
+	tag = { IND U02 }
+	
+	trigger = {
+		exists = TIB
+		OR = { 
+		and = { 
+		NOT = { exists = IND } exists = U02
+			}
+		and = { 
+		exists = IND NOT = { exists = U02 } 
+			}
+		}
+		NOT = { ispuppet = TIB }
+		NOT = { event = 1400007001 }
+		NOT = { owned = { province = 1455 data = -1 } }
+		NOT = { owned = { province = 1458 data = -1 } }
+		owned = { province = 1455 data = TIB }
+		owned = { province = 1458 data = TIB }
+	}
 	
 	date = { day = 23 month = february year = 1944 }
 	offset = 1
@@ -11169,9 +11196,10 @@ event = {
 		name = "ACTION_NAME_OK"
 		ai_chance = 100
 		command = { type = money value = -10 }
-		command = { type = trigger which = 1400007004 }
+		command = { trigger = { NOT = { exists = IND } exists = U02 } type = trigger which = 1400007004 }
+		command = { trigger = { exists = IND NOT = { exists = U02 } } type = trigger which = 1400007004 }
 		command = { type = set_relation which = CHI value = -25 }
-		command = { type = set_relation which = CHC value = -25 }
+		command = { type = set_relation which = CHC value = -50 }
 	}
 }
 
@@ -11188,8 +11216,10 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "ACTION_NAME_ACCEPT"
-		command = { type = secedeprovince which = U02 value = 1455 when = 2 } 
-		command = { type = secedeprovince which = U02 value = 1458 when = 2 } 
+		command = { trigger = { NOT = { exists = IND } exists = U02 } type = secedeprovince which = U02 value = 1455 when = 2 } 
+		command = { trigger = { NOT = { exists = IND } exists = U02 } type = secedeprovince which = U02 value = 1458 when = 2 } 
+		command = { trigger = { exists = IND NOT = { exists = U02 } } type = secedeprovince which = IND value = 1455 when = 2 } 
+		command = { trigger = { exists = IND NOT = { exists = U02 } } type = secedeprovince which = IND value = 1458 when = 2 }
 	}
 }
 

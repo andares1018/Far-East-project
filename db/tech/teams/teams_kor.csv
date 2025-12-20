@@ -1,11 +1,26 @@
 KOR;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
-265001;Daewoo Shipbuilding;T13500;5;1900;1970;naval_engineering;naval_artillery;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265002;Defense Construction Agency;T9800;6;1900;1970;mechanics;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265003;Hyundai Heavy Industries;T13502;6;1900;1970;mechanics;technical_efficiency;rocketry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265004;Korea Maritime University;T13503;4;1900;1970;naval_training;naval_engineering;management;mechanics;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265005;Korean Air Aerospace Division;T13504;4;1930;1970;aeronautics;aircraft_testing;fighter_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265006;Kyongseong Precision;T13505;4;1944;1970;mechanics;industrial_engineering;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265007;Laboratory of Army Research and Development Command;T9800;5;1900;1970;mathematics;chemistry;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265008;Samsung;T13507;6;1938;1970;electronics;management;artillery;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265009;Seoul National University;T13508;4;1946;1970;management;chemistry;mechanics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-265010;Seoul Military Academy;T10401;4;1900;1970;centralized_execution;small_unit_tactics;large_unit_tactics;small_unit_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265001;Yeongdo Shipyard;T_Busan;5;1937;1970;naval_engineering;technical_efficiency;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265002;Science and Technology Laboratory;T9800;6;1930;1970;mechanics;artillery;general_equipment;munitions;rocketry;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265003;Jinhae High Seamans School;T13503;3;1919;1970;naval_training;naval_engineering;management;mechanics;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265004;Kyongseong Precision;T13505;4;1944;1952;mechanics;industrial_engineering;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265005;Busan Aircraft Factory;T9800;5;1945;1970;avionics;aircraft_testing;mechanics;fighter_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265006;Bupyeong Truck Factory;T1905;2;1938;1970;mechanics;management;vehicle_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265007;Kyongseong University;T13508;3;1924;1946;management;chemistry;mechanics;mathematics;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265008;Seoul University;T13508;4;1946;1970;management;chemistry;mechanics;mathematics;medicine;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265009;Bupyeong Arsenal;T_Jinsen;3;1938;1970;munitions;mechanics;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265010;Kim Hong-il;T_Kim Hong-il;5;1928;1970;decentralized_execution;small_unit_tactics;individual_courage;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265011;Sohn Won-il;T_Sohn Won-il;4;1925;1970;individual_courage;centralized_execution;small_taskforce_tactics;seamanship;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265012;Choi Yong-deok;T_Choi Yong-deok;5;1930;1970;fighter_tactics;bomber_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265013;Jang Deok-chang;T_Jang Deok-chang;4;1930;1970;piloting;training;aeronautics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265014;Korean Constabulary Academy;T_KCA;3;1946;1948;combined_arms_focus;infantry_focus;small_unit_tactics;training;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265015;Lucky Chemical;T_LG;5;1947;1970;technical_efficiency;management;industrial_engineering;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265016;Hyundai Civil Works;T_Hyundai;5;1947;1970;management;industrial_engineering;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265017;Manseok-dong Factories;T_Incheon;2;1930;1970;industrial_engineering;naval_engineering;submarine_design;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265018;Korea Explosives Co;T_Hanhwa;4;1952;1970;mechanics;general_equipment;chemistry;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265019;KIA Industries;T_Kia;4;1952;1970;vehicle_engineering;mechanics;industrial_engineering;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265020;Korea Naval Academy;T_ROK Naval Academy;4;1940;1970;naval_training;seamanship;naval_artillery;small_taskforce_tactics;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265021;Korea Military Academy;T_ROK_Military Academy;4;1948;1970;small_unit_tactics;individual_courage;centralized_execution;combined_arms_focus;training;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265022;ShinHung Military Academy;T_Shinhung;2;1911;1920;management;training;centralized_execution;munitions;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265023;Kim Jwa-jin;T_Kim Jwa-jin;3;1919;1929;decentralized_execution;small_unit_tactics;individual_courage;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265024;Kim Mu-jung;T_Kim Mu-jung;4;1930;1970;small_unit_tactics;artillery;training;decentralized_execution;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+265025;Gyeongbu Railways;T3004;3;1908;1970;industrial_engineering;management;general_equipment;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

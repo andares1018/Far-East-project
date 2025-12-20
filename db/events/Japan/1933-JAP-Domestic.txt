@@ -58,6 +58,7 @@ event = {
 		command = { type = chiefofarmy which = 50349 }
 		command = { type = sleepminister which = 50218 }
 		command = { type = sleepminister which = 50316 }
+		command = { type = sleepteam which = 50051 }
 		command = { type = ministerofintelligence which = 50222 }
 		command = { type = local_setflag which = Kodoha_support when = 1 value = -1 }
 	}
@@ -70,6 +71,7 @@ event = {
 		command = { type = chiefofarmy which = 50349 }
 		command = { type = sleepminister which = 50218 }
 		command = { type = sleepminister which = 50316 }
+		command = { type = sleepteam which = 50051 }
 		command = { type = ministerofintelligence which = 50488 }
 		command = { type = local_setflag which = Kodoha_support when = 1 value = 2 }
 	}
@@ -103,8 +105,8 @@ event = {
 	action = {
 		ai_chance = 30
 		name = EVT_1330120017_ACTION2
-		command = { type = dissent value = 1 } #Unhappy war-profiteers and ultra-nationalists
-		command = { type = belligerence which = JAP value = -1 } #Manchuria being treated less crappy
+		command = { type = dissent value = 1.5 } #Unhappy war-profiteers and ultra-nationalists
+		command = { type = belligerence which = JAP value = -2 } #Manchuria being treated less crappy
 		command = { type = trigger which = 1330120018 }
 	}
 }

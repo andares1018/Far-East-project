@@ -2647,6 +2647,12 @@ event = {
 
 	action_a = {
 		name = EVT_43_ACTA
+		command = { type = sleepteam which = 50047 }
+		command = { type = sleepteam which = 50048 }
+		command = { type = sleepteam which = 50049 }
+		command = { type = sleepteam which = 50050 }
+		command = { type = sleepteam which = 50042 }
+		command = { type = sleepteam which = 50065 }
 		command = { trigger = { puppet = { country = MAN country = JAP } } type = inherit which = MAN }
 		command = { trigger = { puppet = { country = MEN country = JAP } } type = inherit which = MEN }
 		command = { trigger = { puppet = { country = U87 country = JAP } } type = inherit which = U87 }
