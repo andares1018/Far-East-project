@@ -1,7 +1,7 @@
 U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-1250001;Head of State;Wang Jingwei;1930;1945;1958;FA;Ruthless Powermonger;NA;M52041;X
-1250002;Head of Government;Wang Jingwei;1932;1945;1958;FA;Backroom Backstabber;NA;M52041;X
+1250001;Head of State;Wang Jingwei;1930;1955;1958;FA;Barking Buffoon;Very High;M52041;X
+1250002;Head of Government;Wang Jingwei;1930;1955;1958;FA;Backroom Backstabber;Very High;M52041;X
 1250003;Head of State;Chen Gongbo;1945;1964;1964;FA;Pig-headed Isolationist;Very High;M_Chen Gongbo;X
 1250004;Head of Government;Chen Gongbo;1932;1964;1964;FA;Political Protege;Very High;M_Chen Gongbo;X
 1250005;Head of Government;Zhou Fohai;1932;1999;1999;FA;Backroom Backstabber;Very High;8142;X
@@ -9,8 +9,8 @@ U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1250007;Foreign Minister;Chu Minyi;1930;1999;1999;FA;Ideological Crusader;NA;8143;X
 1250008;Foreign Minister;Xu Liang;1939;1942;1942;FA;Great Compromiser;Very High;M_Xu Liang;X
 1250009;Foreign Minister;Li Shengwu;1940;1986;1986;FA;Apologetic Clerk;Very High;M_Li Shengwu;X
-1250010;Foreign Minister;Lin Bosheng;1940;1999;1999;FA;Happy Amateur;Very High;M_Lin Bosheng;X
-1250011;Foreign Minister;Zhou Longxiang;1945;1970;1970;FA;Happy Amateur;Very High;M_Zhou Longxiang;X
+1250010;Foreign Minister;Lin Bosheng;1940;1999;1999;FA;Apologetic Clerk;Very High;M_Lin Bosheng;X
+1250011;Foreign Minister;Zhou Longxiang;1945;1970;1970;FA;Iron Fisted Brute;Very High;M_Zhou Longxiang;X
 1250012;Minister of Armament;Zhao Zunyue;1930;1999;1999;FA;Industrial Chemist;Very High;M_Zhao Zunyue;X
 1250013;Minister of Armament;Chen Gongbo;1930;1999;1999;FA;Keynesian Economy;Very High;M_Chen Gongbo;X
 1250014;Minister of Security;Chen Qun;1930;1999;1999;FA;Prince of Terror;NA;M_Chen Qun;X
@@ -34,12 +34,12 @@ U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1250032;Chief of Navy;Ling Xiao;1940;1999;1999;FA;Decisive Naval Battle Doctrine;Very High;L502236;X
 1250033;Chief of Air Force;Chen Changzu;1930;1999;1999;FA;Air Superiority Doctrine;NA;M52020;X
 1250034;Chief of Air Force;Yao Xijiu;1940;1999;1999;FA;Army Aviation Doctrine;Very High;M_Yao Xijiu;X
-1250035;Chief of Air Force;Xie Wenda;1940;1984;1984;FA;Secret Police Chief;Very High;M_Xie Wenda;X
+1250035;Chief of Air Force;Xie Wenda;1940;1984;1984;FA;Air Superiority Doctrine;Very High;M_Xie Wenda;X
 1250036;Minister of Armament;Zhou Fohai;1940;1999;1999;FA;Laissez-Faire Capitalist;NA;8142;X
 1250037;Minister of Armament;Mei Siping;1940;1999;1999;FA;Mixed Economy;Very High;M_Mei Siping;X
 1250038;Minister of Armament;Chen Junhui;1940;1999;1999;FA;Keynesian Economy;Very High;M_Chen Junhui;X
 1250039;Minister of Security;Chen Junhui;1940;1999;1999;FA;Efficient Sociopath;Very High;M_Chen Junhui;X
-1250040;Minister of Armament;Zhou Longxiang;1940;1970;1970;FA;Secret Police Chief;Very High;M_Zhou Longxiang;X
+1250040;Minister of Armament;Zhou Longxiang;1940;1970;1970;FA;Resource Industrialist;Very High;M_Zhou Longxiang;X
 1250041;Minister of Armament;Luo Junqiang;1940;1971;1971;FA;Corrupt Kleptocrat;Very High;M_Luo Junqiang;X
 1250042;Head of Government;Li Shiyu;1940;1999;1999;FA;Backroom Backstabber;Very High;M_Li Shiyu;X
 1250043;Minister of Security;Su Chengde;1940;1999;1999;FA;Secret Police Chief;Very High;M_Su Chengde;X

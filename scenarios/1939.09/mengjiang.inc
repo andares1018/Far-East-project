@@ -91,16 +91,16 @@
     } 
 
    SpyInfo                = {  country = "MEN" NumberOfSpies = 5  } 
-   headofstate            = {  type = 9 id = 700001  } 
+   headofstate            = {  type = 9 id = 700003  } 
    headofgovernment       = {  type = 9 id = 700002  } 
-   foreignminister        = {  type = 9 id = 700003  } 
+   foreignminister        = {  type = 9 id = 700005  } 
    armamentminister       = {  type = 9 id = 700004  } 
-   ministerofsecurity     = {  type = 9 id = 700005  } 
-   ministerofintelligence = {  type = 9 id = 700006  } 
-   chiefofstaff           = {  type = 9 id = 700007  } 
-   chiefofarmy            = {  type = 9 id = 700008  } 
+   ministerofsecurity     = {  type = 9 id = 700007  } 
+   ministerofintelligence = {  type = 9 id = 700016  } 
+   chiefofstaff           = {  type = 9 id = 700013  } 
+   chiefofarmy            = {  type = 9 id = 700018  } 
    chiefofnavy            = {  type = 9 id = 700009  } 
-   chiefofair             = {  type = 9 id = 700010  } 
+   chiefofair             = {  type = 9 id = 700020  } 
    # Basic Construction Engineering Development Process 
    landunit = 
    {  location = 1246 
@@ -120,7 +120,7 @@
       }
      Division = 
      {  id       = {  type = 22700 id = 5  } 
-       name     = "Roppou Suiyuan shûsei butai" 
+       name     = "Roppou Suiyuan sh sei butai" 
        type     = militia
 		model = 4
       }

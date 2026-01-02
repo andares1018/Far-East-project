@@ -2459,8 +2459,8 @@ event = {
 		command = { trigger = { war = { country = SOV } } type = secedeprovince which = SOV value = 1542 when = 1 } # Toyohara 
 		command = { trigger = { war = { country = SOV } } type = secedeprovince which = SOV value = 1543 when = 1 } # Shana /Kuril Islands
 		
-		command = { trigger = { exists = CHI puppet = { country = VIE country = JAP } } type = secedeprovince which = CHI value = 1392 when = 1 }
-		command = { trigger = { exists = ENG puppet = { country = VIE country = JAP } } type = secedeprovince which = ENG value = 1399 when = 1 }
+		command = { trigger = { exists = CHI puppet = { country = VIE country = JAP } NOT = { exists = U03 } } type = secedeprovince which = CHI value = 1392 when = 1 }
+		command = { trigger = { exists = ENG puppet = { country = VIE country = JAP } NOT = { exists = U03 } } type = secedeprovince which = ENG value = 1399 when = 1 }
 		command = { trigger = { puppet = { country = VIE country = JAP } } type = end_mastery which = VIE }
 		command = { trigger = { puppet = { country = CMB country = JAP } } type = end_mastery which = CMB }
 		command = { trigger = { puppet = { country = LAO country = JAP } } type = end_mastery which = LAO }
@@ -2496,7 +2496,7 @@ event = {
 		command = { trigger = { war = { country = USA } } type = secedeprovince which = USA value = 1562 } #Amami
 
 		command = { trigger = { exists = U03 } type = secedearea which = U03 value = Indochine } 
-		command = { trigger = { exists = U01} type = secedearea which = U01 value = Indochine }
+		command = { trigger = { exists = U01 NOT = { exists = U03 } } type = secedearea which = U01 value = Indochine }
 		command = { trigger = { exists = FRA  NOT = { war = { country = FRA country = USA } war = { country = FRA country = SOV } } } type = secedearea which = FRA value = Indochine }
 		command = { trigger = { war = { country = USA } } type = secederegion which = USA value = "Asian Pacific" when = 1 } 
 		command = { trigger = { war = { country = ENG } NOT = { war = { country = USA } } } type = secederegion which = ENG value = "Asian Pacific" when = 1 }
@@ -2524,7 +2524,7 @@ event = {
 		name = EVT_43_ACTB
 		command = { type = sleepevent which = 2007011 }
 		command = { type = sleepevent which = 2049003 }
-		command = { type = dissent value = 5 }
+		command = { type = dissent value = 10 }
 		command = { type = domestic which = freedom value = -1 }
 		command = { type = domestic which = defense_lobby value = 1 }
 	}

@@ -9,7 +9,7 @@ ELECT_6;Elect Labor Party;;;;;;;;;;X
 ELECT_7;Elect National Party;;;;;;;;;;X
 ELECT_8;No one had a Majority;;;;;;;;;;X
 ELECT_9;Elect People's Party;;;;;;;;;;X
-ELECT_10;Elect Independent Party;;;;;;;;;;X
+ELECT_10;Elect Nationalist Party;;;;;;;;;;X
 ELECT_11;Elect People's Revolutionary Party;;;;;;;;;;X
 ELECT_12;Elect Christian Social Party;;;;;;;;;;X
 ELECT_13;Elect Social Democratic Workers' Party;;;;;;;;;;X
@@ -23,6 +23,7 @@ ELECT_20;Elect Democratic Coalition;;;;;;;;;;X
 ELECT_21;Elect Social Democratic Party;;;;;;;;;;X
 ELECT_22;Elect Union Party;;;;;;;;;;X
 ELECT_24;Elect pro Military Coalition;;;;;;;;;;X
+ELECT_25;Elect Independent Party;;;;;;;;;;X
 ELECT_FRA1;Elect Popular Republican Movement;;;;;;;;;;X
 ELECT_FRA2;Elect Union for the New Republic;;;;;;;;;;X
 ELECT_FRA3;Elect SFIO;;;;;;;;;;X
@@ -33,7 +34,7 @@ ELECT_JAP4;Elect Kaishinto;;;;;;;;;;X
 ELECT_JAP5;Elect Constitutional Progressive Party;;;;;;;;;;X
 ELECT_LDP;Elect Liberal Democratic Party;;;;;;;;;;X
 ELECT_AST1;Elect United Australia Party;;;;;;;;;;X
-ELECT_AST2;Elect Liberal Country Coalition;;;;;;;;;;X
+ELECT_AST2;Elect Liberal-Country Coalition;;;;;;;;;;X
 ELECT_LAO1;Elect National Progressive Party;;;;;;;;;;X
 ELECT_KOR1;Elect Democratic Republican Party;;;;;;;;;;X
 ELECT_KOR2;Elect People's Party of Korea;;;;;;;;;;X
@@ -80,7 +81,7 @@ EVT_1400000006_DESC;As the summer of 1936 burns hotter, so do the anger of the C
 EVT_1400000007_DESC;;;;;;;;;;;X
 EVT_1400000008_DESC;;;;;;;;;;;X
 EVT_1400000009_DESC;;;;;;;;;;;X
-decision_1400000009_desc;According to the assertion by Sun Yat-sen, leader in KMT, the establishment of a modern nation in China should proceed in three stages. The first stage, military government, involves temporary rule by the military to protect revolutionary powers from external threats. In 1927, Chiang Kai-shek declared the completion of the National Revolution, signaling the transition of the Republic of China into the second stage, known as political tutelage. At this stage, the Republic of China prepared for the 'constitutional politics' and in order to carry it out, a specific faction(KMT) must temporarily lead the entire country. Originally, political tutelage was planned to conclude in 1933, also planned to be converted to the last stage, the constitution politics, but despite six years of reforms, setbacks such as the loss of Manchuria, natural disasters, Japan's aggressive policies, and lacking power of the government no significant changes in China. Consequently, the Nationalist government announced a four-year postponement of the transition to constitutional politics, which sparked significant backlash. \nTherefore, the Nationalist government scheduled to convene the Constituent National Assembly in December 1937, but in the event of a state of emergency, it could be extended.;;;;;;;;;;X
+decision_1400000009_desc;According to the assertion by Sun Yat-sen, the establishment of modern nation in China should proceed in three stages. The first stage, military government, involves temporary rule by the military to protect revolutionary powers from external threats. In 1927, Chiang Kai-shek declared the completion of the National Revolution, signaling the transition of the Republic of China into the second stage, known as political tutelage. At this stage, the Republic of China prepared for the 'constitutional politics' and in order to carry it out, a specific faction(KMT) must temporarily lead the entire country. Originally, political tutelage was planned to conclude in 1933, also planned to be converted to the last stage, the constitution politics, but despite six years of reforms, setbacks such as the loss of Manchuria, natural disasters, Japan's aggressive policies, and lacking power of the government no significant changes in China. Consequently, the Nationalist government announced a four-year postponement of the transition to constitutional politics, which sparked significant backlash. \nTherefore, the Nationalist government scheduled to convene the Constituent National Assembly in December 1937, but in the event of a state of emergency, it could be extended.;;;;;;;;;;X
 EVT_1400000010_DESC;;;;;;;;;;;X
 EVT_1400000011_DESC;;;;;;;;;;;X
 EVT_1400000012_DESC;;;;;;;;;;;X

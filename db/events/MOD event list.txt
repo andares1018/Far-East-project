@@ -137,7 +137,7 @@
 # 1400000087 CHI - Presidential Election - 3rd Presidential Election #
 # 1400000088 CHI - Presidential Election - 3rd Presidential Election (Chiang Dictatorship) #
 # 1400000089 CHI - Extraordinary National Congress (1938)
-# 1400000090 CHI - Resigns of Head of State - Chiang Kai-shek #
+# 1400000090 CHI - Resigns of Head of State - Chiang Kai-shek (Constitutional Crisis) #
 # 1400000091 
 # 1400000092 
 # 1400000093 
@@ -257,7 +257,7 @@
 # 1400001518 CHC - Party Renovation completed 
 # 1400001519 CHC - Government Reorganization - New Democratic Revolution
 # 1400001520 CHC - 7th National Congress 
-# 1400001521 CHC - 
+# 1400001521 CHC - People's Political Consultative Conference #
 # 1400001522 CHC - 
 # 1400001523 CHC - 
 # 1400001524 CHC - 
@@ -339,21 +339,21 @@
 # 1400002034 JAP - Kodoha coup fails 
 # 1400002035 JAP - The Cabinet Resigns - Koiso - FEPK mod event
 # 1400002036 JAP - New Cabinet Government - Suzuki or Hata
-# 1400002037 JAP - Land Reform Policy - Post-war and Kotoha path #
-# 1400002038 JAP - Completion of the Initial Phase of the Land Reform #
-# 1400002039 JAP - Completion of the Land Reform #
-# 1400002040 JAP - Reorganising the National Economy - Post-war and Kodoha path #
+# 1400002037 JAP - Land Reform Policy - Post-war and Kotoha path 
+# 1400002038 JAP - Completion of the Initial Phase of the Land Reform 
+# 1400002039 JAP - Completion of the Land Reform 
+# 1400002040 JAP - Reorganising the National Economy - Post-war and Kodoha path 
 # 1400002041 JAP - General Election (1937) 
 # 1400002042 JAP - General Election (Wartime) - Yokusankai or New Party path 
 # 1400002043 JAP - Directing Industrial Policy 
 # 1400002044 JAP - Implementation of Economic Plan 
 # 1400002045 JAP - Wartime Policy and Economic Planning 
 # 1400002046 JAP - The Great Drought (1939) 
-# 1400002047 JAP - The Nationalisation of Heavy Industry - Post-war and Kodoha path #
-# 1400002048 JAP - Fate of Zaibatsu - Post-war and Kodoha path #
+# 1400002047 JAP - The Nationalisation of Heavy Industry - Post-war and Kodoha path 
+# 1400002048 JAP - Fate of Zaibatsu - Post-war and Kodoha path 
 # 1400002049 JAP - Direction of Fiscal policy (Takahashi Policy) 
-# 1400002050 JAP - Japanification of Foreign Subsidiaries #
-# 1400002051 JAP - Dissolution of the Zaibatsu Groups #
+# 1400002050 JAP - Japanification of Foreign Subsidiaries 
+# 1400002051 JAP - 
 # 1400002052 JAP - 
 # 1400002053 JAP - 
 # 1400002054 JAP - 
@@ -395,7 +395,7 @@
 # 1400003756 JAP - Fate of the National Mobilization Act 
 # 1400003757 JAP - Instability in the Cabinet 
 # 1400003758 JAP - General Election and Appointment of Prime Minister - Hata, Maeda, Kaya 
-# 1400003759 JAP - Aftermath of Wartime Economy #
+# 1400003759 JAP - Aftermath of Wartime Economy 
 # 1400003760 JAP - Fate of the Taisei Yokusankai #
 # 1400003761 
 # 1400003762 
@@ -450,15 +450,15 @@
 # 1400004505 JAP - Japan's New constitution - Peace Constitution (Occupation of Japan) 
 # 1400004506 JAP - White purge (Occupation of Japan) 
 # 1400004507 JAP - War Crimes Tribunal (Occupation of Japan) 
-# 1400004508 JAP - Collapse of Economic Sphere #
-# 1400004509 JAP - Economic Reconstruction policy #
+# 1400004508 JAP - Collapse of Economic Sphere 
+# 1400004509 JAP - Economic Reconstruction policy 
 # 1400004510 JAP - End of Purge of Public Officials (Occupation of Japan) 
 # 1400004511 JAP - General Election (non-Occupation of Japan) 
 # 1400004512 JAP - New Cabinet Government (Occupation of Japan) - Yoshida 
 # 1400004513 JAP - Appointment of Prime Minister (non-Occupation of Japan) - National Unity Government
-# 1400004514 JAP - Corporate Reform #
-# 1400004515 JAP - Reverse Course #
-# 1400004516 
+# 1400004514 JAP - Corporate Reform 
+# 1400004515 USA - Reverse Course #
+# 1400004516 JAP - Reverse Course #
 # 1400004517 
 # 1400004518 
 # 1400004519 
@@ -691,14 +691,14 @@
 # 1400007533 UCS - Establish of collaboration government 
 # 1400007534 JAP - Collaboration with Wang Jingwei 
 # 1400007535 U87 - Establish of collaboration government 
-# 1400007536 U87 - Constituent National Assembly #
-# 1400007537 U87 - Constitutional Discussion #
-# 1400007538 U87 - Fate of the KMT remnants #
-# 1400007539 
-# 
-# 
-# 
-# 
+# 1400007536 U87 - Discussion of National Assembly (1940?) #
+# 1400007537 U87 - Holding National Assembly (what if?) # 
+# 1400007538 U87 - Unification National Assembly (Post-war) #
+# 1400007539 U87 - Fate of the KMT remnants #
+# 1400007540 U87 - Constitutional Discussion #
+# 1400007541 U87 - Constituent National Assembly #
+# 1400007542 U87 - Limits of Sovereignty 
+# 1400007543 U87 - Government Integration (Northern China, Inner Mongolia) 
 # 
 # 
 # 
@@ -752,6 +752,7 @@
 # 1400008513 - Fate of Laos #
 # 1400008514 - Fate of Cambodia #
 
+
 ### 1400009001 - 1400009500 Minister died event(Additional)
 # 1400009001 JAP - Suzuki Kantaro (1948) 
 # 1400009002 JAP - Koiso Kuniaki (1950) 
@@ -786,9 +787,11 @@
 # 1400009108 CHI - Zhu Peide (1937) 
 # 1400009109 CHI - Hu Hanmin (1936) 
 # 1400009110 CHI - Joseph Stilwell (1946) #
-# 1400009111 U87 - Wang Jingwei (1944) 
+# 1400009111 U87 - Wang Jingwei (1944) - OTL
+# 1400009112 U87 - Wang Jingwei (1944?) - When RNG took over #
 
 # 1400009200 FRA - Philippe Leclerc de Hauteclocque (1947) #
+# 1400009201 U01 - Philippe Leclerc de Hauteclocque (1947) #
 # 1400009201 U03 - Philippe Leclerc de Hauteclocque (1947) #
 
 # 1400009250 KOR - Yeo Un-hyong (1947?) - Assassinated 

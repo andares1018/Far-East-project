@@ -3944,7 +3944,7 @@ event = {
 
 	action = {
 		name = "Eventually..."
-		command = { trigger = { control = { province = 1297 data = U66 }  } type = capital which = 1297 }
+		command = { trigger = { control = { province = 1297 data = U66 } } type = capital which = 1297 }
 		command = { trigger = { NOT = { control = { province = 1297 data = U66 } } } type = capital which = 1298 }
 		command = { type = secedeprovince which = CHI value = 1299 when = 1 }
 		command = { type = secedeprovince which = CHI value = 1301 when = 1 }
@@ -8039,6 +8039,165 @@ event = {
 	}
 
 event = {
+	id = 1400002037
+	random = no
+	country = JAP
+
+	decision = {
+		event = 1400002040
+		event = { id = 1400002040 days = 120 }
+	}
+			
+	decision_trigger = { 
+		event = 1400002040
+		event = { id = 1400002040 days = 150 }
+		money = 500
+	}
+	
+	trigger = {
+		event = 1400002040
+		random = 30
+		event = { id = 1400002040 days = 150 }
+	}
+
+	name = "Land Reform Policy"
+	desc = ""
+	style = 2
+	picture = "eastasia_agriculture"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "Enact the reform" 
+		command = { type = money value = -500 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = event which = 1400002038 where = -1 when = 360 }
+	}
+}
+
+event = {
+	id = 1400002038
+	random = no
+	country = JAP
+
+	name = "Completion of the Initial Phase of the Land Reform"
+	desc = ""
+	style = 2
+	picture = "eastasia_agriculture"
+
+	action = {
+		ai_chance = 80
+		trigger = { 
+			NOT = { ispuppet = yes }
+		}
+		name = "Moderate approach is sufficient"
+		command = { type = dissent value = -5 }
+		command = { type = event which = 1400002039 where = -1 when = 720 }
+		command = { type = local_setflag which = JAP_land_reform1 }
+		command = { trigger = { flag = JAP_economic_crisis } type = industrial_modifier which = total value = 5 } 
+	}
+	action = {
+		ai_chance = 20
+		name = "Active land policy is needed"
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = event which = 1400002039 where = -1 when = 1440 }
+		command = { type = dissent value = -1 }
+		command = { type = money value = -250 }
+		command = { type = local_setflag which = JAP_land_reform2 }
+		command = { trigger = { flag = JAP_economic_crisis } type = industrial_modifier which = total value = 5 } 
+	}
+}
+
+event = {
+	id = 1400002039
+	random = no
+	country = JAP
+
+	name = "Completion of the Land Reform"
+	desc = ""
+	style = 2
+	picture = "eastasia_agriculture"
+
+	action = {
+		name = "ACTION_NAME_GREAT"
+		command = { type = money value = -100 }
+		command = { trigger = { local_flag = JAP_land_reform1 } type = industrial_modifier which = supplies value = 5 }
+		command = { trigger = { local_flag = JAP_land_reform1 } type = dissent value = -5 }
+		command = { trigger = { local_flag = JAP_land_reform2 } type = industrial_modifier which = supplies value = 12 }
+		command = { trigger = { local_flag = JAP_land_reform2 } type = dissent value = -10 }
+		command = { type = money value = -100 }
+	}
+}
+
+event = {
+	id = 1400002040
+	random = no
+	country = JAP
+	save_date = yes
+
+	trigger = {	
+		OR = {
+		and = {
+		event = 1400003759
+		flag = JAP_economic_crisis
+			}
+		and = {
+		event = 1400004508
+		flag = JAP_economic_crisis
+			}
+		and = {
+		flag = Kodoha_tree
+		NOT = { flag = JAP_economic_crisis }
+		war = { country = JAP }
+			}
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "Reorganising the National Economy"
+	desc = ""
+	style = 2
+	picture = "ekonomija"
+
+	action = {
+		trigger = { 
+			NOT = { ispuppet = yes }
+			}
+		ai_chance = 75
+		name = "Let the bureaucrats handle the economy"
+		command = { type = local_setflag which = JAP_bureaucrats }
+		command = { type = dissent value = -1 }
+		command = { trigger = { ai = no } type = money value = -100 }
+	}
+	action = {
+		trigger = { 
+			flag = Kodoha_tree
+		}
+		ai_chance = 25
+		name = "Nationalise important industries"
+		command = { type = local_setflag which = JAP_nationalization }
+		command = { type = dissent value = -5 }
+		command = { trigger = { ai = no } type = money value = -750 }
+	}
+	action = {
+		trigger = { 
+			ispuppet = yes 
+			}
+		ai_chance = 75
+		name = "Economic structure must be reorganized"
+		command = { type = local_setflag which = JAP_reorganization }
+		command = { type = dissent value = 1 }
+		command = { trigger = { ai = no } type = money value = -500 }
+	}
+}
+
+event = {
 	id = 1400002041
 	random = no
 	country = JAP
@@ -8132,7 +8291,7 @@ event = {
     offset = 10
     deathdate = { day = 29 month = december year = 1963 }
 
-		action = {
+	action = {
 		ai_chance = 25
 		name = "We need economic plan"
 		command = { type = money value = -100 }
@@ -8222,7 +8381,148 @@ event = {
 	}
 }
 
+event = {
+	id = 1400002047
+	random = no
+	country = JAP
 
+	decision = {
+		OR = {
+		flag = Kodoha_tree
+		local_flag = JAP_nationalization
+		}
+		event = { id = 1400002040 days = 180 }
+	}
+			
+	decision_trigger = { 
+		OR = {
+		flag = Kodoha_tree
+		local_flag = JAP_nationalization
+		}
+		event = { id = 1400002040 days = 210 }
+		money = 750
+	}
+	
+	trigger = {
+		OR = {
+		flag = Kodoha_tree
+		local_flag = JAP_nationalization
+		}
+		event = { id = 1400002040 days = 210 }
+		random = 30
+	}
+
+	name = "The Nationalisation of Heavy Industry"
+	desc = ""
+	style = 2
+	picture = "industrial_association"
+	decision_desc = ""
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "Heavy industries must be controlled by the Government" # 
+		command = { type = domestic which = free_market value = -3 }
+		command = { type = money value = -750 }
+		command = { type = construct which = ic where = 1550 value = 1 } 
+		command = { type = construct which = ic where = 1552 value = 1 } 
+		command = { type = construct which = ic where = 1554 value = 1 } 
+		command = { type = construct which = ic where = 1557 value = 1 } 
+		command = { type = event which = 1400002048 where = JAP when = 30 }
+	}
+
+}
+
+event = {
+	id = 1400002048
+	random = no
+	country = JAP
+
+	name = "Fate of Zaibatsu"
+	desc = ""
+	style = 2
+	picture = "zaibatsu"
+
+	action = {
+		trigger = { 
+			local_flag = JAP_nationalization
+		}
+		ai_chance = 20
+		name = "Control of Zaibatsu is sufficient"
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = 5 }
+	}
+	action = {
+		trigger = { 
+			local_flag = JAP_nationalization
+		}
+		ai_chance = 80
+		name = "Zaibatsu must be dismantled."
+		command = { trigger = { ai = no } type = money value = -200 }
+		command = { type = domestic which = free_market value = -2 }
+		command = { type = dissent value = -5 }
+		command = { type = sleepteam which = 50005 } #Mitsubishi
+		command = { type = sleepteam which = 50006 }
+		command = { type = sleepteam which = 50007 }
+		command = { type = sleepteam which = 50010 } #Nissan
+		command = { type = sleepteam which = 50011 } #Sumitomo
+		command = { type = sleepteam which = 50028 } #Kawasaki 
+		command = { type = sleepteam which = 50031 }
+		command = { type = sleepteam which = 50003 }
+		command = { type = sleepteam which = 50029 } #Mitsui
+		command = { type = waketeam which = 50067 }
+		command = { type = waketeam which = 50068 }
+		command = { type = waketeam which = 50069 }
+		command = { type = waketeam which = 50070 }
+		command = { type = waketeam which = 50071 }
+		command = { type = waketeam which = 50072 }
+		command = { type = waketeam which = 50074 }
+	}
+	action = {
+		trigger = { 
+			OR = {
+			local_flag = JAP_reorganization
+			local_flag = JAP_bureaucrats
+			}
+		}
+		ai_chance = 60
+		name = "Control of Zaibatsu is sufficient"
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = 5 }
+		command = { type = money value = 100 }
+	}
+	action = {
+		trigger = { 
+			OR = {
+			local_flag = JAP_reorganization
+			local_flag = JAP_bureaucrats
+			}
+		}
+		ai_chance = 40
+		name = "Zaibatsu must be dismantled."
+		command = { trigger = { ai = no } type = money value = -125 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = sleepteam which = 50005 } #Mitsubishi
+		command = { type = sleepteam which = 50006 }
+		command = { type = sleepteam which = 50007 }
+		command = { type = sleepteam which = 50010 } #Nissan
+		command = { type = sleepteam which = 50011 } #Sumitomo
+		command = { type = sleepteam which = 50028 } #Kawasaki 
+		command = { type = sleepteam which = 50031 }
+		command = { type = sleepteam which = 50003 }
+		command = { type = sleepteam which = 50029 } #Mitsui
+		command = { type = waketeam which = 50067 }
+		command = { type = waketeam which = 50068 }
+		command = { type = waketeam which = 50069 }
+		command = { type = waketeam which = 50070 }
+		command = { type = waketeam which = 50071 }
+		command = { type = waketeam which = 50072 }
+		command = { type = waketeam which = 50074 }
+	}
+}
 
 event = {
 	id = 1400002049
@@ -8253,6 +8553,50 @@ event = {
 	}
 }
 
+event = {
+	id = 1400002050
+	random = no
+	country = JAP
+
+	decision = {
+		flag = JAP_economic_crisis
+		local_flag = JAP_bureaucrats
+		event = { id = 1400002040 days = 150 }
+	}
+			
+	decision_trigger = { 
+		flag = JAP_economic_crisis
+		local_flag = JAP_bureaucrats
+		event = { id = 1400002040 days = 180 }
+		money = 500
+	}
+	
+	trigger = {
+		flag = JAP_economic_crisis
+		local_flag = JAP_bureaucrats
+		event = { id = 1400002040 days = 180 }
+		random = 30
+	}
+
+	name = "Japanification of Foreign Subsidiaries"
+	desc = ""
+	style = 2
+	picture = "industrial_association"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "Enforce the Japanification" 
+		command = { trigger = { ai = no } type = money value = -500 }
+		command = { type = construct which = ic where = 1550 value = 2 } 
+		command = { type = construct which = ic where = 1553 value = 1 } 
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = industrial_modifier which = total value = 5 } 
+	}
+}
 
 ### 1400003001 - 1400003500 : Japan Foreign Event
 
@@ -8312,7 +8656,7 @@ event = {
 	random = no
 	country = SOV
 
-	name = "Soviet–Japanese Neutrality Pact"
+	name = "Soviet Japanese Neutrality Pact"
 	desc = ""
 	style = 2
 	picture = "diplomatic_campaign"
@@ -8337,7 +8681,7 @@ event = {
 	id = 1400003003
 	random = no
 	country = USA
-	name = "End of Treaty of Commerce"
+	name = "End of Treaty of Commerce" #Treaty of Commerce and Navigation Between the U.S. and Japan (1899-1940)
 	desc = ""
 	style = 2
 	picture = "diplomatic_campaign"
@@ -8368,7 +8712,7 @@ event = {
 		ai_chance = 100
 		name = "End the Treaty renewal"
 		command = { type = domestic which = interventionism value = 1 }
-		command = { type = relation which = JAP value = -20 }
+		command = { type = relation which = JAP value = -100 }
 		command = { type = relation which = CHI value = 20 }
 		command = { type = trigger which = 1400003004 }
 		command = { type = end_trades which = JAP where = USA }
@@ -8808,6 +9152,42 @@ event = {
 	}
 }
 
+event = {
+	id = 1400003759
+	random = no
+	country = JAP
+	name = "Aftermath of Wartime Economy"
+	desc = ""
+	style = 2
+	picture = "Unemployment_rate"
+
+	trigger = {	
+		event = 1400002013 #National Mobilization Law 
+		OR = {
+		
+		}
+		NOT = {
+		war = { country = JAP }
+		}
+		NOT = {
+		event = 2011028 #Japan surrenders by USA
+		event = 2012004 #Japan surrenders by CHI
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "Cost of war is inevitable"
+		command = { type = dissent value = 20 }
+		command = { type = industrial_modifier which = total value = -20 }
+		command = { type = setflag which = JAP_economic_crisis }
+	}
+}
+
 ### Post-war Japan
 
 event = {
@@ -9100,6 +9480,83 @@ event = {
 }
 
 event = {
+	id = 1400004508
+	random = no
+	country = JAP
+	name = "Collapse of Economic sphere"
+	desc = ""
+	style = 2
+	picture = "Unemployment_rate"
+
+	trigger = {	
+		event = 1400002013 #National Mobilization Law 
+		OR = {
+		event = 2011028 #Japan surrenders by USA
+		event = 2012004 #Japan surrenders by CHI
+		}
+		NOT = {
+		war = { country = JAP }
+		event = 1400003759
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_DAMN"
+		command = { type = dissent value = 20 }
+		command = { type = industrial_modifier which = total value = -20 }
+		command = { type = setflag which = JAP_economic_crisis }
+	}
+}
+
+event = {
+	id = 1400004509
+	random = no
+	country = JAP
+
+	decision = {
+		flag = JAP_economic_crisis
+		local_flag = JAP_reorganization
+		event = { id = 1400002040 days = 150 }
+	}
+			
+	decision_trigger = { 
+		flag = JAP_economic_crisis
+		local_flag = JAP_reorganization
+		event = { id = 1400002040 days = 180 }
+		money = 500
+	}
+	
+	trigger = {
+		flag = JAP_economic_crisis
+		local_flag = JAP_reorganization
+		event = { id = 1400002040 days = 180 }
+		random = 30
+	}
+
+	name = "Economic Reconstruction policy"
+	desc = ""
+	style = 2
+	picture = "economic_development"
+	decision_picture = "decision_new_deal"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "Economic Reconstruction is urgently needed" 
+		command = { type = industrial_modifier which = total value = 5 } 
+		command = { type = money value = -500 }
+	}
+}
+
+event = {
 	id = 1400004510
 	random = no
 	country = JAP
@@ -9112,11 +9569,7 @@ event = {
 		event = 1400004506 #White purge
 		flag = JAP_purge
 		NOT = {
-		OR = {
-		puppet = { country = JAP country = USA }
-		puppet = { country = JAP country = ENG }
-		puppet = { country = JAP country = SOV }
-			}
+		ispuppet = yes
 		}
 	}
 
@@ -9284,6 +9737,40 @@ event = {
 		command = { type = ministerofintelligence which = 50211 } 
 	}
 }
+
+event = {
+	id = 1400004514
+	random = no
+	country = JAP
+	name = "Corporate reform"
+	desc = ""
+	style = 2
+	picture = "Japanese Corporate reform"
+
+	trigger = {	
+		event = 1400004509
+		OR = {
+		local_flag = JAP_reorganization
+		local_flag = JAP_bureaucrats
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "Reform is essential"
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = industrial_modifier which = total value = 5 } 
+		command = { type = money value = -250 }
+		command = { type = dissent value = -5 }
+		command = { trigger = { ispuppet = yes } type = event which = 1400002048 where = JAP when = 30 }
+	}
+}
+
+
 
 ### Indochina
 # thanks for Sasha, phoenix(Laos), GhostBelle(Vietnam)
@@ -10633,6 +11120,7 @@ event = {
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = add_division value = infantry when = 11 where = -85 } 
+		command = { type = local_setflag which = KOR_KPG }
 		}
 	}
 
@@ -10668,10 +11156,11 @@ event = {
 		command = { trigger = { NOT = { ispuppet = yes } } type = chiefofarmy which = 265258 }
 		command = { type = chiefofair which = 265273 }
 		command = { type = capital which = 1228 }
-		command = { type = add_division value = infantry when = 11 where = -77 } 
-		command = { type = add_division value = infantry when = 11 where = -77 } 
-		command = { type = add_division value = infantry when = 11 where = -77 } 
+		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } 
+		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } 
+		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } 
 		command = { type = waketeam which = 265024 }
+		command = { type = local_setflag which = KOR_PRK }
 		}
 	}
 
@@ -10843,6 +11332,7 @@ event = {
 		command = { type = add_division value = infantry when = 11 where = -77 } 
 		command = { type = add_division value = infantry when = 11 where = -77 } 
 		command = { type = add_division value = infantry when = 11 where = -77 } 
+		command = { type = local_setflag which = KOR_ROK }
 	}
 } 
 
@@ -11278,14 +11768,13 @@ event = {
 
 	decision = {
 		NOT = { 
-		event = 2011018
-		event = 2011028
+		event = 2011018 #The Fading Sun
+		event = 2011028 #Japanese surrender negotiations
 		}
-		event = 2049002
-		event = 1400010022
+		event = 1400010022 #End of the European front
 		war = { country = JAP country = USA }
 		NOT = {
-		event = 2007033
+		event = 2007033 #China annexes Mongolia
 		}
 		NOT = {
 		war = { country = JAP country = SOV }
@@ -11313,7 +11802,6 @@ event = {
 		event = 2011018
 		event = 2011028
 		}
-		event = 2049002
 		event = { id = 1400010022 days = 90 }
 		war = { country = JAP country = USA }
 		NOT = {
@@ -11348,21 +11836,15 @@ event = {
 	deathdate = { day = 29 month = december year = 1999 }
 
 	action = {
-		ai_chance = 95
+		ai_chance = 100
 		name = "evt_4700a" # 
 		command = { type = war which = JAP }
 		command = { type = war which = MAN }
-		command = { type = end_non_aggression which = JAP where = SOV }
+		command = { type = war which = MEN }
 		command = { type = end_access which = JAP when = 0 }
 		command = { type = end_access which = JAP when = 1 }
 		command = { type = end_mastery which = JAP }
 		command = { type = war which = JAP }
-	}
-		action = {
-		name = "We don't want to"
-		ai_chance = 5
-		command = { type = dissent value = 8 }
-		command = { type = relation which = JAP value = 100 }
 	}
 }
 
@@ -12504,12 +12986,13 @@ event = {
 		command = { type = secedeprovince which = UCS value = 1245 when = 2 } 
 		command = { type = secedeprovince which = UCS value = 1241 when = 2 } 
 		command = { type = secedeprovince which = UCS value = 1247 when = 2 } 
+		command = { type = removeclaim which = 1245 }
 		command = { trigger = { exists = MAN } type = secedeprovince which = MAN value = 1236 when = 2 } 
 		command = { trigger = { exists = MAN } type = secedeprovince which = MAN value = 1235 when = 2 } 
 		command = { trigger = { exists = MAN } type = secedeprovince which = MAN value = 1216 when = 2 } 
 		command = { trigger = { puppet = { country = U64 country = JAP } } type = inherit which = U64 } 
 		command = { trigger = { NOT = { exists = UCS } } type = independence which = UCS value = 1 when = 0 }
-		command = { trigger = { NOT = { exists = UCS } } type = make_puppet which = UCS } 
+		command = { type = make_puppet which = UCS } 
 		
 	}
 }
@@ -12568,6 +13051,7 @@ event = {
 			OR = {
 			and = { event = 1400001258
 			war = { country = JAP country = CHI }
+			year = 1940
 			}
 			and = {
 			NOT = { exists = CHI }
@@ -12585,6 +13069,7 @@ event = {
 			OR = {
 			and = { event = 1400001258
 			war = { country = JAP country = CHI }
+			year = 1940
 			}
 			and = {
 			NOT = { exists = CHI }
@@ -12645,10 +13130,96 @@ event = {
 		command = { type = chiefofarmy which = 1250027 }
 		command = { type = chiefofair which = 1250033 }
 		command = { type = chiefofnavy which = 1250031 }
+		command = { type = event which = 1400007543 where = U87 when = 7 }
 	}
 }
 
+event = {
+	id = 1400007542
+	random = no
+	country = U87
+	style = 2
 
+	name = "Limits of Sovereignty"
+	desc = ""
+	picture = "fail_of_china"
+
+	action = {
+		name = "ACTION_NAME_DAMN" 
+		command = { type = dissent value = 10 }
+		command = { trigger = { control = { province = 1241 data = U87 } } type = control which = UCS value = 1241 when = 2 } 
+		command = { trigger = { control = { province = 1245 data = U87 } } type = control which = UCS value = 1245 when = 2 } 
+		command = { trigger = { control = { province = 1250 data = U87 } } type = control which = UCS value = 1250 when = 2 } 
+		command = { trigger = { control = { province = 1252 data = U87 } } type = control which = UCS value = 1252 when = 2 } 
+		command = { trigger = { control = { province = 1249 data = U87 } } type = control which = UCS value = 1249 when = 2 } 
+		command = { trigger = { control = { province = 1254 data = U87 } } type = control which = UCS value = 1254 when = 2 } 
+		command = { trigger = { control = { province = 1253 data = U87 } } type = control which = UCS value = 1253 when = 2 } 
+		command = { trigger = { control = { province = 1248 data = U87 } } type = control which = UCS value = 1248 when = 2 } 
+		command = { trigger = { control = { province = 1243 data = U87 } } type = control which = UCS value = 1243 when = 2 } 
+		command = { trigger = { control = { province = 1242 data = U87 } } type = control which = UCS value = 1242 when = 2 } 
+		command = { trigger = { control = { province = 1323 data = U87 } } type = control which = UCS value = 1323 when = 2 } 
+		command = { trigger = { control = { province = 1244 data = U87 } } type = control which = UCS value = 1244 when = 2 } 
+		command = { trigger = { control = { province = 1330 data = U87 } } type = control which = UCS value = 1330 when = 2 } 
+		command = { trigger = { control = { province = 1329 data = U87 } } type = control which = UCS value = 1329 when = 2 } 
+		command = { trigger = { control = { province = 1331 data = U87 } } type = control which = UCS value = 1331 when = 2 } 
+		command = { trigger = { control = { province = 1328 data = U87 } } type = control which = UCS value = 1328 when = 2 } 
+		command = { trigger = { control = { province = 1332 data = U87 } } type = control which = UCS value = 1332 when = 2 } 
+		command = { trigger = { control = { province = 1327 data = U87 } } type = control which = UCS value = 1327 when = 2 } 
+		command = { trigger = { control = { province = 1241 data = U87 } } type = control which = UCS value = 1241 when = 2 } 
+		
+		command = { trigger = { owned = { province = 1245 data = U87 } } type = secedeprovince which = UCS value = 1245 when = 2 } 
+		command = { trigger = { owned = { province = 1250 data = U87 } } type = secedeprovince which = UCS value = 1250 when = 2 } 
+		command = { trigger = { owned = { province = 1252 data = U87 } } type = secedeprovince which = UCS value = 1252 when = 2 } 
+		command = { trigger = { owned = { province = 1249 data = U87 } } type = secedeprovince which = UCS value = 1249 when = 2 } 
+		command = { trigger = { owned = { province = 1254 data = U87 } } type = secedeprovince which = UCS value = 1254 when = 2 } 
+		command = { trigger = { owned = { province = 1253 data = U87 } } type = secedeprovince which = UCS value = 1253 when = 2 } 
+		command = { trigger = { owned = { province = 1248 data = U87 } } type = secedeprovince which = UCS value = 1248 when = 2 } 
+		command = { trigger = { owned = { province = 1243 data = U87 } } type = secedeprovince which = UCS value = 1243 when = 2 } 
+		command = { trigger = { owned = { province = 1242 data = U87 } } type = secedeprovince which = UCS value = 1242 when = 2 } 
+		command = { trigger = { owned = { province = 1323 data = U87 } } type = secedeprovince which = UCS value = 1323 when = 2 } 
+		command = { trigger = { owned = { province = 1244 data = U87 } } type = secedeprovince which = UCS value = 1244 when = 2 } 
+		command = { trigger = { owned = { province = 1330 data = U87 } } type = secedeprovince which = UCS value = 1330 when = 2 } 
+		command = { trigger = { owned = { province = 1329 data = U87 } } type = secedeprovince which = UCS value = 1329 when = 2 } 
+		command = { trigger = { owned = { province = 1331 data = U87 } } type = secedeprovince which = UCS value = 1331 when = 2 } 
+		command = { trigger = { owned = { province = 1328 data = U87 } } type = secedeprovince which = UCS value = 1328 when = 2 } 
+		command = { trigger = { owned = { province = 1332 data = U87 } } type = secedeprovince which = UCS value = 1332 when = 2 } 
+		command = { trigger = { owned = { province = 1327 data = U87 } } type = secedeprovince which = UCS value = 1327 when = 2 } 
+		command = { trigger = { owned = { province = 1241 data = U87 } } type = secedeprovince which = UCS value = 1241 when = 2 } 
+    } 
+}
+
+event = {
+	id = 1400007543
+	random = no
+	country = U87
+	style = 2
+	
+	trigger = {
+		exists = U87
+		OR = {
+		exists = UCS
+		exists = MEN
+		}
+	}
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "Government Integration"
+	desc = ""
+	picture = "ccip_mukden"
+
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = event which = 1400007542 where = -1 when = 1 }
+		command = { trigger = { exists = MEN } type = make_puppet which = MEN }
+		command = { trigger = { exists = UCS } type = make_puppet which = UCS }
+		command = { type = headofstate which = 1250001 }
+		command = { type = headofgovernment which = 1250002 }
+	}
+}
 
 
 ### 1400009001 - 1400009500 Minister died event
@@ -13421,6 +13992,7 @@ event = {
 	
 	trigger = {
 	minister = 1250001
+	exists = CHI
 	}
 
 	date = { day = 11 month = November year = 1944 }

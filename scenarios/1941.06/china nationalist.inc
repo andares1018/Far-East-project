@@ -53,7 +53,7 @@ country = {
     interventionism   = 8
   }
   headofstate            = { type = 9 id = 55138 } # Lin Sen
-  headofgovernment       = { type = 9 id = 55328 } # Jiang Jieshi
+  headofgovernment       = { type = 9 id = 55002 } # Jiang Jieshi
   foreignminister        = { type = 9 id = 55020 } # Guo Taiqi
   armamentminister       = { type = 9 id = 55008 } # Kong Xiangxi
   ministerofsecurity     = { type = 9 id = 55077 } # Zhou Zhongyue
