@@ -36,7 +36,6 @@
 - Post-war China event
 - Post-war Japan event
 - Japan's Victory (Alternative)
-- Japan in Wartime event
 - Communist China event 
 - Post-war Korean policy (USA and Soviet), Korea event
 - Decolonization of Indochina
@@ -130,7 +129,7 @@
 # 1400000080 CHI - Completion of the Land Reform 
 # 1400000081 CHI - Reorganization of Economic Policies 
 # 1400000082 CHI - Death of Chiang Kai-shek - Alternate
-# 1400000083 CHI - Extraordinary KMT Congress - Alternate
+# 1400000083 CHI - Extraordinary Congress of the Kuomintang - Alternate
 # 1400000084 CHI - Local Warlords leave - Effects of partial defeat #
 # 1400000085 CHI - Minister Resigns - Wang Jingwei (post truce) #
 # 1400000086 CHI - Decision of National Assembly - Constitutional Amendment (Constitutional Crisis) #
@@ -138,29 +137,17 @@
 # 1400000088 CHI - Presidential Election - 3rd Presidential Election (Chiang Dictatorship) #
 # 1400000089 CHI - Extraordinary National Congress (1938)
 # 1400000090 CHI - Resigns of Head of State - Chiang Kai-shek (Constitutional Crisis) #
-# 1400000091 
-# 1400000092 
-# 1400000093 
-# 1400000094 
+# 1400000091 JAP U87 - Japan-China Joint Declaration (1943)
+# 1400000092 USA - New Equal Treaty (Sino-American New Equal Treaty)
+# 1400000093 ENG - New Equal Treaty (Sino-British New Equal Treaty)
+# 1400000094 CHI - New Equal Treaty (OTL - 1943)
 # 1400000095 
 # 1400000096 
 # 1400000097 
 # 1400000098 
 # 1400000099 
-# 1400000100 
-# 1400000101 
-# 1400000102 
-# 1400000103 
-# 1400000104 
-# 1400000105 
-# 1400000106 
-# 1400000107 
-# 1400000108 
-# 1400000109 
-# 1400000110 
-
-
-
+# 1400000100
+ 
 
 ### 1400001001 - 1400001250 : Chinese Warlord
 # 1400001001 U65 - End of the Sichuan conflict #
@@ -210,14 +197,14 @@
 # 1400001166 SIK - Islamic rebellion 
 
 ### 1400001251 - 1400001500 : Border Conflict and War of Resistance
-# 1400001251 JAP - East Hebei Incident 
+# 1400001251 JAP - East Hebei Incident (1935)
 # 1400001252 CHI - East Hebei Incident 
 # 1400001253 CHI - The Government returns to Nanjing 
 # 1400001255 CHI - Military Instability 
 # 1400001254 CHI - Military Reform 
 # 1400001256 JAP - Marco Polo Bridge Incident 
-# 1400001257 CHI - The Great Fire of Changsha 
-# 1400001258 CHI - Wang Jingwei Defects 
+# 1400001257 CHI - The Great Fire of Changsha (1938)
+# 1400001258 CHI - Wang Jingwei Defects (1939)
 # 1400001259 UC4 - Relocation of the Central government 
 # 1400001260 CHI - Relocation of the Central government 
 # 1400001261 CHI - Burma Road Plan 
@@ -231,10 +218,15 @@
 # 1400001269 CHI - Flying Tigers 
 # 1400001270 CHI - Soviet's Support Cease 
 # 1400001271 CHI - Aftermath of the War of Resistance - Post-war 
-# 1400001272 MEN - Suiyuan Campaign 
-# 1400001273 CSX - Battle of Bailingmiao 
+# 1400001272 MEN - Suiyuan Campaign (1935)
+# 1400001273 CSX - Battle of Bailingmiao (1935)
 # 1400001274 CHI - Suiyuan Campaign 
 # 1400001275 
+# 1400001276 
+# 1400001277 
+# 1400001278 
+# 1400001279 
+# 1400001280 
 
 ### 1400001501 - 1400002000 : Communist China
 # 1400001501 CHC - Soviet Organization Integration 
@@ -256,10 +248,10 @@
 # 1400001517 CHC - Direction of Party Renovation 
 # 1400001518 CHC - Party Renovation completed 
 # 1400001519 CHC - Government Reorganization - New Democratic Revolution
-# 1400001520 CHC - 7th National Congress 
+# 1400001520 CHC - 7th National Congress (1945)
 # 1400001521 CHC - People's Political Consultative Conference #
-# 1400001522 CHC - 
-# 1400001523 CHC - 
+# 1400001522 CHC - Common Program #
+# 1400001523 CHC - Land Reform Movement #
 # 1400001524 CHC - 
 # 1400001525 CHC - 
 # 1400001526 CHC - 
@@ -378,9 +370,9 @@
 # 1400003013 JAP - Non-aggression Pact with China #
 # 1400003014 CHI - Negotiation Breakdown #
 # 1400003015 JAP - Negotiation Breakdown #
-# 1400003016 JAP - Agreement with East Indies #
-# 1400003017 U05 - Japan's proposal for agreement #
-# 1400003018 JAP - Hart-Ishizawa Agreement #
+# 1400003016 
+# 1400003017 
+# 1400003018 
 # 1400003019 
 # 1400003020 
 
@@ -401,12 +393,6 @@
 # 1400003762 
 # 1400003763 
 # 1400003764 
-# 1400003765 
-# 1400003766 
-# 1400003767 
-# 1400003768 
-# 1400003769 
-# 1400003770 
 
 ### 1400004001 - 1400004500 : Japan alternate3(Kodoha Coup) - under discussion
 # 1400004001 JAP - Araki's Decision #
@@ -537,7 +523,7 @@
 # 1400006025 USA - Opposition from Korean Nationalists #
 # 1400006026 USA - Results of the Governing Commission's Plan #
 # 1400006027 KOR - General Election #
-# 1400006028 KOR - Formation of the Constituent National Assembly #
+# 1400006028 KOR - Constituent National Assembly #
 # 1400006029 KOR - Presidential Election #
 # 1400006030 USA CHI CHC SOV - Transfer of Administrative in Korea #
 # 1400006031 KOR - Transfer of Administrative Authority #
@@ -559,27 +545,6 @@
 # 1400006047 
 # 1400006048 
 # 1400006049 
-# 1400006050 
-# 1400006051 
-# 1400006052 
-# 1400006053 
-# 1400006054 
-# 1400006055 
-# 1400006056 
-# 1400006057 
-# 1400006058 
-# 1400006059 
-# 1400006060 
-# 1400006061 
-# 1400006062 
-# 1400006063 
-# 1400006064 
-# 1400006065 
-# 1400006066 
-# 1400006067 
-# 1400006068 
-# 1400006069 
-# 1400006070 
 
 ### 1400006501 - 1400007000 : Indonesia and East Indies
 # 1400006501 
@@ -601,20 +566,6 @@
 # 1400006517 
 # 1400006518 
 # 1400006519 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 # 
 # 
 # 
@@ -647,24 +598,7 @@
 # 
 # 
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+
 
 ### 1400007501 - 1400008000 : Japanese puppet state
 # 1400007501 JAP - Investing in Manchuria 
@@ -691,35 +625,25 @@
 # 1400007533 UCS - Establish of collaboration government 
 # 1400007534 JAP - Collaboration with Wang Jingwei 
 # 1400007535 U87 - Establish of collaboration government 
-# 1400007536 U87 - Discussion of National Assembly (1940?) #
-# 1400007537 U87 - Holding National Assembly (what if?) # 
-# 1400007538 U87 - Unification National Assembly (Post-war) #
-# 1400007539 U87 - Fate of the KMT remnants #
-# 1400007540 U87 - Constitutional Discussion #
-# 1400007541 U87 - Constituent National Assembly #
+# 1400007536 U87 - Discussion of National Assembly (1940?) 
+# 1400007537 U87 - Holding National Assembly (what if?) 
+# 1400007538 U87 - Unification National Assembly (Post-war, RNG National Assembly) 
+# 1400007539 U87 - Fate of the Kuomintang remnants 
+# 1400007540 U87 - Constitutional Discussion (RNG National Assembly) 
+# 1400007541 U87 - Constituent National Assembly (Post-war) 
 # 1400007542 U87 - Limits of Sovereignty 
 # 1400007543 U87 - Government Integration (Northern China, Inner Mongolia) 
+# 1400007544 U87 - New National government Proclaimed (favor of Wang Jingwei?)
+# 1400007545 JAP - Negotiations with Wang Jingwei 
+# 1400007546 U87 - National Congress of the Kuomintang (Post-war) 
+# 1400007547 U87 - Return of Concessions
+# 1400007548 
+# 1400007549 
 # 
 # 
 # 
 
 ### 1400008001 - 1400008500 : India and Burma
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 # 
 # 
 # 
@@ -796,7 +720,7 @@
 
 # 1400009250 KOR - Yeo Un-hyong (1947?) - Assassinated 
 # 1400009251 KOR - Jang Deok-su (1947?) - Assassinated #
-
+# 1400009251 KOR - Kim Gu (1949?) - Assassinated #
 
 #KIA list
 # 1400009400 CHI - Sa Shijun (1938 - KIA) (by JAP) #
@@ -830,7 +754,7 @@
 # 1400009514 USA - 1960 Republican National Convention #
 # 1400009515 USA - Boulder Dam Completed - TRP event #
 # 1400009516 USA - Public Works Administration - WiF event #
-# 
+# 1400009517 USA - Racial Riots in Detroit - WiF event #
 # 
 # 
 # 
@@ -875,57 +799,11 @@
 # 
 # 
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+
 
 ### 1400011001 - 1400012000 - World event (Alternate)
 # USA CAN - Liberation of Britain #
 # ENG - Liberation of Britain #
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 # 
 # 
 # 

@@ -1,7 +1,7 @@
 #Thank you for testing this MOD - to EndWorld318, KielceofIron, SluzavyBlin, Yuuka, Mede
 
 ### China
-# thanks for Sun, Willem VI, Ken HK, Gern Park, Agatha, Vanish, king_elessar, vanguard7615
+# thanks for Sun, Willem VI, Ken HK, Gern Park, Agatha, Vanish, king_elessar, vanguard7615, MoonJic
 #Nationalist China
 
 event = {
@@ -2305,7 +2305,7 @@ event = {
 	random = no
 	country = CHI 
 	name = "legislative Election" # 3 years later 
-	desc = "EVT_1400000068_DESC" 
+	desc = "EVT_CHI_Legislative_DESC" 
 	style = 2
 	save_date = yes
 	picture = "election_time"
@@ -2346,7 +2346,7 @@ event = {
 	random = no
 	country = CHI
 	name = "legislative Election" # 6 years later 
-	desc = "EVT_1400000068_DESC"
+	desc = "EVT_CHI_Legislative_DESC"
 	style = 2
 	save_date = yes
 	picture = "election_time"
@@ -2389,7 +2389,7 @@ event = {
 	random = no
 	country = CHI
 	name = "legislative Election" # 9 years later 
-	desc = "EVT_1400000068_DESC"
+	desc = "EVT_CHI_Legislative_DESC"
 	style = 2
 	save_date = yes
 	picture = "election_time"
@@ -2432,7 +2432,7 @@ event = {
 	random = no
 	country = CHI
 	name = "legislative Election" # 12 years later 
-	desc = "EVT_1400000068_DESC"
+	desc = "EVT_CHI_Legislative_DESC"
 	style = 2
 	save_date = yes
 	picture = "election_time"
@@ -2475,7 +2475,7 @@ event = {
 	random = no
 	country = CHI
 	name = "legislative Election" # 15 years later 
-	desc = "EVT_1400000068_DESC"
+	desc = "EVT_CHI_Legislative_DESC"
 	style = 2
 	save_date = yes
 	picture = "election_time"
@@ -2518,7 +2518,7 @@ event = {
 	random = no
 	country = CHI
 	name = "National Assembly Election" # 6 years later
-	desc = ""
+	desc = "EVT_CHI_National_Assembly_DESC"
 	style = 2
 	picture = "China_National Assembly"
 	one_action = yes
@@ -2559,7 +2559,7 @@ event = {
 	random = no
 	country = CHI
 	name = "National Assembly Election" # 12 years later
-	desc = ""
+	desc = "EVT_CHI_National_Assembly_DESC"
 	style = 2
 	picture = "China_National Assembly"
 	one_action = yes
@@ -2599,7 +2599,7 @@ event = {
 	random = no
 	country = CHI
 	name = "National Assembly Election"
-	desc = ""
+	desc = "EVT_CHI_National_Assembly_DESC"
 	style = 2
 	picture = "China_National Assembly"
 	one_action = yes
@@ -2724,7 +2724,7 @@ event = {
 	random = no
 	country = CHI
 
-	name = "Extraordinary KMT Congress"
+	name = "Extraordinary Congress of the Kuomintang"
 	desc = ""
 	style = 2
 	picture = "ccip_gmd"
@@ -2757,12 +2757,205 @@ event = {
 	style = 2
 	picture = "ccip_gmd"
 	action = {
-		name = "National unity is inevitable"
+		name = "National Unity is inevitable"
 		ai_chance = 100
 		command = { type = dissent value = -5 } 
 		command = { type = domestic which = freedom value = 1 }
 	}
 }
+
+event = {
+	id = 1400000091
+	random = no
+	TAG = { JAP U87 }
+	name = "Japan-China Joint Declaration" #日華共同宣言
+	desc = ""
+	style = 2
+	picture = "ccip_gz"
+
+	trigger = {	
+		exists = U87
+		OR = {
+		and = {
+		exists = CHI
+		war = { country = JAP country = CHI }
+		year = 1943
+			}
+		and = {
+		NOT = { exists = CHI }
+		NOT = { war = { country = JAP country = CHI } }
+			}
+		}
+		NOT = {
+		event = 2012004
+		event = 2011017
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "This is necessary for each other"
+		command = { type = trigger which = 1400000092 }
+		command = { trigger = { country = JAP } type = belligerence which = JAP value = -5 }
+		command = { type = domestic which = interventionism value = 1 } 
+	}
+}
+
+event = {
+	id = 1400000092
+	random = no
+	country = USA
+
+	decision = {
+			exists = CHI
+		NOT = {
+			ispuppet = CHI
+			}
+		NOT = {
+			war = { country = ENG country = CHI }
+			war = { country = USA country = CHI }
+		}
+			OR = {
+			and = {
+				event = 1400000091 #Japan-China Joint Declaration
+				exists = U87
+				}
+			and = {
+				NOT = { event = 1400000091 }
+				NOT = { exists = U87 }
+				OR = {
+				event = 2012004 #The Fading Sun
+				event = 2011041 #Japan surrenders
+				}
+			}
+		}
+	}
+			
+	decision_trigger = { 
+			OR = {
+			and = {
+				event = 140000001
+				exists = U87
+				NOT = { event = 2012004 }
+				war = { country = JAP country = CHI }
+				}
+			and = {
+				NOT = { event = 1400000091 }
+				NOT = { exists = U87 }
+				OR = {
+				event = 2012004 #The Fading Sun
+				event = 2011041 #Japan surrenders
+				}
+			}
+		}
+	}
+	
+	trigger = {
+			exists = CHI
+		NOT = {
+			ispuppet = CHI
+			}
+		NOT = {
+			war = { country = ENG country = CHI }
+			war = { country = USA country = CHI }
+		}
+			OR = {
+			and = {
+				event = 1400000091
+				exists = U87
+				NOT = { event = 2012004 }
+				war = { country = JAP country = CHI }
+				}
+			and = {
+				NOT = { event = 1400000091 }
+				NOT = { exists = U87 }
+				OR = {
+				event = 2012004 #The Fading Sun
+				event = 2011041 #Japan surrenders
+				}
+			}
+		}
+	}
+
+	name = "New Equal Treaty" #中美平等新約 (Sino-American New Equal Treaty)
+	desc = ""
+	style = 2
+	picture = "diplomatic_campaign"
+	decision_picture = "decision_diplomatic_campaign"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "We need to establish new relationship with China" 
+		command = { type = trigger which = 1400000094 }
+		command = { trigger = { NOT = { war = { country = ENG country = USA } } } type = trigger which = 1400000093 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = CHI value = 50 }
+		command = { type = relation which = CHC value = 25 }
+		command = { type = relation which = CGX value = 50 }
+		command = { type = relation which = CXB value = 50 }
+		command = { type = relation which = CYN value = 50 }
+		command = { type = relation which = CSX value = 50 }
+		command = { type = relation which = U38 value = 50 }
+		command = { type = relation which = U63 value = 50 }
+		command = { type = relation which = U64 value = 50 }
+		command = { type = relation which = U65 value = 50 }
+		command = { type = relation which = U66 value = 50 }
+		command = { type = belligerence which = USA value = -2 } #The American-led order, it is irrevocable
+	}
+}
+
+event = {
+	id = 1400000093
+	random = no
+	country = ENG
+
+	name = "New Equal Treaty" #中英平等新約 (Sino-British New Equal Treaty)
+	desc = ""
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action = {
+		name = "This is necessary for relations with China"
+		command = { type = relation which = CHI value = 50 }
+		command = { type = relation which = CHC value = 25 }
+		command = { type = belligerence which = ENG value = -2 }
+	}
+}
+
+event = {
+	id = 1400000094
+	random = no
+	country = CHI
+
+	name = "New Equal Treaty"
+	desc = ""
+	style = 2
+	picture = "diplomatic_campaign"
+
+	action = {
+		name = "ACTION_NAME_HURRAH"
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = U01 value = 50 }
+		command = { type = relation which = U02 value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = dissent value = -5 }
+		command = { type = belligerence which = CHI value = -5 }
+		command = { type = domestic which = interventionism value = 1 }
+		
+	}
+}
+
+
+
+
 
 ### Chinese Warlord
 
@@ -2930,7 +3123,7 @@ event = {
 		name = "yes, let's get the opposition"
 		command = { type = trigger which = 1400001010 }
 		command = { trigger = { exists = CGX } type = event which = 1400001009 when = 0 where = CGX }
-		command = { type = event which = 1400001009 when = 0 where = U63  }
+		command = { type = event which = 1400001009 when = 0 where = U63 }
 	}
 	action_b = {
 		ai_chance = 10
@@ -4214,18 +4407,12 @@ event = {
 	
 	action = {
 		name = "Send them" 
-		ai_chance = 90
+		ai_chance = 100
 		command = { type = supplies value = -500 }
  		command = { type = relation which = CHI value = 10 }
  		command = { type = relation which = JAP value = -10 }
  		command = { type = trigger which = 3123075 }
 		command = { type = access which = CHI }
-		}
-	action = {
-		name = "We must remain neutral" 
-		ai_chance = 10
- 		command = { type = relation which = CHI value = -10 }
- 		command = { type = relation which = JAP value = 10 }
 		}
 }
 
@@ -7626,7 +7813,7 @@ event = {
 	action = {
 		ai_chance = 10
 		name = "Support Imperial Way Faction(Kodoha) "
-		command = { trigger = { ai = no } type = dissent value = 4} #Masaki Jinzaburo
+		command = { trigger = { ai = no } type = dissent value = 2 } #Masaki Jinzaburo
 		command = { type = chiefofarmy which = 50343 }
 		command = { type = local_setflag which = Kodoha_support when = 1 value = 3 }
 		command = { type = setflag which = Kodoha_support }
@@ -8717,13 +8904,6 @@ event = {
 		command = { type = trigger which = 1400003004 }
 		command = { type = end_trades which = JAP where = USA }
 	}
-	action = {
-		ai_chance = 0
-		name = "Shouldn't provoke them"
-		command = { type = domestic which = interventionism value = -1 }
-		command = { type = relation which = CHI value = -20 }
-		command = { type = relation which = JAP value = 20 }
-	}
 }
 
 event = {
@@ -8829,9 +9009,13 @@ event = {
 		command = { trigger = { ai = no } type = money value = -100 }
 		command = { type = domestic which = interventionism value = 1 }
 		command = { type = relation which = HOL value = -20 }
+		command = { type = relation which = U05 value = -50 }
 		command = { type = relation which = AST value = -20 }
+		command = { type = relation which = NZL value = -20 }
 		command = { type = relation which = FRA value = -20 }
 		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = U02 value = -50 }
+		command = { type = relation which = U03 value = -50 }
 	}
 }
 
@@ -9287,7 +9471,7 @@ event = {
 
 	action = {
 		ai_chance = 100
-		name = "ELECT_1"
+		name = "What will happen to the new government?"
 		command = { type = set_domestic which = democratic value = 7 } 
 		command = { type = set_domestic which = political_left value = 3 }
 		command = { type = headofstate which = 50005 } 
@@ -11825,7 +12009,7 @@ event = {
 	}
 
 	name = "Manchurian Offensive operation"
-	desc = ""
+	desc = "EVT_1400007251_DESC"
 	style = 2
 	picture = "invasion_of_manchuria"
 	decision_picture = "decision_grand_offensive3"
@@ -11872,7 +12056,7 @@ event = {
 	}
 
 	name = "Withdrawal from North China"
-	desc = ""
+	desc = "EVT_1400007252_DESC"
 	style = 2
 	picture = "soviet_reinforcements"
 
@@ -11934,9 +12118,9 @@ event = {
 	}
 }
 
-### 1400007501 - 1400008000 : Japanese puppet state
+### 1400007501 - 1400008000 : Japanese puppet state - thanks for MoonJic, Fischer
 
-#Manchurian Development - thanks for Fischer
+#Manchurian Development
  event = {
      id = 1400007501
      random = no
@@ -13089,7 +13273,7 @@ event = {
 	}
 
 	name = "Collaboration with Wang Jingwei"
-	desc = ""
+	desc = "EVT_1400007534_DESC"
 	style = 2
 	picture = "ccip_wjw"
 
@@ -13130,7 +13314,209 @@ event = {
 		command = { type = chiefofarmy which = 1250027 }
 		command = { type = chiefofair which = 1250033 }
 		command = { type = chiefofnavy which = 1250031 }
-		command = { type = event which = 1400007543 where = U87 when = 7 }
+		command = { type = event which = 1400007545 where = JAP when = 1 }
+		
+	}
+}
+
+event = {
+	id = 1400007536
+	random = no
+	country = U87
+	style = 2
+
+	name = "Discussion of National Assembly"
+	desc = ""
+	picture = "ccip_gmd"
+
+	trigger = { 
+	exists = U87 
+	}
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = December year = 1963 }
+
+	action = {
+		trigger = { 
+		OR = {
+			exists = UCS
+			exists = CHI
+			}
+		}
+		ai_chance = 80
+		name = "It's still too early..."
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+	action = {
+		ai_chance = 20
+		name = "New National Assembly is needed"
+		command = { trigger = { exists = CHI } type = event which = 1400007537 where = U87 when = 30 }
+		command = { type = dissent value = 2 }
+		command = { type = setflag which = RNG_Assembly }
+	}
+}
+
+event = {
+	id = 1400007537
+	random = no
+	country = U87
+
+	name = "Holding National Assembly"
+	desc = ""
+	style = 2
+	picture = "ccip_mus"
+
+	action = {
+		name = "This will be the foundation for new government"
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+
+event = {
+	id = 1400007538
+	random = no
+	country = U87
+	name = "Unification National Assembly"
+	desc = ""
+	style = 2
+	picture = "ccip_mus"
+
+	trigger = {	
+		event = 1400007536
+		OR = {
+		owned = { province = 1247 data = -3 }
+		owned = { province = 1369 data = -3 }
+		}
+		owned = { province = 1337 data = -3 }
+		owned = { province = 1299 data = -3 }
+		OR = {
+		flag = RNG_Assembly
+		event = 1400007537
+		}
+		NOT = {
+		exists = CHI
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "Road to Unification"
+		command = { type = headofstate which = 1250001 }
+		command = { type = headofgovernment which = 1250002 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 1400007539
+	random = no
+	country = U87
+	name = "Fate of the Kuomintang remnants"
+	desc = ""
+	style = 2
+	picture = "ccip_gmd"
+
+	trigger = {	
+		event = 1400007546
+		NOT = {
+		exists = CHI
+		}
+		NOT = {
+		flag = RNG_Assembly
+		event = 1400007538
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "They are also members of the Kuomintang" 
+		ai_chance = 70
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = freedom value = 2 }
+	}
+	action = {
+		name = "They are rather threat to us"
+		ai_chance = 30
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+event = {
+	id = 1400007540
+	random = no
+	country = U87
+	name = "Constitutional Discussion"
+	desc = ""
+	style = 2
+	picture = "China_National Assembly"
+
+	trigger = {	
+		event = 1400007546
+		OR = {
+		event = 1400007538
+		event = 1400007539
+		}
+		NOT = {
+		exists = CHI
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "Let's keep the existing draft" 
+		ai_chance = 60
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+	action = {
+		name = "New draft needs to be formed"
+		ai_chance = 40
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+event = {
+	id = 1400007541
+	random = no
+	country = U87
+	name = "Constituent National Assembly"
+	desc = ""
+	style = 2
+	picture = "ccip_gmd"
+
+	trigger = {	
+		event = 1400007546
+		event = 1400007540
+		NOT = {
+		exists = CHI
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "This will ensure legitimacy" 
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = 1 }
 	}
 }
 
@@ -13142,11 +13528,11 @@ event = {
 
 	name = "Limits of Sovereignty"
 	desc = ""
-	picture = "fail_of_china"
+	picture = "ccip_gmd"
 
 	action = {
 		name = "ACTION_NAME_DAMN" 
-		command = { type = dissent value = 10 }
+		command = { type = dissent value = 20 }
 		command = { trigger = { control = { province = 1241 data = U87 } } type = control which = UCS value = 1241 when = 2 } 
 		command = { trigger = { control = { province = 1245 data = U87 } } type = control which = UCS value = 1245 when = 2 } 
 		command = { trigger = { control = { province = 1250 data = U87 } } type = control which = UCS value = 1250 when = 2 } 
@@ -13193,18 +13579,6 @@ event = {
 	random = no
 	country = U87
 	style = 2
-	
-	trigger = {
-		exists = U87
-		OR = {
-		exists = UCS
-		exists = MEN
-		}
-	}
-
-	date = { day = 0 month = january year = 1933 }
-	offset = 5
-	deathdate = { day = 29 month = december year = 1999 }
 
 	name = "Government Integration"
 	desc = ""
@@ -13220,6 +13594,117 @@ event = {
 		command = { type = headofgovernment which = 1250002 }
 	}
 }
+
+event = {
+	id = 1400007544
+	random = no
+	country = U87
+
+	name = "New National government Proclaimed"
+	desc = ""
+	style = 2
+	picture = "ccip_mus"
+
+	action = {
+		name = "ACTION_NAME_HURRAH"
+		command = { trigger = { exists = MEN } type = make_puppet which = MEN }
+		command = { trigger = { exists = UCS } type = inherit which = UCS value = 1 }
+		command = { type = headofstate which = 1250001 }
+		command = { type = headofgovernment which = 1250002 }
+	}
+}
+
+event = {
+	id = 1400007545
+	random = no
+	country = JAP
+
+	name = "Negotiations with Wang Jingwei"
+	desc = ""
+	style = 2
+	picture = "ccip_wjw"
+
+	action = {
+		trigger = { 
+			exists = UCS
+		}
+		ai_chance = 90
+		name = "North China's autonomy must be guaranteed"
+		command = { type = event which = 1400007544 where = U87 when = 7 } #Government Integration (Northern China, Inner Mongolia)
+		command = { type = relation which = U87 value = -50 }
+	}
+	action = {
+		ai_chance = 10
+		name = "China needs Unified government"
+		command = { type = event which = 1400007543 where = U87 when = 7 } #Establishment of National government
+		command = { type = relation which = USA value = -100 }
+		command = { type = belligerence which = JAP value = -5 }	
+	}
+}
+
+event = {
+	id = 1400007546
+	random = no
+	country = U87
+	name = "National Congress of the Kuomintang"
+	desc = ""
+	style = 2
+	picture = "ccip_mus"
+
+	trigger = {	
+		event = 1400007536
+		OR = {
+		owned = { province = 1247 data = -3 }
+		owned = { province = 1369 data = -3 }
+		}
+		owned = { province = 1337 data = -3 }
+		owned = { province = 1299 data = -3 }
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "ACTION_NAME_HURRAH"
+		command = { trigger = { minister = 1250001 } type = headofstate which = 1250001 }
+		command = { trigger = { NOT = { minister = 1250001 } } type = headofstate which = 1250003 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 1400007547
+	random = no
+	country = U87
+	name = "Return of Concessions"
+	desc = ""
+	style = 2
+	picture = "Shanghai2"
+
+	trigger = {	
+		event = 1400000091 #Japan-China Joint Declaration
+		random = 25
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "ACTION_NAME_HURRAH"
+		command = { type = dissent value = -5 }
+		command = { trigger = {	control = { province = 1337 data = -3 } } type = construct which = ic where = 1337 value = 1 }
+		command = { trigger = {	control = { province = 1338 data = -3 } } type = construct which = ic where = 1338 value = 1 }
+		command = { trigger = {	control = { province = 1317 data = -3 } } type = construct which = ic where = 1317 value = 1 }
+		command = { trigger = {	control = { province = 1369 data = -3 } } type = construct which = ic where = 1369 value = 1 }
+		
+		command = { type = relation which = ITA value = 50 }
+		command = { type = relation which = FRA value = 50 }
+	}
+}
+
 
 
 ### 1400009001 - 1400009500 Minister died event
@@ -14998,15 +15483,15 @@ event = {
 		command = { type = domestic which = interventionism value = 1 }
 		command = { type = alliance_leader which = USA where = 0 }
 		command = { type = dissent value = -5 }
-		command = { type = relation which = CAN value = 100 }
-		command = { type = relation which = CHI value = 100 }
-		command = { type = relation which = ENG value = 100 }
-		command = { type = relation which = SOV value = 100 }
-		command = { type = relation which = U01 value = 100 }
-		command = { type = relation which = AST value = 100 }
-		command = { type = relation which = NZL value = 100 }
-		command = { type = relation which = U02 value = 100 }
-		command = { type = relation which = CHC value = 50 }
+		command = { type = relation which = CAN value = 50 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = U01 value = 50 }
+		command = { type = relation which = AST value = 50 }
+		command = { type = relation which = NZL value = 50 }
+		command = { type = relation which = U02 value = 25 }
+		command = { type = relation which = CHC value = 10 }
 		command = { type = relation which = BRA value = 50 }
 		command = { type = relation which = MEX value = 50 }
 	}

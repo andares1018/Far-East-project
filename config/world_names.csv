@@ -109,7 +109,7 @@ NIC;Nicaragua;Nicaragua;Nicaragua;Nicaragua;Nicaragua;Nikaragua;;Никарагуа;;;X
 NIG;Nigeria;Nigйria;Nigeria;Nigeria;Nigeria;Nigeria;;Нигерия;;;X
 NOR;Norway;Norvиge;Norvegia;Noruega;Norwegen;Norwegia;;Норвегия;;;X
 NZL;New Zealand;Nlle-Zйlande;Nuova Zelanda;Nueva Zelanda;Neuseeland;Nowa Zelandia;;Новая Зеландия;;;X
-OMN;Oman;Oman;Oman;Omбn;Oman;Oman;;Оман;;;X
+OMN;Muscat and Oman;Oman;Oman;Omбn;Oman;Oman;;Оман;;;X
 OTT;Ottoman Empire;Empire Ottoman;Impero Ottomano;Imperio Otomano;Osmanisches Reich;Imperium Osmaсskie;;Османская Империя;;;X
 PAK;Pakistan;Pakistan;Pakistan;Pakistбn;Pakistan;Pakistan;;Пакистан;;;X
 PAL;Palestine;Palestine;Palestina;Palestina;Palдstina;Palestyna;;Палестина;;;X
@@ -179,7 +179,7 @@ U09;Austria-Hungary;Autriche-Hongrie;Austria-Ungheria;Austria-Hungrнa;Цsterreich
 U10;Dutch Socialist Union;Union socialiste Hollandaise;Unione Socialista Olandese;Uniуn Socialista Holandesa;Niederlдndische Sozialistische Union;Holenderski Zwi№zek Socjalistyczny;;Голландский Социалистический Союз;;;X
 U11;People's Republic of France;Rйpublique populaire de France;Repubblica Popolare Francese;Repъblica Popular Francesa;Volksrepublik Frankreich;Francuska Republika Ludowa;;Французская Народная Республика;;;X
 U12;English Republic;Rйpublique d'Angleterre;Repubblica d'Inghilterra;Repъblica Inglesa;Englische Republik;Republika Angielska;;Английская Республика;;;X
-U13;Hungarian Socialist Republic;Rйpublique socialiste de Hongrie;Repubblica Socialista d'Ungheria;Repъblica Socialista de Hungrнa;Ungarische Sozialistische Republik;Wкgierska Republika Socjalistyczna;;Венгерская Народная Республика;;;X
+U13;Hungarian People's Republic;Rйpublique socialiste de Hongrie;Repubblica Socialista d'Ungheria;Repъblica Socialista de Hungrнa;Ungarische Sozialistische Republik;Wкgierska Republika Socjalistyczna;;Венгерская Народная Республика;;;X
 U14;Italian Union;Union Italienne;Unione Italiana;Uniуn Italiana;Italienische Union;Zwi№zek Wіoski;;Итальянский Союз;;;X
 U15;Socialist Republic of Portugal;Rйpublique socialiste du Portugal;Repubblica Socialista del Portogallo;Repъblica Socialista de Portugal;Sozialistische Republik Portugal;Portugalska Republika Socjalistyczna;;Социалистическая Республика Португалия;;;X
 U16;Austrian Democratic Republic;Rйpublique dйmocratique d'Autriche;Repubblica Democratica Austriaca;Repъblica Democrбtica de Austria;Цsterreichsche Demokratische Republik;Austriacka Republika Demokratyczna;;Демократическая Республика Австрия;;;X
@@ -193,11 +193,11 @@ U23;Saarprotektorat;Protectorat de la Sarre;Protettorato della Saar;Protectorado
 U24;Allied Occupation Zone;Zone d'occupation alliйe;Zona d'occupazione alleata;Zona de Ocupaciуn Aliada;Allierte Besatzungszone;Aliancka strefa okupacyjna;;Зона оккупации Союзников;;;X
 U25;Soviet Occupation Zone;Zone d'occupation soviйtique;Zona d'occupazione sovietica;Zona de Ocupaciуn Soviйtica;Sowjetische Besatzungszone;Radziecka strefa okupacyjna;;Советская оккупационная зона;;;X
 U26;Swiss Socialist Republic;Rйpublique socialiste de Suisse;Repubblica Socialista Svizzera;Repъblica Socialista de Suiza;Sozialistische Republik Schweiz;Szwajcarska Republika Socjalistyczna;;Социалистическая Республика Швейцария;;;X
-U27;Socialist Federal Republic of Yugoslavia;Rйpublique socialiste fйdйrale de Yougoslavie;Repubblica Socialista Federale di Jugoslavia;Repъblica Federal Socialista de Yugoslavia;Sozialistische Fцderative Republik Jugoslawien;Socjalistyczna Federacja Jugosіawii;;Социалистическая Федеративная Республика Югославия;;;X
-U28;Socialist People's Republic of Albania;Rйpublique populaire socialiste d'Albanie;Repubblica Popolare Socialista d'Albania;Repъblica Popular Socialista de Albania;Sozialistische Volksrepublik Albanien;Albaсska Republika Ludowa;;Народная Социалистическая Республика Албания;;;X
+U27;Federal People's Republic of Yugoslavia;Rйpublique socialiste fйdйrale de Yougoslavie;Repubblica Socialista Federale di Jugoslavia;Repъblica Federal Socialista de Yugoslavia;Sozialistische Fцderative Republik Jugoslawien;Socjalistyczna Federacja Jugosіawii;;Социалистическая Федеративная Республика Югославия;;;X
+U28;People's Republic of Albania;Rйpublique populaire socialiste d'Albanie;Repubblica Popolare Socialista d'Albania;Repъblica Popular Socialista de Albania;Sozialistische Volksrepublik Albanien;Albaсska Republika Ludowa;;Народная Социалистическая Республика Албания;;;X
 U29;People's Republic of Bulgaria;Rйpublique populaire de Bulgarie;Repubblica Popolare di Bulgaria;Repъblica Popular de Bulgaria;Volksrepublik Bulgarien;Buіgarska Republika Ludowa;;Народная Республика Болгария;;;X
 U30;Romanian People's Republic;Rйpublique populaire de Roumanie;Repubblica Popolare di Romania;Repъblica Socialista de Rumania;Sozialistische Republik Rumдnien;Rumuсska Republika Socjalistyczna;;Социалистическая Республика Румыния;;;X
-U31;Czechoslovak Socialist Republic;Rйpublique socialiste de Tchйcoslovaquie;Repubblica Socialista Cecoslovacca;Repъblica Socialista de Checoslovaquia;Tschechoslowakische Sozialistische Republik;Czechosіowacka Republika Ludowa;;Чехословацкая Социалистическая Республика;;;X
+U31;Czechoslovak Republic;Rйpublique socialiste de Tchйcoslovaquie;Repubblica Socialista Cecoslovacca;Repъblica Socialista de Checoslovaquia;Tschechoslowakische Sozialistische Republik;Czechosіowacka Republika Ludowa;;Чехословацкая Социалистическая Республика;;;X
 U32;People's Republic of Poland;Rйpublique populaire de Pologne;Repubblica Popolare di Polonia;Repъblica Popular de Polonia;Volksrepublik Polen;Polska Rzeczpospolita Ludowa;;Польская Народная Республика;;;X
 U33;Democratic Republic of Greece;Rйpublique dйmocratique de Grиce;Repubblica Democratica di Grecia;Repъblica Democrбtica de Grecia;Demokratische Republik Griechenland;Grecka Republika Demokratyczna;;Демократическая Республика Греция;;;X
 U34;Socialist Republic of Turkey;Rйpublique socialiste de Turquie;Repubblica Socialista di Turchia;Repъblica Socialista de Turquнa;Sozialistische Republik Tьrkei;Turecka Republika Socjalistyczna;;Социалистическая Республика Турция;;;X
@@ -281,7 +281,7 @@ UPR;Turkistan;;;;;;;;;;X
 UPS;Hami;;;;;;;;;;X
 URO;Roma;Rome;Repubblica Socialista Romana;Roma;Rцmische Sozialrepublik;Paсstwo Rzymskie;;Рим;;;X
 USN;USNA;EUAN;Stati Uniti del Nord America;EE.UU.;USNA;USNA;;САСШ;;;X
-UTC;Volunteer Army;Armйe des volontaires;Armata dei Volontari;Ejйrcito de Voluntarios;Freiwilligenarmee;Armia Ochotnicza;;Добровольческая армия;;;X
+UTC;Russian Volunteer Army;Armйe des volontaires;Armata dei Volontari;Ejйrcito de Voluntarios;Freiwilligenarmee;Armia Ochotnicza;;Добровольческая армия;;;X
 UTL;;;;;;;;;;;X
 UTO;;;;;;;;;;;X
 #EOF;;;;;;;;;;;X
