@@ -101,7 +101,7 @@
 # 1400000052 CHI - Change of Head of State - Chiang kai-shek 
 # 1400000053 CHI - Second Currency Reform - Post Civil War 
 # 1400000054 CHI - Industrial production is Recovered - Post War 
-# 1400000055 CHI - Request for transport ship support - Post war 
+# 1400000055 CHI - Request for transport ship - Post war 
 # 1400000056 USA - China's request for transport ship - 2nd CCW submod 
 # 1400000057 CHI - Dispatch of transport ship 
 # 1400000058 CHC - Retreat of Nationalists 
@@ -141,9 +141,9 @@
 # 1400000092 USA - New Equal Treaty (Sino-American New Equal Treaty)
 # 1400000093 ENG - New Equal Treaty (Sino-British New Equal Treaty)
 # 1400000094 CHI - New Equal Treaty (OTL - 1943)
-# 1400000095 
-# 1400000096 
-# 1400000097 
+# 1400000095 CHI - Rural Reconstruction Movement 
+# 1400000096 CHI - Fate of the Liberal opposition #
+# 1400000097 CHI - Fate of the Leftist opposition #
 # 1400000098 
 # 1400000099 
 # 1400000100
@@ -195,6 +195,8 @@
 # 1400001164 UPS - Retreat to the Southeast 
 # 1400001165 SIK - Southern Expedition 
 # 1400001166 SIK - Islamic rebellion 
+# 1400001167 SIK - Eight-Point Manifesto #
+# 1400001168 
 
 ### 1400001251 - 1400001500 : Border Conflict and War of Resistance
 # 1400001251 JAP - East Hebei Incident (1935)
@@ -250,13 +252,13 @@
 # 1400001519 CHC - Government Reorganization - New Democratic Revolution
 # 1400001520 CHC - 7th National Congress (1945)
 # 1400001521 CHC - People's Political Consultative Conference #
-# 1400001522 CHC - Common Program #
-# 1400001523 CHC - Land Reform Movement #
-# 1400001524 CHC - 
-# 1400001525 CHC - 
-# 1400001526 CHC - 
-# 1400001527 CHC - 
-# 1400001528 CHC - 
+# 1400001522 CHC - Common Program (1949) #
+# 1400001523 CHC - Land Reform Policy #
+# 1400001524 CHC - Land Reform Movement #
+# 1400001525 CHC - Agricultural Collectivisation # 
+# 1400001526 CHC - Defectors from Nationalists #
+# 1400001527 CHC - Expanding the United Front? #
+# 1400001528 CHC - Fate of the Democratic opposition #
 # 1400001529 CHC - 
 # 1400001530 CHC - 
 
@@ -304,8 +306,8 @@
 # 1400002007 JAP - Colonial Recruitment program 
 # 1400002008 JAP - Restore of Active-Duty Officers Law (Military Ministers to be Active-Duty Officers Law) 
 # 1400002009 JAP - Controversy in Parliament 
-# 1400002010 JAP - Government Under Fire 
-# 1400002011 JAP - The Cabinet Resigns - New Cabinet Government - Hayashi (2500037) 
+# 1400002010 JAP - Government Under Fire - New Cabinet Government - Hayashi (2500037) 
+# 1400002011 JAP - The Cabinet Resigns - Hayashi 
 # 1400002012 JAP - New Cabinet Government - 1st Konoe Cabinet(1937) 
 # 1400002013 JAP - National Mobilization Law 
 # 1400002014 JAP - Collaborators within Established parties 

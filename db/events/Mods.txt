@@ -823,8 +823,8 @@ event = {
 		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55376 } type = headofgovernment which = 55376 } #Yan Xishan
 		command = { trigger = { minister = 55014 } type = foreignminister which = 55014 } 
 		command = { trigger = { NOT = { minister = 55014 } } type = foreignminister which = 55117 } 
-		command = { trigger = { minister = 55176 } type = armamentminister which = 55176 } 
-		command = { trigger = { NOT = { minister = 55176 } } type = armamentminister which = 55012 } 
+		command = { trigger = { minister = 55175 } type = armamentminister which = 55175 } 
+		command = { trigger = { NOT = { minister = 55175 } } type = armamentminister which = 55012 } 
 		command = { type = ministerofsecurity which = 55133 } 
 		command = { trigger = { minister = 55141 } type = ministerofintelligence which = 55141 } #Dai li
 		command = { type = event which = 1400000062 where = CHI when = 60 }
@@ -1554,16 +1554,15 @@ event = {
 	style = 2
 	
 	trigger = {
-			exists = CHC
 			war = { country = CHI country = CHC }
-			random = 10
+			random = 5
 	}
 
 	name = "Political Terror"
 	desc = ""
 	picture = "ccip_unrest"
 
-    date = { day = 0 month = january year = 1933 }
+    date = { day = 0 month = january year = 1940 }
     offset = 7
     deathdate = { day = 29 month = december year = 1963 }
 	
@@ -1993,6 +1992,7 @@ event = {
 		ispuppet = CHI
 		event = 2011041
 		event = 2012004
+		war = { country = CHI country = USA } 
 		}
 			OR = {
 			and = {
@@ -2018,6 +2018,7 @@ event = {
 	trigger = {
 		NOT = {
 		ispuppet = CHI
+		war = { country = CHI country = USA } 
 		}
 			OR = {
 			and = {
@@ -2029,7 +2030,7 @@ event = {
 		}
 	}
 
-	name = "Transport Ship Support Request"
+	name = "Request for transport ship"
 	desc = ""
 	style = 2
 	picture = "Convoys"
@@ -2051,7 +2052,7 @@ event = {
 	random = no
 	country = USA
 
-	name = "Transport Ship Support Request"
+	name = "Request for transport ship"
 	desc = ""
 	style = 2
 	picture = "Convoys"
@@ -2060,7 +2061,7 @@ event = {
 		ai_chance = 70
 		name = "Support them with transport ship"
 		command = { type = trigger which = 1400000057 }
-		command = { type = transport_pool which = USA value = -70 }
+		command = { type = transport_pool which = USA value = -100 }
 		command = { type = relation which = CHI value = 25 }
 	}
 	action = {
@@ -2082,13 +2083,12 @@ event = {
 
 	action = {
 		name = "ACTION_NAME_GREAT"
+		command = { type = transport_pool which = CHI value = 100 }
 		command = { type = add_division which = "1st transport" value = transport }
 		command = { type = add_division which = "2nd transport" value = transport }
 		command = { type = add_division which = "3rd transport" value = transport }
 		command = { type = add_division which = "4rd transport" value = transport }
 		command = { type = add_division which = "5rd transport" value = transport }
-		command = { type = add_division which = "6rd transport" value = transport }
-		command = { type = add_division which = "7rd transport" value = transport }
 	}
 }
 
@@ -2167,7 +2167,6 @@ event = {
 		}
 		NOT = {
 		atwar = yes
-		war = { country = CHI country = CHC } 
 		}
 	}
 
@@ -2215,8 +2214,7 @@ event = {
 		command = { trigger = { event = 1400000034 } type = industrial_modifier which = total value = 5 }
 		command = { type = dissent value = -5 }
 		command = { type = money value = -500 }
-		command = { type = domestic which = freedom value = 1 }
-		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = industrial_modifier which = supplies value = 3 }
 		command = { trigger = { NOT = { event = 1400000051 } } type = free_money value = -1 }
 		command = { trigger = { NOT = { event = 1400000051 } } type = event which = 1400000061 where = -1 when = 1440 } #CHI : Completion of the Initial Phase of the Land Reform
 	}
@@ -2953,7 +2951,131 @@ event = {
 	}
 }
 
+event = {
+	id = 1400000095
+	random = no
+	country = CHI
+	
+	trigger = {
+			event = 1400000060
+			random = 15
+			NOT = {
+			atwar = yes
+			}
+	}
+	
+	name = "Rural Reconstruction Movement"
+	desc = ""
+	style = 2
+	picture = "eastasia_agriculture"
 
+	date = { day = 0 month = january year = 1933 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 70
+		name = "Let's actively support them"
+		command = { type = money value = -500 }
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = local_setflag which = constitutionalism_support when = 1 value = 1 }
+	}
+	action = {
+		ai_chance = 30	
+		name = "Let them do it on their own"
+		command = { type = dissent value = -1.5 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+event = {
+	id = 1400000096
+	random = no
+	country = CHI
+	
+	trigger = {
+			event = 1400000009
+			event = 1400000010
+			flag = CHI_institutional_politics
+			random = 20
+			NOT = {
+			atwar = yes
+			}
+			NOT = {
+			flag = CHC_won_civil_war
+			}
+		}
+	
+	name = "Fate of the Liberal opposition"
+	desc = ""
+	style = 2
+	picture = "China_Democratic_League"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 66
+		name = "Promote reconciliation with them"
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = local_setflag which = constitutionalism_support when = 1 value = 1 }
+	}
+	action = {
+		ai_chance = 34
+		name = "Keep an eye on their activities"
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
+	}
+}
+
+
+
+event = {
+	id = 1400000097
+	random = no
+	country = CHI
+	
+	trigger = {
+			event = 1400000096
+			flag = CHI_institutional_politics
+			random = 15
+			NOT = {
+			atwar = yes
+			}
+			NOT = { 
+			exists = CHC
+			flag = CHC_won_civil_war
+		}
+	}
+	
+	name = "Fate of the Leftist opposition"
+	desc = ""
+	style = 2
+	picture = "ccip_fjsoviet"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 55
+		name = "They are also a member"
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = local_setflag which = constitutionalism_support when = 1 value = 1 }
+	}
+	action = {
+		ai_chance = 45
+		name = "They would rather be threat"
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
+	}
+}
 
 
 
@@ -7486,7 +7608,7 @@ event = {
 			flag = JAP_Konoe_Cooperation
 		}
 		ai_chance = 30
-		name = "This controversy could be contain"
+		name = "This controversy can be calmed down"
 		command = { type = dissent value = -2 }
 		command = { type = setflag which = JAP_Konoe_Party }
 		}
@@ -7510,7 +7632,9 @@ event = {
 		event = 1400002026 
 		event = 1400002019 #He must remain prime minister
 		}
-		
+		NOT = {
+		event = 2012004 #Japan surrenders by CHI
+		}
 	}
 	
 	name = "Creation of New party"
@@ -7935,12 +8059,21 @@ event = {
 	id = 1400002031
 	random = no
 	country = JAP
-	save_date = yes
-
-	name = "Foundation of Taisei Yokusankai"
+	
+	trigger = {
+	event = 1400002030 
+	headofgovernment = 50029
+	NOT = { event = 2011018 } #JAP The Fading Sun
+	}
+	
+	name = "Foundation of Taisei Yokusankai" #Imperial Rule Assistance Association(大政翼贊會, Taisei Yokusankai)
 	desc = ""
 	style = 2
 	picture = "New Order Movement"
+	
+	date = { day = 0 month = january year = 1933 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1964 }
 
 	action = {
 		name = "ACTION_NAME_AGREE"
@@ -7992,8 +8125,7 @@ event = {
 			minister = 50044
 		OR = {
 			and = {
-		event = 1400003006 #Hull Note
-		embargo = { country = USA country = JAP value = 0 }
+		event = 2049026 #Oil Embargo against Japan
 			}
 			and = {
 		war = { country = GER country = USA }
@@ -8008,8 +8140,8 @@ event = {
 		war = { country = GER country = ENG }
 	}
 
-	name = "The Cabinet Resigns" #Tojo
-	desc = "EVT_120_DESC"
+	name = "The Cabinet Resigns" 
+	desc = ""
 	
 
     date = { day = 0 month = january year = 1933 }
@@ -8019,7 +8151,7 @@ event = {
 	action = {
 		name = ACTION_NAME_OK
 		ai_chance = 100
-		command = { type = event which = 2500039 where = JAP when = 1 }
+		command = { type = event which = 2500039 where = JAP when = 1 } #Tojo
 		}
 	}
 
@@ -8441,6 +8573,8 @@ event = {
 		NOT = {
 		flag = JAP_Kodoha_tree
 		}
+		NOT = { event = 2011018 } #JAP The Fading Sun
+		NOT = { event = 2011028 } #JAP Japanese surrender negotiations	
 	}
 
     date = { day = 0 month = january year = 1933 }
@@ -11355,7 +11489,7 @@ event = {
 	save_date = yes
 
 	name = "Occupation of Korea"
-	desc = "EVT_1400001303_desc"
+	desc = "EVT_1400006004_desc"
 	style = 2
 	picture = "Korea_occupation"
 
@@ -11414,7 +11548,7 @@ event = {
 	save_date = yes
 
 	name = "Occupation of Korea"
-	desc = "EVT_1400001304_desc"
+	desc = "EVT_1400006005_desc"
 	style = 2
 	picture = "Korea_occupation"
 
@@ -11521,6 +11655,83 @@ event = {
 } 
 
 event = {
+	id = 1400006009
+	random = no
+	country = KOR
+	persistent = yes
+	style = 2
+	picture = "KOR_General Government"
+
+	name = "Composition of the Government"
+	desc = "EVT_1400006009_desc"
+	
+	action = {
+	ai_chance = 25
+			trigger = { 
+			NOT = { flag = KOR_Moderate flag = USA_Korean_autonomy } 
+			}
+		name = "Form Coalition Government." 
+		command = { type = headofgovernment which = 265045 } #Lee Yun-yeong
+		command = { type = armamentminister which = 265102 } 
+		command = { type = ministerofsecurity which = 265139 } 
+	}
+	action = {
+			trigger = { 
+			NOT = { flag = KOR_Moderate flag = USA_Korean_autonomy }
+			}
+	ai_chance = 75
+		name = "There is no need for Compromise." #OTL Scenario
+		command = { type = headofgovernment which = 265043 } #Yi Beom-seok
+		command = { type = armamentminister which = 265103 } 
+		command = { type = ministerofsecurity which = 265159 } 
+	}
+	action = {
+			trigger = { 
+			flag = USA_Korean_autonomy
+			}
+	ai_chance = 50
+		name = "Form Coalition Government."
+		command = { type = headofgovernment which = 265030 } #Cho So-ang
+	}
+	action = {
+			trigger = { 
+			flag = USA_Korean_autonomy
+			}
+	ai_chance = 50 
+		name = "There is no need for Compromise."
+		command = { type = headofgovernment which = 265045 } #Lee Yun-yeong
+	}
+	action = {
+	trigger = { 
+			flag = KOR_Moderate NOT = { flag = KOR_Coalition }
+			}
+	ai_chance = 50
+		name = "Form Coalition government with Moderates."
+		command = { type = headofgovernment which = 265031 } #Ahn Jae-hong
+	}
+	action = {
+			trigger = { 
+			flag = KOR_Moderate NOT = { flag = KOR_Coalition }
+			}
+	ai_chance = 50 
+		name = "Opinions of Nationalists cannot be ignored."
+		command = { trigger = { flag = KOR_Moderate NOT = { flag = KOR_Coalition } OR = { NOT = { minister = 265343 } NOT = { owned = { province = 1221 data = KOR } } } } type = headofgovernment which = 265030 } #Cho So-ang
+		command = { trigger = { minister = 265343 owned = { province = 1221 data = KOR } } type = headofgovernment which = 265343 } #Cho Man-sik
+	}
+	action = {
+			trigger = { 
+			flag = KOR_Moderate 
+			flag = KOR_Coalition
+			}
+	ai_chance = 100
+		name = "Form Coalition Government."
+		command = { trigger = { minister = 265029 } type = headofgovernment which = 265029 } #Kim Gyu-sik
+		command = { trigger = { NOT = { minister = 265029 } } type = headofgovernment which = 265031 } #Ahn Jae-hong
+	}
+}
+
+
+event = {
 	id = 1400006010
 	random = no
 	country = PRK
@@ -11530,7 +11741,7 @@ event = {
 	picture = "PRK_Proclaimed"
 
 	name = "Proclamation of Socialist government" #CHI, SOV support
-	desc = "EVT_1400006009_desc"
+	desc = "EVT_1400006010_desc"
 	
 	action = {
 		name = ACTION_NAME_OK
@@ -11702,81 +11913,8 @@ event = {
 	}
 } 
 
-event = {
-	id = 1400006009
-	random = no
-	country = KOR
-	persistent = yes
-	style = 2
-	picture = "KOR_General Government"
 
-	name = "Composition of the Government"
-	desc = "EVT_1400006009_desc"
-	
-	action = {
-	ai_chance = 25
-			trigger = { 
-			NOT = { flag = KOR_Moderate flag = USA_Korean_autonomy } 
-			}
-		name = "Form Coalition Government." 
-		command = { type = headofgovernment which = 265045 } #Lee Yun-yeong
-		command = { type = armamentminister which = 265102 } 
-		command = { type = ministerofsecurity which = 265139 } 
-	}
-	action = {
-			trigger = { 
-			NOT = { flag = KOR_Moderate flag = USA_Korean_autonomy }
-			}
-	ai_chance = 75
-		name = "There is no need for Compromise." #OTL Scenario
-		command = { type = headofgovernment which = 265043 } #Yi Beom-seok
-		command = { type = armamentminister which = 265103 } 
-		command = { type = ministerofsecurity which = 265159 } 
-	}
-	action = {
-			trigger = { 
-			flag = USA_Korean_autonomy
-			}
-	ai_chance = 50
-		name = "Form Coalition Government."
-		command = { type = headofgovernment which = 265030 } #Cho So-ang
-	}
-	action = {
-			trigger = { 
-			flag = USA_Korean_autonomy
-			}
-	ai_chance = 50 
-		name = "There is no need for Compromise."
-		command = { type = headofgovernment which = 265045 } #Lee Yun-yeong
-	}
-	action = {
-	trigger = { 
-			flag = KOR_Moderate NOT = { flag = KOR_Coalition }
-			}
-	ai_chance = 50
-		name = "Form Coalition government with Moderates."
-		command = { type = headofgovernment which = 265031 } #Ahn Jae-hong
-	}
-	action = {
-			trigger = { 
-			flag = KOR_Moderate NOT = { flag = KOR_Coalition }
-			}
-	ai_chance = 50 
-		name = "Opinions of Nationalists cannot be ignored."
-		command = { trigger = { flag = KOR_Moderate NOT = { flag = KOR_Coalition } OR = { NOT = { minister = 265343 } NOT = { owned = { province = 1221 data = KOR } } } } type = headofgovernment which = 265030 } #Cho So-ang
-		command = { trigger = { minister = 265343 owned = { province = 1221 data = KOR } } type = headofgovernment which = 265343 } #Cho Man-sik
-	}
-	action = {
-			trigger = { 
-			flag = KOR_Moderate 
-			flag = KOR_Coalition
-			}
-	ai_chance = 100
-		name = "Form Coalition Government."
-		command = { trigger = { minister = 265029 } type = headofgovernment which = 265029 } #Kim Gyu-sik
-		command = { trigger = { NOT = { minister = 265029 } } type = headofgovernment which = 265031 } #Ahn Jae-hong
-	}
-}
+
 
 ### 1400006501 - 1400007000 : Indonesia
 
@@ -13193,6 +13331,7 @@ event = {
 
 	action = {
 		name = "ACTION_NAME_GREAT"
+		command = { type = capital which = 1245 }
 		command = { type = headofstate which = 1330000 }
 		command = { type = headofgovernment which = 1330001 }
 		command = { type = foreignminister which = 1330003 } 

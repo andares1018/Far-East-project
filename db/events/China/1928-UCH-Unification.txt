@@ -917,12 +917,13 @@ event = {
 		command = { trigger = { ai = yes country = CSX } type = setflag which = 1330110034_CSX }
 		command = { trigger = { ai = yes country = CXB } type = setflag which = 1330110034_CXB }
 		command = { trigger = { ai = yes country = U36 } type = setflag which = 1330110034_U36 }
+		command = { trigger = { ai = yes country = U38 } type = setflag which = 1330110034_U38 }
 		command = { trigger = { ai = yes country = U67 } type = setflag which = 1330110034_U67 }
 		command = { trigger = { ai = yes country = U63 } type = setflag which = 1330110034_U63 }
 		command = { trigger = { ai = yes country = U64 } type = setflag which = 1330110034_U64 }
 		command = { trigger = { ai = yes country = U65 } type = setflag which = 1330110034_U65 }
 		command = { trigger = { ai = yes country = U66 } type = setflag which = 1330110034_U66 }
-		command = { trigger = { ai = yes country = U66 } type = setflag which = 1330110034_UPS }
+		command = { trigger = { ai = yes country = UPS } type = setflag which = 1330110034_UPS }
 		command = { trigger = { ai = yes exists = CHI } type = event which = 1330110042 where = CHI when = 0 } #Warlord Submits
 		command = { trigger = { ai = yes exists = CHC } type = event which = 1330110042 where = CHC when = 0 } #Warlord Submits
 		command = { trigger = { ai = yes exists = UCH } type = event which = 1330110042 where = UCH when = 0 } #Warlord Submits
@@ -1086,6 +1087,7 @@ event = {
 		command = { trigger = { flag = 1330110034_CSX } type = inherit which = CSX value = 1 }
 		command = { trigger = { flag = 1330110034_CXB } type = inherit which = CXB value = 1 }
 		command = { trigger = { flag = 1330110034_U36 } type = inherit which = U36 value = 1 }
+		command = { trigger = { flag = 1330110034_U38 } type = inherit which = U38 value = 1 }
 		command = { trigger = { flag = 1330110034_U67 } type = inherit which = U67 value = 1 }
 		command = { trigger = { flag = 1330110034_U63 } type = inherit which = U63 value = 1 }
 		command = { trigger = { flag = 1330110034_U64 } type = inherit which = U64 value = 1 }
@@ -1097,6 +1099,7 @@ event = {
 		command = { type = clrflag which = 1330110034_CSX }
 		command = { type = clrflag which = 1330110034_CXB }
 		command = { type = clrflag which = 1330110034_U36 }
+		command = { type = clrflag which = 1330110034_U38 }
 		command = { type = clrflag which = 1330110034_U67 }
 		command = { type = clrflag which = 1330110034_U63 }
 		command = { type = clrflag which = 1330110034_U64 }

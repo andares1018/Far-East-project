@@ -1829,7 +1829,7 @@ event = {
 
 
 	name = "New Cabinet Government" #Hirota
-	desc = ""
+	desc = "EVT_2500036_DESC"
 
 
 	action = {
@@ -1860,7 +1860,7 @@ event = {
 	save_date = yes
 
 	name = "New Cabinet Government" #Hayashi
-	desc = ""
+	desc = "EVT_2500037_DESC"
 	
 	action = {
 		name = ACTION_NAME_OK
@@ -1889,7 +1889,7 @@ event = {
 	picture = "news_paper"
 
 	name = "New Cabinet Government" #Hiranuma
-	desc = ""
+	desc = "EVT_2500038_DESC"
 	
 
 	action = {
@@ -1919,7 +1919,7 @@ event = {
 	picture = "news_paper"
 
 	name = "New Cabinet Government" #tojo
-	desc = ""
+	desc = "EVT_2500039_DESC"
 
 	action_a = {
 		name = ACTION_NAME_OK
@@ -1952,7 +1952,7 @@ event = {
 	picture = "news_paper"
 
 	name = "New Cabinet Government" #Koiso
-	desc = ""
+	desc = "EVT_2500040_DESC"
 
 	action_a = {
 		ai_chance = 100

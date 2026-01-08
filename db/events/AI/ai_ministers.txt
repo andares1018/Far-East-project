@@ -4176,22 +4176,6 @@ event = {
 }
 ##### England
 
-#event = {
-#        id = 9999250
-#        random = no
-#        country = ENG
-#        trigger = { ai = yes }
-# 
-#        name = "AI_EVENT"
-#        style = 0
-# 
-#        date = { day = 1 month = december year = 1936 }
-#
-#	action_a = {
-#		command = { type = headofstate which = 10015 }
-#		command = { type = dissent value = -1 }
-#		}
-#}
 
 event = {
         id = 9999251
@@ -17812,7 +17796,6 @@ event = {
 
 	trigger = {
 		ai = yes
-		ideology = social_conservative
 	}
 
 	date = { day = 21 month = may year = 1933 }
@@ -17842,7 +17825,9 @@ event = {
 	date = { day = 20 month = february year = 1938 }
 	offset = 15
 	deathdate = { day = 29 month = march year = 1938 }
-
+	
+	name = "AI_EVENT"
+	
 	action_a = {
 		command = { type = foreignminister which = 10022 } #Lord Halifax
 	}
@@ -17856,7 +17841,6 @@ event = {
 
 	trigger = {
 		ai = yes
-		ideology = social_conservative
 	}
 
 	date = { day = 6 month = september year = 1938 }
@@ -17878,7 +17862,6 @@ event = {
 
 	trigger = {
 		ai = yes
-		ideology = social_conservative
 	}
 
 	date = { day = 11 month = june year = 1939 }
