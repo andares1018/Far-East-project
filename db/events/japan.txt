@@ -1679,7 +1679,7 @@ event = {
 	country = JAP
 
 	trigger = {
-		OR = { random = 12 AND = { year = 1938 random = 70 } }
+		OR = { random = 5 AND = { year = 1938 random = 70 } }
 		flag = anti_comintern_pact
 		exists = CHI
 		exists = GER
@@ -1687,7 +1687,6 @@ event = {
 		OR = {
 			war = { country = JAP country = CHI }
 			alliance = { country = GER country = JAP }
-			flag = JAP_NorthStrategy
 		}
 		NOT = {
 			alliance = { country = GER country = CHI }
@@ -1748,7 +1747,7 @@ event = {
 		name = "ACTIONNAME2035A"
 		command = { type = relation which = JAP value = 25 }
 		command = { type = relation which = MAN value = 20 }
-		command = { type = relation which = CHI value = -15 }
+		command = { type = relation which = CHI value = -25 }
 		command = { type = end_trades which = GER where = CHI }
 		command = { trigger = { NOT = { flag = JAP_NorthStrategy } } type = wakeleader which = 292 } #Von Falkenhausen
 		command = { trigger = { NOT = { flag = JAP_NorthStrategy } } type = trigger which = 2012002 } #CHI Event

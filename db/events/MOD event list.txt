@@ -525,11 +525,11 @@
 # 1400006025 USA - Opposition from Korean Nationalists #
 # 1400006026 USA - Results of the Governing Commission's Plan #
 # 1400006027 KOR - General Election #
-# 1400006028 KOR - Constituent National Assembly #
-# 1400006029 KOR - Presidential Election #
-# 1400006030 USA CHI CHC SOV - Transfer of Administrative in Korea #
-# 1400006031 KOR - Transfer of Administrative Authority #
-# 1400006032 
+# 1400006028 KOR - Presidential Election #
+# 1400006029 USA CHI CHC SOV - Transfer of Administrative in Korea #
+# 1400006030 KOR - Transfer of Administrative Authority #
+# 1400006031 KOR - Policy statement of the Provisional Government (Provisional Government)
+# 1400006032 KOR - 
 # 1400006033 
 # 1400006034 
 # 1400006035 

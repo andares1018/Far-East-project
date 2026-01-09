@@ -1014,7 +1014,6 @@ event = {
 	action = {
 		name = EVT_91_ACTA
 		command = { type = domestic which = interventionism value = 1 }
-		command = { type = domestic which = freedom value = 1 }
 		command = { trigger = { ai = yes } type = dissent value = -20 }
 		command = { type = peace which = CHC value = 0 }
 		command = { type = peace which = CYN value = 0 } # Just in case

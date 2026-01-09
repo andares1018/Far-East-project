@@ -16831,7 +16831,7 @@ event = {
 event = {
 	id = 5200060
 	random = no
-	country = HUN
+	country = ROM
 	style = 0
 
 	name = "AI_EVENT"

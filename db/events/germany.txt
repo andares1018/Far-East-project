@@ -457,7 +457,6 @@ event = {
   	picture = "news_paper"
 	action_a = {
 		name = EVT_73_ACTA
-		command = { type = domestic which = freedom value = -1 }
 		command = { type = domestic which = interventionism value = 1 }
 		command = { type = relation which = SOV value = -10 }
 		command = { type = relation which = GER value = 10 }
@@ -2295,7 +2294,13 @@ event = {
 
 	# Triggered by German event 2003033
 
-	action_a = {
+	action = {
+	trigger = {
+		NOT = {
+		event = 2011018 #The Fading Sun
+		event = 2011028 #Japanese surrender negotiations
+			}
+		}
 		ai_chance = 100
 		name = EVT_75_ACTA
 		command = { type = money value = 10 }
@@ -2310,7 +2315,7 @@ event = {
 		command = { type = songs which = Konoe_1940.txt }
 	}
 	
-	action_b = {
+	action = {
 		ai_chance = 0
 		name = EVT_75_ACTB
 		command = { type = money value = -10 }

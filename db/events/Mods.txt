@@ -814,13 +814,6 @@ event = {
 		command = { type = set_domestic which = democratic value = 6 } 
 		command = { type = set_domestic which = political_left value = 4 }
 		command = { type = set_domestic which = freedom value = 6 }
-		command = { trigger = { minister = 55001 } type = headofstate which = 55001 } #Chiang Kai-shek
-		command = { trigger = { NOT = { minister = 55001 } } type = headofstate which = 55350 } #Sun fo, #Chiang Kai-shek assassinated by the opposition
-		command = { trigger = { minister = 55122 NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55122 } #Weng Wenhao
-		command = { trigger = { NOT = { minister = 55122 } NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55118 } #Zhang Qun
-		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55042 } type = headofgovernment which = 55042 } #He Yingqin
-		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55125 } type = headofgovernment which = 55125 } #Chen Lifu
-		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55376 } type = headofgovernment which = 55376 } #Yan Xishan
 		command = { trigger = { minister = 55014 } type = foreignminister which = 55014 } 
 		command = { trigger = { NOT = { minister = 55014 } } type = foreignminister which = 55117 } 
 		command = { trigger = { minister = 55175 } type = armamentminister which = 55175 } 
@@ -839,7 +832,7 @@ event = {
 	style = 2
 	picture = "China_conference"
 	name = "Delay in Negotiations"
-	desc = "EVT_1400000019_desc"
+	desc = "EVT_1400000023_desc"
 	action = {
 		name = "Will unstable coexistence last long?" # 
 		ai_chance = 100
@@ -1198,9 +1191,6 @@ event = {
 	}
 }
 
-
-
-
 event = {
     id = 1400000035 
     random = no
@@ -1237,7 +1227,7 @@ event = {
 	picture = "Republic_of_China_Election"
 
 	trigger = {	
-		event = { id = 1400000022 days = 180 }
+		event = { id = 1400000022 days = 20 }
 	}
 
     date = { day = 0 month = january year = 1933 }
@@ -1247,10 +1237,15 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "Election guarantee legitimacy."
-		command = { trigger = { minister = 55001 } type = headofstate which = 55001 } #Chiang Kai-shek
-		command = { trigger = { NOT = { minister = 55001 } } type = headofstate which = 55350 } #Sun fo, #Chiang Kai-shek assassinated by the opposition
 		command = { trigger = { headofstate = 55001 } type = setflag which = CHI_Chiang }
 		command = { trigger = { headofstate = 55350 } type = setflag which = CHI_Sun }
+		command = { trigger = { minister = 55001 } type = headofstate which = 55001 } #Chiang Kai-shek
+		command = { trigger = { NOT = { minister = 55001 } } type = headofstate which = 55350 } #Sun fo, #Chiang Kai-shek assassinated by the opposition
+		command = { trigger = { minister = 55122 NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55122 } #Weng Wenhao
+		command = { trigger = { NOT = { minister = 55122 } NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55118 } #Zhang Qun
+		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55042 } type = headofgovernment which = 55042 } #He Yingqin
+		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55125 } type = headofgovernment which = 55125 } #Chen Lifu
+		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55376 } type = headofgovernment which = 55376 } #Yan Xishan
 	}
 }
 
@@ -2834,6 +2829,10 @@ event = {
 	}
 			
 	decision_trigger = { 
+			exists = CHI
+		NOT = {
+			ispuppet = CHI
+			}
 			OR = {
 			and = {
 				event = 140000001
@@ -2947,7 +2946,6 @@ event = {
 		command = { type = dissent value = -5 }
 		command = { type = belligerence which = CHI value = -5 }
 		command = { type = domestic which = interventionism value = 1 }
-		
 	}
 }
 
@@ -2995,8 +2993,6 @@ event = {
 	country = CHI
 	
 	trigger = {
-			event = 1400000009
-			event = 1400000010
 			flag = CHI_institutional_politics
 			random = 20
 			NOT = {
@@ -3690,7 +3686,7 @@ event = {
 	country = CHI
 	style = 2
 	picture = "Xinjiang"
-	decision_picture = "decision_anticominternpact"
+	decision_picture = "decision_diplomatic_campaign"
 
 	name = "EVT_2181023_NAME"
 	desc = "EVT_1400000301_desc"
@@ -4007,7 +4003,7 @@ event = {
 	id = 1400001254 
 	random = no
 	country = CHI
-	name = "Military Instability" #It is difficult to control the war situation between the two countries aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	name = "Military Instability" #It is difficult to control the war situation between the two countries aaaaaaaaaaaaaaaaaaaaaaaaaaaaa 
 	desc = ""
 	style = 2
 	picture = "ccip_cw"
@@ -4186,7 +4182,7 @@ deathdate = { day = 30 month = december year = 1937 }
 	deathdate = { day = 26 month = august year = 1939 }
 	
 	name = "The Great Fire of Changsha" 
-	desc = ""
+	desc = "EVT_1400001257_DESC"
 	style = 2
 	picture = "ccip_unrest"
 	action = {
@@ -4226,7 +4222,7 @@ event = {
 	deathdate = { year = 1999 month = february day = 11 } 
 
 	name = "Wang Jingwei Defects"
-	desc = ""
+	desc = "EVT_1400001258_DESC"
 	picture = "ccip_wjw"
 
 	action_a = {
@@ -4273,7 +4269,7 @@ event = {
 	country = CHI
 
 	name = "Relocation of the Central government"
-	desc = "EVT_1400001260_DESC"
+	desc = "EVT_1400001259_DESC"
 	style = 2 
 	picture = "wuhan_1938"
 
@@ -4552,7 +4548,6 @@ event = {
 	action_a = {
 		name = "ACTION_NAME_GREAT" 
 		ai_chance = 100
-		command = { type = waketeam which = 55007 }
 		command = { type = supplies value = 500 }
 		command = { type = dissent value = -3 }
 		command = { type = add_corps which = "AVG" value = air when = 50370 where = 1360 }
@@ -11405,7 +11400,7 @@ event = {
 	save_date = yes
 	persistent = yes
 	style = 2
-	picture = "KOR_provisional government"
+	picture = "KOR_provisional government" #대한민국 임시정부(大韓民國臨時政府) - Korean Provisional Government
 
 	name = "Return of the Provisional Government"
 	desc = "EVT_1400006001_desc"
@@ -11424,8 +11419,8 @@ event = {
 		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = headofgovernment which = 265038 }
 		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = foreignminister which = 265079 } 
 		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = armamentminister which = 265105 } 
-		command = { trigger = { government = democratic } type = set_domestic which = freedom  value = 6 }
-		command = { trigger = { NOT = { government = democratic } } type = set_domestic which = freedom  value = 5 }
+		command = { trigger = { government = democratic } type = set_domestic which = freedom  value = 5 }
+		command = { trigger = { NOT = { government = democratic } } type = set_domestic which = freedom  value = 4 }
 		command = { type = ministerofsecurity which = 265148 } 
 		command = { type = ministerofintelligence which = 265192 }
 		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = chiefofstaff which = 265229 }
@@ -11438,7 +11433,7 @@ event = {
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = add_division value = infantry when = 11 where = -85 } 
-		command = { type = local_setflag which = KOR_KPG }
+		command = { type = setflag which = KOR_KPG }
 		}
 	}
 
@@ -11451,7 +11446,7 @@ event = {
 	style = 2
 	picture = "KOR_CPKI"
 
-	name = "People's Republic Proclaimed"
+	name = "People's Republic Proclaimed" #조선인민공화국(朝鮮人民共和國) - People's Republic of Korea
 	desc = "EVT_1400006003_desc"
 	
 	action = {
@@ -11474,11 +11469,11 @@ event = {
 		command = { trigger = { NOT = { ispuppet = yes } } type = chiefofarmy which = 265258 }
 		command = { type = chiefofair which = 265273 }
 		command = { type = capital which = 1228 }
-		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } 
-		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } 
-		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } 
+		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } #Korean Liberation Army 
+		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -80 } 
+		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -80 } 
 		command = { type = waketeam which = 265024 }
-		command = { type = local_setflag which = KOR_PRK }
+		command = { type = setflag which = KOR_PRK }
 		}
 	}
 
@@ -11913,7 +11908,38 @@ event = {
 	}
 } 
 
+event = {
+	id = 1400006031
+	random = no
+	country = KOR
+	name = "Policy Statement of the Provisional Government" #임시정부의 당면정책과 국내동포에 고하는 성명 - https://db.history.go.kr/diachronic/level.do?levelId=kn_108_0090_0040_0020
+	desc = ""
+	style = 2
+	picture = "KOR_provisional government"
 
+	trigger = {	
+		event = 1400006001
+		flag = KOR_KPG
+		NOT = {
+		flag = KOR_PRK
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "Road to Government establishment" 
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { trigger = { NOT = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } } type = headofstate which = 265004 } #Partial coalition(1942)
+		command = { trigger = { NOT = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } } type = headofgovernment which = 265029 }
+		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = headofstate which = 265001 } #What if? - KIP Party-state system
+		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = headofgovernment which = 265038 }
+	}
+}
 
 
 ### 1400006501 - 1400007000 : Indonesia
@@ -12351,7 +12377,6 @@ event = {
 	name = "Hao"
 	command = { type = construct which = ic where = 1214 value = 1 }
 	command = { type = construct which = infrastructure where = 1214 value = 10 }
-	command = { type = armamentminister which = 235081 }
 	command = { type = add_prov_resource which = 1214 value = 1 where = rare_materials }
 	}
  }
@@ -12362,7 +12387,7 @@ event = {
      country = JAP
 	
 	trigger = {
-  flag = JAP_ECO_MANCHURIA
+	flag = JAP_ECO_MANCHURIA
 	event = { id = 1400007501 days = 160 }
 	OR = {
 	control = { province = 1214 data = JAP }

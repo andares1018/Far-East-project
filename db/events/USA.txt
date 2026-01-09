@@ -971,8 +971,6 @@ event = {
 		command = { type = chiefofarmy which = 240110 }
 		command = { type = chiefofnavy which = 240119 }
 		command = { type = chiefofair which = 240129 }
-		command = { type = domestic which = democratic value = -1 }
-		command = { type = domestic which = political_left value = 1 }
 		command = { type = sleepminister which = 240001 }
 	}
 }
