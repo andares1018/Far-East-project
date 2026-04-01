@@ -34,7 +34,7 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265032;Head of Government;Hong Jin;1918;1946;1946;ML;Corporate Suit;Medium;M_Hong Jin;X
 265033;Head of Government;Jang Myeon;1940;1967;1967;ML;Corporate Suit;Medium;M578026;X
 265034;Head of Government;Jang do-Yeong;1956;1964;2012;PA;Backroom Backstabber;Medium;M578030;X
-265035;Head of Government;Kim Gu;1933;1950;1960;SC;Flamboyant Tough Guy;Medium;M_Kim Gu;X
+265035;Head of Government;Kim Gu;1933;1960;1960;SC;Flamboyant Tough Guy;Medium;M_Kim Gu;X
 265036;Head of Government;Lee Dong-nyeong;1918;1940;1940;SC;Silent Workhorse;Medium;M_Lee dong-nyeong;X
 265037;Head of Government;Shin Ik-hui;1950;1957;1957;PA;Backroom Backstabber;Medium;M_Shin ik-hui;X
 265038;Head of Government;Lee Si-yeong;1925;1954;1954;SC;Political Protege;Medium;M_Lee si-yeong;X
@@ -59,7 +59,7 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265057;Foreign Minister;Kim Hong-il;1955;1970;1981;SC;General Staffer;Medium;M_Kim hong-il;X
 265058;Foreign Minister;Song Yo-chan;1956;1970;1980;PA;General Staffer;Medium;M_Song yo-chan;X
 265059;Foreign Minister;Choi Deok-sin;1952;1976;1990;PA;The Cloak N Dagger Schemer;Medium;M_Choi deok-sin;X
-265060;Foreign Minister;Park Yong-man;1917;1929;1929;ML;General Staffer;Medium;M_Park Yong-man;X
+265060;Foreign Minister;Park Yong-man;1917;1929;1929;SC;General Staffer;Medium;M_Park Yong-man;X
 265061;Foreign Minister;Shin Ik-hui;1918;1932;1933;PA;The Cloak N Dagger Schemer;Medium;M_Shin ik-hui;X
 265062;Foreign Minister;Kim Gyu-sik;1919;1933;1933;SD;Biased Intellectual;Medium;M_Kim gyu-sik1;X
 265063;Foreign Minister;Shin Gyu-sik;1917;1923;1923;SL;Ideological Crusader;Medium;M_Shin Gyu-sik;X
@@ -313,7 +313,7 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265311;Minister of Security;Shin Suk;1921;1968;1968;SL;Man of the People;Medium;M_Shin Suk;X
 265312;Head of Government;Lee Ik-heung;1953;1965;1994;PA;Backroom Backstabber;Medium;M_Lee Ik-heung;X
 265313;Head of State;Kim Gu;1933;1960;1960;PA;Autocratic Charmer;Medium;M_Kim Gu;X
-265314;Minister of Armament;Yang U-jo;1930;1964;1964;SC;Resource Industrialist;Medium;M_Yang U-jo;X
+265314;Minister of Armament;Yang U-jo;1930;1964;1964;SC;Laissez-Faire Capitalist;Medium;M_Yang U-jo;X
 265315;Minister of Armament;Han Dong-seok;1936;1957;1957;SC;Theoretical Scientist;Medium;M_Han Dong-seok;X
 265316;Chief of Air Force;Roh Tae-jun;1936;1971;1971;FA;Army Aviation Doctrine;Medium;M_Roh Tae-jun;X
 265317;Head of Government;Byeon Yeong-tae;1953;1970;1970;PA;Naive Optimist;Medium;M578033;X
@@ -358,3 +358,4 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265356;Minister of Security;Paik Seong-wook;1940;1957;1981;PA;Back Stabber;Medium;M_Paik Sung-wook;X
 265357;Chief of Army;Choi Young-hee;1955;1970;2006;SC;Static Defence Doctrine;Medium;M_Choi Young-hee;X
 265358;Foreign Minister;Kim Yong-shik;1955;1980;1995;PA;Apologetic Clerk;Medium;M_Kim Yong-shik;X
+265359;Minister of Security;Ahn Jae-hong;1930;1956;1956;ML;Compassionate Gentleman;Medium;M_Ahn Jae-hong;X

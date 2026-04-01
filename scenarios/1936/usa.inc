@@ -595,6 +595,7 @@ inventions = { 3000027 }
         strength = 100 
 	extra = engineer
 		brigade_model = 3
+        locked = yes  
        }  
      }  
     landunit =  

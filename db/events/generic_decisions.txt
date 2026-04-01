@@ -1885,7 +1885,7 @@ event = {
 		ai_chance = 25
 		name = "9000039a"
 		command = { type = money value = -1500 }
-		command = { type = manpowerpool value = -10 }
+		command = { type = manpowerpool value = -5 }
 		command = { trigger = { technology = { country = USA value = 1410 } NOT = { technology = { country = USA value = 1420 } } } type = add_division value = motorized when = 0 }
 		command = { trigger = { technology = { country = USA value = 1420 } NOT = { technology = { country = USA value = 1430 } } } type = add_division value = motorized when = 1 }
 		command = { trigger = { technology = { country = USA value = 1430 } NOT = { technology = { country = USA value = 1440 } } } type = add_division value = motorized when = 2 }
@@ -1898,14 +1898,14 @@ event = {
 		ai_chance = 25
 		name = "9000039b"
 		command = { type = money value = -2000 }
-		command = { type = manpowerpool value = -10 }
+		command = { type = manpowerpool value = -5 }
 	  	command = { trigger = { technology = { country = USA value = 2050 } } type = add_division value = light_armor when = 0 }
 	}
 	action = {  trigger = { exists = USA money = 2500 technology = { country = USA value = 2090 } NOT = { armor = { country = -1 value = 3 } } }
 		ai_chance = 25
 		name = "9000039b"
 		command = { type = money value = -2500 }
-		command = { type = manpowerpool value = -10 }
+		command = { type = manpowerpool value = -5 }
 	  	command = { trigger = { technology = { country = USA value = 2090 } NOT = { technology = { country = USA value = 2140 } } } type = add_division value = armor when = 0 }
 	  	command = { trigger = { technology = { country = USA value = 2140 } NOT = { technology = { country = USA value = 11000 } } } type = add_division value = armor when = 1 }
 	  	command = { trigger = { technology = { country = USA value = 11000 } NOT = { technology = { country = USA value = 2660 } } } type = add_division value = armor when = 2 }
@@ -1917,7 +1917,7 @@ event = {
 		ai_chance = 25
 		name = "9000039c"
 		command = { type = money value = -2000 }
-		command = { type = manpowerpool value = -5 }
+		command = { type = manpowerpool value = -1 }
 	  	command = { trigger = { technology = { country = USA value = 4520 } NOT = { technology = { country = USA value = 4530 } } } type = add_division value = interceptor when = 0 }
 	  	command = { trigger = { technology = { country = USA value = 4530 } NOT = { technology = { country = USA value = 4540 } } } type = add_division value = interceptor when = 1 }
 	  	command = { trigger = { technology = { country = USA value = 4540 } NOT = { technology = { country = USA value = 4550 } } } type = add_division value = interceptor when = 2 }
@@ -1938,7 +1938,7 @@ event = {
 		ai_chance = 25
 		name = "9000039d"
 		command = { type = money value = -2500 }
-		command = { type = manpowerpool value = -5 }
+		command = { type = manpowerpool value = -1 }
 	  	command = { trigger = { technology = { country = USA value = 4620 } NOT = { technology = { country = USA value = 4630 } } } type = add_division value = tactical_bomber when = 0 }
 	  	command = { trigger = { technology = { country = USA value = 4630 } NOT = { technology = { country = USA value = 4120 } } } type = add_division value = tactical_bomber when = 1 }
 	  	command = { trigger = { technology = { country = USA value = 4120 } NOT = { technology = { country = USA value = 4130 } } } type = add_division value = tactical_bomber when = 2 }

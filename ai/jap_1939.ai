@@ -564,9 +564,9 @@ leader_ratio = {
 garrison = {
 	defend_overseas_beaches = yes
 	home_multiplier 		= 0.8
-	overseas_multiplier 	= 2.0
+	overseas_multiplier 	= 1.0
 	home_peace_cap 			= 9
-	war_zone_odds 			= 1.8
+	war_zone_odds 			= 2.0
 	key_point_prio_mult		= 0
 	revolt_risk_mult		= 1.0
 
@@ -628,7 +628,7 @@ garrison = {
 	}
 }
 front = { 
-	recklessness 		= 0 # 0-3
+	recklessness 		= 1 # 0-3
 	distrib_vs_ai 		= even
 	distrib_vs_human 	= reactive
 
@@ -681,6 +681,9 @@ front = {
 		#CYN = 100
 		#CXB = 100
 	} 
+	front_leader_overseas = 5
+	front_leader_home = 500
+	
 } 
 ###################################
 # Air bombardment and defense

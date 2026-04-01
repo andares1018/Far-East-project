@@ -31,6 +31,7 @@ country = {
     relation = { tag = CYN value = 100 access = yes }
     relation = { tag = U63 value = 75 access = yes }
     relation = { tag = U64 value = 100 access = yes }
+    relation = { tag = U66 value = 50 access = yes }
     relation = { tag = U38 value = 100 access = yes }
     relation = { tag = JAP value = -100 }
     relation = { tag = MAN value = -100 }

@@ -375,6 +375,7 @@ event = {
 	picture = "chinese_protestors"
 
 	trigger = {
+		random = 5
 		NOT = { ispuppet = yes }
 		NOT = { event = 1400000009 }
 		NOT = { flag = CHI_offensive_CHC }
@@ -604,7 +605,6 @@ event = {
 
 	name = "Offensive against Communists"
 	desc = "EVT_1400000015_desc"
-	decision_desc = "decision_1400000015_desc"
 	style = 2
 	picture = "Chinese_Fighting"
 	decision_picture = "decision_grand_offensive3"
@@ -1420,7 +1420,6 @@ event = {
 	style = 2
 	picture = "economic_development"
 	decision_picture = "decision_new_deal"
-	decision_desc = ""
 
 	date = { day = 0 month = january year = 1933 }
 	offset = 5
@@ -3003,7 +3002,7 @@ event = {
 			}
 		}
 	
-	name = "Fate of the Liberal opposition"
+	name = "Fate of the Liberal opposition" #China Democratic League
 	desc = ""
 	style = 2
 	picture = "China_Democratic_League"
@@ -3048,7 +3047,7 @@ event = {
 		}
 	}
 	
-	name = "Fate of the Leftist opposition"
+	name = "Fate of the Leftist opposition" #Chinese Peasants' and Workers' Democratic Party, Revolutionary Committee of the Kuomintang
 	desc = ""
 	style = 2
 	picture = "ccip_fjsoviet"
@@ -3059,7 +3058,7 @@ event = {
 
 	action = {
 		ai_chance = 55
-		name = "They are also a member"
+		name = "They are also member"
 		command = { type = dissent value = -1 }
 		command = { type = domestic which = freedom value = 1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = 1 }
@@ -3070,6 +3069,39 @@ event = {
 		command = { type = dissent value = 2 }
 		command = { type = domestic which = freedom value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
+	}
+}
+
+event = {
+	id = 1400000098
+	random = no
+	country = CHI
+	style = 2
+
+	trigger = {
+	event = 2012014
+	war = { country = JAP country = CHI }
+	control = { province = 1324 data = CHI }
+	random = 10
+	NOT = {
+		control = { province = 1323 data = CHI }
+		control = { province = 1337 data = CHI }
+		}
+	}
+
+	name = "Henan Famine"	
+	desc = ""
+	picture = "news_paper"
+
+    date = { day = 0 month = january year = 1942 }
+    offset = 10
+    deathdate = { day = 29 month = december year = 1944 }
+
+	action = {
+	name = "ACTION_NAME_DAMN"
+	command = { type = dissent value = 5 }
+	command = { type = money value = -100 }
+	command = { type = supplies value = -1000 }
 	}
 }
 
@@ -7022,6 +7054,7 @@ event = {
 ### Japan Domestic
 # thanks for Fischer, Friedrich von Ebert, Maho, GDHohen, huminotuduri, EndWorld318, Story
 
+
 event = {
 	id = 1400002001 
 	random = no
@@ -7145,6 +7178,7 @@ event = {
 	}
 }
 
+
 event = {
 	id = 1400002005 
 	random = no
@@ -7198,7 +7232,7 @@ event = {
 		ai_chance = 20
 		command = { type = dissent value = 2 }
 		command = { type = domestic which = freedom value = 1 }
-		command = { type = local_setflag which = Kodoha_support when = 1 value = 34 } #trap card 
+		command = { type = local_setflag which = Kodoha_support when = 1 value = 3 } #trap card 
 	}
 }
 
@@ -7473,7 +7507,6 @@ event = {
 		command = { type = dissent value = 1.5 }
 		command = { type = domestic which = freedom value = -1 }
 		command = { type = domestic which = free_market value = -1 }
-		command = { type = wartime_ic_mod value = 5 }
 		command = { type = stockpile which = all when = war value = 4 }
 		command = { trigger = { ai = no } type = money value = -100 }
 		command = { trigger = { ai = no } type = supplies value = -500 }
@@ -7722,15 +7755,15 @@ event = {
 	style = 2
 
 	trigger = { 
-		NOT = { headofgovernment = 50029 }
-		NOT = { headofgovernment = 50030 }
 		government = fascist
 		NOT = ( flag = Kodoha_tree } 
+		NOT = ( local_flag = JAP_ECO_plan } 
+		NOT = { flag = JAP_Konoe_Party }
 	}
 
 	name = "The Planning Board Incident"
 	desc = ""	
-	picture = "purge_army"
+	picture = "news_paper"
 
 	date = { day = 17 month = april year = 1941 }
 
@@ -8437,12 +8470,12 @@ event = {
 
 	action = {
 		name = "ACTION_NAME_GREAT"
-		command = { type = money value = -100 }
+		command = { trigger = { local_flag = JAP_land_reform1 } type = money value = -100 }
 		command = { trigger = { local_flag = JAP_land_reform1 } type = industrial_modifier which = supplies value = 5 }
 		command = { trigger = { local_flag = JAP_land_reform1 } type = dissent value = -5 }
 		command = { trigger = { local_flag = JAP_land_reform2 } type = industrial_modifier which = supplies value = 12 }
 		command = { trigger = { local_flag = JAP_land_reform2 } type = dissent value = -10 }
-		command = { type = money value = -100 }
+		command = { trigger = { local_flag = JAP_land_reform2 } type = money value = -200 }
 	}
 }
 
@@ -8622,7 +8655,7 @@ event = {
 		atwar = yes
 		}
 		command = { type = money value = -100 }
-		command = { type = dissent value =-1 }
+		command = { type = dissent value = 1 }
 		command = { type = domestic which = defense_lobby value = 1 }
 		command = { type = event which = 1400002045 where = JAP when = 30 }
 	}
@@ -8640,7 +8673,7 @@ event = {
 
 	action = {
 	ai_chance = 100
-	name = ""
+	name = "ACTION_NAME_ACCEPT"
 	command = { type = money value = -250 }
 	command = { type = domestic which = free_market value = -1 }
 	command = { type = local_setflag which = JAP_ECO_plan }
@@ -8662,16 +8695,16 @@ event = {
 	action = {
 	ai_chance = 75
 	name = "Control for the Wartime system comes first"
-	command = { type = money value = -100 }
+	command = { type = money value = -150 }
 	command = { type = domestic which = free_market value = -1 }
-	command = { type = dissent value = -1.5 }
-	command = { type = industrial_modifier which = total value = 2.5 }	
+	command = { type = dissent value = 1 }
+	command = { type = industrial_modifier which = total value = 2 }	
 	}
 	action = {
 	ai_chance = 25
 	name = "We need autonomous control"
-	command = { type = wartime_ic_mod value = 2.5 }
-	command = { type = money value = 100 }
+	command = { type = wartime_ic_mod value = 3 }
+	command = { type = money value = -100 }
 	command = { type = dissent value = -1 }
 	command = { type = domestic which = free_market value = 1 }
 	}
@@ -8852,20 +8885,23 @@ event = {
 
 	action = {
 	ai_chance = 25
-	name = "Maintain an Aggressive Fiscal policy"
+	name = "We need to be cautious about Fiscal policy"
 		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = free_market value = 1 }
 		command = { trigger = { NOT = { local_flag = peacetime_ic_mod } } type = peacetime_ic_mod value = 10 }
-		command = { type = dissent value = -2.5 }
-		command = { type = money value = -200 }
-		command = { type = domestic which = free_market value = -1 }
+		command = { type = dissent value = 2.5 }
+		command = { type = money value = 100 }
+		command = { type = local_setflag which = Kodoha_support when = 1 value = 2 }
 	}
 	action = {
 	ai_chance = 75
-	name = "We need to be cautious about fiscal policy"
+	name = "Maintain an Aggressive Fiscal policy"
 		command = { type = dissent value = -1 }
 		command = { trigger = { NOT = { local_flag = peacetime_ic_mod } } type = peacetime_ic_mod value = 10 }
-		command = { type = money value = 100 }
-		command = { type = domestic which = free_market value = 1 }
+		command = { type = money value = -200 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = local_setflag which = Kodoha_support when = 1 value = 1 }
 	}
 }
 
@@ -8913,6 +8949,48 @@ event = {
 		command = { type = industrial_modifier which = total value = 5 } 
 	}
 }
+
+event = {
+	id = 1400002052
+	random = no
+	country = JAP
+	name = "Production Capacity Expansion Plan" 
+	desc = ""
+	style = 2
+	picture = "news_paper"
+
+	trigger = {	
+		OR = {
+		event = 1400002012 #Implementation of Economic Plan
+		event = 1400002045 #Wartime Policy and Economic Planning 
+		}
+		random = 10
+	}
+
+    date = { day = 0 month = january year = 1939 }
+    offset = 1
+    deathdate = { day = 29 month = december year = 1939 }
+
+	action = {
+		ai_chance = 100
+		name = "This is essential for economic planning"
+		command = { trigger = { event = 1400002012 } type = domestic which = free_market value = -1 }
+		command = { trigger = { event = 1400002012 } type = industrial_modifier which = total value = 5 } 
+		command = { trigger = { event = 1400002012 } type = dissent value = -2 }
+		command = { trigger = { event = 1400002012 } type = money value = -200 }
+		command = { trigger = { event = 1400002045 } type = money value = -100 }
+		command = { trigger = { event = 1400002045 } type = domestic which = defense_lobby value = 1 }
+		command = { trigger = { event = 1400002045 } type = wartime_ic_mod which = total value = 5 } 
+		command = { trigger = { event = 1400002045 } type = stockpile which = all when = war value = 2 }
+	}
+}
+
+
+
+
+
+
+
 
 ### 1400003001 - 1400003500 : Japan Foreign Event
 
@@ -9501,6 +9579,8 @@ event = {
 	}
 }
 
+
+
 ### Post-war Japan
 
 event = {
@@ -9924,7 +10004,7 @@ event = {
 
 	trigger = {
 		event = 2012004 #The Fading Sun
-		event = { id = 1400004501 days = 210 }
+		event = { id = 1400004501 days = 140 }
 		random = 20
 	}
 
@@ -9939,7 +10019,7 @@ event = {
 		deathdate = { day = 29 month = december year = 1963 }
 
 	action = {
-		ai_chance = 50
+		ai_chance = 45
 		name = "ELECT_JAP5"
 		command = { type = set_domestic which = democratic value = 7 } 
 		command = { type = set_domestic which = political_left value = 5 }
@@ -9955,7 +10035,7 @@ event = {
 		command = { type = chiefofnavy which = 50383 } 
 	}
 	action = {
-		ai_chance = 25
+		ai_chance = 20
 		name = "ELECT_17"
 		command = { type = set_domestic which = democratic value = 6 } 
 		command = { type = set_domestic which = political_left value = 4 }
@@ -9970,7 +10050,7 @@ event = {
 		command = { type = chiefofnavy which = 50362 } 
 	}
 	action = {
-		ai_chance = 25
+		ai_chance = 35
 		name = "ELECT_8"
 		command = { type = headofstate which = 50005 } 
 		command = { type = event which = 1400004513 where = JAP when = 7 }
@@ -10055,7 +10135,7 @@ event = {
 	id = 1400004514
 	random = no
 	country = JAP
-	name = "Corporate reform"
+	name = "Corporate Reform"
 	desc = ""
 	style = 2
 	picture = "Japanese Corporate reform"
@@ -10658,7 +10738,6 @@ event = {
 	desc = ""
 	style = 2
 	picture = "Thai_military"
-	decision_picture = "decision_anticominternpact"
 
 	date = { day = 0 month = january year = 1933 }
 	offset = 10
@@ -10667,7 +10746,7 @@ event = {
 	action = {
 		name = "They should not fight each other."
 		ai_chance = 100
-		command = { type = trigger which = 1400005520 }
+		command = { type = event which = 1400005520 where = SIA when = 14 }
 		command = { type = belligerence which = JAP value = -5 }
 		command = { type = relation which = GER value = 10 }
 		command = { type = relation which = FRA value = 20 }
@@ -10680,7 +10759,7 @@ event = {
 	random = no
 	country = SIA
 	
-	name = "Japan Enforces a Ceasefire"
+	name = "Japan Enforces Ceasefire"
 	desc = ""
 	picture = "Japan_Occupation"
 	style = 2
@@ -11397,7 +11476,6 @@ event = {
 	id = 1400006001
 	random = no
 	country = KOR
-	save_date = yes
 	persistent = yes
 	style = 2
 	picture = "KOR_provisional government" #대한민국 임시정부(大韓民國臨時政府) - Korean Provisional Government
@@ -11434,6 +11512,7 @@ event = {
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = setflag which = KOR_KPG }
+		command = { trigger = { NOT = { event = 1400006031 } } type = event which = 1400006031 where = -1 when = 28 }
 		}
 	}
 
@@ -11591,7 +11670,6 @@ event = {
 	id = 1400006008
 	random = no
 	country = KOR
-	save_date = yes
 	persistent = yes
 	style = 2
 	picture = "KOR_Proclaimed"
@@ -11870,7 +11948,6 @@ event = {
 	id = 1400006013
 	random = no
 	country = KOR
-	save_date = yes
 	persistent = yes
 	style = 2
 	picture = "KOR_General Government"
@@ -11917,8 +11994,29 @@ event = {
 	style = 2
 	picture = "KOR_provisional government"
 
+	action = {
+		name = "Road to Government establishment" 
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { trigger = { NOT = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } } type = headofstate which = 265004 } #Partial coalition(1942)
+		command = { trigger = { NOT = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } } type = headofgovernment which = 265029 }
+		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = headofstate which = 265001 } #What if? - KIP Party-state system
+		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = headofgovernment which = 265038 }
+	}
+}
+
+event = {
+	id = 1400006032
+	random = no
+	country = KOR
+	name = "National Leaders Conference" 
+	desc = ""
+	style = 2
+	picture = "news_paper"
+
 	trigger = {	
-		event = 1400006001
+		event = 1400006031
 		flag = KOR_KPG
 		NOT = {
 		flag = KOR_PRK
@@ -11930,14 +12028,172 @@ event = {
     deathdate = { day = 29 month = december year = 1999 }
 
 	action = {
-		name = "Road to Government establishment" 
-		ai_chance = 100
-		command = { type = dissent value = -1 }
+		name = "Several parties should be allowed to participate" 
+		ai_chance = 60
 		command = { type = domestic which = freedom value = 1 }
-		command = { trigger = { NOT = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } } type = headofstate which = 265004 } #Partial coalition(1942)
-		command = { trigger = { NOT = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } } type = headofgovernment which = 265029 }
-		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = headofstate which = 265001 } #What if? - KIP Party-state system
-		command = { trigger = { OR = { ideology = { type = fascist country = CHI } ideology = { type = nazi country = CHI } } } type = headofgovernment which = 265038 }
+		command = { type = local_setflag which = KOR_moderate_support when = 1 value = 1 }
+		command = { type = dissent value = 2 }
+	}
+	action = {
+		name = "Participation in the Provisional Government should be mandatory" 
+		ai_chance = 40
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 1400006033
+	random = no
+	country = KOR
+	name = "Direction of the Government" 
+	desc = ""
+	style = 2
+	picture = "politics1"
+
+	trigger = {	
+		event = 1400006032
+		flag = KOR_KPG
+		NOT = {
+		flag = KOR_PRK
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "be sufficient in the current composition" 
+		ai_chance = 70
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 1 }
+	}
+	action = {
+		name = "Variety of composition will ensure legitimacy" 
+		ai_chance = 30
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = local_setflag which = KOR_moderate_support when = 1 value = 1 }
+		command = { trigger = { government = democratic } type = armamentminister which = 265102 } 
+		command = { trigger = { NOT = { government = democratic } } type = armamentminister which = 265315 } 
+		command = { trigger = { government = democratic } type = ministerofsecurity which = 265122 } 
+		command = { trigger = { NOT = { government = democratic } } type = ministerofsecurity which = 265153 } 
+	}
+}
+
+event = {
+	id = 1400006034
+	random = no
+	country = KOR
+	name = "Convening of the Provisional National Assembly" 
+	desc = ""
+	style = 2
+	picture = "news_paper"
+
+	trigger = {	
+		event = 1400006033
+		flag = KOR_KPG
+		NOT = {
+		flag = KOR_PRK
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "We must respect the public to represent their will" 
+		ai_chance = 70
+		command = { type = local_setflag which = KOR_moderate_support when = 1 value = 1 }
+		command = { type = dissent value = 1 }
+	}
+	action = {
+		name = "The government should lead the election of representatives" 
+		ai_chance = 30
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = local_setflag which = KOR_moderate_support when = 1 value = -1 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 1400006035
+	random = no
+	country = KOR
+	name = "Declaration of Transitional Government" 
+	desc = ""
+	style = 2
+	picture = "KOR_Government Composition"
+
+	trigger = {	
+		event = 1400006032
+		event = 1400006033
+		event = 1400006034
+		flag = KOR_KPG
+		NOT = {
+		flag = KOR_PRK
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		trigger = { 
+		government = democratic
+		local_flag = { which = KOR_moderate_support when = 1 value = 2 }
+		}
+		name = "National unity government must be formed." 
+		ai_chance = 10
+		command = { type = headofstate which = 265001 } 
+		command = { type = headofgovernment which = 265030 } 
+		command = { type = foreignminister which = 265055 } 
+		command = { type = armamentminister which = 265102 } 
+		command = { type = ministerofsecurity which = 265359 } 
+		command = { type = ministerofintelligence which = 265190 } 
+	}
+	action = {
+		trigger = { 
+		government = democratic
+		local_flag = { which = KOR_moderate_support when = 1 value = 2 }
+		}
+		name = "The composition of the transitional government should vary" 
+		ai_chance = 25
+		command = { type = headofstate which = 265001 } 
+		command = { type = headofgovernment which = 265035 } 
+		command = { trigger = { government = democratic } type = foreignminister which = 265065 } 
+		command = { trigger = { NOT = { government = democratic } } type = foreignminister which = 265078 } 
+		command = { trigger = { government = democratic } type = ministerofsecurity which = 265359 } 
+		command = { trigger = { NOT = { government = democratic } } type = ministerofsecurity which = 265149 } 
+		command = { type = ministerofintelligence which = 265190 } 
+	}
+	action = {
+		trigger = { 
+		NOT = { local_flag = { which = KOR_moderate_support when = 1 value = 2 } }
+		}
+		name = "form a government in response to those who cooperate" 
+		ai_chance = 35
+		command = { type = headofstate which = 265001 } 
+		command = { type = headofgovernment which = 265035 } 
+		command = { trigger = { government = democratic } type = foreignminister which = 265065 } 
+		command = { trigger = { NOT = { government = democratic } } type = foreignminister which = 265078 } 
+		command = { type = armamentminister which = 265314 } 
+		command = { type = ministerofsecurity which = 265159 } 
+		command = { type = ministerofintelligence which = 265193 } 
+	}
+	action = {
+		trigger = { 
+		NOT = { local_flag = { which = KOR_moderate_support when = 1 value = 2 } }
+		}
+		name = "It will be enough to form a government as it stands" 
+		ai_chance = 25
+		command = { type = headofstate which = 265001 } 
+		command = { type = headofgovernment which = 265035 } 
+		command = { trigger = { government = democratic } type = foreignminister which = 265065 } 
+		command = { trigger = { NOT = { government = democratic } } type = foreignminister which = 265078 } 
+		command = { type = ministerofintelligence which = 265193 } 
 	}
 }
 
@@ -11961,7 +12217,7 @@ event = {
 		ai_chance = 80
 		name = "We accept their desire for autonomy"
 		command = { type = make_puppet which = TIB }
-		command = { type = trigger which = 1400007002 }
+		command = { type = event which = 1400007002 where = CHI when = 1 }
 	}
 	action = {
 		ai_chance = 20
@@ -11993,6 +12249,7 @@ event = {
 		command = { type = secedeprovince which = TIB value = 1288 when = 2 } 
 		command = { type = secedeprovince which = TIB value = 1289 when = 2 } 
 		command = { type = secedeprovince which = TIB value = 1290 when = 2 } 
+		command = { type = secedeprovince which = TIB value = 1294 when = 2 } 
 		command = { type = secedeprovince which = TIB value = 1295 when = 2 } 
 		command = { trigger = { NOT = { owned = { province = 1455 data = TIB } } } type = secedeprovince which = TIB value = 1455 when = 2 } 
 		command = { trigger = { NOT = { owned = { province = 1458 data = TIB } } } type = secedeprovince which = TIB value = 1458 when = 2 } 
@@ -13489,7 +13746,7 @@ event = {
 	country = U87
 	style = 2
 
-	name = "Discussion of National Assembly"
+	name = "Discussion of the National Assembly "
 	desc = ""
 	picture = "ccip_gmd"
 
@@ -13527,7 +13784,7 @@ event = {
 	random = no
 	country = U87
 
-	name = "Holding National Assembly"
+	name = "Holding the National Assembly "
 	desc = ""
 	style = 2
 	picture = "ccip_mus"
@@ -13786,7 +14043,7 @@ event = {
 	name = "Negotiations with Wang Jingwei"
 	desc = ""
 	style = 2
-	picture = "ccip_wjw"
+	picture = "ccip_gmd"
 
 	action = {
 		trigger = { 
@@ -13795,13 +14052,13 @@ event = {
 		ai_chance = 90
 		name = "North China's autonomy must be guaranteed"
 		command = { type = event which = 1400007544 where = U87 when = 7 } #Government Integration (Northern China, Inner Mongolia)
-		command = { type = relation which = U87 value = -50 }
+		command = { type = relation which = U87 value = -25 }
 	}
 	action = {
 		ai_chance = 10
 		name = "China needs Unified government"
 		command = { type = event which = 1400007543 where = U87 when = 7 } #Establishment of National government
-		command = { type = relation which = USA value = -100 }
+		command = { type = relation which = USA value = -125 }
 		command = { type = belligerence which = JAP value = -5 }	
 	}
 }
@@ -14645,6 +14902,38 @@ event = {
 	}
 
 	date = { day = 11 month = November year = 1944 }
+
+	name = "EVT_103_NAME"
+	desc = ""
+	picture = "news_paper"
+
+	action = {
+		ai_chance = 100
+		name = "Was he right?..."
+		command = { type = sleepminister which = 1250001 }
+		command = { type = sleepminister which = 1250002 }
+		command = { trigger = { headofstate = 1250001 } type = headofstate which = 1250003 }
+		command = { trigger = { headofgovernment = 1250002 } type = headofgovernment which = 1250005 }
+	}
+}
+
+event = {
+	id = 1400009112 #Wang Jingwei
+	random = no
+	country = U87
+	style = 2
+	
+	trigger = {
+	minister = 1250001
+	random = 5
+	NOT = {
+	exists = CHI
+		}
+	}
+
+	date = { day = 11 month = November year = 1944 }
+    offset = 1
+    deathdate = { day = 29 month = december year = 1963 }
 
 	name = "EVT_103_NAME"
 	desc = ""

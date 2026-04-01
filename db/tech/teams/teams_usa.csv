@@ -44,9 +44,13 @@ USA;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 240021;Carl Spaatz;T120;7;1939;1955;training;bomber_tactics;centralized_execution;aeronautics;combined_arms_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240041;John Pershing;100371;6;1914;1924;infantry_focus;large_unit_tactics;large_unit_focus;individual_courage;maneuver_tactics;cavalry_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240049;Frederick Funston;100787;6;1914;1917;infantry_focus;individual_courage;static_defense_tactics;training;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-240028;Omar Bradley;T127;8;1938;1954;small_unit_tactics;decentralized_execution;training;combined_arms_focus;maneuver_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240028;Omar Bradley;T127;8;1936;1954;small_unit_tactics;decentralized_execution;training;combined_arms_focus;maneuver_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240024;Dwight Eisenhower;T123;8;1939;1952;small_unit_tactics;decentralized_execution;combined_arms_focus;training;technical_efficiency;management;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240031;Maxwell Taylor;T130;6;1953;1965;small_unit_tactics;centralized_execution;combined_arms_focus;training;airborne_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-240034;US Marine Corps;100367;7;1800;1970;small_unit_tactics;munitions;vehicle_engineering;Marine_Training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240034;US Marine Corps;100367;7;1800;1970;small_unit_tactics;munitions;vehicle_engineering;marine_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 240035;Ranger School;100368;7;1950;1970;small_unit_tactics;centralized_execution;vehicle_engineering;airborne_training;mountain_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-240048;American Medical Assn;100686;7;1847;1970;chemistry;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240048;American Medical Assn;100686;7;1847;1970;chemistry;medicine;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240052;Daniel Van Voorhis;T_Daniel Van Voorhis;7;1930;1942;small_unit_tactics;combined_arms_focus;maneuver_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240053;Fox Conner;T_Fox Conner;6;1919;1938;small_unit_tactics;centralized_execution;infantry_focus;training;maneuver_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240054;Frank Jack Fletcher;T_Frank Jack Fletcher;5;1919;1947;small_taskforce_tactics;centralized_execution;carrier_tactics;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+240055;Samuel Murray Robinson;T_Samuel Murray Robinson;4;1919;1946;small_taskforce_tactics;centralized_execution;naval_engineering;naval_artillery;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

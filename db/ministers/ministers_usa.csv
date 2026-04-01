@@ -17,8 +17,8 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240015;Head of State;Wendell Willkie;1940;1945;1945;ML;Autocratic Charmer;High;M6036;X
 240016;Head of State;Charles McNary;1940;1945;1945;ML;Insignificant Layman;High;M6037;X
 240017;Head of State;Thomas E. Dewey;1944;1957;1957;ML;Popular Figurehead;High;M6038;X
-240018;Head of State;Fritz Kuhn;1933;1952;1952;FA;Barking Buffoon;High;M6011;X
-240019;Head of State;Gerald K. Smith;1933;1977;1977;PA;Powerhungry Demagogue;High;M6040;X
+240018;Head of State;Fritz Kuhn;1933;1952;1952;NS;Barking Buffoon;High;M6011;X
+240019;Head of State;Gerald K. Smith;1933;1977;1977;FA;Powerhungry Demagogue;High;M6040;X
 240020;Head of State;Earl Browder;1933;1964;1964;LE;Ruthless Powermonger;High;M6041;X
 240021;Head of State;Norman Thomas;1928;1964;1964;LWR;Insignificant Layman;High;M6021;X
 240022;Head of Government;Henry A. Wallace;1940;1956;1956;SD;Silent Workhorse;High;7377;X
@@ -30,8 +30,8 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240028;Head of Government;John Bricker;1944;1964;1964;ML;Corporate Suit;High;M6050;X
 240029;Head of Government;Strom Thurmond;1944;1964;1964;SC;Old General;High;M6051;X
 240030;Head of Government;H.R. Mengert;1933;1964;1964;PA;Old Airmarshal;High;M6052;X
-240031;Head of Government;Gerald K. Smith;1933;1977;1977;PA;Happy Amateur;High;M6040;X
-240032;Head of Government;Dr. Samuel Green;1944;1950;1950;PA;Old Admiral;High;M6054;X
+240031;Head of Government;Gerald K. Smith;1933;1977;1977;FA;Happy Amateur;High;M6040;X
+240032;Head of Government;Dr. Samuel Green;1944;1950;1950;FA;Old Admiral;High;M6054;X
 240033;Head of Government;William Z. Foster;1923;1962;1962;LE;Political Protege;High;M6055;X
 240034;Head of Government;James Cannon;1928;1975;1975;LWR;Smiling Oilman;High;M6056;X
 240035;Head of Government;Joseph P. Lash;1940;1988;1988;LE;Naive Optimist;High;M6024;X
@@ -144,11 +144,11 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240142;Chief of Navy;Robert L. Ghormley;1933;1959;1959;ML;Open Seas Doctrine;Very High;L60406;X
 240143;Head of Military Intelligence;Frank B. Rowlett;1933;1999;1999;SL;Naval Intelligence Specialist;High;M6184;X
 240144;Minister of Armament;Joseph P. Lash;1940;1988;1988;LWR;Resource Industrialist;Very High;M6024;X
-240145;Head of Government;Fritz Kuhn;1933;1952;1952;FA;Naive Optimist;High;M6011;X
+240145;Head of Government;Fritz Kuhn;1933;1952;1952;NS;Naive Optimist;High;M6011;X
 240146;Head of State;William F. Lemke;1933;1951;1951;PA;Barking Buffoon;Medium;M6097;X
 240147;Head of Government;Lawrence Dennis;1933;1978;1978;SC;Happy Amateur;Medium;M6187;X
 240148;Minister of Security;Gerald K. Smith;1933;1977;1977;PA;Back Stabber;Low;M6040;X
-240149;Head of State;Charles Lindbergh;1940;1975;1975;PA;Pig-headed Isolationist;Very High;M6020;X
+240149;Head of State;Charles Lindbergh;1940;1975;1975;FA;Pig-headed Isolationist;Very High;M6020;X
 240150;Head of Government;Robert E. Wood;1940;1970;1970;PA;Silent Workhorse;Very High;M6190;X
 240151;Minister of Security;Gerald B. Winrod;1940;1958;1958;PA;Efficient Sociopath;Very High;M6191;X
 240152;Chief of Staff;Robert E. Wood;1933;1970;1970;PA;School of Defence;High;M6190;X
@@ -169,7 +169,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240167;Minister of Armament;Henry L. Stimson;1940;1946;1946;SL;Secretary of War;Very High;M6061;X
 240168;Head of State;Dwight D. Eisenhower;1952;1970;1970;ML;Resigned Generalissimo;High;M6208;X
 240169;Head of State;Adlai Stevenson;1952;1966;1966;SL;Benevolent Gentleman;High;M6209;X
-240170;Head of Government;Earl Warren;1948;1975;1975;ML;Naive Optimist;High;M6210;X
+240170;Head of Government;Earl Warren;1948;1975;1975;SL;Naive Optimist;High;M6210;X
 240171;Head of Government;Richard M. Nixon;1952;1961;1961;ML;Backroom Backstabber;High;M6211;X
 240172;Head of Government;John Sparkman;1952;1961;1961;SL;Corporate Suit;High;M6212;X
 240173;Foreign Minister;Dean Acheson;1949;1972;1972;SL;Biased Intellectual;High;M6198;X
@@ -198,7 +198,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240196;Head of State;Douglas MacArthur;1952;1965;1965;SC;Resigned Generalissimo;Medium;L60250;X
 240197;Head of Military Intelligence;Charles Willoughby;1952;1973;1973;PA;Dismal Enigma;High;M6237;X
 240198;Minister of Security;Joseph McCarthy;1952;1958;1958;ML;Man of the People;High;M6238;X
-240199;Head of Government;Joseph McCarthy;1952;1958;1958;ML;Political Protege;High;M6238;X
+240199;Head of Government;Joseph McCarthy;1952;1958;1958;SC;Political Protege;High;M6238;X
 240200;Foreign Minister;Christian A. Herter;1959;1967;1967;ML;Apologetic Clerk;High;M6240;X
 240201;Head of State;Richard M. Nixon;1960;1969;1969;ML;Ruthless Powermonger;High;M6211;X
 240202;Head of State;John F. Kennedy;1960;1964;2003;SL;Autocratic Charmer;High;M6242;X
@@ -214,7 +214,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240212;Head of Military Intelligence;Peter C. Reilly;1956;1964;1964;SL;Political Specialist;Very High;M6252;X
 240213;Head of Military Intelligence;John A. McCone;1960;1966;1966;SL;Technical Specialist;Very High;M6253;X
 240214;Head of State;Lyndon B. Johnson;1963;1974;1974;SL;Stern Imperialist;High;M6244;X
-240215;Head of Government;Hubert Humphrey;1963;1974;1974;SL;Silent Workhorse;High;M6255;X
+240215;Head of Government;Hubert Humphrey;1963;1974;1974;SD;Silent Workhorse;High;M6255;X
 240216;Chief of Staff;Arthur W. Radford;1954;1974;1974;ML;School of Psychology;High;M6256;X
 240217;Chief of Staff;Nathan F. Twining;1957;1961;1961;ML;School of Fire Support;High;L60560;X
 240218;Chief of Staff;Lyman L. Lemnitzer;1960;1970;1970;SL;School of Mass Combat;High;L60244;X
@@ -231,7 +231,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240229;Chief of Air Force;Nathan F. Twining;1953;1961;1961;ML;Air Superiority Doctrine;Medium;L60560;X
 240230;Chief of Air Force;Thomas D. White;1957;1962;1962;ML;Army Aviation Doctrine;Medium;L60370;X
 240231;Chief of Air Force;Curtis LeMay;1943;1966;1966;SC;Carpet Bombing Doctrine;Medium;L60532;X
-240232;Head of Government;Harry L. Hopkins;1933;1947;1947;SL;Silent Workhorse;Very High;M6078;X
+240232;Head of Government;Harry L. Hopkins;1933;1947;1947;SD;Silent Workhorse;Very High;M6078;X
 240233;Chief of Air Force;Charles Chandler;1912;1921;1921;SL;Army Aviation Doctrine;High;3597;X
 240234;Chief of Air Force;William Mitchell;1912;1926;1926;PA;Air Superiority Doctrine;High;3598;X
 240236;Chief of Air Force;William Kenly;1917;1929;1929;ML;Air Superiority Doctrine;High;3998;X
@@ -284,7 +284,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240288;Foreign Minister;John Sherman;1897;1901;1901;ML;Ideological Crusader;High;3631;X
 240289;Foreign Minister;John Hay;1898;1906;1906;ML;Ideological Crusader;High;3632;X
 240290;Foreign Minister;William V. Allen;1893;1902;1902;SL;Apologetic Clerk;High;3633;X
-240291;Head of Government;Theodore Roosevelt;1900;1920;1920;ML;Flamboyant Tough Guy;High;3634;X
+240291;Head of Government;Theodore Roosevelt;1900;1920;1920;SL;Flamboyant Tough Guy;High;3634;X
 240292;Head of Government;Cornelius N. Bliss;1897;1912;1912;ML;Corporate Suit;High;3635;X
 240293;Head of Government;Alton B. Parker;1903;1914;1914;SL;Naive Optimist;High;3636;X
 240294;Head of Government;William H. Taft;1908;1914;1918;ML;Silent Workhorse;High;3637;X
@@ -293,13 +293,13 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240297;Head of Government;Charles Evans Hughes;1916;1926;1926;ML;Silent Workhorse;High;3628;X
 240298;Head of Government;Edith Wilson;1919;1922;1922;SL;Happy Amateur;High;3640;X
 240299;Head of Government;James M. Cox;1920;1929;1929;SL;Political Protege;High;3641;X
-240300;Head of Government;Eugene V. Debs;1900;1927;1927;SD;Ambitious Union Boss;High;3642;X
+240300;Head of Government;Eugene V. Debs;1900;1927;1927;LWR;Ambitious Union Boss;High;3642;X
 240301;Head of Government;Warren G. Harding;1914;1924;1924;ML;Backroom Backstabber;High;3643;X
 240302;Head of Government;Calvin Coolidge;1920;1934;1934;ML;Silent Workhorse;High;3644;X
 240303;Head of Government;John W. Davis;1924;1930;1930;SL;Political Protege;High;3645;X
 240304;Head of Government;Robert M. LaFollette;1924;1926;1926;SD;Flamboyant Tough Guy;High;3646;X
 240305;Head of Government;John J. Pershing;1900;1924;1924;PA;Old General;High;3611;X
-240306;Head of Government;John Reed;1900;1921;1921;ST;Ambitious Union Boss;High;3647;X
+240306;Head of Government;John Reed;1900;1921;1921;LE;Ambitious Union Boss;High;3647;X
 240307;Head of Government;William McKinley;1897;1902;1929;ML;Silent Workhorse;High;3648;X
 240308;Head of Government;Garret A. Hobart;1897;1900;1900;SC;Naive Optimist;High;3649;X
 240309;Head of Government;William Jennings Bryan;1900;1926;1926;SL;Naive Optimist;High;3629;X
@@ -312,7 +312,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240317;Head of Military Intelligence;James H. Reeves;1924;1933;1933;ML;Dismal Enigma;High;7991;X
 240319;Head of Military Intelligence;Robert Minor;1920;1953;1953;ST;Political Specialist;High;3655;X
 240320;Head of Military Intelligence;Nelson A. Miles;1898;1926;1926;ML;Logistics Specialist;High;3613;X
-240321;Head of State;Theodore Roosevelt;1900;1920;1920;ML;Die-hard Reformer;High;3634;X
+240321;Head of State;Theodore Roosevelt;1900;1920;1920;SL;Die-hard Reformer;High;3634;X
 240322;Head of State;Cornelius N. Bliss;1897;1912;1912;ML;Weary Stiffneck;High;3635;X
 240323;Head of State;Alton B. Parker;1903;1914;1914;SL;Benevolent Gentleman;High;3636;X
 240324;Head of State;William H. Taft;1908;1914;1918;ML;Weary Stiffneck;High;3637;X
@@ -321,7 +321,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240327;Head of State;Allan L. Benson;1914;1941;1941;SD;Die-hard Reformer;High;3639;X
 240328;Head of State;Charles Evans Hughes;1916;1926;1926;ML;Insignificant Layman;High;3628;X
 240330;Head of State;James M. Cox;1920;1929;1929;SL;Benevolent Gentleman;High;3641;X
-240331;Head of State;Eugene V. Debs;1900;1927;1927;SD;Die-hard Reformer;High;3642;X
+240331;Head of State;Eugene V. Debs;1900;1927;1927;LWR;Die-hard Reformer;High;3642;X
 240332;Head of State;Warren G. Harding;1920;1924;1924;ML;Autocratic Charmer;High;3643;X
 240333;Head of State;Calvin Coolidge;1923;1934;1934;ML;Benevolent Gentleman;High;3644;X
 240334;Head of State;John W. Davis;1924;1930;1930;SL;Insignificant Layman;High;3645;X
@@ -370,8 +370,8 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240379;Chief of Staff;George H. Dern;1933;1937;1937;SD;School of Defence;High;M6004;X
 240380;Head of Government;Thomas R. Marshall;1913;1921;1921;SL;Naive Optimist;High;9323;X
 240381;Head of Government;Charles G. Dawes;1923;1930;1930;SC;Naive Optimist;High;3053;X
-240382;Head of State;Herbert Hoover;1928;1934;1934;SC;Benevolent Gentleman;High;3087;X
-240383;Head of Government;Charles Curtis;1928;1937;1937;SC;Naive Optimist;High;3048;X
+240382;Head of State;Herbert Hoover;1928;1934;1934;ML;Benevolent Gentleman;High;3087;X
+240383;Head of Government;Charles Curtis;1928;1937;1937;ML;Naive Optimist;High;3048;X
 240384;Head of State;Al Smith;1928;1945;1945;SL;Benevolent Gentleman;High;3044;X
 240385;Head of Government;Franklin D. Roosevelt;1924;1946;1946;SL;Silent Workhorse;High;3596;X
 240386;Head of Government;Charles W. Bryan;1924;1946;1946;SL;Naive Optimist;High;3061;X
@@ -382,7 +382,7 @@ USA;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 240391;Minister of Armament;Abram Jakira;1924;1932;1932;ST;Resource Industrialist;Low;unknownminister;X
 240392;Head of Government;James W. Ford;1932;1958;1958;ST;Political Protege;High;unknownminister;X
 240393;Head of Government;Martin Abern;1928;1950;1950;ST;Political Protege;High;unknownminister;X
-240394;Head of State;Huey Long;1924;1936;1979;PA;Powerhungry Demagogue;High;unknownminister;X
+240394;Head of State;Huey Long;1924;1936;1979;PA;Powerhungry Demagogue;High;M_Huey Long;X
 240395;Head of Government;Morris Hillquit;1928;1934;1934;SD;Ambitious Union Boss;High;unknownminister;X
 240396;Minister of Armament;Max Shachtman;1928;1973;1973;LE;Resource Industrialist;Very High;unknownminister;X
 240397;Foreign Minister;Max Shachtman;1928;1973;1973;LE;Ideological Crusader;Medium;unknownminister;X
