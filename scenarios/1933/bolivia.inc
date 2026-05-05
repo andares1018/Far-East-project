@@ -32,7 +32,7 @@
      defense_lobby     = 8 
      interventionism   = 5 
     } 
-   nationalprovinces      = {  2002 2019 2020 2021 2024 2046 2063 2064  } 
+   nationalprovinces      = {  2002 2019 2020 2021 2046 2063 2064 2025 } 
    ownedprovinces         = {  2019 2020 2021 2063 2064  } 
    controlledprovinces    = {  2019 2020 2021 2063 2064  } 
    # ROTW Minor Tech '36 

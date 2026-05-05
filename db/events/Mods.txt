@@ -11989,7 +11989,7 @@ event = {
 	id = 1400006031
 	random = no
 	country = KOR
-	name = "Policy Statement of the Provisional Government" #임시정부의 당면정책과 국내동포에 고하는 성명 - https://db.history.go.kr/diachronic/level.do?levelId=kn_108_0090_0040_0020
+	name = "Immediate Policies of the Provisional Government" #임시정부의 당면정책과 국내동포에 고하는 성명 - https://db.history.go.kr/diachronic/level.do?levelId=kn_108_0090_0040_0020
 	desc = ""
 	style = 2
 	picture = "KOR_provisional government"

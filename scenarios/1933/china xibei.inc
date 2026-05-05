@@ -45,7 +45,7 @@ country = {
   }
   SpyInfo                = { country = "CXB" NumberOfSpies = 2 }
 
-  nationalprovinces      = { 1256 1262 1263 1265 1266 1268 1271 1272 1283 1284 1285 1255 1261 }
+  nationalprovinces      = { 1256 1262 1263 1265 1266 1268 1271 1272 1283 1284 1285 1255 1261 1264 }
   ownedprovinces         = { 1256 1262 1265 1266 1268 1271 1272 1283 1284 1285 1255 }
   controlledprovinces    = { 1256 1262 1265 1266 1268 1271 1272 1283 1284 1285 1255 }
 

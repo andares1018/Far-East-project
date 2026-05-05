@@ -43,7 +43,7 @@
               } 
    ownedprovinces         = {  317 318 319 320 321 322 323 324 325 326  } 
    controlledprovinces    = {  317 318 319 320 321 322 323 324 325 326  }
-   claimedprovinces = { 331 334 } 
+   claimedprovinces = { 331 334 310 313 } 
    
 	# Eastern Minor Tech '36 
 	# Group D 1936 techs 

@@ -557,7 +557,7 @@
 # 1400006028 USA CHI CHC SOV - Transfer of Administrative Authority #
 # 1400006029 KOR - Transfer of Administrative Authority #
 # 1400006030 
-# 1400006031 KOR - Policy statement of the Provisional Government (Provisional Government)
+# 1400006031 KOR - Immediate Policies of the Provisional Government (Provisional Government)
 # 1400006032 KOR - National Leaders Conference 
 # 1400006033 KOR - Direction of the Government 
 # 1400006034 KOR - Convening of the Provisional National Assembly 

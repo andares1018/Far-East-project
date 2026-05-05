@@ -36,7 +36,7 @@
      relation = {  tag = USA value = 75  } 
      relation = {  tag = VEN value = 10  } 
     } 
-   nationalprovinces      = {  2008 2010 2011 2012 2013 2014 2015 2016 2017 2018 2033  } 
+   nationalprovinces      = {  2008 2010 2011 2012 2013 2014 2015 2016 2017 2018 2033 2024 } 
    ownedprovinces         = {  2011 2012 2013 2014 2015 2016 2017 2018  } 
    controlledprovinces    = {  2011 2012 2013 2014 2015 2016 2017 2018  } 
    # ROTW Minor Tech '36 

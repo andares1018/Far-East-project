@@ -20,7 +20,7 @@ country = {
 	capital                = 2171 
 	policy = {
 		date              = {  year = 0 month = january day = 0  } 
-		democratic        = 3 
+		democratic        = 4 
 		political_left    = 3 
 		free_market       = 7 
 		freedom           = 6 
