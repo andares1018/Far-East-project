@@ -1,4 +1,5 @@
 U31;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
 970001;Minister of Armament;Rudolf Slansky;1933;1964;1999;ST;Theoretical Scientist;Medium;M24024;X
 970002;Head of Military Intelligence;Zdenek Fierlinger;1933;1964;1999;ST;Political Specialist;Very High;M24026;X
 970003;Head of State;Edouard Benes;1945;1964;1999;ST;Pig-headed Isolationist;High;2379;X
@@ -6,9 +7,9 @@ U31;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 970007;Head of Government;Gustav Husak;1933;1964;1999;ST;Political Protege;High;M24022;X
 970008;Foreign Minister;Vladimir Clementis;1933;1964;1999;ST;Great Compromiser;Medium;M24023;X
 970009;Foreign Minister;Gustav Husak;1941;1964;1999;ST;Iron Fisted Brute;High;M24022;X
-970010;Foreign Minister;Rudolf Slansky;1943;1964;1999;ST;the cloak n dagger schemer;High;M24024;X
+970010;Foreign Minister;Rudolf Slansky;1943;1964;1999;ST;The Cloak N Dagger Schemer;High;M24024;X
 970011;Minister of Armament;Bohumil Stepanec;1933;1964;1999;ST;Tank Proponent;Medium;M24079;X
-970012;Minister of Armament;Karel Olmanec;1941;1964;1999;ST;laissez-faire capitalist;Medium;M24080;X
+970012;Minister of Armament;Karel Olmanec;1941;1964;1999;ST;Laissez-Faire Capitalist;Medium;M24080;X
 970013;Minister of Armament;Rudolf Slansky;1945;1964;1999;ST;Theoretical Scientist;Medium;M24024;X
 970014;Minister of Security;Prokop Drtina;1933;1964;1999;ST;Man of the People;High;M24025;X
 970016;Minister of Security;Kristoph Emmerich;1941;1964;1999;ST;Silent Lawyer;Very High;M24097;X
