@@ -83,7 +83,7 @@ JAP;Japan;Japon;Giappone;Japуn;Japan;Japonia;;Япония;;;X
 JOR;Jordan;Jordanie;Giordania;Jordбn;Jordanien;Jordania;;Иордания;;;X
 KAZ;Kazakhstan;Kazakhstan;Kazakistan;Kazajstбn;Kasachstan;Kazachstan;;Казахстан;;;X
 KOR;Korea;Corйe;Corea;Corea;Korea;Korea;;Корея;;;X
-KUR;Kurdistan;Kurdistan;Kurdistan;Kurdistбn;Kurdistan;Kurdystan;;Курдистан;;;X
+KUR;Greater Kurdistan;Kurdistan;Kurdistan;Kurdistбn;Kurdistan;Kurdystan;;Курдистан;;;X
 KYG;Kyrgyzstan;Kirghizistan;Kirghizistan;Kirguizistбn;Kirgistan;Kirgistan;;Киргизия;;;X
 LAO;Laos;Laos;Laos;Laos;Laos;Laos;;Лаос;;;X
 LAT;Latvia;Lettonie;Lettonia;Letonia;Lettland;Јotwa;;Латвия;;;X
@@ -93,12 +93,12 @@ LIB;Liberia;Libйria;Liberia;Liberia;Liberia;Liberia;;Либерия;;;X
 LIT;Lithuania;Lituanie;Lituania;Lituania;Litauen;Litwa;;Литва;;;X
 LUX;Luxemburg;Luxembourg;Lussemburgo;Luxemburgo;Luxemburg;Luksemburg;;Люксембург;;;X
 MAD;Madagascar;Madagascar;Madagascar;Madagascar;Madagaskar;Madagaskar;;Мадагаскар;;;X
-MAL;Union of Mali;Union du Mali;Unione del Mali;Uniуn de Malн;Union von Mali;Mali;;Федерация Мали;;;X
-MAN;Manchukuo;Mandchoukouo;Manchukuo;Manchuria;Mandschuko;Mandїukuo;;Маньчжоу-Го;;;X
-MEN;Mengjiang;Mengjiang;Mengjiang;Mengjiang;Mengjiang;Mongolia Wewnкtrzna;;Внутренняя Монголия;;;X
+MAL;Mali Federation;Union du Mali;Unione del Mali;Uniуn de Malн;Union von Mali;Mali;;Федерация Мали;;;X
+MAN;State of Manchuria;Mandchoukouo;Manchukuo;Manchuria;Mandschuko;Mandїukuo;;Маньчжоу-Го;;;X
+MEN;Mengjiang State;Mengjiang;Mengjiang;Mengjiang;Mengjiang;Mongolia Wewnкtrzna;;Внутренняя Монголия;;;X
 MEX;Mexico;Mexique;Messico;Mйxico;Mexiko;Meksyk;;Мексика;;;X
 MIN;(Undefined Nation);(nation non dйfinie);(Nazione non specificata);(Naciуn sin definir);(nicht definierte Nation);(Nieokreњlone paсstwo);;(Неопределенная страна);;;X
-MLY;Malaysia;Malaisie;Malesia;Malasia;Malaysia;Malezja;;Малайзия;;;X
+MLY;Federation of Malaya;Malaisie;Malesia;Malasia;Malaysia;Malezja;;Малайзия;;;X
 MON;Mongolia;Mongolie;Mongolia;Mongolia;Mongolei;Mongolia;;Монголия;;;X
 MOR;Morocco;Maroc;Marocco;Marruecos;Marokko;Maroko;;Марокко;;;X
 MOZ;Mozambique;Mozambique;Mozambico;Mozambique;Mosambik;Mozambik;;Мозамбик;;;X
@@ -159,7 +159,7 @@ TUN;Tunisia;Tunisie;Tunisia;Tъnez;Tunesien;Tunezja;;Тунис;;;X
 TUR;Turkey;Turquie;Turchia;Turquнa;Tьrkei;Turcja;;Турция;;;X
 UKR;Ukraine;Ukraine;Ucraina;Ucrania;Ukraine;Ukraina;;Украина;;;X
 URU;Uruguay;Uruguay;Uruguay;Uruguay;Uruguay;Urugwaj;;Уругвай;;;X
-USA;USA;Etats-Unis;USA;EE. UU.;USA;USA;;США;;;X
+USA;United States;Etats-Unis;USA;EE. UU.;USA;USA;;США;;;X
 UZB;Uzbekistan;Ouzbйkistan;Uzbekistan;Uzbekistбn;Usbekistan;Uzbekistan;;Узбекистан;;;X
 VEN;Venezuela;Vйnйzuйla;Venezuela;Venezuela;Venezuela;Wenezuela;;Венесуэла;;;X
 VIC;Vichy France;Rйgime de Vichy;Francia di Vichy;Francia de Vichy;Vichy-Frankreich;Vichy;;Вишистская Франция;;;X
@@ -171,10 +171,10 @@ U00;User Defined;Paramйtrable;Definito dall'utente;Def. por usuario;Benutzerdefi
 U01;Free France;France libre;Francia Libera;Francia Libre;Freies Frankreich;Wolna Francja;;Свободная Франция;;;X
 U02;British Raj;Raj britannique;British Raj;Raj Britanico;Britisches-Indien;Indie Brytyjskie;;Британская Индия;;;X
 U03;Indochinese Union;Union indochinoise;Unione Indocinese;Uniуn Indochina;Indochinesische Union;Unia Indochiсska;;Индокитайский Союз;;;X
-U04;French Mandate for Syria;Mandat franзais en Syrie;Mandato francese della Siria;Mandato Francйs de Siria;Franzцsisches Mandat fьr Syrien;Francuski mandat Syrii;;Французский мандат в Сирии и Ливане;;;X
-U05;Dutch East Indies;Indes nйerlandaises;Indie Orientali Olandesi;Indias Orientales Neerlandesas;Niederlдndisch-Indien;Holenderskie Indie Wschodnie;;Голландская Ост-Индия;;;X
+U04;Mandate for Syria and the Lebanon;Mandat franзais en Syrie;Mandato francese della Siria;Mandato Francйs de Siria;Franzцsisches Mandat fьr Syrien;Francuski mandat Syrii;;Французский мандат в Сирии и Ливане;;;X
+U05;Netherlands East Indies;Indes nйerlandaises;Indie Orientali Olandesi;Indias Orientales Neerlandesas;Niederlдndisch-Indien;Holenderskie Indie Wschodnie;;Голландская Ост-Индия;;;X
 U06;Free City of Danzig;Ville libre de Dantzig;Cittа Libera di Danzica;Ciudad Libre de Danzig;Freie Stadt Danzig;Wolne Miasto Gdaсsk;;Вольный город Данциг;;;X
-U08;Germany;Allemagne;Germania;Alemania;Deutsches Reich;Niemcy;;Германия;;;X
+U08;German Reich;Allemagne;Germania;Alemania;Deutsches Reich;Niemcy;;Германия;;;X
 U09;Austria-Hungary;Autriche-Hongrie;Austria-Ungheria;Austria-Hungrнa;Цsterreich-Ungarn;Austro-Wкgry;;Австро-Венгрия;;;X
 U10;Dutch Socialist Union;Union socialiste Hollandaise;Unione Socialista Olandese;Uniуn Socialista Holandesa;Niederlдndische Sozialistische Union;Holenderski Zwi№zek Socjalistyczny;;Голландский Социалистический Союз;;;X
 U11;People's Republic of France;Rйpublique populaire de France;Repubblica Popolare Francese;Repъblica Popular Francesa;Volksrepublik Frankreich;Francuska Republika Ludowa;;Французская Народная Республика;;;X
@@ -271,7 +271,7 @@ UAU;East Indonesia;;;;;;;;;;X
 UBO;North Borneo;;;;;;;;;;X
 UCH;Republic of China;Rйpublique de Chine;Repubblica Cinese;Repъblica de China;Chinesische Republik;Republika Chiсska;;Китайская Республика;;;X
 UCS;Northern China;;;;;;;;;;X
-UER;Ufa Directorate;Directoire d'Oufa;Direttorato di Ufa;Directorio Ufa;Ufa-Direktorat;Dyrektoriat Ufijski;;Уфимская Директория;;;X
+UER;Provisional All-Russian Government;Directoire d'Oufa;Direttorato di Ufa;Directorio Ufa;Ufa-Direktorat;Dyrektoriat Ufijski;;Уфимская Директория;;;X
 UES;European Soviets;Soviets europйens;Soviet europei;Soviets Europeos;Europдische Rдterepublik;Europa Sowiecka;;Европейские Советы;;;X
 UGS;Northern Army;Armйe du Nord;Esercito del Nord;Armada del Norte;Nordarmee;Armia Pуіnocna;;Приморье;;;X
 UIC;Hyderabad;;;;;;;;;;X
@@ -280,7 +280,7 @@ UPE;East Turkestan;Turkestan oriental;Turkestan dell'Est;Turkestбn Oriental;Ost-
 UPR;Turkistan;;;;;;;;;;X
 UPS;Hami;;;;;;;;;;X
 URO;Anhui Clique;;;;;;;;;;X
-USN;;;;;;;;;;;X
+USN;Nationalist Government;;;;;;;;;;X
 UTC;Russian Volunteer Army;Armйe des volontaires;Armata dei Volontari;Ejйrcito de Voluntarios;Freiwilligenarmee;Armia Ochotnicza;;Добровольческая армия;;;X
 UTL;;;;;;;;;;;X
 UTO;;;;;;;;;;;X
