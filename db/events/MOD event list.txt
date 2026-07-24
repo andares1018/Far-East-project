@@ -130,8 +130,8 @@
 # 1400000081 CHI - Reorganization of Economic Policies 
 # 1400000082 CHI - Death of Chiang Kai-shek - Alternate
 # 1400000083 CHI - Extraordinary Congress of the Kuomintang - Alternate
-# 1400000084 CHI - Local Warlords leave - Effects of partial defeat, Alternate #
-# 1400000085 CHI - Minister Resigns - Wang Jingwei (post truce) #
+# 1400000084 
+# 1400000085 
 # 1400000086 CHI - Decision of National Assembly - Constitutional Amendment (Constitutional Crisis) #
 # 1400000087 CHI - Presidential Election - 3rd Presidential Election #
 # 1400000088 CHI - Presidential Election - 3rd Presidential Election (Chiang Dictatorship) #
@@ -145,9 +145,9 @@
 # 1400000096 CHI - Fate of the Liberal opposition - Post-Constitutionalization 
 # 1400000097 CHI - Fate of the Leftist opposition - Post-Constitutionalization 
 # 1400000098 CHI - Henan Famine (OTL - 1942-1943, during the war) 
-# 1400000099 
-# 1400000100 
-# 1400000101 
+# 1400000099 CHI - Minister Resigns - Wang Jingwei (post truce) 
+# 1400000100 CHI - Emergency Congress of the Kuomintang - Alternate 
+# 1400000101 CHI - Local Warlords leave - Effects of partial defeat, Alternate #
 # 1400000102 
 # 1400000103 
 # 1400000104 
@@ -215,7 +215,9 @@
 # 1400001165 SIK - Southern Expedition 
 # 1400001166 SIK - Islamic rebellion 
 # 1400001167 SIK - Eight-Point Manifesto #
-# 1400001168 
+# 1400001168 SIK - Political Purge #
+# 1400001169 
+# 1400001170 
 
 ### 1400001251 - 1400001500 : Border Conflict and War of Resistance
 # 1400001251 JAP - East Hebei Incident (1935)
@@ -275,7 +277,7 @@
 # 1400001523 CHC - Land Reform Policy #
 # 1400001524 CHC - Land Reform Movement #
 # 1400001525 CHC - Agricultural Collectivisation # 
-# 1400001526 CHC - Defectors from Nationalists #
+# 1400001526 CHC - Defectors from Nationalists - Maoism #
 # 1400001527 CHC - Expanding the United Front? - New Democratic Revolution #
 # 1400001528 CHC - Fate of the Democratic opposition - Maoism #
 # 1400001529 CHC - 
@@ -554,15 +556,15 @@
 # 1400006025 USA - Results of the Governing Commission #
 # 1400006026 KOR - General Election #
 # 1400006027 KOR - Presidential Election #
-# 1400006028 USA CHI CHC SOV - Transfer of Administrative Authority #
-# 1400006029 KOR - Transfer of Administrative Authority #
+# 1400006028 USA CHI CHC SOV - Transfer of Administrative Authority (about KOR) #
+# 1400006029 
 # 1400006030 
 # 1400006031 KOR - Immediate Policies of the Provisional Government (Provisional Government)
 # 1400006032 KOR - National Leaders Conference 
-# 1400006033 KOR - Direction of the Government 
-# 1400006034 KOR - Convening of the Provisional National Assembly 
-# 1400006035 KOR - Declaration of Transitional Government 
-# 1400006036 KOR - 
+# 1400006033 KOR - Cooperation with CPKI 
+# 1400006034 KOR - Direction of the Government 
+# 1400006035 KOR - Convening of the Provisional National Assembly 
+# 1400006036 KOR - Declaration of Transitional Government 
 # 1400006037 
 # 1400006038 
 # 1400006039 

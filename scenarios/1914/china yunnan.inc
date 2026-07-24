@@ -29,16 +29,16 @@
      defense_lobby     = 6 
      interventionism   = 4 
  }
- headofstate            = {  type = 9 id = 615100  }
- headofgovernment       = {  type = 9 id = 615101  }
- foreignminister        = {  type = 9 id = 615102  }
- armamentminister       = {  type = 9 id = 615103  }
- ministerofsecurity     = {  type = 9 id = 615104  }
- ministerofintelligence = {  type = 9 id = 615105  }
- chiefofstaff           = {  type = 9 id = 615106  }
- chiefofarmy            = {  type = 9 id = 615120  }
- chiefofnavy            = {  type = 9 id = 615108  }
- chiefofair             = {  type = 9 id = 615109  }
+  headofstate            = { type = 9 id = 615004 } # Tang Jiyao
+  headofgovernment       = { type = 9 id = 615077 } # Ren Kecheng
+  foreignminister        = { type = 9 id = 615022 } # Zhang Weihan
+  armamentminister       = { type = 9 id = 615026 } # Miao Jiashou
+  ministerofsecurity     = { type = 9 id = 615082 } # Huang Derun
+  ministerofintelligence = { type = 9 id = 615050 } # Ma Ying
+  chiefofstaff           = { type = 9 id = 615063 } # Wang Jiuling
+  chiefofarmy            = { type = 9 id = 615065 } # Tang Jiyao
+  chiefofnavy            = { type = 9 id = 615081 } 
+  chiefofair             = { type = 9 id = 615072 } # Yang Ruxuan
  nationalprovinces      = {  1390 1413 1304 1302 1296 1297 1298 1293 1292 1389 1291 1384 1385 1386 1387 1388 1299 1300
  1290 1294 }
  ownedprovinces         = {  1389 1390 1384 1385 1387 1386 1388 1291 1292 1293

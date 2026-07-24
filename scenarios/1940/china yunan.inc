@@ -145,16 +145,16 @@ blueprints = {
      relation = {  tag = CHC value = -200  } 
     } 
    SpyInfo                = {  country = "CYN" NumberOfSpies = 2  } 
-   headofstate            = {  type = 9 id = 615001  } 
-   headofgovernment       = {  type = 9 id = 615002  } 
-   foreignminister        = {  type = 9 id = 615003  } 
-   armamentminister       = {  type = 9 id = 615004  } 
-   ministerofsecurity     = {  type = 9 id = 615005  } 
-   ministerofintelligence = {  type = 9 id = 615006  } 
-   chiefofstaff           = {  type = 9 id = 615007  } 
-   chiefofarmy            = {  type = 9 id = 615008  } 
-   chiefofnavy            = {  type = 9 id = 615009  } 
-   chiefofair             = {  type = 9 id = 615010  } 
+  headofstate            = { type = 9 id = 615001 } # Long Yun
+  headofgovernment       = { type = 9 id = 615002 } # Long Yun
+  foreignminister        = { type = 9 id = 615078 } # Wang Zhanqi
+  armamentminister       = { type = 9 id = 615029 } # Lu Chongren
+  ministerofsecurity     = { type = 9 id = 615037 } # Ding Zhaoguan
+  ministerofintelligence = { type = 9 id = 615049 } # Sun Du
+  chiefofstaff           = { type = 9 id = 615056 } # Lu Han
+  chiefofarmy            = { type = 9 id = 615067 } # Long Yun
+  chiefofnavy            = { type = 9 id = 615070 } # Zhang Chong
+  chiefofair             = { type = 9 id = 615071 } # Liu Peiquan
    # ###### 
    # CHINA 1936 OOB 
    # Type = 22100

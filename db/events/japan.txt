@@ -456,30 +456,12 @@ event = {
 		command = { type = setflag which = China_surrender_puppet }
 		command = { type = relation which = ENG value = -10 }
 		command = { type = relation which = USA value = -20 }
-		command = { type = addclaim which = 1247 } #Beijing
 		command = { type = addclaim which = 1241 } #Tianjin
 		
 		command = { type = addclaim which = 1328 } #Qindao
-		command = { type = addclaim which = 1331 } #Yantai
-		
-		command = { type = addclaim which = 1334 } #Nantong
-		command = { type = addclaim which = 1343 } #Huainan
 		command = { type = addclaim which = 1338 } #Shanghai
-		#command = { type = addclaim which = 1337 } #Nanjing
-		#command = { type = addclaim which = 1340 } #Hefei
-		command = { type = addclaim which = 1346 } #Ningbo
-		command = { type = addclaim which = 1345 } #Hangzhou
-		command = { type = addclaim which = 1342 } #Xuanzhou
-		command = { type = addclaim which = 1348 } #Jinhua
 		
 		command = { type = addclaim which = 1358 } #Fuzhou
-		
-		command = { type = addclaim which = 1356 } #Zhangzhou
-		command = { type = addclaim which = 1375 } #Shantou
-		command = { type = addclaim which = 1370 } #Lufeng
-		command = { type = addclaim which = 1369 } #Guangzhou
-		command = { type = addclaim which = 1368 } #Shaoguan
-		command = { type = addclaim which = 1383 } #Wuzhou
 		
 		command = { type = addclaim which = 1365 } #Haikou
 		command = { type = trigger which = 2012017 }
@@ -503,62 +485,7 @@ event = {
 		command = { type = addclaim which = 1330 } #Jinan
 		command = { type = addclaim which = 1331 } #Yantai
 		command = { type = addclaim which = 1332 } #Zaozhuang
-		#Jiangsu
-		command = { type = addclaim which = 1333 } #Huaiyin
-		command = { type = addclaim which = 1334 } #Nantong
-		command = { type = addclaim which = 1335 } #Yancheng
-		command = { type = addclaim which = 1336 } #Xuzhou
-		command = { type = addclaim which = 1337 } #Nanjing
 		command = { type = addclaim which = 1338 } #Shanghai
-	}
-	action = {
-		ai_chance = 0
-		name = 3814c
-		command = { type = setflag which = China_surrender_coasts }
-		command = { type = trigger which = 2012017 }
-		#Hebei
-		command = { type = addclaim which = 1241 } #Tianjin
-		command = { type = addclaim which = 1242 } #Shijazhuang
-		command = { type = addclaim which = 1243 } #Baoding
-		command = { type = addclaim which = 1244 } #Changzhou
-		command = { type = addclaim which = 1247 } #Beijing
-		command = { type = addclaim which = 1323 } #Anyang
-		#Shandong
-		command = { type = addclaim which = 1327 } #Heze
-		command = { type = addclaim which = 1328 } #Qindao
-		command = { type = addclaim which = 1329 } #Weifang
-		command = { type = addclaim which = 1330 } #Jinan
-		command = { type = addclaim which = 1331 } #Yantai
-		command = { type = addclaim which = 1332 } #Zaozhuang
-		#Jiangsu
-		command = { type = addclaim which = 1333 } #Huaiyin
-		command = { type = addclaim which = 1334 } #Nantong
-		command = { type = addclaim which = 1335 } #Yancheng
-		command = { type = addclaim which = 1336 } #Xuzhou
-		command = { type = addclaim which = 1337 } #Nanjing
-		command = { type = addclaim which = 1338 } #Shanghai	
-		#Zheijang
-		command = { type = addclaim which = 1345 } #Hangzhou
-		command = { type = addclaim which = 1346 } #Ningbo
-		command = { type = addclaim which = 1347 } #Wenzhou
-		command = { type = addclaim which = 1348 } #Jinhua
-		#Fujian
-		command = { type = addclaim which = 1356 } #Zhangzhou
-		command = { type = addclaim which = 1357 } #Nanping
-		command = { type = addclaim which = 1358 } #Fuzhou
-		command = { type = addclaim which = 1359 } #Sanming
-		command = { type = addclaim which = 1360 } #Xiamen
-		#Guangdong
-		command = { type = addclaim which = 1365 } #Haikou
-		command = { type = addclaim which = 1367 } #Naoming
-		command = { type = addclaim which = 1368 } #Shaoguan
-		command = { type = addclaim which = 1369 } #Guangzhou
-		command = { type = addclaim which = 1370 } #Lufeng
-		#command = { type = addclaim which = 1371 } #Hong Kong
-		#command = { type = addclaim which = 1372 } #Macao
-		command = { type = addclaim which = 1373 } #Jiangmen
-		command = { type = addclaim which = 1374 } #Pingxiang
-		command = { type = addclaim which = 1375 } #Shantou
 	}
 }
 event = {

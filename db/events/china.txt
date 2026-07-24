@@ -923,7 +923,6 @@ event = {
 		command = { type = relation which = SIK value = -5 }
 		command = { type = sleepleader which = 55012 } # Zhang Xueliang
 		command = { type = sleepleader which = 55338 } # Yang Hucheng
-		command = { type = headofgovernment which = 55007 } #Kong Xiangxi
 		command = { type = remove_division which = 22000 value = 34 } #Shaanxi Army
 		command = { type = remove_division which = 22000 value = 35 }
 		command = { type = remove_division which = 22000 value = 36 }

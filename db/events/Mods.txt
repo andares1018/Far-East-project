@@ -2700,7 +2700,7 @@ event = {
 
 	action = {
 		ai_chance = 100
-		name = "We lost a strong leader..."
+		name = "We lost strong leader..."
 		command = { type = sleepteam which = 55006 } # Chiang Kai-shek
 		command = { type = sleepminister which = 55001 } # Chiang Kai-shek HOS
 		command = { type = sleepminister which = 55002 } # Chiang Kai-shek HOG
@@ -2708,6 +2708,7 @@ event = {
 		command = { type = setflag which = KMT_Instability }
 		command = { type = dissent value = 10 }
 		command = { type = event which = 1400000083 where = CHI when = 30 }
+		command = { type = headofgovernment which = 55007 } #Kong Xiangxi
 	}
 }
 
@@ -2722,9 +2723,35 @@ event = {
 	picture = "ccip_gmd"
 
 	action = {
-		ai_chance = 100
-		name = "How long will it last?"
+		ai_chance = 20
+		name = "Cooperate with CC Clique"
 		command = { type = headofgovernment which = 55109 }
+		command = { type = foreignminister which = 55062 } #Zhang Lisheng
+		command = { type = armamentminister which = 55129 } #Zhu Jiahua
+		command = { type = ministerofsecurity which = 55126 } #Chen Lifu
+		command = { type = dissent value = -2.5 } 
+		command = { type = setflag which = KMT_CCC }
+	}
+	action = {
+		ai_chance = 20
+		name = "Cooperate with Political Science Clique"
+		command = { type = headofgovernment which = 55109 }
+		command = { type = foreignminister which = 55117 } #Zhang Qun
+		command = { type = armamentminister which = 55025 } #Zhang Jiaao
+		command = { type = ministerofsecurity which = 55121 } #Weng Wenhao
+		command = { type = dissent value = -2.5 } 
+		command = { type = setflag which = KMT_PSC }
+	}
+	action = {
+		ai_chance = 60
+		name = "Coalition of internal factions is important"
+		command = { type = headofgovernment which = 55109 }
+		command = { type = foreignminister which = 55062 } #Political Science Clique
+		command = { type = armamentminister which = 55012 } #Reorganization Group
+		command = { type = ministerofsecurity which = 55126 } #CC Clique
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = setflag which = KMT_Coalition }
+		command = { type = dissent value = -1 } 
 	}
 }
 
@@ -2791,7 +2818,6 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "This is necessary for each other"
-		command = { type = trigger which = 1400000092 }
 		command = { trigger = { country = JAP } type = belligerence which = JAP value = -5 }
 		command = { type = domestic which = interventionism value = 1 } 
 	}
@@ -3105,7 +3131,67 @@ event = {
 	}
 }
 
+event = {
+	id = 1400000099
+	random = no
+	country = CHI
+	name = "Minister Resigns"
+	desc = ""
+	style = 2
+	picture = "ccip_gmd"
 
+	trigger = {	
+		flag = KMT_Instability
+		OR = {
+		KMT_CCC
+		KMT_PSC
+		}
+		OR = {
+		dissent = 40
+		and = {
+			event = 2012016
+			war = { country = CHI country = JAP }
+			NOT = { event = 2012004 }
+			event = 2011012
+			}
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "How long will it last?"
+		command = { trigger = { flag = KMT_CCC } type = headofgovernment which = 55125 }
+		command = { trigger = { flag = KMT_PSC } type = headofgovernment which = 55118 }
+		command = { trigger = { flag = KMT_Coalition } type = headofgovernment which = 55042 }
+		command = { type = dissent value = 5 }
+		command = { type = event which = 1400000100 where = CHI when = 28 }
+	}
+}
+
+event = {
+	id = 1400000100
+	random = no
+	country = CHI
+
+	name = "Emergency Congress of the Kuomintang"
+	desc = ""
+	style = 2
+	picture = "ccip_gmd"
+
+	action = {
+		ai_chance = 100
+		command = { type = dissent value = 1 }
+		command = { trigger = { flag = KMT_CCC incabinet = 55126 } type = ministerofsecurity which = 55029 }
+		command = { trigger = { flag = KMT_PSC incabinet = 55062 } type = foreignminister which = 55120 }
+		command = { trigger = { flag = KMT_Coalition incabinet = 55126 } type = ministerofsecurity which = 55071 }
+		command = { trigger = { flag = KMT_Coalition incabinet = 55062 } type = foreignminister which = 55009 }
+		command = { trigger = { flag = KMT_Coalition incabinet = 55012 } type = armamentminister which = 55012 }
+	}
+}
 
 ### Chinese Warlord
 
@@ -3447,7 +3533,7 @@ event = {
 	random = no
 	country = U63 
 
-	name = "Accept of a negotiation offer"
+	name = "Accept of negotiation offer"
 	desc = ""
 	style = 2
 	picture = "diplomatic_campaign"
@@ -3788,7 +3874,6 @@ event = {
 	id = 1400001154
 	random = no
 	country = CHI
-	save_date = yes
 	
 	trigger = {
 		NOT = { exists = UPE }
@@ -12046,13 +12131,52 @@ event = {
 	id = 1400006033
 	random = no
 	country = KOR
+	name = "Cooperation with CPKI" 
+	desc = ""
+	style = 2
+	picture = "KOR_CPKI"
+
+	trigger = {	
+		event = 1400006032
+		flag = KOR_KPG
+		NOT = {
+		flag = KOR_PRK
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		name = "Legitimate authority of government comes first" 
+		ai_chance = 70
+		command = { type = local_setflag which = KOR_moderate_support when = 1 value = -1 }
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+	action = {
+		name = "Compromise is essential" 
+		ai_chance = 30
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = local_setflag which = KOR_moderate_support when = 1 value = 1 }
+		command = { type = dissent value = 2 }
+		command = { type = setflag which = KPG_Cooperation }
+	}
+}
+
+
+event = {
+	id = 1400006034
+	random = no
+	country = KOR
 	name = "Direction of the Government" 
 	desc = ""
 	style = 2
 	picture = "politics1"
 
 	trigger = {	
-		event = 1400006032
+		event = 1400006033
 		flag = KOR_KPG
 		NOT = {
 		flag = KOR_PRK
@@ -12082,7 +12206,7 @@ event = {
 }
 
 event = {
-	id = 1400006034
+	id = 1400006035
 	random = no
 	country = KOR
 	name = "Convening of the Provisional National Assembly" 
@@ -12091,7 +12215,7 @@ event = {
 	picture = "news_paper"
 
 	trigger = {	
-		event = 1400006033
+		event = 1400006034
 		flag = KOR_KPG
 		NOT = {
 		flag = KOR_PRK
@@ -12118,7 +12242,7 @@ event = {
 }
 
 event = {
-	id = 1400006035
+	id = 1400006036
 	random = no
 	country = KOR
 	name = "Declaration of Transitional Government" 
@@ -12130,6 +12254,7 @@ event = {
 		event = 1400006032
 		event = 1400006033
 		event = 1400006034
+		event = 1400006035
 		flag = KOR_KPG
 		NOT = {
 		flag = KOR_PRK
@@ -12144,8 +12269,24 @@ event = {
 		trigger = { 
 		government = democratic
 		local_flag = { which = KOR_moderate_support when = 1 value = 2 }
+		NOT = { flag = KPG_Cooperation }
 		}
-		name = "National unity government must be formed." 
+		name = "National unity government must be formed" 
+		ai_chance = 10
+		command = { type = headofstate which = 265001 } 
+		command = { type = headofgovernment which = 265031 } 
+		command = { type = foreignminister which = 265055 } 
+		command = { type = armamentminister which = 265321 } 
+		command = { type = ministerofsecurity which = 265143 } 
+		command = { type = ministerofintelligence which = 265190 } 
+	}
+	action = {
+		trigger = { 
+		government = democratic
+		local_flag = { which = KOR_moderate_support when = 1 value = 2 }
+		flag = KPG_Cooperation
+		}
+		name = "National unity government must be formed" 
 		ai_chance = 10
 		command = { type = headofstate which = 265001 } 
 		command = { type = headofgovernment which = 265030 } 

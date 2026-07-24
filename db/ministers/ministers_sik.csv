@@ -1,13 +1,13 @@
 SIK;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-420001;Head of State;Yang Zengxin;1910;1930;1936;PA;Pig-headed Isolationist;High;;X
-420002;Head of State;Fan Yaonan;1930;1970;1999;SC;Barking Buffoon;High;;X
+420001;Head of State;Yang Zengxin;1910;1933;1936;PA;Pig-headed Isolationist;High;;X
+420002;Head of State;Fan Yaonan;1925;1970;1999;SC;Barking Buffoon;High;;X
 420003;Head of State;Sheng Shicai;1930;1970;1999;LWR;Ruthless Powermonger;High;;X
 420004;Head of State;Sheng Shicai;1930;1970;1999;PA;Die-hard Reformer;High;;X
 420005;Head of State;Ma Shaowu;1930;1970;1999;PA;Resigned Generalissimo;High;;X
 420006;Head of State;Jin Shuren;1930;1970;1999;PA;Stern Imperialist;High;;X
 420007;Head of State;Liu Wenlong;1930;1970;1999;SC;Insignificant Layman;High;;X
-420008;Head of Government;Yang Zengxin;1900;1930;1936;PA;Naive Optimist;High;;X
+420008;Head of Government;Yang Zengxin;1900;1930;1936;PA;Backroom Backstabber;High;;X
 420009;Head of Government;Fan Yaonan;1930;1970;1999;SC;Backroom Backstabber;High;;X
 420010;Head of Government;Sheng Shicai;1930;1970;1999;LWR;Backroom Backstabber;High;;X
 420011;Head of Government;Sheng Shicai;1930;1970;1999;PA;Flamboyant Tough Guy;High;;X
@@ -18,8 +18,8 @@ SIK;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 420016;Head of Government;Li Rong;1930;1970;1999;LWR;Political Protege;High;;X
 420017;Head of Government;Li Rong;1930;1970;1999;PA;Silent Workhorse;High;;X
 420018;Head of Government;Liu Wenlong;1930;1970;1999;SC;Happy Amateur;High;;X
-420019;Foreign Minister;Fan Yaonan;1930;1970;1999;SC;Generic;High;;X
-420020;Foreign Minister;Hoja Niyaz Haji;1930;1970;1999;SD;Generic;High;;X
+420019;Foreign Minister;Fan Yaonan;1930;1970;1999;SC;The Cloak N Dagger Schemer;High;;X
+420020;Foreign Minister;Hoja Niyaz Haji;1930;1970;1999;SD;Apologetic Clerk;High;;X
 420021;Foreign Minister;Guo Daming;1930;1970;1999;PA;Generic;High;;X
 420022;Foreign Minister;Guo Daming;1930;1970;1999;LWR;Generic;High;;X
 420023;Foreign Minister;Hua Shengmu;1930;1970;1999;SC;Generic;High;;X
