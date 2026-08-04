@@ -433,36 +433,36 @@ event = {
 #  China annexes Mongolia
 #########################################################################
 
-event = {
-	id = 2012006
-	random = no
-	country = CHI
-
-	name = "EVT_3827_NAME"
-	desc = "EVT_3827_DESC"
-	style = 2
-	picture = "ccip_natarmy"
-
-	trigger = {
-		event = 2007033
-		exists = MON
-		alliance = { country = CHI country = GER }
-		alliance = { country = MON country = SOV }
-		NOT = {
-			alliance = { country = JAP country = GER }
-		}
-	}
-
-	date = { day = 0 month = january year = 1936 }
-	offset = 5
-	deathdate = { day = 29 month = december year = 1963 }
-
-	action = {
-		name = "ACTION_NAME_HURRAH" #
-		command = { type = inherit which = MON } 
-		command = { type = dissent value = -2 }
-	}
-}
+#event = {
+#	id = 2012006
+#	random = no
+#	country = CHI
+#
+#	name = "EVT_3827_NAME"
+#	desc = "EVT_3827_DESC"
+#	style = 2
+#	picture = "ccip_natarmy"
+#
+#	trigger = {
+#		event = 2007033
+#		exists = MON
+#		alliance = { country = CHI country = GER }
+#		alliance = { country = MON country = SOV }
+#		NOT = {
+#			alliance = { country = JAP country = GER }
+#		}
+#	}
+#
+#	date = { day = 0 month = january year = 1936 }
+#	offset = 5
+#	deathdate = { day = 29 month = december year = 1963 }
+#
+#	action = {
+#		name = "ACTION_NAME_HURRAH" #
+#		command = { type = inherit which = MON } 
+#		command = { type = dissent value = -2 }
+#	}
+#}
 #######################################################################
 # Chinese Warlord Concession to Japan
 #######################################################################

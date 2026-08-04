@@ -231,6 +231,11 @@ event = {
 		name = ACTION_NAME_OK
 		command = { type = leave_alliance }
 		command = { type = supplies value = 1000 }
+		command = { type = headofstate which = 420003 }
+		command = { type = headofgovernment which = 420016 } 
+		command = { type = foreignminister which = 420022 }
+		command = { type = armamentminister which = 420054 } 
+		command = { type = ministerofsecurity which = 420030 } 
 	}
 	
 	action = {

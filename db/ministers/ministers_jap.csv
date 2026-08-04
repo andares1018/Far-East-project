@@ -517,3 +517,7 @@ JAP;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 50519;Chief of Navy;Hoshina Zenshiro;1940;1964;1991;ML;Base Control Doctrine;High;M_Hoshina Zenshiro;X
 50520;Chief of Air Force;Hoshina Zenshiro;1940;1964;1991;ML;Naval Aviation Doctrine;High;M_Hoshina Zenshiro;X
 50521;Head of Government;Yamazaki Takeshi;1942;1958;1958;SC;Political Protege;High;M_Yamazaki Takeshi;X
+50522;Chief of Army;Shibayama Kenshiro;1944;1956;1956;PA;Guns and Butter Doctrine;High;765;X
+50523;Chief of Army;Ishii Akiho;1944;1980;1996;PA;Static Defence Doctrine;High;M_Ishii Akiho;X
+50524;Chief of Navy;Shiba Katsuo;1946;1970;1970;PA;Indirect Approach Doctrine;High;M_Shiba Katsuo;X
+50525;Chief of Navy;Fuchida Mitsuo;1945;1976;1976;PA;Decisive Naval Battle Doctrine;High;L101304;X

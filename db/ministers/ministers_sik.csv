@@ -1,65 +1,64 @@
 SIK;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-420001;Head of State;Yang Zengxin;1910;1933;1936;PA;Pig-headed Isolationist;High;;X
-420002;Head of State;Fan Yaonan;1925;1970;1999;SC;Barking Buffoon;High;;X
-420003;Head of State;Sheng Shicai;1930;1970;1999;LWR;Ruthless Powermonger;High;;X
-420004;Head of State;Sheng Shicai;1930;1970;1999;PA;Die-hard Reformer;High;;X
-420005;Head of State;Ma Shaowu;1930;1970;1999;PA;Resigned Generalissimo;High;;X
-420006;Head of State;Jin Shuren;1930;1970;1999;PA;Stern Imperialist;High;;X
-420007;Head of State;Liu Wenlong;1930;1970;1999;SC;Insignificant Layman;High;;X
-420008;Head of Government;Yang Zengxin;1900;1930;1936;PA;Backroom Backstabber;High;;X
-420009;Head of Government;Fan Yaonan;1930;1970;1999;SC;Backroom Backstabber;High;;X
-420010;Head of Government;Sheng Shicai;1930;1970;1999;LWR;Backroom Backstabber;High;;X
-420011;Head of Government;Sheng Shicai;1930;1970;1999;PA;Flamboyant Tough Guy;High;;X
-420012;Head of Government;Ma Shaowu;1930;1970;1999;PA;Silent Workhorse;High;;X
-420013;Head of Government;Jin Shuren;1930;1970;1999;PA;Ambitious Union Boss;High;;X
-420014;Head of Government;Hoja Niyaz Haji;1930;1970;1999;PA;Corporate Suit;High;;X
-420015;Head of Government;Hoja Niyaz Haji;1930;1970;1999;SD;Corporate Suit;High;;X
-420016;Head of Government;Li Rong;1930;1970;1999;LWR;Political Protege;High;;X
-420017;Head of Government;Li Rong;1930;1970;1999;PA;Silent Workhorse;High;;X
-420018;Head of Government;Liu Wenlong;1930;1970;1999;SC;Happy Amateur;High;;X
-420019;Foreign Minister;Fan Yaonan;1930;1970;1999;SC;The Cloak N Dagger Schemer;High;;X
-420020;Foreign Minister;Hoja Niyaz Haji;1930;1970;1999;SD;Apologetic Clerk;High;;X
-420021;Foreign Minister;Guo Daming;1930;1970;1999;PA;Generic;High;;X
-420022;Foreign Minister;Guo Daming;1930;1970;1999;LWR;Generic;High;;X
-420023;Foreign Minister;Hua Shengmu;1930;1970;1999;SC;Generic;High;;X
-420024;Foreign Minister;Hua Shengmu;1930;1970;1999;LE;Generic;High;;X
-420025;Minister of Armament;Mao Zemin;1930;1970;1999;LE;Generic;High;;X
-420026;Minister of Armament;Yan Yushan;1930;1970;1999;PA;Generic;High;;X
-420027;Minister of Armament;Peng Zhaoxian;1930;1970;1999;LWR;Generic;High;;X
-420028;Minister of Armament;Peng Jiyuan;1930;1970;1999;LWR;Generic;High;;X
-420029;Minister of Armament;Peng Jiyuan;1930;1970;1999;PA;Generic;High;;X
-420030;Minister of Security;Ma Shaowu;1930;1970;1999;SD;Generic;High;;X
-420031;Minister of Security;Yu Xiusong;1930;1940;1950;LE;Generic;High;;X
-420032;Minister of Security;Li Yingqi;1930;1970;1999;PA;Generic;High;;X
-420033;Minister of Security;Li Yingqi;1930;1970;1999;LWR;Generic;High;;X
-420034;Minister of Security;Mao Zemin;1930;1970;1999;LE;Generic;High;;X
-420035;Minister of Security;Jin Shuren;1930;1970;1999;PA;Generic;High;;X
-420036;Minister of Security;Qiu Zongjun;1930;1970;1999;LWR;Generic;High;;X
-420037;Minister of Security;Li Pulin;1930;1970;1999;LWR;Generic;High;;X
-420038;Head of Military Intelligence;Yu Xiusong;1930;1940;1950;LE;Generic;High;;X
-420039;Head of Military Intelligence;Li Yingqi;1930;1970;1999;LWR;Generic;High;;X
-420040;Head of Military Intelligence;Li Yingqi;1930;1970;1999;PA;Generic;High;;X
-420041;Chief of Staff;Ma Shaowu;1930;1970;1999;PA;Generic;High;;X
-420042;Chief of Staff;Bao Qingshan;1930;1970;1999;PA;Generic;High;;X
-420043;Chief of Staff;Sheng Shicai;1930;1970;1999;LWR;Generic;High;;X
-420044;Chief of Staff;Sheng Shicai;1930;1970;1999;PA;Generic;High;;X
-420045;Chief of Staff;Yang Feixia;1914;1933;1933;SC;Generic;High;M_Yang Feixia;X
-420046;Chief of Staff;Sheng Shiqi;1930;1970;1999;LWR;Generic;High;;X
-420047;Chief of Army;Zhang Peiyuan;1930;1936;1936;LWR;Generic;High;;X
-420048;Chief of Army;Zhang Peiyuan;1930;1936;1936;PA;Generic;High;;X
-420049;Chief of Army;Jiang Youfen;1930;1970;1999;PA;Generic;High;;X
-420050;Chief of Army;Jiang Youfen;1930;1970;1999;LWR;Generic;High;;X
-420051;Chief of Army;Sheng Shicai;1930;1970;1999;LWR;Generic;High;;X
-420052;Chief of Army;Sheng Shicai;1930;1970;1999;PA;Generic;High;;X
-420054;Chief of Army;Liu Pin;1930;1970;1999;PA;Generic;High;;X
-420055;Chief of Air Force;Li Xiaotian;1930;1970;1999;PA;Generic;High;;X
-420056;Chief of Air Force;Li Xiaotian;1930;1970;1999;SD;Generic;High;;X
-420057;Chief of Air Force;Lu Liping;1930;1970;1999;LWR;Generic;High;;X
-420058;Chief of Air Force;Chen Yufeng;1930;1970;1999;PA;Generic;High;;X
-420059;Minister of Security;Li Pulin;1930;1970;1999;PA;Generic;High;;X
-420060;Minister of Armament;Lin Jiyong;1930;1970;1999;LWR;Generic;High;;X
-420061;Minister of Armament;Lin Jiyong;1930;1970;1999;PA;Generic;High;;X
-420062;Minister of Armament;Peng Zhaoxian;1930;1970;1999;PA;Generic;High;;X
-420063;Minister of Security;Ma Shaowu;1930;1970;1999;PA;Generic;High;;X
-420064;Minister of Security;Qiu Zongjun;1930;1970;1999;PA;Generic;High;;X
+420001;Head of State;Yang Zengxin;1910;1933;1936;PA;Pig-headed Isolationist;High;8104;X
+420002;Head of State;Fan Yaonan;1925;1933;1933;SC;Barking Buffoon;High;M_Fan Yaonan;X
+420003;Head of State;Sheng Shicai;1933;1970;1970;LWR;Ruthless Powermonger;High;3173;X
+420004;Head of State;Sheng Shicai;1933;1970;1970;PA;Die-hard Reformer;High;3173;X
+420005;Head of State;Ma Shaowu;1930;1970;1999;SC;Resigned Generalissimo;High;M_Ma Shaowu;X
+420006;Head of State;Jin Shuren;1930;1942;1942;PA;Stern Imperialist;High;9595;X
+420008;Head of Government;Yang Zengxin;1900;1930;1936;PA;Backroom Backstabber;High;8104;X
+420007;Minister of Security;Ma Shaowu;1930;1970;1999;PA;Man of the People;High;M_Ma Shaowu;X
+420009;Head of Government;Fan Yaonan;1925;1933;1933;SC;Backroom Backstabber;High;M_Fan Yaonan;X
+420010;Head of Government;Sheng Shicai;1933;1970;1970;LWR;Backroom Backstabber;High;3173;X
+420011;Head of Government;Sheng Shicai;1933;1970;1970;PA;Flamboyant Tough Guy;High;3173;X
+420012;Head of Government;Ma Shaowu;1930;1970;1999;SC;Silent Workhorse;High;M_Ma Shaowu;X
+420013;Head of Government;Jin Shuren;1925;1942;1942;PA;Ambitious Union Boss;High;9595;X
+420014;Head of Government;Hoja Niyaz Haji;1930;1942;1942;SC;Corporate Suit;High;3174;X
+420015;Head of Government;Hoja Niyaz Haji;1930;1942;1942;LWR;Corporate Suit;High;3174;X
+420016;Head of Government;Li Rong;1933;1940;1940;LWR;Political Protege;High;M_li rong;X
+420017;Head of Government;Li Rong;1925;1940;1940;PA;Silent Workhorse;High;M_li rong;X
+420018;Minister of Security;Qiu Zongjun;1930;1950;1950;PA;Crooked Kleptocrat;High;M_Qiu Zongjun;X
+420019;Foreign Minister;Fan Yaonan;1920;1933;1933;SC;The Cloak N Dagger Schemer;High;M_Fan Yaonan;X
+420020;Foreign Minister;Hoja Niyaz Haji;1930;1942;1942;LWR;Apologetic Clerk;High;3174;X
+420021;Foreign Minister;Guo Daming;1930;1970;1970;PA;Biased Intellectual;High;M_Guo Daming;X
+420022;Foreign Minister;Guo Daming;1930;1970;1970;LWR;Biased Intellectual;High;M_Guo Daming;X
+420023;Foreign Minister;Hua Shengmu;1930;1982;1982;SC;Apologetic Clerk;High;M_Hua Shengmu;X
+420024;Foreign Minister;Hua Shengmu;1930;1982;1982;LE;Ideological Crusader;High;M_Hua Shengmu;X
+420025;Minister of Armament;Mao Zemin;1930;1970;1999;LE;Administrative Genius;High;M_mao zemin;X
+420026;Minister of Armament;Yan Yushan;1914;1934;1934;SC;Administrative Genius;High;M_Yan Yushan;X
+420027;Minister of Armament;Peng Zhaoxian;1930;1970;1979;LWR;Resource Industrialist;High;M_Peng Zhaoxian;X
+420028;Minister of Armament;Peng Jiyuan;1930;1960;1960;LWR;Laissez-Faire Capitalist;High;M_Peng Jiyuan;X
+420029;Minister of Armament;Peng Jiyuan;1930;1960;1960;PA;Laissez-Faire Capitalist;High;M_Peng Jiyuan;X
+420030;Minister of Security;Ma Shaowu;1930;1970;1999;SD;Man of the People;High;M_Ma Shaowu;X
+420031;Minister of Security;Yu Xiusong;1930;1940;1950;LE;Compassionate Gentleman;High;M_yu xiusong;X
+420032;Minister of Security;Li Yingqi;1930;1955;1955;PA;Prince of Terror;High;M_Li Yingqi;X
+420033;Minister of Security;Li Yingqi;1930;1955;1955;LWR;Prince of Terror;High;M_Li Yingqi;X
+420034;Minister of Security;Mao Zemin;1930;1970;1999;LE;Efficient Sociopath;High;M_mao zemin;X
+420035;Minister of Security;Jin Shuren;1920;1942;1942;PA;Prince of Terror;High;9595;X
+420036;Minister of Security;Qiu Zongjun;1930;1950;1950;LWR;Crooked Kleptocrat;High;M_Qiu Zongjun;X
+420037;Minister of Security;Li Pulin;1930;1980;1980;LWR;Compassionate Gentleman;High;M_Li Pulin;X
+420038;Head of Military Intelligence;Yu Xiusong;1930;1940;1950;LE;Political Specialist;High;M_yu xiusong;X
+420039;Head of Military Intelligence;Li Yingqi;1930;1955;1955;LWR;Political Specialist;High;M_Li Yingqi;X
+420040;Head of Military Intelligence;Li Yingqi;1930;1955;1955;PA;Political Specialist;High;M_Li Yingqi;X
+420041;Chief of Staff;Ma Shaowu;1930;1970;1999;PA;School of Fire Support;High;M_Ma Shaowu;X
+420042;Chief of Army;Yang Zengxin;1900;1933;1936;PA;Static Defence Doctrine;High;8104;X
+420043;Chief of Staff;Sheng Shicai;1933;1970;1970;LWR;School of Psychology;High;3173;X
+420044;Chief of Staff;Sheng Shicai;1933;1970;1970;PA;School of Psychology;High;3173;X
+420045;Chief of Staff;Yang Feixia;1914;1933;1933;SC;School of Mass Combat;High;M_Yang Feixia;X
+420046;Chief of Staff;Sheng Shiqi;1933;1950;1950;LWR;School of Psychology;High;M_sheng shiqi;X
+420047;Chief of Army;Zhang Peiyuan;1930;1935;1935;LWR;Static Defence Doctrine;High;M_Zhang Peiyuan;X
+420048;Chief of Army;Zhang Peiyuan;1930;1935;1935;PA;Static Defence Doctrine;High;M_Zhang Peiyuan;X
+420049;Chief of Staff;Jiang Youfen;1930;1960;1960;PA;School of Fire Support;High;L160002;X
+420050;Chief of Staff;Jiang Youfen;1930;1960;1960;LWR;School of Fire Support;High;L160002;X
+420051;Chief of Army;Sheng Shicai;1933;1970;1970;LWR;Decisive Battle Doctrine;High;3173;X
+420052;Chief of Army;Sheng Shicai;1933;1970;1970;PA;Static Defence Doctrine;High;3173;X
+420054;Minister of Armament;Peng Zhaoxian;1930;1970;1979;PA;Resource Industrialist;High;M_Peng Zhaoxian;X
+420055;Minister of Armament;Lin Jiyong;1930;1958;1958;PA;Resource Industrialist;High;M_Lin Jiyong;X
+420056;Minister of Armament;Lin Jiyong;1930;1958;1958;LWR;Resource Industrialist;High;M_Lin Jiyong;X
+420057;Chief of Air Force;Lu Liping;1930;1970;1999;LWR;Air Superiority Doctrine;High;M_Lu Liping;X
+420058;Chief of Air Force;Chen Yufeng;1930;1970;1970;PA;Army Aviation Doctrine;High;M_Chen Yufeng;X
+420059;Minister of Security;Li Pulin;1930;1980;1980;PA;Compassionate Gentleman;High;M_Li Pulin;X
+420060;Chief of Air Force;Yao Xiong;1930;1970;1999;LE;Air Superiority Doctrine;High;M_Yao Xiong;X
+420061;Chief of Air Force;Yao Xiong;1930;1970;1999;PA;Air Superiority Doctrine;High;M_Yao Xiong;X
+420062;Chief of Navy;Under Army Control;1900;1970;1970;PA;Base Control Doctrine;High;M_sik_army;X
+420063;Chief of Navy;Under Army Control;1900;1970;1970;PA;Base Control Doctrine;High;M_sik_army;X

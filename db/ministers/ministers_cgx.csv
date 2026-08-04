@@ -1,75 +1,83 @@
 CGX;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-585001;Head of State;Lu Rongting;1930;1970;1999;PA;Generic;;;X
-585002;Head of State;Shen Hongying;1930;1970;1999;PA;Generic;;;X
-585003;Head of State;Lu Yuguang;1930;1970;1999;PA;Generic;;;X
-585004;Head of State;Li Zongren;1930;1970;1999;PA;Generic;;;X
-585005;Head of State;Xia Wei;1930;1970;1999;PA;Generic;;;X
-585006;Head of Government;Chen Bingkun;1930;1970;1999;PA;Generic;;;X
-585007;Head of Government;Zhu Qinglan;1930;1970;1999;SC;Generic;;;X
-585008;Head of Government;Ma Junwu;1930;1970;1999;SC;Generic;;;X
-585009;Head of Government;Liu Zhenhuan;1930;1970;1999;SC;Generic;;;X
-585010;Head of Government;Li Guoyun;1930;1970;1999;PA;Generic;;;X
-585011;Head of Government;Shen Hongying;1930;1970;1999;PA;Generic;;;X
-585012;Head of Government;Huang Xuchu;1930;1970;1999;PA;Generic;;;X
-585013;Head of Government;Huang Shaohong;1930;1970;1999;PA;Generic;;;X
-585014;Head of Government;Xia Wei;1930;1970;1999;PA;Generic;;;X
-585015;Foreign Minister;Shen Hongying;1930;1970;1999;PA;Generic;;;X
-585016;Foreign Minister;Sun Renlin;1930;1970;1999;PA;Generic;;;X
-585017;Foreign Minister;Wang Heng;1930;1970;1999;PA;Generic;;;X
-585018;Foreign Minister;Huang Ji;1930;1970;1999;PA;Generic;;;X
-585019;Foreign Minister;Qiu Changwei;1930;1970;1999;PA;Generic;;;X
-585020;Foreign Minister;Su Xixun;1930;1970;1999;PA;Generic;;;X
-585021;Foreign Minister;Chen Shoumin;1930;1970;1999;PA;Generic;;;X
-585022;Foreign Minister;Huang Zhongjin;1930;1970;1999;PA;Generic;;;X
-585023;Minister of Armament;Huang Shaohong;1930;1970;1999;PA;Generic;;;X
-585024;Minister of Armament;Huang Ji;1930;1970;1999;PA;Generic;;;X
-585025;Minister of Armament;Jiang Jiyi;1930;1970;1999;PA;Generic;;;X
-585026;Minister of Armament;Huang Zhongyue;1930;1970;1999;PA;Generic;;;X
-585027;Minister of Armament;Wei Zhitang;1930;1970;1999;PA;Generic;;;X
-585028;Minister of Armament;Pan Zhuqi;1930;1970;1999;PA;Generic;;;X
-585029;Minister of Armament;Wu Tingyang;1930;1970;1999;PA;Generic;;;X
-585030;Minister of Armament;Huang Xuchu;1930;1970;1999;PA;Generic;;;X
-585031;Minister of Armament;Wei Yunsong;1930;1970;1999;PA;Generic;;;X
-585032;Minister of Armament;Chen Xiong;1930;1970;1999;PA;Generic;;;X
-585033;Minister of Armament;Zeng Qixin;1930;1970;1999;PA;Generic;;;X
-585034;Minister of Security;Huang Xuchu;1930;1970;1999;PA;Generic;;;X
-585035;Minister of Security;Li Guojun;1930;1970;1999;PA;Generic;;;X
-585036;Minister of Security;Li Yuri;1930;1970;1999;PA;Generic;;;X
-585037;Minister of Security;Chen Bingkun;1930;1970;1999;PA;Generic;;;X
-585038;Minister of Security;Lei Yin;1930;1970;1999;PA;Generic;;;X
-585039;Minister of Security;Qiu Changwei;1930;1970;1999;PA;Generic;;;X
-585040;Minister of Security;Chen Liangzuo;1930;1970;1999;PA;Generic;;;X
-585041;Head of Military Intelligence;Lin Junting;1930;1970;1999;PA;Generic;;;X
-585042;Head of Military Intelligence;Wang Gongdu;1930;1970;1999;PA;Generic;;;X
-585043;Head of Military Intelligence;Yang Chuoan;1930;1970;1999;PA;Generic;;;X
-585044;Head of Military Intelligence;Cheng Siyuan;1930;1970;1999;PA;Generic;;;X
-585045;Chief of Staff;Bai Chongxi;1930;1970;1999;PA;Generic;;;X
-585046;Chief of Staff;Xia Wei;1930;1970;1999;PA;Generic;;;X
-585047;Chief of Staff;Zhang Gan;1930;1970;1999;SC;Generic;;;X
-585048;Chief of Staff;Liu Fei;1930;1970;1999;PA;Generic;;;X
-585049;Chief of Staff;Li Pinxian;1930;1970;1999;PA;Generic;;;X
-585050;Chief of Staff;Liu Zhilu;1930;1970;1999;PA;Generic;;;X
-585051;Chief of Staff;Ma Ji;1930;1970;1999;PA;Generic;;;X
-585052;Chief of Staff;Shen Hongying;1930;1970;1999;PA;Generic;;;X
-585053;Chief of Staff;Lin Hu;1930;1970;1999;SC;Generic;;;X
-585054;Chief of Army;Li Zongren;1930;1970;1999;PA;Generic;;;X
-585055;Chief of Army;Bai Chongxi;1930;1970;1999;PA;Generic;;;X
-585056;Chief of Army;Xia Wei;1930;1970;1999;PA;Generic;;;X
-585057;Chief of Army;Lin Hu;1930;1970;1999;SC;Generic;;;X
-585058;Chief of Army;Ma Ji;1930;1970;1999;PA;Generic;;;X
-585059;Chief of Army;Shen Hongying;1930;1970;1999;PA;Generic;;;X
-585060;Chief of Army;Tan Haoming;1930;1970;1999;PA;Generic;;;X
-585061;Chief of Navy;Li Qingwen;1930;1970;1999;PA;Generic;;;X
-585062;Chief of Navy;Lin Baoyi;1930;1970;1999;PA;Generic;;;X
-585063;Chief of Air Force;Lin Weicheng;1930;1970;1999;PA;Generic;;;X
-585064;Chief of Air Force;Zhong Ji;1930;1970;1999;PA;Generic;;;X
-585065;Chief of Air Force;Feng Heng;1930;1970;1999;PA;Generic;;;X
-585066;Chief of Staff;Lin Junting;1930;1970;1999;PA;Generic;;;X
-585067;Chief of Air Force;Liao Lei;1930;1970;1999;PA;Generic;;;X
-585068;Minister of Armament;Ma Junwu;1930;1970;1999;SC;Generic;;;X
-585069;Head of Government;Ma Ji;1930;1970;1999;PA;Generic;;;X
-585070;Head of Government;Lu Rongting;1930;1970;1999;PA;Generic;;;X
-585071;Chief of Army;Lu Rongting;1930;1970;1999;PA;Generic;;;X
-585072;Foreign Minister;Lu Rongting;1930;1970;1999;PA;Generic;;;X
-585073;Minister of Armament;Chen Bingkun;1930;1970;1999;PA;Generic;;;X
+585001;Head of State;Lu Rongting;1910;1920;1929;PA;Powerhungry Demagogue;High;9544;X
+585002;Head of State;Shen Hongying;1910;1936;1936;PA;Ruthless Powermonger;High;M_Shen Hongying;X
+585003;Head of State;Lu Yuguang;1930;1951;1951;PA;Barking Buffoon;High;M_Lu Yuguang;X
+585004;Head of State;Li Zongren;1920;1970;1970;PA;Resigned Generalissimo;High;620;X
+585005;Head of State;Xia Wei;1940;1975;1975;PA;Barking Buffoon;High;M_Xia Wei;X
+585006;Head of Government;Chen Bingkun;1910;1928;1928;PA;Silent Workhorse;High;9546;X
+585007;Head of Government;Zhu Qinglan;1910;1941;1941;SC;Naive Optimist;High;9548;X
+585008;Head of Government;Ma Junwu;1910;1941;1941;SC;Silent Workhorse;High;9553;X
+585009;Head of Government;Liu Zhenhuan;1910;1972;1972;SC;Ambitious Union Boss;High;M_Liu Zhenhuan;X
+585010;Head of Government;Li Guoyun;1910;1933;1933;PA;Political Protege;High;9545;X
+585011;Head of Government;Shen Hongying;1910;1936;1936;PA;Backroom Backstabber;High;M_Shen Hongying;X
+585012;Head of Government;Huang Xuchu;1920;1975;1975;PA;Old General;High;M_Huang Xuchu;X
+585013;Head of Government;Huang Shaohong;1910;1966;1966;PA;Silent Workhorse;High;9416;X
+585014;Head of Government;Xia Wei;1930;1975;1975;PA;Old General;High;M_Xia Wei;X
+585015;Foreign Minister;Shen Hongying;1910;1936;1936;PA;General Staffer;High;M_Shen Hongying;X
+585016;Foreign Minister;Sun Renlin;1923;1970;1970;PA;General Staffer;High;M_Sun Renlin;X
+585017;Foreign Minister;Wang Heng;1920;1940;1940;SC;Ideological Crusader;High;M_Wang Heng;X
+585018;Foreign Minister;Huang Ji;1910;1940;1940;SC;Apologetic Clerk;High;M_Huang Ji;X
+585019;Foreign Minister;Qiu Changwei;1930;1957;1957;PA;Ideological Crusader;High;M_Qiu Changwei;X
+585020;Foreign Minister;Su Xixun;1922;1970;1970;PA;Apologetic Clerk;High;M_Su Xixun;X
+585021;Foreign Minister;Chen Shoumin;1928;1986;1986;SC;Biased Intellectual;High;M_Chen Shoumin;X
+585022;Foreign Minister;Huang Zhongjin;1933;1970;1970;PA;Biased Intellectual;High;M_Huang Zhongjin;X
+585023;Minister of Armament;Huang Shaohong;1920;1966;1966;PA;Military Entrepreneur;High;9416;X
+585024;Minister of Armament;Huang Ji;1910;1940;1940;SC;Resource Industrialist;High;M_Huang Ji;X
+585025;Minister of Armament;Jiang Jiyi;1926;1952;1952;PA;Laissez-Faire Capitalist;High;M_Jiang Jiyi;X
+585026;Minister of Armament;Huang Zhongyue;1926;1953;1953;PA;Resource Industrialist;High;M_Huang Zhongyue;X
+585027;Minister of Armament;Wei Zhitang;1928;1952;1952;PA;Laissez-Faire Capitalist;High;M_Wei Zhitang;X
+585028;Minister of Armament;Pan Zhuqi;1921;1970;1984;PA;Administrative Genius;High;M_Pan Zhuqi;X
+585029;Minister of Armament;Wu Tingyang;1923;1950;1950;PA;Steel Magnate;High;M_Wu Tingyang;X
+585030;Minister of Armament;Huang Xuchu;1920;1975;1975;PA;Reformer;High;M_Huang Xuchu;X
+585031;Minister of Armament;Wei Yunsong;1928;1954;1954;PA;Military Entrepreneur;High;M_Wei Yunsong;X
+585032;Minister of Armament;Chen Xiong;1930;1974;1974;PA;Administrative Genius;High;M_Chen Xiong;X
+585033;Minister of Armament;Zeng Qixin;1930;1977;1977;SC;Administrative Genius;High;M_Zeng Qixin;X
+585034;Minister of Security;Huang Xuchu;1920;1975;1975;PA;Crime Fighter;High;M_Huang Xuchu;X
+585035;Minister of Security;Li Guojun;1930;1950;1950;PA;Compassionate Gentleman;High;M_Li Guojun;X
+585036;Minister of Security;Li Yuri;1928;1955;1955;PA;Media Magnate;High;M_Li Yuri;X
+585037;Minister of Security;Chen Bingkun;1910;1928;1928;SC;Compassionate Gentleman;High;9546;X
+585038;Minister of Security;Lei Yin;1928;1972;1972;PA;Crime Fighter;High;M_Lei Yin;X
+585039;Minister of Security;Qiu Changwei;1930;1957;1957;PA;Compassionate Gentleman;High;M_Qiu Changwei;X
+585040;Minister of Security;Chen Liangzuo;1931;1968;1968;SC;Crime Fighter;High;M_Chen Liangzuo;X
+585041;Head of Military Intelligence;Lin Junting;1910;1933;1933;PA;Logistics Specialist;High;M_Lin Junting;X
+585042;Head of Military Intelligence;Wang Gongdu;1928;1938;1938;PA;Dismal Enigma;High;M_Wang Gongdu;X
+585043;Head of Military Intelligence;Yang Chuoan;1928;1955;1955;PA;Industrial Specialist;High;M_Yang Chuoan;X
+585044;Head of Military Intelligence;Cheng Siyuan;1930;1970;2005;PA;Political Specialist;High;M_Cheng Siyuan;X
+585045;Chief of Staff;Bai Chongxi;1920;1966;1966;PA;School of Mass Combat;High;M502007;X
+585046;Chief of Staff;Xia Wei;1930;1975;1975;PA;School of Defence;High;M_Xia Wei;X
+585047;Chief of Staff;Zhang Gan;1922;1960;1960;SC;School of Defence;High;M_Zhang Gan;X
+585048;Chief of Staff;Liu Fei;1924;1970;1983;PA;School of Psychology;High;M_Liu Fei;X
+585049;Chief of Staff;Li Pinxian;1920;1970;1958;PA;School of Mass Combat;High;M_Li Pinxian;X
+585050;Chief of Staff;Lu Yuguang;1924;1951;1951;PA;School of Fire Support;High;M_Lu Yuguang;X
+585051;Chief of Staff;Ma Ji;1918;1933;1933;PA;School of Manoeuvre;High;M_Ma Ji;X
+585052;Chief of Staff;Shen Hongying;1910;1936;1936;PA;School of Mass Combat;High;M_Shen Hongying;X
+585053;Chief of Staff;Lin Hu;1910;1960;1960;SC;School of Fire Support;High;M_Lin Hu;X
+585054;Chief of Army;Li Zongren;1920;1970;1970;PA;Static Defence Doctrine;High;620;X
+585055;Chief of Army;Bai Chongxi;1920;1966;1966;PA;Static Defence Doctrine;High;M502007;X
+585056;Chief of Army;Xia Wei;1930;1975;1975;PA;Elastic Defence Doctrine;High;M_Xia Wei;X
+585057;Chief of Army;Lin Hu;1910;1960;1960;SC;Elastic Defence Doctrine;High;M_Lin Hu;X
+585058;Chief of Army;Ma Ji;1918;1933;1933;PA;Commando Doctrine Army;High;M_Ma Ji;X
+585059;Chief of Army;Shen Hongying;1910;1936;1936;PA;Decisive Battle Doctrine;High;M_Shen Hongying;X
+585060;Chief of Army;Tan Haoming;1910;1926;1926;PA;Elastic Defence Doctrine;High;9549;X
+585061;Chief of Navy;Li Qingwen;1920;1949;1949;PA;Base Control Doctrine;High;M_Li Qingwen;X
+585062;Chief of Navy;Lin Baoyi;1910;1930;1930;PA;Indirect Approach Doctrine;High;M_Lin Baoyi;X
+585063;Chief of Air Force;Lin Weicheng;1923;1948;1948;PA;Air Superiority Doctrine;High;M_Lin Weicheng;X
+585064;Chief of Air Force;Zhong Ji;1920;1950;1950;PA;Air Superiority Doctrine;High;M_Zhong Ji;X
+585065;Chief of Air Force;Feng Heng;1930;1970;1994;PA;Army Aviation Doctrine;High;M_Feng Heng;X
+585066;Chief of Staff;Lin Junting;1910;1933;1933;PA;School of Psychology;High;M_Lin Junting;X
+585067;Chief of Air Force;Liao Lei;1920;1940;1940;PA;Army Aviation Doctrine;High;M_Liao Lei;X
+585068;Minister of Armament;Ma Junwu;1910;1941;1941;SC;Theoretical Scientist;High;9553;X
+585069;Head of Government;Ma Ji;1924;1933;1933;PA;Old General;High;M_Ma Ji;X
+585070;Head of Government;Lu Rongting;1910;1929;1929;PA;Flamboyant Tough Guy;High;9544;X
+585071;Chief of Army;Lu Rongting;1910;1929;1929;PA;Elastic Defence Doctrine;High;9544;X
+585072;Foreign Minister;Lu Rongting;1910;1929;1929;PA;Iron Fisted Brute;High;9544;X
+585073;Minister of Armament;Chen Bingkun;1910;1928;1928;PA;Military Entrepreneur;High;9546;X
+585074;Head of Government;Zhang Mingqi;1910;1933;1945;PA;Happy Amateur;High;M_Zhang Mingqi;X
+585075;Minister of Security;Lin Binghua;1910;1933;1933;PA;Crime Fighter;High;M_Lin Binghua;X
+585076;Minister of Security;Du Yan;1910;1933;1933;PA;Man of the People;High;M_Du Yan;X
+585077;Head of Government;Luo Peijin;1910;1923;1923;PA;Old General;High;M_Luo Peijin;X
+585078;Head of Government;Yu Zuobai;1930;1940;1940;PA;Silent Workhorse;High;M_Yu Zuobai;X
+585079;Head of Government;Lu Huanyan;1924;1931;1931;PA;Happy Amateur;High;M_Lu Huanyan;X
+585080;Foreign Minister;Guan Mianjun;1900;1933;1933;SC;Biased Intellectual;High;M_Guan Mianjun;X
+585081;Foreign Minister;Cen Deguang;1920;1940;1940;PA;Iron Fisted Brute;High;M_Cen Deguang;X

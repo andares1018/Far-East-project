@@ -8611,8 +8611,10 @@ event = {
 
 	action_a = {
 		name = ACTION_NAME_OK		
-		command = { type = headofstate which = 420001 } #Sheng Shicai
-		command = { type = sleepminister which = 420031 } #Jin Shuren
+		command = { type = headofstate which = 420004 }
+		command = { type = headofgovernment which = 420017 } 
+		command = { type = armamentminister which = 420054 } 
+		command = { type = ministerofsecurity which = 420007 } 
 	}
 }
 

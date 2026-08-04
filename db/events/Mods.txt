@@ -93,7 +93,7 @@ event = {
 		random = 20
 	}
 	
-	name = "Currency reform policy"
+	name = "Currency Reform policy"
 	desc = "EVT_1400000003_desc"
 	style = 2
 	picture = "issue_currency"
@@ -171,18 +171,39 @@ event = {
 	id = 1400000006 
 	random = no
 	country = CHI
+	persistent = yes
 
 	trigger = {
-		  NOT = { ispuppet = CHI }
-		  exists = CHC 
-		  exists = JAP 
-		  exists = MAN 
+		NOT = { ispuppet = CHI }
+		exists = JAP 
+		exists = MAN 
+		NOT = { war = { country = JAP country = CHI } }
+		
+		OR = {
+		and = {
+		event = 1400001251 #December 9th Movement(1935)
+		}
+		and = {
+		day = 9
+		month = 11
+		year = 1936 #Seven Gentlemen Incident(1936)
+		NOT = {
+		day = 10
+		}
+		NOT = {
+		month = 12
+			}
+		}
+		and = {
+		event = 1400001272 #Suiyuan Campaign
+			}
+		}
 	}
-	date = { day = 20 month = November year = 1936 }
+	date = { day = 20 month = November year = 1935 }
 	offset = 1
-	deathdate = { day = 25 month = November year = 1936 }
+	deathdate = { day = 25 month = december year = 1936 }
 	
-	name = "Widespread Protests" 
+	name = "Widespread Protests" #December 9th Movement(1935), Seven Gentlemen Incident(1936)
 	desc = "EVT_1400000006_desc"
 	style = 2
 	picture = "chinese_protestors"
@@ -190,8 +211,10 @@ event = {
 		name = "ACTION_NAME_DAMN"
 		ai_chance = 100
 		command = { type = dissent value = 2 } 
-		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = freedom value = -1 } #government repression
+		command = { type = domestic which = defense_lobby value = 1 }
 		command = { type = relation which = JAP value = -20 }
+		command = { type = manpowerpool value = 20 }
 	}
 }
 
@@ -220,7 +243,7 @@ event = {
 		command = { type = event which = 2012031 where = CHI when = 10 }
 		command = { type = dissent value = 1 }
 		}
-}
+	}
 
  event = {
 	id = 1400000008 
@@ -427,7 +450,7 @@ event = {
 		}
 		ai_chance = 20
 		name = "No! China still has a long way to go"
-		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = freedom value = -2 }
 		command = { type = dissent value = 10 }
 		command = { type = setflag which = CHI_offensive_CHC }
 		command = { type = setflag which = extension_of_Dang_Guo }
@@ -2729,6 +2752,7 @@ event = {
 		command = { type = foreignminister which = 55062 } #Zhang Lisheng
 		command = { type = armamentminister which = 55129 } #Zhu Jiahua
 		command = { type = ministerofsecurity which = 55126 } #Chen Lifu
+		command = { type = domestic which = freedom value = -1 }
 		command = { type = dissent value = -2.5 } 
 		command = { type = setflag which = KMT_CCC }
 	}
@@ -2739,6 +2763,7 @@ event = {
 		command = { type = foreignminister which = 55117 } #Zhang Qun
 		command = { type = armamentminister which = 55025 } #Zhang Jiaao
 		command = { type = ministerofsecurity which = 55121 } #Weng Wenhao
+		command = { type = domestic which = free_market value = 1 }
 		command = { type = dissent value = -2.5 } 
 		command = { type = setflag which = KMT_PSC }
 	}
@@ -3028,7 +3053,7 @@ event = {
 			}
 		}
 	
-	name = "Fate of the Liberal opposition" #China Democratic League
+	name = "Fate of the Liberal opposition" #China Democratic League, China Zhi Gong Party(Public Interest Party)
 	desc = ""
 	style = 2
 	picture = "China_Democratic_League"
@@ -3063,7 +3088,7 @@ event = {
 	trigger = {
 			event = 1400000096
 			flag = CHI_institutional_politics
-			random = 15
+			random = 5
 			NOT = {
 			atwar = yes
 			}
@@ -3086,7 +3111,6 @@ event = {
 		ai_chance = 55
 		name = "They are also member"
 		command = { type = dissent value = -1 }
-		command = { type = domestic which = freedom value = 1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = 1 }
 	}
 	action = {
@@ -3143,8 +3167,8 @@ event = {
 	trigger = {	
 		flag = KMT_Instability
 		OR = {
-		KMT_CCC
-		KMT_PSC
+		flag = KMT_CCC
+		flag = KMT_PSC
 		}
 		OR = {
 		dissent = 40
@@ -3207,7 +3231,7 @@ event = {
 
 	date = { year = 1938 month = january day = 20 }
 
-	name = "Ruler of Sichuan dies"
+	name = "Ruler of Sichuan die"
 	desc = ""
 	picture = "minister_died"
 
@@ -3785,10 +3809,21 @@ event = {
 	action = {
 		name = "They are no longer useful."
 		ai_chance = 90
-		command = { type = dissent value = -10 }
+		command = { type = dissent value = -5 }
 		command = { type = end_puppet }
 		command = { type = set_relation which = CHC value = -300 }
 		command = { type = set_relation which = SOV value = -150 }
+		command = { type = sleepminister which = 420034 }
+		command = { type = sleepminister which = 420025 }
+		command = { type = sleepminister which = 420046 }
+		command = { type = sleepminister which = 420049 }
+		command = { type = sleepminister which = 420050 }
+		command = { type = headofstate which = 420003 }
+		command = { type = headofgovernment which = 420010 }
+		command = { type = foreignminister which = 420021 }
+		command = { type = armamentminister which = 420028 }
+		command = { type = ministerofsecurity which = 420033 }
+		command = { type = ministerofintelligence which = 420039 }
 	}
 	
 	action = {
@@ -4023,6 +4058,90 @@ event = {
 		command = { type = dissent value = 5 }
 	}
 }
+
+event = {
+	id = 1400001167
+	random = no
+	country = SIK
+	name = "Eight-Point Manifesto"
+	desc = ""
+	style = 2
+	picture = "news_paper"
+
+	trigger = {	
+		OR = {
+		headofstate = 420003
+		headofstate = 420004
+		}
+		OR = {
+		puppet = { country = SIK country = SOV }
+		puppet = { country = SIK country = CHC }
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1934 }
+
+	action = {
+		ai_chance = 100
+		name = "For the New Xinjiang!"
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 420003 }
+		command = { type = headofgovernment which = 420016 }
+		command = { type = foreignminister which = 420020 }
+		command = { type = armamentminister which = 420054 }
+		command = { type = ministerofsecurity which = 420030 }
+		command = { type = ministerofintelligence which = 420039 }
+	}
+}
+
+event = {
+	id = 1400001168
+	random = no
+	country = SIK
+	name = "Political Purge"
+	desc = ""
+	style = 2
+	picture = "news_paper"
+
+	trigger = {	
+		OR = {
+		headofstate = 420003
+		headofstate = 420004
+		}
+		event = 2007025 #SOV - The Great Purge
+	}
+
+    date = { day = 0 month = january year = 1936 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1939 }
+
+	action = {
+		ai_chance = 100
+		name = "ACTIONNAME2609A"
+		command = { type = sleepminister which = 420020 }
+		command = { type = sleepminister which = 420015 }
+		command = { type = sleepminister which = 420005 }
+		command = { type = sleepminister which = 420030 }
+		command = { type = sleepminister which = 420041 }
+		command = { type = sleepminister which = 420012 }
+		command = { type = sleepminister which = 420007 }
+		command = { type = sleepminister which = 420038 }
+		command = { type = sleepminister which = 420031 }
+		command = { type = dissent value = 15 }
+		command = { type = headofgovernment which = 420010 }
+		command = { type = foreignminister which = 420022 }
+		command = { type = armamentminister which = 420029 }
+		command = { type = ministerofsecurity which = 420036 }
+		command = { type = ministerofintelligence which = 420039 }
+	}
+}
+
+
+
+
 
 ### Conflict and War of Resistance
 
@@ -4348,6 +4467,7 @@ event = {
 	command = { type = sleepminister which = 55335 }
 	command = { type = sleepminister which = 55110 }
 	command = { type = sleepminister which = 55109 }
+	command = { type = sleepminister which = 55192 }
 	command = { type = sleepminister which = 55337 } #Chen Gongbo
 	command = { type = sleepminister which = 55111 }
 	command = { type = sleepminister which = 55180 }
@@ -4356,7 +4476,7 @@ event = {
 	command = { type = sleepminister which = 55115 } #Ren Yuandao
 	command = { type = sleepminister which = 55114 }
 	command = { type = sleepminister which = 55113 } #Bao Wenyue
-	command = { type = sleepminister which = 55116 }
+	command = { type = sleepminister which = 55116 } #Zeng Zhongming
 	}
 }
 
@@ -4645,7 +4765,7 @@ event = {
 		ai_chance = 100
 		command = { type = supplies value = -500 }
  		command = { type = relation which = CHI value = 10 }
- 		command = { type = relation which = JAP value = -10 }
+ 		command = { type = relation which = JAP value = -50 }
  		command = { type = trigger which = 3123075 }
 		command = { type = access which = CHI }
 		}
@@ -5710,7 +5830,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 65
+		ai_chance = 90
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -5720,7 +5840,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1249 when = 2 }
 	}
 	action = {
-		ai_chance = 35
+		ai_chance = 10
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -5810,7 +5930,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 50
+		ai_chance = 80
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -5818,7 +5938,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1243 when = 2 }
 	}
 	action = {
-		ai_chance = 50
+		ai_chance = 20
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -5914,7 +6034,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 45
+		ai_chance = 80
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -5923,7 +6043,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1327 when = 2 }
 	}
 	action = {
-		ai_chance = 55
+		ai_chance = 20
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6015,7 +6135,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 45
+		ai_chance = 80
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6024,7 +6144,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1242 when = 2 }
 	}
 	action = {
-		ai_chance = 55
+		ai_chance = 20
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6127,7 +6247,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 50
+		ai_chance = 80
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6136,7 +6256,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1330 when = 2 }
 	}
 	action = {
-		ai_chance = 50
+		ai_chance = 20
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6237,7 +6357,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 45
+		ai_chance = 80
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6248,7 +6368,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1332 when = 2 }
 	}
 	action = {
-		ai_chance = 55
+		ai_chance = 20
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6348,7 +6468,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 40
+		ai_chance = 75
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6357,7 +6477,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1331 when = 2 }
 	}
 	action = {
-		ai_chance = 60
+		ai_chance = 25
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6464,7 +6584,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 40
+		ai_chance = 75
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6473,7 +6593,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1336 when = 2 }
 	}
 	action = {
-		ai_chance = 60
+		ai_chance = 25
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6573,7 +6693,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 45
+		ai_chance = 75
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6582,7 +6702,7 @@ event = {
 		command = { type = setflag which = Chahar_Infiltration }
 	}
 	action = {
-		ai_chance = 55
+		ai_chance = 25
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6683,7 +6803,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 45
+		ai_chance = 75
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6693,7 +6813,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1335 when = 2 }
 	}
 	action = {
-		ai_chance = 55
+		ai_chance = 25
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6778,7 +6898,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 40
+		ai_chance = 70
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6787,7 +6907,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1334 when = 2 }
 	}
 	action = {
-		ai_chance = 60
+		ai_chance = 30
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6872,7 +6992,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 30
+		ai_chance = 70
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
@@ -6881,7 +7001,7 @@ event = {
 		command = { type = secedeprovince which = CHC value = 1339 when = 2 }
 	}
 	action = {
-		ai_chance = 70
+		ai_chance = 30
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -6984,7 +7104,7 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 30
+		ai_chance = 70
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = setflag which = Jehol_Infiltration }
@@ -6993,7 +7113,7 @@ event = {
 		command = { type = manpowerpool value = -1 }
 	}
 	action = {
-		ai_chance = 70
+		ai_chance = 30
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
@@ -7075,21 +7195,21 @@ event = {
 	picture = "ccip_militia"
 
 	action = {
-		ai_chance = 35
+		ai_chance = 70
 		name = "Operation successes"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = setflag which = Dungbei_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = supplies value = -1000 }
-		command = { type = manpowerpool value = -5 }
+		command = { type = manpowerpool value = -1 }
 	}
 	action = {
-		ai_chance = 65
+		ai_chance = 30
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
 		command = { type = supplies value = -1000 }
-		command = { type = manpowerpool value = -7 }
+		command = { type = manpowerpool value = -2 }
 	}
 }
 
@@ -14194,6 +14314,7 @@ event = {
 		name = "North China's autonomy must be guaranteed"
 		command = { type = event which = 1400007544 where = U87 when = 7 } #Government Integration (Northern China, Inner Mongolia)
 		command = { type = relation which = U87 value = -25 }
+		command = { type = relation which = USA value = -75 }
 	}
 	action = {
 		ai_chance = 10
@@ -14264,10 +14385,74 @@ event = {
 		
 		command = { type = relation which = ITA value = 50 }
 		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = GER value = 50 }
 	}
 }
 
+event = {
+	id = 1400007548
+	random = no
+	country = CHI
+	
+	trigger = {
+		event = 1400007541
+		random = 10
+		}
+	
+	name = "Fate of KMT opposition" #CC Clique, Left Kuomintang, Political Science Clique, Liberalist etc... 
+	desc = ""
+	style = 2
+	picture = "ccip_gmd"
 
+	date = { day = 0 month = january year = 1933 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 50
+		name = "They are also member"
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+	action = {
+		ai_chance = 50
+		name = "Keep an eye on their activities"
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+event = {
+	id = 1400007549
+	random = no
+	country = CHI
+	
+	trigger = {
+		event = 1400007548
+		random = 5
+	}
+	
+	name = "Fate of Democratic Opposition Parties" #China Democratic League, China Democratic Socialist Party, Young China Party etc....
+	desc = ""
+	style = 2
+	picture = "China_Democratic_League"
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 40
+		name = "Promote reconciliation with them"
+		command = { type = dissent value = 2 }
+	}
+	action = {
+		ai_chance = 60
+		name = "They would rather be threat"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
 
 ### 1400009001 - 1400009500 Minister died event
 

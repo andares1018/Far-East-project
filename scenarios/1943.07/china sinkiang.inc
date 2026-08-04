@@ -19,7 +19,7 @@
    policy = 
    {  date              = {  year = 0 month = january day = 0  } 
      democratic        = 3 
-     political_left    = 4 
+     political_left    = 7 
      freedom           = 3 
      free_market       = 3 
      professional_army = 2 
@@ -118,16 +118,16 @@ blueprints = {
      relation = {  tag = CHI value = -125  } 
     } 
    SpyInfo                = {  country = "SIK" NumberOfSpies = 4  } 
-   headofstate            = {  type = 9 id = 420001  } 
-   headofgovernment       = {  type = 9 id = 420032  } 
-   foreignminister        = {  type = 9 id = 420003  } 
-   armamentminister       = {  type = 9 id = 420004  } 
-   ministerofsecurity     = {  type = 9 id = 420005  } 
-   ministerofintelligence = {  type = 9 id = 420006  } 
-   chiefofstaff           = {  type = 9 id = 420007  } 
-   chiefofarmy            = {  type = 9 id = 420008  } 
-   chiefofnavy            = {  type = 9 id = 420009  } 
-   chiefofair             = {  type = 9 id = 420010  } 
+  headofstate            = { type = 9 id = 420003 } # Sheng Shicai
+  headofgovernment       = { type = 9 id = 420010 } # Sheng Shicai
+  foreignminister        = { type = 9 id = 420022 } # Guo Daming
+  armamentminister       = { type = 9 id = 420028 } # Peng Jiyuan
+  ministerofsecurity     = { type = 9 id = 420033 } # Li Yingqi
+  ministerofintelligence = { type = 9 id = 420039 } # Li Yingqi
+  chiefofstaff           = { type = 9 id = 420046 } # Sheng Shiqi
+  chiefofarmy            = { type = 9 id = 420051 } # Sheng Shicai
+  chiefofnavy            = { type = 9 id = 420063 } # Under Army Control
+  chiefofair             = { type = 9 id = 420060 } # Yao Xiong
    landunit = 
    {  location = 1281 
      name     = "Xin'jiang Jüntuan 1" 

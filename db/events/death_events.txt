@@ -3844,7 +3844,10 @@ event = {
 	action_a = {
 		name = "EVT_362_ACTC"
 		command = { type = headofstate which = 55001 } #Jiang Jieshi
+		command = { trigger = { NOT = { minister = 55001 } government = democratic } type = headofstate which = 55350 } #Sun Fo
+		command = { trigger = { NOT = { minister = 55001 } NOT = { government = democratic } } type = headofstate which = 55192 } #Wang Jingwei
 		command = { type = sleepminister which = 55138 } #Lin Sen
+		command = { type = sleepminister which = 55353 } 
 		}
 }
 

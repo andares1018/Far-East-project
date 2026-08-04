@@ -52,7 +52,7 @@
 # 1400000003 CHI - Currency reform (1935) 
 # 1400000004 CHI - New Air Force Advisor - Chennault 
 # 1400000005 CHI - Change of Germany Advisor - Hans von Seck 
-# 1400000006 CHI - Widespread Protests (1936) - Anti Japanese Protests 
+# 1400000006 CHI - Widespread Protests (1935, 1936) - Anti Japanese Protests : December 9th Movement(1935), Seven Gentlemen Incident(1936)
 # 1400000007 CHI - Assassination attempt (1935) - Wang Jingwei 
 # 1400000008 CHI - Change of Germany Advisor - von Falkenhausen 
 # 1400000009 CHI - Beginning of Constitutionalization 
@@ -196,7 +196,7 @@
 # 1400001025 U63 - Dissolution of Political Affairs Committee(game over) 
 # 1400001026 CGX U65 U66 U63 CXB CSX U64 SIK Declaration of the National Government #
 
-### 1400001150 - 1400001250 : Xinjiang
+### 1400001150 - 1400001250 : Xinjiang and East Turkestan
 # 1400001150 SIK - break with the Communist? 
 # 1400001151 CHI - Xinjiang Intervention 
 # 1400001152 SIK - Government's demand(game over) 
@@ -214,8 +214,8 @@
 # 1400001164 UPS - Retreat to the Southeast 
 # 1400001165 SIK - Southern Expedition 
 # 1400001166 SIK - Islamic rebellion 
-# 1400001167 SIK - Eight-Point Manifesto #
-# 1400001168 SIK - Political Purge #
+# 1400001167 SIK - Eight-Point Manifesto 
+# 1400001168 SIK - Political Purge 
 # 1400001169 
 # 1400001170 
 
@@ -241,8 +241,8 @@
 # 1400001269 CHI - Flying Tigers 
 # 1400001270 CHI - Soviet's Support Cease 
 # 1400001271 CHI - Aftermath of the War of Resistance - Post-war 
-# 1400001272 MEN - Suiyuan Campaign (1935)
-# 1400001273 CSX - Battle of Bailingmiao (1935)
+# 1400001272 MEN - Suiyuan Campaign (1936)
+# 1400001273 CSX - Battle of Bailingmiao (1936)
 # 1400001274 CHI - Suiyuan Campaign 
 # 1400001275 
 # 1400001276 
@@ -277,9 +277,9 @@
 # 1400001523 CHC - Land Reform Policy #
 # 1400001524 CHC - Land Reform Movement #
 # 1400001525 CHC - Agricultural Collectivisation # 
-# 1400001526 CHC - Defectors from Nationalists - Maoism #
-# 1400001527 CHC - Expanding the United Front? - New Democratic Revolution #
-# 1400001528 CHC - Fate of the Democratic opposition - Maoism #
+# 1400001526 CHC - United Front Work Department #
+# 1400001527 CHC - Fate of the Democratic opposition #
+# 1400001528 CHC - 
 # 1400001529 CHC - 
 # 1400001530 CHC - 
 
@@ -535,10 +535,10 @@
 # 1400006004 USA - Occupation of Korea - by USA
 # 1400006005 SOV - Occupation of Korea - by USSR
 # 1400006006 USA - Establish of Korean government # - Korean Republic
-# 1400006007 SOV - Establish of Korean government # - North Korea
-# 1400006008 KOR - Republic Proclaimed - South Korea or Korean Republic
+# 1400006007 SOV - Establish of Korean government # - People's Republic or DPRK
+# 1400006008 KOR - Republic Proclaimed - Korean Republic
 # 1400006009 KOR - Composition of the Government
-# 1400006010 PRK - Proclamation of Socialist government - People's Republic or DPRK
+# 1400006010 PRK - Proclamation of Socialist government - DPRK
 # 1400006011 KOR - Division of Korea 
 # 1400006012 PRK - Division of Korea 
 # 1400006013 KOR - Establish of Interim government 
@@ -670,8 +670,8 @@
 # 1400007545 JAP - Negotiations with Wang Jingwei 
 # 1400007546 U87 - National Congress of the Kuomintang (Post-war) 
 # 1400007547 U87 - Return of Concessions
-# 1400007548 
-# 1400007549 
+# 1400007548 U87 - Fate of Opposition Factions
+# 1400007549 U87 - Fate of Democratic Opposition Parties 
 # 
 # 
 # 
@@ -770,7 +770,7 @@
 # 1400009408 CHI - Dai Li (1946? - OTL) #
 # 1400009409 JAP - Konoe Fumimaro (Occupation of Japan) #
 
-### 1400009501 - 1400010000 USA event - incomplete contents
+### 1400009501 - 1400010000 USA event - incomplete contents, election event rework
 # 1400009501 USA - 1936 Democratic National Convention #
 # 1400009502 USA - 1936 Republican National Convention #
 # 1400009503 USA - 1940 Democratic National Convention #
@@ -788,9 +788,9 @@
 # 1400009515 USA - Boulder Dam Completed - TRP event #
 # 1400009516 USA - Public Works Administration - WiF event #
 # 1400009517 USA - Racial Riots in Detroit - WiF event #
-# 
-# 
-# 
+# 1400009518 USA - Bracero Program - WiF event #
+# 1400009519 USA - The Golden Gate Bridge - WiF event #
+# 1400009520 USA - Civilian Conservation Corps #
 # 
 
 ### 1400010001 - 1400011000 - World event (Historical)
@@ -817,6 +817,30 @@
 # 1400010021 USA ENG FRA CAN U01 U02 AST NZL - End of the European front (Allied) 
 # 1400010022 SOV - End of the European front (Soviet) 
 # 1400010023 USA - Declaration by United Nations (1942) 
+# ENG - Peace Demonstration - WiF event #
+# GER - German-Portuguese Trade Agreement - WiF event #
+# GER - Compulsory Work Service - WiF event #
+# FRA - Compulsory Work Service - WiF event #
+# GER - Propose German-Polish Non-Aggression Pact - WiF event #
+# POL - German-Polish Non-Aggression Pact Proposal - WiF event #
+# POL - German-Polish Cooperation - WiF event #
+# POL - German-Polish Cooperation - WiF event #
+# POR - Portuguese Volunteers Join Franco's Army - WiF event #
+# SPA - Portuguese Volunteers Join Franco's Army - WiF event #
+# MEX - Mexico Supports Republican Spain - WiF event #
+# SPR - Mexico Supports Republican Spain - WiF event #
+# BRA - The Second Rubber Boom - WiF event #
+# POL - Four-years Plan - WiF event #
+# POL - The Central Industrial District (1938) - WiF event #
+# POL - The Central Industrial District (1939) - WiF event #
+# FRA - Matignon Agreements - WiF event #
+# SOV - Second Five-Year Plan - WiF event #
+# SOV - Third Five-Year Plan - WiF event #
+# GER - Resistance Movements in Europe - WiF event #
+# SOV - Purges of the Red Army - WiF event #
+# SOV - Trotsky Assassination - WiF event #
+# FRA - CGT calls for national strike - WiF event #
+# GER - Vlasov Army - WiF event #
 # 
 # 
 # 
@@ -825,6 +849,7 @@
 # 
 # 
 # 
+#
 # 
 # 
 
@@ -832,9 +857,9 @@
 ### 1400011001 - 1400012000 - World event (Alternate)
 # USA CAN - Liberation of Britain #
 # ENG - Liberation of Britain #
-# 
-# 
-# 
+# GER  Propose Poland to Join the Pact of Steel - WiF event #
+# POL  German Proposal to Join the Pact of Steel - WiF event #
+# GER  Poland Joins the Pact of Steel - WiF event #
 # 
 # 
 # 

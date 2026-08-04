@@ -11,7 +11,7 @@
  {  tag                    = CGX 
 	flag_ext 	= _PNE
 	ai = "cgx_1933.ai"
-	ai_settings = { flags = { MOB1 = yes MOB2 = yes RES = yes} }
+	ai_settings = { flags = { MOB1 = yes MOB2 = yes MOB3 = yes MOB4 = yes MOB5 = yes RES = yes} }
 	dissent = 40
 	regular_id             = CHI 
 	intrinsic_gov_type     = paternal_autocrat 
@@ -34,7 +34,7 @@
      relation = {  tag = CXB value = 200  } 
      relation = {  tag = CYN value = 200  } 
      relation = {  tag = U67 value = 150  } 
-     relation = {  tag = UC1 value = 200 access = yes  } 
+     relation = {  tag = U63 value = 200 access = yes  } 
      relation = {  tag = JAP value = -75  } 
      relation = {  tag = MAN value = -75  } 
      relation = {  tag = SIK value = 100 guaranteed = {  day = 29 month = december year = 1936 }  } 
@@ -165,19 +165,20 @@ inventions = { 3000027 }
      political_left    = 4 
      freedom           = 3 
      free_market       = 3 
-     professional_army = 2 
-     defense_lobby     = 1 
+     professional_army = 5 
+     defense_lobby     = 6 
      interventionism   = 2 
     } 
-   headofstate            = {  type = 9 id = 585001  } 
-   headofgovernment       = {  type = 9 id = 585002  } 
-   foreignminister        = {  type = 9 id = 585003  } 
-   armamentminister       = {  type = 9 id = 585004  } 
-   ministerofintelligence = {  type = 9 id = 585006  } 
-   chiefofstaff           = {  type = 9 id = 585007  } 
-   chiefofarmy            = {  type = 9 id = 585009  } 
-   chiefofnavy            = {  type = 9 id = 585010  } 
-   chiefofair             = {  type = 9 id = 585012  } 
+  headofstate            = { type = 9 id = 585004 } # Li Zongren
+  headofgovernment       = { type = 9 id = 585012 } # Huang Xuchu
+  foreignminister        = { type = 9 id = 585016 } # Sun Renlin
+  armamentminister       = { type = 9 id = 585026 } # Huang Zhongyue
+  ministerofsecurity     = { type = 9 id = 585038 } # Lei Yin
+  ministerofintelligence = { type = 9 id = 585042 } # Wang Gongdu
+  chiefofstaff           = { type = 9 id = 585045 } # Bai Chongxi
+  chiefofarmy            = { type = 9 id = 585054 } # Li Zongren
+  chiefofnavy            = { type = 9 id = 585061 } # Li Qingwen
+  chiefofair             = { type = 9 id = 585063 } # Lin Weicheng
    # ###### 
    # GUANGXI OOB 
    # ###### 

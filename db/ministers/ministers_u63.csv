@@ -1,18 +1,18 @@
 U63;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-2500000;Head of State;Chen Jitang;1926;1955;1955;PA;Barking Buffoon;Medium;M_Chen Jitang;X
-2500001;Head of Government;Chen Jitang;1926;1955;1955;PA;Old General;Medium;M_Chen Jitang;X
-2500002;Foreign Minister;Chen Jitang;1926;1955;1955;PA;Iron Fisted Brute;Medium;M_Chen Jitang;X
+2500000;Head of State;Chen Jitang;1930;1955;1955;PA;Barking Buffoon;Medium;M_Chen Jitang;X
+2500001;Head of Government;Chen Jitang;1928;1955;1955;PA;Old General;Medium;M_Chen Jitang;X
+2500002;Foreign Minister;Chen Jitang;1928;1955;1955;PA;Iron Fisted Brute;Medium;M_Chen Jitang;X
 2500003;Chief of Army;Chen Jitang;1926;1955;1955;PA;Decisive Battle Doctrine;Medium;M_Chen Jitang;X
-2500004;Head of Government;Lin Yungai;1923;1949;1949;PA;Silent Workhorse;Medium;M_Lin Yungai;X
-2500005;Foreign Minister;Lin Yungai;1923;1949;1949;PA;Biased Intellectual;Medium;M_Lin Yungai;X
+2500004;Head of Government;Lin Yungai;1923;1949;1949;SC;Silent Workhorse;Medium;M_Lin Yungai;X
+2500005;Foreign Minister;Lin Yungai;1923;1949;1949;SC;Biased Intellectual;Medium;M_Lin Yungai;X
 2500006;Minister of Security;Li Hanhun;1928;1988;1988;PA;Man of the People;Medium;L50175;X
 2500007;Chief of Staff;Li Hanhun;1926;1988;1988;PA;School of Fire Support;Medium;L50175;X
-2500008;Chief of Army;Yu Hanmou;1924;1982;1982;PA;Static Defence Doctrine;Medium;L502010;X
+2500008;Chief of Army;Yu Hanmou;1925;1982;1982;SC;Static Defence Doctrine;Medium;L502010;X
 2500009;Chief of Staff;Miao Peinan;1926;1958;1958;PA;School of Mass Combat;Medium;L50242;X
 2500010;Minister of Armament;Liu Jiwen;1923;1958;1958;PA;Construction Magnate;Medium;M_Liu Jiwen;X
 2500011;Chief of Navy;Chan Chak;1925;1950;1950;PA;Decisive Naval Battle Doctrine;Medium;M_Chan Chak;X
-2500012;Chief of Air Force;Zhang Huizhang;1920;1933;1999;PA;Naval Aviation Doctrine;Medium;M_Zhang Huizhang;X
+2500012;Chief of Air Force;Zhang Huizhang;1920;1933;1980;PA;Naval Aviation Doctrine;Medium;M_Zhang Huizhang;X
 2500013;Minister of Security;Lin Yizhong;1924;1998;1998;PA;Crime Fighter;Medium;M_Lin Yizhong;X
 2500014;Head of Military Intelligence;Lin Yizhong;1924;1998;1998;PA;Political Specialist;Medium;M_Lin Yizhong;X
 2500015;Minister of Armament;Luo Yiqun;1922;1967;1967;PA;Laissez-Faire Capitalist;Medium;M_Luo Yiqun;X
@@ -20,3 +20,42 @@ U63;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 2500017;Chief of Navy;Qian Dajun;1924;1982;1982;PA;Power Projection Doctrine;Medium;M_Qian Dajun;X
 2500018;Chief of Navy;Zhang Zhiying;1929;1955;1955;PA;Base Control Doctrine;Medium;M_Zhang Zhiying;X
 2500019;Chief of Air Force;Huang Zhenqiu;1920;1980;1980;PA;Air Superiority Doctrine;Medium;M_Huang Zhenqiu;X
+2500020;Head of State;Li Jishen;1926;1960;1960;SC;Resigned Generalissimo;Medium;2333;X
+2500021;Head of State;Li Jishen;1960;1960;1960;SD;Barking Buffoon;Medium;2333;X
+2500022;Head of State;Chen Mingshu;1928;1966;1966;PA;Powerhungry Demagogue;Medium;9415;X
+2500023;Head of State;Chen Mingshu;1930;1966;1966;SD;Insignificant Layman;Medium;9415;X
+2500024;Head of Government;Li Jishen;1926;1960;1960;SC;Old General;Medium;2333;X
+2500025;Head of Government;Li Jishen;1926;1960;1960;SD;Old General;Medium;2333;X
+2500026;Head of Government;Chen Mingshu;1928;1966;1966;PA;Backroom Backstabber;Medium;9415;X
+2500027;Head of Government;Chen Mingshu;1928;1966;1966;SD;Flamboyant Tough Guy;Medium;9415;X
+2500028;Head of Government;Deng Zeru;1924;1933;1933;SC;Silent Workhorse;Medium;M_Deng Zeru;X
+2500029;Head of Government;Jiang Guangnai;1928;1968;1968;SD;Political Protege;Medium;M_Jiang Guangnai;X
+2500030;Head of Military Intelligence;Li Zhangda;1924;1954;1954;SD;Technical Specialist;Medium;M_Li Zhangda;X
+2500031;Foreign Minister;Peng Yihu;1927;1980;1980;SC;Biased Intellectual;Medium;M_Peng Yihu;X
+2500032;Chief of Staff;Jiang Guangnai;1928;1968;1968;SD;School of Fire Support;Medium;M_Jiang Guangnai;X
+2500033;Head of Military Intelligence;Dai Ji;1928;1973;1973;SD;Dismal Enigma;Medium;M_Dai Ji;X
+2500034;Minister of Armament;Gu Yingfen;1924;1933;1933;SC;Laissez-Faire Capitalist;Medium;M_Gu Yingfen;X
+2500035;Minister of Armament;Feng Zhuwan;1923;1954;1954;SC;Military Entrepreneur;Medium;M_Feng Zhuwan;X
+2500036;Minister of Armament;Li Wenfan;1926;1933;1933;SC;Resource Industrialist;Medium;M_Li Wenfan;X
+2500037;Minister of Armament;Fan Qiwu;1926;1938;1938;SC;Resource Industrialist;Medium;M_Fan Qiwu;X
+2500038;Minister of Armament;Qu Fangpu;1930;1952;1952;PA;Military Entrepreneur;Medium;M_Qu Fangpu;X
+2500039;Minister of Armament;Li Boqiu;1930;1986;1986;SD;Resource Industrialist;Medium;M_Li Boqiu;X
+2500040;Minister of Security;Li Wenfan;1926;1933;1933;SC;Compassionate Gentleman;Medium;M_Li Wenfan;X
+2500041;Minister of Security;Chen Rong;1920;1955;1955;SC;Crime Fighter;Medium;M_Chen Rong;X
+2500042;Head of Government;Feng Zhuwan;1920;1980;1980;SC;Silent Workhorse;Medium;M_Feng Zhuwan;X
+2500043;Minister of Security;Xu Chongqing;1926;1970;1970;SC;Man of the People;Medium;M_Xu Chongqing;X
+2500044;Minister of Security;Fan Qiwu;1920;1938;1938;SC;Compassionate Gentleman;Medium;M_Fan Qiwu;X
+2500045;Minister of Security;Deng Zeru;1924;1933;1933;SC;Man of the People;Medium;M_Deng Zeru;X
+2500046;Minister of Security;Qu Fangpu;1920;1952;1952;PA;Crime Fighter;Medium;M_Qu Fangpu;X
+2500047;Head of Military Intelligence;Yu Hanmou;1925;1987;1987;SC;Logistics Specialist;Medium;L502010;X
+2500048;Head of Military Intelligence;Wei Bangping;1914;1936;1936;SC;Political Specialist;Medium;M_Wei Bangping;X
+2500049;Head of Military Intelligence;Ge Zhaohuang;1933;1954;1954;PA;Double Agent;Medium;M_Ge Zhaohuang;X
+2500050;Head of Military Intelligence;Tan Pingshan;1920;1956;1956;LE;Political Specialist;Medium;M_Tan Pingshan;X
+2500051;Chief of Staff;Li Fulin;1917;1953;1953;SC;School of Psychology;Medium;M_Li Fulin;X
+2500052;Head of Government;Li Zhangda;1924;1954;1954;SD;Political Protege;Medium;M_Li Zhangda;X
+2500053;Chief of Army;Li Jishen;1926;1960;1960;PA;Static Defence Doctrine;Medium;2333;X
+2500054;Chief of Army;Chen Mingshu;1928;1966;1966;PA;Decisive Battle Doctrine;Medium;9415;X
+2500055;Chief of Army;Li Jishen;1926;1960;1960;LWR;Guerilla Warfare Doctrine;Medium;2333;X
+2500056;Chief of Army;Chen Mingshu;1930;1966;1966;LWR;Guns and Butter Doctrine;Medium;9415;X
+2500057;Chief of Air Force;Chen Qingyun;1920;1980;1980;SC;Air Superiority Doctrine;Medium;M_Chen Qingyun;X
+2500058;Chief of Air Force;Lin Fuyuan;1920;1962;1962;SC;Army Aviation Doctrine;Medium;M_Lin Fuyuan;X
