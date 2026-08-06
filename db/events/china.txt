@@ -236,7 +236,6 @@ event = {
 		ai_chance = 90
 		command = { type = domestic which = interventionism value = 1 }
 		command = { type = domestic which = democratic value = 1 }
-		command = { type = domestic which = freedom value = 1 }
 		command = { type = dissent value = -5 }
 		command = { trigger = { war = { country = CHC country = CHI } not = { participant = { country = CHC value = 3 } } not = { alliance = { country = CHC country = SOV } } } type = peace which = CHC value = 0 }
 		command = { trigger = { NOT = { puppet = { country = CHC country = SOV } } not = { participant = { country = CHC value = 3 } } not = { alliance = { country = CHC country = SOV } } } type = alliance which = CHC when = 1 }

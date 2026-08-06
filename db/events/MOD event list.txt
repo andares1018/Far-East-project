@@ -148,8 +148,8 @@
 # 1400000099 CHI - Minister Resigns - Wang Jingwei (post truce) 
 # 1400000100 CHI - Emergency Congress of the Kuomintang - Alternate 
 # 1400000101 CHI - Local Warlords leave - Effects of partial defeat, Alternate #
-# 1400000102 
-# 1400000103 
+# 1400000102 CHI - Constitution Draft (1936) 
+# 1400000103 CHI - Constitutional Discussion (Political Consultative Assembly) #
 # 1400000104 
 # 1400000105 
 # 1400000106 

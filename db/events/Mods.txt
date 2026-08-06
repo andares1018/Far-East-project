@@ -494,6 +494,7 @@ event = {
 		command = { type = trigger which = 1400000013 }
 		command = { type = domestic which = freedom value = 1 }
 		command = { type = dissent value = -1 }
+		command = { trigger = { exists = CHC event = 1400000102 } type = event which = 1400000103 where = CHI when = 7 } #Constitutional Discussion
 
 	}
 }
@@ -509,7 +510,7 @@ event = {
 	action = {
 		name = "ACTION_NAME_ACCEPT" # 
 		ai_chance = 100
-		command = { type = event which = 1400000017 where = CHI when = 14 }
+		command = { type = event which = 1400000017 where = CHI when = 21 }
 		command = { type = domestic which = freedom value = 1 }
 		command = { type = dissent value = -1 }
 
@@ -531,13 +532,14 @@ event = {
 		command = { type = dissent value = -5 }
 		command = { type = domestic which = freedom value = 1 }
 		command = { trigger = { headofstate = 55001 } type = headofgovernment which = 55118 }
+		command = { trigger = { NOT = { exists = CHC } event = 1400000102 } type = event which = 1400000103 where = CHI when = 7 } #Constitutional Discussion
 		command = { 
 	trigger = { 
 		OR = {
 			and = {
 			NOT = { event = 2012016 } }
 			and = {
-			event = 2012016 }
+			event = 2012016 } #United front
 		}
 		NOT = { exists = CHC }
 		} 
@@ -547,13 +549,13 @@ event = {
 			event = 2012016
 			exists = CHC 
 		} 
-		type = event which = 1400000011 where = CHC when = 14 }
+		type = event which = 1400000011 where = CHC when = 14 } #Agreement with Nationalists
 		command = { 
 		trigger = { 
 			NOT = { event = 2012016 } 
 			exists = CHC 
 		} 
-		type = event which = 1400000016 where = CHC when = 14 }
+		type = event which = 1400000016 where = CHC when = 14 } #Demand of Nationalist government
 	}
 }
 
@@ -3054,7 +3056,7 @@ event = {
 		}
 	
 	name = "Fate of the Liberal opposition" #China Democratic League, China Zhi Gong Party(Public Interest Party)
-	desc = ""
+	desc = "EVT_1400000096_desc"
 	style = 2
 	picture = "China_Democratic_League"
 
@@ -3099,7 +3101,7 @@ event = {
 	}
 	
 	name = "Fate of the Leftist opposition" #Chinese Peasants' and Workers' Democratic Party, Revolutionary Committee of the Kuomintang
-	desc = ""
+	desc = "EVT_1400000097_desc"
 	style = 2
 	picture = "ccip_fjsoviet"
 
@@ -3140,7 +3142,7 @@ event = {
 	}
 
 	name = "Henan Famine"	
-	desc = ""
+	desc = "EVT_1400000098_desc"
 	picture = "news_paper"
 
     date = { day = 0 month = january year = 1942 }
@@ -3160,7 +3162,7 @@ event = {
 	random = no
 	country = CHI
 	name = "Minister Resigns"
-	desc = ""
+	desc = "EVT_1400000099_desc"
 	style = 2
 	picture = "ccip_gmd"
 
@@ -3202,7 +3204,7 @@ event = {
 	country = CHI
 
 	name = "Emergency Congress of the Kuomintang"
-	desc = ""
+	desc = "EVT_1400000100_desc"
 	style = 2
 	picture = "ccip_gmd"
 
@@ -3216,6 +3218,85 @@ event = {
 		command = { trigger = { flag = KMT_Coalition incabinet = 55012 } type = armamentminister which = 55012 }
 	}
 }
+
+event = {
+	id = 1400000102
+	random = no
+	country = CHI
+	
+	trigger = {	
+	NOT = { war = { country = CHI country = JAP } }
+	}
+	
+	date = { day = 5 month = may year = 1936 }
+	offset = 1
+	deathdate = { day = 15 month = may year = 1936 }
+	
+	name = "Constitution Draft"
+	desc = "EVT_1400000102_desc"
+	style = 2
+	picture = "diplomatic_campaign"
+	action = {
+		name = "It will be the path to New system"
+		ai_chance = 100
+		command = { type = dissent value = -2 }		
+		command = { type = domestic which = freedom value = 1 }		
+	}
+}
+
+event = {
+	id = 1400000103
+	random = no
+	country = CHI
+
+	name = "Constitutional Discussion"
+	desc = "EVT_1400000103_desc"
+	style = 2
+	picture = "China_National Assembly"
+	action = {
+		trigger = { 
+			exists = CHC
+		}
+		name = "The basic elements must be maintained as they are"
+		ai_chance = 25
+		command = { type = dissent value = 2 }		
+		command = { type = domestic which = freedom value = -1 }		
+	}
+	action = {
+		trigger = { 
+			exists = CHC
+		}
+		name = "Adoptes Liberal approach"
+		ai_chance = 75
+		command = { type = dissent value = -1 }		
+		command = { type = domestic which = freedom value = 1 }		
+	}
+	action = {
+		trigger = { 
+			NOT = { exists = CHC }
+		}
+		name = "The basic elements must be maintained as they are"
+		ai_chance = 70
+		command = { type = dissent value = 5 }		
+		command = { type = domestic which = freedom value = -1 }		
+	}
+	action = {
+		trigger = { 
+			NOT = { exists = CHC }
+		}
+		name = "Adoptes Liberal approach"
+		ai_chance = 30
+		command = { type = dissent value = -1 }		
+		command = { type = domestic which = freedom value = 1 }		
+	}
+}
+
+
+
+
+
+
+
 
 ### Chinese Warlord
 
