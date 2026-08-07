@@ -244,7 +244,7 @@
 # 1400001272 MEN - Suiyuan Campaign (1936)
 # 1400001273 CSX - Battle of Bailingmiao (1936)
 # 1400001274 CHI - Suiyuan Campaign 
-# 1400001275 
+# 1400001275 CHI - Setbacks in the War of Resistance #
 # 1400001276 
 # 1400001277 
 # 1400001278 

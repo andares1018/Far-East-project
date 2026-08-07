@@ -4365,7 +4365,7 @@ event = {
 	decision_trigger = { 
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 150 }
+	event = { id = 1330110081 days = 175 }
 	NOT = { event = 2011007 }
 		}
 	and = {
@@ -4379,7 +4379,7 @@ event = {
 	trigger = {
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 150 }
+	event = { id = 1330110081 days = 175 }
 	NOT = { event = 2011007 } # The Nanjing Massacre
 		}
 	and = {
@@ -5024,6 +5024,97 @@ event = {
 		command = { type = dissent value = -5 }
 	}
 }
+
+event = {
+	id = 1400001275
+	random = no
+	country = CHI
+	name = "Setbacks in the War of Resistance"
+	desc = ""
+	style = 2
+	picture = "War_of_Resistance"
+
+	trigger = {	
+		war = { country = CHI country = JAP } #balance of the 2nd Sino-Japanese War is hell!!!
+		random = 40
+		OR = {
+		local_flag = { which = Military_instability when = 1 value = 5 }
+		local_flag = { which = Military_instability when = 1 value = 4 }
+		local_flag = { which = Military_instability when = 1 value = 3 }
+		local_flag = { which = Military_instability when = 1 value = 2 }
+		local_flag = { which = Military_instability when = 1 value = 1 }
+		}
+		NOT = {
+			control = { province = 1330 data = -3 }
+			control = { province = 1252 data = -3 }
+			control = { province = 1347 data = -3 }
+			OR = {
+			control = { province = 1343 data = -3 }
+			control = { province = 1253 data = -3 }
+			}
+			OR = {
+			control = { province = 1337 data = -3 }
+			control = { province = 1358 data = -3 }
+			control = { province = 1317 data = -3 }
+			}
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		ai_chance = 100
+		name = "Arise! ye who refuse to be bond slaves!"
+		command = { type = dissent value = -10 }
+		command = { type = supplies value = 5000 }
+		command = { type = tc_mod value = 10 }
+		command = { trigger = { ai = yes local_flag = Military_instability } type = local_setflag which = Military_instability when = 1 value = -1 }
+		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 10 }
+		command = { trigger = { ai = yes local_flag = Military_instability } type = morale which = land value = 5 } 
+		command = { trigger = { control = { province = 1264 data = -3 } }type = construct which = land_fort where = 1264 value = 2 } #Lanzhou
+		command = { trigger = { control = { province = 1271 data = -3 } }type = construct which = land_fort where = 1271 value = 2 } #Wuzhong
+		command = { trigger = { control = { province = 1297 data = -3 } }type = construct which = land_fort where = 1297 value = 2 } #Chengdu
+		command = { trigger = { control = { province = 1299 data = -3 } }type = construct which = land_fort where = 1299 value = 2 } #Chongqing
+		command = { trigger = { control = { province = 1302 data = -3 } }type = construct which = land_fort where = 1302 value = 2 } #Wanxian
+		command = { trigger = { control = { province = 1258 data = -3 } }type = construct which = land_fort where = 1258 value = 2 } #Xi'an
+		command = { trigger = { control = { province = 1310 data = -3 } }type = construct which = land_fort where = 1310 value = 2 } #Changde
+		command = { trigger = { control = { province = 1308 data = -3 } }type = construct which = land_fort where = 1308 value = 2 } #Changsha
+		command = { trigger = { control = { province = 1378 data = -3 } }type = construct which = land_fort where = 1378 value = 2 } #Guilin
+		command = { trigger = { control = { province = 1379 data = -3 } }type = construct which = land_fort where = 1379 value = 2 } #Nanning
+		command = { trigger = { control = { province = 1305 data = -3 } }type = construct which = land_fort where = 1305 value = 2 } #Guiyang
+		command = { trigger = { control = { province = 1352 data = -3 } }type = construct which = land_fort where = 1352 value = 2 } #Nanchang
+		command = { trigger = { control = { province = 1390 data = -3 } }type = construct which = land_fort where = 1390 value = 2 } #Kunming
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1299 } #Chongqing
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1297 } #Chengdu
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1305 } #Guiyang
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1378 } #Guilin
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1390 } #Kunming
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+	}
+}
+
 
 
 ### Communist China - Thanks for Nukacolaman, vanguard7615, King_Elessar, Vanish, Sun
