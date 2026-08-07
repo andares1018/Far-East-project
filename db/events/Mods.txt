@@ -230,7 +230,7 @@ event = {
 		NOT = { ispuppet = CHI }
 	}
  
-	name = "Assassination attempt" #Head of Government Changes
+	name = "Assassination Attempt" #Head of Government Changes
 	desc = "EVT_1400000007_desc"
 	picture = "Wang_and Chiang"
  
@@ -513,7 +513,6 @@ event = {
 		command = { type = event which = 1400000017 where = CHI when = 21 }
 		command = { type = domestic which = freedom value = 1 }
 		command = { type = dissent value = -1 }
-
 	}
 }
 
@@ -5069,7 +5068,7 @@ event = {
 		name = "Arise! ye who refuse to be bond slaves!"
 		command = { type = dissent value = -10 }
 		command = { type = supplies value = 5000 }
-		command = { type = tc_mod value = 10 }
+		command = { type = tc_mod value = 5 }
 		command = { trigger = { ai = yes local_flag = Military_instability } type = local_setflag which = Military_instability when = 1 value = -1 }
 		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 10 }
 		command = { trigger = { ai = yes local_flag = Military_instability } type = morale which = land value = 5 } 
@@ -5158,7 +5157,8 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "We will fight to the end!"
-		command = { type = dissent value = -10 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = free_market value = -1 }
 		command = { type = supplies value = 5000 }
 		command = { type = tc_mod value = 10 }
 		command = { trigger = { control = { province = 1264 data = -3 } } type = construct which = land_fort where = 1264 value = 1 } #Lanzhou
