@@ -149,7 +149,7 @@
 # 1400000100 CHI - Emergency Congress of the Kuomintang - Alternate 
 # 1400000101 CHI - Local Warlords leave - Effects of partial defeat, Alternate #
 # 1400000102 CHI - Constitution Draft (1936) 
-# 1400000103 CHI - Constitutional Discussion (Political Consultative Assembly) #
+# 1400000103 CHI - Constitutional Discussion (Political Consultative Assembly) 
 # 1400000104 
 # 1400000105 
 # 1400000106 
@@ -223,8 +223,8 @@
 # 1400001251 JAP - East Hebei Incident (1935)
 # 1400001252 CHI - East Hebei Incident 
 # 1400001253 CHI - The Government returns to Nanjing 
-# 1400001255 CHI - Military Instability 
-# 1400001254 CHI - Military Reform 
+# 1400001254 CHI - Military Instability 
+# 1400001255 CHI - Military Reform 
 # 1400001256 JAP - Marco Polo Bridge Incident 
 # 1400001257 CHI - The Great Fire of Changsha (1938)
 # 1400001258 CHI - Wang Jingwei Defects (1939)

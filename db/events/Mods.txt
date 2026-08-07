@@ -1469,7 +1469,7 @@ event = {
 				owned = { province = 1362 data = CHI }
 			}
 	name = "Instability in Taiwan"
-	desc = ""
+	desc = "EVT_1400000040_DESC"
 	picture = "Formosa"
 	style = 2
 
@@ -1497,7 +1497,7 @@ event = {
 		event = 1400000040
 		}
 	name = "Demonstration in Taipei"
-	desc = ""
+	desc = "EVT_1400000041_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -1520,7 +1520,7 @@ event = {
 	country = CHI
 	save_date = yes
 	name = "Resign of the Head of State" #Chiang kai-shek
-	desc = ""
+	desc = "EVT_1400000042_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -1555,7 +1555,7 @@ event = {
 	style = 2
 
 	name = "EVT1914_133011902_NAME" #Li Zongren or Sun Fo
-	desc = ""
+	desc = "EVT_1400000043_DESC"
 	picture = "news_paper"
 
 	action = {
@@ -1578,7 +1578,7 @@ event = {
 	}
 
 	name = "Political Terror"
-	desc = ""
+	desc = "EVT_1400000044_DESC"
 	picture = "ccip_unrest"
 
     date = { day = 0 month = january year = 1940 }
@@ -1597,7 +1597,7 @@ event = {
 	random = no
 	country = CHI
 	name = "Failure of Monetary Reform"
-	desc = ""
+	desc = "EVT_1400000045_DESC"
 	style = 2
 	picture = "Shanghai2"
 
@@ -1627,7 +1627,7 @@ event = {
 	random = no
 	country = CHI
 	name = "EVT_105_NAME" #Wang Wenhao
-	desc = ""
+	desc = "EVT_1400000046_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -1655,7 +1655,7 @@ event = {
 	style = 2
 
 	name = "EVT1914_133011901_NAME" #Sun Fo
-	desc = ""
+	desc = "EVT_1400000047_DESC"
 	picture = "news_paper"
 
 	action = {
@@ -1670,7 +1670,7 @@ event = {
 	random = no
 	country = CHI
 	name = "EVT_105_NAME"
-	desc = ""
+	desc = "EVT_1400000048_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -1701,7 +1701,7 @@ event = {
 	style = 2
 
 	name = "EVT1914_133011901_NAME" #He Yingqin
-	desc = ""
+	desc = "EVT_1400000049_DESC"
 	picture = "news_paper"
 
 	action = {
@@ -1716,7 +1716,7 @@ event = {
 	random = no
 	country = CHI
 	name = "EVT1914_133011901_NAME" #Yan Xishan
-	desc = ""
+	desc = "EVT_1400000050_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -1748,7 +1748,7 @@ event = { # Nationalist China accepts defeat, escapes to Taiwan
 	country = CHI
 
 	name = "Retreat to Taiwan"
-	desc = ""
+	desc = "EVT_1400000051_DESC"
 	picture = "ccip_cw"
 	style = 1
 
@@ -1892,7 +1892,7 @@ event = {
 	random = no
 	country = CHI
 	name = "EVT1914_133011902_NAME"
-	desc = ""
+	desc = "EVT_1400000052_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -1944,7 +1944,7 @@ event = {
 	}
 
 	name = "Second Currency Reform"
-	desc = ""
+	desc = "EVT_1400000053_DESC"
 	style = 2
 	picture = "money_devaluation"
 	decision_picture = "decision_issue_currency"
@@ -1984,7 +1984,7 @@ event = {
 	}
 	
 	name = "Industrial production is Recovered"
-	desc = ""
+	desc = "EVT_1400000054_DESC"
 	style = 2
 	picture = "Unemployment_rate"
 
@@ -2050,7 +2050,7 @@ event = {
 	}
 
 	name = "Request for transport ship"
-	desc = ""
+	desc = "EVT_1400000055_DESC"
 	style = 2
 	picture = "Convoys"
 	decision_picture = "decision_convoys"
@@ -2072,7 +2072,7 @@ event = {
 	country = USA
 
 	name = "Request for transport ship"
-	desc = ""
+	desc = "EVT_1400000056_DESC"
 	style = 2
 	picture = "Convoys"
 
@@ -2096,7 +2096,7 @@ event = {
 	country = CHI
 
 	name = "Dispatch of transport ship"
-	desc = ""
+	desc = "EVT_1400000057_DESC"
 	style = 2
 	picture = "Convoys"
 
@@ -2117,7 +2117,7 @@ event = {
 	country = CHC
 
 	name = "Retreat of Nationalists"
-	desc = ""
+	desc = "EVT_1400000058_DESC"
 	style = 2
 	picture = "ccip_cw"
 
@@ -2190,7 +2190,7 @@ event = {
 	}
 
 	name = "Arable Rent Reduction Act"
-	desc = ""
+	desc = "EVT_1400000059_DESC"
 	style = 2
 	picture = "eastasia_agriculture"
 	decision_picture = "decision_diplomatic_campaign"
@@ -2201,7 +2201,7 @@ event = {
 
 	action = {
 		ai_chance = 100
-		name = "This will help improve rural areas." 
+		name = "This will help improve rural areas" 
 		command = { type = dissent value = -5 }
 		command = { trigger = { ai = no } type = money value = -100 }
 		command = { type = industrial_modifier which = supplies value = 5 }
@@ -2219,7 +2219,7 @@ event = {
 	random = 20
 	}
 	name = "Land Reform Problem"
-	desc = ""
+	desc = "EVT_1400000060_DESC"
 	style = 2
 	picture = "eastasia_agriculture"
 
@@ -2229,7 +2229,7 @@ event = {
 
 	action = {
 		ai_chance = 75
-		name = "Rural areas must be reformed in full." # 
+		name = "Rural areas must be reformed in full" # 
 		command = { trigger = { event = 1400000034 } type = industrial_modifier which = total value = 5 }
 		command = { type = dissent value = -5 }
 		command = { type = money value = -500 }
@@ -2239,7 +2239,7 @@ event = {
 	}
 	action = {
 		ai_chance = 25
-		name = "Land redistribution is enough." # 
+		name = "Land redistribution is enough" # 
 		command = { trigger = { event = 1400000034 } type = industrial_modifier which = total value = 5 }
 		command = { type = dissent value = -2.5 }
 		command = { type = money value = -100 }
@@ -2256,7 +2256,7 @@ event = {
 	style = 2
 	
 	name = "Completion of the Initial Phase of the Land Reform"
-	desc = ""
+	desc = "EVT_1400000061_DESC"
 	picture = "eastasia_agriculture"
 	
 	action_a = {
@@ -2281,7 +2281,7 @@ event = {
 	
 	action = {
 	ai_chance = 100
-	name = "Elected New Legislative Yuan will help us."
+	name = "Elected New Legislative Yuan will help us"
 	command = { type = dissent value = -5 }
 	}
 }
@@ -2342,14 +2342,14 @@ event = {
 
 	action = {
 		ai_chance = 80
-		name = "Old guards is strengthened."
+		name = "Old guards is strengthened"
 		command = { type = dissent value = -2 }
 		command = { type = domestic which = political_left value = -1 }
 		command = { type = headofgovernment which = 55007 }
 	}
 	action = {
 		ai_chance = 20
-		name = "More political factions participated."
+		name = "More political factions participated"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
 		command = { trigger = { not = { domestic = { type = political_left value = 5 } } } type = domestic which = political_left value = 1 }
@@ -2383,7 +2383,7 @@ event = {
 
 	action = {
 		ai_chance = 70
-		name = "Old guards is strengthened."
+		name = "Old guards is strengthened"
 		command = { type = dissent value = -2 }
 		command = { trigger = { not = { domestic = { type = political_left value = 3 } } } type = domestic which = political_left value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
@@ -2391,7 +2391,7 @@ event = {
 	}
 	action = {
 		ai_chance = 30
-		name = "More political factions participated."
+		name = "More political factions participated"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = freedom value = 5 } } } type = domestic which = freedom value = 1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
@@ -2426,7 +2426,7 @@ event = {
 
 	action = {
 		ai_chance = 65
-		name = "Old guards is strengthened."
+		name = "Old guards is strengthened"
 		command = { type = dissent value = -2 }
 		command = { trigger = { not = { domestic = { type = political_left value = 3 } } } type = domestic which = political_left value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
@@ -2434,7 +2434,7 @@ event = {
 	}
 	action = {
 		ai_chance = 35
-		name = "More political factions participated."
+		name = "More political factions participated"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = freedom value = 6 } } } type = domestic which = freedom value = 1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
@@ -2469,7 +2469,7 @@ event = {
 
 	action = {
 		ai_chance = 60
-		name = "Old guards is strengthened."
+		name = "Old guards is strengthened"
 		command = { type = dissent value = -2 }
 		command = { trigger = { not = { domestic = { type = political_left value = 3 } } } type = domestic which = political_left value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
@@ -2477,7 +2477,7 @@ event = {
 	}
 	action = {
 		ai_chance = 40
-		name = "More political factions participated."
+		name = "More political factions participated"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = freedom value = 6 } } } type = domestic which = freedom value = 1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
@@ -2512,7 +2512,7 @@ event = {
 
 	action = {
 		ai_chance = 50
-		name = "Old guards is strengthened."
+		name = "Old guards is strengthened"
 		command = { type = dissent value = -2 }
 		command = { trigger = { not = { domestic = { type = political_left value = 3 } } } type = domestic which = political_left value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
@@ -2520,7 +2520,7 @@ event = {
 	}
 	action = {
 		ai_chance = 50
-		name = "Reformist factions is strengthened."
+		name = "Reformist factions is strengthened"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = freedom value = 6 } } } type = domestic which = freedom value = 1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
@@ -2556,14 +2556,14 @@ event = {
 
 	action = {
 		ai_chance = 80
-		name = "Status quo is strengthened."
+		name = "Status quo is strengthened"
 		command = { type = dissent value = -2 }
 		command = { trigger = { not = { domestic = { type = political_left value = 5 } } } type = domestic which = political_left value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
 	}
 	action = {
 		ai_chance = 20
-		name = "More political factions participated."
+		name = "More political factions participated"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
 		command = { trigger = { not = { domestic = { type = political_left value = 5 } } } type = domestic which = political_left value = 1 }
@@ -2596,14 +2596,14 @@ event = {
 
 	action = {
 		ai_chance = 75
-		name = "Status quo is strengthened."
+		name = "Status quo is strengthened"
 		command = { type = dissent value = -2 }
 		command = { trigger = { not = { domestic = { type = political_left value = 5 } } } type = domestic which = political_left value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
 	}
 	action = {
 		ai_chance = 25
-		name = "More political factions participated."
+		name = "More political factions participated"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
 		command = { trigger = { not = { domestic = { type = political_left value = 5 } } } type = domestic which = political_left value = 1 }
@@ -2636,14 +2636,14 @@ event = {
 
 	action = {
 		ai_chance = 60
-		name = "Status quo is strengthened."
+		name = "Status quo is strengthened"
 		command = { type = dissent value = -2 }
 		command = { trigger = { not = { domestic = { type = political_left value = 5 } } } type = domestic which = political_left value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = -1 }
 	}
 	action = {
 		ai_chance = 40
-		name = "More political factions participated."
+		name = "More political factions participated"
 		command = { type = dissent value = -1 }
 		command = { trigger = { not = { domestic = { type = democratic value = 6 } } } type = domestic which = democratic value = 1 }
 		command = { trigger = { not = { domestic = { type = political_left value = 5 } } } type = domestic which = political_left value = 1 }
@@ -2658,7 +2658,7 @@ event = {
 	style = 2
 	
 	name = "Completion of the Land Reform"
-	desc = ""
+	desc = "EVT_1400000080_DESC"
 	picture = "eastasia_agriculture"
 	
 	action_a = {
@@ -2673,7 +2673,7 @@ event = {
 	random = no
 	country = CHI
 	name = "Reorganization of Economic Policies"
-	desc = ""
+	desc = "EVT_1400000081_DESC"
 	style = 2
 	picture = "ccip_gz"
 
@@ -2695,7 +2695,7 @@ event = {
 	}
 	action = {
 		ai_chance = 20
-		name = "Favour and help the Capitalist."
+		name = "Favour and help the Capitalist"
 		command = { trigger = { event = 1400000034 } type = industrial_modifier which = total value = 5 }
 		command = { trigger = { domestic = { type = free_market value = 8 } } type = domestic which = free_market value = 1 }
 		command = { trigger = { ai = no } type = money value = -100 }
@@ -2703,7 +2703,7 @@ event = {
 	}
 	action = {
 		ai_chance = 30
-		name = "Bureaucrats should actively lead the Economy."
+		name = "Bureaucrats should actively lead the Economy"
 		command = { trigger = { event = 1400000034 } type = industrial_modifier which = total value = 5 }
 		command = { trigger = { domestic = { type = free_market value = 8 } } type = domestic which = free_market value = -1 }
 		command = { trigger = { NOT = { domestic = { type = free_market value = 4 } } } type = domestic which = free_market value = 1 }
@@ -2719,7 +2719,7 @@ event = {
 	country = CHI
 
 	name = "Death of Chiang Kai-shek"
-	desc = ""
+	desc = "EVT_1400000082_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -2743,7 +2743,7 @@ event = {
 	country = CHI
 
 	name = "Extraordinary Congress of the Kuomintang"
-	desc = ""
+	desc = "EVT_1400000083_DESC"
 	style = 2
 	picture = "ccip_gmd"
 
@@ -2815,7 +2815,7 @@ event = {
 	random = no
 	TAG = { JAP U87 }
 	name = "Japan-China Joint Declaration" #日華共同宣言
-	desc = ""
+	desc = "EVT_1400000091_DESC"
 	style = 2
 	picture = "ccip_gz"
 
@@ -2931,7 +2931,7 @@ event = {
 	}
 
 	name = "New Equal Treaty" #中美平等新約 (Sino-American New Equal Treaty)
-	desc = ""
+	desc = "EVT_1400000092_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 	decision_picture = "decision_diplomatic_campaign"
@@ -2967,7 +2967,7 @@ event = {
 	country = ENG
 
 	name = "New Equal Treaty" #中英平等新約 (Sino-British New Equal Treaty)
-	desc = ""
+	desc = "EVT_1400000093_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 
@@ -2985,7 +2985,7 @@ event = {
 	country = CHI
 
 	name = "New Equal Treaty"
-	desc = ""
+	desc = "EVT_1400000094_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 
@@ -3015,7 +3015,7 @@ event = {
 	}
 	
 	name = "Rural Reconstruction Movement"
-	desc = ""
+	desc = "EVT_1400000095_DESC"
 	style = 2
 	picture = "eastasia_agriculture"
 
@@ -3239,7 +3239,7 @@ event = {
 	action = {
 		name = "It will be the path to New system"
 		ai_chance = 100
-		command = { type = dissent value = -2 }		
+		command = { type = dissent value = -2 }	
 		command = { type = domestic which = freedom value = 1 }		
 	}
 }
@@ -3266,7 +3266,7 @@ event = {
 		trigger = { 
 			exists = CHC
 		}
-		name = "Adoptes Liberal approach"
+		name = "The proposal was passed"
 		ai_chance = 75
 		command = { type = dissent value = -1 }		
 		command = { type = domestic which = freedom value = 1 }		
@@ -3284,7 +3284,7 @@ event = {
 		trigger = { 
 			NOT = { exists = CHC }
 		}
-		name = "Adoptes Liberal approach"
+		name = "The proposal was passed"
 		ai_chance = 30
 		command = { type = dissent value = -1 }		
 		command = { type = domestic which = freedom value = 1 }		
@@ -4365,11 +4365,11 @@ event = {
 	decision_trigger = { 
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 175 }
+	event = { id = 1330110081 days = 150 }
 	NOT = { event = 2011007 }
 		}
 	and = {
-	event = { id = 1330110081 days = 70 }
+	event = { id = 1330110081 days = 75 }
 	event = 2011007 
 		}
 	}
@@ -4379,11 +4379,11 @@ event = {
 	trigger = {
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 175 }
+	event = { id = 1330110081 days = 150 }
 	NOT = { event = 2011007 } # The Nanjing Massacre
 		}
 	and = {
-	event = { id = 1330110081 days = 70 }
+	event = { id = 1330110081 days = 75 }
 	event = 2011007 
 		}
 	}
@@ -4412,8 +4412,8 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "We need to overcome this" 
-		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 140 }
-		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 105 }
+		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 150 }
+		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 75 }
 		command = { type = dissent value = -0.5 }
 		command = { type = supplies value = -500 }
 		command = { type = setflag which = CHI_retraining }
