@@ -244,8 +244,8 @@
 # 1400001272 MEN - Suiyuan Campaign (1936)
 # 1400001273 CSX - Battle of Bailingmiao (1936)
 # 1400001274 CHI - Suiyuan Campaign 
-# 1400001275 CHI - Setbacks in the War of Resistance #
-# 1400001276 
+# 1400001275 CHI - Call for the War of Resistance 
+# 1400001276 CHI - National Mobilization #
 # 1400001277 
 # 1400001278 
 # 1400001279 
@@ -670,8 +670,8 @@
 # 1400007545 JAP - Negotiations with Wang Jingwei 
 # 1400007546 U87 - National Congress of the Kuomintang (Post-war) 
 # 1400007547 U87 - Return of Concessions
-# 1400007548 U87 - Fate of Opposition Factions
-# 1400007549 U87 - Fate of Democratic Opposition Parties 
+# 1400007548 U87 - Fate of Democratic Opposition Parties 
+# 1400007549 
 # 
 # 
 # 

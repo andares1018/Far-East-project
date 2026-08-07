@@ -5029,7 +5029,7 @@ event = {
 	id = 1400001275
 	random = no
 	country = CHI
-	name = "Setbacks in the War of Resistance"
+	name = "Call for the War of Resistance"
 	desc = ""
 	style = 2
 	picture = "War_of_Resistance"
@@ -5060,7 +5060,7 @@ event = {
 		}
 	}
 
-    date = { day = 0 month = january year = 1933 }
+    date = { day = 0 month = january year = 1938 }
     offset = 7
     deathdate = { day = 29 month = december year = 1999 }
 
@@ -5075,17 +5075,17 @@ event = {
 		command = { trigger = { ai = yes local_flag = Military_instability } type = morale which = land value = 5 } 
 		command = { trigger = { control = { province = 1264 data = -3 } }type = construct which = land_fort where = 1264 value = 2 } #Lanzhou
 		command = { trigger = { control = { province = 1271 data = -3 } }type = construct which = land_fort where = 1271 value = 2 } #Wuzhong
-		command = { trigger = { control = { province = 1297 data = -3 } }type = construct which = land_fort where = 1297 value = 2 } #Chengdu
-		command = { trigger = { control = { province = 1299 data = -3 } }type = construct which = land_fort where = 1299 value = 2 } #Chongqing
-		command = { trigger = { control = { province = 1302 data = -3 } }type = construct which = land_fort where = 1302 value = 2 } #Wanxian
-		command = { trigger = { control = { province = 1258 data = -3 } }type = construct which = land_fort where = 1258 value = 2 } #Xi'an
+		command = { trigger = { control = { province = 1297 data = -3 } }type = construct which = land_fort where = 1297 value = 1 } #Chengdu
+		command = { trigger = { control = { province = 1299 data = -3 } }type = construct which = land_fort where = 1299 value = 1 } #Chongqing
+		command = { trigger = { control = { province = 1302 data = -3 } }type = construct which = land_fort where = 1302 value = 1 } #Wanxian
+		command = { trigger = { control = { province = 1258 data = -3 } }type = construct which = land_fort where = 1258 value = 1 } #Xi'an
 		command = { trigger = { control = { province = 1310 data = -3 } }type = construct which = land_fort where = 1310 value = 2 } #Changde
 		command = { trigger = { control = { province = 1308 data = -3 } }type = construct which = land_fort where = 1308 value = 2 } #Changsha
 		command = { trigger = { control = { province = 1378 data = -3 } }type = construct which = land_fort where = 1378 value = 2 } #Guilin
 		command = { trigger = { control = { province = 1379 data = -3 } }type = construct which = land_fort where = 1379 value = 2 } #Nanning
 		command = { trigger = { control = { province = 1305 data = -3 } }type = construct which = land_fort where = 1305 value = 2 } #Guiyang
 		command = { trigger = { control = { province = 1352 data = -3 } }type = construct which = land_fort where = 1352 value = 2 } #Nanchang
-		command = { trigger = { control = { province = 1390 data = -3 } }type = construct which = land_fort where = 1390 value = 2 } #Kunming
+		command = { trigger = { control = { province = 1390 data = -3 } }type = construct which = land_fort where = 1390 value = 1 } #Kunming
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
@@ -5094,7 +5094,6 @@ event = {
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1299 } #Chongqing
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
@@ -5111,9 +5110,104 @@ event = {
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1390 } #Kunming
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 	}
 }
+
+event = {
+	id = 1400001276
+	random = no
+	country = CHI
+
+	name = "National Mobilization"
+	desc = ""
+	decision_desc = ""
+  	style = 2
+  	picture = "ccip_hanjian"
+
+	decision = {
+		war = { country = CHI country = JAP }
+		OR = { 
+			lost_national = { country = CHI value = 70 }
+			lost_vp = { country = CHI value = 70 }
+		}
+		NOT = { ispuppet = JAP }
+	}
+	decision_trigger = {
+		land_percentage = { country = CHI value = 1.1 }
+		region = { region = "China" country = -3 data = 1 value = 38 } #about 75 provinces out of 185
+		OR = { 
+			lost_national = { country = CHI value = 75 }
+			lost_vp = { country = CHI value = 75 }
+		}
+	}
+	trigger = {
+		OR = { 
+			lost_national = { country = CHI value = 75 }
+			lost_vp = { country = CHI value = 75 }
+		}
+		region = { region = "China" country = -3 data = 1 value = 38 } #about 75 provinces out of 185
+		land_percentage = { country = CHI value = 1.1 }
+		war = { country = CHI country = JAP }
+		NOT = { ispuppet = JAP }
+	}
+
+	date = { day = 0 month = january year = 1933 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		ai_chance = 100
+		name = "We will fight to the end!"
+		command = { type = dissent value = -10 }
+		command = { type = supplies value = 5000 }
+		command = { type = tc_mod value = 10 }
+		command = { trigger = { control = { province = 1264 data = -3 } } type = construct which = land_fort where = 1264 value = 1 } #Lanzhou
+		command = { trigger = { control = { province = 1271 data = -3 } } type = construct which = land_fort where = 1271 value = 1 } #Wuzhong
+		command = { trigger = { control = { province = 1297 data = -3 } } type = construct which = land_fort where = 1297 value = 1 } #Chengdu
+		command = { trigger = { control = { province = 1299 data = -3 } } type = construct which = land_fort where = 1299 value = 1 } #Chongqing
+		command = { trigger = { control = { province = 1302 data = -3 } } type = construct which = land_fort where = 1302 value = 1 } #Wanxian
+		command = { trigger = { control = { province = 1258 data = -3 } } type = construct which = land_fort where = 1258 value = 1 } #Xi'an
+		command = { trigger = { control = { province = 1390 data = -3 } } type = construct which = land_fort where = 1390 value = 1 } #Kunming
+		command = { trigger = { control = { province = 1264 data = -3 } } type = construct which = flak where = 1264 value = 2 }
+		command = { trigger = { control = { province = 1271 data = -3 } } type = construct which = flak where = 1271 value = 2 }
+		command = { trigger = { control = { province = 1297 data = -3 } } type = construct which = flak where = 1297 value = 2 }
+		command = { trigger = { control = { province = 1299 data = -3 } } type = construct which = flak where = 1299 value = 2 }
+		command = { trigger = { control = { province = 1302 data = -3 } } type = construct which = flak where = 1302 value = 2 }
+		command = { trigger = { control = { province = 1258 data = -3 } } type = construct which = flak where = 1258 value = 2 }
+		command = { trigger = { control = { province = 1390 data = -3 } } type = construct which = flak where = 1390 value = 2 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1299 } #Chongqing
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1297 } #Chengdu
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1305 } #Guiyang
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1378 } #Guilin
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_corps value = land where = 1390 } #Kunming
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { type = stockpile which = all when = war value = 5 }
+	}
+}
+
 
 
 
@@ -14564,47 +14658,14 @@ event = {
 event = {
 	id = 1400007548
 	random = no
-	country = CHI
+	country = U87
 	
 	trigger = {
 		event = 1400007541
 		random = 10
 		}
 	
-	name = "Fate of KMT opposition" #CC Clique, Left Kuomintang, Political Science Clique, Liberalist etc... 
-	desc = ""
-	style = 2
-	picture = "ccip_gmd"
-
-	date = { day = 0 month = january year = 1933 }
-	offset = 30
-	deathdate = { day = 29 month = december year = 1999 }
-
-	action = {
-		ai_chance = 50
-		name = "They are also member"
-		command = { type = dissent value = -5 }
-		command = { type = domestic which = freedom value = 1 }
-	}
-	action = {
-		ai_chance = 50
-		name = "Keep an eye on their activities"
-		command = { type = dissent value = 2 }
-		command = { type = domestic which = freedom value = -1 }
-	}
-}
-
-event = {
-	id = 1400007549
-	random = no
-	country = CHI
-	
-	trigger = {
-		event = 1400007548
-		random = 5
-	}
-	
-	name = "Fate of Democratic Opposition Parties" #China Democratic League, China Democratic Socialist Party, Young China Party etc....
+	name = "Fate of Democratic Opposition Parties" #China Democratic League, China Democratic Socialist Party, Young China Party, Liberalist etc... 
 	desc = ""
 	style = 2
 	picture = "China_Democratic_League"
@@ -14625,6 +14686,7 @@ event = {
 		command = { type = domestic which = freedom value = -1 }
 	}
 }
+
 
 ### 1400009001 - 1400009500 Minister died event
 

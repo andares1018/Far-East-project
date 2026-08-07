@@ -25,7 +25,7 @@
    {  date              = {  year = 0 month = january day = 0  } 
      democratic        = 3 
      political_left    = 4 
-     freedom           = 3 
+     freedom           = 5 
      free_market       = 3 
      professional_army = 2 
      defense_lobby     = 2 
