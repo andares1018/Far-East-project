@@ -221,7 +221,7 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265219;Chief of Staff;Gim Gyu-sik;1919;1932;1932;PA;School of Psychology;Medium;M_Gim gyu-sik;X
 265220;Chief of Staff;Kim Hak-gyu;1940;1967;1967;SC;Commando Doctrine Staff;Medium;L50150;X
 265221;Chief of Staff;Ji Cheong-cheon;1919;1957;1957;PA;School of Mass Combat;Medium;2804;X
-265222;Chief of Staff;Kim Hong-il;1932;1963;1981;SC;School of Defence;Medium;M_Kim hong-il;X
+265222;Chief of Staff;Kim Hong-il;1932;1963;1981;SL;School of Mass Combat;Medium;M_Kim hong-il;X
 265223;Chief of Staff;Lee Jun-sik;1929;1960;1966;FA;School of Manoeuvre;Medium;M_Lee jun-sik;X
 265224;Chief of Staff;Jeong Il-gwon;1946;1960;1994;PA;School of Psychology;Medium;M_Jung il-gwon;X
 265225;Chief of Staff;Yi Hyeng-geun;1940;1960;2002;SC;School of Fire Support;Medium;M_Lee hyeong-geun;X
@@ -244,7 +244,7 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265242;Chief of Army;Lee Eung-jun;1933;1961;1986;PA;Elastic Defence Doctrine;Medium;M_Lee eung-jun;X
 265243;Chief of Army;Yang Se-bong;1928;1934;1934;PA;Guerilla Warfare Doctrine;Medium;888;X
 265244;Chief of Army;Ji Cheong-cheon;1919;1958;1958;PA;Decisive Battle Doctrine;Medium;2804;X
-265245;Chief of Army;Kim Hong-il;1940;1953;1981;SC;Static Defence Doctrine;Medium;M_Kim hong-il;X
+265245;Chief of Army;Kim Hong-il;1940;1953;1981;SL;Static Defence Doctrine;Medium;M_Kim hong-il;X
 265246;Chief of Army;Shin Tae-yeong;1936;1960;1960;PA;Elastic Defence Doctrine;Medium;M_Shin tae-yeong;X
 265247;Chief of Army;Jeong Il-gwon;1946;1958;1995;PA;Guns and Butter Doctrine;Medium;M_Jung il-gwon;X
 265248;Chief of Army;Ahn Chun-saeng;1942;1962;2012;FA;Armoured Spearhead Doctrine;Medium;M_Ahn chun-saeng;X
@@ -268,7 +268,6 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265266;Head of State;Lee Gi-bung;1959;1961;1966;PA;Barking Buffoon;Medium;M_Yi Gi-bung;X
 265267;Head of Military Intelligence;Lee Yong-mun;1940;1954;1960;SC;Dismal Enigma;Medium;M_Lee yong-mun;X
 265268;Head of Government;Han Bin;1936;1960;1960;LE;Political Protege;Medium;M_Han Bin;X
-265269;Chief of Staff;Kim Hong-il;1922;1953;1981;SC;School of Manoeuvre;Medium;M_Kim hong-il;X
 265270;Head of Government;Yang Gi-tak;1909;1940;1940;SC;Naive Optimist;Medium;M_Yang gi-tak;X
 265271;Chief of Air Force;Kim Sin;1945;1963;2017;PA;Air Superiority Doctrine;Medium;M_Kim sin;X
 265272;Chief of Air Force;Kim Jeong-ryeol;1940;1960;1993;SC;Air Superiority Doctrine;Medium;M_Kim jeong-ryeol;X
