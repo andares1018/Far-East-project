@@ -171,39 +171,19 @@ event = {
 	id = 1400000006 
 	random = no
 	country = CHI
-	persistent = yes
 
 	trigger = {
 		NOT = { ispuppet = CHI }
 		exists = JAP 
 		exists = MAN 
 		NOT = { war = { country = JAP country = CHI } }
-		
-		OR = {
-		and = {
-		event = 1400001251 #December 9th Movement(1935)
-		}
-		and = {
-		day = 9
-		month = 11
-		year = 1936 #Seven Gentlemen Incident(1936)
-		NOT = {
-		day = 10
-		}
-		NOT = {
-		month = 12
-			}
-		}
-		and = {
 		event = 1400001272 #Suiyuan Campaign
-			}
-		}
 	}
 	date = { day = 20 month = November year = 1935 }
 	offset = 1
 	deathdate = { day = 25 month = december year = 1936 }
 	
-	name = "Widespread Protests" #December 9th Movement(1935), Seven Gentlemen Incident(1936)
+	name = "Widespread Protests"
 	desc = "EVT_1400000006_desc"
 	style = 2
 	picture = "chinese_protestors"
@@ -3290,7 +3270,33 @@ event = {
 	}
 }
 
-
+event = {
+	id = 1400000104 
+	random = no
+	country = CHI
+	trigger = {
+		NOT = { ispuppet = CHI }
+		exists = JAP 
+		exists = MAN 
+		NOT = { war = { country = JAP country = CHI } }
+		event = 1400000006 #Widespread Protests
+	}
+	
+	date = { day = 1 month = november year = 1936 }
+	offset = 1
+	deathdate = { day = 20 month = november year = 1936 }
+	
+	name = "Seven Gentlemen Incident" 
+	desc = "EVT_1400000104_desc"
+	style = 2
+	picture = "news_paper"
+	action = {
+		name = "ACTION_NAME_GREAT"
+		ai_chance = 100
+		command = { type = dissent value = 2.5}	
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
 
 
 

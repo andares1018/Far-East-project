@@ -878,7 +878,8 @@ event = {
 
 	trigger = {
 		headofgovernment = 55002 # both Chiang Kai Shek
-		event = 1400000006
+		event = 1400000104 #Seven Gentlemen Incident
+		
 		NOT = {
 			war = { country = CHI country = JAP }
 		}
