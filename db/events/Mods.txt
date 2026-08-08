@@ -5175,6 +5175,10 @@ event = {
 		command = { trigger = { control = { province = 1302 data = -3 } } type = construct which = flak where = 1302 value = 2 }
 		command = { trigger = { control = { province = 1258 data = -3 } } type = construct which = flak where = 1258 value = 2 }
 		command = { trigger = { control = { province = 1390 data = -3 } } type = construct which = flak where = 1390 value = 2 }
+		command = { type = add_division value = infantry when = 8 }
+		command = { type = add_division value = infantry when = 8 }
+		command = { type = add_division value = infantry when = 8 }
+		command = { type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
@@ -5238,7 +5242,7 @@ event = {
 	deathdate = { day = 29 month = december year = 1937 }
 
 	action = {
-		name = "This is the end of the Great March."
+		name = "This is the end of the Great March"
 		command = { type = dissent value = -5 }
 		command = { type = supplies value = 1000 }
 		command = { type = manpowerpool value = 50 }
