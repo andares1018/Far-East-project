@@ -145,7 +145,7 @@
 # 1400000096 CHI - Fate of the Liberal opposition - Post-Constitutionalization 
 # 1400000097 CHI - Fate of the Leftist opposition - Post-Constitutionalization 
 # 1400000098 CHI - Henan Famine (OTL - 1942-1943, during the war) 
-# 1400000099 CHI - Minister Resigns - Wang Jingwei (post truce) 
+# 1400000099 CHI - Minister Resigns - Wang Jingwei 
 # 1400000100 CHI - Emergency Congress of the Kuomintang - Alternate 
 # 1400000101 CHI - Local Warlords leave - Effects of partial defeat, Alternate #
 # 1400000102 CHI - Constitution Draft (1936) 
@@ -273,12 +273,12 @@
 # 1400001519 CHC - Government Reorganization - New Democratic Revolution
 # 1400001520 CHC - 7th National Congress (1945)
 # 1400001521 CHC - People's Political Consultative Conference #
-# 1400001522 CHC - Common Program (1949) #
+# 1400001522 CHC - Common Program (OTL - 1949) #
 # 1400001523 CHC - Land Reform Policy #
 # 1400001524 CHC - Land Reform Movement #
 # 1400001525 CHC - Agricultural Collectivisation # 
 # 1400001526 CHC - United Front Work Department #
-# 1400001527 CHC - Fate of the Democratic opposition #
+# 1400001527 CHC - Fate of the Democratic Opposition #
 # 1400001528 CHC - 
 # 1400001529 CHC - 
 # 1400001530 CHC - 

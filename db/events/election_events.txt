@@ -8600,7 +8600,13 @@ event = {
 	style = 2
 	
 	trigger = {
-		headofstate = 420031 #Jin Shuren
+		headofstate = 420006 #Jin Shuren
+		NOT = { 
+		OR = {
+		headofstate = 420004 #Sheng Shicai
+		headofstate = 420003
+			}
+		} 
 	}
 
 	date = { day = 11 month = april year = 1933 }
