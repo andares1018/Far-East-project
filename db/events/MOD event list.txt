@@ -245,7 +245,7 @@
 # 1400001273 CSX - Battle of Bailingmiao (1936)
 # 1400001274 CHI - Suiyuan Campaign 
 # 1400001275 CHI - Call for the War of Resistance 
-# 1400001276 CHI - National Mobilization #
+# 1400001276 CHI - National Mobilization 
 # 1400001277 
 # 1400001278 
 # 1400001279 

@@ -4177,7 +4177,7 @@ event = {
 		command = { type = headofstate which = 420003 }
 		command = { type = headofgovernment which = 420016 }
 		command = { type = foreignminister which = 420020 }
-		command = { type = armamentminister which = 420054 }
+		command = { type = armamentminister which = 420027 }
 		command = { type = ministerofsecurity which = 420030 }
 		command = { type = ministerofintelligence which = 420039 }
 	}
