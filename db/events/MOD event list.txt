@@ -52,7 +52,7 @@
 # 1400000003 CHI - Currency reform (1935) 
 # 1400000004 CHI - New Air Force Advisor - Chennault 
 # 1400000005 CHI - Change of Germany Advisor - Hans von Seck 
-# 1400000006 CHI - Widespread Protests (1935, 1936) - Anti Japanese Protests : December 9th Movement(1935), Seven Gentlemen Incident(1936)
+# 1400000006 CHI - Widespread Protests (1935, 1936) - Anti Japanese Protests : December 9th Movement(1935)
 # 1400000007 CHI - Assassination attempt (1935) - Wang Jingwei 
 # 1400000008 CHI - Change of Germany Advisor - von Falkenhausen 
 # 1400000009 CHI - Beginning of Constitutionalization 
@@ -150,7 +150,7 @@
 # 1400000101 CHI - Local Warlords leave - Effects of partial defeat, Alternate #
 # 1400000102 CHI - Constitution Draft (1936) 
 # 1400000103 CHI - Constitutional Discussion (Political Consultative Assembly) 
-# 1400000104 CHI - Seven Gentlemen Incident (1936)
+# 1400000104 CHI - Widespread Protests (1936) Seven Gentlemen Incident(1936)
 # 1400000105 
 # 1400000106 
 # 1400000107 

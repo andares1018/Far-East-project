@@ -1323,7 +1323,7 @@ event = {
         command = { type = add_division which = "3. Pesi divize 'Rázus'" value = infantry when = 8 } #Augustín Malár in sector High Tatra
 		command = { type = manpowerpool value = 10 } # manpower
 		
-		command = { type = flag_ext where = SLO which = "1st_Republic" }
+		command = { type = flag_ext where = SLO which = "_1st_Republic" }
 	}
 }
 

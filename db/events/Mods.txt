@@ -3286,14 +3286,14 @@ event = {
 	offset = 1
 	deathdate = { day = 20 month = november year = 1936 }
 	
-	name = "Seven Gentlemen Incident" 
+	name = "Widespread Protests" #Seven Gentlemen Incident(1936)
 	desc = "EVT_1400000104_desc"
 	style = 2
-	picture = "news_paper"
+	picture = "chinese_protestors"
 	action = {
 		name = "ACTION_NAME_GREAT"
 		ai_chance = 100
-		command = { type = dissent value = 2.5}	
+		command = { type = dissent value = 2.5 }	
 		command = { type = domestic which = freedom value = -1 }
 	}
 }
