@@ -6,6 +6,7 @@
  country = 
  {  tag                    = TAN 
 	puppet                 = SOV 
+	control                = SOV 
 	ai = "tan_1936.ai"
 	ai_settings	= { flags = { MOB1 = yes MOB2 = yes } }
 	dissent = 20

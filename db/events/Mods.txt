@@ -2946,7 +2946,7 @@ event = {
 	country = ENG
 
 	name = "New Equal Treaty" #中英平等新約 (Sino-British New Equal Treaty)
-	desc = "EVT_1400000093_DESC"
+	desc = "EVT_1400000092_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 
@@ -4370,7 +4370,7 @@ event = {
 	decision_trigger = { 
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 175 }
+	event = { id = 1330110081 days = 140 }
 	NOT = { event = 2011007 }
 		}
 	and = {
@@ -4384,7 +4384,7 @@ event = {
 	trigger = {
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 175 }
+	event = { id = 1330110081 days = 140 }
 	NOT = { event = 2011007 } # The Nanjing Massacre
 		}
 	and = {
@@ -4417,8 +4417,8 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "We need to overcome this" 
-		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 150 }
-		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 75 }
+		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 140 }
+		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 70 }
 		command = { type = dissent value = -0.5 }
 		command = { type = supplies value = -500 }
 		command = { type = setflag which = CHI_retraining }

@@ -6,6 +6,7 @@
  country = 
  {  tag                    = TAN
 	puppet                 = SOV 
+	control                = SOV 
 	ai_settings	= { flags = { MOB1 = yes MOB2 = yes } }
 	# Resource Reserves 
 	energy                 = 300
