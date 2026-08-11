@@ -3291,7 +3291,7 @@ event = {
 	style = 2
 	picture = "chinese_protestors"
 	action = {
-		name = "ACTION_NAME_GREAT"
+		name = "ACTION_NAME_DAMN"
 		ai_chance = 100
 		command = { type = dissent value = 2.5 }	
 		command = { type = domestic which = freedom value = -1 }
