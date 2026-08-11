@@ -8386,7 +8386,7 @@ event = {
 		ai_chance = 5
 		name = "ELECT_UK_1B"
 		command = { type = dissent value = -3 }
-		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = democratic value = 9 }
 		command = { type = set_domestic which = political_left value = 6 }
 		command = { type = headofstate which = 10001 } #George V
 		command = { type = headofgovernment which = 10002 } #Stanley Baldwin
@@ -8399,7 +8399,7 @@ event = {
 		ai_chance = 90
 		name = "ELECT_UK_1A"
 		command = { type = dissent value = -3 }
-		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = democratic value = 9 }
 		command = { type = set_domestic which = political_left value = 3 }
 		command = { type = headofstate which = 10001 } #George V
 		command = { type = headofgovernment which = 10002 } #Stanley Baldwin

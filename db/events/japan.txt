@@ -2553,7 +2553,7 @@ event = {
 						alliance = { country = U05 country = USA }
 					} } type = event which = 2011040 where = ENG when = 2 } #HOL Japan Surrenders
 		command = { type = event which = 2011041 where = USA when = 3 } #USA Japan Surrenders
-		command = { type = event which = 1400004502 where = JAP when = 4 }
+		command = { type = event which = 1400004502 where = JAP when = 7 }
 	}
 }
 

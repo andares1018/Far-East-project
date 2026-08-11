@@ -219,7 +219,7 @@
   policy = 
   {  date       = {  year = 0 month = january day = 0  } 
    democratic    = 8 
-   political_left  = 2 
+   political_left  = 5 
    freedom      = 9 
    free_market    = 10 
    professional_army = 2

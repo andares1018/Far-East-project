@@ -285,7 +285,7 @@ techapps               = {
 inventions = { 3000027 }
    policy = 
    {  date              = {  year = 0 month = january day = 0  } 
-     democratic        = 8 
+     democratic        = 9 
      political_left    = 2 
      freedom           = 8 
      free_market       = 8 

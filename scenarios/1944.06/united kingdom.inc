@@ -266,8 +266,8 @@
 inventions = { 3000027 3000028 3000012 }
    policy = 
    {  date              = {  year = 0 month = january day = 0  } 
-     democratic        = 8 
-     political_left    = 2 
+     democratic        = 9 
+     political_left    = 4 
      freedom           = 8 
      free_market       = 8 
      professional_army = 8 
@@ -640,7 +640,7 @@ inventions = { 3000027 3000028 3000012 }
      id       = {  type = 12700 id = 3807  } 
      Division = 
      {  id       = {  type = 12700 id = 3808  } 
-       name     = "3 Dywizja Strzelców Karpackich" 
+       name     = "3 Dywizja Strzelc w Karpackich" 
        type     = infantry 
 	   model    = 11
        strength = 80

@@ -9684,9 +9684,9 @@ event = {
 	random = no
 	country = JAP
 	
-	decision = { atwar = no	}
-	decision_trigger = { money = 100 }
-	trigger = { atwar = no random = 20 }
+	decision = { NOT = { ispuppet = JAP } }
+	decision_trigger = { money = 50 }
+	trigger = { NOT = { ispuppet = JAP } random = 20 }
 	date = { day = 1 month = january year = 1933 }
 	offset = 30
 	deathdate = { day = 29 month = december year = 1936 }
@@ -9698,7 +9698,7 @@ event = {
 	action = {
 		name = ACTION_NAME_GREAT
 		command = { type = dissent value = -1 }
-		command = { trigger = { ai = no } type = money value = -100 }
+		command = { trigger = { ai = no } type = money value = -50 }
 		command = { type = domestic which = interventionism value = 1 }
 		command = { type = relation which = HOL value = -20 }
 		command = { type = relation which = U05 value = -50 }
@@ -10051,7 +10051,7 @@ event = {
 		}
 	}
 
-    date = { day = 0 month = january year = 1933 }
+    date = { day = 0 month = january year = 1941 }
     offset = 7
     deathdate = { day = 29 month = december year = 1999 }
 
@@ -10310,7 +10310,7 @@ event = {
 
 	action = {
 		ai_chance = 100
-		name = "War criminals should be judged."
+		name = "War criminals should be judged"
 		command = { type = sleepminister which = 50410 } #death by hanging
 		command = { type = sleepminister which = 50209 }
 		command = { type = sleepminister which = 50073 }
