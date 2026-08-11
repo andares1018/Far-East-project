@@ -7977,7 +7977,7 @@ event = {
 	}
 	
 	name = "National Mobilization Law"
-	desc = ""
+	desc = "EVT_1400002013_desc"
 	style = 2
 	picture = "Japan_conscription"
 	decision_picture = "decision_diplomatic_campaign"
@@ -8003,7 +8003,7 @@ event = {
 	random = no
 	country = JAP
 	name = "Collaborators within Established parties"
-	desc = ""
+	desc = "EVT_1400002014_desc"
 	style = 2
 	picture = "Japanese Parliament"
 
@@ -8058,12 +8058,12 @@ event = {
     deathdate = { day = 29 month = december year = 1963 }
 
 	name = "Discussion on Industrial control"
-	desc = ""
+	desc = "EVT_1400002015_desc"
 	picture = "industrial_association"
 
 	action_a = {
 		ai_chance = 70
-		name = "Make compromises with capitalists."
+		name = "Make compromises with capitalists"
 		command = { trigger = { NOT = { domestic = { type = free_market value = 6 } } } type = domestic which = free_market value = 1 }
 		command = { trigger = { ai = no } type = money value = -100 }
 		command = { type = dissent value = -2 }
@@ -8072,7 +8072,7 @@ event = {
 	}
 	action_b = {
 		ai_chance = 30
-		name = "Strengthen government control."
+		name = "Strengthen government control"
 		command = { type = domestic which = free_market value = -1 }
 		command = { trigger = { ai = no } type = money value = -200 }
 		command = { type = stockpile which = all when = war value = 2 }
@@ -8104,7 +8104,7 @@ event = {
 	}
 
 	name = "New Party Movement Plan"
-	desc = ""
+	desc = "EVT_1400002016_desc"
 
     date = { day = 0 month = january year = 1933 }
     offset = 1
@@ -8151,7 +8151,7 @@ event = {
 	}
 	
 	name = "Creation of New party"
-	desc = ""
+	desc = "EVT_1400002017_desc"
 	style = 2
 	picture = "Konoe"
 	decision_picture = "decision_anticominternpact"
@@ -8178,7 +8178,7 @@ event = {
 	random = no
 	country = JAP
 	name = "Formation of Opposition Coalition"
-	desc = ""
+	desc = "EVT_1400002018_desc"
 	style = 2
 	picture = "news_paper"
 
@@ -8207,7 +8207,7 @@ event = {
 	random = no
 	country = JAP
 	name = "The Cabinet Resigns" #1st Konoe Cabinet(1937-1939?)
-	desc = ""
+	desc = "EVT_1400002019_desc"
 	style = 2
 	picture = "minister_resign"
 
@@ -8247,7 +8247,7 @@ event = {
 	}
 
 	name = "The Planning Board Incident"
-	desc = ""	
+	desc = "EVT_1400002020_desc"	
 	picture = "news_paper"
 
 	date = { day = 17 month = april year = 1941 }
