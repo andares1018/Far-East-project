@@ -672,9 +672,9 @@
 # 1400007547 U87 - Return of Concessions
 # 1400007548 U87 - Fate of Democratic Opposition Parties 
 # 1400007549 
-# 
-# 
-# 
+# 1400007550 JAP Kirin Province Subjugation (from Vanilla event)
+# 1400007551 JAP Campaign against the Anti-Japanese United Army (from Vanilla event)
+# 1400007552 JAP Second Campaign against the Anti-Japanese United Army (From Vanilla event)
 
 ### 1400008001 - 1400008500 : India and Burma
 # 

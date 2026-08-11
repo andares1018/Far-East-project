@@ -2,11 +2,14 @@
 # Pacification of Manchuria events
 # 1330120008 MAN Pacification of Manchuria
 # 1330120009 JAP Kirin Province Subjugation
-# 1330120010 MAN Kirin Province Subjugation
+# 1330120010 MAN JAP Kirin Province Subjugation
+# JAP Kirin Province Subjugation
 # 1330120011 JAP Campaign against the Anti-Japanese United Army
-# 1330120012 MAN Campaign against the Anti-Japanese United Army
+# 1330120012 MAN JAP Campaign against the Anti-Japanese United Army
+# JAP Campaign against the Anti-Japanese United Army
 # 1330120013 JAP Second Campaign against the Anti-Japanese United Army
 # 1330120014 MAN Second Campaign against the Anti-Japanese United Army
+# JAP Second Campaign against the Anti-Japanese United Army
 ############################################################################
 
 
@@ -80,6 +83,7 @@ event = {
 		command = { type = addcore which = 1214 }
 		command = { type = addcore which = 1207 }
 		command = { type = addcore which = 1199 }
+		command = { type = trigger which = 1400007550 }
 	}
 }
 
@@ -144,6 +148,7 @@ event = {
 		command = { type = addcore which = 1212 }
 		command = { type = addcore which = 1205 }
 		command = { type = addcore which = 1203 }
+		command = { type = trigger which = 1400007551 }
 	}
 }
 
@@ -209,5 +214,6 @@ event = {
 		command = { type = addcore which = 1197 }
 		command = { type = addcore which = 1202 }
 		command = { type = addcore which = 1204 }
+		command = { type = trigger which = 1400007552 }
 	}
 }

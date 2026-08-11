@@ -14701,6 +14701,56 @@ event = {
 	}
 }
 
+event = {
+	id = 1400007550
+	random = no
+	country = JAP
+
+	name = EVT_1330120009_NAME
+	desc = EVT_1330120009_DESC
+	style = 2
+	picture = "ccip_mukden"
+
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = dissent value = -1.5 }
+		command = { type = supplies value = 250 }
+	}
+}
+
+event = {
+	id = 1400007551
+	random = no
+	country = JAP
+
+	name = EVT_1330120011_NAME
+	desc = EVT_1330120011_DESC
+	style = 2
+	picture = "Japan_Occupation"
+
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = 225 }
+	}
+}
+
+event = {
+	id = 1400007552
+	random = no
+	country = JAP
+
+	name = EVT_1330120013_NAME
+	desc = EVT_1330120011_DESC
+	style = 2
+	picture = "Japan_formation"
+
+	action = {
+		name = "ACTION_NAME_ACCEPT"
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = 200 }
+	}
+}
 
 ### 1400009001 - 1400009500 Minister died event
 
