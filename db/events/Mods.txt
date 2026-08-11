@@ -5059,7 +5059,7 @@ event = {
 			}
 			OR = {
 			control = { province = 1337 data = -3 }
-			control = { province = 1358 data = -3 }
+			control = { province = 1338 data = -3 }
 			control = { province = 1317 data = -3 }
 			}
 		}
@@ -5091,6 +5091,10 @@ event = {
 		command = { trigger = { control = { province = 1305 data = -3 } }type = construct which = land_fort where = 1305 value = 2 } #Guiyang
 		command = { trigger = { control = { province = 1352 data = -3 } }type = construct which = land_fort where = 1352 value = 2 } #Nanchang
 		command = { trigger = { control = { province = 1390 data = -3 } }type = construct which = land_fort where = 1390 value = 1 } #Kunming
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
@@ -5132,25 +5136,25 @@ event = {
 	decision = {
 		war = { country = CHI country = JAP }
 		OR = { 
-			lost_national = { country = CHI value = 70 }
-			lost_vp = { country = CHI value = 70 }
+			lost_national = { country = CHI value = 65 }
+			lost_vp = { country = CHI value = 65 }
 		}
 		NOT = { ispuppet = JAP }
 	}
 	decision_trigger = {
 		land_percentage = { country = CHI value = 1.1 }
-		region = { region = "China" country = -3 data = 1 value = 38 } #about 75 provinces out of 185
+		region = { region = "China" country = -3 data = 1 value = 38 } #about 70 provinces out of 185
 		OR = { 
-			lost_national = { country = CHI value = 75 }
-			lost_vp = { country = CHI value = 75 }
+			lost_national = { country = CHI value = 70 }
+			lost_vp = { country = CHI value = 70 }
 		}
 	}
 	trigger = {
 		OR = { 
-			lost_national = { country = CHI value = 75 }
-			lost_vp = { country = CHI value = 75 }
+			lost_national = { country = CHI value = 70 }
+			lost_vp = { country = CHI value = 70 }
 		}
-		region = { region = "China" country = -3 data = 1 value = 38 } #about 75 provinces out of 185
+		region = { region = "China" country = -3 data = 1 value = 38 } #about 70 provinces out of 185
 		land_percentage = { country = CHI value = 1.1 }
 		war = { country = CHI country = JAP }
 		NOT = { ispuppet = JAP }
