@@ -4370,11 +4370,11 @@ event = {
 	decision_trigger = { 
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 140 }
+	event = { id = 1330110081 days = 120 }
 	NOT = { event = 2011007 }
 		}
 	and = {
-	event = { id = 1330110081 days = 75 }
+	event = { id = 1330110081 days = 60 }
 	event = 2011007 
 		}
 	}
@@ -4384,11 +4384,11 @@ event = {
 	trigger = {
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 140 }
+	event = { id = 1330110081 days = 120 }
 	NOT = { event = 2011007 } # The Nanjing Massacre
 		}
 	and = {
-	event = { id = 1330110081 days = 75 }
+	event = { id = 1330110081 days = 60 }
 	event = 2011007 
 		}
 	}
@@ -4417,12 +4417,12 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "We need to overcome this" 
-		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 140 }
-		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 70 }
+		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 120 }
+		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 60 }
 		command = { type = dissent value = -0.5 }
 		command = { type = supplies value = -500 }
 		command = { type = setflag which = CHI_retraining }
-		command = { type = speed which = land value = 2 }
+		command = { type = speed which = land value = 2.1 }
 		command = { type = ground_def_eff value = 0.025 when = 1 }
 	}
 }
@@ -5049,23 +5049,40 @@ event = {
 		local_flag = { which = Military_instability when = 1 value = 2 }
 		local_flag = { which = Military_instability when = 1 value = 1 }
 		}
-		NOT = {
-			control = { province = 1330 data = -3 }
-			control = { province = 1252 data = -3 }
-			control = { province = 1347 data = -3 }
 			OR = {
-			control = { province = 1343 data = -3 }
-			control = { province = 1253 data = -3 }
+			NOT = {
+			control = { province = 1330 data = -3 }
+				}
+			NOT = {
+			control = { province = 1252 data = -3 }
+				}
+			NOT = {
+			control = { province = 1347 data = -3 }
+				}
 			}
 			OR = {
+			NOT = {
+			control = { province = 1343 data = -3 }
+				}
+			NOT = {
+			control = { province = 1253 data = -3 }
+				}
+			}
+			OR = {
+			NOT = {
 			control = { province = 1337 data = -3 }
+				}
+			NOT = {
 			control = { province = 1338 data = -3 }
+				}
+			NOT = {
 			control = { province = 1317 data = -3 }
+				}
 			}
 		}
 	}
 
-    date = { day = 0 month = january year = 1938 }
+    date = { day = 0 month = january year = 1937 }
     offset = 7
     deathdate = { day = 29 month = december year = 1999 }
 
@@ -5091,6 +5108,8 @@ event = {
 		command = { trigger = { control = { province = 1305 data = -3 } }type = construct which = land_fort where = 1305 value = 2 } #Guiyang
 		command = { trigger = { control = { province = 1352 data = -3 } }type = construct which = land_fort where = 1352 value = 2 } #Nanchang
 		command = { trigger = { control = { province = 1390 data = -3 } }type = construct which = land_fort where = 1390 value = 1 } #Kunming
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
