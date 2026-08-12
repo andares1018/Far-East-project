@@ -150,7 +150,7 @@
 # 1400000101 CHI - Local Warlords leave - Effects of partial defeat, Alternate #
 # 1400000102 CHI - Constitution Draft (1936) 
 # 1400000103 CHI - Constitutional Discussion (Political Consultative Assembly) 
-# 1400000104 CHI - Widespread Protests (1936) Seven Gentlemen Incident(1936)
+# 1400000104 CHI - Widespread Protests (1936) #Seven Gentlemen Incident(1936)
 # 1400000105 
 # 1400000106 
 # 1400000107 
@@ -467,7 +467,7 @@
 # 1400004503 JAP - General Election (Occupation of Japan) - OTL 1946 Election
 # 1400004504 JAP - Constitutional Discussion (Occupation of Japan) 
 # 1400004505 JAP - Japan's New constitution - Peace Constitution (Occupation of Japan) 
-# 1400004506 JAP - White purge (Occupation of Japan) 
+# 1400004506 JAP - White Purge (Occupation of Japan) 
 # 1400004507 JAP - War Crimes Tribunal (Occupation of Japan) 
 # 1400004508 JAP - Collapse of Economic Sphere 
 # 1400004509 JAP - Economic Reconstruction policy 
@@ -502,7 +502,7 @@
 
 # 1400005517 SIA - Invade Indochina 
 # 1400005518 SIA - Restoration of the old Border (What if? - Thailand Victory) 
-# 1400005519 JAP - Arbitration on indochina 
+# 1400005519 JAP - Arbitration on Indochina 
 # 1400005520 SIA - Japan Enforces Ceasefire 
 # 1400005521 U03 - Border Readjustment 
 # 1400005522 JAP - Thailand Refuses! 
@@ -655,9 +655,9 @@
 # 1400007530 MEN - Securing Outer Mongolia - What if?
 # 1400007531 JAP - End of the Adventure in Manchuria
 # 1400007532 JAP - North China's collaborators 
-# 1400007533 UCS - Establish of collaboration government 
+# 1400007533 UCS - Establish of Collaboration government 
 # 1400007534 JAP - Collaboration with Wang Jingwei 
-# 1400007535 U87 - Establish of collaboration government 
+# 1400007535 U87 - Establish of Collaboration government 
 # 1400007536 U87 - Discussion of the National Assembly (1940?) 
 # 1400007537 U87 - Holding National Assembly (what if?) 
 # 1400007538 U87 - Unification National Assembly (Post-war, RNG National Assembly) 
@@ -789,8 +789,8 @@
 # 1400009516 USA - Public Works Administration - WiF event #
 # 1400009517 USA - Racial Riots in Detroit - WiF event #
 # 1400009518 USA - Bracero Program - WiF event #
-# 1400009519 USA - The Golden Gate Bridge - WiF event #
-# 1400009520 USA - Civilian Conservation Corps #
+# 1400009519 USA - Civilian Conservation Corps #
+# 1400009520 
 # 
 
 ### 1400010001 - 1400011000 - World event (Historical)

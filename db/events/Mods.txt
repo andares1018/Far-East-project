@@ -1,4 +1,4 @@
-#Thank you for testing this MOD - to EndWorld318, KielceofIron, SluzavyBlin, Yuuka, Mede
+#Thank you for testing this MOD - to EndWorld318, KielceofIron, SluzavyBlin, Yuuka, Mede, Vicar Laurence, ^AC^
 
 ### China
 # thanks for Sun, Willem VI, Ken HK, Gern Park, Agatha, Vanish, king_elessar, vanguard7615, MoonJic
@@ -10606,8 +10606,8 @@ event = {
 			minister = 50007
 		}
 		name = "Appoint Mitsuchi Chujo"
-		command = { type = set_domestic which = democratic value = 6 } 
-		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = democratic value = 7 } 
+		command = { type = set_domestic which = political_left value = 3 }
 		command = { type = headofgovernment which = 50007 } 
 		command = { type = foreignminister which = 50099 } 
 		command = { type = armamentminister which = 50126 } 

@@ -8,8 +8,8 @@
 
 country = {
   tag                = U38
-  regular_id         = U38
-  puppet             = U38
+  regular_id         = CHI
+  puppet             = CHI
   flag_ext           = _KMT
   ai                 = "U38.ai"
   ai_settings        = { flags = { MOB1 = yes MOB2 = yes RES = yes } }
