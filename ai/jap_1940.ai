@@ -33,7 +33,7 @@ combat = {
 
 claim_acceptance = -69
 
-liberate = { PHI BUR IND MAN SIA MEN CHI NEP PAK BHU VIE U87 }
+liberate = { PHI BUR IND MAN SIA MEN NEP PAK BHU VIE }
 
 # Special resistance against "influence" by the listed nations. Value range = [0 - 10]  
 resistance = {  

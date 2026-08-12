@@ -5080,7 +5080,6 @@ event = {
 				}
 			}
 		}
-	}
 
     date = { day = 0 month = january year = 1937 }
     offset = 7
@@ -14552,6 +14551,8 @@ event = {
 		command = { trigger = { owned = { province = 1332 data = U87 } } type = secedeprovince which = UCS value = 1332 when = 2 } 
 		command = { trigger = { owned = { province = 1327 data = U87 } } type = secedeprovince which = UCS value = 1327 when = 2 } 
 		command = { trigger = { owned = { province = 1241 data = U87 } } type = secedeprovince which = UCS value = 1241 when = 2 } 
+		command = { type = headofstate which = 1250001 }
+		command = { type = headofgovernment which = 1250002 }
     } 
 }
 
