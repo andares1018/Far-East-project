@@ -16,7 +16,6 @@
 	regular_id             = CHI 
 	intrinsic_gov_type     = paternal_autocrat 
 	extra_tc               = 10 
-	puppet                 = CHI 
 	# Resource Reserves 
 	energy                 = 600
 	metal                  = 300

@@ -9,7 +9,6 @@
 country = {
   tag                = CGX
   regular_id         = CHI
-  puppet             = CHI
   flag_ext           = _PNE
   ai                 = "cgx_1933.ai"
   ai_settings        = { flags = { MOB1 = yes MOB2 = yes MOB3 = yes MOB4 = yes MOB5 = yes RES = yes } }

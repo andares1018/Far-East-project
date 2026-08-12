@@ -8,7 +8,6 @@
 	flag_ext 	= _KMT
 	ai = "U63.ai"
 	regular_id             = CHI 
-	puppet				   = CHI
 	ai_settings = { flags = { MOB1 = yes MOB2 = yes RES = yes } }
 	intrinsic_gov_type     = paternal_autocrat 
 	extra_tc               = 4 

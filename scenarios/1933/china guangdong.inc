@@ -9,7 +9,6 @@
 country = {
   tag                = U63
   regular_id         = CHI
-  puppet             = CHI
   flag_ext           = _KMT
   ai                 = "U63.ai"
   ai_settings        = { flags = { MOB1 = yes MOB2 = yes RES = yes } }

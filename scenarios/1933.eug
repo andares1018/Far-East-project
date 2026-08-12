@@ -45,6 +45,12 @@ globaldata =
   { id          = { type = 15000 id = 10 }
     participant = { CHI CXB }
   }
+
+  alliance =
+  { id          = { type = 15000 id = 74 }
+    participant = { CGX U63 }
+  }
+
   alliance =
   { id          = { type = 15000 id = 11 }
     participant = { EST LAT }
