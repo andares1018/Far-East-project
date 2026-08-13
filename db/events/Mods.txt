@@ -3441,23 +3441,15 @@ event = {
 
 	trigger = {	
 		exists = CHI
+		exists = CGX
 		NOT = { war = { country = CHI country = CGX } }
 		NOT = { war = { country = CHI country = JAP } }
 		NOT = { alliance = { country = JAP country = CGX } }
 		NOT = { alliance = { country = ENG country = CGX } }
 		NOT = { alliance = { country = SOV country = CGX } }
-		OR = { #either Guangxi is not a puppet, or it is a puppet of CHI
-			NOT = { ispuppet = CGX }
-			puppet = { country = CGX country = CHI }
-			NOT = { ispuppet = U63  }
-			puppet = { country = U63  country = CHI }
-		}
-		OR = { #either CHI is not a puppet, or it controls CGX as a puppet anyway
-			NOT = { ispuppet = CHI }
-			puppet = { country = U63  country = CHI }
-			NOT = { ispuppet = CHI }
-			puppet = { country = CGX country = CHI }
-		}
+		NOT = { alliance = { country = JAP country = U63 } }
+		NOT = { alliance = { country = ENG country = U63 } }
+		NOT = { alliance = { country = SOV country = U63 } }
 	}
 
     date = { day = 29 month = may year = 1936 }
@@ -3491,7 +3483,7 @@ event = {
 
 	action_a = {
 		name = "ACTION_NAME_ACCEPT"
-		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = defense_lobby value = 1 }
 		command = { type = domestic which = interventionism value = 1 }
 	}
 }
@@ -3509,7 +3501,10 @@ event = {
 	action_a = {
 		name = "ACTION_NAME_DAMN"
 		command = { type = dissent value = 2.5 }
-		command = { type = event which = 1400001011 where = CHI when = 14 }
+		command = { type = event which = 1400001011 where = CHI when = 1 }
+		command = { type = end_access which = U63 when = 0 }
+		command = { type = end_access which = U63 when = 1 }
+		command = { type = war which = U63 }
 		command = { type = setflag which = Liangguang_gov }
 	}
 }
@@ -3528,20 +3523,20 @@ event = {
 		ai_chance = 3
 		name = "Persuade them by proposing negotiations"
 		command = { type = dissent value = -5 }
-		command = { type = event which = 1400001016 where = U63  when = 7 }
+		command = { type = event which = 1400001016 where = U63 when = 7 }
 		command = { type = domestic which = defense_lobby value = -1 }
 	}
 	action_b = {
 		ai_chance = 96
 		name = "Bribing their officers or commanders"
-		command = { type = event which = 1400001015 where = U63  when = 14 }
+		command = { type = event which = 1400001015 where = U63 when = 14 }
 		command = { type = money value = -100 }
 	}
 	action_c = {
 		ai_chance = 1
 		name = "Put pressure on them"
 		command = { type = dissent value = 5 }
-		command = { type = event which = 1400001012  where = U63  when = 7 }
+		command = { type = trigger which = 1400001012 }
 		command = { type = domestic which = interventionism value = 1 }
 	}
 }
@@ -3556,20 +3551,10 @@ event = {
 	style = 2
 	picture = "ccip_gmd"
 
-	action_a = {
-		ai_chance = 10
-		name = "Give up Opposition(Game over)"
-		command = { trigger = { ai = no exists = CHI } type = secederegion which = CHI value = "China" when = 1 }
-		command = { type = dissent value = 20 }
-		command = { type = trigger which = 1400001018 }
-	}
-	action_b = {
-		ai_chance = 90
+	action = {
+		ai_chance = 100
 		name = "ACTION_NAME_FIGHT"
-		command = { type = leave_alliance when = 1 }
-		command = { type = end_puppet }
 		command = { type = peace which = CHC value = 1 }
-		command = { type = war which = CHI }
 		command = { type = trigger which = 1400001013 }
 	}
 }
@@ -3588,10 +3573,8 @@ event = {
 		name = "ACTION_NAME_EXCELLENT"
 		command = { type = event which = 1400001014 where = CHC when = 7 } #War against Chiang?
 		command = { type = alliance which = U63 when = 1 }
-		command = { type = end_puppet }
 		command = { type = peace which = CHC value = 1 }
-		command = { type = peace which = U63  value = 1 }
-		command = { type = war which = CHI }
+		command = { type = peace which = U63 value = 1 }
 	}
 }
 
@@ -3651,6 +3634,7 @@ event = {
 	action_a = {
 		name = "ACTION_NAME_AGREE"
 		command = { type = event which = 1400001017 where = CHI when = 1 } #Negotiations with Liangguang
+		command = { type = peace which = CHI value = 1 }
 	}
 }
 
@@ -3668,17 +3652,14 @@ event = {
 		ai_chance = 50
 		name = "Their demands are absurd" #WAR!
 		command = { type = trigger which = 1400001013 } #Coalition Against Chiang
-		command = { type = war which = U63 }
 		command = { type = war which = CGX }
+		command = { type = war which = U63 }
 		command = { type = dissent value = 5 }
 	}
 	action_b = {
 		ai_chance = 50
 		name = "Agree on their needs"
 		command = { type = dissent value = -5 } #Nanjing government will give up its influence on them. Maybe for a while....
-		command = { type = end_mastery which = U63 }
-		command = { type = end_mastery which = CGX }
-		command = { type = domestic which = freedom value = 1 }
 		command = { type = domestic which = defense_lobby value = -1 }
 		command = { type = domestic which = interventionism value = 1 }
 	}
@@ -9705,9 +9686,9 @@ event = {
 	decision = { NOT = { ispuppet = JAP } }
 	decision_trigger = { money = 50 }
 	trigger = { NOT = { ispuppet = JAP } random = 20 }
-	date = { day = 1 month = january year = 1933 }
+	date = { day = 1 month = january year = 1932 }
 	offset = 30
-	deathdate = { day = 29 month = december year = 1936 }
+	deathdate = { day = 29 month = december year = 1935 }
 	name = 2003140name
 	desc = ""
 	style = 2

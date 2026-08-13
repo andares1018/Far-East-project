@@ -46,16 +46,18 @@ event = {
 			puppet = { country = MAN country = JAP }
 	}
 	decision_trigger = { 
+			event = 1330120008
 			supplies = 500
 	}
 	trigger = {
+			event = 1330120008
 			puppet = { country = MAN country = JAP }
 			supplies = 500
 	}
 
     date = { day = 4 month = march year = 1933 }
     offset = 20
-	deathdate = { day = 29 month = august year = 1963 }
+	deathdate = { day = 29 month = august year = 1938 }
 
 	action = {
 		name = EVT_1330120009_ACTION1
@@ -113,7 +115,7 @@ event = {
 
 	date = { day = 4 month = january year = 1934 }
 	offset = 20
-	deathdate = { day = 29 month = august year = 1963 }
+	deathdate = { day = 29 month = august year = 1938 }
 
 	action = {
 		name = EVT_1330120009_ACTION1
@@ -178,7 +180,7 @@ event = {
 
 	date = { day = 4 month = january year = 1935 }
 	offset = 20
-	deathdate = { day = 29 month = august year = 1963 }
+	deathdate = { day = 29 month = august year = 1938 }
 
 	action = {
 		name = EVT_1330120009_ACTION1
