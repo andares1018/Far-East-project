@@ -100,25 +100,83 @@ EVT_1400000018_DESC;;;;;;;;;;;X
 decision_1400000018_desc;;;;;;;;;;;X
 EVT_1400000020_DESC;;;;;;;;;;;X
 EVT_1400000022_DESC;The New National Assembly, based on the Constitution formed after discussions in the Constituent National Assembly, will serve as an institution underpinning constitutional politics. Delegates are elected by popular vote in regions under government control. The elected representatives will not only deliberate on the Constitution but also serve as the foundation for electing the formal President of the National Government. Although the election process is being conducted formally, it is structured in a way that the Kuomintang maintains a near-monopoly.;;;;;;;;;;X
-EVT_1400000023_DESC;Although there are signs of compromise being made, tensions remain. The KMT and CCO didn’t budge from their respective positions, nor fulfill the agreements. While the KMT sees this as the CCP’s tactic of delay, the CCP does not trust the KMT. Because mutual distrust runs deep, negotiations to achieve compromise have been delayed and became a mere temporary truce;;;;;;;;;;X
+EVT_1400000023_DESC;Although there are signs of compromise being made, tensions remain. The KMT and CCP didn’t budge from their respective positions, nor fulfill the agreements. While the KMT sees this as the CCP’s tactic of delay, the CCP does not trust the KMT. Because mutual distrust runs deep, negotiations to achieve compromise have been delayed and became a mere temporary truce;;;;;;;;;;X
 EVT_1400000028_DESC;In order to implement their currency reform, the Chinese are offering us their silver in exchange for our currency. The State Department is wary of taking them up on this offer, lest it may provoke the Japanese. Henry Morgenthau, on the other hand, wants to seize this opportunity to firmly annex China into the Dollar’s sphere of influence. The Chinese are quite persistent on this offer, and we do have to procure silver in accordance with the Silver Purchase Act of 1934.;;;;;;;;;;X
 EVT_1400000029_DESC;Seeing mutual benefit in our relationship, the Americans have accepted our offer. An agreement has been drawn up and formalized between our ambassador to America and Henry Morgenthau, providing us with capital necessary to supplement our reforms. This will surely increase the fruits of our reforms, and perhaps even stop Japan’s economic meddling.;;;;;;;;;;X
 EVT_1400000030_DESC;due to carelessness and internal circumstances, America has declined our offer of silver for aid. This leaves only Japan and Britain as alternatives. With negotiations with Japan unlikely to bear fruit, we must turn to Britain.;;;;;;;;;;X
 EVT_1400000031_DESC;from the late stages of the Qing dynasty, we have maintained our economic influence on China through Hong Kong and Shanghai. Our banks and corporations in China have persistently called for economic aid to the Chinese, but this is easier said than done. Our over demands to the Chinese have quickly been rescinded due to their strong objections, and the negotiation continues to drag on. Accepting these terms will at least be able to stabilise them somewhat.;;;;;;;;;;X
 EVT_1400000032_DESC;The British have accepted our offer, finally providing us with the additional capital necessary for the currency reform. Unlike the United States, the Britain doesn't have enough capital, so support is inevitably limited to some extent.;;;;;;;;;;X
 EVT_1400000033_DESC;The backstabbing reds have done it again! We are just now receiving reports of sabotage by CCP agents who have caused quite some damage with their activities. A response must be organized quickly, and our defenses reviewed too!;;;;;;;;;;X
+EVT_1400000034_DESC;;;;;;;;;;;X
+EVT_1400000035_DESC;;;;;;;;;;;X
 EVT_1400000036_DESC;The National government's first Presidential election is organized according to the new Constitution and elected by the Representatives of the National Assembly. Due to KMT's overwhelming support in the National Asssembly, the Presidency will surely go to the KMT. Meanwhile, various factions within the government are competitively vying for the Vice Presidency. Thus, the President of the Republic of China will be decided according to the composition of the new National Assembly.;;;;;;;;;;X
+EVT_1400000037_DESC;;;;;;;;;;;X
+EVT_1400000038_DESC;;;;;;;;;;;X
+EVT_1400000039_DESC;;;;;;;;;;;X
+EVT_1400000040_DESC;;;;;;;;;;;X
+EVT_1400000041_DESC;;;;;;;;;;;X
+EVT_1400000042_DESC;;;;;;;;;;;X
+EVT_1400000043_DESC;;;;;;;;;;;X
+EVT_1400000044_DESC;;;;;;;;;;;X
+EVT_1400000045_DESC;;;;;;;;;;;X
+EVT_1400000046_DESC;;;;;;;;;;;X
+EVT_1400000047_DESC;;;;;;;;;;;X
+EVT_1400000048_DESC;;;;;;;;;;;X
+EVT_1400000049_DESC;;;;;;;;;;;X
+EVT_1400000050_DESC;;;;;;;;;;;X
+EVT_1400000051_DESC;;;;;;;;;;;X
+EVT_1400000052_DESC;;;;;;;;;;;X
+EVT_1400000053_DESC;;;;;;;;;;;X
+EVT_1400000054_DESC;;;;;;;;;;;X
+EVT_1400000055_DESC;;;;;;;;;;;X
+EVT_1400000056_DESC;;;;;;;;;;;X
+EVT_1400000057_DESC;;;;;;;;;;;X
+EVT_1400000058_DESC;;;;;;;;;;;X
+EVT_1400000059_DESC;;;;;;;;;;;X
+EVT_1400000060_DESC;;;;;;;;;;;X
+EVT_1400000061_DESC;;;;;;;;;;;X
 EVT_1400000062_DESC;The time has come. Political Tutelage is coming to an end and the next Legislative Yuan is to be elected by the people. It's based on a new constitution, and not only the various factions of the Nationalist Party, but also the parties that worked together are participating in it. this will contribute to the establishment of institutional politics, forming democratic pluralism that has not been seen for a long time;;;;;;;;;;X
 EVT_1400000065_DESC;According to the Constitution, the Presidency's term of office is for 6 years and allows a second term of office. The procedure of Presidential Election has begun in the National Assembly just now. The strong governmental support will likely result in the reelection of the current President.;;;;;;;;;;X
+EVT_1400000080_DESC;;;;;;;;;;;X
+EVT_1400000081_DESC;;;;;;;;;;;X
+EVT_1400000082_DESC;;;;;;;;;;;X
+EVT_1400000083_DESC;;;;;;;;;;;X
+EVT_1400000089_DESC;The government has entered into an emergency session after the outbreak of war with Japan. With haste we have confirmed our undivided support for the military. As we go through other motions proposed to protect China, we must carefully consider our actions during the war and how they may both benefit the war effort as well as impact the unity of our people;;;;;;;;;;X
+EVT_1400000091_DESC;;;;;;;;;;;X
 EVT_1400000092_DESC;Since the 19th century, China has been a key market for the international community. However, as the situation in East Asia has changed, it has become necessary to establish relations with China on an equal basis. To this end, the unequal treaties and privileges previously imposed on China must be abolished, and China must be treated as an equal partner.;;;;;;;;;;X
 EVT_1400000094_DESC;Unequal treaties imposed by foreign powers left lasting scars on China’s sovereignty. To resolve these treaties, the government negotiated with each country for a long time, achieving some progress, but the issue has not yet been fully resolved. However, as the situation in East Asia changes, Britain and the United States have offered to relinquish their special privileges. The era of unequal treaties that began in the 19th century is coming to an end. The long-standing national trauma will gradually heal.;;;;;;;;;;X
 EVT_1400000095_DESC;There have been numerous attempts by progressive intellectuals to engage in rural areas. After years of effort, these efforts culminated in the Rural Reconstruction Movement led by James Yen and Liang Shuming. Moving beyond a simple enlightenment-style approach, the movement aims to reorganize rural communities and improve farmers' lives. It is believed that this approach can lead to local self-governance and social reform. However, the Rural Reconstruction Movement generally pursues a different course from that of the Communist Party or the Kuomintang and aligns with liberals.;;;;;;;;;;X
 EVT_1400000096_DESC;The opposition groups operating outside the government included not only liberal intellectuals and politicians but also remnants of the Beiyang government. For many years following the National Revolution, they have criticized the Kuomintang’s one-party dominance and waged a political movement for democratic reform. While some of these individuals have joined the China Democratic League, others, such as the China Democratic Socialist Party, have chosen to compromise with the government. To appease the external opposition, including the China Democratic League, mediation by those willing to compromise is necessary. However, it remains to be seen how much of the opposition can be accommodated.;;;;;;;;;;X
 EVT_1400000097_DESC;Although the Communist Party remains outlawed in the aftermath of the civil war, factions sympathetic to it still exist. Groups originating from within the left wing of the Kuomintang have long engaged in underground activities against the government, but now that constitutional government has been established, they are operating in conjunction with the Kuomintang’s non-mainstream factions. It will not be easy for us to accept our former comrades who have fallen from grace.;;;;;;;;;;X
+EVT_1400000098_DESC;;;;;;;;;;;X
+EVT_1400000100_DESC;;;;;;;;;;;X
+EVT_1400000102_DESC;;;;;;;;;;;X
+EVT_1400000103_DESC;;;;;;;;;;;X
+EVT_1400000104_DESC;;;;;;;;;;;X
 EVT_CHI_Legislative_DESC;The Legislative Yuan represents the legislative branch of the Republic of China. Most legislators are elected from regional constituencies, while some are chosen by vocational groups and ethnic minority regions; the term of office is three years. Legislators not only deliberate on bills but are also responsible for the appointment of the President of the Executive Yuan (Premier), thereby enabling them to influence the executive branch. Various factions of the Kuomintang and other political parties are participating to exercise their respective capabilities. Ultimately, what changes will this bring to the Legislative Yuan?;;;;;;;;;;X
 EVT_CHI_National_Assembly_DESC;Based on the Constitution of the Republic of China, the National Assembly is the supreme government organ placed above the separation of the five powers. Delegates to the National Assembly are elected by popular vote through regional constituencies based on local municipalities, as well as official vocational and social organizations. The term is six years, and the Assembly is convened for significant agendas such as constitutional amendments and the election or impeachment of the President and Vice President. As various political factions participate, the National Assembly election will influence the Constitution and the subsequent election of the President.;;;;;;;;;;X
-EVT_1400000089_DESC;The government has entered into an emergency session after the outbreak of war with Japan. With haste we have confirmed our undivided support for the military. As we go through other motions proposed to protect China, we must carefully consider our actions during the war and how they may both benefit the war effort as well as impact the unity of our people;;;;;;;;;;X
+EVT_1400001003_DESC;;;;;;;;;;;X
+EVT_1400001004_DESC;;;;;;;;;;;X
+EVT_1400001005_DESC;;;;;;;;;;;X
 EVT_1400001007_DESC;The New Guangxi Clique under the leadership of Li Zongren have been cooperative to the Kuomintang since 1923, taking control of the Guangxi region in the process. However, their regional tendencies and their greed have made them butt heads with us constantly, leading them as far as betrayal in some instances. If we incorporate the Guangxi region to be under our direct influence, we will gain the support of the region’s officer corps. However, it is unclear what the consequences would be if they were abandoned.;;;;;;;;;;X
+EVT_1400001008_DESC;;;;;;;;;;;X
+EVT_1400001009_DESC;;;;;;;;;;;X
+EVT_1400001010_DESC;;;;;;;;;;;X
+EVT_1400001011_DESC;;;;;;;;;;;X
+EVT_1400001012_DESC;;;;;;;;;;;X
+EVT_1400001013_DESC;;;;;;;;;;;X
+EVT_1400001014_DESC;;;;;;;;;;;X
+EVT_1400001015_DESC;;;;;;;;;;;X
+EVT_1400001016_DESC;;;;;;;;;;;X
+EVT_1400001017_DESC;;;;;;;;;;;X
+EVT_1400001018_DESC;;;;;;;;;;;X
+EVT_1400001019_DESC;;;;;;;;;;;X
+EVT_1400001020_DESC;;;;;;;;;;;X
+EVT_1400001021_DESC;;;;;;;;;;;X
+EVT_1400001022_DESC;;;;;;;;;;;X
+EVT_1400001023_DESC;;;;;;;;;;;X
+EVT_1400001024_DESC;;;;;;;;;;;X
+EVT_1400001025_DESC;;;;;;;;;;;X
 EVT_1400001251_DESC;With the He-Umezu agreement having expelled Chinese influence in Hebei province, a bold administrator named Yin Ju-keng of various counties in the eastern part of the province has declared independence from the KMT government under the urging of the Kwangtung Army. This is a welcome development in our efforts to solidify our control in Manchukuo, and Mr. Yin seems very keen on getting the process of receiving Japanese protection started. While there might be some slight concern about another rather daring territorial move by the Kwantung army... for now, let us revel in the creation of a new state under our mission for Asian co-prosperity, the East Hebei Autonomous Government!;;;;;;;;;;X
 EVT_1400001252_DESC;In utter violation of the Tanggu truce and all other succeeding agreements, the Japanese are sponsoring rebel administrator Yin Ju-keng and his illegitimate 'East Hebei Autonomous Government'! Already Japanese soldiers and diplomats are making visits to their new rebel base in Tongzhou and flaunting our rights as a sovereign nation. We cannot let this stand... but our ability to resist an all-out war with Japan at this point is extremely questionable. How should we respond to this new imperialistic encroachment?;;;;;;;;;;X
 EVT_1400001253_DESC;The enemy now expelled from our capital, we are now able to return to our original seat of power in Nanjing. The storied city has certainly suffered under Japanese hands, the ghosts of the massacre still lingering in the streets, but it is nothing that we as a Chinese nation cannot overcome with effort. Our staff are slowly moving back into the offices in the presidential palace and the crowd of refugees from the city trickling back into their hometown. Give or take a decade.;;;;;;;;;;X
@@ -171,7 +229,7 @@ EVT_1400002010_desc;The Hirota Cabinet was established to inherit the National U
 EVT_1400002012_desc;After the recent resignation of Senjūro Hayashi as the Prime Minister, the Imperial Diet has appointed Fumimaro Konoe as the new Prime Minister of Japan. Fumimaro Konoe is a popular figure among both the goverment and the Army. He'll be forming a Cabinet really soon, starting a new leadership for Japan. ;;;;;;;;;;X
 EVT_1400002013_desc;After World War I, Japan began analyzing, and studying Germany’s wartime economic system. This ultimately led to the determination of Japan’s economic direction. As the war dragged on, it became clear that the existing economic structure could no longer meet the demands. To ensure the efficient utilization and strict control of resources under wartime conditions, legislation was needed to grant the government the authority to issue direct orders.;;;;;;;;;;X
 EVT_1400002014_desc;Japan’s major political parties consist of the Rikken Minseito(Constitutional Democratic Party) and the Rikken Seiyukai(Association of Friends of Constitutional Government). However, as political instability have persisted since the 1930s, skepticism regarding the current political situation has become widespread. Moreover, there is no shortage of supporters of this sentiment even within the parties themselves. Depending on how this is handled, it will affect the national unity cabinet;;;;;;;;;;X
-EVT_1400002015_desc;Although a wartime system has begun to take shape through the National Mobilization, a debate has arisen over how to manage the national industry. Reformist bureaucrats and new bureaucrats, among others, have argued for introducing a bureaucratic central planning system. On the other hand, some conservatives have proposed collaborating with capitalists to encourage their contribution to the wartime system. The structure of the wartime system will vary depending on these policies;;;;;;;;;;X
+EVT_1400002015_desc;Although a wartime system has begun to take shape through the National Mobilization, a debate has arisen over how to manage the national industry. Reformist bureaucrats and new bureaucrats, among others, have argued for introducing bureaucratic central planning system. On the other hand, some conservatives have proposed collaborating with capitalists to encourage their contribution to the wartime system. The structure of the wartime system will vary depending on these policies;;;;;;;;;;X
 EVT_1400002016_desc;;;;;;;;;;;X
 EVT_1400002017_desc;The existing political structure has been completely dismantled. It is time to rally our scattered supporters and form a new party dedicated to building a strong government. This will serve as the foundation for the new system.;;;;;;;;;;X
 EVT_1400002018_desc;Although the Konoe Cabinet was formed on the recommendation of the elder statesman Saionji, Konoe acted in an arbitrary and radical manner. He created situations he could not handle, yet failed to establish his own vision or political base. Exhausted by political strife, Konoe was forced to resign;;;;;;;;;;X

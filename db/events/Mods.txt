@@ -1,4 +1,4 @@
-#Thank you for testing this MOD - to EndWorld318, KielceofIron, SluzavyBlin, Yuuka, Mede, Vicar Laurence, ^AC^
+#Thank you for testing this MOD - to EndWorld318, KielceofIron, SluzavyBlin, Yuuka, Mede, Vicar Laurence, ^AC^, Kami
 
 ### China
 # thanks for Sun, Willem VI, Ken HK, Gern Park, Agatha, Vanish, king_elessar, vanguard7615, MoonJic
@@ -3318,7 +3318,7 @@ event = {
 	date = { year = 1938 month = january day = 20 }
 
 	name = "Ruler of Sichuan die"
-	desc = ""
+	desc = "EVT_1400001003_DESC"
 	picture = "minister_died"
 
 	action_a = {
@@ -3340,7 +3340,7 @@ event = {
 	country = CHI
 
 	name = "Sichuan Consolidation"
-	desc = ""
+	desc = "EVT_1400001004_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -3358,7 +3358,7 @@ event = {
 	country = U64 
 
 	name = "Reorganization of Political Council"
-	desc = ""
+	desc = "EVT_1400001005_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -3434,7 +3434,7 @@ event = {
 	random = no
 	country = U63 
 	name = "Discussion of Anti-Chiang coalition"
-	desc = ""
+	desc = "EVT_1400001008_DESC"
 	style = 2
 	picture = "ccip_gmd"
 	save_date = yes
@@ -3477,7 +3477,7 @@ event = {
 	tag = { CGX U63 }
 
 	name = "Anti-Japan Salvation Army Formed"
-	desc = ""
+	desc = "EVT_1400001009_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -3494,7 +3494,7 @@ event = {
 	country = CHI
 
 	name = "Anti-Japan Salvation Army Formed"
-	desc = ""
+	desc = "EVT_1400001010_DESC"
 	style = 2
 	picture = "ccip_fcseige"
 
@@ -3515,7 +3515,7 @@ event = {
 	country = CHI
 
 	name = "Deal with the Guangdong"
-	desc = ""
+	desc = "EVT_1400001011_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -3547,7 +3547,7 @@ event = {
 	country = U63 
 
 	name = "Ultimatum from Nanjing"
-	desc = ""
+	desc = "EVT_1400001012_DESC"
 	style = 2
 	picture = "ccip_gmd"
 
@@ -3565,7 +3565,7 @@ event = {
 	country = CGX
 
 	name = "Coalition Against Chiang"
-	desc = ""
+	desc = "EVT_1400001013_DESC"
 	style = 2
 	picture = "Chinese_Fighting"
 
@@ -3584,7 +3584,7 @@ event = {
 	country = CHC
 
 	name = "War against Chiang?"
-	desc = ""
+	desc = "EVT_1400001014_DESC"
 	style = 2
 	picture = "ccip_cw"
 
@@ -3609,13 +3609,13 @@ event = {
 	country = U63 
 
 	name = "Military Collapse!"
-	desc = ""
+	desc = "EVT_1400001015_DESC"
 	style = 2
 	picture = "ccip_fcseige"
 
 	action_a = {
 		name = "ACTION_NAME_DAMN"
-		command = { trigger = { ai = no exists = CHI } type = secederegion which = CHI value = "China" when = 1 }
+		command = { trigger = { exists = CHI } type = secederegion which = CHI value = "China" when = 1 }
 		command = { type = dissent value = 20 }
 		command = { type = trigger which = 1400001018 }
 	}
@@ -3627,7 +3627,7 @@ event = {
 	country = U63 
 
 	name = "Accept of negotiation offer"
-	desc = ""
+	desc = "EVT_1400001016_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 
@@ -3644,7 +3644,7 @@ event = {
 	country = CHI
 
 	name = "Negotiations with Liangguang"
-	desc = ""
+	desc = "EVT_1400001017_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 
@@ -3671,7 +3671,7 @@ event = {
 	country = CHI
 
 	name = "Surrender in Guangdong"
-	desc = ""
+	desc = "EVT_1400001018_DESC"
 	style = 2
 	picture = "chiang_kaishek"
 
@@ -3689,7 +3689,7 @@ event = {
 	random = no
 	country = CHI
 	name = "Deal with the Guangxi"
-	desc = ""
+	desc = "EVT_1400001019_DESC"
 	style = 2
 	picture = "ccip_gmd"
 
@@ -3711,7 +3711,7 @@ event = {
 	random = no
 	country = CGX
 	name = "Offer peace from Nanjing"
-	desc = ""
+	desc = "EVT_1400001020_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 
@@ -3727,7 +3727,7 @@ event = {
 	country = CGX
 
 	name = "Ultimatum from Nanjing"
-	desc = ""
+	desc = "EVT_1400001021_DESC"
 	style = 2
 	picture = "ccip_gmd"
 
@@ -3751,7 +3751,7 @@ event = {
 	country = CHI
 
 	name = "The Fate of Guangxi"
-	desc = ""
+	desc = "EVT_1400001022_DESC"
 	style = 2
 	picture = "news_paper"
 
@@ -3774,7 +3774,7 @@ event = {
 	random = no
 	country = U63
 	name = "Financial crisis"
-	desc = ""
+	desc = "EVT_1400001023_DESC"
 	style = 2
 	picture = "Bank_Run"
 	trigger = {
@@ -3816,7 +3816,7 @@ event = {
 	}
 
 	name = "Guangdong Intervention"
-	desc = ""
+	desc = "EVT_1400001024_DESC"
 	style = 2
 	picture = "diplomatic_campaign"
 
@@ -3837,7 +3837,7 @@ event = {
 	country = U63 
 
 	name = "Dissolution of Political Affairs Committee"
-	desc = ""
+	desc = "EVT_1400001025_DESC"
 	style = 2
 	picture = "ccip_gmd"
 
@@ -8293,7 +8293,7 @@ event = {
 	style = 2
 
 	name = "New Cabinet Government" #Abe
-	desc = ""
+	desc = "EVT_1400002023_desc"
 	picture = "news_paper"
 
 	action = {
@@ -8318,7 +8318,7 @@ event = {
 	random = no
 	country = JAP
 	name = "EVT_120_NAME" #Yonai
-	desc = ""
+	desc = "EVT_1400002024_desc"
 	style = 2
 	picture = "news_paper"
 
@@ -8365,7 +8365,7 @@ event = {
 	country = JAP
 
 	name = "The Cabinet Resigns" #Yonai, Abe
-	desc = ""
+	desc = "EVT_1400002025_desc"
 	style = 2
 	picture = "minister_resign"
 
@@ -8408,7 +8408,7 @@ event = {
 	style = 2
 
 	name = "New Cabinet Government" #2nd Konoe Cabinet
-	desc = ""
+	desc = "EVT_1400002026_desc"
 	picture = "news_paper"
 	
 	action = {
@@ -8438,7 +8438,7 @@ event = {
 	trigger = { NOT = { ispuppet = JAP lost_national = { country = JAP value = 10 } } }
 
 	name = "Conflict between Military Factions"
- 	desc = ""
+ 	desc = "EVT_1400002027_desc"
 	style = 2
 	picture = "Kodoha"
 
@@ -8476,7 +8476,7 @@ event = {
 	}
 
 	name = "Kanmon Tunnel"
-	desc = ""
+	desc = "EVT_1400002028_desc"
 	style = 2
 	picture = "news_paper"
 
