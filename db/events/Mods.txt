@@ -7548,7 +7548,9 @@ event = {
 	one_action = yes
 
 	trigger = {
-		ispuppet = JAP
+		NOT = {
+			ispuppet = JAP
+		}
 		exists = JAP
 	}
 
