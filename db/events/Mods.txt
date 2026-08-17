@@ -825,6 +825,7 @@ event = {
 		command = { type = ministerofsecurity which = 55133 } 
 		command = { trigger = { minister = 55141 } type = ministerofintelligence which = 55141 } #Dai li
 		command = { type = event which = 1400000062 where = CHI when = 60 }
+		command = { type = event which = 1400000036 where = CHI when = 20 }
 	}
 }
 
@@ -1230,17 +1231,9 @@ event = {
 	style = 2
 	picture = "Republic_of_China_Election"
 
-	trigger = {	
-		event = { id = 1400000022 days = 20 }
-	}
-
-    date = { day = 0 month = january year = 1933 }
-    offset = 7
-    deathdate = { day = 29 month = december year = 1963 }
-
 	action = {
 		ai_chance = 100
-		name = "Election guarantee legitimacy."
+		name = "Election guarantee legitimacy"
 		command = { trigger = { headofstate = 55001 } type = setflag which = CHI_Chiang }
 		command = { trigger = { headofstate = 55350 } type = setflag which = CHI_Sun }
 		command = { trigger = { minister = 55001 } type = headofstate which = 55001 } #Chiang Kai-shek
@@ -7882,7 +7875,7 @@ event = {
     deathdate = { day = 29 month = december year = 1963 }
 
 	name = "The Cabinet Resigns" #Hayashi
-	desc = ""
+	desc = "EVT_1400002011_desc"
 	picture = "news_paper" 
 
 	action = {
@@ -8082,7 +8075,7 @@ event = {
 		command = { type = construct which = ic where = 1554 value = 1 } 
 		command = { type = construct which = ic where = 1557 value = 1 } 
 		command = { trigger = { NOT = { flag = JAP_Konoe_Cooperation } } type = dissent value = 3 }
-		command = { type = armamentminister which = 50335 } #Kaya Okinori
+		command = { type = armamentminister which = 50125 } #Kaya Okinori
 	}
 }
 
@@ -8449,16 +8442,8 @@ event = {
 	deathdate = { day = 25 month = february year = 1934 }
 
 	action = {
-		ai_chance = 10
-		name = "Support Imperial Way Faction(Kodoha) "
-		command = { trigger = { ai = no } type = dissent value = 2 } #Masaki Jinzaburo
-		command = { type = chiefofarmy which = 50343 }
-		command = { type = local_setflag which = Kodoha_support when = 1 value = 3 }
-		command = { type = setflag which = Kodoha_support }
-	}
-	action = {
-		ai_chance = 90
-		name = "Support Control Faction(Toseiha) "
+		ai_chance = 100
+		name = "It is concerning situation"
 		command = { trigger = { ai = no } type = dissent value = 2 } #Hayashi Senjuro
 		command = { type = chiefofarmy which = 50349 }
 		command = { type = local_setflag which = Kodoha_support when = 1 value = -3 }

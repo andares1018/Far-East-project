@@ -1297,11 +1297,10 @@
 		position	= headofgovernment
 		value		= 0
 		command		= { type = production which = consumer value = 0.0300 } 
-		command		= { type = dissent value = -0.0500 }
-		command 	= { type = diplomacy_cost value = -0.0500 }
+		command 		= { type = diplomacy_cost value = -0.0500 }
 		command		= { type = production which = supplies value = -0.0300 }
 		command		= { type = production which = upgrading value = 0.0300 }
-		command		= { type = dissent value = 0.0600 }
+		command		= { type = dissent value = -0.0250 }
 	}
 
 	minister =  { 
