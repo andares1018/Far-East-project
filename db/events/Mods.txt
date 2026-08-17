@@ -826,10 +826,8 @@ event = {
 		command = { trigger = { minister = 55141 } type = ministerofintelligence which = 55141 } #Dai li
 		command = { type = event which = 1400000062 where = CHI when = 60 }
 		command = { type = event which = 1400000036 where = CHI when = 20 }
-		command = { type = headofstate which = 55001 } #Chiang Kai-shek
-		command = { trigger = { NOT = { minister = 55001 } } type = headofstate which = 55350 } #Sun fo, #Chiang Kai-shek assassinated by the opposition
-		command = { trigger = { minister = 55122 NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55122 } #Weng Wenhao
-		command = { trigger = { NOT = { minister = 55122 } NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55118 } #Zhang Qun
+		command = { trigger = { minister = 55001 } type = setflag which = CHI_Chiang }
+		command = { trigger = { NOT = { minister = 55001 } } type = setflag which = CHI_Sun }
 	}
 }
 
@@ -1238,8 +1236,10 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "Election guarantee legitimacy"
-		command = { trigger = { headofstate = 55001 } type = setflag which = CHI_Chiang }
-		command = { trigger = { headofstate = 55350 } type = setflag which = CHI_Sun }
+		command = { trigger = { flag = CHI_Chiang } type = headofstate which = 55001 } #Chiang Kai-shek
+		command = { trigger = { flag = CHI_Sun } type = headofstate which = 55350 } #Sun fo, #Chiang Kai-shek assassinated by the opposition
+		command = { trigger = { minister = 55122 NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55122 } #Weng Wenhao
+		command = { trigger = { NOT = { minister = 55122 } NOT = { OR = { headofgovernment = 55042 headofgovernment = 55125 } } } type = headofgovernment which = 55118 } #Zhang Qun
 		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55042 } type = headofgovernment which = 55042 } #He Yingqin
 		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55125 } type = headofgovernment which = 55125 } #Chen Lifu
 		command = { trigger = { OR = { minister = 55122 NOT = { minister = 55122 } } headofgovernment = 55376 } type = headofgovernment which = 55376 } #Yan Xishan
