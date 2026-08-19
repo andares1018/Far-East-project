@@ -10581,7 +10581,7 @@ event = {
 		command = { type = set_domestic which = democratic value = 6 } 
 		command = { type = set_domestic which = political_left value = 4 }
 		command = { type = headofgovernment which = 50057 } 
-		command = { type = foreignminister which = 50155 } 
+		command = { type = foreignminister which = 50074 } 
 		command = { type = armamentminister which = 50296 } 
 		command = { type = ministerofsecurity which = 50242 } 
 		command = { type = ministerofintelligence which = 50289 } 
