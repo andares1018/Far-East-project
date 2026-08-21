@@ -417,7 +417,7 @@
 # 1400003753 JAP - Direction of Greater East Asian policy 
 # 1400003754 JAP - Relaxation of Economic control 
 # 1400003755 JAP - Discussion of Social control 
-# 1400003756 JAP - Fate of the National Mobilization Act 
+# 1400003756 JAP - Fate of the National Mobilization law 
 # 1400003757 JAP - Instability in the Cabinet 
 # 1400003758 JAP - General Election and Appointment of Prime Minister - Hata, Maeda, Kaya 
 # 1400003759 JAP - Aftermath of Wartime Economy 
@@ -830,9 +830,6 @@
 # MEX - Mexico Supports Republican Spain - WiF event #
 # SPR - Mexico Supports Republican Spain - WiF event #
 # BRA - The Second Rubber Boom - WiF event #
-# POL - Four-years Plan - WiF event #
-# POL - The Central Industrial District (1938) - WiF event #
-# POL - The Central Industrial District (1939) - WiF event #
 # FRA - Matignon Agreements - WiF event #
 # SOV - Second Five-Year Plan - WiF event #
 # SOV - Third Five-Year Plan - WiF event #

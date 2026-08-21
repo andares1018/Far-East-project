@@ -1193,7 +1193,7 @@ event = {
 		ai_chance = 100
 		name = "ACTION_NAME_DAMN"
 		command = { type = industrial_modifier which = total value = -20 }
-		command = { type = dissent value = 20 }
+		command = { type = dissent value = 25 }
 		command = { type = free_money value = -1 }
 	}
 }
@@ -4934,7 +4934,7 @@ event = {
 		ai_chance = 100
 		name = "It's time to reconstruction the country..."
 		command = { type = industrial_modifier which = total value = -10 }
-		command = { type = dissent value = 10 }
+		command = { type = dissent value = 20 }
 		command = { type = local_setflag which = economic_instability } 
 	}
 }
@@ -5000,7 +5000,7 @@ event = {
 	action = {
 		name = "ACTION_NAME_GREAT"
 		command = { type = domestic which = defense_lobby value = 1 }
-		command = { type = dissent value = -5 }
+		command = { type = dissent value = -2 }
 	}
 }
 
@@ -5702,7 +5702,7 @@ event = {
 	deathdate = { day = 29 month = december year = 1963 }
 
 	action = {
-		name = "We need to get our ideas and agenda right."
+		name = "We need to get our ideas and agenda right"
 		ai_chance = 100
 		command = { type = dissent value = -1 } 
 		command = { type = domestic which = political_left value = 1 }
@@ -5726,9 +5726,9 @@ event = {
 		trigger = { 
 			flag = CHC_Maoism
 		}
-		name = "Sectarianists deserve criticism."
+		name = "Sectarianists deserve criticism"
 		command = { type = dissent value = -2.5 }
-		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = freedom value = -3 }
 		command = { type = domestic which = political_left value = 1 }
 		command = { type = event which = 1400001518 where = CHC when = 180 }
 	}
@@ -5736,7 +5736,7 @@ event = {
 		trigger = { 
 			flag = CHC_coalition
 		}
-		name = "We must expand and embrace the United front."
+		name = "We must expand and embrace the United front"
 		command = { type = dissent value = 2 }
 		command = { type = domestic which = political_left value = -1 }
 		command = { type = domestic which = freedom value = 1 }
@@ -9878,7 +9878,7 @@ event = {
 	id = 1400003756
 	random = no
 	country = JAP
-	name = "Fate of the National Mobilization Act" 
+	name = "Fate of the National Mobilization law" 
 	desc = "" 
 	style = 2
 	picture = "Japanese Parliament"
