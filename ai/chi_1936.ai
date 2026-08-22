@@ -516,8 +516,8 @@ garrison = {
 	revolt_risk_mult	= 0.2
 
 	# PRIORITIES:
-	beach			= 20 # 50	# Beach level 2
-	capital		= 70	# Our capital
+	beach			= 50	# Beach level 2
+	capital		= 60	# Our capital
 	human_border	= 0		# Ignored for allied human players
 	war_target		= 50	# The next country targeted for attack by this AI
 	reserves 		= 80
@@ -535,7 +535,7 @@ garrison = {
 		POR = -1
 		JAP = 70
 		CHC = 40
-		MAN = 70
+		MAN = 50
 		CSX = 20
 		SIK = -1
 		CXB = -1
@@ -557,7 +557,7 @@ front = {
 	distrib_vs_human 	= op_defensive
 
 	enemy_reinf_days	= 5
-	reserve_prop		= 0.3
+	reserve_prop		= 0.4
 	panic_ratio_vs_ai	= 3.0
 	panic_ratio_vs_human	= 3.0
 	base_attack_odds	= 1.3

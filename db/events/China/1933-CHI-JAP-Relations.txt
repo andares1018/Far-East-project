@@ -130,6 +130,7 @@ event = {
 		command = { type = access which = CHI } #Represent CHI garrison in Beijing
 		command = { type = add_corps which = "Demilitarized Zone Peace Preservation Corps" value = land where = 1247 } 
 		command = { type = add_division which = "Police Detachment" value = garrison when = 3 where = police }
+		command = { type = name where = UCS which = EHAC }
 		command = { type = headofstate which = 1330009 }
 		command = { type = headofgovernment which = 1330010 }
 		command = { type = foreignminister which = 1330016 } 

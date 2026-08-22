@@ -14095,11 +14095,25 @@ event = {
 	decision_trigger = { 
 		control = { province = 1247 data = -3 }
 		control = { province = 1241 data = -3 }
+		OR = {
+		control = { province = 1252 data = -3 }
+		control = { province = 1330 data = -3 }
+		}
 	}
 	
 	trigger = {
 		control = { province = 1247 data = -3 }
 		control = { province = 1241 data = -3 }
+		OR = {
+		and = {
+		control = { province = 1252 data = -3 }
+		NOT = ( exists = U64 )
+			}
+		and = {
+		control = { province = 1330 data = -3 }
+		NOT = ( exists = U64 )
+			}
+		}
 		NOT = {
 		event = 2012004
 		event = 2011017
@@ -14137,7 +14151,7 @@ event = {
 		command = { trigger = { puppet = { country = U64 country = JAP } } type = inherit which = U64 } 
 		command = { trigger = { NOT = { exists = UCS } } type = independence which = UCS value = 1 when = 0 }
 		command = { type = make_puppet which = UCS } 
-		
+		command = { type = name where = UCS which = UCS }
 	}
 }
 

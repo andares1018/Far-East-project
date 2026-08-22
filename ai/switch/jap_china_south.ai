@@ -39,7 +39,7 @@ invasion = {
 		1338  = 2000  #Shanghai
 		1333  = 2000  #Nanton
 		1334  = 2000  #Lianyuang
-		1367  = 1500  #Zhanjiang
+		1367  = -1  #Zhanjiang
 		1358  = -1  #Fuzhou
 		1369  = -1  #Guangzhou
 	} 

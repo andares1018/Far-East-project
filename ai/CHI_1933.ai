@@ -544,8 +544,8 @@ garrison = {
 	revolt_risk_mult	= 0.2
 
 	# PRIORITIES:
-	beach			= 30 # 50	# Beach level 2
-	capital		= 70	# Our capital
+	beach			= 70	# Beach level 2
+	capital		= 50	# Our capital
 	human_border	= 0		# Ignored for allied human players
 	war_target		= 50	# The next country targeted for attack by this AI
 	reserves 		= 80

@@ -3186,7 +3186,10 @@ UCS = { # Northern China
 	date = { day = 0 month = january year = 1931 }
 	expirydate = { day = 29 month = december year = 1966 }
 	minimum = { 1245 }
-	extra = { 1247 1241 1250 1252 1249 1254 1253 1248 1243 1242 1323 1244 1330 1329 1331 1328 1332 1327 }
+	extra = { 1247 1241 }
+claims = {
+	1250 1252 1249 1254 1253 1248 1243 1242 1323 1244 1330 1329 1331 1328 1332 1327 
+}
 	country = { JAP }
 	capital = 1247 
 	revolt = no
