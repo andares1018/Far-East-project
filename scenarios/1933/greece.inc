@@ -9,6 +9,7 @@
   
  country = 
  {  tag                    = GRE 
+	flag_ext           = _Republic
 	ai = "gre_1936.ai"
 	ai_settings	= { flags = { MOB1 = yes MOB2 = yes MOB3 = yes MOB4 = yes MOB5 = yes } }
 	dissent = 20
@@ -403,7 +404,7 @@ airunit = {
     base = 377
     division = {
         id = { type = 19111 id = 40 }
-        name = "111 Ptéryga Machis"
+        name = "111 Pt ryga Machis"
         strength = 10
         type = interceptor
         model = 5
@@ -416,7 +417,7 @@ airunit = {
         base = 377
         division = {
             id = { type = 15500 id = 42 }
-            name = "112 Ptéryga Machis"
+            name = "112 Pt ryga Machis"
             type = naval_bomber
             model = 0
             }

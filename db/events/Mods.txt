@@ -3777,7 +3777,6 @@ event = {
 		event = 1400001009
 		}
 		event = { id = 1400001008 days = 180 } 
-		puppet = { country = U63 country = CHI }
 	}
 
     date = { day = 0 month = january year = 1933 }
@@ -14107,11 +14106,11 @@ event = {
 		OR = {
 		and = {
 		control = { province = 1252 data = -3 }
-		NOT = ( exists = U64 )
+		NOT = { exists = U64 }
 			}
 		and = {
 		control = { province = 1330 data = -3 }
-		NOT = ( exists = U64 )
+		NOT = { exists = U64 }
 			}
 		}
 		NOT = {
