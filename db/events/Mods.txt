@@ -5016,6 +5016,12 @@ event = {
 	trigger = {	
 		war = { country = CHI country = JAP } #balance of the 2nd Sino-Japanese War is hell!!!
 		random = 40
+			NOT = {
+			control = { province = 1347 data = -3 }
+				}
+			NOT = {
+			control = { province = 1337 data = -3 }
+				}
 		OR = {
 		local_flag = { which = Military_instability when = 1 value = 5 }
 		local_flag = { which = Military_instability when = 1 value = 4 }
@@ -5030,9 +5036,6 @@ event = {
 			NOT = {
 			control = { province = 1252 data = -3 }
 				}
-			NOT = {
-			control = { province = 1347 data = -3 }
-				}
 			}
 			OR = {
 			NOT = {
@@ -5044,9 +5047,6 @@ event = {
 			}
 			OR = {
 			NOT = {
-			control = { province = 1337 data = -3 }
-				}
-			NOT = {
 			control = { province = 1338 data = -3 }
 				}
 			NOT = {
@@ -5055,7 +5055,7 @@ event = {
 			}
 		}
 
-    date = { day = 0 month = january year = 1937 }
+    date = { day = 0 month = january year = 1939 }
     offset = 7
     deathdate = { day = 29 month = december year = 1999 }
 
@@ -5063,7 +5063,7 @@ event = {
 		ai_chance = 100
 		name = "Arise! ye who refuse to be bond slaves!"
 		command = { type = dissent value = -10 }
-		command = { type = supplies value = 5000 }
+		command = { type = supplies value = 10000 }
 		command = { type = tc_mod value = 5 }
 		command = { trigger = { ai = yes local_flag = Military_instability } type = local_setflag which = Military_instability when = 1 value = -1 }
 		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 10 }
@@ -5087,6 +5087,9 @@ event = {
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
@@ -5101,14 +5104,24 @@ event = {
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1297 } #Chengdu
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1305 } #Guiyang
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1378 } #Guilin
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1390 } #Kunming
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 	}
