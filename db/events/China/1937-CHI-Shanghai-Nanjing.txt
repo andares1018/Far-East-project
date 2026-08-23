@@ -195,9 +195,9 @@ event = {
 		}
 		name = ACTION_NAME_DAMN
 		command = { trigger = { NOT = { dissent = 20 } } type = dissent value = 10 }
-		command = { type = max_organization which = land value = -40 }
+		command = { type = max_organization which = land value = -27 }
 		command = { type = morale which = land value = -20 }
-		command = { type = local_setflag which = Military_instability when = 1 value = 4 }
+		command = { type = local_setflag which = Military_instability when = 1 value = 3 }
 		#command = { type = local_setflag which = 1330110082 }
 		#command = { trigger = {
 		#				NOT = {
@@ -296,7 +296,7 @@ event = {
 		name = ACTION_NAME_GREAT
 		command = { type = dissent value = -1 }
 		command = { type = local_setflag which = Military_instability when = 1 value = -1 }
-		command = { trigger = { local_flag = Military_instability } type = max_organization which = land value = 10 }
+		command = { trigger = { local_flag = Military_instability } type = max_organization which = land value = 9 }
 		command = { trigger = { local_flag = Military_instability } type = morale which = land value = 5 }
 		command = { type = clrflag which = CHI_retraining }
 		command = { type = ground_def_eff value = -0.025 when = 1 }

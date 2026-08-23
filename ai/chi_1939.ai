@@ -208,8 +208,8 @@ tech_sharing = {
 ###################################
 spyprefs =
 {
-	percentage_on_spies 		= 0.2
-	percentage_foreign_mission 	= 0.6
+	percentage_on_spies 		= 0.1
+	percentage_foreign_mission 	= 0.3
 
 	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
 	spyprefsdata = 
@@ -519,15 +519,15 @@ garrison = {
 	revolt_risk_mult	= 0.2
 
 	# PRIORITIES:
-	beach			= 30 # 50	# Beach level 2
-	capital		= 70	# Our capital
+	beach			= 70	# Beach level 2
+	capital		= 50	# Our capital
 	human_border	= 0		# Ignored for allied human players
 	war_target		= 50	# The next country targeted for attack by this AI
 	reserves 		= 80
 
 	# Borders with specific countries
 	country_priorities = {
-		SOV = 1
+		SOV = 10
 		MON = -1
 		TIB = -1
 		NEP = -1
@@ -547,7 +547,7 @@ garrison = {
 		U63 = 10
 		U64 = 10
 		U65 = 10
-		U66 = 1
+		U66 = 10
 		U67 = 10
 	}
 	province_priorities = {	1241 = 250 1328 = 250 1333 = 250 1334 = 250 1338 = 250 1358 = 250 1367 = 250 1369 = 250 }

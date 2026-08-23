@@ -9,8 +9,8 @@ war = 1
 upgrading = 0.35
 reinforcement = 0.0
 strat_redeploy_threshold = 25
-exp_force_ratio = 0
-exp_force_ratios = { }
+exp_force_ratio = 0.5
+exp_force_ratios = { CHI = 1.0 } 
 no_exp_forces_to = { }
 use_offensive_supply = no
 
@@ -193,8 +193,8 @@ tech_sharing = {
 ###################################
 spyprefs =
 {
-	percentage_on_spies 		= 0.2
-	percentage_foreign_mission 	= 0.6
+	percentage_on_spies 		= 0.1
+	percentage_foreign_mission 	= 0.3
 
 	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
 	spyprefsdata = 
@@ -283,7 +283,7 @@ construction = {
 }
 
 military = { 
-	relative_build_scheme 	= yes 
+	relative_build_scheme 	= no 
 	max_batch_peace 		= 680 
 	max_batch_war 			= 500 
 	max_batch_home_front = 500

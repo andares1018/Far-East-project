@@ -2779,6 +2779,8 @@ event = {
 		ai_chance = 100
 		command = { type = dissent value = -5 } 
 		command = { type = domestic which = freedom value = 1 }
+		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 9 }
+		command = { trigger = { ai = yes local_flag = Military_instability } type = morale which = land value = 5 } 
 	}
 }
 
@@ -4012,8 +4014,8 @@ event = {
 
 	action_a = {
 		name = "ACTION_NAME_OK"
-		command = { type = set_domestic which = democratic value = 3 } 
-		command = { type = set_domestic which = political_left value = 6 }	
+		command = { type = set_domestic which = democratic value = 4 } 
+		command = { type = set_domestic which = political_left value = 7 }	
 		command = { type = capital which = 1280 }	
 		command = { type = headofstate which = 1400026 } 
 		command = { type = headofgovernment which = 1400028 } 
@@ -4316,10 +4318,10 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "Damn!"
-		command = { type = max_organization which = land value = -10 }
-		command = { type = morale which = land value = -5 }
+		command = { type = max_organization which = land value = -18 }
+		command = { type = morale which = land value = -10 }
 		command = { type = dissent value = 2.5 }
-		command = { type = local_setflag which = Military_instability when = 1 value = 1 }
+		command = { type = local_setflag which = Military_instability when = 1 value = 2 }
 	}
 }
 
@@ -5054,7 +5056,7 @@ event = {
 			}
 		}
 
-    date = { day = 0 month = january year = 1939 }
+    date = { day = 0 month = january year = 1938 }
     offset = 7
     deathdate = { day = 29 month = december year = 1999 }
 
@@ -5065,7 +5067,7 @@ event = {
 		command = { type = supplies value = 10000 }
 		command = { type = tc_mod value = 5 }
 		command = { trigger = { ai = yes local_flag = Military_instability } type = local_setflag which = Military_instability when = 1 value = -1 }
-		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 10 }
+		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 9 }
 		command = { trigger = { ai = yes local_flag = Military_instability } type = morale which = land value = 5 } 
 		command = { trigger = { control = { province = 1264 data = -3 } }type = construct which = land_fort where = 1264 value = 2 } #Lanzhou
 		command = { trigger = { control = { province = 1271 data = -3 } }type = construct which = land_fort where = 1271 value = 2 } #Wuzhong
@@ -5087,17 +5089,12 @@ event = {
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1299 } #Chongqing
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1297 } #Chengdu
@@ -5111,7 +5108,6 @@ event = {
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1378 } #Guilin
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
@@ -5136,6 +5132,7 @@ event = {
 	decision_desc = ""
   	style = 2
   	picture = "ccip_hanjian"
+	decision_picture = "decision_Eighth_Route"
 
 	decision = {
 		war = { country = CHI country = JAP }

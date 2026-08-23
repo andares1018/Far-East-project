@@ -26,7 +26,14 @@ use_offensive_supply = no
 combat = { }
 
 claim_acceptance = -100
-
+resistance = {  
+	ENG = 5
+	SOV = 7
+	USA = 4
+	FRA = 4
+	POR = 8
+	JAP = 8
+}
 demand_claims = {
 }
 befriend = {
@@ -213,8 +220,8 @@ tech_sharing = {
 ###################################
 spyprefs =
 {
-	percentage_on_spies 		= 0.2
-	percentage_foreign_mission 	= 0.6
+	percentage_on_spies 		= 0.1
+	percentage_foreign_mission 	= 0.3
 
 	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
 	spyprefsdata = 
@@ -306,7 +313,7 @@ construction = {
 }
 
 military = { 
-	relative_build_scheme 	= yes
+	relative_build_scheme 	= no
 	max_batch_peace 		= 1200 
 	max_batch_war 			= 270 
 	max_batch_home_front 	= 270
@@ -315,11 +322,11 @@ military = {
 
 
 	#### Divisions etc...
-	infantry 		= 75		#30
+	infantry 		= 73		#30
 	cavalry 		= 0		#5
 	motorized 		= 0
 	mechanized 		= 0
-	light_armor 	= 0
+	light_armor 	= 2
 	armor 			= 0
 	paratrooper 	= 0
 	marine 			= 0
@@ -454,16 +461,6 @@ technology = {
 		# Airborne Infantry
 		1680 1690 1700 1710 1720 1730 1740
 
-		
-		#Light armor brigades only techs / advanced Light armor
-		2010 2630 2640 2646 2650 2060
-
-		#Light armor brigades & Divisions techs
-		2030 2040 2050 
-
-		#Medium armor brigades & Divisions techs
-		2070 2080 2090 2140 11000 2660 11010 2670
-
 		#Heavy armor brigades
 		2620 2100 2110 2120 2126 2127
 
@@ -471,22 +468,22 @@ technology = {
 		2130
 
 		#Tank Destroyer
-		2170 2180 2850 2190 2200 2210 11020 11026
+		2850 2190 2200 2210 11020 11026
 
 		#Self-Propelled Artillery
-		2220 2230 2240 2250 11030 11040 2960 2966
+		11030 11040 2960 2966
 
 		#Static Anti-Air Artillery
-		2800 2450 21180 21190 21200 2460 2470 2480 2490 2500 11080
+		21190 21200 2460 2470 2480 2490 2500 11080
 
 		# Anti-Air Brigades
-		2810 2820 2510 2520 2530 2540 11090 
+		2510 2520 2530 2540 11090 
 
 		#Anti tank
-		2400 2410 2420 2430 
+		2420 2430 
 
 		# Rocket
-		2970 2370 2380 2390 
+		2370 2380 2390 
 
 		# SP-Rocket
 		2980 2260 2270 2280 11050 11060 2990
@@ -499,9 +496,12 @@ technology = {
 
 		#SEAPLANES
 		4780 4790 4850 4860
-
-		# Land Doctrines
-		6900
+		
+		# Air Transports 
+		4270 15180 15190
+		
+		# Close Air Support
+		4400 4170 4280 4450 4180 15120 15130 
 
 		# Strategic Destruction - Flying Armada
 		9140 9150 9160 9170 9180 9430 9440 9450 9460
@@ -511,7 +511,7 @@ technology = {
 	infantry 		= 6
 	industry 		= 3
 	aircraft 		= 2
-	naval 			= 0
+	naval 			= 1
 	land_doctrines 	= 4
 	secret_weapons 	= 1
 	air_doctrines 	= 2
@@ -522,24 +522,24 @@ technology = {
 # Ground Combat, Leaders and Garrisons
 ###################################
 leader_ratio = {
-	land_field_marshal 	=0.02
-	land_general 		=0.031
-	land_lt_general 	=0.41
+	land_field_marshal 	=0.015
+	land_general 		=0.03
+	land_lt_general 	=0.5
 
 	sea_grand_admiral 	=0.02
 	sea_admiral 		=0.061
 	sea_vice_admiral 	=0.401
 
 	air_marshal 		=0.02
-	air_general 		=0.091
-	air_lt_General 		=0.11
+	air_general 		=0.05
+	air_lt_General 		=0.15
 }
 garrison = {
 	defend_overseas_beaches = yes
 	home_multiplier 	= 1.0
 	overseas_multiplier = 0.5
 	home_peace_cap 		= 20
-	war_zone_odds 		= 2.0
+	war_zone_odds 		= 1.5
 	key_point_prio_mult	= 0.1
 	revolt_risk_mult	= 0.2
 
@@ -561,8 +561,8 @@ garrison = {
 		SIA = 40
 		ENG = -1
 		POR = -1
-		JAP = 50
-		CHC = 100
+		JAP = 60
+		CHC = 80
 		MAN = 50
 		UPE = 40
 		CSX = -1
@@ -577,7 +577,7 @@ garrison = {
 		U63 = 10
 		U64 = 10
 		U65 = 10
-		U66 = 1
+		U66 = 10
 		U67 = 10
 	}
 	province_priorities = {	1241 = 50 1328 = 50 1333 = 50 1334 = 50 1338 = 50 1358 = 50 1367 = 50 1369 = 50 1331 = -1 }
@@ -585,14 +585,14 @@ garrison = {
 }
 front = { 
 	recklessness 		= 0 # 0-3
-	distrib_vs_ai 		= offensive
+	distrib_vs_ai 		= op_defensive
 	distrib_vs_human 	= op_defensive
 
 	enemy_reinf_days	= 5
 	reserve_prop		= 0.3
 	panic_ratio_vs_ai	= 3.0
 	panic_ratio_vs_human	= 3.0
-	base_attack_odds	= 1.3
+	base_attack_odds	= 1.2
 	min_attack_odds		= 1.15
 	max_attack_odds		= 3.0
 	reinforce_odds		= 1.1
@@ -606,33 +606,35 @@ front = {
 	ground_defense 	= 1.0
 	dig_in 			= 1.0 # Against defender
 
-	frozen_attack 	= 1.0
-	snow_attack 	= 1.0
-	blizzard_attack = 1.0
-	storm_attack 	= 1.0
+	frozen_attack 	= 0.5
+	snow_attack 	= 0.8
+	blizzard_attack = 0.5
+	storm_attack 	= 0.9
 	muddy_attack 	= 1.0
 
 	occupied 	= 0.7
 	owned 		= 0.7
 
-	jungle_attack 	= 1.0
-	mountain_attack = 1.0
-	swamp_attack 	= 1.0
-	forest_attack 	= 1.0
-	hill_attack 	= 1.0
-	urban_attack 	= 1.0
-	river 			= 1.0
+	jungle_attack 	= 0.9
+	mountain_attack = 0.8
+	swamp_attack 	= 0.9
+	forest_attack 	= 0.9
+	hill_attack 	= 0.9
+	urban_attack 	= 1.2
+	river 			= 0.9
+	smallfort 	= 1.2
+	largefort	= 1.4
 
 	enemy_handicap = { 
-		JAP = 30
+		JAP = 20
 	} 
 	passivity = {
-		#JAP = 50
-		#U87 = 50
-		#MEN = 80
-		#U03 = 100
-		#MAN = 80
-		#SIA = 100
+		JAP = 30
+		U87 = 50
+		MEN = 80
+		U03 = 100
+		MAN = 80
+		SIA = 100
 	} 
 } 
 ###################################

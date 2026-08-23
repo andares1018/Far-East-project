@@ -1,16 +1,17 @@
 # Communist China Japan attack AI File by Lothos
 
 neutrality = 70 
-war = 50
+war = 30
 
 ###################################
 # Diplomacy
 ###################################
 combat = {
 	JAP = 200
+	GER = 0
 }
 befriend = {
-	CSX = 100
+	SOV = 100
 	SIK = 100
 	CXB = 100
 	CYN = 100
@@ -18,7 +19,7 @@ befriend = {
 	CHI = 100
 }
 protect = {
-	CSX = 100
+	SOV = 100
 	SIK = 100
 	CXB = 100
 	CYN = 100
@@ -39,9 +40,10 @@ garrison = {
 		FRA = -1
 		ENG = -1
 		POR = -1
-		JAP = 150
-		CHI = 20
+		JAP = 100
+		CHI = 40
 		MAN = 70
+		MEN = 70
 		CSX = 10
 		SIK = -1
 		CXB = -1

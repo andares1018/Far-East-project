@@ -65,7 +65,7 @@ event = {
 	random = no
 	country = USA
 
-	name = "1937 Sino-American Currency Agreement"
+	name = "Sino-American Currency Agreement"
 	desc = EVT_84_DESC
 	style = 2
   	picture = "money_devaluation"
@@ -98,7 +98,7 @@ event = {
 	random = no
 	country = CHI
 
-	name = "1937 Sino-American Currency Agreement"
+	name = "Sino-American Currency Agreement"
 	desc = EVT_85_DESC
 	style = 2
 	picture = "Credit_flow"

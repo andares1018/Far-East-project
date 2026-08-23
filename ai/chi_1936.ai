@@ -1,7 +1,7 @@
 # China 1936 AI File by Lothos
 
 switch = no # [yes/no]
-max_front_ratio = 1.2
+max_front_ratio = 3.8
 max_front_ratios = {
 	CHC = 1.0
 }
@@ -25,7 +25,7 @@ use_offensive_supply = no
 ###################################
 combat = { }
 
-claim_acceptance = -69
+claim_acceptance = -70
 
 demand_claims = {
 }
@@ -43,6 +43,7 @@ protect = {
 	CYN = 100
 	CGX = 100
 }
+
 target = {
 	#Japan 
 	1552 = 100
@@ -133,7 +134,7 @@ target = {
 
 	#Portugal
 	1372 = 10 # Macao
-} 
+}
 trade = {
 	cancel_deal_threshold = 2
 
@@ -208,8 +209,8 @@ tech_sharing = {
 ###################################
 spyprefs =
 {
-	percentage_on_spies 		= 0.2
-	percentage_foreign_mission 	= 0.6
+	percentage_on_spies 		= 0.1
+	percentage_foreign_mission 	= 0.3
 
 	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
 	spyprefsdata = 
@@ -304,29 +305,29 @@ military = {
 
 
 	#### Divisions etc...
-	infantry 		= 2		#30
-	cavalry 		= 1		#5
+	infantry 		= 45	#30
+	cavalry 		= 5		#5
 	motorized 		= 0
 	mechanized 		= 0
 	light_armor 	= 0
 	armor 			= 0
 	paratrooper 	= 0
 	marine 			= 0
-	bergsjaeger 	= 1 	#10
+	bergsjaeger 	= 10 	#10
 	garrison		= 0
-    hq 				= 1 	#3
-	militia 		= 93	#37
-#			98	#90 %
-	interceptor 	= 1	#10
+    hq 				= 3 	#3
+	militia 		= 30	#37
+#			95	#90 %
+	interceptor 	= 3	#10
 	multi_role 		= 0
 	cas 			= 0
 	strategic_bomber = 0
-	tactical_bomber = 1	#5
+	tactical_bomber = 3	#5
 	naval_bomber 	= 0
 	transport_plane = 0
 	flying_bomb 	= 0
 	flying_rocket 	= 0
-#			2	#10 %
+#			4	#10 %
 	battleship 		= 0
 	carrier 		= 0
 	destroyer 		= 0
@@ -334,27 +335,26 @@ military = {
 	heavy_cruiser 	= 0
 	battlecruiser 	= 0
 	submarine 		= 0
-	transports 		= 0
-#				0 %
+	transports 		= 1
+#				1 %
 
 	#### Brigades
-	artillery 			= 2 #10
+	artillery 			= 15 #10
 	sp_artillery 		= 0
-	cavalry_brigade	= 2	#0	#Cav Brigade
-	sp_anti_air 	= 0
-	medium_armor 			= 0
+	cavalry_brigade	= 6	#0	#Cav Brigade
+	sp_anti_air 	= 1
+	medium_armor 			= 1
 	tank_destroyer 		= 0
-	light_armor_brigade = 0
+	light_armor_brigade = 2
 	heavy_armor 		= 0
 	super_heavy_armor 	= 0
-	armored_car 		= 1 #5
-	anti_air 			= 0
+	armored_car 		= 2 #5
+	anti_air 			= 2
 	police 				= 0
-	engineer 			= 1	#5
+	engineer 			= 4	#5
 
 	cag 				= 100.000
 	escort 				= 100.0000
-
 	naval_asw			= 0.0000 
 	naval_anti_air_s	= 0.0000 
 	naval_radar_s		= 0.0000 
@@ -451,6 +451,9 @@ technology = {
 		# Radar Warning
 		5410 5416 5417 5420 5426 5430 5440 5466 5450 5460 53030 5476 53070
 		
+		# Computers
+		5310 54010 54020 54030 5320 5330 5340
+
 		# CRYPTOGRAPHY
 		5316 5326 5327 5350 5360 5370 5380 5390 5400 53060 53116
 
@@ -479,8 +482,8 @@ technology = {
 		9140 9150 9160 9170 9180 9430 9440 9450 9460
 	}
  
-	armor 			= 3
-	infantry 		= 7
+	armor 			= 1
+	infantry 		= 6
 	industry 		= 3
 	aircraft 		= 2
 	naval 			= 1
@@ -516,15 +519,15 @@ garrison = {
 	revolt_risk_mult	= 0.2
 
 	# PRIORITIES:
-	beach			= 50	# Beach level 2
-	capital		= 60	# Our capital
+	beach			= 70 # 50	# Beach level 2
+	capital		= 50	# Our capital
 	human_border	= 0		# Ignored for allied human players
 	war_target		= 50	# The next country targeted for attack by this AI
 	reserves 		= 80
 
 	# Borders with specific countries
 	country_priorities = {
-		SOV = 1
+		SOV = 10
 		MON = -1
 		TIB = -1
 		NEP = -1
@@ -534,14 +537,13 @@ garrison = {
 		ENG = -1
 		POR = -1
 		JAP = 70
-		CHC = 40
-		MAN = 50
-		CSX = 20
+		CHC = -1
+		MAN = 70
+		CSX = -1
 		SIK = -1
 		CXB = -1
 		CYN = -1
-		CGX = 20
-		U74 = 70
+		CGX = -1
 		U63 = 10
 		U64 = 10
 		U65 = 10
@@ -557,13 +559,13 @@ front = {
 	distrib_vs_human 	= op_defensive
 
 	enemy_reinf_days	= 5
-	reserve_prop		= 0.4
+	reserve_prop		= 0.3
 	panic_ratio_vs_ai	= 3.0
 	panic_ratio_vs_human	= 3.0
-	base_attack_odds	= 1.3
+	base_attack_odds	= 1.25
 	min_attack_odds		= 1.15
-	max_attack_odds		= 3.0
-	reinforce_odds		= 1.1
+	max_attack_odds		= 2.2
+	reinforce_odds		= 1.05
 	withdraw_odds		= 0.8
 	support_defense_prop 	= 0.4
 
@@ -574,27 +576,27 @@ front = {
 	ground_defense 	= 1.0
 	dig_in 			= 1.0 # Against defender
 
-	frozen_attack 	= 1.0
-	snow_attack 	= 1.0
-	blizzard_attack = 1.0
-	storm_attack 	= 1.0
-	muddy_attack 	= 1.0
+	frozen_attack 	= 0.7
+	snow_attack 	= 0.8
+	blizzard_attack = 0.7
+	storm_attack 	= 0.85
+	muddy_attack 	= 0.9
 
 	occupied 	= 0.7
 	owned 		= 0.7
 
-	jungle_attack 	= 1.0
-	mountain_attack = 1.0
+	jungle_attack 	= 0.95
+	mountain_attack = 0.8
 	swamp_attack 	= 1.0
 	forest_attack 	= 1.0
-	hill_attack 	= 1.0
+	hill_attack 	= 0.93
 	urban_attack 	= 1.0
-	river 			= 1.0
+	river 			= 0.97
 
 	enemy_handicap = { } 
 	passivity = {
-		#JAP = 40
-		#MEN = 70
+		JAP = 40
+		MEN = 70
 	} 
 } 
 ###################################

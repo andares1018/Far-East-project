@@ -208,8 +208,8 @@ tech_sharing = {
 ###################################
 spyprefs =
 {
-	percentage_on_spies 		= 0.2
-	percentage_foreign_mission 	= 0.6
+	percentage_on_spies 		= 0.1
+	percentage_foreign_mission 	= 0.3
 
 	# Used for Intell efficiency and for setting minimum chance to succeed for the AI to do that particular type of mission
 	spyprefsdata = 
