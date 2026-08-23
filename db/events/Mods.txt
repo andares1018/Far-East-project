@@ -2779,8 +2779,6 @@ event = {
 		ai_chance = 100
 		command = { type = dissent value = -5 } 
 		command = { type = domestic which = freedom value = 1 }
-		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 9 }
-		command = { trigger = { ai = yes local_flag = Military_instability } type = morale which = land value = 5 } 
 	}
 }
 
@@ -4318,10 +4316,10 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "Damn!"
-		command = { type = max_organization which = land value = -18 }
-		command = { type = morale which = land value = -10 }
-		command = { type = dissent value = 2.5 }
-		command = { type = local_setflag which = Military_instability when = 1 value = 2 }
+		command = { type = max_organization which = land value = -9 }
+		command = { type = morale which = land value = -5 }
+		command = { type = dissent value = 5 }
+		command = { type = local_setflag which = Military_instability when = 1 value = 1 }
 	}
 }
 
@@ -4345,11 +4343,11 @@ event = {
 	decision_trigger = { 
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 120 }
+	event = { id = 1330110081 days = 100 }
 	NOT = { event = 2011007 }
 		}
 	and = {
-	event = { id = 1330110081 days = 60 }
+	event = { id = 1330110081 days = 50 }
 	event = 2011007 
 		}
 	}
@@ -4359,11 +4357,11 @@ event = {
 	trigger = {
 	OR = {
 	and = {
-	event = { id = 1330110081 days = 120 }
+	event = { id = 1330110081 days = 100 }
 	NOT = { event = 2011007 } # The Nanjing Massacre
 		}
 	and = {
-	event = { id = 1330110081 days = 60 }
+	event = { id = 1330110081 days = 50 }
 	event = 2011007 
 		}
 	}
@@ -4392,8 +4390,8 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "We need to overcome this" 
-		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 120 }
-		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 60 }
+		command = { trigger = { NOT = { event = 2011007 } } type = event which = 1330110084 where = CHI when = 100 }
+		command = { trigger = { event = 2011007 } type = event which = 1330110084 where = CHI when = 50 }
 		command = { type = dissent value = -0.5 }
 		command = { type = supplies value = -500 }
 		command = { type = setflag which = CHI_retraining }
@@ -5066,9 +5064,6 @@ event = {
 		command = { type = dissent value = -10 }
 		command = { type = supplies value = 10000 }
 		command = { type = tc_mod value = 5 }
-		command = { trigger = { ai = yes local_flag = Military_instability } type = local_setflag which = Military_instability when = 1 value = -1 }
-		command = { trigger = { ai = yes local_flag = Military_instability } type = max_organization which = land value = 9 }
-		command = { trigger = { ai = yes local_flag = Military_instability } type = morale which = land value = 5 } 
 		command = { trigger = { control = { province = 1264 data = -3 } }type = construct which = land_fort where = 1264 value = 2 } #Lanzhou
 		command = { trigger = { control = { province = 1271 data = -3 } }type = construct which = land_fort where = 1271 value = 2 } #Wuzhong
 		command = { trigger = { control = { province = 1297 data = -3 } }type = construct which = land_fort where = 1297 value = 1 } #Chengdu

@@ -301,5 +301,9 @@ event = {
 		command = { type = clrflag which = CHI_retraining }
 		command = { type = ground_def_eff value = -0.025 when = 1 }
 		command = { type = speed which = land value = -2 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 	}
 }
