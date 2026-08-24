@@ -2915,8 +2915,6 @@
 		command     = { type = unit which = bergsjaeger when = morale value = 0.05 }
 		command 	= { type = leader_skill value = -0.0500 }
 		command     = { type = resource which = money value = -0.0750 }
-		command     = { type = diplomacy_chances which = influence_nation when = all value = -5 }
-		command     = { type = diplomacy_chances which = alliance when = all value = -5 }
 		command     = { type = diplomacy_chances which = trade when = all value = 5 }
 		command     = { type = diplomacy_cost which = all when = all value = 0.1 }
 	}

@@ -250,7 +250,7 @@ event = {
         command = { type = secedeprovince which = CHC value = 1296 when = 2 }
         #Change Government
         command = { type = headofstate which = 260848 } #Mao Zedong
-        command = { type = headofgovernment which = 260858 } #Zhou Enlai
+        command = { type = headofgovernment which = 260831 } #Zhang Wentian
         command = { type = foreignminister which = 260861 } #Zhou Enlai
         command = { type = armamentminister which = 260814 } #Lin Boqu
         command = { type = ministerofsecurity which = 260856 } #Zhou Enlai

@@ -4657,6 +4657,8 @@ event = {
 		command = { type = construct which = infrastructure where = 1389 value = 10 }
 		command = { type = construct which = infrastructure where = 1390 value = 10 }
 		command = { type = setflag which = Burma_Road_open }
+		command = { trigger = { ai = yes } type = metalpool value = 5000 }
+		command = { trigger = { ai = yes } type = energypool value = 10000 }
 	}
 }
 
@@ -5054,7 +5056,7 @@ event = {
 			}
 		}
 
-    date = { day = 0 month = january year = 1938 }
+    date = { day = 0 month = january year = 1937 }
     offset = 7
     deathdate = { day = 29 month = december year = 1999 }
 
@@ -5063,6 +5065,8 @@ event = {
 		name = "Arise! ye who refuse to be bond slaves!"
 		command = { type = dissent value = -10 }
 		command = { type = supplies value = 10000 }
+		command = { trigger = { ai = yes } type = metalpool value = 5000 }
+		command = { trigger = { ai = yes } type = energypool value = 10000 }
 		command = { type = tc_mod value = 5 }
 		command = { trigger = { control = { province = 1264 data = -3 } }type = construct which = land_fort where = 1264 value = 2 } #Lanzhou
 		command = { trigger = { control = { province = 1271 data = -3 } }type = construct which = land_fort where = 1271 value = 2 } #Wuzhong
@@ -5166,6 +5170,9 @@ event = {
 		command = { type = domestic which = freedom value = -1 }
 		command = { type = domestic which = free_market value = -1 }
 		command = { type = supplies value = 5000 }
+		command = { trigger = { ai = yes } type = supplies value = 5000 }
+		command = { trigger = { ai = yes } type = metalpool value = 5000 }
+		command = { trigger = { ai = yes } type = energypool value = 10000 }
 		command = { type = tc_mod value = 10 }
 		command = { trigger = { control = { province = 1264 data = -3 } } type = construct which = land_fort where = 1264 value = 1 } #Lanzhou
 		command = { trigger = { control = { province = 1271 data = -3 } } type = construct which = land_fort where = 1271 value = 1 } #Wuzhong
@@ -5185,6 +5192,10 @@ event = {
 		command = { type = add_division value = infantry when = 8 }
 		command = { type = add_division value = infantry when = 8 }
 		command = { type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1264 } #Lanzhou
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
