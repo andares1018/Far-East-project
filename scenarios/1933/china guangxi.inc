@@ -130,8 +130,8 @@ country = {
   airunit = { 
     id       = { type = 22400 id = 64 }
     name     = "Guangxi Air Force"
-    location = 1369
-    base     = 1369
+    location = 1379
+    base     = 1379
     division = {
       id             = { type = 22400 id = 65 }
       name           = "7th 8th 34th Squadrons"

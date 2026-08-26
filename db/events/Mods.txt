@@ -14286,12 +14286,14 @@ event = {
 		command = { type = foreignminister which = 1250007 } 
 		command = { type = armamentminister which = 1250036 } 
 		command = { type = ministerofsecurity which = 1250014 } 
-		command = { type = ministerofintelligence which = 1250017 }
+		command = { type = ministerofintelligence which = 1250018 }
 		command = { type = chiefofstaff which = 1250024 }
 		command = { type = chiefofarmy which = 1250027 }
 		command = { type = chiefofair which = 1250033 }
 		command = { type = chiefofnavy which = 1250031 }
 		command = { type = event which = 1400007545 where = JAP when = 1 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 3 }
 		
 	}
 }
@@ -14510,44 +14512,44 @@ event = {
 	action = {
 		name = "ACTION_NAME_DAMN" 
 		command = { type = dissent value = 20 }
-		command = { trigger = { control = { province = 1241 data = U87 } } type = control which = UCS value = 1241 when = 2 } 
-		command = { trigger = { control = { province = 1245 data = U87 } } type = control which = UCS value = 1245 when = 2 } 
-		command = { trigger = { control = { province = 1250 data = U87 } } type = control which = UCS value = 1250 when = 2 } 
-		command = { trigger = { control = { province = 1252 data = U87 } } type = control which = UCS value = 1252 when = 2 } 
-		command = { trigger = { control = { province = 1249 data = U87 } } type = control which = UCS value = 1249 when = 2 } 
-		command = { trigger = { control = { province = 1254 data = U87 } } type = control which = UCS value = 1254 when = 2 } 
-		command = { trigger = { control = { province = 1253 data = U87 } } type = control which = UCS value = 1253 when = 2 } 
-		command = { trigger = { control = { province = 1248 data = U87 } } type = control which = UCS value = 1248 when = 2 } 
-		command = { trigger = { control = { province = 1243 data = U87 } } type = control which = UCS value = 1243 when = 2 } 
-		command = { trigger = { control = { province = 1242 data = U87 } } type = control which = UCS value = 1242 when = 2 } 
-		command = { trigger = { control = { province = 1323 data = U87 } } type = control which = UCS value = 1323 when = 2 } 
-		command = { trigger = { control = { province = 1244 data = U87 } } type = control which = UCS value = 1244 when = 2 } 
-		command = { trigger = { control = { province = 1330 data = U87 } } type = control which = UCS value = 1330 when = 2 } 
-		command = { trigger = { control = { province = 1329 data = U87 } } type = control which = UCS value = 1329 when = 2 } 
-		command = { trigger = { control = { province = 1331 data = U87 } } type = control which = UCS value = 1331 when = 2 } 
-		command = { trigger = { control = { province = 1328 data = U87 } } type = control which = UCS value = 1328 when = 2 } 
-		command = { trigger = { control = { province = 1332 data = U87 } } type = control which = UCS value = 1332 when = 2 } 
-		command = { trigger = { control = { province = 1327 data = U87 } } type = control which = UCS value = 1327 when = 2 } 
-		command = { trigger = { control = { province = 1241 data = U87 } } type = control which = UCS value = 1241 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1241 data = U87 } control = { province = 1241 data = JAP } } } type = control which = UCS value = 1241 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1245 data = U87 } control = { province = 1241 data = JAP } } } type = control which = UCS value = 1245 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1250 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1250 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1252 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1252 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1249 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1249 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1254 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1254 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1253 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1253 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1248 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1248 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1243 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1243 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1242 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1242 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1323 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1323 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1244 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1244 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1330 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1330 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1329 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1329 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1331 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1331 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1328 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1328 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1332 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1332 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1327 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1327 when = 2 } 
+		command = { trigger = { OR = { control = { province = 1241 data = U87 } control = { province = 1250 data = JAP } } } type = control which = UCS value = 1241 when = 2 } 
 		
-		command = { trigger = { owned = { province = 1245 data = U87 } } type = secedeprovince which = UCS value = 1245 when = 2 } 
-		command = { trigger = { owned = { province = 1250 data = U87 } } type = secedeprovince which = UCS value = 1250 when = 2 } 
-		command = { trigger = { owned = { province = 1252 data = U87 } } type = secedeprovince which = UCS value = 1252 when = 2 } 
-		command = { trigger = { owned = { province = 1249 data = U87 } } type = secedeprovince which = UCS value = 1249 when = 2 } 
-		command = { trigger = { owned = { province = 1254 data = U87 } } type = secedeprovince which = UCS value = 1254 when = 2 } 
-		command = { trigger = { owned = { province = 1253 data = U87 } } type = secedeprovince which = UCS value = 1253 when = 2 } 
-		command = { trigger = { owned = { province = 1248 data = U87 } } type = secedeprovince which = UCS value = 1248 when = 2 } 
-		command = { trigger = { owned = { province = 1243 data = U87 } } type = secedeprovince which = UCS value = 1243 when = 2 } 
-		command = { trigger = { owned = { province = 1242 data = U87 } } type = secedeprovince which = UCS value = 1242 when = 2 } 
-		command = { trigger = { owned = { province = 1323 data = U87 } } type = secedeprovince which = UCS value = 1323 when = 2 } 
-		command = { trigger = { owned = { province = 1244 data = U87 } } type = secedeprovince which = UCS value = 1244 when = 2 } 
-		command = { trigger = { owned = { province = 1330 data = U87 } } type = secedeprovince which = UCS value = 1330 when = 2 } 
-		command = { trigger = { owned = { province = 1329 data = U87 } } type = secedeprovince which = UCS value = 1329 when = 2 } 
-		command = { trigger = { owned = { province = 1331 data = U87 } } type = secedeprovince which = UCS value = 1331 when = 2 } 
-		command = { trigger = { owned = { province = 1328 data = U87 } } type = secedeprovince which = UCS value = 1328 when = 2 } 
-		command = { trigger = { owned = { province = 1332 data = U87 } } type = secedeprovince which = UCS value = 1332 when = 2 } 
-		command = { trigger = { owned = { province = 1327 data = U87 } } type = secedeprovince which = UCS value = 1327 when = 2 } 
-		command = { trigger = { owned = { province = 1241 data = U87 } } type = secedeprovince which = UCS value = 1241 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1245 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1245 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1250 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1250 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1252 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1252 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1249 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1249 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1254 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1254 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1253 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1253 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1248 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1248 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1243 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1243 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1242 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1242 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1323 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1323 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1244 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1244 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1330 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1330 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1329 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1329 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1331 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1331 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1328 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1328 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1332 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1332 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1327 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1327 when = 2 } 
+		command = { trigger = { OR = { owned = { province = 1241 data = U87 } owned = { province = 1245 data = JAP } } } type = secedeprovince which = UCS value = 1241 when = 2 } 
 		command = { type = headofstate which = 1250001 }
 		command = { type = headofgovernment which = 1250002 }
     } 
@@ -14611,7 +14613,7 @@ event = {
 		name = "North China's autonomy must be guaranteed"
 		command = { type = event which = 1400007544 where = U87 when = 7 } #Government Integration (Northern China, Inner Mongolia)
 		command = { type = relation which = U87 value = -25 }
-		command = { type = relation which = USA value = -75 }
+		command = { type = relation which = USA value = -50 }
 	}
 	action = {
 		ai_chance = 10

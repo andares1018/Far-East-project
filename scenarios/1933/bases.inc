@@ -436,6 +436,11 @@ province = { id = 1991   # Santa Fe de Bogota - Maracaibo - Grand Colombia
    anti_air = 2 
  } 
  
+province = { id = 1379 #Nanning
+   anti_air   = 1 
+   air_base   = {  size =  2 current_size =  2  } 
+ }      
+
  #.#.# Costa Rica 
  
 province = { id = 2081   # San Jose - Nicaragua - Central America
