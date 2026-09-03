@@ -150,7 +150,7 @@ blueprints = {
 
 }
 inventions = { 3000027 }
-
+  free                   = { ic = 5 energy = 5 metal = 2 rare_materials = 1 }
    policy = 
    {  date              = {  year = 0 month = january day = 0  } 
      democratic        = 4 

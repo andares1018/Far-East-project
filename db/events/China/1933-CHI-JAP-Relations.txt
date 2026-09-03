@@ -44,9 +44,9 @@ event = {
 	picture = "ccip_mukden"
     style = 2
 
-    date = { day = 30 month = may year = 1933 }
-    offset = 1
-    deathdate = { day = 29 month = december year = 1963 }
+    date = { day = 22 month = may year = 1933 }
+    offset = 10
+	deathdate = { day = 29 month = december year = 1933 }
 
 	action = { 
     	trigger = { 

@@ -634,7 +634,6 @@ event = {
 
 	decision_trigger = {
 		
-		event = 1330120000
 		
 		supplies = 500
 		not = { dissent = 40 }
@@ -650,7 +649,6 @@ event = {
 
 	trigger = {
 
-		event = 1330120000
 
 		not = { local_flag = CHI_CHC_FIFTH_ENCIRCLEMENT }
 		local_flag = CHI_CHC_FOURTH_ENCIRCLEMENT

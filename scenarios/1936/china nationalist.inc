@@ -135,7 +135,6 @@ country = {
       model          = 5
       strength       = 100
       experience     = 30
-      locked         = yes
     }
     division = {
       id             = { type = 22000 id = 39 }
@@ -144,7 +143,6 @@ country = {
       model          = 5
       strength       = 100
       experience     = 30
-      locked         = yes
     }
     division = {
       id             = { type = 22000 id = 40 }
@@ -153,7 +151,6 @@ country = {
       model          = 5
       strength       = 100
       experience     = 30
-      locked         = yes
     }
   }
   landunit = {
@@ -167,7 +164,6 @@ country = {
       model          = 5
       strength       = 100
       experience     = 30
-      locked         = yes
     }
     division = {
       id             = { type = 22000 id = 43 }
@@ -176,7 +172,6 @@ country = {
       model          = 5
       strength       = 100
       experience     = 30
-      locked         = yes
     }
     division = {
       id             = { type = 22000 id = 44 }
@@ -185,7 +180,6 @@ country = {
       model          = 5
       strength       = 100
       experience     = 30
-      locked         = yes
     }
     division = {
       id             = { type = 22000 id = 45 }
@@ -194,7 +188,6 @@ country = {
       model          = 5
       strength       = 75
       experience     = 30
-      locked         = yes
     }
     division = {
       id             = { type = 22000 id = 46 }
@@ -203,7 +196,6 @@ country = {
       model          = 5
       strength       = 75
       experience     = 30
-      locked         = yes
     }
     division = {
       id             = { type = 22000 id = 47 }
@@ -212,7 +204,6 @@ country = {
       model          = 1
       strength       = 100
       experience     = 30
-      locked         = yes
     }
   }
   landunit = {
