@@ -4324,7 +4324,6 @@ event = {
 		name = "Damn!"
 		command = { type = max_organization which = land value = -8 }
 		command = { type = morale which = land value = -5 }
-		command = { type = dissent value = 5 }
 		command = { type = local_setflag which = Military_instability when = 1 value = 1 }
 	}
 }
@@ -14271,11 +14270,11 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "Let's use him to create new government" 
-		command = { type = event which = 1400007535 where = U87 when = 1 }
 		command = { type = independence which = U87 value = 1 when = 0 }
 		command = { type = make_puppet which = U87 }
 		command = { type = secedeprovince which = U87 value = 1337 when = 2 } 
 		command = { type = secedeprovince which = U87 value = 1338 when = 2 } 
+		command = { type = event which = 1400007535 where = U87 when = 1 }
 	}
 }
 
@@ -14323,7 +14322,7 @@ event = {
 	country = U87
 	style = 2
 
-	name = "Discussion of the National Assembly "
+	name = "Discussion of the National Assembly"
 	desc = ""
 	picture = "ccip_gmd"
 
@@ -14628,14 +14627,14 @@ event = {
 		trigger = { 
 			exists = UCS
 		}
-		ai_chance = 90
+		ai_chance = 10
 		name = "North China's autonomy must be guaranteed"
 		command = { type = event which = 1400007544 where = U87 when = 7 } #Government Integration (Northern China, Inner Mongolia)
 		command = { type = relation which = U87 value = -25 }
 		command = { type = relation which = USA value = -50 }
 	}
 	action = {
-		ai_chance = 10
+		ai_chance = 90
 		name = "China needs Unified government"
 		command = { type = event which = 1400007543 where = U87 when = 7 } #Establishment of National government
 		command = { type = relation which = USA value = -125 }
@@ -14685,7 +14684,7 @@ event = {
 
 	trigger = {	
 		event = 1400000091 #Japan-China Joint Declaration
-		random = 25
+		random = 10
 	}
 
     date = { day = 0 month = january year = 1933 }

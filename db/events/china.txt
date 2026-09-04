@@ -47,6 +47,14 @@ event = {
 		command = { trigger = { local_flag = Military_instability } type = local_setflag which = Military_instability when = 1 value = -2 }
 		command = { trigger = { local_flag = Military_instability } type = max_organization which = land value = 8 }
 		command = { trigger = { local_flag = Military_instability } type = morale which = land value = 5 } 
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
 		command = { type = sleepminister which = 55339 }
 		command = { type = sleepminister which = 55340 }
 	}
@@ -383,7 +391,7 @@ event = {
 		command = { trigger = { country = CHI } type = setflag which = fs_kmt }
 		command = { trigger = { country = CHC } type = setflag which = fs_ccp }
 		command = { type = trigger which = 2011018 }
-		command = { trigger = { exists = U87 } type = inherit which = U87}
+		command = { trigger = { exists = U87 } type = inherit which = U87 }
 	}
 
 	action = {
