@@ -84,7 +84,7 @@ province = { id = 1722 ic = 1 }
 
 ## Day of Decision
 
-### USA -25 IC
+### USA -20 IC
 
 province = { id = 1940   # Memphis - Tennessee
    ic = -1
@@ -97,16 +97,16 @@ province = { id = 1940   # Memphis - Tennessee
 #   infrastructure = -20
 # } 
 
-province = { id = 1795 ic = -3 } 
-province = { id = 1805 ic = -2 } 
+province = { id = 1795 ic = -2 } 
+province = { id = 1805 ic = -1 } 
 province = { id = 1833 ic = -2 } 
 province = { id = 1896 ic = -2 } 
 province = { id = 1825 ic = -2 } 
 province = { id = 1908 ic = -2 } 
-province = { id = 1832 ic = -2 } 
-province = { id = 1845 ic = -2 } 
+province = { id = 1832 ic = -1 } 
+province = { id = 1845 ic = -1 } 
 province = { id = 1789 ic = -2 } 
-province = { id = 1886 ic = -2 } 
+province = { id = 1886 ic = -1 } 
 province = { id = 1839 ic = -2 } 
 province = { id = 1931 ic = -1 } 
 

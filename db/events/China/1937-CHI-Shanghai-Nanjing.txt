@@ -195,9 +195,12 @@ event = {
 		}
 		name = ACTION_NAME_DAMN
 		command = { trigger = { NOT = { dissent = 20 } } type = dissent value = 15 }
-		command = { type = max_organization which = land value = -32 }
-		command = { type = morale which = land value = -20 }
-		command = { type = local_setflag which = Military_instability when = 1 value = 4 }
+		command = { trigger = { event = 1330110046 } type = max_organization which = land value = -32 } 
+		command = { trigger = { event = 1330110046 } type = morale which = land value = -20 }
+		command = { trigger = { NOT = { event = 1330110046 } } type = max_organization which = land value = -24 } 
+		command = { trigger = { NOT = { event = 1330110046 } } type = morale which = land value = -15 }
+		command = { trigger = { event = 1330110046 }  type = local_setflag which = Military_instability when = 1 value = 4 }
+		command = { trigger = { NOT = { event = 1330110046 } } type = local_setflag which = Military_instability when = 1 value = 3 }
 		#command = { type = local_setflag which = 1330110082 }
 		#command = { trigger = {
 		#				NOT = {

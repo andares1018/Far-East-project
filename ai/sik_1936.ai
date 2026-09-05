@@ -17,7 +17,10 @@ use_offensive_supply = no
 ###################################
 # Diplomacy
 ###################################
-combat = { }
+combat = { 
+	UPE = 150
+	UPS = 150
+ }
 
 claim_acceptance = -10
 
@@ -505,8 +508,8 @@ garrison = {
 }
 front = { 
 	recklessness 		= 1 # 0-3
-	distrib_vs_ai 		= offensive
-	distrib_vs_human 	= offensive
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= even
 
 	enemy_reinf_days	= 6
 	reserve_prop		= 0.1
