@@ -633,10 +633,8 @@ event = {
 	}
 
 	decision_trigger = {
-		
-		
-		supplies = 500
-		not = { dissent = 40 }
+		supplies = 1000
+		not = { dissent = 35 }
 		or = { # Require German Cooperation or tech
             and = {
                 technology = 5830 # Industry 1925
@@ -648,8 +646,6 @@ event = {
 	}
 
 	trigger = {
-
-
 		not = { local_flag = CHI_CHC_FIFTH_ENCIRCLEMENT }
 		local_flag = CHI_CHC_FOURTH_ENCIRCLEMENT
 		exists = CHC
@@ -771,7 +767,7 @@ event = {
 		command = { trigger = { control = { province = 1352 data = CHC } } type = setflag which = 1352VP }
 		command = { type = revolt which = 1358 when = 1 } #Fuzhou
 		command = { type = revolt which = 1360 when = 1 } #Xiamen
-		command = { type = revolt which = 1356 when = 1 } #Zhangzhou
+		command = { type = revolt which = 1357 when = 1 } 
 		command = { type = headofstate which = 260830 } #Zhang Wentian
 		command = { type = headofgovernment which = 260843 } #Qin Bangxian
 		command = { type = setflag which = 1330110016_HISTORICAL }

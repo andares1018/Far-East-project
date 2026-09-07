@@ -427,6 +427,7 @@ province = { id = 1352   # Nanchang - Jiangxi - China
  
 province = { id = 1358   # Fuzhou - Fujian - China
    air_base = { size = 1 current_size = 1 } 
+   naval_base = { size = 4 current_size = 4 } 
  } 
  
  #.#.# Columbia 
