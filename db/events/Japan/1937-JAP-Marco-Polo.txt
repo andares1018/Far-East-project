@@ -133,7 +133,7 @@ event = {
 		command = { type = relation which = CGX value = -50 }
         command = { type = relation which = CYN value = -50 }
 		command = { type = domestic which = interventionism value = 1 }
-		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = defense_lobby value = 1 }
 		command = { type = trigger which = 2012016 } # Chinese unified front
 		command = { trigger = { ai = yes NOT = { local_flag = MOB7 } NOT = { local_flag = demob } } type = trigger which = 8300107 } #partial Mobilization
 		command = { type = sleepevent which = 1330120000 } #No China-Japan Incidents

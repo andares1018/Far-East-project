@@ -164,7 +164,18 @@ event = {
 		command = { type = unlock_division which = 22000 value = 52 }
 		command = { type = unlock_division which = 22000 value = 53 }
 		command = { type = unlock_division which = 22000 value = 54 }
-		
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
+		command = { trigger = { atwar = yes NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
 		
 		
 		

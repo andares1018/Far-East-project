@@ -611,7 +611,7 @@ event = {
 			ai = yes
 		}
 		not = { local_flag = CHI_CHC_FIFTH_ENCIRCLEMENT }
-		local_flag = CHI_CHC_FOURTH_ENCIRCLEMENT
+		event = 1330110011
 		exists = CHC
 		not = { alliance = { country = CHC country = CHI } }
 		not = { war = { country = CHI country = JAP } }
@@ -633,7 +633,7 @@ event = {
 	}
 
 	decision_trigger = {
-		supplies = 1000
+		supplies = 500
 		not = { dissent = 35 }
 		or = { # Require German Cooperation or tech
             and = {
@@ -647,7 +647,7 @@ event = {
 
 	trigger = {
 		not = { local_flag = CHI_CHC_FIFTH_ENCIRCLEMENT }
-		local_flag = CHI_CHC_FOURTH_ENCIRCLEMENT
+		event = 1330110011
 		exists = CHC
 		not = { alliance = { country = CHC country = CHI } }
 		not = { war = { country = CHI country = JAP } }
@@ -679,8 +679,7 @@ event = {
 	deathdate = { day = 29 month = december year = 1963 }
 
 	action = {
-		command = { type = supplies value = -500 }
-		command = { trigger = { ai = no } type = supplies value = -500 }
+		command = { trigger = { ai = no } type = supplies value = -250 }
 		command = { trigger = { ai = no } type = dissent value = 5 }
 		command = { trigger = { ai = yes dissent = 40 } type = dissent value = -2 }
 		command = { trigger = { ai = yes dissent = 30 } type = dissent value = -2 }
