@@ -9085,8 +9085,11 @@ event = {
 			headofgovernment = 50029 
 			headofgovernment = 50030 #Konoe
 				}
+			and = {
 			flag = JAP_Konoe_Party
-			random = 20
+			event = 1400002017
+			random = 15
+				}
 			}
 		and = {
 		headofgovernment = 50044 #Tojo
@@ -14322,6 +14325,11 @@ event = {
 	picture = "ccip_gmd"
 
 	trigger = { 
+	event = 1400007545
+	OR = {
+	event = 1400007543
+	event = 1400007544
+	}
 	exists = U87 
 	}
 

@@ -15,6 +15,7 @@ exp_force_ratio = 0.10
 exp_force_ratios = {
 	SIA = 0.5
 	MAN = 0.5
+	U87 = 2.0
 } 
 no_exp_forces_to = { GER ROM HUN SLO BUL ITA VIC YUG FIN CRO }
 evac_islands = no
@@ -644,7 +645,7 @@ front = {
 	storm_attack 	= 1.0
 	muddy_attack 	= 1.0
 
-	
+    front_leader_overseas     = 500
 	
 	occupied 	= 0.7
 	owned 		= 0.7

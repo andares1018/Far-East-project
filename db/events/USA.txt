@@ -566,7 +566,10 @@ event = {
       		puppet = { country = U05 country = JAP } #Dutch East Indies
       		puppet = { country = INO country = JAP } #Indochina
       		puppet = { country = CHI country = JAP }
+			and = {
       		puppet = { country = U87 country = JAP }
+			NOT = { exists = CHI }
+			}
       		war = { country = CHI country = JAP }
       		war = { country = ENG country = JAP }
       		war = { country = HOL country = JAP }
@@ -588,7 +591,10 @@ event = {
       		puppet = { country = INO country = JAP } 
       		puppet = { country = CHI country = JAP }
       		puppet = { country = CHC country = JAP }
+      		and = {
       		puppet = { country = U87 country = JAP }
+			NOT = { exists = CHI }
+			}
 		}
 		OR = {
       		war = { country = CHI country = JAP }
@@ -616,7 +622,10 @@ event = {
       		puppet = { country = INO country = JAP } 
       		puppet = { country = CHI country = JAP }
       		puppet = { country = CHC country = JAP }
+      		and = {
       		puppet = { country = U87 country = JAP }
+			NOT = { exists = CHI }
+			}
 			}
 		OR = {
       		war = { country = CHI country = JAP }
@@ -641,7 +650,7 @@ event = {
 
 	action = {
 		name = "impose an embargo against Japan" # Dictate ultimatum to Japan
-		command = { type = relation which = JAP value = -150 }
+		command = { type = relation which = JAP value = -100 }
 		command = { type = relation which = CHI value = 20 }
 		command = { type = domestic which = interventionism value = 1 }
 		command = { type = domestic which = defense_lobby value = 1 }
