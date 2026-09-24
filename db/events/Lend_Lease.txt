@@ -1051,7 +1051,7 @@ event = {
 			NOT = { war = { country = -1 country = GER } }
 		}
 		OR = {
-			country = U01
+			control = { province = 55 data = -1 }
 			AND = {
 				country = FRA
 				event = 2184001 #U01 Liberation of France

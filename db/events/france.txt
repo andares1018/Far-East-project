@@ -1895,7 +1895,6 @@ event = {
                 command = { type = add_division which = "2ere Division Francaise Libre" value = infantry when = 10 }
                 command = { type = add_division which = "3ere Division Francaise Libre" value = infantry when = 10 }
                 command = { type = add_division which = "Colonne Leclerc" value = motorized when = 1 where = medium_armor }
-				
 				command = { type = add_division which = "Richelieu" value = battleship when = 7 }
                 command = { type = add_division which = "Lorraine" value = battleship when = 3 where = floatplane }
                 command = { type = add_division which = "Bearn" value = escort_carrier when = 2 }
@@ -1923,6 +1922,119 @@ event = {
                 command = { type = add_division which = "4ere Flottille de Convoi" value = transport when = 3 }
                 command = { type = add_division which = "5ere Flottille de Convoi" value = transport when = 3 }
                 command = { type = add_division which = "Surcouf" value = nuclear_submarine when = 0 where = floatplane }
+				
+		#Adding claims on French Colonial Empire
+		command = { type = addclaim which = 717 } #Morocco
+		command = { type = addclaim which = 718 }
+		command = { type = addclaim which = 719 }
+		command = { type = addclaim which = 720 }
+		command = { type = addclaim which = 721 }
+		command = { type = addclaim which = 722 }
+		command = { type = addclaim which = 723 }
+		command = { type = addclaim which = 724 }
+		command = { type = addclaim which = 725 }
+		command = { type = addclaim which = 726 }
+		command = { type = addclaim which = 727 } #Algeria
+		command = { type = addclaim which = 728 }
+		command = { type = addclaim which = 729 }
+		command = { type = addclaim which = 730 }
+		command = { type = addclaim which = 731 }
+		command = { type = addclaim which = 732 }
+		command = { type = addclaim which = 733 }
+		command = { type = addclaim which = 734 }
+		command = { type = addclaim which = 735 }
+		command = { type = addclaim which = 736 }
+		command = { type = addclaim which = 737 }
+		command = { type = addclaim which = 738 }
+		command = { type = addclaim which = 739 }
+		command = { type = addclaim which = 743 }
+		command = { type = addclaim which = 740 } # Tunisia
+		command = { type = addclaim which = 741 }
+		command = { type = addclaim which = 742 }
+		command = { type = addclaim which = 744 }
+		command = { type = addclaim which = 745 }
+		command = { type = addclaim which = 746 }
+		command = { type = addclaim which = 747 }
+		command = { type = addclaim which = 748 }
+		command = { type = addclaim which = 749 }
+		command = { type = addclaim which = 907 } #French Congo and Cameroon
+		command = { type = addclaim which = 908 }
+		command = { type = addclaim which = 909 }
+		command = { type = addclaim which = 910 }
+		command = { type = addclaim which = 911 }
+		command = { type = addclaim which = 914 }
+		command = { type = addclaim which = 915 }
+		command = { type = addclaim which = 917 }
+		command = { type = addclaim which = 918 }
+		command = { type = addclaim which = 919 }
+		command = { type = addclaim which = 920 } #Central Africa
+		command = { type = addclaim which = 921 }
+		command = { type = addclaim which = 922 }
+		command = { type = addclaim which = 923 }
+		command = { type = addclaim which = 924 }
+		command = { type = addclaim which = 925 }
+		command = { type = addclaim which = 926 }
+		command = { type = addclaim which = 927 }
+		command = { type = addclaim which = 928 }
+		command = { type = addclaim which = 942 } #Niger
+		command = { type = addclaim which = 943 }
+		command = { type = addclaim which = 944 }
+		command = { type = addclaim which = 945 }
+		command = { type = addclaim which = 946 }
+		command = { type = addclaim which = 947 }
+		command = { type = addclaim which = 948 } #Slave Coast
+		command = { type = addclaim which = 949 }
+		command = { type = addclaim which = 950 }
+		command = { type = addclaim which = 951 }
+		command = { type = addclaim which = 957 } #Volta
+		command = { type = addclaim which = 958 }
+		command = { type = addclaim which = 959 }
+		command = { type = addclaim which = 960 } #Ivory Coast
+		command = { type = addclaim which = 961 }
+		command = { type = addclaim which = 962 }
+		command = { type = addclaim which = 965 } #Guinean Coast
+		command = { type = addclaim which = 966 }
+		command = { type = addclaim which = 967 }
+		command = { type = addclaim which = 968 }
+		command = { type = addclaim which = 970 }
+		command = { type = addclaim which = 971 } #Malian Valleys
+		command = { type = addclaim which = 972 }
+		command = { type = addclaim which = 973 }
+		command = { type = addclaim which = 974 }
+		command = { type = addclaim which = 975 }
+		command = { type = addclaim which = 976 }
+		command = { type = addclaim which = 977 }
+		command = { type = addclaim which = 978 } #Senegambia
+		command = { type = addclaim which = 980 }
+		command = { type = addclaim which = 981 } #Mauretania
+		command = { type = addclaim which = 982 }
+		command = { type = addclaim which = 983 }
+		command = { type = addclaim which = 984 } #Malian Desert
+		command = { type = addclaim which = 985 }
+		command = { type = addclaim which = 986 }
+		command = { type = addclaim which = 833 } #Djbouti
+		command = { type = addclaim which = 996 } #Madagascar + nearby Island
+		command = { type = addclaim which = 999 }
+		command = { type = addclaim which = 1000 }
+		command = { type = addclaim which = 1001 }
+		command = { type = addclaim which = 1002 }
+		command = { type = addclaim which = 1003 }
+		command = { type = addclaim which = 2000 } #Cayenne 
+		command = { type = addclaim which = 1752 } #French West Indies
+		command = { type = addclaim which = 1767 }
+		command = { type = addclaim which = 1768 }
+		command = { type = addclaim which = 1581 } #French Pacific Island
+		command = { type = addclaim which = 1582 }
+		command = { type = addclaim which = 1583 }
+		command = { type = addclaim which = 1584 }
+		command = { type = addclaim which = 1585 }
+		command = { type = addclaim which = 1586 }
+		command = { type = addclaim which = 1730 }
+		command = { type = addclaim which = 1740 }
+		command = { type = addclaim which = 1743 }
+		command = { type = addclaim which = 1744 }
+		command = { type = addclaim which = 2135 } #Saint Pierre island near Newfoundland	
+		
                 command = { type = manpowerpool value = 1500 }
     } 
 }

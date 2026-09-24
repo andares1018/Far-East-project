@@ -1,3 +1,0 @@
-This file ensures that a save game folder will be made.
-
-1q2w3e4r

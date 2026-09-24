@@ -5949,8 +5949,7 @@ event = {
 		ai_chance = 100
 		name = "We have to expand our area secretly" # 
 		command = { type = supplies value = -100 }
-		command = { type = manpowerpool value = -1 }
-		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = 100 }
 	}
 }
 
@@ -6015,7 +6014,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001903 where = CHC when = 35 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6046,7 +6045,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -1 }
 	}
 }
@@ -6112,7 +6111,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001905 where = CHC when = 35 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6144,7 +6143,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -1 }
 	}
 }
@@ -6212,7 +6211,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001907 where = CHC when = 35 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6242,7 +6241,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6316,7 +6315,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001909 where = CHC when = 50 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6347,7 +6346,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6417,7 +6416,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001911 where = CHC when = 45 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6448,7 +6447,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6529,7 +6528,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001913 where = CHC when = 50 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6560,7 +6559,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6639,7 +6638,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001915 where = CHC when = 30 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6671,7 +6670,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6749,7 +6748,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001917 where = CHC when = 30 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6780,7 +6779,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6865,7 +6864,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001919 where = CHC when = 50 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6896,7 +6895,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -6974,7 +6973,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001921 where = CHC when = 45 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7005,7 +7004,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7084,7 +7083,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001923 where = CHC when = 50 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7116,7 +7115,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7179,7 +7178,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001925 where = CHC when = 50 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7210,7 +7209,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7273,7 +7272,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001927 where = CHC when = 50 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7304,7 +7303,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7385,7 +7384,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001929 where = CHC when = 50 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7416,7 +7415,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -250 }
+		command = { type = supplies value = -150 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7476,7 +7475,7 @@ event = {
 		command = { type = setflag which = CHC_Infiltration }
 		command = { type = dissent value = -1 }
 		command = { type = event which = 1400001931 where = CHC when = 100 }
-		command = { type = supplies value = -500 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7499,7 +7498,7 @@ event = {
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = setflag which = Dungbei_Infiltration }
 		command = { type = dissent value = -1 }
-		command = { type = supplies value = -1000 }
+		command = { type = supplies value = -100 }
 		command = { type = manpowerpool value = -1 }
 	}
 	action = {
@@ -7507,7 +7506,7 @@ event = {
 		name = "Operation failed"
 		command = { type = clrflag which = CHC_Infiltration }
 		command = { type = dissent value = 0.5 }
-		command = { type = supplies value = -1000 }
+		command = { type = supplies value = -250 }
 		command = { type = manpowerpool value = -2 }
 	}
 }
@@ -7548,8 +7547,8 @@ event = {
 		ai_chance = 100
 		name = "ACTION_NAME_AGREE" # 
 		command = { type = setflag which = CHC_Infiltration_Central_China }
-		command = { type = supplies value = -1000 }
-		command = { type = manpowerpool value = -10 }
+		command = { type = supplies value = -500 }
+		command = { type = manpowerpool value = -5 }
 	}
 }
 
@@ -14632,17 +14631,17 @@ event = {
 			exists = UCS
 		}
 		ai_chance = 10
-		name = "North China's autonomy must be guaranteed"
+		name = "China needs Unified government"
 		command = { type = event which = 1400007544 where = U87 when = 7 } #Government Integration (Northern China, Inner Mongolia)
 		command = { type = relation which = U87 value = -25 }
 		command = { type = relation which = USA value = -50 }
 	}
 	action = {
 		ai_chance = 90
-		name = "China needs Unified government"
+		name = "North China's autonomy must be guaranteed"
 		command = { type = event which = 1400007543 where = U87 when = 7 } #Establishment of National government
 		command = { type = relation which = USA value = -125 }
-		command = { type = belligerence which = JAP value = -5 }	
+		command = { type = belligerence which = JAP value = -5 } 
 	}
 }
 
