@@ -1,17 +1,19 @@
-UC4;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
-2000350;20th Factory;100770;2;1920;1970;general_equipment;artillery;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000351;50th Factory;T98705;2;1920;1970;general_equipment;artillery;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000352;Chengdu arsenal;T_Chengdu arsenal;3;1900;1947;general_equipment;training;munitions;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000353;Chongqing Weapon Repair Office;T_Sichuan Armory1;3;1929;1970;technical_efficiency;artillery;munitions;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000354;Chuankang Appeasement Director Bullet Factory;T_Sichuan Armory2;2;1926;1970;technical_efficiency;general_equipment;munitions;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000355;Chongqing Electric Power Steelmaking Plant;T_Chongqing Plant;3;1921;1970;technical_efficiency;industrial_engineering;management;mechanics;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000356;Chongqing University;T_Chongqing University;3;1929;1937;management;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000357;Chongqing University;T_Chongqing University;4;1937;1970;management;mathematics;training;mechanics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000358;Sichuan University;T_Sichuan University;4;1896;1970;industrial_engineering;management;mechanics;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000359;Liu Xiang;T_Liu Xiang;2;1920;1938;training;management;individual_courage;centralized_execution;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000360;Huaxi Machinery Factory ;T_Huaxi Machinery Factory;2;1922;1970;munitions;industrial_engineering;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000361;Hu Ziang;T_Hu Ziang;4;1922;1970;management;industrial_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000362;West China Union University;T_WCUU;4;1906;1970;mathematics;management;medicine;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000363;Southwest University;100733;1;1906;1926;mathematics;chemistry;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000364;Southwest University;100733;2;1926;1945;mathematics;chemistry;medicine;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-2000365;Southwest University;100733;4;1945;1999;mathematics;chemistry;medicine;industrial_engineering;mechanics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+U66;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+1129001;20th Factory;100770;2;1920;1970;artillery;general_equipment;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129002;50th Factory;T98705;2;1920;1970;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129003;Chongqing Weapon Repair Office;T_Sichuan Armory1;3;1929;1970;artillery;mechanics;munitions;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129004;Chuankang Appeasement Director Bullet Factory;T_Sichuan Armory2;2;1926;1970;general_equipment;mechanics;munitions;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129005;Chongqing Electric Power Steelmaking Plant;T_Chongqing Plant;3;1921;1970;artillery;electronics;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129006;Sichuan University;T_Sichuan University;3;1896;1970;management;mathematics;mechanics;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129007;Tianfu Coal Mine Company;T_Tianfu;3;1933;1970;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129008;Shu Hua Industrial Company;T_Shu Hua;3;1934;1959;general_equipment;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129009;Minsheng Industrial;T_Minsheng;3;1927;1970;industrial_engineering;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129010;Liu Xiang;T_Liu Xiang;3;1920;1938;centralized_execution;individual_courage;management;small_unit_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129011;Chongqing University;T_Chongqing University;3;1929;1937;management;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129012;Chongqing University;T_Chongqing University;4;1937;1970;electronics;management;mathematics;mechanics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129013;Huaxi Machinery Factory;T_Huaxi Machinery Factory;2;1930;1970;general_equipment;mechanics;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129014;Hu Ziang;T_Hu Ziang;4;1922;1970;electronics;industrial_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129015;West China Union University;T_WCUU;4;1906;1970;management;mathematics;medicine;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129016;Southwest University;100733;2;1906;1926;mathematics;chemistry;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129017;Southwest University;100733;3;1926;1945;mathematics;chemistry;medicine;training;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1129018;Southwest University;100733;4;1945;1970;mathematics;chemistry;medicine;training;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

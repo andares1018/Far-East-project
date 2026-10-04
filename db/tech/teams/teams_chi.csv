@@ -95,7 +95,7 @@ CHI;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 55405;Guangxi University;100719;5;1949;1999;mathematics;industrial_engineering;mechanics;electronics;chemistry;medicine;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55406;Guangxi Aviation Academy;100720;2;1934;1999;aeronautics;training;piloting;mechanics;bomber_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55407;Guangxi Military Cadre Training School ;100721;1;1900;1923;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-55500;Guangdong Arsenal;100723;2;1900;1999;mechanics;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+55500;Guangdong Arsenal;100723;3;1900;1999;mechanics;artillery;general_equipment;munitions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55501;Guangzhou Shipyard;T8702;2;1881;1999;naval_engineering;naval_artillery;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55502;Sun Zhongshan Academy;100726;3;1924;1999;mechanics;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55503;Guangdong Naval Academy;100727;1;1882;1911;small_taskforce_tactics;seamanship;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -103,7 +103,7 @@ CHI;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 55505;Guangzhou Diesel Engine Factory;100729;1;1911;1928;mechanics;general_equipment;vehicle_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55506;Guangzhou Diesel Engine Factory;100729;2;1928;1936;mechanics;general_equipment;vehicle_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55507;Guangzhou Diesel Engine Factory;100729;4;1936;1999;mechanics;general_equipment;vehicle_engineering;electronics;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-55508;Shaoguan Airplane Factory;100730;1;1936;1945;aeronautics;general_equipment;aircraft_testing;bomber_design;avionics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+55508;Shaoguan Airplane Factory;100730;1;1935;1945;aeronautics;general_equipment;aircraft_testing;bomber_design;avionics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55509;Dongshan Airplane Factory;100731;1;1928;1933;aeronautics;general_equipment;aircraft_testing;fighter_design;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55510;Yunnan Military Academy;100732;1;1907;1916;training;small_unit_tactics;infantry_focus;individual_courage;centralized_execution;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 55511;Yunnan Military Academy;100732;2;1916;1928;training;small_unit_tactics;infantry_focus;individual_courage;centralized_execution;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;x

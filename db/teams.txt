@@ -198,7 +198,6 @@ teams_U58.csv
 teams_U59.csv
 teams_U60.csv
 teams_U62.csv
-#teams_U66.csv
 teams_U67.csv
 teams_U70.csv
 teams_U71.csv
@@ -235,7 +234,6 @@ teams_uru.csv
 teams_usa.csv
 teams_uzb.csv
 teams_ven.csv
-#teams_vic.csv
 teams_vie.csv
 teams_wll.csv
 teams_yem.csv
@@ -243,3 +241,5 @@ teams_yug.csv
 teams_uch.csv
 teams_uer.csv
 teams_utc.csv
+teams_u63.csv
+teams_u66.csv

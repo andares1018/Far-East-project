@@ -673,7 +673,8 @@ garrison = {
 		HUN = 15
 		SLO = 15
 		BUL = 15
-		UPE = 5
+		UPE = 10
+		UPS = 10
 	}
 	province_priorities = {
 		553 = 50 # Leningrad
