@@ -1,8 +1,9 @@
 UCH;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
+;Replacements;;;;;;;;;X
 1325100;Head of State;Yuan Shikai;1885;1916;1932;PA;Yuan Shikai_1;High;9466;X
-1325101;Head of Government;Xiong Xiling;1897;1915;1937;PA;Corporate Suit;High;9467;X
+1325101;Head of Government;Xiong Xiling;1897;1915;1937;SC;Corporate Suit;High;9467;X
 1325102;Foreign Minister;Sun Baoqi;1900;1928;1928;PA;Great Compromiser;High;9468;X
-1325103;Minister of Armament;Xiong Xiling;1897;1915;1937;PA;Resource Industrialist;Medium;9467;X
+1325103;Minister of Armament;Xiong Xiling;1897;1915;1937;SC;Resource Industrialist;Medium;9467;X
 1325104;Head of Military Intelligence;Zhou Ziqi;1896;1923;1923;PA;Technical Specialist;Medium;9469;X
 1325105;Minister of Security;Zhu Qiqian;1909;1933;1957;PA;Prince of Terror;Medium;9470;X
 1325106;Chief of Staff;Duan Qirui;1898;1926;1936;PA;School of Mass Combat;Medium;9471;X
@@ -27,7 +28,7 @@ UCH;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1325201;Minister of Security;Xu Shiying;1902;1926;1948;PA;Silent Lawyer;Medium;9484;X
 1325202;Minister of Armament;Chen Jintao;1912;1935;1939;PA;Corrupt Kleptocrat;Low;9485;X
 1325203;Foreign Minister;Tang Shaoyi;1912;1924;1924;SC;Ideological Crusader;Medium;9486;X
-1325204;Minister of Armament;Zhang Guogan;1906;1951;1951;PA;Laissez-faire Capitalist;High;9487;X
+1325204;Minister of Armament;Zhang Guogan;1906;1951;1951;PA;Laissez-Faire Capitalist;High;9487;X
 1325205;Head of Government;Wu Tingfang;1896;1922;1922;SC;Naive Optimist;High;9488;X
 1325206;Minister of Security;Fan Yuanlian;1917;1927;1927;PA;Compassionate Gentleman;Medium;9489;X
 1325207;Minister of Armament;Li Jingxi;1901;1917;1917;PA;Military Entrepreneur;Medium;9490;X
@@ -39,8 +40,8 @@ UCH;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1325213;Chief of Navy;Sa Zhenbing;1881;1934;1934;PA;Indirect Approach Doctrine;Medium;9494;X
 1325214;Minister of Armament;Li Shengduo;1891;1934;1934;PA;Resource Industrialist;Medium;9495;X
 1325215;Head of State;Feng Guozhang;1903;1919;1919;PA;Resigned Generalissimo;High;9496;X
-1325216;Minister of Security;Tang Hualong;1917;1918;1918;PA;Prince of Terror;Medium;9497;X
-1325217;Minister of Armament;Liang Qichao;1895;1918;1918;ML;Laissez-faire Capitalist;Medium;9462;X
+1325216;Minister of Security;Tang Hualong;1914;1918;1918;SC;Prince of Terror;Medium;9497;X
+1325217;Minister of Armament;Liang Qichao;1895;1918;1918;ML;Laissez-Faire Capitalist;Medium;9462;X
 1325218;Head of Government;Wang Shizhen;1894;1930;1930;PA;Old General;Very High;9478;X
 1325219;Minister of Security;Qian Nengxun;1903;1920;1920;PA;Crime Fighter;Low;9498;X
 1325220;Minister of Armament;Wang Kemin;1907;1945;1945;PA;Corrupt Kleptocrat;Low;9499;X
@@ -49,7 +50,7 @@ UCH;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1325223;Chief of Army;Duan Zhigui;1912;1920;1925;PA;Decisive Battle Doctrine;Medium;9482;X
 1325224;Head of State;Xu Shichang;1905;1922;1939;PA;Weary Stiffneck;High;9475;X
 1325225;Head of Government;Qian Nengxun;1903;1920;1920;PA;Corporate Suit;High;9498;X
-1325226;Minister of Armament;Gong Xinzhan;1912;1926;1926;PA;Laissez-faire Capitalist;Medium;9501;X
+1325226;Minister of Armament;Gong Xinzhan;1912;1926;1926;PA;Laissez-Faire Capitalist;Medium;9501;X
 1325227;Chief of Staff;Jin Yunpeng;1902;1921;1921;PA;School of Mass Combat;Medium;9502;X
 1325228;Chief of Army;Jin Yunpeng;1902;1921;1921;PA;Decisive Battle Doctrine;Medium;9502;X
 1325229;Minister of Security;Zhu Shen;1912;1944;1944;PA;Crime Fighter;Low;9503;X
@@ -66,7 +67,7 @@ UCH;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1325304;Chief of Army;Bao Guiqing;1913;1929;1929;PA;Static Defence Doctrine;High;9523;X
 1325305;Chief of Navy;Li Dingxin;1886;1930;1930;PA;Decisive Naval Battle Doctrine;High;9464;X
 1325306;Head of State;Gao Lingwei;1910;1926;1940;PA;Weary Stiffneck;High;9521;X
-1325307;Head of Government;Wang Chonghui;1905;1949;1949;PA;Naive Optimist;High;9524;X
+1325307;Head of Government;Wang Chonghui;1905;1949;1949;SC;Naive Optimist;High;9524;X
 1325308;Foreign Minister;Gu Weijun;1912;1957;1957;SC;Great Compromiser;High;9525;X
 1325309;Chief of Staff;Zhang Shaozeng;1903;1929;1929;PA;School of Psychology;High;9526;X
 1325310;Chief of Army;Zhang Shaozeng;1903;1929;1929;PA;Decisive Battle Doctrine;Medium;9526;X

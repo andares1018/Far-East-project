@@ -88,7 +88,7 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265086;Minister of Armament;Jeong Baek;1923;1952;1964;LE;Resource Industrialist;Medium;M_Jung baek;X
 265087;Minister of Armament;Yu Ja-myeong;1925;1951;1986;LWR;Theoretical Scientist;Medium;M_Yu ja-myeong;X
 265088;Minister of Armament;Lee Gwan-sul;1936;1951;1964;LE;Resource Industrialist;Medium;M_Lee gwan-sul;X
-265089;Minister of Armament;Choi Chang-ik;1933;1964;1964;LE;Corrupt Kleptocrat;Medium;M_Choi chang-ik;X
+265089;Minister of Armament;Choi Chang-ik;1933;1964;1964;LE;Reformer;Medium;M_Choi chang-ik;X
 265090;Minister of Armament;Ha Pil-won;1926;1956;1964;LE;Construction Magnate;Medium;M_Ha pil-won;X
 265091;Minister of Armament;Kim Dan-ya;1925;1939;1964;LE;Administrative Genius;Medium;2813;X
 265092;Minister of Armament;Jang Si-u;1933;1953;1964;LE;Laissez-Faire Capitalist;Medium;M_Jang si-u;X
@@ -358,3 +358,4 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265357;Chief of Army;Choi Young-hee;1955;1970;2006;SC;Static Defence Doctrine;Medium;M_Choi Young-hee;X
 265358;Foreign Minister;Kim Yong-shik;1955;1980;1995;PA;Apologetic Clerk;Medium;M_Kim Yong-shik;X
 265359;Minister of Security;Ahn Jae-hong;1930;1956;1956;ML;Compassionate Gentleman;Medium;M_Ahn Jae-hong;X
+265360;Chief of Army;Choi Yong-geon;1933;1964;1964;ST;Elastic Defence Doctrine;Medium;M_Choi Yong-geon;X

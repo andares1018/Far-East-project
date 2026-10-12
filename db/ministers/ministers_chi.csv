@@ -20,8 +20,8 @@ CHI;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 55218;Chief of Navy;Li Dingxin;1886;1930;1930;PA;Decisive Naval Battle Doctrine;High;9464;X
 55219;Head of Government;Tang Jiyao;1913;1927;1927;PA;Old General;High;9457;X
 55220;Chief of Army;Tang Jiyao;1913;1927;1927;PA;Decisive Battle Doctrine;Medium;9457;X
-55221;Head of State;Long Jinguang;1916;1930;1930;PA;Resigned Generalissimo;High;9459;X
-55222;Head of Government;Gu Pinzhen;1921;1933;1933;PA;Silent Workhorse;High;9465;X
+55221;Head of Government;Cen Chenxuan;1914;1933;1933;SC;Silent Workhorse;High;9552;X
+55222;Head of Military Intelligence;Zhang Shizhao;1921;1974;1974;SL;Political Specialist;High;M_Zhang Shizhao;X
 55223;Chief of Staff;Luo Peijin;1909;1923;1923;PA;School of Fire Support;High;9551;X
 55224;Chief of Staff;Wang Jiuling;1911;1927;1952;SC;School of Fire Support;Medium;9410;X
 55225;Minister of Armament;Wang Jiuling;1911;1927;1952;SC;Theoretical Scientist;Medium;9410;X
@@ -107,7 +107,7 @@ CHI;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 55380;Minister of Security;Yu Youren;1928;1950;1950;SL;Compassionate Gentleman;High;M_Yu Youren;X
 55381;Chief of Navy;Yang Shuzhuang;1900;1934;1934;PA;Decisive Naval Battle Doctrine;High;M_Yang Shuzhuang;X
 55382;Chief of Army;Mo Rongxin;1914;1924;1930;SC;Elastic Defence Doctrine;High;M_Mo Rongxin;X
-55383;Head of Military Intelligence;Tan Pingshan;1921;1957;1957;LE;Political Specialist;High;M_Tan Pingshan;X
+55383;Head of Military Intelligence;Tan Pingshan;1921;1957;1957;LWR;Political Specialist;High;M_Tan Pingshan;X
 55384;Head of State;Tan Yankai;1926;1931;1931;SC;Benevolent Gentleman;High;9528;X
 55385;Head of Military Intelligence;Wu Yuzhang;1922;1967;1967;LE;Technical Specialist;High;M_Wu Yuzhang;X
 55386;Chief of Air Force;Zhang Huichang;1918;1981;1981;SC;Air Superiority Doctrine;High;M_Zhang Huichang;X
@@ -267,10 +267,10 @@ CHI;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 55151;Foreign Minister;Zhang Shenfu;1936;1986;1986;SD;Ideological Crusader;High;M_Zhang Shenfu;X
 55152;Head of State;Hu Shih;1940;1963;1963;ML;Die-hard Reformer;High;M_Hu Shih;X
 55153;Foreign Minister;Hu Shih;1940;1963;1963;ML;Biased Intellectual;High;M_Hu Shih;X
-55154;Minister of Armament;Li Huang;1930;1991;1991;ML;Theoretical Scientist;High;M_Li Huang;X
+55154;Minister of Armament;Li Huang;1930;1991;1991;SC;Theoretical Scientist;High;M_Li Huang;X
 55155;Foreign Minister;V.K. Wellington Koo;1929;1968;1986;SC;Great Compromiser;High;M_Wellington;X
-55156;Minister of Security;Wu Kaisheng;1933;1970;1998;SL;Compassionate Gentleman;High;M_Wu Kaisheng;X
-55157;Foreign Minister;Wu Kaisheng;1933;1970;1998;SL;Ideological Crusader;High;M_Wu Kaisheng;X
+55156;Foreign Minister;Zuo Shunsheng;1936;1970;1970;ML;Biased Intellectual;High;M_Zuo Shunsheng;X
+55157;Chief of Staff;Sun Baogang;1940;1990;1990;SD;School of Psychology;High;M_Sun Baogang;X
 55158;Minister of Security;Lei Chen;1945;1980;1980;ML;Compassionate Gentleman;High;M_Lei Chen;X
 55159;Head of Military Intelligence;Xia Taosheng;1942;1967;1967;ML;Political Specialist;High;M_Xia Taosheng;X
 55160;Head of Military Intelligence;Zhang Yunchuan;1933;1965;1965;SD;Political Specialist;High;M_Zhang Yunchuan;X
@@ -305,3 +305,10 @@ CHI;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 55190;Minister of Armament;Jiang Piao;1950;1981;1981;PA;Resource Industrialist;High;M_Jiang Piao;X
 55191;Minister of Armament;Yang Jizeng;1940;1964;1993;PA;Military Entrepreneur;High;M_Yang Jizeng;X
 55192;Head of State;Wang Jingwei;1936;1958;1958;PA;Autocratic Charmer;High;M52041;X
+55193;Head of Military Intelligence;Li Zhangda;1933;1954;1954;SD;Logistics Specialist;High;M_Li Zhangda;X
+55194;Minister of Armament;Zhang Dongsun;1933;1958;1958;SD;Theoretical Scientist;High;M_Zhang_Dongsun;X
+55195;Minister of Security;Huang Yanpei;1926;1966;1966;SD;Media Magnate;High;M_Huang_Yanpei;X
+55196;Minister of Security;Zhang Lan;1940;1958;1958;SD;Compassionate Gentleman;High;M_Zhang_Lan;X
+55197;Foreign Minister;Shen Junru;1936;1958;1958;SD;Ideological Crusader;High;M_Shen Junru;X
+55198;Minister of Armament;Zhang Bojun;1933;1970;1970;SD;Resource Industrialist;High;M_ZhangBojun;X
+55199;Foreign Minister;Luo Longji;1933;1966;1966;SL;Biased Intellectual;High;M_Luo Longji;X

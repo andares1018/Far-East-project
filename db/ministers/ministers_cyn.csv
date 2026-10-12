@@ -34,7 +34,7 @@ CYN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 615032;Minister of Armament;Ji Zhongyin;1914;1931;1931;SC;Laissez-Faire Capitalist;High;M_Ji Zhongyin;X
 615033;Minister of Armament;Cun Shusheng;1933;1978;1978;ML;Theoretical Scientist;High;M_Cun Shusheng;X
 615034;Minister of Armament;Chen Jun;1910;1930;1930;PA;Steel Magnate;High;M_Chen Jun;X
-615035;Minister of Armament;Wang Jiuling;1914;1951;1951;SC;Resource Industrialist;High;M_Wang Jiuling;X
+615035;Minister of Armament;Wang Jiuling;1914;1951;1951;SC;Resource Industrialist;High;9410;X
 615036;Minister of Security;Zhang Yaoceng;1914;1939;1939;SC;Silent Lawyer;High;M_Zhang Yaoceng;X
 615037;Minister of Security;Ding Zhaoguan;1914;1955;1955;SC;Silent Lawyer;High;M_Ding Zhaoguan;X
 615038;Minister of Security;Chen Jun;1910;1930;1930;PA;Compassionate Gentleman;High;M_Chen Jun;X
@@ -62,7 +62,7 @@ CYN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 615060;Chief of Staff;Liao Xingchao;1933;1971;1971;SC;School of Defence;High;M_Liao Xingchao;X
 615061;Chief of Staff;Tang Jilin;1928;1958;1958;PA;School of Fire Support;High;M_Tang Jilin;X
 615062;Chief of Staff;Luo Peijin;1927;1933;1933;SC;School of Manoeuvre;High;M_Luo Peijin;X
-615063;Chief of Staff;Wang Jiuling;1914;1951;1951;SC;School of Mass Combat;High;M_Wang Jiuling;X
+615063;Chief of Staff;Wang Jiuling;1914;1951;1951;SC;School of Mass Combat;High;9410;X
 615064;Chief of Army;Cai E;1910;1918;1918;SC;Decisive Battle Doctrine;High;9460;X
 615065;Chief of Army;Tang Jiyao;1914;1933;1933;PA;Static Defence Doctrine;High;9457;X
 615066;Chief of Army;Gu Pinzhen;1914;1933;1933;ML;Doctrine of Autonomy;High;9465;X
@@ -82,10 +82,9 @@ CYN;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 615080;Foreign Minister;Ren Kecheng;1914;1933;1946;PA;General Staffer;High;9458;X
 615081;Chief of Navy;Tang Jiyao;1914;1933;1933;PA;Base Control Doctrine;High;9457;X
 615082;Minister of Security;Huang Derun;1914;1933;1933;PA;Silent Lawyer;High;M_Huang Derun;X
-615083;Minister of Armament;You Yunlong;1914;1961;1961;ML;Theoretical Scientist;High;M_You Yunlong;X
-615084;Minister of Security;Chen Tingce;1914;1930;1930;PA;Silent Lawyer;High;M_Chen Tingce;X
+615083;Minister of Armament;You Yunlong;1914;1961;1961;SC;Theoretical Scientist;High;M_You Yunlong;X
+615084;Head of Government;Li Genyuan;1920;1933;1940;SC;School of Psychology;High;M_Li Genyuan;X
 615085;Head of Military Intelligence;Yu Enyang;1914;1919;1919;SC;Logistics Specialist;High;M_Yu Enyang;X
 615086;Chief of Staff;Zhang Zizhen;1914;1931;1931;SC;School of Manoeuvre;High;M_Zhang Zizhen;X
 615087;Chief of Staff;Tang Jiyu;1920;1933;1940;PA;School of Psychology;High;M_Tang Jiyu;X
-615088;Chief of Staff;Li Genyuan;1920;1933;1940;SC;School of Psychology;High;;X
-615089;Head of Government;Li Genyuan;1920;1933;1940;SC;School of Psychology;High;;X
+615088;Chief of Staff;Li Genyuan;1920;1933;1940;SC;School of Psychology;High;M_Li Genyuan;X

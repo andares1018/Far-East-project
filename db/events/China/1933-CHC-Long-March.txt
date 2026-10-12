@@ -254,7 +254,7 @@ event = {
         command = { type = foreignminister which = 260861 } #Zhou Enlai
         command = { type = armamentminister which = 260814 } #Lin Boqu
         command = { type = ministerofsecurity which = 260856 } #Zhou Enlai
-        command = { type = ministerofintelligence which = 260868 } #Li Kenong
+        command = { type = ministerofintelligence which = 260863 } 
         command = { type = chiefofstaff which = 260820 } #Xu Xiangqian
         command = { type = chiefofarmy which = 260867 } #Peng Dehuai
         command = { type = chiefofnavy which = 260806 } #He Long
@@ -268,6 +268,6 @@ event = {
 		command = { type = construct which = land_fort where = 1255 value = 3 } #Pingliang
 		command = { type = construct which = land_fort where = 1258 value = 2 } 
 		command = { type = construct which = land_fort where = 1271 value = 1 } 
-        		command = { type = construct which = ic where = 1259 value = 4 } 
+        command = { type = construct which = ic where = 1259 value = 4 } 
     }
 }

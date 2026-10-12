@@ -136,23 +136,17 @@ CHC;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 260935;Chief of Staff;Nie Rongzhen;1926;1993;1993;LE;School of Mass Combat;High;M_Nie Rongzhen;X
 260936;Minister of Armament;Nie Rongzhen;1955;1993;1993;LE;Theoretical Scientist;High;M_Nie Rongzhen;X
 260937;Minister of Security;Luo Ruiqing;1947;1979;1979;ST;Crime Fighter;High;M_Luo Ruiqing;X
-260938;Minister of Security;Zhang Lan;1941;1956;1956;SD;Compassionate Gentleman;High;M_Zhang_Lan;X
-260940;Minister of Armament;Huang Yanpei;1922;1966;1966;SD;Laissez-Faire Capitalist;High;M_Huang_Yanpei;X
-260941;Foreign Minister;Shen Junru;1941;1964;1964;SD;Ideological Crusader;High;M_Shen Junru;X
-260943;Minister of Armament;Zhang Dongsun;1941;1974;1974;SD;Theoretical Scientist;High;M_Zhang_Dongsun;X
-260944;Minister of Security;Zhang Bojun;1922;1970;1970;SD;Silent Lawyer;High;M_ZhangBojun;X
-260945;Minister of Security;Li Zhangda;1936;1954;1954;SD;Health and Safety;High;M_Li Zhangda;X
 260946;Minister of Security;Deng Yuanzhao;1933;1964;1964;LE;Secret Police Chief;High;M_Deng Fa;X
 260947;Chief of Air Force;Long Wenguang;1930;1934;1934;LWR;Air Superiority Doctrine;High;M_Long Wenguang;X
 260948;Chief of Staff;Luo Ronghuan;1927;1964;1964;LWR;School of Mass Combat;High;324;X
-260949;Minister of Armament;Chen Yun;1927;1964;1964;LE;Planned Economy Proponent;High;M_Chen Yun;X
+260949;Minister of Armament;Chen Yun;1936;1995;1995;LE;Planned Economy Proponent;High;M_Chen Yun;X
 260950;Head of Military Intelligence;Deng Yuanzhao;1930;1947;1964;LE;Dismal Enigma;High;M_Deng Fa;X
 260951;Head of Military Intelligence;Ren Bishi;1929;1951;1951;ST;Political Specialist;High;9231;X
 260952;Head of Military Intelligence;Lin Yuying;1929;1943;1943;LE;Political Specialist;High;M_Lin Yuying;X
 260953;Minister of Security;Lin Yuying;1929;1943;1943;LE;Man of the People;High;M_Lin Yuying;X
 260954;Minister of Security;Li Kenong;1940;1959;1959;ST;Prince of Terror;High;2335;X
 260955;Head of Military Intelligence;Kong Yuan;1936;1970;1990;LE;Industrial Specialist;High;M_Kong Yuan;X
-260956;Head of Military Intelligence;Chen Yun;1930;1964;1964;LE;Industrial Specialist;High;M_Chen Yun;X
+260956;Head of Military Intelligence;Chen Yun;1936;1995;1995;LE;Industrial Specialist;High;M_Chen Yun;X
 260957;Head of Military Intelligence;Wu Hujing;1930;1937;1937;LE;Logistics Specialist;High;M_Wu Hujing;X
 260958;Head of Military Intelligence;Zhou Xing;1930;1976;1976;LE;Logistics Specialist;High;M_Zhou Xing;X
 260959;Head of Military Intelligence;Wang Shoudao;1933;1976;1996;LE;Industrial Specialist;High;M_Wang Shoudao;X

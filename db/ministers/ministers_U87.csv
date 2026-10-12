@@ -29,7 +29,7 @@ U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1250027;Chief of Army;Bao Wenyue;1930;1999;1999;PA;Guns and Butter Doctrine;NA;9437;X
 1250028;Chief of Army;Ye Peng;1930;1999;1999;FA;Static Defence Doctrine;Very High;M_Ye Peng;X
 1250029;Chief of Army;Xiao Shuxuan;1930;1999;1999;FA;Static Defence Doctrine;Very High;8144;X
-1250030;Chief of Army;Qi Xieyuan;1930;1999;1999;PA;Decisive Battle Doctrine;Very High;M_Qi Xieyuan;X
+1250030;Minister of Security;Wu Lanxi;1940;1982;1982;PA;Compassionate Gentleman;Very High;M_Wu Lanxi;X
 1250031;Chief of Navy;Ren Yuandao;1930;1999;1999;PA;Base Control Doctrine;NA;9447;X
 1250032;Chief of Navy;Ling Xiao;1940;1999;1999;FA;Decisive Naval Battle Doctrine;Very High;L502236;X
 1250033;Chief of Air Force;Chen Changzu;1930;1999;1999;PA;Air Superiority Doctrine;NA;M52020;X
@@ -56,3 +56,6 @@ U87;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 1250054;Foreign Minister;Chen Lu;1930;1964;1964;PA;Biased Intellectual;Very High;M_Chen Lu;X
 1250055;Minister of Armament;Chen Jintao;1930;1940;1940;PA;Laissez-Faire Capitalist;Very High;M_Chen Jintao;X
 1250056;Minister of Armament;Wang Zihui;1930;1964;1964;PA;Laissez-Faire Capitalist;Very High;M_Wang Zihui;X
+1250057;Minister of Security;Wu Kaisheng;1933;1970;1998;SC;Compassionate Gentleman;Very High;M_Wu Kaisheng;X
+1250058;Foreign Minister;Wu Kaisheng;1933;1970;1998;SC;Biased Intellectual;Very High;M_Wu Kaisheng;X
+1250059;Head of Government;Wu Lanxi;1933;1970;1998;PA;Silent Workhorse;Very High;M_Wu Lanxi;X

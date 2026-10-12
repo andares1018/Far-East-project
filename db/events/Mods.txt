@@ -12043,7 +12043,7 @@ event = {
 		command = { type = chiefofair which = 265281 }
 		command = { type = capital which = 1228 }
 		command = { type = secedeprovince which = KOR value = 1228 when = 2 } 
-		command = { type = add_division value = infantry when = 11 where = -85 } 
+		command = { type = add_division value = infantry when = 11 where = -85 } #Korean Liberation Army 
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = add_division value = infantry when = 11 where = -85 } 
 		command = { type = setflag which = KOR_KPG }
@@ -12083,7 +12083,7 @@ event = {
 		command = { trigger = { NOT = { ispuppet = yes } } type = chiefofarmy which = 265258 }
 		command = { type = chiefofair which = 265273 }
 		command = { type = capital which = 1228 }
-		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } #Korean Liberation Army 
+		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -77 } 
 		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -80 } 
 		command = { trigger = { ispuppet = yes } type = add_division value = infantry when = 11 where = -80 } 
 		command = { type = waketeam which = 265024 }
