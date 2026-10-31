@@ -347,7 +347,7 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265346;Head of Military Intelligence;Ha Gap-cheong;1955;1964;1978;PA;Political Specialist;Medium;M_Ha Gap-cheong;X
 265347;Minister of Security;Yi Ho;1948;1980;1997;PA;Silent Lawyer;Medium;M_Yi Ho;X
 265348;Minister of Armament;Jeon Yae-yong;1948;1970;1994;PA;Administrative Genius;Medium;M_Jeon Yae-yong;X
-265349;Minister of Armament;Chang Ki-young;1960;1977;1977;SC;Administrative Genius;Medium;M_Chang Ki-young;X
+265349;Minister of Armament;Chang Ki-young;1959;1977;1977;SC;Administrative Genius;Medium;M_Chang Ki-young;X
 265350;Minister of Armament;Park Hui-beom;1960;1982;1982;PA;Planned Economy Proponent;Medium;M_Park Hui-beom;X
 265351;Head of Government;Kim Byeong-ro;1930;1964;1964;ML;Corporate Suit;Medium;M_Kim Byeong-ro;X
 265352;Minister of Armament;Kim Yu-taek;1955;1971;1975;PA;Resource Industrialist;Medium;M_Kim Yu-taek;X
@@ -359,3 +359,5 @@ KOR;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 265358;Foreign Minister;Kim Yong-shik;1955;1980;1995;PA;Apologetic Clerk;Medium;M_Kim Yong-shik;X
 265359;Minister of Security;Ahn Jae-hong;1930;1956;1956;ML;Compassionate Gentleman;Medium;M_Ahn Jae-hong;X
 265360;Chief of Army;Choi Yong-geon;1933;1964;1964;ST;Elastic Defence Doctrine;Medium;M_Choi Yong-geon;X
+265361;Minister of Armament;Yu Beong-muk;1958;1979;1988;SD;Mixed Economy;Medium;M_Yu Beong-muk;X
+265362;Minister of Security;Yu Beong-muk;1950;1979;1988;SD;Media Magnate;Medium;M_Yu Beong-muk;X

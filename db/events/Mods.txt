@@ -258,11 +258,10 @@ event = {
 	save_date = yes
 
 	decision = {
+		
 		NOT = { flag = CHI_institutional_politics }
 		NOT = {
-		war = { country = JAP country = CHI }
-		war = { country = SOV country = CHI }
-		war = { country = CHC country = CHI }
+		atwar = yes 
 		}
 		NOT = {
 		ispuppet = yes
@@ -287,9 +286,7 @@ event = {
 			NOT = { flag = KMT_Instability }
 			NOT = { flag = CHI_internal_dissent }
 		NOT = {
-		war = { country = JAP country = CHI }
-		war = { country = SOV country = CHI }
-		war = { country = CHC country = CHI }
+		atwar = yes 
 		}
 		OR = {
 			and = {
@@ -314,6 +311,7 @@ event = {
 		}
 	
 	trigger = {
+		
 		year = 1938
 		NOT = {
 		ispuppet = yes
@@ -321,9 +319,7 @@ event = {
 			NOT = { flag = KMT_Instability }
 			NOT = { flag = CHI_internal_dissent }
 		NOT = {
-		war = { country = JAP country = CHI }
-		war = { country = SOV country = CHI }
-		war = { country = CHC country = CHI }
+		atwar = yes 
 		}
 		OR = {
 			and = { #Post-war
@@ -4559,6 +4555,7 @@ event = {
 		command = { trigger = { NOT = { control = { province = 1297 data = U66 } } } type = capital which = 1298 }
 		command = { type = secedeprovince which = CHI value = 1299 when = 1 }
 		command = { type = secedeprovince which = CHI value = 1301 when = 1 }
+		command = { trigger = { ai = yes } type = supplies value = 50000 }
 		command = { type = trigger which = 1400001260 }
 		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { NOT = {	control = { province = 1337 data = -3 }	} ai = yes } type = add_division value = infantry when = 8 }
@@ -4628,10 +4625,12 @@ event = {
 	deathdate = { day = 29 month = june year = 1999 }
 	action = {
 		name = "We need to find another way"
-		command = { type = metalpool value = -500 }
-		command = { type = supplies value = -100 }
-		command = { type = money value = -50 }
+		command = { trigger = { ai = no } type = metalpool value = -200 }
+		command = { trigger = { ai = no } type = supplies value = -100 }
+		command = { trigger = { ai = no } type = money value = -75 }
 		command = { type = event which = 1400001262 where = U02 when = 140 }
+		command = { type = trade which = U02 where = CHI metal = -10 rare_materials = -10 supplies = -20 value = 1 } 
+		command = { type = trade which = ENG where = CHI metal = -10 energy = -20 oil = -1 supplies = -15 value = 1 } 
 	}
 }
 
@@ -4674,8 +4673,9 @@ event = {
 		command = { type = construct which = infrastructure where = 1389 value = 10 }
 		command = { type = construct which = infrastructure where = 1390 value = 10 }
 		command = { type = setflag which = Burma_Road_open }
-		command = { trigger = { ai = yes } type = metalpool value = 5000 }
+		command = { trigger = { ai = yes } type = metalpool value = 10000 }
 		command = { trigger = { ai = yes } type = energypool value = 10000 }
+		command = { trigger = { ai = yes } type = supplies value = 50000 }
 	}
 }
 
@@ -4779,8 +4779,8 @@ event = {
 	action_a = {
 		name = ACTION_NAME_OK
 		command = { type = trigger which = 1400001267 }
-		command = { type = trade which = U02 where = CHI metal = -0.5 rare_materials = -0.4 oil = -0.1 supplies = -0.4 value = 1 } 
-		command = { type = trade which = ENG where = CHI metal = -0.3 supplies = -0.2 value = 1 } 
+		command = { type = trade which = U02 where = CHI metal = -10 rare_materials = -10 oil = -0.5 supplies = -20 value = 1 } 
+		command = { type = trade which = ENG where = CHI metal = -10 energy = -20 supplies = -15 value = 1 } 
 		command = { type = setflag which = Burma_Road_open }
 	}
 }
@@ -5074,7 +5074,7 @@ event = {
 		ai_chance = 100
 		name = "Arise! ye who refuse to be bond slaves!"
 		command = { type = dissent value = -10 }
-		command = { type = supplies value = 20000 }
+		command = { trigger = { ai = yes } type = supplies value = 50000 }
 		command = { trigger = { ai = yes } type = metalpool value = 5000 }
 		command = { trigger = { ai = yes } type = energypool value = 10000 }
 		command = { type = tc_mod value = 5 }
@@ -5114,16 +5114,13 @@ event = {
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1305 } #Guiyang
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 88 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1378 } #Guilin
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 7 }
 		command = { trigger = { ai = yes } type = add_corps value = land where = 1390 } #Kunming
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
@@ -5180,8 +5177,8 @@ event = {
 		command = { type = domestic which = freedom value = -1 }
 		command = { type = domestic which = free_market value = -1 }
 		command = { type = supplies value = 5000 }
-		command = { trigger = { ai = yes } type = supplies value = 10000 }
-		command = { trigger = { ai = yes } type = metalpool value = 5000 }
+		command = { trigger = { ai = yes } type = supplies value = 50000 }
+		command = { trigger = { ai = yes } type = metalpool value = 10000 }
 		command = { trigger = { ai = yes } type = energypool value = 10000 }
 		command = { type = tc_mod value = 10 }
 		command = { trigger = { control = { province = 1264 data = -3 } } type = construct which = land_fort where = 1264 value = 1 } #Lanzhou
@@ -5202,8 +5199,6 @@ event = {
 		command = { type = add_division value = infantry when = 8 }
 		command = { type = add_division value = infantry when = 8 }
 		command = { type = add_division value = infantry when = 8 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
-		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
 		command = { trigger = { ai = yes } type = add_division value = infantry when = 8 }
@@ -8009,7 +8004,7 @@ event = {
 	action_a = {
 		ai_chance = 100
 		name = "This is a sacrifice for Nation." 
-		command = { type = dissent value = 1.5 }
+		command = { type = dissent value = 1 }
 		command = { type = domestic which = freedom value = -1 }
 		command = { type = domestic which = free_market value = -1 }
 		command = { type = stockpile which = all when = war value = 4 }
@@ -12790,6 +12785,75 @@ event = {
 
 
 ### 1400006501 - 1400007000 : Indonesia
+
+ event = {
+	id = 1400006501
+	random = no
+	country = U05
+	style = 2
+	
+	trigger = {
+		exists = U05 
+		exists = HOL 
+	}
+ 
+	name = "Change of Colonial administration" 
+	desc = "EVT_1400006501_DESC"
+	picture = "dutch_east_india"
+ 
+       date = { day = 16 month = September year = 1936 }
+        
+	action = {
+		name = "Confirm"
+		command = { type = headofgovernment which = 840051 }
+		command = { type = foreignminister which = 840065 } 
+		command = { type = armamentminister which = 840071 } 
+		command = { type = ministerofsecurity which = 840074 }
+		command = { type = ministerofintelligence which = 840021 } 
+		command = { type = chiefofstaff which = 840081 }
+		command = {	type = chiefofarmy which = 840091 }
+		command = { type = chiefofnavy which = 840099 }
+	}
+}
+
+ event = {
+	id = 1400006502
+	random = no
+	country = U05
+	style = 2
+	
+	trigger = {
+		event = 2004002
+		exists = HOL 
+	}
+ 
+	name = "Change of Colonial administration" 
+	desc = "EVT_1400006502_DESC"
+	picture = "dutch_east_india"
+ 
+	date = { day = 1 month = january year = 1938 }
+	offset = 7
+	deathdate = { day = 1 month = january year = 1999 }
+        
+	action = {
+		name = "Confirm"
+		command = { type = headofgovernment which = 840052 }
+		command = { type = foreignminister which = 840065 } 
+		command = { type = armamentminister which = 840072 } 
+		command = { type = ministerofsecurity which = 840074 }
+		command = { trigger = { minister = 840079 } type = ministerofintelligence which = 840079 } 
+		command = { trigger = { minister = 840085 } type = chiefofstaff which = 840085 }
+		command = {	trigger = { minister = 840086 } type = chiefofarmy which = 840086 }
+		command = { trigger = { minister = 840029 } type = chiefofnavy which = 840029 }
+		command = { trigger = { NOT = { minister = 840079 } } type = ministerofintelligence which = 840036 } 
+		command = { trigger = { NOT = { minister = 840085 } } type = chiefofstaff which = 840095 }
+		command = {	trigger = { NOT = { minister = 840086 } } type = chiefofarmy which = 840091 }
+		command = { trigger = { NOT = { minister = 840029 } } type = chiefofnavy which = 840078 }
+	}
+}
+
+
+
 
 ### 1400007001 - 1400007100 : Tibet
 

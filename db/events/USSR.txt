@@ -619,6 +619,10 @@ event = {
 		command = { type = sleepminister which = 30005 } #Yagoda
 		command = { type = sleepminister which = 30007 } #Tukhachevsky
 		command = { type = sleepminister which = 30009 } #Orlov
+		
+		command = { type = sleepminister which = 30153 } #Yegorov
+		command = { type = sleepminister which = 30154 } 
+		
 		#command = { type = sleepminister which = 30053 } #Smushkevich (Killed in 1941)
 		command = { type = sleepminister which = 30006 } #Berzin
 		command = { type = sleepminister which = 30010 } #Alksnis

@@ -580,15 +580,15 @@
 # 1400006049 
 
 ### 1400006501 - 1400007000 : Indonesia and East Indies
-# 1400006501 
-# 1400006502 
-# 1400006503 
-# 1400006504 
-# 1400006505 
-# 1400006506 
-# 1400006507 
-# 1400006508 
-# 1400006509 
+# 1400006501 U05 - Change of Colonial administration (1936) 
+# 1400006502 U05 - Change of Colonial administration (post-war) 
+# 1400006503 HOL - East Indies Civil Affairs Agreement #
+# 1400006504 USA - Agreement proposal # - Van Mook–MacArthur Civil Affairs Agreement
+# 1400006505 ENG - Agreement proposal # - Anglo–Dutch Civil Affairs Agreement
+# 1400006506 AST - Agreement proposal #
+# 1400006507 U02 - Agreement proposal #
+# 1400006508 HOL - Restoration of East Indies Colonies #
+# 1400006509 U05 - Reconstruction Colonial government #
 # 1400006510 
 # 1400006511 
 # 1400006512 

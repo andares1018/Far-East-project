@@ -549,6 +549,7 @@ event = {
 		name = EVT_86_ACTA
 		command = { type = local_setflag which = CHIIndustry }
        	command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = wartime_ic_mod value = 5 }
 		command = { trigger = { ai = yes } type = add_prov_resource which = 1299 value = 7  where = metal }
 		command = { trigger = { ai = yes } type = add_prov_resource which = 1299 value = 14 where = energy }
 		command = { trigger = { ai = yes } type = add_prov_resource which = 1299 value = 4  where = rare_materials }

@@ -1,60 +1,118 @@
 U05;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Personality;Loyalty;Picturename;X
 ;Replacements;;;;;;;;;X
-840001;Head of State;Wilhelmina;1933;1964;1999;ML;Stern Imperialist;High;M8001;X
-840002;Head of Government;Alidius Tjarda van Starkenborgh-Stachouwer;1933;1964;1999;ML;Naive Optimist;High;M577002;X
-840003;Foreign Minister;Hubertus Van Mook;1914;1964;1999;ML;Ideological Crusader;High;M577003;X
-840004;Minister of Armament;J. Ramaer;1914;1964;1999;SC;Administrative Genius;Medium;unknownminister;X
-840005;Minister of Security;Hubertus Van Mook;1914;1964;1999;ML;Crime Fighter;High;M577003;X
-840006;Head of Military Intelligence;Murk Boerstra;1914;1964;1999;SC;Logistics Specialist;Very High;L7802;X
-840007;Chief of Staff;Murk Boerstra;1914;1964;1999;SC;School of Manoeuvre;Very High;L7802;X
-840008;Chief of Army;Gerardus Berenschot;1914;1964;1999;SC;Static Defence Doctrine;Very High;L7801;X
-840009;Chief of Navy;Conrad Helfrich;1914;1964;1999;SC;Indirect Approach Doctrine;Very High;L7839;X
-840010;Chief of Air Force;Ludolph Hendrik Van Oyen;1914;1964;1999;SC;Army Aviation Doctrine;Very High;L7859;X
-840011;Head of State;Achmed Sukarno;1933;1964;1999;PA;Weary Stiffneck;Very High;M577011;X
-840012;Head of Government;Muhammad Hatta;1933;1964;1999;PA;Silent Workhorse;High;M577014;X
-840013;Foreign Minister;Muhammad Hatta;1914;1964;1999;PA;Biased Intellectual;High;M577014;X
-840014;Minister of Armament;Sutan Sjahrir;1914;1964;1999;PA;Infantry Proponent;Low;M577019;X
-840015;Minister of Security;Radjiman Wediodiningrat;1914;1964;1999;PA;Compassionate Gentleman;Medium;unknownminister;X
-840016;Head of Military Intelligence;Amir Sjarifuddin;1914;1964;1999;PA;Political Specialist;Low;M577016;X
-840017;Chief of Staff;Besar Sudirman;1914;1964;1999;PA;School of Defence;High;M577034;X
-840018;Chief of Army;Besar Sudirman;1914;1964;1999;PA;Static Defence Doctrine;High;M577034;X
-840019;Chief of Navy;Besar Sudirman;1914;1964;1999;PA;Open Seas Doctrine;High;M577034;X
-840020;Chief of Air Force;Besar Sudirman;1914;1964;1999;PA;Army Aviation Doctrine;High;M577034;X
-840021;Head of State;Kawan Musso;1933;1964;1999;ST;Autocratic Charmer;Very High;M577013;X
-840022;Head of Government;Lukman dan Sardjono;1933;1964;1999;ST;Ambitious Union Boss;Very High;M577027;X
-840023;Foreign Minister;Suryono Suripno;1914;1964;1999;ST;Ideological Crusader;High;M577021;X
-840024;Minister of Armament;Ruskak;1914;1964;1999;LE;Resource Industrialist;High;unknownminister;X
-840025;Minister of Security;Amir Sjarifuddin;1914;1964;1999;LWR;Compassionate Gentleman;Low;M577016;X
-840026;Head of Military Intelligence;Amir Sjarifuddin;1914;1964;1999;LWR;Political Specialist;Low;M577016;X
-840027;Chief of Staff;Tan Malaka;1914;1964;1999;LWR;School of Psychology;Low;M577042;X
-840028;Chief of Army;Tan Malaka;1914;1964;1999;LWR;Decisive Battle Doctrine;Low;M577042;X
-840029;Chief of Navy;Tan Malaka;1914;1964;1999;LWR;Open Seas Doctrine;Low;M577042;X
-840030;Chief of Air Force;Tan Malaka;1914;1964;1999;LWR;Army Aviation Doctrine;Low;M577042;X
-840031;Head of Government;Sutan Sjahrir;1940;1964;1999;LWR;Happy Amateur;High;M577019;X
-840032;Head of Government;Amir Sjarifuddin;1944;1964;1999;LWR;Naive Optimist;High;M577016;X
-840033;Head of Government;Muhammad Thamrin;1933;1964;1999;PA;Smiling Oilman;Very High;M577015;X
-840034;Head of State;Sjafruddin Prawiranegara;1944;1964;1999;SC;Insignificant Layman;High;M577022;X
-840035;Head of Government;Hubertus Van Mook;1942;1964;1999;SC;Corporate Suit;Medium;M577003;X
-840036;Head of Government;Sjafruddin Prawiranegara;1944;1964;1999;SC;Political Protege;High;M577022;X
-840037;Foreign Minister;Ahmad Subandrio;1944;1964;1999;PA;Ideological Crusader;Medium;M577017;X
-840038;Foreign Minister;Sutan Sjahrir;1945;1964;1999;LWR;The Cloak N Dagger Schemer;Low;M577019;X
-840039;Minister of Armament;Sjafruddin Prawiranegara;1944;1964;1999;SC;Administrative Genius;Low;M577022;X
-840040;Chief of Staff;Amir Sjarifuddin;1944;1964;1999;LWR;School of Psychology;Low;M577016;X
-840041;Chief of Staff;Gerardus Berenschot;1939;1964;1999;PA;School of Manoeuvre;Very High;L7801;X
-840042;Chief of Staff;Hein ter Poorten;1941;1964;1999;PA;School of Defence;Very High;L7819;X
-840043;Chief of Army;Hein ter Poorten;1939;1964;1999;PA;Static Defence Doctrine;Very High;L7819;X
-840044;Chief of Army;Rudolph Bakkers;1941;1964;1999;PA;Static Defence Doctrine;Very High;L7800;X
-840045;Chief of Army;Johan Uhl;1945;1964;1999;PA;Static Defence Doctrine;Very High;unknownminister;X
-840046;Chief of Navy;Conrad Helfrich;1939;1964;1999;PA;Indirect Approach Doctrine;Very High;L7839;X
-840047;Chief of Army;Raymond Westerling;1946;1964;1999;PA;Decisive Battle Doctrine;Low;M577006;X
-840048;Chief of Army;Abdul Harris Nasution;1948;1964;1999;PA;Guns and Butter Doctrine;High;M577043;X
-840049;Head of State;Wilhelmina;1914;1933;1999;ML;Stern Imperialist;High;2664;X
-840050;Head of Government;Alexander Willem Frederik Idenburg;1914;1933;1999;ML;Naive Optimist;High;5779;X
-840051;Chief of Air Force;Gustav Adolf Ilgen;1932;1964;1999;SC;Air Superiority Doctrine;Very High;9291;X
-840052;Chief of Air Force;Emile Toussaint Kengen;1945;1946;1947;SC;Air Superiority Doctrine;Very High;9845;X
-840053;Chief of Staff;Johannes Cornelis Koster;1929;1932;1936;SC;School of Defence;Very High;9846;X
-840054;Chief of Army;Johannes Cornelis Koster;1932;1935;1936;SC;Static Defence Doctrine;Very High;9846;X
-840055;Chief of Army;Murk Boerstra;1935;1939;1940;SC;Decisive Battle Doctrine;Very High;L7802;X
-840056;Chief of Army;Ludolph Hendrik Van Oyen;1943;1946;1947;SC;Static Defence Doctrine;Very High;L7859;X
-840057;Chief of Army;Simon Spoor;1946;1949;1950;SC;Decisive Battle Doctrine;Very High;M8137;X
-840058;Chief of Army;Dirk Cornelis Buurman Van Vreeden;1949;1950;1951;SC;Static Defence Doctrine;Very High;9847;X
+840001;Head of State;Wilhelmina;1910;1964;1999;SC;Stern Imperialist;High;M8001;X
+840002;Head of State;Wilhelmina;1910;1962;1962;PA;Stern Imperialist;High;M8001;X
+840003;Head of Government;Alexander Willem Frederik Idenburg;1910;1933;1936;PA;Naive Optimist;High;M_Alexander Willem Frederik Idenburg;X
+840004;Head of Government;Johan Paul van Limburg Stirum;1910;1935;1935;PA;Silent Workhorse;High;M_Johan Paul van Limburg Stirum;X
+840005;Head of Government;Dirk Fock;1920;1941;1941;SC;Silent Workhorse;High;M_Dirk Fock;X
+840006;Head of Government;Andries Cornelis Dirk de Graeff;1910;1933;1958;SC;Corporate Suit;High;M_Andries Cornelis Dirk de Graeff;X
+840007;Foreign Minister;Alexander Willem Frederik Idenburg;1910;1933;1936;PA;Apologetic Clerk;High;M_Alexander Willem Frederik Idenburg;X
+840008;Foreign Minister;Johan Paul van Limburg Stirum;1910;1925;1925;PA;Apologetic Clerk;High;M_Johan Paul van Limburg Stirum;X
+840009;Foreign Minister;Dirk Fock;1920;1941;1941;SC;Great Compromiser;High;M_Dirk Fock;X
+840010;Foreign Minister;Andries Cornelis Dirk de Graeff;1910;1933;1958;SC;Great Compromiser;High;M_Andries Cornelis Dirk de Graeff;X
+840011;Minister of Armament;Frederik Albert Liefrinck;1910;1928;1928;PA;Resource Industrialist;High;M_Frederik Albert Liefrinck;X
+840012;Minister of Armament;J. Ramaer;1933;1950;1950;SC;Laissez-Faire Capitalist;High;unknownminister;X
+840013;Minister of Armament;Hermanus Johannes Lovink;1910;1923;1923;SC;Resource Industrialist;High;M_Hermanus Johannes Lovink;X
+840014;Minister of Armament;Cornelis van den Bussche;1925;1941;1941;SC;Administrative Genius;High;M_Cornelis van den Bussche;X
+840015;Minister of Armament;Charles Jean Bernard;1910;1950;1950;PA;Resource Industrialist;High;unknownminister;X
+840016;Minister of Security;Jan Willem Cornelis Cordes;1910;1920;1920;PA;Compassionate Gentleman;High;unknownminister;X
+840017;Minister of Security;Frederik Justus Herbert Cowan;1910;1933;1933;SC;Compassionate Gentleman;High;M_Frederik Justus Herbert Cowan;X
+840018;Minister of Security;Jacobus Johannes Schrieke;1910;1933;1933;FA;Silent Lawyer;High;M_Jacobus Johannes Schrieke;X
+840019;Head of State;Hubertus van Mook;1938;1964;1999;SC;Barking Buffoon;High;M577003;X
+840020;Head of Military Intelligence;Hendrik Gerard Pieter Duijfjes;1910;1933;1933;PA;Logistics Specialist;High;unknownminister;X
+840021;Head of Military Intelligence;Gijsbertus Vonk;1910;1964;1999;SC;Political Specialist;High;M_Gijsbertus Vonk;X
+840022;Chief of Army;Johan Pieter Michielsen;1910;1917;1917;PA;Decisive Battle Doctrine;High;M_Johan Pieter Michielsen;X
+840023;Chief of Army;Hendrik Christiaan Kronouer;1910;1930;1930;PA;Static Defence Doctrine;High;M_Hendrik Christiaan Kronouer;X
+840024;Chief of Army;Walter Robert de Greve;1910;1925;1925;PA;Elastic Defence Doctrine;High;M_Walter Robert de Greve;X
+840025;Chief of Army;Cornelis Hendrik van Rietschoten;1910;1933;1933;PA;Static Defence Doctrine;High;;X
+840026;Chief of Army;Gerrard Kornelis Dijkstra;1920;1930;1930;PA;Static Defence Doctrine;High;M_Gerrard Kornelis Dijkstra;X
+840027;Chief of Army;Frans Jan Kroesen;1920;1930;1930;PA;Decisive Battle Doctrine;High;unknownminister;X
+840028;Chief of Army;Karel Felix Eduard Gerth van Wijk;1922;1933;1933;PA;Elastic Defence Doctrine;High;unknownminister;X
+840029;Chief of Navy;Pieter Koenraad;1930;1946;1946;SC;Indirect Approach Doctrine;High;M_Pieter Koenraad;X
+840030;Chief of Army;Hermanus Leonardus La Lau;1910;1930;1930;PA;Commando Doctrine Army;High;M_Hermanus Leonardus La Lau;X
+840031;Chief of Army;Heinrich Adolf Cramer;1928;1936;1936;PA;Commando Doctrine Army;High;M_Heinrich Adolf Cramer;X
+840032;Chief of Staff;Walter Robert de Greve;1910;1925;1925;PA;School of Defence;High;M_Walter Robert de Greve;X
+840033;Chief of Army;Johannes Cornelis Koster;1920;1936;1936;PA;Static Defence Doctrine;High;M_Johannes Cornelis Koster;X
+840034;Chief of Staff;Johan Pieter Michielsen;1910;1917;1917;PA;School of Defence;High;M_Johan Pieter Michielsen;X
+840035;Chief of Staff;Hendrik Christiaan Kronouer;1910;1930;1930;PA;School of Defence;High;M_Hendrik Christiaan Kronouer;X
+840036;Head of Military Intelligence;Adolf Mieremet;1930;1964;1964;SC;Political Specialist;High;M_Adolf Mieremet;X
+840037;Chief of Staff;Cornelis Hendrik van Rietschoten;1910;1933;1933;PA;School of Fire Support;High;M_Cornelis Hendrik van Rietschoten;X
+840038;Chief of Staff;Gerrard Kornelis Dijkstra;1910;1930;1930;PA;School of Fire Support;High;M_Gerrard Kornelis Dijkstra;X
+840039;Chief of Staff;Frans Jan Kroesen;1920;1930;1930;PA;School of Psychology;High;unknownminister;X
+840040;Chief of Staff;Karel Felix Eduard Gerth van Wijk;1922;1933;1933;PA;School of Psychology;High;unknownminister;X
+840042;Chief of Staff;Hermanus Leonardus La Lau;1910;1930;1930;PA;School of Psychology;High;M_Hermanus Leonardus La Lau;X
+840043;Chief of Staff;Heinrich Adolf Cramer;1928;1936;1936;PA;School of Fire Support;High;M_Heinrich Adolf Cramer;X
+840044;Chief of Navy;Frederik Pinke;1910;1918;1918;SC;Indirect Approach Doctrine;High;M_Frederik Pinke;X
+840045;Chief of Navy;Anthonie Frederik Gooszen;1918;1933;1955;SC;Power Projection Doctrine;High;M_Anthonie Frederik Gooszen;X
+840046;Chief of Navy;Ten Broecke Hoekstra;1918;1933;1933;SC;Decisive Naval Battle Doctrine;High;unknownminister;X
+840047;Chief of Air Force;Ludolph Hendrik van Oyen;1933;1953;1953;SC;Air Superiority Doctrine;High;L7859;X
+840048;Chief of Air Force;Karel Felix Eduard Gerth van Wijk;1910;1933;1933;PA;Air Superiority Doctrine;High;unknownminister;X
+840049;Chief of Air Force;Jan Hendrik Wesseling;1910;1936;1936;SC;Air Superiority Doctrine;High;M_Jan Hendrik Wesseling;X
+840050;Head of Government;Bonifacius Cornelis de Jonge;1930;1938;1938;PA;Backroom Backstabber;High;M_Bonifacius Cornelis de Jonge;X
+840051;Head of Government;Alidius Tjarda van Starkenborgh-Stachouwer;1933;1978;1978;PA;Naive Optimist;High;M_Alidius Tjarda van Starkenborgh-Stachouwer;X
+840052;Head of Government;Hubertus van Mook;1942;1964;1999;SC;Naive Optimist;High;M577003;X
+840053;Minister of Security;Anton van der Laaken;1936;1972;1972;FA;Man of the People;High;M_Anton van der Laaken;X
+840054;Head of Government;Sutomo;1945;1981;1981;SC;Flamboyant Tough Guy;High;M_Sutomo;X
+840055;Head of Government;Mohammad Hoesni Thamrin;1930;1942;1942;SC;Happy Amateur;High;M_Mohammad Hoesni Thamrin;X
+840056;Head of Government;Abikoesno Tjokrosoejoso;1936;1964;1968;ML;Silent Workhorse;High;M_Abikoesno Tjokrosoejoso;X
+840057;Minister of Security;Amir Sjarifuddin;1936;1964;1964;SD;Man of the People;High;M_Amir Sjarifuddin;X
+840058;Head of Government;Hilman Djajadiningrat;1933;1963;1963;SC;Silent Workhorse;High;M_Hilman Djajadiningrat;X
+840059;Head of Government;Syarif Hamid II;1942;1972;1978;PA;Political Protege;High;M_Syarif Hamid II;X
+840060;Chief of Air Force;Emile Toussaint Kengen;1941;1964;1968;SC;Air Superiority Doctrine;High;9845;X
+840061;Head of State;Charles van der Plas;1936;1964;1977;SC;Barking Buffoon;High;M_Charles van der Plas;X
+840062;Head of State;Abdulkadir Widjojoatmodjo;1944;1964;1992;SC;Die-hard Reformer;High;M_Abdulkadir Widjojoatmodjo;X
+840063;Foreign Minister;Bonifacius Cornelis de Jonge;1930;1938;1938;PA;Iron Fisted Brute;High;M_Bonifacius Cornelis de Jonge;X
+840064;Foreign Minister;George Henry Charles Hart;1930;1943;1943;SC;Biased Intellectual;High;M_George Henry Charles Hart;X
+840065;Foreign Minister;Hubertus van Mook;1936;1964;1999;SC;Great Compromiser;High;M577003;X
+840066;Foreign Minister;Abdulkadir Widjojoatmodjo;1933;1964;1992;SC;Biased Intellectual;High;M_Abdulkadir Widjojoatmodjo;X
+840067;Foreign Minister;Ide Anak Agung Gde Agung;1942;1964;1999;SC;Apologetic Clerk;High;M_Ide Anak Agung Gde Agung;X
+840068;Minister of Armament;Edmund Peter Wellenstein;1915;1935;1935;SC;Administrative Genius;High;M_Edmund Peter Wellenstein;X
+840069;Minister of Armament;Daniel Marcellus George Koch;1930;1960;1960;SD;Theoretical Scientist;High;M_Daniel Marcellus George Koch;X
+840070;Minister of Armament;George Henry Charles Hart ;1930;1943;1943;SC;Mixed Economy;High;M_George Henry Charles Hart;X
+840071;Minister of Armament;Hubertus van Mook;1932;1964;1999;SC;Administrative Genius;High;M577003;X
+840072;Minister of Armament;Jacob Emil van Hoogstraten;1930;1964;1964;SC;Resource Industrialist;High;M_Jacob Emil van Hoogstraten;X
+840073;Minister of Armament;Julius Tahija;1941;1964;2002;SC;Laissez-Faire Capitalist;High;M_Julius Tahija;X
+840074;Minister of Security;Karel Lodewijk Jan Enthoven;1930;1950;1950;PA;Silent Lawyer;High;M_Karel Lodewijk Jan Enthoven;X
+840075;Minister of Security;Nicolaas Selhorst Blom;1930;1964;1972;SC;Compassionate Gentleman;High;M_Nicolaas Selhorst Blom;X
+840076;Minister of Security;Wongsonegoro;1941;1964;1974;SC;Man of the People;High;M_Wongsonegoro;X
+840077;Chief of Air Force;Gustav Adolf Ilgen;1928;1950;1956;SC;Army Aviation Doctrine;High;M_Gustav Adolf Ilgen;X
+840078;Chief of Navy;Conrad Helfrich;1938;1964;1964;SC;Indirect Approach Doctrine;High;L7839;X
+840079;Head of Military Intelligence;Raymond Westerling;1942;1964;1964;PA;Political Specialist;High;M_Raymond Westerling;X
+840080;Chief of Staff;Johannes Cornelis Koster;1920;1936;1936;PA;School of Fire Support;High;M_Johannes Cornelis Koster;X
+840081;Chief of Staff;Gerardus Berenschot;1930;1942;1942;PA;School of Defence;High;L7801;X
+840082;Chief of Staff;Simon Hendrik Spoor;1940;1950;1950;PA;School of Mass Combat;High;M8137;X
+840083;Chief of Staff;Murk Boerstra;1933;1940;1940;PA;School of Psychology;High;M_Murk Boerstra;X
+840084;Chief of Staff;Hein ter Poorten;1930;1950;1950;SC;School of Psychology;High;L7819;X
+840085;Chief of Staff;Ludolph Hendrik van Oyen;1942;1953;1953;SC;School of Fire Support;High;L7859;X
+840086;Chief of Army;Simon Hendrik Spoor;1940;1950;1950;SC;Decisive Battle Doctrine;High;M8137;X
+840087;Chief of Staff;Dirk Cornelis Buurman van Vreeden;1936;1957;1964;PA;School of Defence;High;M_Dirk Cornelis Buurman van Vreeden;X
+840088;Chief of Air Force;Christiaan Willem van der Eem;1933;1979;1979;SC;Air Superiority Doctrine;High;M_Christiaan Willem van der Eem;X
+840089;Chief of Army;Murk Boerstra;1933;1940;1940;PA;Doctrine of Autonomy;High;M_Murk Boerstra;X
+840090;Chief of Army;Gerardus Berenschot;1936;1942;1942;PA;Decisive Battle Doctrine;High;L7801;X
+840091;Chief of Army;Hein ter Poorten;1936;1950;1950;SC;Static Defence Doctrine;High;L7819;X
+840092;Chief of Army;Ludolph Hendrik van Oyen;1941;1953;1953;SC;Decisive Battle Doctrine;High;L7859;X
+840093;Minister of Security;Adolf Mieremet;1930;1964;1964;SC;Silent Lawyer;High;M_Adolf Mieremet;X
+840094;Chief of Army;Dirk Cornelis Buurman van Vreeden;1940;1957;1964;PA;Elastic Defence Doctrine;High;M_Dirk Cornelis Buurman van Vreeden;X
+840095;Chief of Staff;Rudolph Bakkers;1936;1967;1967;SC;School of Manoeuvre;High;L7800;X
+840096;Chief of Army;Aleid van Tricht;1936;1964;1964;PA;Elastic Defence Doctrine;High;M_Aleid van Tricht;X
+840097;Chief of Army;Raymond Westerling;1942;1964;1964;PA;Commando Doctrine Army;High;M_Raymond Westerling;X
+840098;Chief of Navy;Maarten Hendrik van Dulm;1930;1938;1938;SC;Base Control Doctrine;High;M_Maarten Hendrik van Dulm;X
+840099;Chief of Navy;Hendrikus Ferwerda;1936;1943;1943;SC;Indirect Approach Doctrine;High;M_Hendrikus Ferwerda;X
+840100;Head of State;Stephan Lucien Joseph van Waardenburg;1942;1964;1964;SC;Benevolent Gentleman;High;M_Stephan Lucien Joseph van Waardenburg;X
+840101;Head of State;Jan van Baal;1950;1964;1964;SC;Barking Buffoon;High;M_Jan van Baal;X
+840102;Head of State;Jan Christoffel Baarspul;1950;1964;1964;SC;Weary Stiffneck;High;M_Jan Christoffel Baarspul;X
+840103;Head of State;Pieter Johannes Platteel;1953;1964;1964;SC;Insignificant Layman;High;M_Pieter Johannes Platteel;X
+840104;Head of Government;Henk Veldkamp;1955;1964;1964;SC;Happy Amateur;High;unknownminister;X
+840105;Head of State;Juliana;1948;1964;1964;SC;Popular Figurehead;High;M8186;X
+840106;Foreign Minister;Johan van Maarseveen;1950;1964;1964;SC;Great Compromiser;High;M_Johan van Maarseveen;X
+840107;Foreign Minister;Leo Peters;1950;1964;1964;SC;Apologetic Clerk;High;M_Leo Peters;X
+840108;Foreign Minister;Willem Kernkamp;1950;1964;1964;SC;Apologetic Clerk;High;M_Willem Kernkamp;X
+840109;Foreign Minister;Kees Staf;1950;1964;1964;SC;General Staffer;High;M_Kees Staf;X
+840110;Foreign Minister;Gerard Helders;1950;1964;1964;SC;Biased Intellectual;High;M_Gerard Helders;X
+840111;Foreign Minister;Henk Korthals;1950;1964;1964;SC;Apologetic Clerk;High;M_Henk Korthals;X
+840112;Foreign Minister;Barend Biesheuvel;1955;1964;1964;SC;General Staffer;High;M_Barend Biesheuvel;X
+840113;Head of Government;Stephan Lucien Joseph van Waardenburg;1942;1964;1964;SC;Naive Optimist;High;M_Stephan Lucien Joseph van Waardenburg;X
+840114;Head of Government;Jan van Baal;1950;1964;1964;SC;Happy Amateur;High;M_Jan van Baal;X
+840115;Head of Government;Jan Christoffel Baarspul;1950;1964;1964;SC;Smiling Oilman;High;M_Jan Christoffel Baarspul;X
+840116;Head of Government;Pieter Johannes Platteel;1953;1964;1964;SC;Naive Optimist;High;M_Pieter Johannes Platteel;X
+840117;Foreign Minister;Abdulkadir Widjojoatmodjo;1940;1964;1964;SC;Biased Intellectual;High;M_Abdulkadir Widjojoatmodjo;X
