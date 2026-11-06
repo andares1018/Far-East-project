@@ -184,7 +184,7 @@
 # 1400001013 CGX - Coalition Against Chiang 
 # 1400001014 CHC - War against Chiang? 
 # 1400001015 U63 - Military Collapse 
-# 1400001016 U63 - Negotiations with Chiang 
+# 1400001016 U63 - Accept of negotiation offer 
 # 1400001017 CHI - Negotiations with Liangguang 
 # 1400001018 CHI - Surrender in Guangdong 
 # 1400001019 CHI - Deal with the Guangxi 
@@ -584,11 +584,11 @@
 # 1400006502 U05 - Change of Colonial administration (post-war) 
 # 1400006503 HOL - East Indies Civil Affairs Agreement #
 # 1400006504 USA - Agreement proposal # - Van Mook–MacArthur Civil Affairs Agreement
-# 1400006505 ENG - Agreement proposal # - Anglo–Dutch Civil Affairs Agreement
-# 1400006506 AST - Agreement proposal #
-# 1400006507 U02 - Agreement proposal #
-# 1400006508 HOL - Restoration of East Indies Colonies #
-# 1400006509 U05 - Reconstruction Colonial government #
+# 1400006505 ENG AST - Agreement proposal # - Anglo–Dutch Civil Affairs Agreement
+# 1400006506 U02 - Agreement proposal #
+# 1400006507 HOL - Restoration of East Indies Colonies #
+# 1400006508 U05 - Reconstruction Colonial government #
+# 1400006509 
 # 1400006510 
 # 1400006511 
 # 1400006512 
@@ -791,6 +791,9 @@
 # 1400009518 USA - Bracero Program - WiF event #
 # 1400009519 USA - Civilian Conservation Corps #
 # 1400009520 
+# 1400009521 
+# 1400009522 
+# 
 # 
 
 ### 1400010001 - 1400011000 - World event (Historical)

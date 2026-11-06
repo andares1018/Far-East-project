@@ -906,7 +906,6 @@ event = {
 		command = { type = dissent value = -5 }
 		command = { type = peace which = CHC value = 0 }
 		command = { type = domestic which = interventionism value = 1 }
-		command = { type = domestic which = freedom value = 1 }
 		command = { type = relation which = CHC value = 50 }
 		command = { type = relation which = SOV value = 50 }
 		command = { type = relation which = CSX value = 20 }

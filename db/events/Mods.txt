@@ -1203,7 +1203,7 @@ event = {
 	control = { province = 1354 data = CHI }
 	}
 
-    name = "Gannan New Deal" # Gannan New Deal
+    name = "Gannan New Deal"
     desc = "EVT_1400000035_desc"
     style = 2
       picture = "news_paper"
@@ -4301,7 +4301,7 @@ event = {
 	random = no
 	country = CHI
 	name = "Military Instability" #It is difficult to control the war situation between the two countries aaaaaaaaaaaaaaaaaaaaaaaaaaaaa 
-	desc = ""
+	desc = "EVT_1400001254_DESC"
 	style = 2
 	picture = "ccip_cw"
 
@@ -4381,8 +4381,8 @@ event = {
 	deathdate = { day = 29 month = december year = 1964 }
 	
 	name = "Military Reform" 
-	desc = ""
-	decision_desc = ""
+	desc = "EVT_1400001255_DESC"
+	decision_desc = "decision_1400001255_DESC"
 	style = 2
 	picture = "chinese_military_programmes"
 	decision_picture = "decision_ccip_cna"
@@ -5404,14 +5404,7 @@ event = {
 	picture = "chinese_communist_partisans"
 
 	action = {
-		ai_chance = 50
-		name = "However, other policies must also be looked at..."
-		command = { type = dissent value = -1 }
-		command = { type = local_setflag which = CCP_Mao when = 1 value = 1 }
-		command = { type = domestic which = interventionism value = -1 }
-	}
-	action = {
-		ai_chance = 50
+		ai_chance = 100
 		name = "What a great report!"
 		command = { type = relation which = CHI value = 25 }
 		command = { type = relation which = SOV value = 25 }

@@ -8,7 +8,7 @@
 
 country = {
   tag                = U38
-  regular_id         = U38
+  regular_id         = CHI
   puppet             = CHI
   flag_ext           = _KMT
   ai                 = "U38.ai"
