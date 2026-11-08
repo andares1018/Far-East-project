@@ -1013,11 +1013,11 @@ event = {
 	name = EVT_91_NAME
 	desc = EVT_91_DESC
 	style = 2
-  	picture = "Marco_Polo_bridge"
+  	picture = "War_of_Resistance"
 
 	date = { day = 0 month = january year = 1933 }
 	offset = 1
-	deathdate = { day = 29 month = december year = 1942 }
+	deathdate = { day = 29 month = december year = 1945 }
 
 	action = {
 		name = EVT_91_ACTA
@@ -1038,13 +1038,13 @@ event = {
         command = { type = relation which = CYN value = 50 }
         command = { type = relation which = CXB value = 50 }
         command = { type = relation which = CSX value = 50 }
-		command = { trigger = { ai = yes } type = alliance which = CYN when = 1 }
-		command = { trigger = { ai = yes } type = alliance which = CXB when = 1 }
-		command = { trigger = { ai = yes } type = alliance which = U65 when = 1 }
-		command = { trigger = { ai = yes } type = alliance which = U66 when = 1 }
-		command = { trigger = { ai = yes } type = alliance which = U63 when = 1 }
-		command = { trigger = { ai = yes } type = alliance which = U64 when = 1 }
-		command = { trigger = { ai = yes } type = alliance which = U38 when = 1 }
+		command = { type = alliance which = CYN when = 1 }
+		command = { type = alliance which = CXB when = 1 }
+		command = { type = alliance which = U65 when = 1 }
+		command = { type = alliance which = U66 when = 1 }
+		command = { type = alliance which = U63 when = 1 }
+		command = { type = alliance which = U64 when = 1 }
+		command = { type = alliance which = U38 when = 1 }
 		command = { trigger = { ai = yes } type = inherit which = CGX when = 1 }
 		command = { trigger = { ai = yes } type = inherit which = CSX when = 1 }
 		command = { trigger = { ai = yes } type = inherit which = U64 when = 1 }

@@ -41,7 +41,7 @@ event = {
 
 	name = EVT_1330120000_NAME
 	desc = EVT_1330120000_DESC
-	picture = "ccip_mukden"
+	picture = "Tanggu_Truce"
     style = 2
 
     date = { day = 22 month = may year = 1933 }
