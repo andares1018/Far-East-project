@@ -3036,8 +3036,11 @@ event = {
 		ai_chance = 66
 		name = "Promote reconciliation with them"
 		command = { type = dissent value = -5 }
-		command = { type = domestic which = freedom value = 1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = 1 }
+		command = { type = wakeminister which = 55154 } #YCP
+		command = { type = wakeminister which = 55156 }
+		command = { type = wakeminister which = 55159 }
+		command = { type = wakeminister which = 55184 }
 	}
 	action = {
 		ai_chance = 34
@@ -3082,6 +3085,7 @@ event = {
 		name = "They are also member"
 		command = { type = dissent value = -1 }
 		command = { type = local_setflag which = constitutionalism_support when = 1 value = 1 }
+		command = { type = domestic which = freedom value = 1 }
 	}
 	action = {
 		ai_chance = 45
