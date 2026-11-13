@@ -50,7 +50,7 @@ country = {
     date              = { year = 0 month = january day = 0 }
     democratic        = 3
     political_left    = 4
-    freedom           = 4
+    freedom           = 3
     free_market       = 7
     professional_army = 2
     defense_lobby     = 6

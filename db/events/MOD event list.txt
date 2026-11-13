@@ -81,7 +81,7 @@
 # 1400000032 CHI - Partial Monetary Agreement 
 # 1400000033 CHI - Communist Sabotage 
 # 1400000034 CHI - Economic Disaster - Civil war 
-# 1400000035 CHI - Gannan New Deal 
+# 1400000035 CHI - Gannan New Deal (1939)
 # 1400000036 CHI - Presidential Election - 1st Presidential Election
 # 1400000037 CHI - Temporary Provisions against the Rebellion - 2nd Civil War 
 # 1400000038 CHI - End of Temporary Provisions? - Nationalist wins? or ceasefire
@@ -257,8 +257,8 @@
 # 1400001503 CHC - Head of Government Changes - Lin Boqu 
 # 1400001504 CHC - Advisor leaves - Otto braun 
 # 1400001505 CHC - Central Politburo Conference 
-# 1400001506 CHC - Current Situation and the Party's Tasks - Central Politburo Conference 
-# 1400001507 CHC - Changjian Bureau Established 
+# 1400001506 CHC - Fate of the Democratic Opposition #
+# 1400001507 CHC - Changjiang Bureau Established - Central Politburo Conference 
 # 1400001508 CHC - Demand Another Politburo Meeting 
 # 1400001509 CHC - 6th Plenum of the 6th CCP Central Committee 
 # 1400001510 CHC - Direction of United Front 
@@ -278,7 +278,7 @@
 # 1400001524 CHC - Land Reform Movement #
 # 1400001525 CHC - Agricultural Collectivisation # 
 # 1400001526 CHC - United Front Work Department #
-# 1400001527 CHC - Fate of the Democratic Opposition #
+# 1400001527 CHC - 
 # 1400001528 CHC - 
 # 1400001529 CHC - 
 # 1400001530 CHC - 
@@ -789,12 +789,31 @@
 # 1400009516 USA - Public Works Administration - WiF event #
 # 1400009517 USA - Racial Riots in Detroit - WiF event #
 # 1400009518 USA - Bracero Program - WiF event #
-# 1400009519 USA - Civilian Conservation Corps #
-# 1400009520 
-# 1400009521 
-# 1400009522 
-# 
-# 
+# 1400009519 USA - Civilian Conservation Corps - WiF event #
+# 1400009520 USA - Works Progress Administration (not PWA) - 2nd New Deal #
+# 1400009521 USA - The Supreme Court Rules - WiF event #
+# 1400009522 USA - The Court-packing plan - WiF event #
+# 1400009523 USA - The Supreme Court Upholds New Deal Legislation - WiF event #
+# 1400009524 USA - Emergency Relief Appropriation Act - 2nd New Deal #
+# 1400009525 USA - Withdraw from the Occupied Territory #
+# 1400009526 USA - Judicial Procedures Reform Bill (The Court-packing plan) #
+# 1400009527 USA - Opposition from the Judicial Policy (Alternate) #
+# 1400009528 USA - Conflict with the Supreme Court (OTL) #
+# 1400009529 
+# 1400009530 
+# 1400009531 
+# 1400009532 
+# 1400009533 
+# 1400009534 
+# 1400009535 
+# 1400009536 
+# 1400009537 
+# 1400009538 
+# 1400009539 
+# 1400009540 
+
+
+
 
 ### 1400010001 - 1400011000 - World event (Historical)
 # 1400010001 ENG - Persia's Sovereignity - TRP event #
@@ -820,28 +839,29 @@
 # 1400010021 USA ENG FRA CAN U01 U02 AST NZL - End of the European front (Allied) 
 # 1400010022 SOV - End of the European front (Soviet) 
 # 1400010023 USA - Declaration by United Nations (1942) 
-# ENG - Peace Demonstration - WiF event #
-# GER - German-Portuguese Trade Agreement - WiF event #
-# GER - Compulsory Work Service - WiF event #
-# FRA - Compulsory Work Service - WiF event #
-# GER - Propose German-Polish Non-Aggression Pact - WiF event #
-# POL - German-Polish Non-Aggression Pact Proposal - WiF event #
-# POL - German-Polish Cooperation - WiF event #
-# POL - German-Polish Cooperation - WiF event #
-# POR - Portuguese Volunteers Join Franco's Army - WiF event #
-# SPA - Portuguese Volunteers Join Franco's Army - WiF event #
-# MEX - Mexico Supports Republican Spain - WiF event #
-# SPR - Mexico Supports Republican Spain - WiF event #
-# BRA - The Second Rubber Boom - WiF event #
-# FRA - Matignon Agreements - WiF event #
-# SOV - Second Five-Year Plan - WiF event #
-# SOV - Third Five-Year Plan - WiF event #
-# GER - Resistance Movements in Europe - WiF event #
-# SOV - Purges of the Red Army - WiF event #
-# SOV - Trotsky Assassination - WiF event #
-# FRA - CGT calls for national strike - WiF event #
-# GER - Vlasov Army - WiF event #
-# 
+# 1400010024 ENG - Peace Demonstration - WiF event #
+# 1400010025 ENG - Minister resigns (Stanley Baldwin) #
+# 1400010026 GER - German-Portuguese Trade Agreement - WiF event #
+# 1400010027 GER - Compulsory Work Service - WiF event #
+# 1400010028 FRA - Compulsory Work Service - WiF event #
+# 1400010029 GER - Propose German-Polish Non-Aggression Pact - WiF event #
+# 1400010030 POL - German-Polish Non-Aggression Pact Proposal - WiF event #
+# 1400010031 POL - German-Polish Cooperation - WiF event #
+# 1400010032 POL - German-Polish Cooperation - WiF event #
+# 1400010033 POR - Portuguese Volunteers Join Franco's Army - WiF event #
+# 1400010034 SPA - Portuguese Volunteers Join Franco's Army - WiF event #
+# 1400010035 MEX - Mexico Supports Republican Spain - WiF event #
+# 1400010036 SPR - Mexico Supports Republican Spain - WiF event #
+# 1400010037 BRA - The Second Rubber Boom - WiF event #
+# 1400010038 FRA - Matignon Agreements - WiF event #
+# 1400010039 SOV - Second Five-Year Plan - WiF event #
+# 1400010040 SOV - Third Five-Year Plan - WiF event #
+# 1400010041 GER - Resistance Movements in Europe - WiF event #
+# 1400010042 SOV - Purges of the Red Army - WiF event #
+# 1400010043 SOV - Trotsky Assassination - WiF event #
+# 1400010044 FRA - CGT calls for national strike - WiF event #
+# 1400010045 GER - Vlasov Army - WiF event #
+# 1400010046 USA DEN - Iceland Independence #
 # 
 # 
 # 

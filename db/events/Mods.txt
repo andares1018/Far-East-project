@@ -112,7 +112,7 @@ event = {
 		command = { type = relation which = ENG value = 10 }
 		command = { type = relation which = USA value = 20 }
 		command = { type = relation which = JAP value = -50 }
-		command = { trigger = { ai = no } type = supplies value = -500 }	
+		command = { trigger = { ai = no } type = supplies value = -500 }
 		command = { type = event which = 1400000028 where = USA when = 30 }
 	}
 }
@@ -1058,6 +1058,7 @@ event = {
 		command = { type = relation which = USA value = 100 }
 		command = { type = peacetime_ic_mod value = 5 }
 		command = { type = dissent value = -3 }	
+		command = { trigger = { NOT = { incabinet = 55012 } } type = armamentminister which = 55012 }
 	}
 }
 
@@ -1120,6 +1121,7 @@ event = {
 		command = { type = money value = -100 }
 		command = { type = peacetime_ic_mod value = 3 }
 		command = { type = dissent value = -1 }	
+		command = { trigger = { NOT = { incabinet = 55008 } } type = armamentminister which = 55008 }
 	}
 }
 
@@ -5393,26 +5395,6 @@ event = {
 	action = {
 		ai_chance = 100
 		name = "Let's start the Conference"
-		command = { type = event which = 1400001506 where = CHC when = 14 }
-	}
-}
-
-event = {
-	id = 1400001506
-	random = no
-	country = CHC
-
-	name = "Current Situation and the Party's Tasks"
-	desc = ""
-	style = 2
-	picture = "chinese_communist_partisans"
-
-	action = {
-		ai_chance = 100
-		name = "What a great report!"
-		command = { type = relation which = CHI value = 25 }
-		command = { type = relation which = SOV value = 25 }
-		command = { type = local_setflag which = CCP_coalition when = 1 value = 1 }
 		command = { type = event which = 1400001507 where = CHC when = 14 }
 	}
 }
@@ -5421,7 +5403,7 @@ event = {
 	id = 1400001507
 	random = no
 	country = CHC
-	name = "Changjian Bureau Established"
+	name = "Changjiang Bureau Established"
 	desc = ""
 	style = 2
 	picture = "china_United Front"
@@ -5431,6 +5413,8 @@ event = {
 		name = "ACTION_NAME_OK"
 		command = { type = domestic which = interventionism value = 1 }
 		command = { type = relation which = CHI value = 50 }
+		command = { type = relation which = SOV value = 25 }
+		command = { type = local_setflag which = CCP_coalition when = 1 value = 1 }
 	}
 }
 
@@ -5444,7 +5428,7 @@ event = {
 	picture = "news_paper"
 
 	trigger = {	
-		event = 1400001506
+		event = 1400001507
 		exists = CHC
 	}
 
@@ -9449,7 +9433,7 @@ event = {
 	name = "Production Capacity Expansion Plan" 
 	desc = ""
 	style = 2
-	picture = "news_paper"
+	picture = "industrial_association"
 
 	trigger = {	
 		OR = {
@@ -9467,12 +9451,12 @@ event = {
 		ai_chance = 100
 		name = "This is essential for economic planning"
 		command = { trigger = { event = 1400002012 } type = domestic which = free_market value = -1 }
-		command = { trigger = { event = 1400002012 } type = industrial_modifier which = total value = 5 } 
+		command = { trigger = { event = 1400002012 } type = industrial_modifier which = total value = 3 } 
 		command = { trigger = { event = 1400002012 } type = dissent value = -2 }
 		command = { trigger = { event = 1400002012 } type = money value = -200 }
 		command = { trigger = { event = 1400002045 } type = money value = -100 }
 		command = { trigger = { event = 1400002045 } type = domestic which = defense_lobby value = 1 }
-		command = { trigger = { event = 1400002045 } type = wartime_ic_mod which = total value = 5 } 
+		command = { trigger = { event = 1400002045 } type = wartime_ic_mod which = total value = 3 } 
 		command = { trigger = { event = 1400002045 } type = stockpile which = all when = war value = 2 }
 	}
 }
