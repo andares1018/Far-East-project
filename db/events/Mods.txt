@@ -5400,6 +5400,47 @@ event = {
 }
 
 event = {
+	id = 1400001506
+	random = no
+	country = CHC
+	name = "Fate of the Democratic Opposition"
+	desc = "EVT_1400001506_DESC"
+	style = 2
+	picture = "China_Democratic_League"
+
+	trigger = {	
+		event = 1400001503
+		OR = {
+			event = 1400001516 # Rectification Movement - Maoism 
+			event = 1400001519 # Government Reorganization - New Democratic Revolution
+		}
+	}
+
+    date = { day = 0 month = january year = 1933 }
+    offset = 7
+    deathdate = { day = 29 month = december year = 1999 }
+
+	action = {
+		trigger = { 
+			flag = CHC_Maoism
+		}
+		ai_chance = 50
+		name = "They must be under our control"
+		command = { trigger = { ai = no } type = dissent value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { trigger = { flag = CHC_coalition } type = ministerofsecurity which = 260898 }
+	}
+	action = {
+		ai_chance = 50
+		name = "Their activities must be guaranteed"
+		command = { trigger = { ai = no } type = dissent value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { trigger = { flag = CHC_coalition } type = ministerofsecurity which = 260962 }
+	}
+}
+
+
+event = {
 	id = 1400001507
 	random = no
 	country = CHC

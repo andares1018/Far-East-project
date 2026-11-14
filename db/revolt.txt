@@ -889,7 +889,10 @@
  } 
  extra = { 
 	169 157 163 162 153 156 170 172 173 160 171 
-	182 184 # Part of East Prussia
+	182 184 183 185 # Part of East Prussia
+	
+	158 159 165 164 166 167 168 161 155 #It was claimed until the 1970s
+	
 	} 
  capital = 131 
  revolt = no 
@@ -1703,9 +1706,12 @@ GER = { # Germany
  date = { day = 0 month = january year = 1914 } 
  expirydate = { day = 29 month = december year = 1999 } 
  minimum = { 223 231 232 233 234 } 
- extra = { 181 158 159 167 164 226 222 224 235 230 183 221 236 237 243 
+ extra = { 181 226 222 224 235 230 221 236 237 243 
  # NEW 
- 252 254 250 228 246 229 227 155 185 161 225 203 168 166 165 239
+ 252 254 250 228 246 229 227 185 225 203 239 203 
+ 
+ 253 247 242 241 238 240 244 249 248 251 256 257 #The Eastern Territory of the 2nd republic
+ 
  } 
  capital = 232 
  no = { GER }
@@ -1874,7 +1880,7 @@ GER = { # Germany
  }  
 
 SIB = { # Siberia
- date = { day = 0 month = january year = 1920 } 
+ date = { day = 0 month = january year = 1914 } 
  expirydate = { day = 29 month = december year = 1940 } 
  minimum = { 
  1142 

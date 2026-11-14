@@ -47,7 +47,7 @@ CHC;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 260845;Head of Military Intelligence;Otto Braun;1932;1935;1940;ST;Dismal Enigma;Medium;9225;X
 260846;Chief of Staff;Otto Braun;1932;1935;1940;ST;School of Psychology;Medium;9225;X
 260847;Chief of Army;Otto Braun;1932;1935;1940;ST;Decisive Battle Doctrine;Medium;9225;X
-260848;Head of State;Mao Zedong;1921;1977;1977;ST;Mao_Zedong_1;Undying;2334;X
+260848;Head of State;Mao Zedong;1921;1977;1977;LE;Mao_Zedong_1;Undying;2334;X
 260849;Head of Government;Mao Zedong;1921;1977;1977;ST;Old General;Undying;2334;X
 260850;Minister of Security;Mao Zedong;1921;1958;1958;ST;Man of the People;Undying;2334;X
 260851;Chief of Army;Mao Zedong;1921;1958;1958;ST;Mao_Zedong_2;Undying;2334;X
@@ -152,3 +152,4 @@ CHC;Ruling Cabinet - Start;Name;Start Year;End Year;Retirement Year;Ideology;Per
 260959;Head of Military Intelligence;Wang Shoudao;1933;1976;1996;LE;Industrial Specialist;High;M_Wang Shoudao;X
 260960;Minister of Armament;Wang Shoudao;1940;1976;1996;LE;Administrative Genius;High;M_Wang Shoudao;X
 260961;Head of Military Intelligence;Zou Dapeng;1940;1968;1968;LE;Logistics Specialist;High;M_Zou Dapeng;X
+260962;Minister of Security;Liu Shaoqi;1936;1970;1970;LE;Silent Lawyer;High;M_Liu Shaoqi;X

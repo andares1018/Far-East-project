@@ -254,7 +254,7 @@ event = {
         command = { type = foreignminister which = 260861 } #Zhou Enlai
         command = { type = armamentminister which = 260814 } #Lin Boqu
         command = { type = ministerofsecurity which = 260856 } #Zhou Enlai
-        command = { type = ministerofintelligence which = 260863 } 
+        command = { type = ministerofintelligence which = 260863 } #Wang Jiaxiang
         command = { type = chiefofstaff which = 260820 } #Xu Xiangqian
         command = { type = chiefofarmy which = 260867 } #Peng Dehuai
         command = { type = chiefofnavy which = 260806 } #He Long
